@@ -1,0 +1,155 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Custom
+
+class Windows.Devices.Custom.CustomDevice python_type
+    py CustomDevice
+    signature rc(Windows.Devices.Custom.CustomDevice;{dd30251f-c48b-43bd-bcb1-dec88f15143e})
+    default Windows.Devices.Custom.ICustomDevice
+    requires Windows.Devices.Custom.ICustomDevice
+    factory Windows.Devices.Custom.ICustomDeviceStatics
+    property input_stream
+        get get_InputStream slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property output_stream
+        get get_OutputStream slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=195 reverse=46 static
+            in string name=deviceId
+            in enum32 type=Windows.Devices.Custom.DeviceAccessMode name=desiredAccess
+            in enum32 type=Windows.Devices.Custom.DeviceSharingMode name=sharingMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Custom.CustomDevice> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=94 reverse=35 static
+            in guid name=classGuid
+            out string return
+    method send_io_control_async
+        method SendIOControlAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195 reverse=68
+            in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
+            in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
+            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method try_send_io_control_async
+        method TrySendIOControlAsync slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195 reverse=102
+            in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
+            in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
+            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.Devices.Custom.DeviceAccessMode python_type
+    py DeviceAccessMode
+    signature enum(Windows.Devices.Custom.DeviceAccessMode;i4)
+
+enum Windows.Devices.Custom.DeviceSharingMode python_type
+    py DeviceSharingMode
+    signature enum(Windows.Devices.Custom.DeviceSharingMode;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+    guid ef60385f-be78-584b-aaef-7829ada2b0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Custom.CustomDevice> concrete
+    guid 2a6344aa-0568-548e-a1a2-b6bb451d228c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Custom.CustomDevice;{dd30251f-c48b-43bd-bcb1-dec88f15143e}))
+    argument Windows.Devices.Custom.CustomDevice
+
+interface Windows.Devices.Custom.ICustomDevice
+    guid dd30251f-c48b-43bd-bcb1-dec88f15143e
+
+interface Windows.Devices.Custom.ICustomDeviceStatics
+    guid c8220312-ef4c-46b1-a58e-eeb308dc8917
+
+interface Windows.Devices.Custom.IIOControlCode python_type
+    py _IIOControlCode
+    guid 0e9559e7-60c8-4375-a761-7f8808066c60
+    signature {0e9559e7-60c8-4375-a761-7f8808066c60}
+    property access_mode
+        get get_AccessMode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=22
+            out enum32 type=Windows.Devices.Custom.IOControlAccessMode return
+    property buffering_method
+        get get_BufferingMethod slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=43
+            out enum32 type=Windows.Devices.Custom.IOControlBufferingMethod return
+    property control_code
+        get get_ControlCode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=121
+            out uint32 return
+    property device_type
+        get get_DeviceType slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=99
+            out uint16 return
+    property function
+        get get_Function slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=62
+            out uint16 return
+
+interface Windows.Devices.Custom.IIOControlCodeFactory
+    guid 856a7cf0-4c11-44ae-afc6-b8d4a212788f
+
+interface Windows.Devices.Custom.IKnownDeviceTypesStatics
+    guid ee5479c2-5448-45da-ad1b-24948c239094
+
+enum Windows.Devices.Custom.IOControlAccessMode python_type
+    py IOControlAccessMode
+    signature enum(Windows.Devices.Custom.IOControlAccessMode;i4)
+
+enum Windows.Devices.Custom.IOControlBufferingMethod python_type
+    py IOControlBufferingMethod
+    signature enum(Windows.Devices.Custom.IOControlBufferingMethod;i4)
+
+class Windows.Devices.Custom.IOControlCode python_type
+    py IOControlCode
+    signature rc(Windows.Devices.Custom.IOControlCode;{0e9559e7-60c8-4375-a761-7f8808066c60})
+    default Windows.Devices.Custom.IIOControlCode
+    requires Windows.Devices.Custom.IIOControlCode
+    factory Windows.Devices.Custom.IIOControlCodeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Devices.Custom.IIOControlCodeFactory shape=239 reverse=27
+            in uint16 name=deviceType
+            in uint16 name=function
+            in enum32 type=Windows.Devices.Custom.IOControlAccessMode name=accessMode
+            in enum32 type=Windows.Devices.Custom.IOControlBufferingMethod name=bufferingMethod
+            out class type=Windows.Devices.Custom.IOControlCode return
+    property access_mode
+        get get_AccessMode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=22
+            out enum32 type=Windows.Devices.Custom.IOControlAccessMode return
+    property buffering_method
+        get get_BufferingMethod slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=43
+            out enum32 type=Windows.Devices.Custom.IOControlBufferingMethod return
+    property control_code
+        get get_ControlCode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=121
+            out uint32 return
+    property device_type
+        get get_DeviceType slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=99
+            out uint16 return
+    property function
+        get get_Function slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IIOControlCode shape=4 reverse=62
+            out uint16 return
+
+class Windows.Devices.Custom.KnownDeviceTypes static python_type
+    py KnownDeviceTypes
+    factory Windows.Devices.Custom.IKnownDeviceTypesStatics
+    property unknown static
+        get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IKnownDeviceTypesStatics shape=4 reverse=22 static
+            out uint16 return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da

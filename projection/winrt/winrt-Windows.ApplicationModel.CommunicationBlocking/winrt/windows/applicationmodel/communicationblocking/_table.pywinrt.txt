@@ -1,0 +1,64 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.CommunicationBlocking
+
+class Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager static python_type
+    py CommunicationBlockingAccessManager
+    factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics
+    property is_blocking_active static
+        get get_IsBlockingActive slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=4 reverse=22 static
+            out boolean return
+    method is_blocked_number_async static
+        method IsBlockedNumberAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=44 static
+            in string name=number
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method show_block_numbers_ui static
+        method ShowBlockNumbersUI slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=65 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phoneNumbers
+            out boolean return
+    method show_blocked_calls_ui static
+        method ShowBlockedCallsUI slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 reverse=117 static
+    method show_blocked_messages_ui static
+        method ShowBlockedMessagesUI slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 reverse=137 static
+    method show_unblock_numbers_ui static
+        method ShowUnblockNumbersUI slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=100 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phoneNumbers
+            out boolean return
+
+class Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager static python_type
+    py CommunicationBlockingAppManager
+    factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics
+    factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2
+    property is_current_app_active_blocking_app static
+        get get_IsCurrentAppActiveBlockingApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=4 reverse=22 static
+            out boolean return
+    method request_set_as_active_blocking_app_async static
+        method RequestSetAsActiveBlockingAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method show_communication_blocking_settings_ui static
+        method ShowCommunicationBlockingSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=0 reverse=37 static
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics
+    guid 1c969998-9d2a-5db7-edd5-0ce407fc2595
+
+interface Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics
+    guid 77db58ec-14a6-4baa-942a-6a673d999bf2
+
+interface Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2
+    guid 14a68edd-ed88-457a-a364-a3634d6f166d
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.String external
+    py winrt.system.String

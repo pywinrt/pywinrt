@@ -1,3 +1,7 @@
+from test._util import skip_without_projection
+
+skip_without_projection()
+
 import asyncio
 import contextlib
 import copy

@@ -1,0 +1,26 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.WindowManagement.Preview
+
+interface Windows.UI.WindowManagement.Preview.IWindowManagementPreview
+    guid 4ef55b0d-561d-513c-a67c-2c02b69cef41
+
+interface Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics
+    guid 0f9725c6-c004-5a23-8fd2-8d092ce2704a
+
+class Windows.UI.WindowManagement.Preview.WindowManagementPreview python_type
+    py WindowManagementPreview
+    signature rc(Windows.UI.WindowManagement.Preview.WindowManagementPreview;{4ef55b0d-561d-513c-a67c-2c02b69cef41})
+    default Windows.UI.WindowManagement.Preview.IWindowManagementPreview
+    requires Windows.UI.WindowManagement.Preview.IWindowManagementPreview
+    factory Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics
+    method set_preferred_min_size static
+        method SetPreferredMinSize slot=6 inputs=2 outputs=0 declaring=Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics shape=57 static
+            in class type=Windows.UI.WindowManagement.AppWindow name=window
+            in struct type=Windows.Foundation.Size name=preferredFrameMinSize
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.UI.WindowManagement.AppWindow external
+    py winrt.windows.ui.windowmanagement.AppWindow

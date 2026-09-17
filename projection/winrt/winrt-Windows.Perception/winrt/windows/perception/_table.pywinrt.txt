@@ -1,0 +1,44 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Perception
+
+interface Windows.Perception.IPerceptionTimestamp
+    guid 87c24804-a22e-4adb-ba26-d78ef639bcf4
+
+interface Windows.Perception.IPerceptionTimestamp2
+    guid e354b7ed-2bd1-41b7-9ed0-74a15c354537
+
+interface Windows.Perception.IPerceptionTimestampHelperStatics
+    guid 47a611d4-a9df-4edc-855d-f4d339d967ac
+
+interface Windows.Perception.IPerceptionTimestampHelperStatics2
+    guid 73d1a7fe-3fb9-4571-87d4-3c920a5e86eb
+
+class Windows.Perception.PerceptionTimestamp python_type
+    py PerceptionTimestamp
+    signature rc(Windows.Perception.PerceptionTimestamp;{87c24804-a22e-4adb-ba26-d78ef639bcf4})
+    default Windows.Perception.IPerceptionTimestamp
+    requires Windows.Perception.IPerceptionTimestamp
+    requires Windows.Perception.IPerceptionTimestamp2
+    property prediction_amount
+        get get_PredictionAmount slot=7 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4 reverse=43
+            out timespan return
+    property target_time
+        get get_TargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4 reverse=22
+            out datetime return
+    property system_relative_target_time
+        get get_SystemRelativeTargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp2 shape=4 reverse=22
+            out timespan return
+
+class Windows.Perception.PerceptionTimestampHelper static python_type
+    py PerceptionTimestampHelper
+    factory Windows.Perception.IPerceptionTimestampHelperStatics2
+    factory Windows.Perception.IPerceptionTimestampHelperStatics
+    method from_historical_target_time static
+        method FromHistoricalTargetTime slot=6 inputs=1 outputs=1 declaring=Windows.Perception.IPerceptionTimestampHelperStatics shape=89 static
+            in datetime name=targetTime
+            out class type=Windows.Perception.PerceptionTimestamp return
+    method from_system_relative_target_time static
+        method FromSystemRelativeTargetTime slot=6 inputs=1 outputs=1 declaring=Windows.Perception.IPerceptionTimestampHelperStatics2 shape=89 static
+            in timespan name=targetTime
+            out class type=Windows.Perception.PerceptionTimestamp return

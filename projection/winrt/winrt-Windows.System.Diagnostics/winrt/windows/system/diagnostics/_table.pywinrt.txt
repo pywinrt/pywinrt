@@ -1,0 +1,362 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Diagnostics
+
+class Windows.System.Diagnostics.DiagnosticActionResult python_type
+    py DiagnosticActionResult
+    signature rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831})
+    default Windows.System.Diagnostics.IDiagnosticActionResult
+    requires Windows.System.Diagnostics.IDiagnosticActionResult
+    property extended_error
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4 reverse=22
+            out hresult return
+    property results
+        get get_Results slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+enum Windows.System.Diagnostics.DiagnosticActionState python_type
+    py DiagnosticActionState
+    signature enum(Windows.System.Diagnostics.DiagnosticActionState;i4)
+
+class Windows.System.Diagnostics.DiagnosticInvoker python_type
+    py DiagnosticInvoker
+    signature rc(Windows.System.Diagnostics.DiagnosticInvoker;{187b270a-02e3-4f86-84fc-fdd892b5940f})
+    default Windows.System.Diagnostics.IDiagnosticInvoker
+    requires Windows.System.Diagnostics.IDiagnosticInvoker
+    requires Windows.System.Diagnostics.IDiagnosticInvoker2
+    factory Windows.System.Diagnostics.IDiagnosticInvokerStatics
+    property is_supported static
+        get get_IsSupported slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 reverse=62 static
+            out boolean return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 reverse=22 static
+            out class type=Windows.System.Diagnostics.DiagnosticInvoker return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.Diagnostics.DiagnosticInvoker return
+    method run_diagnostic_action_async
+        method RunDiagnosticActionAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker shape=51 reverse=24
+            in class type=Windows.Data.Json.JsonObject name=context
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
+    method run_diagnostic_action_from_string_async
+        method RunDiagnosticActionFromStringAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker2 shape=51 reverse=24
+            in string name=context
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> concrete
+    guid bb5d493e-74e9-57a1-8c4c-923e0dc4565b
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831});enum(Windows.System.Diagnostics.DiagnosticActionState;i4))
+    argument Windows.System.Diagnostics.DiagnosticActionResult
+    argument Windows.System.Diagnostics.DiagnosticActionState
+
+interface Windows.System.Diagnostics.IDiagnosticActionResult
+    guid c265a296-e73b-4097-b28f-3442f03dd831
+
+interface Windows.System.Diagnostics.IDiagnosticInvoker
+    guid 187b270a-02e3-4f86-84fc-fdd892b5940f
+
+interface Windows.System.Diagnostics.IDiagnosticInvoker2
+    guid e3bf945c-155a-4b52-a8ec-070c44f95000
+
+interface Windows.System.Diagnostics.IDiagnosticInvokerStatics
+    guid 5cfad8de-f15c-4554-a813-c113c3881b09
+
+interface Windows.System.Diagnostics.IProcessCpuUsage
+    guid 0bbb2472-c8bf-423a-a810-b559ae4354e2
+
+interface Windows.System.Diagnostics.IProcessCpuUsageReport
+    guid 8a6d9cac-3987-4e2f-a119-6b5fa214f1b4
+
+interface Windows.System.Diagnostics.IProcessDiagnosticInfo
+    guid e830b04b-300e-4ee6-a0ab-5b5f5231b434
+
+interface Windows.System.Diagnostics.IProcessDiagnosticInfo2
+    guid 9558cb1a-3d0b-49ec-ab70-4f7a112805de
+
+interface Windows.System.Diagnostics.IProcessDiagnosticInfoStatics
+    guid 2f41b260-b49f-428c-aa0e-84744f49ca95
+
+interface Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2
+    guid 4a869897-9899-4a44-a29b-091663be09b6
+
+interface Windows.System.Diagnostics.IProcessDiskUsage
+    guid 5ad78bfd-7e51-4e53-bfaa-5a6ee1aabbf8
+
+interface Windows.System.Diagnostics.IProcessDiskUsageReport
+    guid 401627fd-535d-4c1f-81b8-da54e1be635e
+
+interface Windows.System.Diagnostics.IProcessMemoryUsage
+    guid f50b229b-827c-42b7-b07c-0e32627e6b3e
+
+interface Windows.System.Diagnostics.IProcessMemoryUsageReport
+    guid c2c77cba-1951-4685-8532-7e749ecf8eeb
+
+interface Windows.System.Diagnostics.ISystemCpuUsage
+    guid 6037b3ac-02d6-4234-8362-7fe3adc81f5f
+
+interface Windows.System.Diagnostics.ISystemCpuUsageReport
+    guid 2c26d0b2-9483-4f62-ab57-82b29d9719b8
+
+interface Windows.System.Diagnostics.ISystemDiagnosticInfo
+    guid a290fe05-dff3-407f-9a1b-0b2b317ca800
+
+interface Windows.System.Diagnostics.ISystemDiagnosticInfoStatics
+    guid d404ac21-fc7d-45f0-9a3f-39203aed9f7e
+
+interface Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2
+    guid 79ded189-6af9-4da9-a422-15f73255b3eb
+
+interface Windows.System.Diagnostics.ISystemMemoryUsage
+    guid 17ffc595-1702-49cf-aa27-2f0a32591404
+
+interface Windows.System.Diagnostics.ISystemMemoryUsageReport
+    guid 38663c87-2a9f-403a-bd19-2cf3e8169500
+
+interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> concrete
+    guid 9cffa2c3-7eeb-599c-b94d-c794b11f807f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    argument Windows.System.AppDiagnosticInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete
+    guid 74ab2473-9624-5a06-9025-6d91e622bf8e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434}))
+    argument Windows.System.Diagnostics.ProcessDiagnosticInfo
+
+class Windows.System.Diagnostics.ProcessCpuUsage python_type
+    py ProcessCpuUsage
+    signature rc(Windows.System.Diagnostics.ProcessCpuUsage;{0bbb2472-c8bf-423a-a810-b559ae4354e2})
+    default Windows.System.Diagnostics.IProcessCpuUsage
+    requires Windows.System.Diagnostics.IProcessCpuUsage
+    method get_report
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsage shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.ProcessCpuUsageReport return
+
+class Windows.System.Diagnostics.ProcessCpuUsageReport python_type
+    py ProcessCpuUsageReport
+    signature rc(Windows.System.Diagnostics.ProcessCpuUsageReport;{8a6d9cac-3987-4e2f-a119-6b5fa214f1b4})
+    default Windows.System.Diagnostics.IProcessCpuUsageReport
+    requires Windows.System.Diagnostics.IProcessCpuUsageReport
+    property kernel_time
+        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4 reverse=22
+            out timespan return
+    property user_time
+        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4 reverse=43
+            out timespan return
+
+class Windows.System.Diagnostics.ProcessDiagnosticInfo python_type
+    py ProcessDiagnosticInfo
+    signature rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434})
+    default Windows.System.Diagnostics.IProcessDiagnosticInfo
+    requires Windows.System.Diagnostics.IProcessDiagnosticInfo
+    requires Windows.System.Diagnostics.IProcessDiagnosticInfo2
+    factory Windows.System.Diagnostics.IProcessDiagnosticInfoStatics
+    factory Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2
+    property cpu_usage
+        get get_CpuUsage slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=162
+            out class type=Windows.System.Diagnostics.ProcessCpuUsage return
+    property disk_usage
+        get get_DiskUsage slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=121
+            out class type=Windows.System.Diagnostics.ProcessDiskUsage return
+    property executable_file_name
+        get get_ExecutableFileName slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=43
+            out string return
+    property memory_usage
+        get get_MemoryUsage slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=141
+            out class type=Windows.System.Diagnostics.ProcessMemoryUsage return
+    property parent
+        get get_Parent slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=62
+            out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
+    property process_id
+        get get_ProcessId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=22
+            out uint32 return
+    property process_start_time
+        get get_ProcessStartTime slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=99
+            out datetime return
+    property is_packaged
+        get get_IsPackaged slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4 reverse=43
+            out boolean return
+    method get_app_diagnostic_infos
+        method GetAppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> return
+    method get_for_current_process static
+        method GetForCurrentProcess slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 reverse=43 static
+            out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
+    method get_for_processes static
+        method GetForProcesses slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
+    method try_get_for_process_id static
+        method TryGetForProcessId slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2 shape=51 reverse=24 static
+            in uint32 name=processId
+            out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
+
+class Windows.System.Diagnostics.ProcessDiskUsage python_type
+    py ProcessDiskUsage
+    signature rc(Windows.System.Diagnostics.ProcessDiskUsage;{5ad78bfd-7e51-4e53-bfaa-5a6ee1aabbf8})
+    default Windows.System.Diagnostics.IProcessDiskUsage
+    requires Windows.System.Diagnostics.IProcessDiskUsage
+    method get_report
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsage shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.ProcessDiskUsageReport return
+
+class Windows.System.Diagnostics.ProcessDiskUsageReport python_type
+    py ProcessDiskUsageReport
+    signature rc(Windows.System.Diagnostics.ProcessDiskUsageReport;{401627fd-535d-4c1f-81b8-da54e1be635e})
+    default Windows.System.Diagnostics.IProcessDiskUsageReport
+    requires Windows.System.Diagnostics.IProcessDiskUsageReport
+    property bytes_read_count
+        get get_BytesReadCount slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=99
+            out int64 return
+    property bytes_written_count
+        get get_BytesWrittenCount slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=121
+            out int64 return
+    property other_bytes_count
+        get get_OtherBytesCount slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=141
+            out int64 return
+    property other_operation_count
+        get get_OtherOperationCount slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=62
+            out int64 return
+    property read_operation_count
+        get get_ReadOperationCount slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=22
+            out int64 return
+    property write_operation_count
+        get get_WriteOperationCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=43
+            out int64 return
+
+class Windows.System.Diagnostics.ProcessMemoryUsage python_type
+    py ProcessMemoryUsage
+    signature rc(Windows.System.Diagnostics.ProcessMemoryUsage;{f50b229b-827c-42b7-b07c-0e32627e6b3e})
+    default Windows.System.Diagnostics.IProcessMemoryUsage
+    requires Windows.System.Diagnostics.IProcessMemoryUsage
+    method get_report
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsage shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.ProcessMemoryUsageReport return
+
+class Windows.System.Diagnostics.ProcessMemoryUsageReport python_type
+    py ProcessMemoryUsageReport
+    signature rc(Windows.System.Diagnostics.ProcessMemoryUsageReport;{c2c77cba-1951-4685-8532-7e749ecf8eeb})
+    default Windows.System.Diagnostics.IProcessMemoryUsageReport
+    requires Windows.System.Diagnostics.IProcessMemoryUsageReport
+    property non_paged_pool_size_in_bytes
+        get get_NonPagedPoolSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=22
+            out uint64 return
+    property page_fault_count
+        get get_PageFaultCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=43
+            out uint32 return
+    property page_file_size_in_bytes
+        get get_PageFileSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=62
+            out uint64 return
+    property paged_pool_size_in_bytes
+        get get_PagedPoolSizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=99
+            out uint64 return
+    property peak_non_paged_pool_size_in_bytes
+        get get_PeakNonPagedPoolSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=121
+            out uint64 return
+    property peak_page_file_size_in_bytes
+        get get_PeakPageFileSizeInBytes slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=141
+            out uint64 return
+    property peak_paged_pool_size_in_bytes
+        get get_PeakPagedPoolSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=162
+            out uint64 return
+    property peak_virtual_memory_size_in_bytes
+        get get_PeakVirtualMemorySizeInBytes slot=13 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=173
+            out uint64 return
+    property peak_working_set_size_in_bytes
+        get get_PeakWorkingSetSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=186
+            out uint64 return
+    property private_page_count
+        get get_PrivatePageCount slot=15 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=194
+            out uint64 return
+    property virtual_memory_size_in_bytes
+        get get_VirtualMemorySizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=202
+            out uint64 return
+    property working_set_size_in_bytes
+        get get_WorkingSetSizeInBytes slot=17 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=210
+            out uint64 return
+
+class Windows.System.Diagnostics.SystemCpuUsage python_type
+    py SystemCpuUsage
+    signature rc(Windows.System.Diagnostics.SystemCpuUsage;{6037b3ac-02d6-4234-8362-7fe3adc81f5f})
+    default Windows.System.Diagnostics.ISystemCpuUsage
+    requires Windows.System.Diagnostics.ISystemCpuUsage
+    method get_report
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsage shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.SystemCpuUsageReport return
+
+class Windows.System.Diagnostics.SystemCpuUsageReport python_type
+    py SystemCpuUsageReport
+    signature rc(Windows.System.Diagnostics.SystemCpuUsageReport;{2c26d0b2-9483-4f62-ab57-82b29d9719b8})
+    default Windows.System.Diagnostics.ISystemCpuUsageReport
+    requires Windows.System.Diagnostics.ISystemCpuUsageReport
+    property idle_time
+        get get_IdleTime slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=62
+            out timespan return
+    property kernel_time
+        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=22
+            out timespan return
+    property user_time
+        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=43
+            out timespan return
+
+class Windows.System.Diagnostics.SystemDiagnosticInfo python_type
+    py SystemDiagnosticInfo
+    signature rc(Windows.System.Diagnostics.SystemDiagnosticInfo;{a290fe05-dff3-407f-9a1b-0b2b317ca800})
+    default Windows.System.Diagnostics.ISystemDiagnosticInfo
+    requires Windows.System.Diagnostics.ISystemDiagnosticInfo
+    factory Windows.System.Diagnostics.ISystemDiagnosticInfoStatics
+    factory Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2
+    property cpu_usage
+        get get_CpuUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4 reverse=43
+            out class type=Windows.System.Diagnostics.SystemCpuUsage return
+    property memory_usage
+        get get_MemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.SystemMemoryUsage return
+    property preferred_architecture static
+        get get_PreferredArchitecture slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=4 reverse=43 static
+            out enum32 type=Windows.System.ProcessorArchitecture return
+    method get_for_current_system static
+        method GetForCurrentSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics shape=4 reverse=22 static
+            out class type=Windows.System.Diagnostics.SystemDiagnosticInfo return
+    method is_architecture_supported static
+        method IsArchitectureSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.System.ProcessorArchitecture name=type
+            out boolean return
+
+class Windows.System.Diagnostics.SystemMemoryUsage python_type
+    py SystemMemoryUsage
+    signature rc(Windows.System.Diagnostics.SystemMemoryUsage;{17ffc595-1702-49cf-aa27-2f0a32591404})
+    default Windows.System.Diagnostics.ISystemMemoryUsage
+    requires Windows.System.Diagnostics.ISystemMemoryUsage
+    method get_report
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsage shape=4 reverse=22
+            out class type=Windows.System.Diagnostics.SystemMemoryUsageReport return
+
+class Windows.System.Diagnostics.SystemMemoryUsageReport python_type
+    py SystemMemoryUsageReport
+    signature rc(Windows.System.Diagnostics.SystemMemoryUsageReport;{38663c87-2a9f-403a-bd19-2cf3e8169500})
+    default Windows.System.Diagnostics.ISystemMemoryUsageReport
+    requires Windows.System.Diagnostics.ISystemMemoryUsageReport
+    property available_size_in_bytes
+        get get_AvailableSizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=43
+            out uint64 return
+    property committed_size_in_bytes
+        get get_CommittedSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=62
+            out uint64 return
+    property total_physical_size_in_bytes
+        get get_TotalPhysicalSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=22
+            out uint64 return
+
+class Windows.Data.Json.JsonObject external
+    py winrt.windows.data.json.JsonObject
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+class Windows.System.AppDiagnosticInfo external
+    py winrt.windows.system.AppDiagnosticInfo
+
+enum Windows.System.ProcessorArchitecture external
+    py winrt.windows.system.ProcessorArchitecture
+
+class Windows.System.User external
+    py winrt.windows.system.User

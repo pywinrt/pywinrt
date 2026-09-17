@@ -1,0 +1,7 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.Workloads
+
+enum Microsoft.Windows.Workloads.WorkloadPriority python_type
+    py WorkloadPriority
+    signature enum(Microsoft.Windows.Workloads.WorkloadPriority;i4)

@@ -1,0 +1,441 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.UserProfile
+
+enum Windows.System.UserProfile.AccountPictureKind python_type
+    py AccountPictureKind
+    signature enum(Windows.System.UserProfile.AccountPictureKind;i4)
+
+class Windows.System.UserProfile.AdvertisingManager static python_type
+    py AdvertisingManager
+    factory Windows.System.UserProfile.IAdvertisingManagerStatics
+    factory Windows.System.UserProfile.IAdvertisingManagerStatics2
+    property advertising_id static
+        get get_AdvertisingId slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAdvertisingManagerStatics shape=4 reverse=22 static
+            out string return
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IAdvertisingManagerStatics2 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.UserProfile.AdvertisingManagerForUser return
+
+class Windows.System.UserProfile.AdvertisingManagerForUser python_type
+    py AdvertisingManagerForUser
+    signature rc(Windows.System.UserProfile.AdvertisingManagerForUser;{928bf3d0-cf7c-4ab0-a7dc-6dc5bcd44252})
+    default Windows.System.UserProfile.IAdvertisingManagerForUser
+    requires Windows.System.UserProfile.IAdvertisingManagerForUser
+    property advertising_id
+        get get_AdvertisingId slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAdvertisingManagerForUser shape=4 reverse=22
+            out string return
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAdvertisingManagerForUser shape=4 reverse=43
+            out class type=Windows.System.User return
+
+class Windows.System.UserProfile.AssignedAccessSettings python_type
+    py AssignedAccessSettings
+    signature rc(Windows.System.UserProfile.AssignedAccessSettings;{1bc57f1c-e971-5757-b8e0-512f8b8c46d2})
+    default Windows.System.UserProfile.IAssignedAccessSettings
+    requires Windows.System.UserProfile.IAssignedAccessSettings
+    factory Windows.System.UserProfile.IAssignedAccessSettingsStatics
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAssignedAccessSettings shape=4 reverse=22
+            out boolean return
+    property is_single_app_kiosk_mode
+        get get_IsSingleAppKioskMode slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAssignedAccessSettings shape=4 reverse=43
+            out boolean return
+    property user
+        get get_User slot=8 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAssignedAccessSettings shape=4 reverse=62
+            out class type=Windows.System.User return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IAssignedAccessSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.System.UserProfile.AssignedAccessSettings return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IAssignedAccessSettingsStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.UserProfile.AssignedAccessSettings return
+
+class Windows.System.UserProfile.DiagnosticsSettings python_type
+    py DiagnosticsSettings
+    signature rc(Windows.System.UserProfile.DiagnosticsSettings;{e5e9eccd-2711-44e0-973c-491d78048d24})
+    default Windows.System.UserProfile.IDiagnosticsSettings
+    requires Windows.System.UserProfile.IDiagnosticsSettings
+    factory Windows.System.UserProfile.IDiagnosticsSettingsStatics
+    property can_use_diagnostics_to_tailor_experiences
+        get get_CanUseDiagnosticsToTailorExperiences slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IDiagnosticsSettings shape=4 reverse=22
+            out boolean return
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IDiagnosticsSettings shape=4 reverse=43
+            out class type=Windows.System.User return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IDiagnosticsSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.System.UserProfile.DiagnosticsSettings return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IDiagnosticsSettingsStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.UserProfile.DiagnosticsSettings return
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+class Windows.System.UserProfile.FirstSignInSettings python_type iterable mapping
+    py FirstSignInSettings
+    signature rc(Windows.System.UserProfile.FirstSignInSettings;{3e945153-3a5e-452e-a601-f5baad2a4870})
+    default Windows.System.UserProfile.IFirstSignInSettings
+    requires Windows.System.UserProfile.IFirstSignInSettings
+    requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    factory Windows.System.UserProfile.IFirstSignInSettingsStatics
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IFirstSignInSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.System.UserProfile.FirstSignInSettings return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
+class Windows.System.UserProfile.GlobalizationPreferences static python_type
+    py GlobalizationPreferences
+    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics3
+    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics2
+    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics
+    property calendars static
+        get get_Calendars slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property clocks static
+        get get_Clocks slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property currencies static
+        get get_Currencies slot=8 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property home_geographic_region static
+        get get_HomeGeographicRegion slot=10 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=121 static
+            out string return
+    property languages static
+        get get_Languages slot=9 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property week_starts_on static
+        get get_WeekStartsOn slot=11 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=141 static
+            out enum32 type=Windows.Globalization.DayOfWeek return
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics3 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.UserProfile.GlobalizationPreferencesForUser return
+    method try_set_home_geographic_region static
+        method TrySetHomeGeographicRegion slot=6 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics2 shape=51 reverse=24 static
+            in string name=region
+            out boolean return
+    method try_set_languages static
+        method TrySetLanguages slot=7 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics2 shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languageTags
+            out boolean return
+
+class Windows.System.UserProfile.GlobalizationPreferencesForUser python_type
+    py GlobalizationPreferencesForUser
+    signature rc(Windows.System.UserProfile.GlobalizationPreferencesForUser;{150f0795-4f6e-40ba-a010-e27d81bda7f5})
+    default Windows.System.UserProfile.IGlobalizationPreferencesForUser
+    requires Windows.System.UserProfile.IGlobalizationPreferencesForUser
+    property calendars
+        get get_Calendars slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property clocks
+        get get_Clocks slot=8 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property currencies
+        get get_Currencies slot=9 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property home_geographic_region
+        get get_HomeGeographicRegion slot=11 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=141
+            out string return
+    property languages
+        get get_Languages slot=10 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property week_starts_on
+        get get_WeekStartsOn slot=12 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesForUser shape=4 reverse=162
+            out enum32 type=Windows.Globalization.DayOfWeek return
+
+interface Windows.System.UserProfile.IAdvertisingManagerForUser
+    guid 928bf3d0-cf7c-4ab0-a7dc-6dc5bcd44252
+
+interface Windows.System.UserProfile.IAdvertisingManagerStatics
+    guid add3468c-a273-48cb-b346-3544522d5581
+
+interface Windows.System.UserProfile.IAdvertisingManagerStatics2
+    guid dd0947af-1a6d-46b0-95bc-f3f9d6beb9fb
+
+interface Windows.System.UserProfile.IAssignedAccessSettings
+    guid 1bc57f1c-e971-5757-b8e0-512f8b8c46d2
+
+interface Windows.System.UserProfile.IAssignedAccessSettingsStatics
+    guid 34a81d0d-8a29-5ef3-a7be-618e6ac3bd01
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> concrete
+    guid 641cb9dd-a28d-59e2-b8db-a227eda6cf2e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> concrete
+    guid 6809e406-6d3b-5164-8f32-b845b0781405
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.UserProfile.SetAccountPictureResult;i4))
+    argument Windows.System.UserProfile.SetAccountPictureResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetImageFeedResult> concrete
+    guid 5361bfc9-0740-544a-9797-1ffe5e73c54e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.UserProfile.SetImageFeedResult;i4))
+    argument Windows.System.UserProfile.SetImageFeedResult
+
+interface Windows.System.UserProfile.IDiagnosticsSettings
+    guid e5e9eccd-2711-44e0-973c-491d78048d24
+
+interface Windows.System.UserProfile.IDiagnosticsSettingsStatics
+    guid 72d2e80f-5390-4793-990b-3ccc7d6ac9c8
+
+interface Windows.System.UserProfile.IFirstSignInSettings
+    guid 3e945153-3a5e-452e-a601-f5baad2a4870
+
+interface Windows.System.UserProfile.IFirstSignInSettingsStatics
+    guid 1ce18f0f-1c41-4ea0-b7a2-6f0c1c7e8438
+
+interface Windows.System.UserProfile.IGlobalizationPreferencesForUser
+    guid 150f0795-4f6e-40ba-a010-e27d81bda7f5
+
+interface Windows.System.UserProfile.IGlobalizationPreferencesStatics
+    guid 01bf4326-ed37-4e96-b0e9-c1340d1ea158
+
+interface Windows.System.UserProfile.IGlobalizationPreferencesStatics2
+    guid fcce85f1-4300-4cd0-9cac-1a8e7b7e18f4
+
+interface Windows.System.UserProfile.IGlobalizationPreferencesStatics3
+    guid 1e059733-35f5-40d8-b9e8-aef3ef856fce
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.System.UserProfile.ILockScreenImageFeedStatics
+    guid 2c0d73f6-03a9-41a6-9b01-495251ff51d5
+
+interface Windows.System.UserProfile.ILockScreenStatics
+    guid 3ee9d3ad-b607-40ae-b426-7631d9821269
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.System.UserProfile.IUserInformationStatics
+    guid 77f3a910-48fa-489c-934e-2ae85ba8f772
+
+interface Windows.System.UserProfile.IUserProfilePersonalizationSettings
+    guid 8ceddab4-7998-46d5-8dd3-184f1c5f9ab9
+
+interface Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics
+    guid 91acb841-5037-454b-9883-bb772d08dd16
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+enum K parameterized
+
+class Windows.System.UserProfile.LockScreen static python_type
+    py LockScreen
+    factory Windows.System.UserProfile.ILockScreenImageFeedStatics
+    factory Windows.System.UserProfile.ILockScreenStatics
+    property original_image_file static
+        get get_OriginalImageFile slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.ILockScreenStatics shape=4 reverse=22 static
+            out class type=Windows.Foundation.Uri return
+    method get_image_stream static
+        method GetImageStream slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.ILockScreenStatics shape=4 reverse=43 static
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method request_set_image_feed_async static
+        method RequestSetImageFeedAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.UserProfile.ILockScreenImageFeedStatics shape=51 reverse=24 static
+            in class type=Windows.Foundation.Uri name=syndicationFeedUri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetImageFeedResult> return
+    method set_image_file_async static
+        method SetImageFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.UserProfile.ILockScreenStatics shape=51 reverse=65 static
+            in interface type=Windows.Storage.IStorageFile name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_image_stream_async static
+        method SetImageStreamAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.UserProfile.ILockScreenStatics shape=51 reverse=100 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_remove_image_feed static
+        method TryRemoveImageFeed slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.ILockScreenImageFeedStatics shape=4 reverse=43 static
+            out boolean return
+
+enum Windows.System.UserProfile.SetAccountPictureResult python_type
+    py SetAccountPictureResult
+    signature enum(Windows.System.UserProfile.SetAccountPictureResult;i4)
+
+enum Windows.System.UserProfile.SetImageFeedResult python_type
+    py SetImageFeedResult
+    signature enum(Windows.System.UserProfile.SetImageFeedResult;i4)
+
+class Windows.System.UserProfile.UserInformation static python_type
+    py UserInformation
+    factory Windows.System.UserProfile.IUserInformationStatics
+    property account_picture_change_enabled static
+        get get_AccountPictureChangeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=22 static deprecated
+            out boolean return
+    property name_access_allowed static
+        get get_NameAccessAllowed slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=43 static deprecated
+            out boolean return
+    event account_picture_changed static
+        add add_AccountPictureChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=174 static deprecated
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=changeHandler
+            out event_token return
+        remove remove_AccountPictureChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.UserProfile.IUserInformationStatics shape=26 reverse=192 static deprecated
+            in event_token name=token
+    method get_account_picture static deprecated
+        method GetAccountPicture slot=8 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=65 static deprecated
+            in enum32 type=Windows.System.UserProfile.AccountPictureKind name=kind
+            out interface type=Windows.Storage.IStorageFile return
+    method get_display_name_async static deprecated
+        method GetDisplayNameAsync slot=15 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=194 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_domain_name_async static deprecated
+        method GetDomainNameAsync slot=20 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=228 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_first_name_async static deprecated
+        method GetFirstNameAsync slot=16 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=202 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_last_name_async static deprecated
+        method GetLastNameAsync slot=17 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=210 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_principal_name_async static deprecated
+        method GetPrincipalNameAsync slot=18 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=218 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_session_initiation_protocol_uri_async static deprecated
+        method GetSessionInitiationProtocolUriAsync slot=19 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 reverse=223 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
+    method set_account_picture_async static deprecated
+        method SetAccountPictureAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=100 static deprecated
+            in interface type=Windows.Storage.IStorageFile name=image
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
+    method set_account_picture_from_stream_async static deprecated
+        method SetAccountPictureFromStreamAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=144 static deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=image
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
+    method set_account_pictures_async static deprecated
+        method SetAccountPicturesAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=195 reverse=126 static deprecated
+            in interface type=Windows.Storage.IStorageFile name=smallImage
+            in interface type=Windows.Storage.IStorageFile name=largeImage
+            in interface type=Windows.Storage.IStorageFile name=video
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
+    method set_account_pictures_from_streams_async static deprecated
+        method SetAccountPicturesFromStreamsAsync slot=12 inputs=3 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=195 reverse=165 static deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=smallImage
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=largeImage
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=video
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
+
+class Windows.System.UserProfile.UserProfilePersonalizationSettings python_type
+    py UserProfilePersonalizationSettings
+    signature rc(Windows.System.UserProfile.UserProfilePersonalizationSettings;{8ceddab4-7998-46d5-8dd3-184f1c5f9ab9})
+    default Windows.System.UserProfile.IUserProfilePersonalizationSettings
+    requires Windows.System.UserProfile.IUserProfilePersonalizationSettings
+    factory Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.System.UserProfile.UserProfilePersonalizationSettings return
+    method is_supported static
+        method IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics shape=4 reverse=43 static
+            out boolean return
+    method try_set_lock_screen_image_async
+        method TrySetLockScreenImageAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserProfilePersonalizationSettings shape=51 reverse=24
+            in class type=Windows.Storage.StorageFile name=imageFile
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_set_wallpaper_image_async
+        method TrySetWallpaperImageAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserProfilePersonalizationSettings shape=51 reverse=44
+            in class type=Windows.Storage.StorageFile name=imageFile
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum V parameterized
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+enum Windows.Globalization.DayOfWeek external
+    py winrt.windows.globalization.DayOfWeek
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+class Windows.System.User external
+    py winrt.windows.system.User

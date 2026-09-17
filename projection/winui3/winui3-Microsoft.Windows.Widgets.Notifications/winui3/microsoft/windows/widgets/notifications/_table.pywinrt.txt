@@ -1,0 +1,116 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.Widgets.Notifications
+
+enum Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind python_type
+    py AnnouncementActionKind
+    signature enum(Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind;i4)
+
+enum Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor python_type
+    py AnnouncementTextColor
+    signature enum(Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor;i4)
+
+class Microsoft.Windows.Widgets.Notifications.FeedAnnouncement python_type
+    py FeedAnnouncement
+    signature rc(Microsoft.Windows.Widgets.Notifications.FeedAnnouncement;{b88e8c2c-d251-5344-acc2-8cf9ba07ec15})
+    default Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement
+    requires Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement
+    factory Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory
+    constructor -
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory shape=267
+            in string name=id
+            in string name=primaryText
+            in string name=secondaryText
+            in class type=Windows.Foundation.Uri name=lightModeIcon
+            in class type=Windows.Foundation.Uri name=darkModeIcon
+            out class type=Microsoft.Windows.Widgets.Notifications.FeedAnnouncement return
+    property show_badge_if_user_not_engaged
+        get get_ShowBadgeIfUserNotEngaged slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=247
+            out boolean return
+        put put_ShowBadgeIfUserNotEngaged slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=252
+            in boolean name=value
+    property secondary_text_color
+        get get_SecondaryTextColor slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=218
+            out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor return
+        put put_SecondaryTextColor slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=223
+            in enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor name=value
+    property secondary_text
+        get get_SecondaryText slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=121
+            out string return
+        put put_SecondaryText slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=141
+            in string name=value
+    property primary_text_color
+        get get_PrimaryTextColor slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=202
+            out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor return
+        put put_PrimaryTextColor slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=210
+            in enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor name=value
+    property primary_text
+        get get_PrimaryText slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=62
+            out string return
+        put put_PrimaryText slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=99
+            in string name=value
+    property light_mode_icon_uri
+        get get_LightModeIconUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=162
+            out class type=Windows.Foundation.Uri return
+        put put_LightModeIconUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=173
+            in class type=Windows.Foundation.Uri name=value
+    property is_secondary_text_subtle
+        get get_IsSecondaryTextSubtle slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=237
+            out boolean return
+        put put_IsSecondaryTextSubtle slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=242
+            in boolean name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=43
+            in string name=value
+    property expiration_time
+        get get_ExpirationTime slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=255
+            out datetime return
+        put put_ExpirationTime slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26 reverse=262
+            in datetime name=value
+    property duration
+        get get_Duration slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=263
+            out timespan return
+        put put_Duration slot=29 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26 reverse=268
+            in timespan name=value
+    property dark_mode_icon_uri
+        get get_DarkModeIconUri slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_DarkModeIconUri slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property custom_accessibility_text
+        get get_CustomAccessibilityText slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=228
+            out string return
+        put put_CustomAccessibilityText slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=232
+            in string name=value
+
+class Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs python_type
+    py FeedAnnouncementInvokedArgs
+    signature rc(Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs;{70a48d98-323d-5f19-a1e1-b63fe36edbf2})
+    default Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs
+    requires Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs
+    property action_kind
+        get get_ActionKind slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=99
+            out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind return
+    property announcement_id
+        get get_AnnouncementId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=62
+            out string return
+    property feed_definition_id
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=43
+            out string return
+    property feed_provider_definition_id
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=22
+            out string return
+
+interface Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement
+    guid b88e8c2c-d251-5344-acc2-8cf9ba07ec15
+
+interface Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory
+    guid 22074243-46d8-5af2-8715-1c76d1cb774c
+
+interface Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs
+    guid 70a48d98-323d-5f19-a1e1-b63fe36edbf2
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

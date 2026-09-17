@@ -1,0 +1,89 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Radios
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> concrete
+    guid eac62c40-8dbc-5854-8ba0-b7b9940e7389
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e}))
+    argument Windows.Devices.Radios.Radio
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessStatus> concrete
+    guid 21fb30ef-072f-502c-9898-d0c3b2cd9ac5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Radios.RadioAccessStatus;i4))
+    argument Windows.Devices.Radios.RadioAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio>> concrete
+    guid 040b54a1-203e-58f5-943f-c1cca86bd532
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio>
+
+interface Windows.Devices.Radios.IRadio
+    guid 252118df-b33e-416a-875f-1cf38ae2d83e
+
+interface Windows.Devices.Radios.IRadioStatics
+    guid 5fb6a12e-67cb-46ae-aae9-65919f86eff4
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio> concrete
+    guid 65066c36-090b-5466-b8e5-e7565dc34175
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e}))
+    argument Windows.Devices.Radios.Radio
+
+class Windows.Devices.Radios.Radio python_type
+    py Radio
+    signature rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e})
+    default Windows.Devices.Radios.IRadio
+    requires Windows.Devices.Radios.IRadio
+    factory Windows.Devices.Radios.IRadioStatics
+    property kind
+        get get_Kind slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=141
+            out enum32 type=Windows.Devices.Radios.RadioKind return
+    property name
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=121
+            out string return
+    property state
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=99
+            out enum32 type=Windows.Devices.Radios.RadioState return
+    event state_changed
+        add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Radios.Radio,System.Object> name=handler
+            out event_token return
+        remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Radios.IRadio shape=26 reverse=82
+            in event_token name=eventCookie
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=43 static
+            out string return
+    method get_radios_async static
+        method GetRadiosAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio>> return
+    method request_access_async static
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessStatus> return
+    method set_state_async
+        method SetStateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51 reverse=24
+            in enum32 type=Windows.Devices.Radios.RadioState name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessStatus> return
+
+enum Windows.Devices.Radios.RadioAccessStatus python_type
+    py RadioAccessStatus
+    signature enum(Windows.Devices.Radios.RadioAccessStatus;i4)
+
+enum Windows.Devices.Radios.RadioKind python_type
+    py RadioKind
+    signature enum(Windows.Devices.Radios.RadioKind;i4)
+
+enum Windows.Devices.Radios.RadioState python_type
+    py RadioState
+    signature enum(Windows.Devices.Radios.RadioState;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Radios.Radio,System.Object> concrete
+    guid fc6aa329-b586-5ebb-9e85-3f6b84ebdf18
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e});cinterface(IInspectable))
+    argument Windows.Devices.Radios.Radio
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object

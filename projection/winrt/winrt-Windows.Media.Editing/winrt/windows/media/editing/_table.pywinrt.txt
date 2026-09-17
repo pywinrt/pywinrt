@@ -1,0 +1,474 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Editing
+
+class Windows.Media.Editing.BackgroundAudioTrack python_type
+    py BackgroundAudioTrack
+    signature rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357})
+    default Windows.Media.Editing.IBackgroundAudioTrack
+    requires Windows.Media.Editing.IBackgroundAudioTrack
+    factory Windows.Media.Editing.IBackgroundAudioTrackStatics
+    property volume
+        get get_Volume slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=202
+            out double return
+        put put_Volume slot=15 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=2
+            in double name=value
+    property trim_time_from_start
+        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=22
+            out timespan return
+        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=53
+            in timespan name=value
+    property trim_time_from_end
+        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=62
+            out timespan return
+        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=110
+            in timespan name=value
+    property delay
+        get get_Delay slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=186
+            out timespan return
+        put put_Delay slot=13 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=181
+            in timespan name=value
+    property audio_effect_definitions
+        get get_AudioEffectDefinitions slot=19 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> return
+    property original_duration
+        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=121
+            out timespan return
+    property trimmed_duration
+        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=141
+            out timespan return
+    property user_data
+        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    method clone
+        method Clone slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=210
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
+    method create_from_embedded_audio_track static
+        method CreateFromEmbeddedAudioTrack slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 reverse=24 static
+            in class type=Windows.Media.Editing.EmbeddedAudioTrack name=embeddedAudioTrack
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
+    method create_from_file_async static
+        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> return
+    method get_audio_encoding_properties
+        method GetAudioEncodingProperties slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=218
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+
+class Windows.Media.Editing.EmbeddedAudioTrack python_type
+    py EmbeddedAudioTrack
+    signature rc(Windows.Media.Editing.EmbeddedAudioTrack;{55ee5a7a-2d30-3fba-a190-4f1a6454f88f})
+    default Windows.Media.Editing.IEmbeddedAudioTrack
+    requires Windows.Media.Editing.IEmbeddedAudioTrack
+    method get_audio_encoding_properties
+        method GetAudioEncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IEmbeddedAudioTrack shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> concrete
+    guid a58d867e-beef-5f17-b7cf-e4c87be22ee4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> concrete
+    guid 684165be-0011-56d6-bebf-430016d51b7a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    argument Windows.Graphics.Imaging.ImageStream
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> concrete
+    guid 493dc898-6076-55f5-ab84-ccf973ac0397
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    argument Windows.Media.Editing.BackgroundAudioTrack
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> concrete
+    guid b5e699dd-b6f1-51c0-b752-e02fa0068d79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    argument Windows.Media.Editing.MediaClip
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> concrete
+    guid e170e898-d11f-5054-ab13-1080a4807636
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.MediaComposition;{2e06e605-dc71-41d6-b837-2d2bc14a2947}))
+    argument Windows.Media.Editing.MediaComposition
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> concrete
+    guid 272eec20-4b64-5d53-a644-f9917b3d19d8
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4);f8)
+    argument Windows.Media.Transcoding.TranscodeFailureReason
+    argument System.Double
+
+interface Windows.Media.Editing.IBackgroundAudioTrack
+    guid 4b91b3bd-9e21-4266-a9c2-67dd011a2357
+
+interface Windows.Media.Editing.IBackgroundAudioTrackStatics
+    guid d9b1c0d7-d018-42a8-a559-cb4d9e97e664
+
+interface Windows.Media.Editing.IEmbeddedAudioTrack
+    guid 55ee5a7a-2d30-3fba-a190-4f1a6454f88f
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> concrete
+    guid e9f78726-829a-5f67-8d19-95ef154b7742
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Media.Editing.IMediaClip
+    guid 53f25366-5fba-3ea4-8693-24761811140a
+
+interface Windows.Media.Editing.IMediaClipStatics
+    guid fa402b68-928f-43c4-bc6e-783a1a359656
+
+interface Windows.Media.Editing.IMediaClipStatics2
+    guid 5b1dd7b3-854e-4d9b-877d-4774a556cd12
+
+interface Windows.Media.Editing.IMediaComposition
+    guid 2e06e605-dc71-41d6-b837-2d2bc14a2947
+
+interface Windows.Media.Editing.IMediaComposition2
+    guid a59e5372-2366-492c-bec8-e6dfba6d0281
+
+interface Windows.Media.Editing.IMediaCompositionStatics
+    guid 87a08f04-e32a-45ce-8f66-a30df0766224
+
+interface Windows.Media.Editing.IMediaOverlay
+    guid a902ae5d-7869-4830-8ab1-94dc01c05fa4
+
+interface Windows.Media.Editing.IMediaOverlayFactory
+    guid b584828a-6188-4f8f-a2e0-aa552d598e18
+
+interface Windows.Media.Editing.IMediaOverlayLayer
+    guid a6d9ba57-eeda-46c6-bbe5-e398c84168ac
+
+interface Windows.Media.Editing.IMediaOverlayLayerFactory
+    guid 947cb473-a39e-4362-abbf-9f8b5070a062
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> concrete
+    guid 56d62145-6978-5eba-83c9-fc4ad6d443bf
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    argument Windows.Media.Editing.BackgroundAudioTrack
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> concrete
+    guid e805688e-3508-57f3-bf95-617f2d7a6f1a
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    argument Windows.Media.Editing.MediaClip
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> concrete
+    guid 5b913ec8-ed52-5b2c-a710-52c6e7ab3cb2
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4}))
+    argument Windows.Media.Editing.MediaOverlay
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> concrete
+    guid 6564eb2c-2210-5dfc-a84c-266c4349c2c6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac}))
+    argument Windows.Media.Editing.MediaOverlayLayer
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> concrete
+    guid 2828a982-d849-5fc9-84ce-f9a4b3b4d341
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    argument Windows.Media.Effects.IAudioEffectDefinition
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> concrete
+    guid 7ca161ed-e201-5615-aacc-25348564f0b3
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    argument Windows.Media.Effects.IVideoEffectDefinition
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> concrete
+    guid ab10f3e5-2a3e-5f81-b5e8-8ddddc23cca2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    argument Windows.Graphics.Imaging.ImageStream
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> concrete
+    guid 63d85bd5-4365-5e56-9e40-e7cd3051aebf
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.EmbeddedAudioTrack;{55ee5a7a-2d30-3fba-a190-4f1a6454f88f}))
+    argument Windows.Media.Editing.EmbeddedAudioTrack
+
+class Windows.Media.Editing.MediaClip python_type
+    py MediaClip
+    signature rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a})
+    default Windows.Media.Editing.IMediaClip
+    requires Windows.Media.Editing.IMediaClip
+    factory Windows.Media.Editing.IMediaClipStatics2
+    factory Windows.Media.Editing.IMediaClipStatics
+    property selected_embedded_audio_track_index
+        get get_SelectedEmbeddedAudioTrackIndex slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=210
+            out uint32 return
+        put put_SelectedEmbeddedAudioTrackIndex slot=18 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=218
+            in uint32 name=value
+    property trim_time_from_end
+        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=62
+            out timespan return
+        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26 reverse=110
+            in timespan name=value
+    property volume
+        get get_Volume slot=20 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=228
+            out double return
+        put put_Volume slot=19 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=2
+            in double name=value
+    property trim_time_from_start
+        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=22
+            out timespan return
+        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26 reverse=53
+            in timespan name=value
+    property embedded_audio_tracks
+        get get_EmbeddedAudioTracks slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> return
+    property end_time_in_composition
+        get get_EndTimeInComposition slot=15 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=194
+            out timespan return
+    property original_duration
+        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=121
+            out timespan return
+    property start_time_in_composition
+        get get_StartTimeInComposition slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=186
+            out timespan return
+    property trimmed_duration
+        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=141
+            out timespan return
+    property user_data
+        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property video_effect_definitions
+        get get_VideoEffectDefinitions slot=23 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=242
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> return
+    property audio_effect_definitions
+        get get_AudioEffectDefinitions slot=22 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=237
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> return
+    method clone
+        method Clone slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=173
+            out class type=Windows.Media.Editing.MediaClip return
+    method create_from_color static
+        method CreateFromColor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=176 static
+            in struct type=Windows.UI.Color name=color
+            in timespan name=originalDuration
+            out class type=Windows.Media.Editing.MediaClip return
+    method create_from_file_async static
+        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> return
+    method create_from_image_file_async static
+        method CreateFromImageFileAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=135 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            in timespan name=originalDuration
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> return
+    method create_from_surface static
+        method CreateFromSurface slot=6 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics2 shape=135 static
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=surface
+            in timespan name=originalDuration
+            out class type=Windows.Media.Editing.MediaClip return
+    method get_video_encoding_properties
+        method GetVideoEncodingProperties slot=21 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=232
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+
+class Windows.Media.Editing.MediaComposition activatable python_type
+    py MediaComposition
+    signature rc(Windows.Media.Editing.MediaComposition;{2e06e605-dc71-41d6-b837-2d2bc14a2947})
+    default Windows.Media.Editing.IMediaComposition
+    requires Windows.Media.Editing.IMediaComposition
+    requires Windows.Media.Editing.IMediaComposition2
+    factory Windows.Media.Editing.IMediaCompositionStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property background_audio_tracks
+        get get_BackgroundAudioTracks slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> return
+    property clips
+        get get_Clips slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> return
+    property duration
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=22
+            out timespan return
+    property user_data
+        get get_UserData slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property overlay_layers
+        get get_OverlayLayers slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> return
+    method clone
+        method Clone slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=121
+            out class type=Windows.Media.Editing.MediaComposition return
+    method create_default_encoding_profile
+        method CreateDefaultEncodingProfile slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=210
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method generate_media_stream_source
+        method GenerateMediaStreamSource slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=218
+            out class type=Windows.Media.Core.MediaStreamSource return
+        method GenerateMediaStreamSource slot=19 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=224
+            in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=encodingProfile
+            out class type=Windows.Media.Core.MediaStreamSource return
+    method generate_preview_media_stream_source
+        method GeneratePreviewMediaStreamSource slot=20 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117 reverse=230
+            in int32 name=scaledWidth
+            in int32 name=scaledHeight
+            out class type=Windows.Media.Core.MediaStreamSource return
+    method get_thumbnail_async
+        method GetThumbnailAsync slot=12 inputs=4 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=260
+            in timespan name=timeFromStart
+            in int32 name=scaledWidth
+            in int32 name=scaledHeight
+            in enum32 type=Windows.Media.Editing.VideoFramePrecision name=framePrecision
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> return
+    method get_thumbnails_async
+        method GetThumbnailsAsync slot=13 inputs=4 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=239
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> name=timesFromStart
+            in int32 name=scaledWidth
+            in int32 name=scaledHeight
+            in enum32 type=Windows.Media.Editing.VideoFramePrecision name=framePrecision
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> return
+    method load_async static
+        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaCompositionStatics shape=51 reverse=24 static
+            in class type=Windows.Storage.StorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> return
+    method render_to_file_async
+        method RenderToFileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=187
+            in interface type=Windows.Storage.IStorageFile name=destination
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
+        method RenderToFileAsync slot=15 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117 reverse=197
+            in interface type=Windows.Storage.IStorageFile name=destination
+            in enum32 type=Windows.Media.Editing.MediaTrimmingPreference name=trimmingPreference
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
+        method RenderToFileAsync slot=16 inputs=3 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=195 reverse=205
+            in interface type=Windows.Storage.IStorageFile name=destination
+            in enum32 type=Windows.Media.Editing.MediaTrimmingPreference name=trimmingPreference
+            in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=encodingProfile
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
+    method save_async
+        method SaveAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=144
+            in interface type=Windows.Storage.IStorageFile name=file
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Editing.MediaOverlay python_type
+    py MediaOverlay
+    signature rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4})
+    default Windows.Media.Editing.IMediaOverlay
+    requires Windows.Media.Editing.IMediaOverlay
+    factory Windows.Media.Editing.IMediaOverlayFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayFactory shape=51 reverse=24
+            in class type=Windows.Media.Editing.MediaClip name=clip
+            out class type=Windows.Media.Editing.MediaOverlay return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayFactory shape=204
+            in class type=Windows.Media.Editing.MediaClip name=clip
+            in struct type=Windows.Foundation.Rect name=position
+            in double name=opacity
+            out class type=Windows.Media.Editing.MediaOverlay return
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+        put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property opacity
+        get get_Opacity slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=121
+            out double return
+        put put_Opacity slot=11 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=2 reverse=138
+            in double name=value
+    property delay
+        get get_Delay slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=99
+            out timespan return
+        put put_Delay slot=8 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=26 reverse=82
+            in timespan name=value
+    property audio_enabled
+        get get_AudioEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=186
+            out boolean return
+        put put_AudioEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=194
+            in boolean name=value
+    property clip
+        get get_Clip slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=173
+            out class type=Windows.Media.Editing.MediaClip return
+    method clone
+        method Clone slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=162
+            out class type=Windows.Media.Editing.MediaOverlay return
+
+class Windows.Media.Editing.MediaOverlayLayer activatable python_type
+    py MediaOverlayLayer
+    signature rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac})
+    default Windows.Media.Editing.IMediaOverlayLayer
+    requires Windows.Media.Editing.IMediaOverlayLayer
+    factory Windows.Media.Editing.IMediaOverlayLayerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51 reverse=24
+            in interface type=Windows.Media.Effects.IVideoCompositorDefinition name=compositorDefinition implicit
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51 reverse=24
+            in interface type=Windows.Media.Effects.IVideoCompositorDefinition name=compositorDefinition
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+    property custom_compositor_definition
+        get get_CustomCompositorDefinition slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=62
+            out interface type=Windows.Media.Effects.IVideoCompositorDefinition return
+    property overlays
+        get get_Overlays slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> return
+    method clone
+        method Clone slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=22
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+
+enum Windows.Media.Editing.MediaTrimmingPreference python_type
+    py MediaTrimmingPreference
+    signature enum(Windows.Media.Editing.MediaTrimmingPreference;i4)
+
+enum Windows.Media.Editing.VideoFramePrecision python_type
+    py VideoFramePrecision
+    signature enum(Windows.Media.Editing.VideoFramePrecision;i4)
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+class Windows.Graphics.Imaging.ImageStream external
+    py winrt.windows.graphics.imaging.ImageStream
+
+class Windows.Media.Core.MediaStreamSource external
+    py winrt.windows.media.core.MediaStreamSource
+
+interface Windows.Media.Effects.IAudioEffectDefinition external
+    py winrt.windows.media.effects._IAudioEffectDefinition
+    guid e4d7f974-7d80-4f73-9089-e31c9db9c294
+
+interface Windows.Media.Effects.IVideoCompositorDefinition external
+    py winrt.windows.media.effects._IVideoCompositorDefinition
+    guid 7946b8d0-2010-4ae3-9ab2-2cef42edd4d2
+
+interface Windows.Media.Effects.IVideoEffectDefinition external
+    py winrt.windows.media.effects._IVideoEffectDefinition
+    guid 39f38cf0-8d0f-4f3e-84fc-2d46a5297943
+
+class Windows.Media.MediaProperties.AudioEncodingProperties external
+    py winrt.windows.media.mediaproperties.AudioEncodingProperties
+
+class Windows.Media.MediaProperties.MediaEncodingProfile external
+    py winrt.windows.media.mediaproperties.MediaEncodingProfile
+
+class Windows.Media.MediaProperties.VideoEncodingProperties external
+    py winrt.windows.media.mediaproperties.VideoEncodingProperties
+
+enum Windows.Media.Transcoding.TranscodeFailureReason external
+    py winrt.windows.media.transcoding.TranscodeFailureReason
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

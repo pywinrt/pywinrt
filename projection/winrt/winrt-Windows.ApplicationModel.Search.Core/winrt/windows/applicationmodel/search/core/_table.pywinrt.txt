@@ -1,0 +1,152 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Search.Core
+
+interface Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete
+    guid e885956c-72c1-514f-ad9a-2943b880ae13
+    signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+
+interface Windows.ApplicationModel.Search.Core.IRequestingFocusOnKeyboardInputEventArgs
+    guid a1195f27-b1a7-41a2-879d-6a68687e5985
+
+interface Windows.ApplicationModel.Search.Core.ISearchSuggestion
+    guid 5b5554b0-1527-437b-95c5-8d18d2b8af55
+
+interface Windows.ApplicationModel.Search.Core.ISearchSuggestionManager
+    guid 3f0c50a1-cb9d-497b-b500-3c04ac959ad2
+
+interface Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs
+    guid 6fd519e5-9e7e-4ab4-8be3-c76b1bd4344a
+
+class Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs python_type
+    py RequestingFocusOnKeyboardInputEventArgs
+    signature rc(Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs;{a1195f27-b1a7-41a2-879d-6a68687e5985})
+    default Windows.ApplicationModel.Search.Core.IRequestingFocusOnKeyboardInputEventArgs
+    requires Windows.ApplicationModel.Search.Core.IRequestingFocusOnKeyboardInputEventArgs
+
+class Windows.ApplicationModel.Search.Core.SearchSuggestion python_type
+    py SearchSuggestion
+    signature rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55})
+    default Windows.ApplicationModel.Search.Core.ISearchSuggestion
+    requires Windows.ApplicationModel.Search.Core.ISearchSuggestion
+    property detail_text
+        get get_DetailText slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=99
+            out string return
+    property image
+        get get_Image slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property image_alternate_text
+        get get_ImageAlternateText slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=141
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Search.Core.SearchSuggestionKind return
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=62
+            out string return
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestion shape=4 reverse=43
+            out string return
+
+enum Windows.ApplicationModel.Search.Core.SearchSuggestionKind python_type
+    py SearchSuggestionKind
+    signature enum(Windows.ApplicationModel.Search.Core.SearchSuggestionKind;i4)
+
+class Windows.ApplicationModel.Search.Core.SearchSuggestionManager activatable python_type
+    py SearchSuggestionManager
+    signature rc(Windows.ApplicationModel.Search.Core.SearchSuggestionManager;{3f0c50a1-cb9d-497b-b500-3c04ac959ad2})
+    default Windows.ApplicationModel.Search.Core.ISearchSuggestionManager
+    requires Windows.ApplicationModel.Search.Core.ISearchSuggestionManager
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property search_history_enabled
+        get get_SearchHistoryEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=22
+            out boolean return
+        put put_SearchHistoryEnabled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=43
+            in boolean name=value
+    property search_history_context
+        get get_SearchHistoryContext slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=62
+            out string return
+        put put_SearchHistoryContext slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=99
+            in string name=value
+    property suggestions
+        get get_Suggestions slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    event requesting_focus_on_keyboard_input
+        add add_RequestingFocusOnKeyboardInput slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=229
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs> name=handler
+            out event_token return
+        remove remove_RequestingFocusOnKeyboardInput slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=26 reverse=234
+            in event_token name=token
+    event suggestions_requested
+        add add_SuggestionsRequested slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=219
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_SuggestionsRequested slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=26 reverse=226
+            in event_token name=token
+    method add_to_history
+        method AddToHistory slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=194
+            in string name=queryText
+        method AddToHistory slot=16 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=203
+            in string name=queryText
+            in string name=language
+    method clear_history
+        method ClearHistory slot=17 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=0 reverse=209
+    method set_local_content_suggestion_settings
+        method SetLocalContentSuggestionSettings slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=121
+            in class type=Windows.ApplicationModel.Search.LocalContentSuggestionSettings name=settings
+    method set_query
+        method SetQuery slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=141
+            in string name=queryText
+        method SetQuery slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=163
+            in string name=queryText
+            in string name=language
+        method SetQuery slot=13 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=117 reverse=175
+            in string name=queryText
+            in string name=language
+            in class type=Windows.ApplicationModel.Search.SearchQueryLinguisticDetails name=linguisticDetails
+
+class Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs python_type
+    py SearchSuggestionsRequestedEventArgs
+    signature rc(Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs;{6fd519e5-9e7e-4ab4-8be3-c76b1bd4344a})
+    default Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs
+    requires Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4 reverse=43
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Search.SearchQueryLinguisticDetails return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4 reverse=22
+            out string return
+    property request
+        get get_Request slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Search.SearchSuggestionsRequest return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs> concrete
+    guid bb198760-4739-5559-80e6-f0e1af5355fd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.Core.SearchSuggestionManager;{3f0c50a1-cb9d-497b-b500-3c04ac959ad2});rc(Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs;{a1195f27-b1a7-41a2-879d-6a68687e5985}))
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestionManager
+    argument Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs> concrete
+    guid 7e7f3cdf-80d9-5646-8743-ec1e38645d68
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.Core.SearchSuggestionManager;{3f0c50a1-cb9d-497b-b500-3c04ac959ad2});rc(Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs;{6fd519e5-9e7e-4ab4-8be3-c76b1bd4344a}))
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestionManager
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs
+
+class Windows.ApplicationModel.Search.LocalContentSuggestionSettings external
+    py winrt.windows.applicationmodel.search.LocalContentSuggestionSettings
+
+class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails external
+    py winrt.windows.applicationmodel.search.SearchQueryLinguisticDetails
+
+class Windows.ApplicationModel.Search.SearchSuggestionsRequest external
+    py winrt.windows.applicationmodel.search.SearchSuggestionsRequest
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

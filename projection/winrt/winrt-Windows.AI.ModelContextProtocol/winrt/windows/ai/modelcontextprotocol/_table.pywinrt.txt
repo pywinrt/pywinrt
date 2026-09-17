@@ -1,0 +1,97 @@
+format 4.0
+generator 0.0.0
+namespace Windows.AI.ModelContextProtocol
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext
+    guid 5bd93f10-c0aa-4963-b4c5-ac4a69bdbb33
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolClientContextFactory
+    guid efb2ba31-148c-5ad7-ab8f-4f0e6154fedb
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolServer python_type closeable
+    py _IModelContextProtocolServer
+    guid 9d78431d-533f-55dd-9692-dc1462f0bb39
+    signature {9d78431d-533f-55dd-9692-dc1462f0bb39}
+    requires Windows.Foundation.IClosable
+    property command
+        get get_Command slot=6 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServer shape=4 reverse=22
+            out string return
+    property info
+        get get_Info slot=8 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServer shape=4 reverse=62
+            out class type=Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_command_arguments
+        method GetCommandArguments slot=7 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServer shape=51 reverse=44
+            receive_array string return
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog
+    guid 062b8a5e-b124-4490-a1ba-4692875df83e
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalogFactory
+    guid 6e5d0e8f-77e1-5a9d-b980-0779b3b128ba
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo
+    guid 503102ba-831b-47e5-b97b-e7b06209dd8b
+
+interface Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfoFactory
+    guid c93ee14e-e477-5a65-bd80-2a7860de7ead
+
+class Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext composable python_type
+    py ModelContextProtocolClientContext
+    signature rc(Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext;{5bd93f10-c0aa-4963-b4c5-ac4a69bdbb33})
+    default Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext
+    requires Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext
+    composable Windows.AI.ModelContextProtocol.IModelContextProtocolClientContextFactory
+    property owner_window_id
+        get get_OwnerWindowId slot=7 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext shape=4 reverse=43
+            out struct type=Windows.UI.WindowId return
+        put put_OwnerWindowId slot=6 inputs=1 outputs=0 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolClientContext shape=38
+            in struct type=Windows.UI.WindowId name=value
+
+class Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog composable python_type
+    py ModelContextProtocolServerCatalog
+    signature rc(Windows.AI.ModelContextProtocol.ModelContextProtocolServerCatalog;{062b8a5e-b124-4490-a1ba-4692875df83e})
+    default Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog
+    requires Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog
+    composable Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalogFactory
+    method activate_server
+        method ActivateServer slot=7 inputs=2 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog shape=177
+            in guid name=serverId
+            in class type=Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext name=client
+            out interface type=Windows.AI.ModelContextProtocol.IModelContextProtocolServer return
+    method create_client_context
+        method CreateClientContext slot=8 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog shape=4 reverse=62
+            out class type=Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext return
+    method get_server_infos
+        method GetServerInfos slot=6 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerCatalog shape=51 reverse=24
+            receive_array class type=Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo return
+
+class Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo composable python_type
+    py ModelContextProtocolServerInfo
+    signature rc(Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo;{503102ba-831b-47e5-b97b-e7b06209dd8b})
+    default Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo
+    requires Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo
+    composable Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfoFactory
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo shape=4 reverse=62
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo shape=4 reverse=22
+            out guid return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo shape=4 reverse=43
+            out string return
+    method get_package
+        method GetPackage slot=9 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServerInfo shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.Package external
+    py winrt.windows.applicationmodel.Package
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

@@ -1,0 +1,86 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Globalization.Fonts
+
+interface Windows.Globalization.Fonts.ILanguageFont
+    guid b12e5c3a-b76d-459b-beeb-901151cd77d1
+
+interface Windows.Globalization.Fonts.ILanguageFontGroup
+    guid f33a7fc3-3a5c-4aea-b9ff-b39fb242f7f6
+
+interface Windows.Globalization.Fonts.ILanguageFontGroupFactory
+    guid fcaeac67-4e77-49c7-b856-dde934fc735b
+
+class Windows.Globalization.Fonts.LanguageFont python_type
+    py LanguageFont
+    signature rc(Windows.Globalization.Fonts.LanguageFont;{b12e5c3a-b76d-459b-beeb-901151cd77d1})
+    default Windows.Globalization.Fonts.ILanguageFont
+    requires Windows.Globalization.Fonts.ILanguageFont
+    property font_family
+        get get_FontFamily slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFont shape=4 reverse=22
+            out string return
+    property font_stretch
+        get get_FontStretch slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFont shape=4 reverse=62
+            out enum32 type=Windows.UI.Text.FontStretch return
+    property font_style
+        get get_FontStyle slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFont shape=4 reverse=99
+            out enum32 type=Windows.UI.Text.FontStyle return
+    property font_weight
+        get get_FontWeight slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFont shape=4 reverse=43
+            out struct type=Windows.UI.Text.FontWeight return
+    property scale_factor
+        get get_ScaleFactor slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFont shape=4 reverse=121
+            out double return
+
+class Windows.Globalization.Fonts.LanguageFontGroup python_type
+    py LanguageFontGroup
+    signature rc(Windows.Globalization.Fonts.LanguageFontGroup;{f33a7fc3-3a5c-4aea-b9ff-b39fb242f7f6})
+    default Windows.Globalization.Fonts.ILanguageFontGroup
+    requires Windows.Globalization.Fonts.ILanguageFontGroup
+    factory Windows.Globalization.Fonts.ILanguageFontGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroupFactory shape=51 reverse=24
+            in string name=languageTag
+            out class type=Windows.Globalization.Fonts.LanguageFontGroup return
+    property document_alternate1_font
+        get get_DocumentAlternate1Font slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=194
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property document_alternate2_font
+        get get_DocumentAlternate2Font slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=202
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property document_heading_font
+        get get_DocumentHeadingFont slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=173
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property fixed_width_text_font
+        get get_FixedWidthTextFont slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=186
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property modern_document_font
+        get get_ModernDocumentFont slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=162
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property traditional_document_font
+        get get_TraditionalDocumentFont slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=141
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property ui_caption_font
+        get get_UICaptionFont slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=99
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property ui_heading_font
+        get get_UIHeadingFont slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=43
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property ui_notification_heading_font
+        get get_UINotificationHeadingFont slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=121
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property ui_text_font
+        get get_UITextFont slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=22
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+    property ui_title_font
+        get get_UITitleFont slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.Fonts.ILanguageFontGroup shape=4 reverse=62
+            out class type=Windows.Globalization.Fonts.LanguageFont return
+
+enum Windows.UI.Text.FontStretch external
+    py winrt.windows.ui.text.FontStretch
+
+enum Windows.UI.Text.FontStyle external
+    py winrt.windows.ui.text.FontStyle
+
+struct Windows.UI.Text.FontWeight external
+    py winrt.windows.ui.text.FontWeight

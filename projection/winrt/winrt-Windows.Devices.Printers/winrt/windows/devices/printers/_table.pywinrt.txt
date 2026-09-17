@@ -1,0 +1,902 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Printers
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.Print3DDevice> concrete
+    guid 7cfc4a8f-5eb7-5af7-bc9f-78a7e407cd2e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Printers.Print3DDevice;{041c3d19-9713-42a2-9813-7dc3337428d3}))
+    argument Windows.Devices.Printers.Print3DDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPrinterInstallationResult> concrete
+    guid b64e99a1-98ff-5a12-8ae3-4621758e91f6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Printers.VirtualPrinterInstallationResult;{82defd78-1601-5657-85df-75eb691604bd}))
+    argument Windows.Devices.Printers.VirtualPrinterInstallationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+
+interface Windows.Devices.Printers.IIppAttributeError
+    guid 750feda1-9eef-5c39-93e4-46149bbcef27
+
+interface Windows.Devices.Printers.IIppAttributeValue
+    guid 99407fed-e2bb-59a3-988b-28a974052a26
+
+interface Windows.Devices.Printers.IIppAttributeValueStatics
+    guid 10d43942-dd94-5998-b235-afafb6fa7935
+
+interface Windows.Devices.Printers.IIppIntegerRange
+    guid 92907346-c3ea-5ed6-bdb1-3752c62c6f7f
+
+interface Windows.Devices.Printers.IIppIntegerRangeFactory
+    guid 75d4ecae-f87e-54ad-b5d0-465204db7553
+
+interface Windows.Devices.Printers.IIppPrintDevice
+    guid d748ac56-76f3-5dc6-afd4-c2a8686b9359
+
+interface Windows.Devices.Printers.IIppPrintDevice2
+    guid f7c844c9-9d21-5c63-ac20-3676915be2d7
+
+interface Windows.Devices.Printers.IIppPrintDevice3
+    guid b6258f6d-a46d-5e37-80ce-5f69d5544712
+
+interface Windows.Devices.Printers.IIppPrintDevice4
+    guid 8c48247e-e869-59fb-bc6d-daea0614f93e
+
+interface Windows.Devices.Printers.IIppPrintDeviceStatics
+    guid 7dc19f08-7f20-52ab-94a7-894b83b2a17e
+
+interface Windows.Devices.Printers.IIppResolution
+    guid cb493f86-6bf3-56f5-86ce-263d08aead63
+
+interface Windows.Devices.Printers.IIppResolutionFactory
+    guid e481c2ae-251a-5326-b173-95543ed99a35
+
+interface Windows.Devices.Printers.IIppSetAttributesResult
+    guid 7d1c7f55-aa9d-58a3-90e9-17bdc5281f07
+
+interface Windows.Devices.Printers.IIppTextWithLanguage
+    guid 326447a6-5149-5936-90e8-0c736036bf77
+
+interface Windows.Devices.Printers.IIppTextWithLanguageFactory
+    guid ca4a1e8d-2968-5775-997c-8a46f1a574ed
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<System.Boolean> concrete
+    guid 30160817-1d7d-54e9-99db-d7636266a476
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppIntegerRange> concrete
+    guid c1ab4df0-4e73-5bdd-80d1-e32e0264ce41
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Printers.IppIntegerRange;{92907346-c3ea-5ed6-bdb1-3752c62c6f7f}))
+    argument Windows.Devices.Printers.IppIntegerRange
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppResolution> concrete
+    guid 60cf8d08-474e-54fe-af66-6893e8f92575
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Printers.IppResolution;{cb493f86-6bf3-56f5-86ce-263d08aead63}))
+    argument Windows.Devices.Printers.IppResolution
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppTextWithLanguage> concrete
+    guid da3d8cb6-082a-5993-8640-ac246fd71244
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Printers.IppTextWithLanguage;{326447a6-5149-5936-90e8-0c736036bf77}))
+    argument Windows.Devices.Printers.IppTextWithLanguage
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>> concrete
+    guid e4a5d51b-0047-5c20-8a42-d265732e8117
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))))
+    argument Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete
+    guid 5dcf9ab4-ed4e-5648-8bfb-f626d5d7c505
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.DateTime> concrete
+    guid 576a207d-977c-5b36-b54d-624ec86c53a3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> concrete
+    guid 902972bf-a984-5443-b1c5-2f04a99e1fca
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> concrete
+    guid ec09ead6-6117-5ae5-80e3-2d6bc7f9a955
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    argument System.String
+    argument Windows.Devices.Printers.IppAttributeValue
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> concrete
+    guid e7f72ba5-e881-550d-939b-f54cb31962e8
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    argument System.String
+    argument Windows.Devices.Printers.IppAttributeValue
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeError> concrete
+    guid 5f0d875e-7488-554f-9f68-0dc4952230f2
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Devices.Printers.IppAttributeError;{750feda1-9eef-5c39-93e4-46149bbcef27}))
+    argument System.String
+    argument Windows.Devices.Printers.IppAttributeError
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> concrete
+    guid a2379f3e-0733-5491-98b8-08b3134ab23d
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    argument System.String
+    argument Windows.Devices.Printers.IppAttributeValue
+
+interface Windows.Devices.Printers.IPageConfigurationSettings
+    guid b6fc1e02-5331-54ff-95a0-1fcb76bb97a9
+
+interface Windows.Devices.Printers.IPdlPassthroughProvider
+    guid 23c71dd2-6117-553f-9378-180af5849a49
+
+interface Windows.Devices.Printers.IPdlPassthroughTarget
+    guid 9840be79-67f8-5385-a5b9-e8c96e0fca76
+
+interface Windows.Devices.Printers.IPrint3DDevice
+    guid 041c3d19-9713-42a2-9813-7dc3337428d3
+
+interface Windows.Devices.Printers.IPrint3DDeviceStatics
+    guid fde3620a-67cd-41b7-a344-5150a1fd75b5
+
+interface Windows.Devices.Printers.IPrintSchema
+    guid c2b98316-26b8-4bfb-8138-9f962c22a35b
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<System.Boolean> concrete
+    guid 6180171d-2ed8-5e24-8a55-01ecb1009eb2
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IVector<System.Int32> concrete
+    guid b939af5b-b45d-5489-9149-61442c1905fe
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppIntegerRange> concrete
+    guid c9cacf28-ef27-5753-8382-7d7df136294d
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Printers.IppIntegerRange;{92907346-c3ea-5ed6-bdb1-3752c62c6f7f}))
+    argument Windows.Devices.Printers.IppIntegerRange
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppResolution> concrete
+    guid 992f8ca5-0e6c-5873-af3d-b0927f275a69
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Printers.IppResolution;{cb493f86-6bf3-56f5-86ce-263d08aead63}))
+    argument Windows.Devices.Printers.IppResolution
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppTextWithLanguage> concrete
+    guid a2e47775-c458-53fd-a85b-0fc65f021ea6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Printers.IppTextWithLanguage;{326447a6-5149-5936-90e8-0c736036bf77}))
+    argument Windows.Devices.Printers.IppTextWithLanguage
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Printers.VirtualPrinterSupportedFormat> concrete
+    guid 3e936ec1-51ee-5061-ab5c-80e44b8f7102
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Printers.VirtualPrinterSupportedFormat;{3801fa17-22b5-5dab-ad38-39e47d6071af}))
+    argument Windows.Devices.Printers.VirtualPrinterSupportedFormat
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete
+    guid 1ee3a40e-00e5-52ed-b2aa-fb70f99813b7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    argument Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue>
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.DateTime> concrete
+    guid 94390dc5-e442-5870-88b6-007e232f902c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete
+    guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> concrete
+    guid 308fe894-cc06-5007-bc85-cbe94ac1a70c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Printers.IppAttributeValue> concrete
+    guid b47b6f27-ef3b-55c4-825f-a8766d13c725
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    argument Windows.Devices.Printers.IppAttributeValue
+
+interface Windows.Devices.Printers.IVirtualPrinterInstallationParameters
+    guid bbc159b3-12f3-584c-8d26-b22c0dc83241
+
+interface Windows.Devices.Printers.IVirtualPrinterInstallationResult
+    guid 82defd78-1601-5657-85df-75eb691604bd
+
+interface Windows.Devices.Printers.IVirtualPrinterManagerStatics
+    guid 141084b6-6702-5b5f-83da-c75891657554
+
+interface Windows.Devices.Printers.IVirtualPrinterSupportedFormat
+    guid 3801fa17-22b5-5dab-ad38-39e47d6071af
+
+interface Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory
+    guid 6daaed44-97a6-57f4-be8b-9dbabc587f2d
+
+class Windows.Devices.Printers.IppAttributeError python_type
+    py IppAttributeError
+    signature rc(Windows.Devices.Printers.IppAttributeError;{750feda1-9eef-5c39-93e4-46149bbcef27})
+    default Windows.Devices.Printers.IIppAttributeError
+    requires Windows.Devices.Printers.IIppAttributeError
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeError shape=4 reverse=43
+            out hresult return
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeError shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.IppAttributeErrorReason return
+    method get_unsupported_values
+        method GetUnsupportedValues slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeError shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Printers.IppAttributeValue> return
+
+enum Windows.Devices.Printers.IppAttributeErrorReason python_type
+    py IppAttributeErrorReason
+    signature enum(Windows.Devices.Printers.IppAttributeErrorReason;i4)
+
+class Windows.Devices.Printers.IppAttributeValue python_type
+    py IppAttributeValue
+    signature rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})
+    default Windows.Devices.Printers.IIppAttributeValue
+    requires Windows.Devices.Printers.IIppAttributeValue
+    factory Windows.Devices.Printers.IIppAttributeValueStatics
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.IppAttributeValueKind return
+    method create_boolean static
+        method CreateBoolean slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=144 static
+            in boolean name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_boolean_array static
+        method CreateBooleanArray slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=163 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Boolean> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_charset static
+        method CreateCharset slot=39 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=308 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_charset_array static
+        method CreateCharsetArray slot=40 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=313 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_collection static
+        method CreateCollection slot=23 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=243 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=memberAttributes
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_collection_array static
+        method CreateCollectionArray slot=24 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=248 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>> name=memberAttributesArray
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_date_time static
+        method CreateDateTime slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=89 static
+            in datetime name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_date_time_array static
+        method CreateDateTimeArray slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=219 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.DateTime> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_enum static
+        method CreateEnum slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=174 static
+            in int32 name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_enum_array static
+        method CreateEnumArray slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=187 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int32> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_integer static
+        method CreateInteger slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=100 static
+            in int32 name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_integer_array static
+        method CreateIntegerArray slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=124 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int32> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_keyword static
+        method CreateKeyword slot=33 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=286 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_keyword_array static
+        method CreateKeywordArray slot=34 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=289 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_mime_media static
+        method CreateMimeMedia slot=43 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=323 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_mime_media_array static
+        method CreateMimeMediaArray slot=44 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=327 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_name_with_language static
+        method CreateNameWithLanguage slot=27 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=260 static
+            in class type=Windows.Devices.Printers.IppTextWithLanguage name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_name_with_language_array static
+        method CreateNameWithLanguageArray slot=28 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=264 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppTextWithLanguage> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_name_without_language static
+        method CreateNameWithoutLanguage slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=274 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_name_without_language_array static
+        method CreateNameWithoutLanguageArray slot=32 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=281 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_natural_language static
+        method CreateNaturalLanguage slot=41 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=317 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_natural_language_array static
+        method CreateNaturalLanguageArray slot=42 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=320 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_no_value static
+        method CreateNoValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=4 reverse=62 static
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_octet_string static
+        method CreateOctetString slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=196 static
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_octet_string_array static
+        method CreateOctetStringArray slot=16 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=203 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_range_of_integer static
+        method CreateRangeOfInteger slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=233 static
+            in class type=Windows.Devices.Printers.IppIntegerRange name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_range_of_integer_array static
+        method CreateRangeOfIntegerArray slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=238 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppIntegerRange> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_resolution static
+        method CreateResolution slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=224 static
+            in class type=Windows.Devices.Printers.IppResolution name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_resolution_array static
+        method CreateResolutionArray slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=229 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppResolution> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_text_with_language static
+        method CreateTextWithLanguage slot=25 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=253 static
+            in class type=Windows.Devices.Printers.IppTextWithLanguage name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_text_with_language_array static
+        method CreateTextWithLanguageArray slot=26 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=256 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Printers.IppTextWithLanguage> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_text_without_language static
+        method CreateTextWithoutLanguage slot=29 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=267 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_text_without_language_array static
+        method CreateTextWithoutLanguageArray slot=30 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=271 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_unknown static
+        method CreateUnknown slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=4 reverse=43 static
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_unsupported static
+        method CreateUnsupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_uri static
+        method CreateUri slot=35 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=293 static
+            in class type=Windows.Foundation.Uri name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_uri_array static
+        method CreateUriArray slot=36 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=297 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_uri_schema static
+        method CreateUriSchema slot=37 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=300 static
+            in string name=value
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method create_uri_schema_array static
+        method CreateUriSchemaArray slot=38 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValueStatics shape=51 reverse=303 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=values
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method get_boolean_array
+        method GetBooleanArray slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Boolean> return
+    method get_charset_array
+        method GetCharsetArray slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=237
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_collection_array
+        method GetCollectionArray slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+    method get_date_time_array
+        method GetDateTimeArray slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.DateTime> return
+    method get_enum_array
+        method GetEnumArray slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    method get_integer_array
+        method GetIntegerArray slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    method get_keyword_array
+        method GetKeywordArray slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_mime_media_type_array
+        method GetMimeMediaTypeArray slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=247
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_name_with_language_array
+        method GetNameWithLanguageArray slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppTextWithLanguage> return
+    method get_name_without_language_array
+        method GetNameWithoutLanguageArray slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_natural_language_array
+        method GetNaturalLanguageArray slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=242
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_octet_string_array
+        method GetOctetStringArray slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> return
+    method get_range_of_integer_array
+        method GetRangeOfIntegerArray slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppIntegerRange> return
+    method get_resolution_array
+        method GetResolutionArray slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppResolution> return
+    method get_text_with_language_array
+        method GetTextWithLanguageArray slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Printers.IppTextWithLanguage> return
+    method get_text_without_language_array
+        method GetTextWithoutLanguageArray slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_uri_array
+        method GetUriArray slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    method get_uri_schema_array
+        method GetUriSchemaArray slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeValue shape=4 reverse=232
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+enum Windows.Devices.Printers.IppAttributeValueKind python_type
+    py IppAttributeValueKind
+    signature enum(Windows.Devices.Printers.IppAttributeValueKind;i4)
+
+class Windows.Devices.Printers.IppIntegerRange python_type
+    py IppIntegerRange
+    signature rc(Windows.Devices.Printers.IppIntegerRange;{92907346-c3ea-5ed6-bdb1-3752c62c6f7f})
+    default Windows.Devices.Printers.IIppIntegerRange
+    requires Windows.Devices.Printers.IIppIntegerRange
+    factory Windows.Devices.Printers.IIppIntegerRangeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IIppIntegerRangeFactory shape=117 reverse=25
+            in int32 name=start
+            in int32 name=end
+            out class type=Windows.Devices.Printers.IppIntegerRange return
+    property end
+        get get_End slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppIntegerRange shape=4 reverse=43
+            out int32 return
+    property start
+        get get_Start slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppIntegerRange shape=4 reverse=22
+            out int32 return
+
+class Windows.Devices.Printers.IppPrintDevice python_type
+    py IppPrintDevice
+    signature rc(Windows.Devices.Printers.IppPrintDevice;{d748ac56-76f3-5dc6-afd4-c2a8686b9359})
+    default Windows.Devices.Printers.IIppPrintDevice
+    requires Windows.Devices.Printers.IIppPrintDevice
+    requires Windows.Devices.Printers.IIppPrintDevice2
+    requires Windows.Devices.Printers.IIppPrintDevice3
+    requires Windows.Devices.Printers.IIppPrintDevice4
+    factory Windows.Devices.Printers.IIppPrintDeviceStatics
+    property printer_name
+        get get_PrinterName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=4 reverse=22
+            out string return
+    property printer_uri
+        get get_PrinterUri slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property is_ipp_fax_out_printer
+        get get_IsIppFaxOutPrinter slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice3 shape=4 reverse=22
+            out boolean return
+    property user_default_print_ticket
+        get get_UserDefaultPrintTicket slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
+        put put_UserDefaultPrintTicket slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=4 reverse=99
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=value
+    property can_modify_user_default_print_ticket
+        get get_CanModifyUserDefaultPrintTicket slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=4 reverse=43
+            out boolean return
+    property device_kind
+        get get_DeviceKind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.IppPrintDeviceKind return
+    method from_id static
+        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=51 reverse=44 static
+            in string name=deviceId
+            out class type=Windows.Devices.Printers.IppPrintDevice return
+    method from_printer_name static
+        method FromPrinterName slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=51 reverse=65 static
+            in string name=printerName
+            out class type=Windows.Devices.Printers.IppPrintDevice return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=4 reverse=22 static
+            out string return
+    method get_max_supported_pdf_size
+        method GetMaxSupportedPdfSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice2 shape=4 reverse=22
+            out uint64 return
+    method get_max_supported_pdf_version
+        method GetMaxSupportedPdfVersion slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice2 shape=4 reverse=43
+            out string return
+    method get_max_supported_pdl_version
+        method GetMaxSupportedPdlVersion slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=51 reverse=144
+            in string name=pdlContentType
+            out string return
+    method get_pdl_passthrough_provider
+        method GetPdlPassthroughProvider slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice2 shape=4 reverse=99
+            out class type=Windows.Devices.Printers.PdlPassthroughProvider return
+    method get_printer_attributes
+        method GetPrinterAttributes slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=51 reverse=100
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=attributeNames
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method get_printer_attributes_as_buffer
+        method GetPrinterAttributesAsBuffer slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=51 reverse=65
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=attributeNames
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method is_ipp_printer static
+        method IsIppPrinter slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=51 reverse=100 static
+            in string name=printerName
+            out boolean return
+    method is_pdl_passthrough_supported
+        method IsPdlPassthroughSupported slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice2 shape=51 reverse=65
+            in string name=pdlContentType
+            out boolean return
+    method refresh_print_device_capabilities
+        method RefreshPrintDeviceCapabilities slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=0 reverse=117
+    method set_printer_attributes
+        method SetPrinterAttributes slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=51 reverse=144
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=printerAttributes
+            out class type=Windows.Devices.Printers.IppSetAttributesResult return
+    method set_printer_attributes_from_buffer
+        method SetPrinterAttributesFromBuffer slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=51 reverse=124
+            in interface type=Windows.Storage.Streams.IBuffer name=printerAttributesBuffer
+            out class type=Windows.Devices.Printers.IppSetAttributesResult return
+
+enum Windows.Devices.Printers.IppPrintDeviceKind python_type
+    py IppPrintDeviceKind
+    signature enum(Windows.Devices.Printers.IppPrintDeviceKind;i4)
+
+class Windows.Devices.Printers.IppResolution python_type
+    py IppResolution
+    signature rc(Windows.Devices.Printers.IppResolution;{cb493f86-6bf3-56f5-86ce-263d08aead63})
+    default Windows.Devices.Printers.IIppResolution
+    requires Windows.Devices.Printers.IIppResolution
+    factory Windows.Devices.Printers.IIppResolutionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Printers.IIppResolutionFactory shape=195 reverse=26
+            in int32 name=width
+            in int32 name=height
+            in enum32 type=Windows.Devices.Printers.IppResolutionUnit name=unit
+            out class type=Windows.Devices.Printers.IppResolution return
+    property height
+        get get_Height slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppResolution shape=4 reverse=43
+            out int32 return
+    property unit
+        get get_Unit slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppResolution shape=4 reverse=62
+            out enum32 type=Windows.Devices.Printers.IppResolutionUnit return
+    property width
+        get get_Width slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppResolution shape=4 reverse=22
+            out int32 return
+
+enum Windows.Devices.Printers.IppResolutionUnit python_type
+    py IppResolutionUnit
+    signature enum(Windows.Devices.Printers.IppResolutionUnit;i4)
+
+class Windows.Devices.Printers.IppSetAttributesResult python_type
+    py IppSetAttributesResult
+    signature rc(Windows.Devices.Printers.IppSetAttributesResult;{7d1c7f55-aa9d-58a3-90e9-17bdc5281f07})
+    default Windows.Devices.Printers.IIppSetAttributesResult
+    requires Windows.Devices.Printers.IIppSetAttributesResult
+    property attribute_errors
+        get get_AttributeErrors slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppSetAttributesResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeError> return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppSetAttributesResult shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Printers.IppTextWithLanguage python_type
+    py IppTextWithLanguage
+    signature rc(Windows.Devices.Printers.IppTextWithLanguage;{326447a6-5149-5936-90e8-0c736036bf77})
+    default Windows.Devices.Printers.IIppTextWithLanguage
+    requires Windows.Devices.Printers.IIppTextWithLanguage
+    factory Windows.Devices.Printers.IIppTextWithLanguageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IIppTextWithLanguageFactory shape=117 reverse=25
+            in string name=language
+            in string name=text
+            out class type=Windows.Devices.Printers.IppTextWithLanguage return
+    property language
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppTextWithLanguage shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppTextWithLanguage shape=4 reverse=43
+            out string return
+
+class Windows.Devices.Printers.PageConfigurationSettings activatable python_type
+    py PageConfigurationSettings
+    signature rc(Windows.Devices.Printers.PageConfigurationSettings;{b6fc1e02-5331-54ff-95a0-1fcb76bb97a9})
+    default Windows.Devices.Printers.IPageConfigurationSettings
+    requires Windows.Devices.Printers.IPageConfigurationSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property size_source
+        get get_SizeSource slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPageConfigurationSettings shape=4 reverse=62
+            out enum32 type=Windows.Devices.Printers.PageConfigurationSource return
+        put put_SizeSource slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IPageConfigurationSettings shape=4 reverse=99
+            in enum32 type=Windows.Devices.Printers.PageConfigurationSource name=value
+    property orientation_source
+        get get_OrientationSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPageConfigurationSettings shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.PageConfigurationSource return
+        put put_OrientationSource slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IPageConfigurationSettings shape=4 reverse=43
+            in enum32 type=Windows.Devices.Printers.PageConfigurationSource name=value
+
+enum Windows.Devices.Printers.PageConfigurationSource python_type
+    py PageConfigurationSource
+    signature enum(Windows.Devices.Printers.PageConfigurationSource;i4)
+
+class Windows.Devices.Printers.PdlPassthroughProvider python_type
+    py PdlPassthroughProvider
+    signature rc(Windows.Devices.Printers.PdlPassthroughProvider;{23c71dd2-6117-553f-9378-180af5849a49})
+    default Windows.Devices.Printers.IPdlPassthroughProvider
+    requires Windows.Devices.Printers.IPdlPassthroughProvider
+    property supported_pdl_content_types
+        get get_SupportedPdlContentTypes slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method start_print_job_with_print_ticket
+        method StartPrintJobWithPrintTicket slot=8 inputs=4 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider shape=239 reverse=69
+            in string name=jobName
+            in string name=pdlContentType
+            in interface type=Windows.Storage.Streams.IInputStream name=printTicket
+            in class type=Windows.Devices.Printers.PageConfigurationSettings name=pageConfigurationSettings
+            out class type=Windows.Devices.Printers.PdlPassthroughTarget return
+    method start_print_job_with_task_options
+        method StartPrintJobWithTaskOptions slot=7 inputs=4 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider shape=239
+            in string name=jobName
+            in string name=pdlContentType
+            in class type=Windows.Graphics.Printing.PrintTaskOptions name=taskOptions
+            in class type=Windows.Devices.Printers.PageConfigurationSettings name=pageConfigurationSettings
+            out class type=Windows.Devices.Printers.PdlPassthroughTarget return
+
+class Windows.Devices.Printers.PdlPassthroughTarget python_type closeable
+    py PdlPassthroughTarget
+    signature rc(Windows.Devices.Printers.PdlPassthroughTarget;{9840be79-67f8-5385-a5b9-e8c96e0fca76})
+    default Windows.Devices.Printers.IPdlPassthroughTarget
+    requires Windows.Devices.Printers.IPdlPassthroughTarget
+    requires Windows.Foundation.IClosable
+    property print_job_id
+        get get_PrintJobId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughTarget shape=4 reverse=22
+            out int32 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_output_stream
+        method GetOutputStream slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughTarget shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method submit
+        method Submit slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Printers.IPdlPassthroughTarget shape=0 reverse=55
+
+class Windows.Devices.Printers.Print3DDevice python_type
+    py Print3DDevice
+    signature rc(Windows.Devices.Printers.Print3DDevice;{041c3d19-9713-42a2-9813-7dc3337428d3})
+    default Windows.Devices.Printers.IPrint3DDevice
+    requires Windows.Devices.Printers.IPrint3DDevice
+    factory Windows.Devices.Printers.IPrint3DDeviceStatics
+    property print_schema
+        get get_PrintSchema slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPrint3DDevice shape=4 reverse=22
+            out class type=Windows.Devices.Printers.PrintSchema return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IPrint3DDeviceStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.Print3DDevice> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPrint3DDeviceStatics shape=4 reverse=43 static
+            out string return
+
+class Windows.Devices.Printers.PrintSchema python_type
+    py PrintSchema
+    signature rc(Windows.Devices.Printers.PrintSchema;{c2b98316-26b8-4bfb-8138-9f962c22a35b})
+    default Windows.Devices.Printers.IPrintSchema
+    requires Windows.Devices.Printers.IPrintSchema
+    method get_capabilities_async
+        method GetCapabilitiesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IPrintSchema shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType name=constrainTicket
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+    method get_default_print_ticket_async
+        method GetDefaultPrintTicketAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPrintSchema shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+    method merge_and_validate_with_default_print_ticket_async
+        method MergeAndValidateWithDefaultPrintTicketAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IPrintSchema shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType name=deltaTicket
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+class Windows.Devices.Printers.VirtualPrinterInstallationParameters activatable python_type
+    py VirtualPrinterInstallationParameters
+    signature rc(Windows.Devices.Printers.VirtualPrinterInstallationParameters;{bbc159b3-12f3-584c-8d26-b22c0dc83241})
+    default Windows.Devices.Printers.IVirtualPrinterInstallationParameters
+    requires Windows.Devices.Printers.IVirtualPrinterInstallationParameters
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property printer_uri
+        get get_PrinterUri slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=202
+            out class type=Windows.Foundation.Uri return
+        put put_PrinterUri slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=210
+            in class type=Windows.Foundation.Uri name=value
+    property printer_name
+        get get_PrinterName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=22
+            out string return
+        put put_PrinterName slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=43
+            in string name=value
+    property print_device_resources_package_relative_file_path
+        get get_PrintDeviceResourcesPackageRelativeFilePath slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=162
+            out string return
+        put put_PrintDeviceResourcesPackageRelativeFilePath slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=173
+            in string name=value
+    property print_device_capabilities_package_relative_file_path
+        get get_PrintDeviceCapabilitiesPackageRelativeFilePath slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=121
+            out string return
+        put put_PrintDeviceCapabilitiesPackageRelativeFilePath slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=141
+            in string name=value
+    property preferred_input_format
+        get get_PreferredInputFormat slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=186
+            out enum32 type=Windows.Devices.Printers.VirtualPrinterPreferredInputFormat return
+        put put_PreferredInputFormat slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=194
+            in enum32 type=Windows.Devices.Printers.VirtualPrinterPreferredInputFormat name=value
+    property entry_point
+        get get_EntryPoint slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=218
+            out string return
+        put put_EntryPoint slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=223
+            in string name=value
+    property output_file_extensions
+        get get_OutputFileExtensions slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property supported_input_formats
+        get get_SupportedInputFormats slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationParameters shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Printers.VirtualPrinterSupportedFormat> return
+
+class Windows.Devices.Printers.VirtualPrinterInstallationResult python_type
+    py VirtualPrinterInstallationResult
+    signature rc(Windows.Devices.Printers.VirtualPrinterInstallationResult;{82defd78-1601-5657-85df-75eb691604bd})
+    default Windows.Devices.Printers.IVirtualPrinterInstallationResult
+    requires Windows.Devices.Printers.IVirtualPrinterInstallationResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.VirtualPrinterInstallationStatus return
+
+enum Windows.Devices.Printers.VirtualPrinterInstallationStatus python_type
+    py VirtualPrinterInstallationStatus
+    signature enum(Windows.Devices.Printers.VirtualPrinterInstallationStatus;i4)
+
+class Windows.Devices.Printers.VirtualPrinterManager static python_type
+    py VirtualPrinterManager
+    factory Windows.Devices.Printers.IVirtualPrinterManagerStatics
+    method find_all_virtual_printers static
+        method FindAllVirtualPrinters slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=4 reverse=121 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+        method FindAllVirtualPrinters slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=51 reverse=144 static
+            in string name=appPackageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method install_virtual_printer_async static
+        method InstallVirtualPrinterAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=51 reverse=24 static
+            in class type=Windows.Devices.Printers.VirtualPrinterInstallationParameters name=parameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPrinterInstallationResult> return
+        method InstallVirtualPrinterAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=117 reverse=45 static
+            in class type=Windows.Devices.Printers.VirtualPrinterInstallationParameters name=parameters
+            in string name=appPackageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPrinterInstallationResult> return
+    method install_virtual_printer_for_all_users_async static
+        method InstallVirtualPrinterForAllUsersAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=51 reverse=65 static
+            in class type=Windows.Devices.Printers.VirtualPrinterInstallationParameters name=parameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPrinterInstallationResult> return
+        method InstallVirtualPrinterForAllUsersAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=117 reverse=101 static
+            in class type=Windows.Devices.Printers.VirtualPrinterInstallationParameters name=parameters
+            in string name=appPackageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPrinterInstallationResult> return
+    method remove_virtual_printer_async static
+        method RemoveVirtualPrinterAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=51 reverse=163 static
+            in string name=printerName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method remove_virtual_printer_for_all_users_async static
+        method RemoveVirtualPrinterForAllUsersAsync slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterManagerStatics shape=51 reverse=174 static
+            in string name=printerName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.Devices.Printers.VirtualPrinterPreferredInputFormat python_type
+    py VirtualPrinterPreferredInputFormat
+    signature enum(Windows.Devices.Printers.VirtualPrinterPreferredInputFormat;i4)
+
+class Windows.Devices.Printers.VirtualPrinterSupportedFormat python_type
+    py VirtualPrinterSupportedFormat
+    signature rc(Windows.Devices.Printers.VirtualPrinterSupportedFormat;{3801fa17-22b5-5dab-ad38-39e47d6071af})
+    default Windows.Devices.Printers.IVirtualPrinterSupportedFormat
+    requires Windows.Devices.Printers.IVirtualPrinterSupportedFormat
+    factory Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory shape=117 reverse=25
+            in string name=contentType
+            in string name=maxSupportedVersion
+            out class type=Windows.Devices.Printers.VirtualPrinterSupportedFormat return
+    property max_supported_version
+        get get_MaxSupportedVersion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterSupportedFormat shape=4 reverse=62
+            out string return
+        put put_MaxSupportedVersion slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterSupportedFormat shape=4 reverse=99
+            in string name=value
+    property content_type
+        get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterSupportedFormat shape=4 reverse=22
+            out string return
+        put put_ContentType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.IVirtualPrinterSupportedFormat shape=4 reverse=43
+            in string name=value
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Graphics.Printing.PrintTaskOptions external
+    py winrt.windows.graphics.printing.PrintTaskOptions
+
+class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket external
+    py winrt.windows.graphics.printing.printticket.WorkflowPrintTicket
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038

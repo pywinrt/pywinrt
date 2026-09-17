@@ -1,0 +1,1211 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Text
+
+enum Microsoft.UI.Text.CaretType python_type
+    py CaretType
+    signature enum(Microsoft.UI.Text.CaretType;i4)
+
+enum Microsoft.UI.Text.FindOptions python_type
+    py FindOptions
+    signature enum(Microsoft.UI.Text.FindOptions;u4)
+
+class Microsoft.UI.Text.FontWeights python_type
+    py FontWeights
+    signature rc(Microsoft.UI.Text.FontWeights;{386cd040-5404-5a8d-8bc7-2ca989f5c065})
+    default Microsoft.UI.Text.IFontWeights
+    requires Microsoft.UI.Text.IFontWeights
+    factory Microsoft.UI.Text.IFontWeightsStatics
+    property black static
+        get get_Black slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=22 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property bold static
+        get get_Bold slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=43 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property extra_black static
+        get get_ExtraBlack slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=62 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property extra_bold static
+        get get_ExtraBold slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=99 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property extra_light static
+        get get_ExtraLight slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=121 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property light static
+        get get_Light slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=141 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property medium static
+        get get_Medium slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=162 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property normal static
+        get get_Normal slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=173 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property semi_bold static
+        get get_SemiBold slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=186 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property semi_light static
+        get get_SemiLight slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=194 static
+            out struct type=Windows.UI.Text.FontWeight return
+    property thin static
+        get get_Thin slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.IFontWeightsStatics shape=4 reverse=202 static
+            out struct type=Windows.UI.Text.FontWeight return
+
+enum Microsoft.UI.Text.FormatEffect python_type
+    py FormatEffect
+    signature enum(Microsoft.UI.Text.FormatEffect;i4)
+
+enum Microsoft.UI.Text.HorizontalCharacterAlignment python_type
+    py HorizontalCharacterAlignment
+    signature enum(Microsoft.UI.Text.HorizontalCharacterAlignment;i4)
+
+interface Microsoft.UI.Text.IFontWeights
+    guid 386cd040-5404-5a8d-8bc7-2ca989f5c065
+
+interface Microsoft.UI.Text.IFontWeightsStatics
+    guid cc390df6-76b0-5807-8b9d-e949a4e623ae
+
+interface Microsoft.UI.Text.ITextCharacterFormat python_type
+    py _ITextCharacterFormat
+    guid f5710050-98e5-5788-b1e3-32191eebf94d
+    signature {f5710050-98e5-5788-b1e3-32191eebf94d}
+    property all_caps
+        get get_AllCaps slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_AllCaps slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property background_color
+        get get_BackgroundColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=29 reverse=113
+            in struct type=Windows.UI.Color name=value
+    property bold
+        get get_Bold slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=121
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Bold slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=141
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property font_stretch
+        get get_FontStretch slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=162
+            out enum32 type=Windows.UI.Text.FontStretch return
+        put put_FontStretch slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=173
+            in enum32 type=Windows.UI.Text.FontStretch name=value
+    property font_style
+        get get_FontStyle slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=186
+            out enum32 type=Windows.UI.Text.FontStyle return
+        put put_FontStyle slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=194
+            in enum32 type=Windows.UI.Text.FontStyle name=value
+    property foreground_color
+        get get_ForegroundColor slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=202
+            out struct type=Windows.UI.Color return
+        put put_ForegroundColor slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=29 reverse=216
+            in struct type=Windows.UI.Color name=value
+    property hidden
+        get get_Hidden slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=218
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Hidden slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=223
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property italic
+        get get_Italic slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=228
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Italic slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=232
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property kerning
+        get get_Kerning slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=237
+            out single return
+        put put_Kerning slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=1 reverse=241
+            in single name=value
+    property language_tag
+        get get_LanguageTag slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=247
+            out string return
+        put put_LanguageTag slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=252
+            in string name=value
+    property link_type
+        get get_LinkType slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=255
+            out enum32 type=Microsoft.UI.Text.LinkType return
+    property name
+        get get_Name slot=27 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=259
+            out string return
+        put put_Name slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=263
+            in string name=value
+    property outline
+        get get_Outline slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=266
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Outline slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=270
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property position
+        get get_Position slot=31 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=273
+            out single return
+        put put_Position slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=1 reverse=279
+            in single name=value
+    property protected_text
+        get get_ProtectedText slot=33 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=285
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_ProtectedText slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=288
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property size
+        get get_Size slot=35 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=292
+            out single return
+        put put_Size slot=36 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=1 reverse=295
+            in single name=value
+    property small_caps
+        get get_SmallCaps slot=37 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=299
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_SmallCaps slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=302
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property spacing
+        get get_Spacing slot=39 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=307
+            out single return
+        put put_Spacing slot=40 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=1 reverse=311
+            in single name=value
+    property strikethrough
+        get get_Strikethrough slot=41 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=316
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Strikethrough slot=42 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=319
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property subscript
+        get get_Subscript slot=43 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=322
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Subscript slot=44 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=326
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property superscript
+        get get_Superscript slot=45 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=330
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_Superscript slot=46 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=334
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property text_script
+        get get_TextScript slot=47 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=339
+            out enum32 type=Microsoft.UI.Text.TextScript return
+        put put_TextScript slot=48 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=343
+            in enum32 type=Microsoft.UI.Text.TextScript name=value
+    property underline
+        get get_Underline slot=49 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=347
+            out enum32 type=Microsoft.UI.Text.UnderlineType return
+        put put_Underline slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=351
+            in enum32 type=Microsoft.UI.Text.UnderlineType name=value
+    property weight
+        get get_Weight slot=51 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=355
+            out int32 return
+        put put_Weight slot=52 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=359
+            in int32 name=value
+    method get_clone
+        method GetClone slot=54 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=368
+            out interface type=Microsoft.UI.Text.ITextCharacterFormat return
+    method is_equal
+        method IsEqual slot=55 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=51 reverse=371
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=format
+            out boolean return
+    method set_clone
+        method SetClone slot=53 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextCharacterFormat shape=4 reverse=363
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=value
+
+interface Microsoft.UI.Text.ITextConstantsStatics
+    guid cd353b3c-af63-5cfb-918c-0f9c8931a161
+
+interface Microsoft.UI.Text.ITextDocument
+    guid 1149d57d-86a6-59dd-88d9-196f27bc5c85
+
+interface Microsoft.UI.Text.ITextDocument2
+    guid 21febcf1-2110-5879-b1da-b343097e71e1
+
+interface Microsoft.UI.Text.ITextParagraphFormat python_type
+    py _ITextParagraphFormat
+    guid 219b6cdf-0d0b-5701-b8a1-6c906b3ebbe1
+    signature {219b6cdf-0d0b-5701-b8a1-6c906b3ebbe1}
+    property alignment
+        get get_Alignment slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Text.ParagraphAlignment return
+        put put_Alignment slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Text.ParagraphAlignment name=value
+    property first_line_indent
+        get get_FirstLineIndent slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=62
+            out single return
+    property keep_together
+        get get_KeepTogether slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=99
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_KeepTogether slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=121
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property keep_with_next
+        get get_KeepWithNext slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=141
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_KeepWithNext slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=162
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property left_indent
+        get get_LeftIndent slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=173
+            out single return
+    property line_spacing
+        get get_LineSpacing slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=186
+            out single return
+    property line_spacing_rule
+        get get_LineSpacingRule slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=194
+            out enum32 type=Microsoft.UI.Text.LineSpacingRule return
+    property list_alignment
+        get get_ListAlignment slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=202
+            out enum32 type=Microsoft.UI.Text.MarkerAlignment return
+        put put_ListAlignment slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=210
+            in enum32 type=Microsoft.UI.Text.MarkerAlignment name=value
+    property list_level_index
+        get get_ListLevelIndex slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=218
+            out int32 return
+        put put_ListLevelIndex slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=223
+            in int32 name=value
+    property list_start
+        get get_ListStart slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=228
+            out int32 return
+        put put_ListStart slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=232
+            in int32 name=value
+    property list_style
+        get get_ListStyle slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=237
+            out enum32 type=Microsoft.UI.Text.MarkerStyle return
+        put put_ListStyle slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=242
+            in enum32 type=Microsoft.UI.Text.MarkerStyle name=value
+    property list_tab
+        get get_ListTab slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=247
+            out single return
+        put put_ListTab slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=1 reverse=251
+            in single name=value
+    property list_type
+        get get_ListType slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=255
+            out enum32 type=Microsoft.UI.Text.MarkerType return
+        put put_ListType slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=259
+            in enum32 type=Microsoft.UI.Text.MarkerType name=value
+    property no_line_number
+        get get_NoLineNumber slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=263
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_NoLineNumber slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=266
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property page_break_before
+        get get_PageBreakBefore slot=30 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=270
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_PageBreakBefore slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=273
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property right_indent
+        get get_RightIndent slot=32 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=280
+            out single return
+        put put_RightIndent slot=33 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=1 reverse=284
+            in single name=value
+    property right_to_left
+        get get_RightToLeft slot=34 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=288
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_RightToLeft slot=35 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=292
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    property space_after
+        get get_SpaceAfter slot=38 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=302
+            out single return
+        put put_SpaceAfter slot=39 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=1 reverse=306
+            in single name=value
+    property space_before
+        get get_SpaceBefore slot=40 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=312
+            out single return
+        put put_SpaceBefore slot=41 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=1 reverse=315
+            in single name=value
+    property style
+        get get_Style slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=296
+            out enum32 type=Microsoft.UI.Text.ParagraphStyle return
+        put put_Style slot=37 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=299
+            in enum32 type=Microsoft.UI.Text.ParagraphStyle name=value
+    property tab_count
+        get get_TabCount slot=44 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=326
+            out int32 return
+    property widow_control
+        get get_WidowControl slot=42 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=319
+            out enum32 type=Microsoft.UI.Text.FormatEffect return
+        put put_WidowControl slot=43 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=322
+            in enum32 type=Microsoft.UI.Text.FormatEffect name=value
+    method add_tab
+        method AddTab slot=45 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=100 reverse=329
+            in single name=position
+            in enum32 type=Microsoft.UI.Text.TabAlignment name=align
+            in enum32 type=Microsoft.UI.Text.TabLeader name=leader
+    method clear_all_tabs
+        method ClearAllTabs slot=46 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=0 reverse=333
+    method delete_tab
+        method DeleteTab slot=47 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=1 reverse=338
+            in single name=position
+    method get_clone
+        method GetClone slot=48 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=343
+            out interface type=Microsoft.UI.Text.ITextParagraphFormat return
+    method get_tab
+        method GetTab slot=49 inputs=1 outputs=3 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=195 reverse=349
+            in int32 name=index
+            out single name=position
+            out enum32 type=Microsoft.UI.Text.TabAlignment name=align
+            out enum32 type=Microsoft.UI.Text.TabLeader name=leader
+    method is_equal
+        method IsEqual slot=50 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=51 reverse=352
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=format
+            out boolean return
+    method set_clone
+        method SetClone slot=51 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=4 reverse=355
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=format
+    method set_indents
+        method SetIndents slot=52 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=98 reverse=358
+            in single name=start
+            in single name=left
+            in single name=right
+    method set_line_spacing
+        method SetLineSpacing slot=53 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextParagraphFormat shape=48 reverse=364
+            in enum32 type=Microsoft.UI.Text.LineSpacingRule name=rule
+            in single name=spacing
+
+interface Microsoft.UI.Text.ITextRange python_type
+    py _ITextRange
+    guid 06d4abcf-0c06-5d12-a743-85537efd09ea
+    signature {06d4abcf-0c06-5d12-a743-85537efd09ea}
+    property character
+        get get_Character slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=22
+            out char16 return
+        put put_Character slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=43
+            in char16 name=value
+    property character_format
+        get get_CharacterFormat slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=62
+            out interface type=Microsoft.UI.Text.ITextCharacterFormat return
+        put put_CharacterFormat slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=99
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=value
+    property end_position
+        get get_EndPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=162
+            out int32 return
+        put put_EndPosition slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=173
+            in int32 name=value
+    property formatted_text
+        get get_FormattedText slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=121
+            out interface type=Microsoft.UI.Text.ITextRange return
+        put put_FormattedText slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=141
+            in interface type=Microsoft.UI.Text.ITextRange name=value
+    property gravity
+        get get_Gravity slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=186
+            out enum32 type=Microsoft.UI.Text.RangeGravity return
+        put put_Gravity slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=194
+            in enum32 type=Microsoft.UI.Text.RangeGravity name=value
+    property length
+        get get_Length slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=202
+            out int32 return
+    property link
+        get get_Link slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=210
+            out string return
+        put put_Link slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=218
+            in string name=value
+    property paragraph_format
+        get get_ParagraphFormat slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=223
+            out interface type=Microsoft.UI.Text.ITextParagraphFormat return
+        put put_ParagraphFormat slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=228
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=value
+    property start_position
+        get get_StartPosition slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=232
+            out int32 return
+        put put_StartPosition slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=237
+            in int32 name=value
+    property story_length
+        get get_StoryLength slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=242
+            out int32 return
+    property text
+        get get_Text slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=247
+            out string return
+        put put_Text slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=252
+            in string name=value
+    method can_paste
+        method CanPaste slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=256
+            in int32 name=format
+            out boolean return
+    method change_case
+        method ChangeCase slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=259
+            in enum32 type=Microsoft.UI.Text.LetterCase name=value
+    method collapse
+        method Collapse slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=263
+            in boolean name=value
+    method copy
+        method Copy slot=29 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=265
+    method cut
+        method Cut slot=30 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=269
+    method delete
+        method Delete slot=31 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=275
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method end_of
+        method EndOf slot=32 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=282
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method expand
+        method Expand slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=286
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method find_text
+        method FindText slot=34 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=290
+            in string name=value
+            in int32 name=scanLength
+            in enum_u32 type=Microsoft.UI.Text.FindOptions name=options
+            out int32 return
+    method get_character_utf32
+        method GetCharacterUtf32 slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=293
+            out uint32 name=value
+            in int32 name=offset
+    method get_clone
+        method GetClone slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=296
+            out interface type=Microsoft.UI.Text.ITextRange return
+    method get_index
+        method GetIndex slot=37 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=300
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method get_point
+        method GetPoint slot=38 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=304
+            in enum32 type=Microsoft.UI.Text.HorizontalCharacterAlignment name=horizontalAlign
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Point name=point
+    method get_rect
+        method GetRect slot=39 inputs=1 outputs=2 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=309
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Rect name=rect
+            out int32 name=hit
+    method get_text
+        method GetText slot=40 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=313
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            out string name=value
+    method get_text_via_stream
+        method GetTextViaStream slot=41 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=317
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method in_range
+        method InRange slot=42 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=320
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method in_story
+        method InStory slot=44 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=327
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method insert_image
+        method InsertImage slot=43 inputs=6 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=267 reverse=324
+            in int32 name=width
+            in int32 name=height
+            in int32 name=ascent
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in string name=alternateText
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method is_equal
+        method IsEqual slot=45 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=331
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method match_selection
+        method MatchSelection slot=51 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=354
+    method move
+        method Move slot=46 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=336
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_end
+        method MoveEnd slot=47 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=341
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_start
+        method MoveStart slot=48 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=345
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method paste
+        method Paste slot=49 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=347
+            in int32 name=format
+    method scroll_into_view
+        method ScrollIntoView slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=351
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=value
+    method set_index
+        method SetIndex slot=52 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=361
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=index
+            in boolean name=extend
+    method set_point
+        method SetPoint slot=53 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=151 reverse=366
+            in struct type=Windows.Foundation.Point name=point
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            in boolean name=extend
+    method set_range
+        method SetRange slot=54 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=369
+            in int32 name=startPosition
+            in int32 name=endPosition
+    method set_text
+        method SetText slot=55 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=371
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in string name=value
+    method set_text_via_stream
+        method SetTextViaStream slot=56 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=373
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method start_of
+        method StartOf slot=57 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=376
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+
+interface Microsoft.UI.Text.ITextSelection python_type
+    py _ITextSelection
+    guid 8f5e6cb1-2b04-589f-bd24-54e5cd8dd399
+    signature {8f5e6cb1-2b04-589f-bd24-54e5cd8dd399}
+    requires Microsoft.UI.Text.ITextRange
+    property options
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=4 reverse=22
+            out enum_u32 type=Microsoft.UI.Text.SelectionOptions return
+        put put_Options slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextSelection shape=4 reverse=43
+            in enum_u32 type=Microsoft.UI.Text.SelectionOptions name=value
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=4 reverse=62
+            out enum32 type=Microsoft.UI.Text.SelectionType return
+    property character
+        get get_Character slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=22
+            out char16 return
+        put put_Character slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=43
+            in char16 name=value
+    property character_format
+        get get_CharacterFormat slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=62
+            out interface type=Microsoft.UI.Text.ITextCharacterFormat return
+        put put_CharacterFormat slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=99
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=value
+    property end_position
+        get get_EndPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=162
+            out int32 return
+        put put_EndPosition slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=173
+            in int32 name=value
+    property formatted_text
+        get get_FormattedText slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=121
+            out interface type=Microsoft.UI.Text.ITextRange return
+        put put_FormattedText slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=141
+            in interface type=Microsoft.UI.Text.ITextRange name=value
+    property gravity
+        get get_Gravity slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=186
+            out enum32 type=Microsoft.UI.Text.RangeGravity return
+        put put_Gravity slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=194
+            in enum32 type=Microsoft.UI.Text.RangeGravity name=value
+    property length
+        get get_Length slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=202
+            out int32 return
+    property link
+        get get_Link slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=210
+            out string return
+        put put_Link slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=218
+            in string name=value
+    property paragraph_format
+        get get_ParagraphFormat slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=223
+            out interface type=Microsoft.UI.Text.ITextParagraphFormat return
+        put put_ParagraphFormat slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=228
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=value
+    property start_position
+        get get_StartPosition slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=232
+            out int32 return
+        put put_StartPosition slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=237
+            in int32 name=value
+    property story_length
+        get get_StoryLength slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=242
+            out int32 return
+    property text
+        get get_Text slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=247
+            out string return
+        put put_Text slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=252
+            in string name=value
+    method can_paste
+        method CanPaste slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=256
+            in int32 name=format
+            out boolean return
+    method change_case
+        method ChangeCase slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=259
+            in enum32 type=Microsoft.UI.Text.LetterCase name=value
+    method collapse
+        method Collapse slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=263
+            in boolean name=value
+    method copy
+        method Copy slot=29 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=265
+    method cut
+        method Cut slot=30 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=269
+    method delete
+        method Delete slot=31 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=275
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method end_key
+        method EndKey slot=9 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=117 reverse=101
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method end_of
+        method EndOf slot=32 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=282
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method expand
+        method Expand slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=286
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method find_text
+        method FindText slot=34 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=290
+            in string name=value
+            in int32 name=scanLength
+            in enum_u32 type=Microsoft.UI.Text.FindOptions name=options
+            out int32 return
+    method get_character_utf32
+        method GetCharacterUtf32 slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=293
+            out uint32 name=value
+            in int32 name=offset
+    method get_clone
+        method GetClone slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=296
+            out interface type=Microsoft.UI.Text.ITextRange return
+    method get_index
+        method GetIndex slot=37 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=300
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method get_point
+        method GetPoint slot=38 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=304
+            in enum32 type=Microsoft.UI.Text.HorizontalCharacterAlignment name=horizontalAlign
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Point name=point
+    method get_rect
+        method GetRect slot=39 inputs=1 outputs=2 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=309
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Rect name=rect
+            out int32 name=hit
+    method get_text
+        method GetText slot=40 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=313
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            out string name=value
+    method get_text_via_stream
+        method GetTextViaStream slot=41 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=317
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method home_key
+        method HomeKey slot=10 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=117 reverse=125
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method in_range
+        method InRange slot=42 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=320
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method in_story
+        method InStory slot=44 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=327
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method insert_image
+        method InsertImage slot=43 inputs=6 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=267 reverse=324
+            in int32 name=width
+            in int32 name=height
+            in int32 name=ascent
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in string name=alternateText
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method is_equal
+        method IsEqual slot=45 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=331
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method match_selection
+        method MatchSelection slot=51 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=354
+    method move
+        method Move slot=46 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=336
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_down
+        method MoveDown slot=11 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=195 reverse=146
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            in boolean name=extend
+            out int32 return
+    method move_end
+        method MoveEnd slot=47 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=341
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_left
+        method MoveLeft slot=12 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=195 reverse=165
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            in boolean name=extend
+            out int32 return
+    method move_right
+        method MoveRight slot=13 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=195 reverse=176
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            in boolean name=extend
+            out int32 return
+    method move_start
+        method MoveStart slot=48 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=345
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_up
+        method MoveUp slot=14 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextSelection shape=195 reverse=189
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            in boolean name=extend
+            out int32 return
+    method paste
+        method Paste slot=49 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=347
+            in int32 name=format
+    method scroll_into_view
+        method ScrollIntoView slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=351
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=value
+    method set_index
+        method SetIndex slot=52 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=361
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=index
+            in boolean name=extend
+    method set_point
+        method SetPoint slot=53 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=151 reverse=366
+            in struct type=Windows.Foundation.Point name=point
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            in boolean name=extend
+    method set_range
+        method SetRange slot=54 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=369
+            in int32 name=startPosition
+            in int32 name=endPosition
+    method set_text
+        method SetText slot=55 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=371
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in string name=value
+    method set_text_via_stream
+        method SetTextViaStream slot=56 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=373
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method start_of
+        method StartOf slot=57 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=376
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method type_text
+        method TypeText slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextSelection shape=4 reverse=194
+            in string name=value
+
+enum Microsoft.UI.Text.LetterCase python_type
+    py LetterCase
+    signature enum(Microsoft.UI.Text.LetterCase;i4)
+
+enum Microsoft.UI.Text.LineSpacingRule python_type
+    py LineSpacingRule
+    signature enum(Microsoft.UI.Text.LineSpacingRule;i4)
+
+enum Microsoft.UI.Text.LinkType python_type
+    py LinkType
+    signature enum(Microsoft.UI.Text.LinkType;i4)
+
+enum Microsoft.UI.Text.MarkerAlignment python_type
+    py MarkerAlignment
+    signature enum(Microsoft.UI.Text.MarkerAlignment;i4)
+
+enum Microsoft.UI.Text.MarkerStyle python_type
+    py MarkerStyle
+    signature enum(Microsoft.UI.Text.MarkerStyle;i4)
+
+enum Microsoft.UI.Text.MarkerType python_type
+    py MarkerType
+    signature enum(Microsoft.UI.Text.MarkerType;i4)
+
+enum Microsoft.UI.Text.ParagraphAlignment python_type
+    py ParagraphAlignment
+    signature enum(Microsoft.UI.Text.ParagraphAlignment;i4)
+
+enum Microsoft.UI.Text.ParagraphStyle python_type
+    py ParagraphStyle
+    signature enum(Microsoft.UI.Text.ParagraphStyle;i4)
+
+enum Microsoft.UI.Text.PointOptions python_type
+    py PointOptions
+    signature enum(Microsoft.UI.Text.PointOptions;u4)
+
+enum Microsoft.UI.Text.RangeGravity python_type
+    py RangeGravity
+    signature enum(Microsoft.UI.Text.RangeGravity;i4)
+
+enum Microsoft.UI.Text.RichEditMathMode python_type
+    py RichEditMathMode
+    signature enum(Microsoft.UI.Text.RichEditMathMode;i4)
+
+class Microsoft.UI.Text.RichEditTextDocument python_type
+    py RichEditTextDocument
+    signature rc(Microsoft.UI.Text.RichEditTextDocument;{1149d57d-86a6-59dd-88d9-196f27bc5c85})
+    default Microsoft.UI.Text.ITextDocument
+    requires Microsoft.UI.Text.ITextDocument
+    requires Microsoft.UI.Text.ITextDocument2
+    property undo_limit
+        get get_UndoLimit slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=141
+            out uint32 return
+        put put_UndoLimit slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=162
+            in uint32 name=value
+    property ignore_trailing_character_spacing
+        get get_IgnoreTrailingCharacterSpacing slot=35 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=292
+            out boolean return
+        put put_IgnoreTrailingCharacterSpacing slot=36 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=296
+            in boolean name=value
+    property default_tab_stop
+        get get_DefaultTabStop slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=62
+            out single return
+        put put_DefaultTabStop slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=1 reverse=94
+            in single name=value
+    property caret_type
+        get get_CaretType slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Text.CaretType return
+        put put_CaretType slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Text.CaretType name=value
+    property alignment_includes_trailing_whitespace
+        get get_AlignmentIncludesTrailingWhitespace slot=33 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=285
+            out boolean return
+        put put_AlignmentIncludesTrailingWhitespace slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=288
+            in boolean name=value
+    property selection
+        get get_Selection slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=121
+            out interface type=Microsoft.UI.Text.ITextSelection return
+    method apply_display_updates
+        method ApplyDisplayUpdates slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=210
+            out int32 return
+    method batch_display_updates
+        method BatchDisplayUpdates slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=218
+            out int32 return
+    method begin_undo_group
+        method BeginUndoGroup slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=0 reverse=221
+    method can_copy
+        method CanCopy slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=173
+            out boolean return
+    method can_paste
+        method CanPaste slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=186
+            out boolean return
+    method can_redo
+        method CanRedo slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=194
+            out boolean return
+    method can_undo
+        method CanUndo slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=202
+            out boolean return
+    method clear_undo_redo_history
+        method ClearUndoRedoHistory slot=37 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=0
+    method end_undo_group
+        method EndUndoGroup slot=20 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=0 reverse=227
+    method get_default_character_format
+        method GetDefaultCharacterFormat slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=232
+            out interface type=Microsoft.UI.Text.ITextCharacterFormat return
+    method get_default_paragraph_format
+        method GetDefaultParagraphFormat slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=237
+            out interface type=Microsoft.UI.Text.ITextParagraphFormat return
+    method get_math_ml
+        method GetMathML slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument2 shape=4 reverse=62
+            out string name=value
+    method get_math_mode
+        method GetMathMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextDocument2 shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Text.RichEditMathMode return
+    method get_range
+        method GetRange slot=23 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=117 reverse=244
+            in int32 name=startPosition
+            in int32 name=endPosition
+            out interface type=Microsoft.UI.Text.ITextRange return
+    method get_range_from_point
+        method GetRangeFromPoint slot=24 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=151 reverse=250
+            in struct type=Windows.Foundation.Point name=point
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out interface type=Microsoft.UI.Text.ITextRange return
+    method get_text
+        method GetText slot=25 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextDocument shape=51 reverse=253
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            out string name=value
+    method load_from_stream
+        method LoadFromStream slot=26 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=51 reverse=256
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method redo
+        method Redo slot=27 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=0 reverse=258
+    method save_to_stream
+        method SaveToStream slot=28 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=51 reverse=264
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method set_default_character_format
+        method SetDefaultCharacterFormat slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=266
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=value
+    method set_default_paragraph_format
+        method SetDefaultParagraphFormat slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=4 reverse=270
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=value
+    method set_math_ml
+        method SetMathML slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument2 shape=4 reverse=99
+            in string name=value
+    method set_math_mode
+        method SetMathMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextDocument2 shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Text.RichEditMathMode name=mode
+    method set_text
+        method SetText slot=31 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=51 reverse=274
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in string name=value
+    method undo
+        method Undo slot=32 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextDocument shape=0 reverse=278
+
+class Microsoft.UI.Text.RichEditTextRange python_type
+    py RichEditTextRange
+    signature rc(Microsoft.UI.Text.RichEditTextRange;{06d4abcf-0c06-5d12-a743-85537efd09ea})
+    default Microsoft.UI.Text.ITextRange
+    requires Microsoft.UI.Text.ITextRange
+    property text
+        get get_Text slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=247
+            out string return
+        put put_Text slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=252
+            in string name=value
+    property start_position
+        get get_StartPosition slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=232
+            out int32 return
+        put put_StartPosition slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=237
+            in int32 name=value
+    property paragraph_format
+        get get_ParagraphFormat slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=223
+            out interface type=Microsoft.UI.Text.ITextParagraphFormat return
+        put put_ParagraphFormat slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=228
+            in interface type=Microsoft.UI.Text.ITextParagraphFormat name=value
+    property link
+        get get_Link slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=210
+            out string return
+        put put_Link slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=218
+            in string name=value
+    property gravity
+        get get_Gravity slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=186
+            out enum32 type=Microsoft.UI.Text.RangeGravity return
+        put put_Gravity slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=194
+            in enum32 type=Microsoft.UI.Text.RangeGravity name=value
+    property formatted_text
+        get get_FormattedText slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=121
+            out interface type=Microsoft.UI.Text.ITextRange return
+        put put_FormattedText slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=141
+            in interface type=Microsoft.UI.Text.ITextRange name=value
+    property end_position
+        get get_EndPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=162
+            out int32 return
+        put put_EndPosition slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=173
+            in int32 name=value
+    property character_format
+        get get_CharacterFormat slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=62
+            out interface type=Microsoft.UI.Text.ITextCharacterFormat return
+        put put_CharacterFormat slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=99
+            in interface type=Microsoft.UI.Text.ITextCharacterFormat name=value
+    property character
+        get get_Character slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=22
+            out char16 return
+        put put_Character slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=43
+            in char16 name=value
+    property length
+        get get_Length slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=202
+            out int32 return
+    property story_length
+        get get_StoryLength slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=242
+            out int32 return
+    method can_paste
+        method CanPaste slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=256
+            in int32 name=format
+            out boolean return
+    method change_case
+        method ChangeCase slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=259
+            in enum32 type=Microsoft.UI.Text.LetterCase name=value
+    method collapse
+        method Collapse slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=263
+            in boolean name=value
+    method copy
+        method Copy slot=29 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=265
+    method cut
+        method Cut slot=30 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=269
+    method delete
+        method Delete slot=31 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=275
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method end_of
+        method EndOf slot=32 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=282
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+    method expand
+        method Expand slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=286
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method find_text
+        method FindText slot=34 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=290
+            in string name=value
+            in int32 name=scanLength
+            in enum_u32 type=Microsoft.UI.Text.FindOptions name=options
+            out int32 return
+    method get_character_utf32
+        method GetCharacterUtf32 slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=293
+            out uint32 name=value
+            in int32 name=offset
+    method get_clone
+        method GetClone slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=296
+            out interface type=Microsoft.UI.Text.ITextRange return
+    method get_index
+        method GetIndex slot=37 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=300
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            out int32 return
+    method get_point
+        method GetPoint slot=38 inputs=3 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=195 reverse=304
+            in enum32 type=Microsoft.UI.Text.HorizontalCharacterAlignment name=horizontalAlign
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Point name=point
+    method get_rect
+        method GetRect slot=39 inputs=1 outputs=2 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=309
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            out struct type=Windows.Foundation.Rect name=rect
+            out int32 name=hit
+    method get_text
+        method GetText slot=40 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=313
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            out string name=value
+    method get_text_via_stream
+        method GetTextViaStream slot=41 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=317
+            in enum_u32 type=Microsoft.UI.Text.TextGetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method in_range
+        method InRange slot=42 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=320
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method in_story
+        method InStory slot=44 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=327
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method insert_image
+        method InsertImage slot=43 inputs=6 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=267 reverse=324
+            in int32 name=width
+            in int32 name=height
+            in int32 name=ascent
+            in enum32 type=Microsoft.UI.Text.VerticalCharacterAlignment name=verticalAlign
+            in string name=alternateText
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method is_equal
+        method IsEqual slot=45 inputs=1 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=331
+            in interface type=Microsoft.UI.Text.ITextRange name=range
+            out boolean return
+    method match_selection
+        method MatchSelection slot=51 inputs=0 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=0 reverse=354
+    method move
+        method Move slot=46 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=336
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_end
+        method MoveEnd slot=47 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=341
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_start
+        method MoveStart slot=48 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=345
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=count
+            out int32 return
+    method paste
+        method Paste slot=49 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=347
+            in int32 name=format
+    method scroll_into_view
+        method ScrollIntoView slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=4 reverse=351
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=value
+    method set_index
+        method SetIndex slot=52 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=361
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in int32 name=index
+            in boolean name=extend
+    method set_point
+        method SetPoint slot=53 inputs=3 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=151 reverse=366
+            in struct type=Windows.Foundation.Point name=point
+            in enum_u32 type=Microsoft.UI.Text.PointOptions name=options
+            in boolean name=extend
+    method set_range
+        method SetRange slot=54 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=369
+            in int32 name=startPosition
+            in int32 name=endPosition
+    method set_text
+        method SetText slot=55 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=371
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in string name=value
+    method set_text_via_stream
+        method SetTextViaStream slot=56 inputs=2 outputs=0 declaring=Microsoft.UI.Text.ITextRange shape=51 reverse=373
+            in enum_u32 type=Microsoft.UI.Text.TextSetOptions name=options
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method start_of
+        method StartOf slot=57 inputs=2 outputs=1 declaring=Microsoft.UI.Text.ITextRange shape=117 reverse=376
+            in enum32 type=Microsoft.UI.Text.TextRangeUnit name=unit
+            in boolean name=extend
+            out int32 return
+
+enum Microsoft.UI.Text.SelectionOptions python_type
+    py SelectionOptions
+    signature enum(Microsoft.UI.Text.SelectionOptions;u4)
+
+enum Microsoft.UI.Text.SelectionType python_type
+    py SelectionType
+    signature enum(Microsoft.UI.Text.SelectionType;i4)
+
+enum Microsoft.UI.Text.TabAlignment python_type
+    py TabAlignment
+    signature enum(Microsoft.UI.Text.TabAlignment;i4)
+
+enum Microsoft.UI.Text.TabLeader python_type
+    py TabLeader
+    signature enum(Microsoft.UI.Text.TabLeader;i4)
+
+class Microsoft.UI.Text.TextConstants static python_type
+    py TextConstants
+    factory Microsoft.UI.Text.ITextConstantsStatics
+    property auto_color static
+        get get_AutoColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=22 static
+            out struct type=Windows.UI.Color return
+    property max_unit_count static
+        get get_MaxUnitCount slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=62 static
+            out int32 return
+    property min_unit_count static
+        get get_MinUnitCount slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=43 static
+            out int32 return
+    property undefined_color static
+        get get_UndefinedColor slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=99 static
+            out struct type=Windows.UI.Color return
+    property undefined_float_value static
+        get get_UndefinedFloatValue slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=121 static
+            out single return
+    property undefined_font_stretch static
+        get get_UndefinedFontStretch slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=162 static
+            out enum32 type=Windows.UI.Text.FontStretch return
+    property undefined_font_style static
+        get get_UndefinedFontStyle slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=173 static
+            out enum32 type=Windows.UI.Text.FontStyle return
+    property undefined_int32_value static
+        get get_UndefinedInt32Value slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=141 static
+            out int32 return
+
+enum Microsoft.UI.Text.TextGetOptions python_type
+    py TextGetOptions
+    signature enum(Microsoft.UI.Text.TextGetOptions;u4)
+
+enum Microsoft.UI.Text.TextRangeUnit python_type
+    py TextRangeUnit
+    signature enum(Microsoft.UI.Text.TextRangeUnit;i4)
+
+enum Microsoft.UI.Text.TextScript python_type
+    py TextScript
+    signature enum(Microsoft.UI.Text.TextScript;i4)
+
+enum Microsoft.UI.Text.TextSetOptions python_type
+    py TextSetOptions
+    signature enum(Microsoft.UI.Text.TextSetOptions;u4)
+
+enum Microsoft.UI.Text.UnderlineType python_type
+    py UnderlineType
+    signature enum(Microsoft.UI.Text.UnderlineType;i4)
+
+enum Microsoft.UI.Text.VerticalCharacterAlignment python_type
+    py VerticalCharacterAlignment
+    signature enum(Microsoft.UI.Text.VerticalCharacterAlignment;i4)
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Text.FontStretch external
+    py winrt.windows.ui.text.FontStretch
+
+enum Windows.UI.Text.FontStyle external
+    py winrt.windows.ui.text.FontStyle
+
+struct Windows.UI.Text.FontWeight external
+    py winrt.windows.ui.text.FontWeight

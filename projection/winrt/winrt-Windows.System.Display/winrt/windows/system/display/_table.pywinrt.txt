@@ -1,0 +1,19 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Display
+
+class Windows.System.Display.DisplayRequest activatable python_type
+    py DisplayRequest
+    signature rc(Windows.System.Display.DisplayRequest;{e5732044-f49f-4b60-8dd4-5e7e3a632ac0})
+    default Windows.System.Display.IDisplayRequest
+    requires Windows.System.Display.IDisplayRequest
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method request_active
+        method RequestActive slot=6 inputs=0 outputs=0 declaring=Windows.System.Display.IDisplayRequest shape=0 reverse=16
+    method request_release
+        method RequestRelease slot=7 inputs=0 outputs=0 declaring=Windows.System.Display.IDisplayRequest shape=0 reverse=37
+
+interface Windows.System.Display.IDisplayRequest
+    guid e5732044-f49f-4b60-8dd4-5e7e3a632ac0

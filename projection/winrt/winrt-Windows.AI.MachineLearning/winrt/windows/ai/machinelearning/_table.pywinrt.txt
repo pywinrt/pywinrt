@@ -1,0 +1,1558 @@
+format 4.0
+generator 0.0.0
+namespace Windows.AI.MachineLearning
+
+interface Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModel> concrete
+    guid 634ab3cb-406c-5ede-8a89-a7f9ca370326
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.AI.MachineLearning.LearningModel;{5b8e4920-489f-4e86-9128-265a327b78fa}))
+    argument Windows.AI.MachineLearning.LearningModel
+
+interface Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModelEvaluationResult> concrete
+    guid 28050590-1422-5a18-8c8b-847f2d2cf69a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.AI.MachineLearning.LearningModelEvaluationResult;{b2f9bfcd-960e-49c0-8593-eb190ae3eee2}))
+    argument Windows.AI.MachineLearning.LearningModelEvaluationResult
+
+interface Windows.AI.MachineLearning.IImageFeatureDescriptor
+    guid 365585a5-171a-4a2a-985f-265159d3895a
+
+interface Windows.AI.MachineLearning.IImageFeatureDescriptor2
+    guid 2b27cca7-d533-5862-bb98-1611b155b0e1
+
+interface Windows.AI.MachineLearning.IImageFeatureValue
+    guid f0414fd9-c9aa-4405-b7fb-94f87c8a3037
+
+interface Windows.AI.MachineLearning.IImageFeatureValueStatics
+    guid 1bc317fd-23cb-4610-b085-c8e1c87ebaa0
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<System.Boolean> concrete
+    guid 30160817-1d7d-54e9-99db-d7636266a476
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IIterable<System.Byte> concrete
+    guid 88318266-f3fd-50fc-8f08-b823a41b60c1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u1)
+    argument System.Byte
+
+interface Windows.Foundation.Collections.IIterable<System.Double> concrete
+    guid c738964e-9c64-5bce-b5ce-61e9a282ec4a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};f8)
+    argument System.Double
+
+interface Windows.Foundation.Collections.IIterable<System.Int16> concrete
+    guid 72ff2923-4b4e-53bb-8feb-41ec5f2bb734
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i2)
+    argument System.Int16
+
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IIterable<System.Int64> concrete
+    guid 7784427e-f9cc-518d-964b-e50d5ce727f1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i8)
+    argument System.Int64
+
+interface Windows.Foundation.Collections.IIterable<System.Single> concrete
+    guid b01bee51-063a-5fda-bd72-d76637bb8cb8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};f4)
+    argument System.Single
+
+interface Windows.Foundation.Collections.IIterable<System.UInt16> concrete
+    guid ecfa9a6f-fa2e-5345-b297-efb4e8c6be87
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u2)
+    argument System.UInt16
+
+interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete
+    guid 421d4b91-b13b-5f37-ae54-b5249bd80539
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.Collections.IIterable<System.UInt64> concrete
+    guid 4b3a3229-7995-5f3c-b248-6c1f7e664f01
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u8)
+    argument System.UInt64
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.AI.MachineLearning.ILearningModel
+    guid 5b8e4920-489f-4e86-9128-265a327b78fa
+
+interface Windows.AI.MachineLearning.ILearningModelBinding
+    guid ea312f20-168f-4f8c-94fe-2e7ac31b4aa8
+
+interface Windows.AI.MachineLearning.ILearningModelBindingFactory
+    guid c95f7a7a-e788-475e-8917-23aa381faf0b
+
+interface Windows.AI.MachineLearning.ILearningModelDevice
+    guid f5c2c8fe-3f56-4a8c-ac5f-fdb92d8b8252
+
+interface Windows.AI.MachineLearning.ILearningModelDeviceFactory
+    guid 9cffd74d-b1e5-4f20-80ad-0a56690db06b
+
+interface Windows.AI.MachineLearning.ILearningModelDeviceStatics
+    guid 49f32107-a8bf-42bb-92c7-10b12dc5d21f
+
+interface Windows.AI.MachineLearning.ILearningModelEvaluationResult
+    guid b2f9bfcd-960e-49c0-8593-eb190ae3eee2
+
+interface Windows.AI.MachineLearning.ILearningModelFeatureDescriptor python_type
+    py _ILearningModelFeatureDescriptor
+    guid bc08cf7c-6ed0-4004-97ba-b9a2eecd2b4f
+    signature {bc08cf7c-6ed0-4004-97ba-b9a2eecd2b4f}
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=43
+            out string return
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=99
+            out boolean return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=62
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=22
+            out string return
+
+interface Windows.AI.MachineLearning.ILearningModelFeatureValue python_type
+    py _ILearningModelFeatureValue
+    guid f51005db-4085-4dfe-9fed-95eb0c0cf75c
+    signature {f51005db-4085-4dfe-9fed-95eb0c0cf75c}
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+
+interface Windows.AI.MachineLearning.ILearningModelOperatorProvider python_type
+    py _ILearningModelOperatorProvider
+    guid 2a222e5d-afb1-47ed-bfad-b5b3a459ec04
+    signature {2a222e5d-afb1-47ed-bfad-b5b3a459ec04}
+
+interface Windows.AI.MachineLearning.ILearningModelSession
+    guid 8e58f8f6-b787-4c11-90f0-7129aeca74a9
+
+interface Windows.AI.MachineLearning.ILearningModelSessionFactory
+    guid 0f6b881d-1c9b-47b6-bfe0-f1cf62a67579
+
+interface Windows.AI.MachineLearning.ILearningModelSessionFactory2
+    guid 4e5c88bf-0a1f-5fec-ade0-2fd91e4ef29b
+
+interface Windows.AI.MachineLearning.ILearningModelSessionOptions
+    guid b8f63fa1-134d-5133-8cff-3a5c3c263beb
+
+interface Windows.AI.MachineLearning.ILearningModelSessionOptions2
+    guid 6fcd1dc4-175f-5bd2-8de5-2f2006a25adf
+
+interface Windows.AI.MachineLearning.ILearningModelSessionOptions3
+    guid 58e15cee-d8c2-56fc-92e8-76d751081086
+
+interface Windows.AI.MachineLearning.ILearningModelStatics
+    guid e3b977e8-6952-4e47-8ef4-1f7f07897c6d
+
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
+    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.AI.MachineLearning.IMapFeatureDescriptor
+    guid 530424bd-a257-436d-9e60-c2981f7cc5c4
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.AI.MachineLearning.ISequenceFeatureDescriptor
+    guid 84f6945a-562b-4d62-a851-739aced96668
+
+interface Windows.AI.MachineLearning.ITensor python_type
+    py _ITensor
+    guid 05489593-a305-4a25-ad09-440119b4b7f6
+    signature {05489593-a305-4a25-ad09-440119b4b7f6}
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+
+interface Windows.AI.MachineLearning.ITensorBoolean
+    guid 50f311ed-29e9-4a5c-a44d-8fc512584eed
+
+interface Windows.AI.MachineLearning.ITensorBooleanStatics
+    guid 2796862c-2357-49a7-b476-d0aa3dfe6866
+
+interface Windows.AI.MachineLearning.ITensorBooleanStatics2
+    guid a3a4a501-6a2d-52d7-b04b-c435baee0115
+
+interface Windows.AI.MachineLearning.ITensorDouble
+    guid 91e41252-7a8f-4f0e-a28f-9637ffc8a3d0
+
+interface Windows.AI.MachineLearning.ITensorDoubleStatics
+    guid a86693c5-9538-44e7-a3ca-5df374a5a70c
+
+interface Windows.AI.MachineLearning.ITensorDoubleStatics2
+    guid 93a570de-5e9a-5094-85c8-592c655e68ac
+
+interface Windows.AI.MachineLearning.ITensorFeatureDescriptor
+    guid 74455c80-946a-4310-a19c-ee0af028fce4
+
+interface Windows.AI.MachineLearning.ITensorFloat
+    guid f2282d82-aa02-42c8-a0c8-df1efc9676e1
+
+interface Windows.AI.MachineLearning.ITensorFloat16Bit
+    guid 0ab994fc-5b89-4c3c-b5e4-5282a5316c0a
+
+interface Windows.AI.MachineLearning.ITensorFloat16BitStatics
+    guid a52db6f5-318a-44d4-820b-0cdc7054a84a
+
+interface Windows.AI.MachineLearning.ITensorFloat16BitStatics2
+    guid 68545726-2dc7-51bf-b470-0b344cc2a1bc
+
+interface Windows.AI.MachineLearning.ITensorFloatStatics
+    guid dbcd395b-3ba3-452f-b10d-3c135e573fa9
+
+interface Windows.AI.MachineLearning.ITensorFloatStatics2
+    guid 24610bc1-5e44-5713-b281-8f4ad4d555e8
+
+interface Windows.AI.MachineLearning.ITensorInt16Bit
+    guid 98a32d39-e6d6-44af-8afa-baebc44dc020
+
+interface Windows.AI.MachineLearning.ITensorInt16BitStatics
+    guid 98646293-266e-4b1a-821f-e60d70898b91
+
+interface Windows.AI.MachineLearning.ITensorInt16BitStatics2
+    guid 0cd70cf4-696c-5e5f-95d8-5ebf9670148b
+
+interface Windows.AI.MachineLearning.ITensorInt32Bit
+    guid 2c0c28d3-207c-4486-a7d2-884522c5e589
+
+interface Windows.AI.MachineLearning.ITensorInt32BitStatics
+    guid 6539864b-52fa-4e35-907c-834cac417b50
+
+interface Windows.AI.MachineLearning.ITensorInt32BitStatics2
+    guid 7c4b079a-e956-5ce0-a3bd-157d9d79b5ec
+
+interface Windows.AI.MachineLearning.ITensorInt64Bit
+    guid 499665ba-1fa2-45ad-af25-a0bd9bda4c87
+
+interface Windows.AI.MachineLearning.ITensorInt64BitStatics
+    guid 9648ad9d-1198-4d74-9517-783ab62b9cc2
+
+interface Windows.AI.MachineLearning.ITensorInt64BitStatics2
+    guid 6d3d9dcb-ff40-5ec2-89fe-084e2b6bc6db
+
+interface Windows.AI.MachineLearning.ITensorInt8Bit
+    guid cddd97c5-ffd8-4fef-aefb-30e1a485b2ee
+
+interface Windows.AI.MachineLearning.ITensorInt8BitStatics
+    guid b1a12284-095c-4c76-a661-ac4cee1f3e8b
+
+interface Windows.AI.MachineLearning.ITensorInt8BitStatics2
+    guid c0d59637-c468-56fb-9535-c052bdb93dc0
+
+interface Windows.AI.MachineLearning.ITensorString
+    guid 582335c8-bdb1-4610-bc75-35e9cbf009b7
+
+interface Windows.AI.MachineLearning.ITensorStringStatics
+    guid 83623324-cf26-4f17-a2d4-20ef8d097d53
+
+interface Windows.AI.MachineLearning.ITensorStringStatics2
+    guid 9e355ed0-c8e2-5254-9137-0193a3668fd8
+
+interface Windows.AI.MachineLearning.ITensorUInt16Bit
+    guid 68140f4b-23c0-42f3-81f6-a891c011bc3f
+
+interface Windows.AI.MachineLearning.ITensorUInt16BitStatics
+    guid 5df745dd-028a-481a-a27c-c7e6435e52dd
+
+interface Windows.AI.MachineLearning.ITensorUInt16BitStatics2
+    guid 8af40c64-d69f-5315-9348-490877bbd642
+
+interface Windows.AI.MachineLearning.ITensorUInt32Bit
+    guid d8c9c2ff-7511-45a3-bfac-c38f370d2237
+
+interface Windows.AI.MachineLearning.ITensorUInt32BitStatics
+    guid 417c3837-e773-4378-8e7f-0cc33dbea697
+
+interface Windows.AI.MachineLearning.ITensorUInt32BitStatics2
+    guid ef1a1f1c-314e-569d-b496-5c8447d20cd2
+
+interface Windows.AI.MachineLearning.ITensorUInt64Bit
+    guid 2e70ffad-04bf-4825-839a-82baef8c7886
+
+interface Windows.AI.MachineLearning.ITensorUInt64BitStatics
+    guid 7a7e20eb-242f-47cb-a9c6-f602ecfbfee4
+
+interface Windows.AI.MachineLearning.ITensorUInt64BitStatics2
+    guid 085a687d-67e1-5b1e-b232-4fabe9ca20b3
+
+interface Windows.AI.MachineLearning.ITensorUInt8Bit
+    guid 58e1ae27-622b-48e3-be22-d867aed1daac
+
+interface Windows.AI.MachineLearning.ITensorUInt8BitStatics
+    guid 05f67583-bc24-4220-8a41-2dcd8c5ed33c
+
+interface Windows.AI.MachineLearning.ITensorUInt8BitStatics2
+    guid 2ba042d6-373e-5a3a-a2fc-a6c41bd52789
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete
+    guid 243a09cb-6f40-56af-a442-fe81431fbef5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IVectorView<System.Byte> concrete
+    guid 6d05fb29-7885-544e-9382-a1ad391a3fa4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u1)
+    argument System.Byte
+
+interface Windows.Foundation.Collections.IVectorView<System.Double> concrete
+    guid af7586a8-6b21-5f61-bff1-1b682293ad96
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};f8)
+    argument System.Double
+
+interface Windows.Foundation.Collections.IVectorView<System.Int16> concrete
+    guid e53056ad-8a0e-5c41-a62d-c92e3ac2de58
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i2)
+    argument System.Int16
+
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+    guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVectorView<System.Int64> concrete
+    guid 8221aa0e-d1d2-5b22-a918-05672812d12f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i8)
+    argument System.Int64
+
+interface Windows.Foundation.Collections.IVectorView<System.Single> concrete
+    guid 7bca64fd-150c-5d50-b56b-9f4f474c5930
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};f4)
+    argument System.Single
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt16> concrete
+    guid 9d0d0d9f-6a82-55a3-98c5-228499df38f9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u2)
+    argument System.UInt16
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+    guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt64> concrete
+    guid 23d156c7-7ef9-5096-aaba-1e6c9ab5ceb4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u8)
+    argument System.UInt64
+
+interface Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> concrete
+    guid 53e53120-a6e1-527f-af8a-c812902e175e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{bc08cf7c-6ed0-4004-97ba-b9a2eecd2b4f})
+    argument Windows.AI.MachineLearning.ILearningModelFeatureDescriptor
+
+class Windows.AI.MachineLearning.ImageFeatureDescriptor python_type
+    py ImageFeatureDescriptor
+    signature rc(Windows.AI.MachineLearning.ImageFeatureDescriptor;{365585a5-171a-4a2a-985f-265159d3895a})
+    default Windows.AI.MachineLearning.IImageFeatureDescriptor
+    requires Windows.AI.MachineLearning.IImageFeatureDescriptor
+    requires Windows.AI.MachineLearning.IImageFeatureDescriptor2
+    requires Windows.AI.MachineLearning.ILearningModelFeatureDescriptor
+    property bitmap_alpha_mode
+        get get_BitmapAlphaMode slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureDescriptor shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode return
+    property bitmap_pixel_format
+        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureDescriptor shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
+    property height
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureDescriptor shape=4 reverse=99
+            out uint32 return
+    property width
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureDescriptor shape=4 reverse=62
+            out uint32 return
+    property pixel_range
+        get get_PixelRange slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureDescriptor2 shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelPixelRange return
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=43
+            out string return
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=99
+            out boolean return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=62
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=22
+            out string return
+
+class Windows.AI.MachineLearning.ImageFeatureValue python_type
+    py ImageFeatureValue
+    signature rc(Windows.AI.MachineLearning.ImageFeatureValue;{f0414fd9-c9aa-4405-b7fb-94f87c8a3037})
+    default Windows.AI.MachineLearning.IImageFeatureValue
+    requires Windows.AI.MachineLearning.IImageFeatureValue
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    factory Windows.AI.MachineLearning.IImageFeatureValueStatics
+    property video_frame
+        get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureValue shape=4 reverse=22
+            out class type=Windows.Media.VideoFrame return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    method create_from_video_frame static
+        method CreateFromVideoFrame slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.IImageFeatureValueStatics shape=51 reverse=24 static
+            in class type=Windows.Media.VideoFrame name=image
+            out class type=Windows.AI.MachineLearning.ImageFeatureValue return
+
+enum K parameterized
+
+class Windows.AI.MachineLearning.LearningModel python_type closeable
+    py LearningModel
+    signature rc(Windows.AI.MachineLearning.LearningModel;{5b8e4920-489f-4e86-9128-265a327b78fa})
+    default Windows.AI.MachineLearning.ILearningModel
+    requires Windows.AI.MachineLearning.ILearningModel
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ILearningModelStatics
+    property author
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=22
+            out string return
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=99
+            out string return
+    property domain
+        get get_Domain slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=62
+            out string return
+    property input_features
+        get get_InputFeatures slot=12 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> return
+    property metadata
+        get get_Metadata slot=11 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=43
+            out string return
+    property output_features
+        get get_OutputFeatures slot=13 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> return
+    property version
+        get get_Version slot=10 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModel shape=4 reverse=121
+            out int64 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method load_from_file_path static
+        method LoadFromFilePath slot=8 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=51 reverse=65 static
+            in string name=filePath
+            out class type=Windows.AI.MachineLearning.LearningModel return
+        method LoadFromFilePath slot=12 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=117 reverse=164 static
+            in string name=filePath
+            in interface type=Windows.AI.MachineLearning.ILearningModelOperatorProvider name=operatorProvider
+            out class type=Windows.AI.MachineLearning.LearningModel return
+    method load_from_storage_file_async static
+        method LoadFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=modelFile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModel> return
+        method LoadFromStorageFileAsync slot=10 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=117 reverse=125 static
+            in interface type=Windows.Storage.IStorageFile name=modelFile
+            in interface type=Windows.AI.MachineLearning.ILearningModelOperatorProvider name=operatorProvider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModel> return
+    method load_from_stream static
+        method LoadFromStream slot=9 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=51 reverse=100 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
+            out class type=Windows.AI.MachineLearning.LearningModel return
+        method LoadFromStream slot=13 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=117 reverse=175 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
+            in interface type=Windows.AI.MachineLearning.ILearningModelOperatorProvider name=operatorProvider
+            out class type=Windows.AI.MachineLearning.LearningModel return
+    method load_from_stream_async static
+        method LoadFromStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModel> return
+        method LoadFromStreamAsync slot=11 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelStatics shape=117 reverse=145 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
+            in interface type=Windows.AI.MachineLearning.ILearningModelOperatorProvider name=operatorProvider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModel> return
+
+class Windows.AI.MachineLearning.LearningModelBinding python_type iterable mapping
+    py LearningModelBinding
+    signature rc(Windows.AI.MachineLearning.LearningModelBinding;{ea312f20-168f-4f8c-94fe-2e7ac31b4aa8})
+    default Windows.AI.MachineLearning.ILearningModelBinding
+    requires Windows.AI.MachineLearning.ILearningModelBinding
+    requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    factory Windows.AI.MachineLearning.ILearningModelBindingFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelBindingFactory shape=51 reverse=24
+            in class type=Windows.AI.MachineLearning.LearningModelSession name=session
+            out class type=Windows.AI.MachineLearning.LearningModelBinding return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43
+            out uint32 return
+    method bind
+        method Bind slot=6 inputs=2 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelBinding shape=51 reverse=24
+            in string name=name
+            in object name=value
+        method Bind slot=7 inputs=3 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelBinding shape=117 reverse=45
+            in string name=name
+            in object name=value
+            in interface type=Windows.Foundation.Collections.IPropertySet name=props
+    method clear
+        method Clear slot=8 inputs=0 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelBinding shape=0 reverse=55
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
+class Windows.AI.MachineLearning.LearningModelDevice python_type
+    py LearningModelDevice
+    signature rc(Windows.AI.MachineLearning.LearningModelDevice;{f5c2c8fe-3f56-4a8c-ac5f-fdb92d8b8252})
+    default Windows.AI.MachineLearning.ILearningModelDevice
+    requires Windows.AI.MachineLearning.ILearningModelDevice
+    factory Windows.AI.MachineLearning.ILearningModelDeviceStatics
+    factory Windows.AI.MachineLearning.ILearningModelDeviceFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelDeviceFactory shape=51 reverse=24
+            in enum32 type=Windows.AI.MachineLearning.LearningModelDeviceKind name=deviceKind
+            out class type=Windows.AI.MachineLearning.LearningModelDevice return
+    property adapter_id
+        get get_AdapterId slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelDevice shape=4 reverse=22
+            out struct type=Windows.Graphics.DisplayAdapterId return
+    property direct3d11_device
+        get get_Direct3D11Device slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelDevice shape=4 reverse=43
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice return
+    method create_from_direct3d11_device static
+        method CreateFromDirect3D11Device slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelDeviceStatics shape=51 reverse=24 static
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+            out class type=Windows.AI.MachineLearning.LearningModelDevice return
+
+enum Windows.AI.MachineLearning.LearningModelDeviceKind python_type
+    py LearningModelDeviceKind
+    signature enum(Windows.AI.MachineLearning.LearningModelDeviceKind;i4)
+
+class Windows.AI.MachineLearning.LearningModelEvaluationResult python_type
+    py LearningModelEvaluationResult
+    signature rc(Windows.AI.MachineLearning.LearningModelEvaluationResult;{b2f9bfcd-960e-49c0-8593-eb190ae3eee2})
+    default Windows.AI.MachineLearning.ILearningModelEvaluationResult
+    requires Windows.AI.MachineLearning.ILearningModelEvaluationResult
+    property correlation_id
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelEvaluationResult shape=4 reverse=22
+            out string return
+    property error_status
+        get get_ErrorStatus slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelEvaluationResult shape=4 reverse=43
+            out int32 return
+    property outputs
+        get get_Outputs slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelEvaluationResult shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property succeeded
+        get get_Succeeded slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelEvaluationResult shape=4 reverse=62
+            out boolean return
+
+enum Windows.AI.MachineLearning.LearningModelFeatureKind python_type
+    py LearningModelFeatureKind
+    signature enum(Windows.AI.MachineLearning.LearningModelFeatureKind;i4)
+
+enum Windows.AI.MachineLearning.LearningModelPixelRange python_type
+    py LearningModelPixelRange
+    signature enum(Windows.AI.MachineLearning.LearningModelPixelRange;i4)
+
+class Windows.AI.MachineLearning.LearningModelSession python_type closeable
+    py LearningModelSession
+    signature rc(Windows.AI.MachineLearning.LearningModelSession;{8e58f8f6-b787-4c11-90f0-7129aeca74a9})
+    default Windows.AI.MachineLearning.ILearningModelSession
+    requires Windows.AI.MachineLearning.ILearningModelSession
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ILearningModelSessionFactory2
+    factory Windows.AI.MachineLearning.ILearningModelSessionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
+            in class type=Windows.AI.MachineLearning.LearningModel name=model
+            in class type=Windows.AI.MachineLearning.LearningModelDevice name=deviceToRunOn implicit
+            in class type=Windows.AI.MachineLearning.LearningModelSessionOptions name=learningModelSessionOptions implicit
+            out class type=Windows.AI.MachineLearning.LearningModelSession return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
+            in class type=Windows.AI.MachineLearning.LearningModel name=model
+            in class type=Windows.AI.MachineLearning.LearningModelDevice name=deviceToRunOn
+            in class type=Windows.AI.MachineLearning.LearningModelSessionOptions name=learningModelSessionOptions implicit
+            out class type=Windows.AI.MachineLearning.LearningModelSession return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
+            in class type=Windows.AI.MachineLearning.LearningModel name=model
+            in class type=Windows.AI.MachineLearning.LearningModelDevice name=deviceToRunOn
+            in class type=Windows.AI.MachineLearning.LearningModelSessionOptions name=learningModelSessionOptions
+            out class type=Windows.AI.MachineLearning.LearningModelSession return
+    property device
+        get get_Device slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=4 reverse=43
+            out class type=Windows.AI.MachineLearning.LearningModelDevice return
+    property evaluation_properties
+        get get_EvaluationProperties slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=4 reverse=62
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    property model
+        get get_Model slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=4 reverse=22
+            out class type=Windows.AI.MachineLearning.LearningModel return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method evaluate
+        method Evaluate slot=11 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=117 reverse=145
+            in class type=Windows.AI.MachineLearning.LearningModelBinding name=bindings
+            in string name=correlationId
+            out class type=Windows.AI.MachineLearning.LearningModelEvaluationResult return
+    method evaluate_async
+        method EvaluateAsync slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=117 reverse=101
+            in class type=Windows.AI.MachineLearning.LearningModelBinding name=bindings
+            in string name=correlationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModelEvaluationResult> return
+    method evaluate_features
+        method EvaluateFeatures slot=12 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=117 reverse=164
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> name=features
+            in string name=correlationId
+            out class type=Windows.AI.MachineLearning.LearningModelEvaluationResult return
+    method evaluate_features_async
+        method EvaluateFeaturesAsync slot=10 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSession shape=117 reverse=125
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> name=features
+            in string name=correlationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.LearningModelEvaluationResult> return
+
+class Windows.AI.MachineLearning.LearningModelSessionOptions activatable python_type
+    py LearningModelSessionOptions
+    signature rc(Windows.AI.MachineLearning.LearningModelSessionOptions;{b8f63fa1-134d-5133-8cff-3a5c3c263beb})
+    default Windows.AI.MachineLearning.ILearningModelSessionOptions
+    requires Windows.AI.MachineLearning.ILearningModelSessionOptions
+    requires Windows.AI.MachineLearning.ILearningModelSessionOptions2
+    requires Windows.AI.MachineLearning.ILearningModelSessionOptions3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property batch_size_override
+        get get_BatchSizeOverride slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionOptions shape=4 reverse=22
+            out uint32 return
+        put put_BatchSizeOverride slot=7 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelSessionOptions shape=4 reverse=43
+            in uint32 name=value
+    property close_model_on_session_creation
+        get get_CloseModelOnSessionCreation slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionOptions2 shape=4 reverse=22
+            out boolean return
+        put put_CloseModelOnSessionCreation slot=7 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelSessionOptions2 shape=4 reverse=43
+            in boolean name=value
+    method override_named_dimension
+        method OverrideNamedDimension slot=6 inputs=2 outputs=0 declaring=Windows.AI.MachineLearning.ILearningModelSessionOptions3 shape=51 reverse=24
+            in string name=name
+            in uint32 name=dimension
+
+class Windows.AI.MachineLearning.MapFeatureDescriptor python_type
+    py MapFeatureDescriptor
+    signature rc(Windows.AI.MachineLearning.MapFeatureDescriptor;{530424bd-a257-436d-9e60-c2981f7cc5c4})
+    default Windows.AI.MachineLearning.IMapFeatureDescriptor
+    requires Windows.AI.MachineLearning.IMapFeatureDescriptor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureDescriptor
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=43
+            out string return
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=99
+            out boolean return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=62
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=22
+            out string return
+    property key_kind
+        get get_KeyKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IMapFeatureDescriptor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    property value_descriptor
+        get get_ValueDescriptor slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.IMapFeatureDescriptor shape=4 reverse=43
+            out interface type=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor return
+
+class Windows.AI.MachineLearning.SequenceFeatureDescriptor python_type
+    py SequenceFeatureDescriptor
+    signature rc(Windows.AI.MachineLearning.SequenceFeatureDescriptor;{84f6945a-562b-4d62-a851-739aced96668})
+    default Windows.AI.MachineLearning.ISequenceFeatureDescriptor
+    requires Windows.AI.MachineLearning.ISequenceFeatureDescriptor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureDescriptor
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=43
+            out string return
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=99
+            out boolean return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=62
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=22
+            out string return
+    property element_descriptor
+        get get_ElementDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ISequenceFeatureDescriptor shape=4 reverse=22
+            out interface type=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor return
+
+class Windows.AI.MachineLearning.TensorBoolean python_type closeable
+    py TensorBoolean
+    signature rc(Windows.AI.MachineLearning.TensorBoolean;{50f311ed-29e9-4a5c-a44d-8fc512584eed})
+    default Windows.AI.MachineLearning.ITensorBoolean
+    requires Windows.AI.MachineLearning.ITensorBoolean
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorBooleanStatics2
+    factory Windows.AI.MachineLearning.ITensorBooleanStatics
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array boolean name=data
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Boolean> name=data
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBooleanStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array boolean name=data
+            out class type=Windows.AI.MachineLearning.TensorBoolean return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBoolean shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> return
+
+class Windows.AI.MachineLearning.TensorDouble python_type closeable
+    py TensorDouble
+    signature rc(Windows.AI.MachineLearning.TensorDouble;{91e41252-7a8f-4f0e-a28f-9637ffc8a3d0})
+    default Windows.AI.MachineLearning.ITensorDouble
+    requires Windows.AI.MachineLearning.ITensorDouble
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorDoubleStatics
+    factory Windows.AI.MachineLearning.ITensorDoubleStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array double name=data
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Double> name=data
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDoubleStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array double name=data
+            out class type=Windows.AI.MachineLearning.TensorDouble return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDouble shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Double> return
+
+class Windows.AI.MachineLearning.TensorFeatureDescriptor python_type
+    py TensorFeatureDescriptor
+    signature rc(Windows.AI.MachineLearning.TensorFeatureDescriptor;{74455c80-946a-4310-a19c-ee0af028fce4})
+    default Windows.AI.MachineLearning.ITensorFeatureDescriptor
+    requires Windows.AI.MachineLearning.ITensorFeatureDescriptor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureDescriptor
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=43
+            out string return
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=99
+            out boolean return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=62
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor shape=4 reverse=22
+            out string return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFeatureDescriptor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFeatureDescriptor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+
+class Windows.AI.MachineLearning.TensorFloat python_type closeable
+    py TensorFloat
+    signature rc(Windows.AI.MachineLearning.TensorFloat;{f2282d82-aa02-42c8-a0c8-df1efc9676e1})
+    default Windows.AI.MachineLearning.ITensorFloat
+    requires Windows.AI.MachineLearning.ITensorFloat
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorFloatStatics
+    factory Windows.AI.MachineLearning.ITensorFloatStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array single name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Single> name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloatStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array single name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Single> return
+
+class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable
+    py TensorFloat16Bit
+    signature rc(Windows.AI.MachineLearning.TensorFloat16Bit;{0ab994fc-5b89-4c3c-b5e4-5282a5316c0a})
+    default Windows.AI.MachineLearning.ITensorFloat16Bit
+    requires Windows.AI.MachineLearning.ITensorFloat16Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorFloat16BitStatics2
+    factory Windows.AI.MachineLearning.ITensorFloat16BitStatics
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array single name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Single> name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array single name=data
+            out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Single> return
+
+class Windows.AI.MachineLearning.TensorInt16Bit python_type closeable
+    py TensorInt16Bit
+    signature rc(Windows.AI.MachineLearning.TensorInt16Bit;{98a32d39-e6d6-44af-8afa-baebc44dc020})
+    default Windows.AI.MachineLearning.ITensorInt16Bit
+    requires Windows.AI.MachineLearning.ITensorInt16Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorInt16BitStatics
+    factory Windows.AI.MachineLearning.ITensorInt16BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array int16 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int16> name=data
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array int16 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt16Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int16> return
+
+class Windows.AI.MachineLearning.TensorInt32Bit python_type closeable
+    py TensorInt32Bit
+    signature rc(Windows.AI.MachineLearning.TensorInt32Bit;{2c0c28d3-207c-4486-a7d2-884522c5e589})
+    default Windows.AI.MachineLearning.ITensorInt32Bit
+    requires Windows.AI.MachineLearning.ITensorInt32Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorInt32BitStatics
+    factory Windows.AI.MachineLearning.ITensorInt32BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array int32 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int32> name=data
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array int32 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt32Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
+
+class Windows.AI.MachineLearning.TensorInt64Bit python_type closeable
+    py TensorInt64Bit
+    signature rc(Windows.AI.MachineLearning.TensorInt64Bit;{499665ba-1fa2-45ad-af25-a0bd9bda4c87})
+    default Windows.AI.MachineLearning.ITensorInt64Bit
+    requires Windows.AI.MachineLearning.ITensorInt64Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorInt64BitStatics
+    factory Windows.AI.MachineLearning.ITensorInt64BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array int64 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=data
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array int64 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt64Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+
+class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable
+    py TensorInt8Bit
+    signature rc(Windows.AI.MachineLearning.TensorInt8Bit;{cddd97c5-ffd8-4fef-aefb-30e1a485b2ee})
+    default Windows.AI.MachineLearning.ITensorInt8Bit
+    requires Windows.AI.MachineLearning.ITensorInt8Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorInt8BitStatics2
+    factory Windows.AI.MachineLearning.ITensorInt8BitStatics
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array uint8 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Byte> name=data
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array uint8 name=data
+            out class type=Windows.AI.MachineLearning.TensorInt8Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Byte> return
+
+enum Windows.AI.MachineLearning.TensorKind python_type
+    py TensorKind
+    signature enum(Windows.AI.MachineLearning.TensorKind;i4)
+
+class Windows.AI.MachineLearning.TensorString python_type closeable
+    py TensorString
+    signature rc(Windows.AI.MachineLearning.TensorString;{582335c8-bdb1-4610-bc75-35e9cbf009b7})
+    default Windows.AI.MachineLearning.ITensorString
+    requires Windows.AI.MachineLearning.ITensorString
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorStringStatics
+    factory Windows.AI.MachineLearning.ITensorStringStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorStringStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorString return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorStringStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorString return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorStringStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array string name=data
+            out class type=Windows.AI.MachineLearning.TensorString return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorStringStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=data
+            out class type=Windows.AI.MachineLearning.TensorString return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorStringStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array string name=data
+            out class type=Windows.AI.MachineLearning.TensorString return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorString shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+class Windows.AI.MachineLearning.TensorUInt16Bit python_type closeable
+    py TensorUInt16Bit
+    signature rc(Windows.AI.MachineLearning.TensorUInt16Bit;{68140f4b-23c0-42f3-81f6-a891c011bc3f})
+    default Windows.AI.MachineLearning.ITensorUInt16Bit
+    requires Windows.AI.MachineLearning.ITensorUInt16Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorUInt16BitStatics
+    factory Windows.AI.MachineLearning.ITensorUInt16BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array uint16 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.UInt16> name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array uint16 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt16> return
+
+class Windows.AI.MachineLearning.TensorUInt32Bit python_type closeable
+    py TensorUInt32Bit
+    signature rc(Windows.AI.MachineLearning.TensorUInt32Bit;{d8c9c2ff-7511-45a3-bfac-c38f370d2237})
+    default Windows.AI.MachineLearning.ITensorUInt32Bit
+    requires Windows.AI.MachineLearning.ITensorUInt32Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorUInt32BitStatics
+    factory Windows.AI.MachineLearning.ITensorUInt32BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array uint32 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.UInt32> name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array uint32 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+
+class Windows.AI.MachineLearning.TensorUInt64Bit python_type closeable
+    py TensorUInt64Bit
+    signature rc(Windows.AI.MachineLearning.TensorUInt64Bit;{2e70ffad-04bf-4825-839a-82baef8c7886})
+    default Windows.AI.MachineLearning.ITensorUInt64Bit
+    requires Windows.AI.MachineLearning.ITensorUInt64Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorUInt64BitStatics
+    factory Windows.AI.MachineLearning.ITensorUInt64BitStatics2
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array uint64 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.UInt64> name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array uint64 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt64> return
+
+class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable
+    py TensorUInt8Bit
+    signature rc(Windows.AI.MachineLearning.TensorUInt8Bit;{58e1ae27-622b-48e3-be22-d867aed1daac})
+    default Windows.AI.MachineLearning.ITensorUInt8Bit
+    requires Windows.AI.MachineLearning.ITensorUInt8Bit
+    requires Windows.AI.MachineLearning.ITensor
+    requires Windows.AI.MachineLearning.ILearningModelFeatureValue
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.AI.MachineLearning.ITensorUInt8BitStatics2
+    factory Windows.AI.MachineLearning.ITensorUInt8BitStatics
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
+    property shape
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
+    property tensor_kind
+        get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensor shape=4 reverse=22
+            out enum32 type=Windows.AI.MachineLearning.TensorKind return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics shape=4 reverse=22 static
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+        method Create slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+    method create_from_array static
+        method CreateFromArray slot=8 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            pass_array uint8 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+    method create_from_buffer static
+        method CreateFromBuffer slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics2 shape=195 reverse=46 static
+            pass_array int64 name=shape
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+    method create_from_iterable static
+        method CreateFromIterable slot=9 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics shape=117 reverse=101 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> name=shape
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Byte> name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+    method create_from_shape_array_and_data_array static
+        method CreateFromShapeArrayAndDataArray slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8BitStatics2 shape=239 reverse=27 static
+            pass_array int64 name=shape
+            pass_array uint8 name=data
+            out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+    method get_as_vector_view
+        method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8Bit shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Byte> return
+
+enum V parameterized
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Byte external
+    py winrt.system.Byte
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Int16 external
+    py winrt.system.Int16
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Int64 external
+    py winrt.system.Int64
+
+class System.Object external
+    py winrt.system.Object
+
+class System.Single external
+    py winrt.system.Single
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt16 external
+    py winrt.system.UInt16
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class System.UInt64 external
+    py winrt.system.UInt64
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IMemoryBuffer external
+    py winrt.windows.foundation._IMemoryBuffer
+    guid fbc4dd2a-245b-11e4-af98-689423260cf8
+
+interface Windows.Foundation.IMemoryBufferReference external
+    py winrt.windows.foundation._IMemoryBufferReference
+    guid fbc4dd29-245b-11e4-af98-689423260cf8
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+struct Windows.Graphics.DisplayAdapterId external
+    py winrt.windows.graphics.DisplayAdapterId
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DDevice
+    guid a37624ab-8d5f-4650-9d3e-9eae3d9bc670
+
+enum Windows.Graphics.Imaging.BitmapAlphaMode external
+    py winrt.windows.graphics.imaging.BitmapAlphaMode
+
+enum Windows.Graphics.Imaging.BitmapPixelFormat external
+    py winrt.windows.graphics.imaging.BitmapPixelFormat
+
+class Windows.Media.VideoFrame external
+    py winrt.windows.media.VideoFrame
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

@@ -1,0 +1,218 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Interop
+
+delegate Windows.UI.Xaml.Interop.BindableVectorChangedEventHandler python_type
+    py BindableVectorChangedEventHandler
+    guid 624cd4e1-d007-43b1-9c03-af4d3e6258c4
+    signature delegate({624cd4e1-d007-43b1-9c03-af4d3e6258c4})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.UI.Xaml.Interop.IBindableObservableVector name=vector
+            in object name=e
+
+interface Windows.UI.Xaml.Interop.IBindableIterable python_type
+    py _IBindableIterable
+    guid 036d2c08-df29-41af-8aa2-d774be62ba6f
+    signature {036d2c08-df29-41af-8aa2-d774be62ba6f}
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterable shape=4 reverse=22
+            out interface type=Windows.UI.Xaml.Interop.IBindableIterator return
+
+interface Windows.UI.Xaml.Interop.IBindableIterator python_type
+    py _IBindableIterator
+    guid 6a1d6c07-076d-49f2-8314-f52c9c9a8331
+    signature {6a1d6c07-076d-49f2-8314-f52c9c9a8331}
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterator shape=4 reverse=22
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterator shape=4 reverse=43
+            out boolean return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterator shape=4 reverse=62
+            out boolean return
+
+interface Windows.UI.Xaml.Interop.IBindableObservableVector python_type
+    py _IBindableObservableVector
+    guid fe1eb536-7e7f-4f90-ac9a-474984aae512
+    signature {fe1eb536-7e7f-4f90-ac9a-474984aae512}
+    requires Windows.UI.Xaml.Interop.IBindableVector
+    requires Windows.UI.Xaml.Interop.IBindableIterable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=43
+            out uint32 return
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableObservableVector shape=51 reverse=24
+            in delegate type=Windows.UI.Xaml.Interop.BindableVectorChangedEventHandler name=handler
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableObservableVector shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterable shape=4 reverse=22
+            out interface type=Windows.UI.Xaml.Interop.IBindableIterator return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=24
+            in uint32 name=index
+            out object return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=62
+            out interface type=Windows.UI.Xaml.Interop.IBindableVectorView return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=144
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=0 reverse=185
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=124
+            in uint32 name=index
+            in object name=value
+
+interface Windows.UI.Xaml.Interop.IBindableVector python_type
+    py _IBindableVector
+    guid 393de7de-6fd0-4c0d-bb71-47244a113e93
+    signature {393de7de-6fd0-4c0d-bb71-47244a113e93}
+    requires Windows.UI.Xaml.Interop.IBindableIterable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterable shape=4 reverse=22
+            out interface type=Windows.UI.Xaml.Interop.IBindableIterator return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=24
+            in uint32 name=index
+            out object return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=62
+            out interface type=Windows.UI.Xaml.Interop.IBindableVectorView return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=144
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=0 reverse=185
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Interop.IBindableVector shape=51 reverse=124
+            in uint32 name=index
+            in object name=value
+
+interface Windows.UI.Xaml.Interop.IBindableVectorView python_type
+    py _IBindableVectorView
+    guid 346dd6e7-976e-4bc3-815d-ece243bc0f33
+    signature {346dd6e7-976e-4bc3-815d-ece243bc0f33}
+    requires Windows.UI.Xaml.Interop.IBindableIterable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVectorView shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableIterable shape=4 reverse=22
+            out interface type=Windows.UI.Xaml.Interop.IBindableIterator return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.IBindableVectorView shape=51 reverse=24
+            in uint32 name=index
+            out object return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Interop.IBindableVectorView shape=117 reverse=66
+            in object name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.UI.Xaml.Interop.INotifyCollectionChanged python_type
+    py _INotifyCollectionChanged
+    guid 28b167d5-1a31-465b-9b25-d5c3ae686c40
+    signature {28b167d5-1a31-465b-9b25-d5c3ae686c40}
+    event collection_changed
+        add add_CollectionChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChanged shape=51 reverse=24
+            in delegate type=Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler name=handler
+            out event_token return
+        remove remove_CollectionChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChanged shape=26 reverse=53
+            in event_token name=token
+
+interface Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs
+    guid 4cf68d33-e3f2-4964-b85e-945b4f7e2f21
+
+interface Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory
+    guid b30c3e3a-df8d-44a5-9a38-7ac0d08ce63d
+
+enum Windows.UI.Xaml.Interop.NotifyCollectionChangedAction python_type
+    py NotifyCollectionChangedAction
+    signature enum(Windows.UI.Xaml.Interop.NotifyCollectionChangedAction;i4)
+
+class Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs composable python_type
+    py NotifyCollectionChangedEventArgs
+    signature rc(Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs;{4cf68d33-e3f2-4964-b85e-945b4f7e2f21})
+    default Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs
+    requires Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs
+    composable Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory shape=286
+            in enum32 type=Windows.UI.Xaml.Interop.NotifyCollectionChangedAction name=action
+            in interface type=Windows.UI.Xaml.Interop.IBindableVector name=newItems
+            in interface type=Windows.UI.Xaml.Interop.IBindableVector name=oldItems
+            in int32 name=newIndex
+            in int32 name=oldIndex
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs return
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Interop.NotifyCollectionChangedAction return
+    property new_items
+        get get_NewItems slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=43
+            out interface type=Windows.UI.Xaml.Interop.IBindableVector return
+    property new_starting_index
+        get get_NewStartingIndex slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=99
+            out int32 return
+    property old_items
+        get get_OldItems slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=62
+            out interface type=Windows.UI.Xaml.Interop.IBindableVector return
+    property old_starting_index
+        get get_OldStartingIndex slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=121
+            out int32 return
+
+delegate Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler python_type
+    py NotifyCollectionChangedEventHandler
+    guid ca10b37c-f382-4591-8557-5e24965279b0
+    signature delegate({ca10b37c-f382-4591-8557-5e24965279b0})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs name=e
+
+enum Windows.UI.Xaml.Interop.TypeKind python_type
+    py TypeKind
+    signature enum(Windows.UI.Xaml.Interop.TypeKind;i4)
+
+struct Windows.UI.Xaml.Interop.TypeName python_type
+    py TypeName
+    signature struct(Windows.UI.Xaml.Interop.TypeName;string;enum(Windows.UI.Xaml.Interop.TypeKind;i4))
+    field name Name string
+    field kind Kind enum32 type=Windows.UI.Xaml.Interop.TypeKind

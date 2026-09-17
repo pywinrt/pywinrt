@@ -1,0 +1,74 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Implementation.FileExplorer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> concrete
+    guid c3fdb0bb-ef3e-57d5-8135-fb9d30e48543
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc}))
+    argument Windows.Web.Http.HttpResponseMessage
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    guid e132d1b9-7b9d-5820-9728-4262b5289142
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory
+    guid de1a780e-e975-5f68-bcc6-fb46281c6a61
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource python_type
+    py _ISysStorageProviderEventSource
+    guid 1f36c476-9546-536a-8381-2f9a2c08cedd
+    signature {1f36c476-9546-536a-8381-2f9a2c08cedd}
+    event event_received
+        add add_EventReceived slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_EventReceived slot=7 inputs=1 outputs=0 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource shape=26 reverse=53
+            in event_token name=token
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory python_type
+    py _ISysStorageProviderHandlerFactory
+    guid ee798431-8213-5e89-a623-14d8c72b8a61
+    signature {ee798431-8213-5e89-a623-14d8c72b8a61}
+    method get_event_source
+        method GetEventSource slot=7 inputs=2 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory shape=117 reverse=45
+            in string name=syncRootId
+            in string name=eventName
+            out interface type=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource return
+    method get_http_request_provider
+        method GetHttpRequestProvider slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory shape=51 reverse=24
+            in string name=syncRootId
+            out interface type=Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider return
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider python_type
+    py _ISysStorageProviderHttpRequestProvider
+    guid cb6fefb6-e76a-5c25-a33e-3e78a6e0e0ce
+    signature {cb6fefb6-e76a-5c25-a33e-3e78a6e0e0ce}
+    method send_request_async
+        method SendRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider shape=51 reverse=24
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> return
+
+class Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs python_type
+    py SysStorageProviderEventReceivedEventArgs
+    signature rc(Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs;{e132d1b9-7b9d-5820-9728-4262b5289142})
+    default Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    requires Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    factory Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory shape=51 reverse=24
+            in string name=json
+            out class type=Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs return
+    property json
+        get get_Json slot=6 inputs=0 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs shape=4 reverse=22
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs> concrete
+    guid da34b79f-979c-5e94-82fb-d6c964e97ef6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{1f36c476-9546-536a-8381-2f9a2c08cedd};rc(Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs;{e132d1b9-7b9d-5820-9728-4262b5289142}))
+    argument Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource
+    argument Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

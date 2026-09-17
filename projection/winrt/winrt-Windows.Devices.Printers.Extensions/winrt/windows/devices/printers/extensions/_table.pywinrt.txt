@@ -1,0 +1,187 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Printers.Extensions
+
+interface Windows.Devices.Printers.Extensions.IPrint3DWorkflow
+    guid c56f74bd-3669-4a66-ab42-c8151930cd34
+
+interface Windows.Devices.Printers.Extensions.IPrint3DWorkflow2
+    guid a2a6c54f-8ac1-4918-9741-e34f3004239e
+
+interface Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs
+    guid 19f8c858-5ac8-4b55-8a5f-e61567dafb4d
+
+interface Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrinterChangedEventArgs
+    guid 45226402-95fc-4847-93b3-134dbf5c60f7
+
+interface Windows.Devices.Printers.Extensions.IPrintExtensionContextStatic
+    guid e70d9fc1-ff79-4aa4-8c9b-0c93aedfde8a
+
+interface Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails
+    guid e00e4c8a-4828-4da1-8bb8-8672df8515e7
+
+interface Windows.Devices.Printers.Extensions.IPrintTaskConfiguration
+    guid e3c22451-3aa4-4885-9240-311f5f8fbe9d
+
+interface Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest
+    guid eeaf2fcb-621e-4b62-ac77-b281cce08d60
+
+interface Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedDeferral
+    guid e959d568-f729-44a4-871d-bd0628696a33
+
+interface Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedEventArgs
+    guid e06c2879-0d61-4938-91d0-96a45bee8479
+
+class Windows.Devices.Printers.Extensions.Print3DWorkflow python_type
+    py Print3DWorkflow
+    signature rc(Windows.Devices.Printers.Extensions.Print3DWorkflow;{c56f74bd-3669-4a66-ab42-c8151930cd34})
+    default Windows.Devices.Printers.Extensions.IPrint3DWorkflow
+    requires Windows.Devices.Printers.Extensions.IPrint3DWorkflow
+    requires Windows.Devices.Printers.Extensions.IPrint3DWorkflow2
+    property is_print_ready
+        get get_IsPrintReady slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=4 reverse=62
+            out boolean return
+        put put_IsPrintReady slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=4 reverse=99
+            in boolean name=value
+    property device_id
+        get get_DeviceID slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=4 reverse=22
+            out string return
+    event print_requested
+        add add_PrintRequested slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_PrintRequested slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=26 reverse=156
+            in event_token name=eventCookie
+    event printer_changed
+        add add_PrinterChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_PrinterChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow2 shape=26 reverse=53
+            in event_token name=eventCookie
+    method get_print_model_package
+        method GetPrintModelPackage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=4 reverse=43
+            out object return
+
+enum Windows.Devices.Printers.Extensions.Print3DWorkflowDetail python_type
+    py Print3DWorkflowDetail
+    signature enum(Windows.Devices.Printers.Extensions.Print3DWorkflowDetail;i4)
+
+class Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs python_type
+    py Print3DWorkflowPrintRequestedEventArgs
+    signature rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs;{19f8c858-5ac8-4b55-8a5f-e61567dafb4d})
+    default Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs
+    requires Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.Extensions.Print3DWorkflowStatus return
+    method set_extended_status
+        method SetExtendedStatus slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs shape=4 reverse=43
+            in enum32 type=Windows.Devices.Printers.Extensions.Print3DWorkflowDetail name=value
+    method set_source
+        method SetSource slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs shape=4 reverse=62
+            in object name=source
+    method set_source_changed
+        method SetSourceChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrintRequestedEventArgs shape=4 reverse=99
+            in boolean name=value
+
+class Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs python_type
+    py Print3DWorkflowPrinterChangedEventArgs
+    signature rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs;{45226402-95fc-4847-93b3-134dbf5c60f7})
+    default Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrinterChangedEventArgs
+    requires Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrinterChangedEventArgs
+    property new_device_id
+        get get_NewDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflowPrinterChangedEventArgs shape=4 reverse=22
+            out string return
+
+enum Windows.Devices.Printers.Extensions.Print3DWorkflowStatus python_type
+    py Print3DWorkflowStatus
+    signature enum(Windows.Devices.Printers.Extensions.Print3DWorkflowStatus;i4)
+
+class Windows.Devices.Printers.Extensions.PrintExtensionContext static python_type
+    py PrintExtensionContext
+    factory Windows.Devices.Printers.Extensions.IPrintExtensionContextStatic
+    method from_device_id static
+        method FromDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintExtensionContextStatic shape=51 reverse=24 static
+            in string name=deviceId
+            out object return
+
+class Windows.Devices.Printers.Extensions.PrintNotificationEventDetails python_type
+    py PrintNotificationEventDetails
+    signature rc(Windows.Devices.Printers.Extensions.PrintNotificationEventDetails;{e00e4c8a-4828-4da1-8bb8-8672df8515e7})
+    default Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails
+    requires Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails
+    property event_data
+        get get_EventData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails shape=4 reverse=43
+            out string return
+        put put_EventData slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails shape=4 reverse=62
+            in string name=value
+    property printer_name
+        get get_PrinterName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintNotificationEventDetails shape=4 reverse=22
+            out string return
+
+class Windows.Devices.Printers.Extensions.PrintTaskConfiguration python_type
+    py PrintTaskConfiguration
+    signature rc(Windows.Devices.Printers.Extensions.PrintTaskConfiguration;{e3c22451-3aa4-4885-9240-311f5f8fbe9d})
+    default Windows.Devices.Printers.Extensions.IPrintTaskConfiguration
+    requires Windows.Devices.Printers.Extensions.IPrintTaskConfiguration
+    property printer_extension_context
+        get get_PrinterExtensionContext slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfiguration shape=4 reverse=22
+            out object return
+    event save_requested
+        add add_SaveRequested slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfiguration shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_SaveRequested slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfiguration shape=26 reverse=82
+            in event_token name=eventCookie
+
+class Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest python_type
+    py PrintTaskConfigurationSaveRequest
+    signature rc(Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest;{eeaf2fcb-621e-4b62-ac77-b281cce08d60})
+    default Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest
+    requires Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest
+    property deadline
+        get get_Deadline slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest shape=4 reverse=99
+            out datetime return
+    method cancel
+        method Cancel slot=6 inputs=0 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest shape=0 reverse=16
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest shape=4 reverse=62
+            out class type=Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral return
+    method save
+        method Save slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequest shape=4 reverse=43
+            in object name=printerExtensionContext
+
+class Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral python_type
+    py PrintTaskConfigurationSaveRequestedDeferral
+    signature rc(Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral;{e959d568-f729-44a4-871d-bd0628696a33})
+    default Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedDeferral
+    requires Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedDeferral shape=0 reverse=16
+
+class Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs python_type
+    py PrintTaskConfigurationSaveRequestedEventArgs
+    signature rc(Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs;{e06c2879-0d61-4938-91d0-96a45bee8479})
+    default Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedEventArgs
+    requires Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfigurationSaveRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs> concrete
+    guid 5f4c6603-5512-59aa-8d96-b1389d8b5796
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.Print3DWorkflow;{c56f74bd-3669-4a66-ab42-c8151930cd34});rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs;{19f8c858-5ac8-4b55-8a5f-e61567dafb4d}))
+    argument Windows.Devices.Printers.Extensions.Print3DWorkflow
+    argument Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs> concrete
+    guid b4b5ddc2-1a74-5905-9fc5-ddaae9a3ab93
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.Print3DWorkflow;{c56f74bd-3669-4a66-ab42-c8151930cd34});rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs;{45226402-95fc-4847-93b3-134dbf5c60f7}))
+    argument Windows.Devices.Printers.Extensions.Print3DWorkflow
+    argument Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs> concrete
+    guid 0363f57a-b7a2-5e20-a156-253423e7ee40
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.PrintTaskConfiguration;{e3c22451-3aa4-4885-9240-311f5f8fbe9d});rc(Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs;{e06c2879-0d61-4938-91d0-96a45bee8479}))
+    argument Windows.Devices.Printers.Extensions.PrintTaskConfiguration
+    argument Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs

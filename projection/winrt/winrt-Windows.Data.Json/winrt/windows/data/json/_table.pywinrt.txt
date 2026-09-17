@@ -1,0 +1,437 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Json
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> concrete
+    guid cb0492b6-4113-55cf-b2c5-99eb428ba493
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete
+    guid dfabb6e1-0411-5a8f-aa87-354e7110f099
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> concrete
+    guid 189eb512-5a20-5ec6-9866-60af96f0d23b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete
+    guid f948eac5-33eb-50f5-b5af-e7cecf0e4501
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>
+
+interface Windows.Data.Json.IJsonArray
+    guid 08c1ddb6-0cbd-4a9a-b5d3-2f852dc37e81
+
+interface Windows.Data.Json.IJsonArrayStatics
+    guid db1434a9-e164-499f-93e2-8a8f49bb90ba
+
+interface Windows.Data.Json.IJsonErrorStatics2
+    guid 404030da-87d0-436c-83ab-fc7b12c0cc26
+
+interface Windows.Data.Json.IJsonObject
+    guid 064e24dd-29c2-4f83-9ac1-9ee11578beb3
+
+interface Windows.Data.Json.IJsonObjectStatics
+    guid 2289f159-54de-45d8-abcc-22603fa066a0
+
+interface Windows.Data.Json.IJsonObjectWithDefaultValues
+    guid d960d2a2-b7f0-4f00-8e44-d82cf415ea13
+
+interface Windows.Data.Json.IJsonValue python_type
+    py _IJsonValue
+    guid a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e
+    signature {a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}
+    property value_type
+        get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
+            out enum32 type=Windows.Data.Json.JsonValueType return
+    method get_array
+        method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
+            out class type=Windows.Data.Json.JsonArray return
+    method get_boolean
+        method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
+            out boolean return
+    method get_number
+        method GetNumber slot=9 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=99
+            out double return
+    method get_object
+        method GetObject slot=12 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=162
+            out class type=Windows.Data.Json.JsonObject return
+    method get_string
+        method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
+            out string return
+    method stringify
+        method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
+            out string return
+
+interface Windows.Data.Json.IJsonValueStatics
+    guid 5f6b544a-2f53-48e1-91a3-f78b50a6345c
+
+interface Windows.Data.Json.IJsonValueStatics2
+    guid 1d9ecbe4-3fe8-4335-8392-93d8e36865f0
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> concrete
+    guid 4deecc89-b0b8-5ee8-a51d-1c25ad9a5b01
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument System.String
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> concrete
+    guid c9d9a725-786b-5113-b4b7-9b61764c220b
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument System.String
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> concrete
+    guid eecd690c-1ff3-529f-923f-9b1c31fd3d0f
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument System.String
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> concrete
+    guid d44662bc-dce3-59a8-9272-4b210f33908b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument Windows.Data.Json.IJsonValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> concrete
+    guid cffabb0f-6bc4-5ff6-9b9e-7a9df6c687c8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument Windows.Data.Json.IJsonValue
+
+class Windows.Data.Json.JsonArray activatable python_type iterable sequence mutable_sequence stringable
+    py JsonArray
+    signature rc(Windows.Data.Json.JsonArray;{08c1ddb6-0cbd-4a9a-b5d3-2f852dc37e81})
+    default Windows.Data.Json.IJsonArray
+    requires Windows.Data.Json.IJsonArray
+    requires Windows.Data.Json.IJsonValue
+    requires Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>
+    requires Windows.Foundation.IStringable
+    factory Windows.Data.Json.IJsonArrayStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value_type
+        get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
+            out enum32 type=Windows.Data.Json.JsonValueType return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=173
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
+    method get_array
+        method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
+            out class type=Windows.Data.Json.JsonArray return
+    method get_array_at
+        method GetArrayAt slot=7 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=44
+            in uint32 name=index
+            out class type=Windows.Data.Json.JsonArray return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=24
+            in uint32 name=index
+            out interface type=Windows.Data.Json.IJsonValue return
+    method get_boolean
+        method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
+            out boolean return
+    method get_boolean_at
+        method GetBooleanAt slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=124
+            in uint32 name=index
+            out boolean return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Data.Json.IJsonValue name=items
+            out uint32 return
+    method get_number
+        method GetNumber slot=9 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=99
+            out double return
+    method get_number_at
+        method GetNumberAt slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=100
+            in uint32 name=index
+            out double return
+    method get_object
+        method GetObject slot=12 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=162
+            out class type=Windows.Data.Json.JsonObject return
+    method get_object_at
+        method GetObjectAt slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Data.Json.JsonObject return
+    method get_string
+        method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
+            out string return
+    method get_string_at
+        method GetStringAt slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=65
+            in uint32 name=index
+            out string return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=117 reverse=101
+            in interface type=Windows.Data.Json.IJsonValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=144
+            in uint32 name=index
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArrayStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonArray return
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=211
+            pass_array interface type=Windows.Data.Json.IJsonValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=124
+            in uint32 name=index
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method stringify
+        method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
+            out string return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonArrayStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonArray name=result
+            out boolean return
+
+class Windows.Data.Json.JsonError static python_type
+    py JsonError
+    factory Windows.Data.Json.IJsonErrorStatics2
+    method get_json_status static
+        method GetJsonStatus slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonErrorStatics2 shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Data.Json.JsonErrorStatus return
+
+enum Windows.Data.Json.JsonErrorStatus python_type
+    py JsonErrorStatus
+    signature enum(Windows.Data.Json.JsonErrorStatus;i4)
+
+class Windows.Data.Json.JsonObject activatable python_type iterable mapping mutable_mapping stringable
+    py JsonObject
+    signature rc(Windows.Data.Json.JsonObject;{064e24dd-29c2-4f83-9ac1-9ee11578beb3})
+    default Windows.Data.Json.IJsonObject
+    requires Windows.Data.Json.IJsonObject
+    requires Windows.Data.Json.IJsonValue
+    requires Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>>
+    requires Windows.Data.Json.IJsonObjectWithDefaultValues
+    requires Windows.Foundation.IStringable
+    factory Windows.Data.Json.IJsonObjectStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value_type
+        get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
+            out enum32 type=Windows.Data.Json.JsonValueType return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> return
+    method get_array
+        method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
+            out class type=Windows.Data.Json.JsonArray return
+    method get_boolean
+        method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
+            out boolean return
+    method get_named_array
+        method GetNamedArray slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=100
+            in string name=name
+            out class type=Windows.Data.Json.JsonArray return
+        method GetNamedArray slot=9 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=101
+            in string name=name
+            in class type=Windows.Data.Json.JsonArray name=defaultValue
+            out class type=Windows.Data.Json.JsonArray return
+    method get_named_boolean
+        method GetNamedBoolean slot=12 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=163
+            in string name=name
+            out boolean return
+        method GetNamedBoolean slot=11 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=145
+            in string name=name
+            in boolean name=defaultValue
+            out boolean return
+    method get_named_number
+        method GetNamedNumber slot=11 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=144
+            in string name=name
+            out double return
+        method GetNamedNumber slot=10 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=111
+            in string name=name
+            in double name=defaultValue
+            out double return
+    method get_named_object
+        method GetNamedObject slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=65
+            in string name=name
+            out class type=Windows.Data.Json.JsonObject return
+        method GetNamedObject slot=7 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=45
+            in string name=name
+            in class type=Windows.Data.Json.JsonObject name=defaultValue
+            out class type=Windows.Data.Json.JsonObject return
+    method get_named_string
+        method GetNamedString slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=124
+            in string name=name
+            out string return
+        method GetNamedString slot=8 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=66
+            in string name=name
+            in string name=defaultValue
+            out string return
+    method get_named_value
+        method GetNamedValue slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Data.Json.JsonValue return
+        method GetNamedValue slot=6 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=25
+            in string name=name
+            in class type=Windows.Data.Json.JsonValue name=defaultValue
+            out class type=Windows.Data.Json.JsonValue return
+    method get_number
+        method GetNumber slot=9 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=99
+            out double return
+    method get_object
+        method GetObject slot=12 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=162
+            out class type=Windows.Data.Json.JsonObject return
+    method get_string
+        method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
+            out string return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=117 reverse=125
+            in string name=key
+            in interface type=Windows.Data.Json.IJsonValue name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=24
+            in string name=key
+            out interface type=Windows.Data.Json.IJsonValue return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObjectStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonObject return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=141
+            in string name=key
+    method set_named_value
+        method SetNamedValue slot=7 inputs=2 outputs=0 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=44
+            in string name=name
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method stringify
+        method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
+            out string return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonObjectStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonObject name=result
+            out boolean return
+
+class Windows.Data.Json.JsonValue python_type stringable
+    py JsonValue
+    signature rc(Windows.Data.Json.JsonValue;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    default Windows.Data.Json.IJsonValue
+    requires Windows.Data.Json.IJsonValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Data.Json.IJsonValueStatics
+    factory Windows.Data.Json.IJsonValueStatics2
+    property value_type
+        get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
+            out enum32 type=Windows.Data.Json.JsonValueType return
+    method create_boolean_value static
+        method CreateBooleanValue slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=65 static
+            in boolean name=input
+            out class type=Windows.Data.Json.JsonValue return
+    method create_null_value static
+        method CreateNullValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics2 shape=4 reverse=22 static
+            out class type=Windows.Data.Json.JsonValue return
+    method create_number_value static
+        method CreateNumberValue slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=46 static
+            in double name=input
+            out class type=Windows.Data.Json.JsonValue return
+    method create_string_value static
+        method CreateStringValue slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=124 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonValue return
+    method get_array
+        method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
+            out class type=Windows.Data.Json.JsonArray return
+    method get_boolean
+        method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
+            out boolean return
+    method get_number
+        method GetNumber slot=9 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=99
+            out double return
+    method get_object
+        method GetObject slot=12 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=162
+            out class type=Windows.Data.Json.JsonObject return
+    method get_string
+        method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonValue return
+    method stringify
+        method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
+            out string return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Data.Json.JsonValue name=result
+            out boolean return
+
+enum Windows.Data.Json.JsonValueType python_type
+    py JsonValueType
+    signature enum(Windows.Data.Json.JsonValueType;i4)
+
+enum K parameterized
+
+enum T parameterized
+
+enum V parameterized
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IStringable external
+    py winrt.windows.foundation._IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3

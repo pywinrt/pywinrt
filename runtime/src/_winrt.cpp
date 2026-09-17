@@ -681,6 +681,7 @@ namespace py::cpp::_winrt
     PyObject* unbox_guid(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* unbox_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* unbox_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept;
 
     static PyMethodDef module_methods[]{
         {"init_apartment", init_apartment, METH_O, "initialize the apartment"},
@@ -746,6 +747,13 @@ namespace py::cpp::_winrt
          unbox_time_span,
          METH_O,
          PyDoc_STR("Unbox a Windows.Foundation.TimeSpan value")},
+        {"read_table",
+         read_table,
+         METH_O,
+         PyDoc_STR(
+             "Reads a projection table and returns its contents as plain Python objects. "
+             "This is how test/test_table.py checks that the generator's writer and the "
+             "runtime's reader agree on the format.")},
         {}};
 
     PyDoc_STRVAR(module_doc, "_winrt");

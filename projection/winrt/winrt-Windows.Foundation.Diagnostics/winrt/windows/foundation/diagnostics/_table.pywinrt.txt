@@ -1,0 +1,1209 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Foundation.Diagnostics
+
+class Windows.Foundation.Diagnostics.AsyncCausalityTracer static python_type
+    py AsyncCausalityTracer
+    factory Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics
+    event tracing_status_changed static
+        add add_TracingStatusChanged slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=51 reverse=144 static
+            in delegate type=Windows.Foundation.EventHandler<Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs> name=handler
+            out event_token return
+        remove remove_TracingStatusChanged slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=26 reverse=167 static
+            in event_token name=cookie
+    method trace_operation_completion static
+        method TraceOperationCompletion slot=7 inputs=5 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=245 static
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySource name=source
+            in guid name=platformId
+            in uint64 name=operationId
+            in enum32 type=Windows.Foundation.AsyncStatus name=status
+    method trace_operation_creation static
+        method TraceOperationCreation slot=6 inputs=6 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=270 static
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySource name=source
+            in guid name=platformId
+            in uint64 name=operationId
+            in string name=operationName
+            in uint64 name=relatedContext
+    method trace_operation_relation static
+        method TraceOperationRelation slot=8 inputs=5 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=245 static
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySource name=source
+            in guid name=platformId
+            in uint64 name=operationId
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityRelation name=relation
+    method trace_synchronous_work_completion static
+        method TraceSynchronousWorkCompletion slot=10 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=117 reverse=125 static
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySource name=source
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySynchronousWork name=work
+    method trace_synchronous_work_start static
+        method TraceSynchronousWorkStart slot=9 inputs=5 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=245 static
+            in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySource name=source
+            in guid name=platformId
+            in uint64 name=operationId
+            in enum32 type=Windows.Foundation.Diagnostics.CausalitySynchronousWork name=work
+
+enum Windows.Foundation.Diagnostics.CausalityRelation python_type
+    py CausalityRelation
+    signature enum(Windows.Foundation.Diagnostics.CausalityRelation;i4)
+
+enum Windows.Foundation.Diagnostics.CausalitySource python_type
+    py CausalitySource
+    signature enum(Windows.Foundation.Diagnostics.CausalitySource;i4)
+
+enum Windows.Foundation.Diagnostics.CausalitySynchronousWork python_type
+    py CausalitySynchronousWork
+    signature enum(Windows.Foundation.Diagnostics.CausalitySynchronousWork;i4)
+
+enum Windows.Foundation.Diagnostics.CausalityTraceLevel python_type
+    py CausalityTraceLevel
+    signature enum(Windows.Foundation.Diagnostics.CausalityTraceLevel;i4)
+
+class Windows.Foundation.Diagnostics.ErrorDetails python_type
+    py ErrorDetails
+    signature rc(Windows.Foundation.Diagnostics.ErrorDetails;{378cbb01-2cc9-428f-8c55-2c990d463e8f})
+    default Windows.Foundation.Diagnostics.IErrorDetails
+    requires Windows.Foundation.Diagnostics.IErrorDetails
+    factory Windows.Foundation.Diagnostics.IErrorDetailsStatics
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorDetails shape=4 reverse=22
+            out string return
+    property help_uri
+        get get_HelpUri slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorDetails shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+    property long_description
+        get get_LongDescription slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorDetails shape=4 reverse=43
+            out string return
+    method create_from_h_result_async static
+        method CreateFromHResultAsync slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorDetailsStatics shape=51 reverse=24 static
+            in int32 name=errorCode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> return
+
+enum Windows.Foundation.Diagnostics.ErrorOptions python_type
+    py ErrorOptions
+    signature enum(Windows.Foundation.Diagnostics.ErrorOptions;u4)
+
+delegate Windows.Foundation.EventHandler<Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs> concrete
+    guid 2bf27008-2eb4-5675-b1cd-e9906cc5ce64
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs;{410b7711-ff3b-477f-9c9a-d2efda302dc3}))
+    argument Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs
+
+class Windows.Foundation.Diagnostics.FileLoggingSession python_type closeable
+    py FileLoggingSession
+    signature rc(Windows.Foundation.Diagnostics.FileLoggingSession;{24c74216-fed2-404c-895f-1f9699cb02f7})
+    default Windows.Foundation.Diagnostics.IFileLoggingSession
+    requires Windows.Foundation.Diagnostics.IFileLoggingSession
+    requires Windows.Foundation.IClosable
+    factory Windows.Foundation.Diagnostics.IFileLoggingSessionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSessionFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Foundation.Diagnostics.FileLoggingSession return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=22
+            out string return
+    event log_file_generated
+        add add_LogFileGenerated slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> name=handler
+            out event_token return
+        remove remove_LogFileGenerated slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=26 reverse=167
+            in event_token name=token
+    method add_logging_channel
+        method AddLoggingChannel slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=43
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+        method AddLoggingChannel slot=8 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=65
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method close_and_save_to_file_async
+        method CloseAndSaveToFileAsync slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method remove_logging_channel
+        method RemoveLoggingChannel slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=99
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+
+interface Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics
+    guid 50850b26-267e-451b-a890-ab6a370245ee
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> concrete
+    guid 9b05106d-77e0-5c24-82b0-9b2dc8f79671
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Foundation.Diagnostics.ErrorDetails;{378cbb01-2cc9-428f-8c55-2c990d463e8f}))
+    argument Windows.Foundation.Diagnostics.ErrorDetails
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+    guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.Diagnostics.IErrorDetails
+    guid 378cbb01-2cc9-428f-8c55-2c990d463e8f
+
+interface Windows.Foundation.Diagnostics.IErrorDetailsStatics
+    guid b7703750-0b1d-46c8-aa0e-4b8178e4fce9
+
+interface Windows.Foundation.Diagnostics.IErrorReportingSettings python_type
+    py _IErrorReportingSettings
+    guid 16369792-b03e-4ba1-8bb8-d28f4ab4d2c0
+    signature {16369792-b03e-4ba1-8bb8-d28f4ab4d2c0}
+    method get_error_options
+        method GetErrorOptions slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorReportingSettings shape=4 reverse=43
+            out enum_u32 type=Windows.Foundation.Diagnostics.ErrorOptions return
+    method set_error_options
+        method SetErrorOptions slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IErrorReportingSettings shape=4 reverse=22
+            in enum_u32 type=Windows.Foundation.Diagnostics.ErrorOptions name=value
+
+interface Windows.Foundation.Diagnostics.IFileLoggingSession python_type closeable
+    py _IFileLoggingSession
+    guid 24c74216-fed2-404c-895f-1f9699cb02f7
+    signature {24c74216-fed2-404c-895f-1f9699cb02f7}
+    requires Windows.Foundation.IClosable
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=22
+            out string return
+    event log_file_generated
+        add add_LogFileGenerated slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> name=handler
+            out event_token return
+        remove remove_LogFileGenerated slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=26 reverse=167
+            in event_token name=token
+    method add_logging_channel
+        method AddLoggingChannel slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=43
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+        method AddLoggingChannel slot=8 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=65
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method close_and_save_to_file_async
+        method CloseAndSaveToFileAsync slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method remove_logging_channel
+        method RemoveLoggingChannel slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=99
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+
+interface Windows.Foundation.Diagnostics.IFileLoggingSessionFactory
+    guid eea08dce-8447-4daa-9133-12eb46f697d4
+
+interface Windows.Foundation.Diagnostics.ILogFileGeneratedEventArgs
+    guid 269e976f-0d38-4c1a-b53f-b395d881df84
+
+interface Windows.Foundation.Diagnostics.ILoggingActivity
+    guid bc032941-b766-4cb5-9848-97ac6ba6d60c
+
+interface Windows.Foundation.Diagnostics.ILoggingActivity2
+    guid 26c29808-6322-456a-af82-80c8642f178b
+
+interface Windows.Foundation.Diagnostics.ILoggingActivityFactory
+    guid 6b33b483-e10a-4c58-97d5-10fb451074fb
+
+interface Windows.Foundation.Diagnostics.ILoggingChannel python_type closeable
+    py _ILoggingChannel
+    guid e9a50343-11d7-4f01-b5ca-cf495278c0a8
+    signature {e9a50343-11d7-4f01-b5ca-cf495278c0a8}
+    requires Windows.Foundation.IClosable
+    property enabled
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=43
+            out boolean return
+    property level
+        get get_Level slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=62
+            out enum32 type=Windows.Foundation.Diagnostics.LoggingLevel return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=22
+            out string return
+    event logging_enabled
+        add add_LoggingEnabled slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> name=handler
+            out event_token return
+        remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method log_message
+        method LogMessage slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=99
+            in string name=eventString
+        method LogMessage slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=124
+            in string name=eventString
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+    method log_value_pair
+        method LogValuePair slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=144
+            in string name=value1
+            in int32 name=value2
+        method LogValuePair slot=12 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=117 reverse=164
+            in string name=value1
+            in int32 name=value2
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+
+interface Windows.Foundation.Diagnostics.ILoggingChannel2
+    guid 9f4c3cf3-0bac-45a5-9e33-baf3f3a246a5
+
+interface Windows.Foundation.Diagnostics.ILoggingChannelFactory
+    guid 4edc5b9c-af80-4a9b-b0dc-398f9ae5207b
+
+interface Windows.Foundation.Diagnostics.ILoggingChannelFactory2
+    guid 4c6ef5dd-3b27-4dc9-99f0-299c6e4603a1
+
+interface Windows.Foundation.Diagnostics.ILoggingChannelOptions
+    guid c3e847ff-0ebb-4a53-8c54-dec24926cb2c
+
+interface Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory
+    guid a93151da-7faf-4191-8755-5e86dc65d896
+
+interface Windows.Foundation.Diagnostics.ILoggingFields
+    guid d7f6b7af-762d-4579-83bd-52c23bc333bc
+
+interface Windows.Foundation.Diagnostics.ILoggingOptions
+    guid 90bc7850-0192-4f5d-ac26-006adaca12d8
+
+interface Windows.Foundation.Diagnostics.ILoggingOptionsFactory
+    guid d713c6cb-98ab-464b-9f22-a3268478368a
+
+interface Windows.Foundation.Diagnostics.ILoggingSession python_type closeable
+    py _ILoggingSession
+    guid 6221f306-9380-4ad7-baf5-41ea9310d768
+    signature {6221f306-9380-4ad7-baf5-41ea9310d768}
+    requires Windows.Foundation.IClosable
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=22
+            out string return
+    method add_logging_channel
+        method AddLoggingChannel slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=62
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+        method AddLoggingChannel slot=9 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=51 reverse=100
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method remove_logging_channel
+        method RemoveLoggingChannel slot=10 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=121
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+    method save_to_file_async
+        method SaveToFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=117 reverse=45
+            in interface type=Windows.Storage.IStorageFolder name=folder
+            in string name=fileName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+
+interface Windows.Foundation.Diagnostics.ILoggingSessionFactory
+    guid 4e937ee5-58fd-45e0-8c2f-a132eff95c1e
+
+interface Windows.Foundation.Diagnostics.ILoggingTarget python_type
+    py _ILoggingTarget
+    guid 65f16c35-e388-4e26-b17a-f51cd3a83916
+    signature {65f16c35-e388-4e26-b17a-f51cd3a83916}
+    method is_enabled
+        method IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=22
+            out boolean return
+        method IsEnabled slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=44
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out boolean return
+        method IsEnabled slot=8 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=113 reverse=64
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in int64 name=keywords
+            out boolean return
+    method log_event
+        method LogEvent slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=99
+            in string name=eventName
+        method LogEvent slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=124
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+        method LogEvent slot=11 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=145
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+        method LogEvent slot=12 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=165
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+    method start_activity
+        method StartActivity slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=174
+            in string name=startEventName
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=14 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=188
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=15 inputs=3 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=198
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=16 inputs=4 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=239 reverse=206
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+
+interface Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs
+    guid 410b7711-ff3b-477f-9c9a-d2efda302dc3
+
+class Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs python_type
+    py LogFileGeneratedEventArgs
+    signature rc(Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs;{269e976f-0d38-4c1a-b53f-b395d881df84})
+    default Windows.Foundation.Diagnostics.ILogFileGeneratedEventArgs
+    requires Windows.Foundation.Diagnostics.ILogFileGeneratedEventArgs
+    property file
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILogFileGeneratedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.StorageFile return
+
+class Windows.Foundation.Diagnostics.LoggingActivity python_type closeable
+    py LoggingActivity
+    signature rc(Windows.Foundation.Diagnostics.LoggingActivity;{bc032941-b766-4cb5-9848-97ac6ba6d60c})
+    default Windows.Foundation.Diagnostics.ILoggingActivity
+    requires Windows.Foundation.Diagnostics.ILoggingActivity
+    requires Windows.Foundation.IClosable
+    requires Windows.Foundation.Diagnostics.ILoggingActivity2
+    requires Windows.Foundation.Diagnostics.ILoggingTarget
+    factory Windows.Foundation.Diagnostics.ILoggingActivityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivityFactory shape=117 reverse=25
+            in string name=activityName
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivityFactory shape=195 reverse=46
+            in string name=activityName
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivity shape=4 reverse=43
+            out guid return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivity shape=4 reverse=22
+            out string return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivity2 shape=4 reverse=22
+            out class type=Windows.Foundation.Diagnostics.LoggingChannel return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method is_enabled
+        method IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=22
+            out boolean return
+        method IsEnabled slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=44
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out boolean return
+        method IsEnabled slot=8 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=113 reverse=64
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in int64 name=keywords
+            out boolean return
+    method log_event
+        method LogEvent slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=99
+            in string name=eventName
+        method LogEvent slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=124
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+        method LogEvent slot=11 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=145
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+        method LogEvent slot=12 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=165
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+    method start_activity
+        method StartActivity slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=174
+            in string name=startEventName
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=14 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=188
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=15 inputs=3 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=198
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=16 inputs=4 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=239 reverse=206
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+    method stop_activity
+        method StopActivity slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingActivity2 shape=4 reverse=43
+            in string name=stopEventName
+        method StopActivity slot=8 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingActivity2 shape=51 reverse=65
+            in string name=stopEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+        method StopActivity slot=9 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingActivity2 shape=117 reverse=101
+            in string name=stopEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+
+class Windows.Foundation.Diagnostics.LoggingChannel python_type closeable
+    py LoggingChannel
+    signature rc(Windows.Foundation.Diagnostics.LoggingChannel;{e9a50343-11d7-4f01-b5ca-cf495278c0a8})
+    default Windows.Foundation.Diagnostics.ILoggingChannel
+    requires Windows.Foundation.Diagnostics.ILoggingChannel
+    requires Windows.Foundation.IClosable
+    requires Windows.Foundation.Diagnostics.ILoggingChannel2
+    requires Windows.Foundation.Diagnostics.ILoggingTarget
+    factory Windows.Foundation.Diagnostics.ILoggingChannelFactory
+    factory Windows.Foundation.Diagnostics.ILoggingChannelFactory2
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelFactory shape=51 reverse=24 deprecated
+            in string name=name
+            out class type=Windows.Foundation.Diagnostics.LoggingChannel return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelFactory2 shape=117 reverse=25
+            in string name=name
+            in class type=Windows.Foundation.Diagnostics.LoggingChannelOptions name=options
+            out class type=Windows.Foundation.Diagnostics.LoggingChannel return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelFactory2 shape=202
+            in string name=name
+            in class type=Windows.Foundation.Diagnostics.LoggingChannelOptions name=options
+            in guid name=id
+            out class type=Windows.Foundation.Diagnostics.LoggingChannel return
+    property enabled
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=43
+            out boolean return
+    property level
+        get get_Level slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=62
+            out enum32 type=Windows.Foundation.Diagnostics.LoggingLevel return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=22
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel2 shape=4 reverse=22
+            out guid return
+    event logging_enabled
+        add add_LoggingEnabled slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> name=handler
+            out event_token return
+        remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method is_enabled
+        method IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=22
+            out boolean return
+        method IsEnabled slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=44
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out boolean return
+        method IsEnabled slot=8 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=113 reverse=64
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in int64 name=keywords
+            out boolean return
+    method log_event
+        method LogEvent slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=99
+            in string name=eventName
+        method LogEvent slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=124
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+        method LogEvent slot=11 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=145
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+        method LogEvent slot=12 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=165
+            in string name=eventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+    method log_message
+        method LogMessage slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=99
+            in string name=eventString
+        method LogMessage slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=124
+            in string name=eventString
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+    method log_value_pair
+        method LogValuePair slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=144
+            in string name=value1
+            in int32 name=value2
+        method LogValuePair slot=12 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=117 reverse=164
+            in string name=value1
+            in int32 name=value2
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+    method start_activity
+        method StartActivity slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=51 reverse=174
+            in string name=startEventName
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=14 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=117 reverse=188
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=15 inputs=3 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=195 reverse=198
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+        method StartActivity slot=16 inputs=4 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=239 reverse=206
+            in string name=startEventName
+            in class type=Windows.Foundation.Diagnostics.LoggingFields name=fields
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=level
+            in class type=Windows.Foundation.Diagnostics.LoggingOptions name=options
+            out class type=Windows.Foundation.Diagnostics.LoggingActivity return
+
+class Windows.Foundation.Diagnostics.LoggingChannelOptions activatable python_type
+    py LoggingChannelOptions
+    signature rc(Windows.Foundation.Diagnostics.LoggingChannelOptions;{c3e847ff-0ebb-4a53-8c54-dec24926cb2c})
+    default Windows.Foundation.Diagnostics.ILoggingChannelOptions
+    requires Windows.Foundation.Diagnostics.ILoggingChannelOptions
+    factory Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory shape=94 reverse=35
+            in guid name=group implicit
+            out class type=Windows.Foundation.Diagnostics.LoggingChannelOptions return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory shape=94 reverse=35
+            in guid name=group
+            out class type=Windows.Foundation.Diagnostics.LoggingChannelOptions return
+    property group
+        get get_Group slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptions shape=4 reverse=22
+            out guid return
+        put put_Group slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptions shape=33
+            in guid name=value
+
+enum Windows.Foundation.Diagnostics.LoggingFieldFormat python_type
+    py LoggingFieldFormat
+    signature enum(Windows.Foundation.Diagnostics.LoggingFieldFormat;i4)
+
+class Windows.Foundation.Diagnostics.LoggingFields activatable python_type
+    py LoggingFields
+    signature rc(Windows.Foundation.Diagnostics.LoggingFields;{d7f6b7af-762d-4579-83bd-52c23bc333bc})
+    default Windows.Foundation.Diagnostics.ILoggingFields
+    requires Windows.Foundation.Diagnostics.ILoggingFields
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method add_boolean
+        method AddBoolean slot=73 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51
+            in string name=name
+            in boolean name=value
+        method AddBoolean slot=74 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=459
+            in string name=name
+            in boolean name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddBoolean slot=75 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in boolean name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_boolean_array
+        method AddBooleanArray slot=76 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array boolean name=value
+        method AddBooleanArray slot=77 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array boolean name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddBooleanArray slot=78 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array boolean name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_char16
+        method AddChar16 slot=67 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51
+            in string name=name
+            in char16 name=value
+        method AddChar16 slot=68 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            in char16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddChar16 slot=69 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in char16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_char16_array
+        method AddChar16Array slot=70 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=455
+            in string name=name
+            pass_array char16 name=value
+        method AddChar16Array slot=71 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array char16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddChar16Array slot=72 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array char16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_date_time
+        method AddDateTime slot=91 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=64
+            in string name=name
+            in datetime name=value
+        method AddDateTime slot=92 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=135
+            in string name=name
+            in datetime name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddDateTime slot=93 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=213
+            in string name=name
+            in datetime name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_date_time_array
+        method AddDateTimeArray slot=94 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array datetime name=value
+        method AddDateTimeArray slot=95 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array datetime name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddDateTimeArray slot=96 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array datetime name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_double
+        method AddDouble slot=61 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=49
+            in string name=name
+            in double name=value
+        method AddDouble slot=62 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=111
+            in string name=name
+            in double name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddDouble slot=63 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=190
+            in string name=name
+            in double name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_double_array
+        method AddDoubleArray slot=64 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array double name=value
+        method AddDoubleArray slot=65 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array double name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddDoubleArray slot=66 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array double name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_empty
+        method AddEmpty slot=10 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=4 reverse=121
+            in string name=name
+        method AddEmpty slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=144
+            in string name=name
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddEmpty slot=12 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=164
+            in string name=name
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_guid
+        method AddGuid slot=85 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=68
+            in string name=name
+            in guid name=value
+        method AddGuid slot=86 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=137
+            in string name=name
+            in guid name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddGuid slot=87 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=216
+            in string name=name
+            in guid name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_guid_array
+        method AddGuidArray slot=88 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array guid name=value
+        method AddGuidArray slot=89 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array guid name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddGuidArray slot=90 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array guid name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int16
+        method AddInt16 slot=19 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=224
+            in string name=name
+            in int16 name=value
+        method AddInt16 slot=20 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=230
+            in string name=name
+            in int16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt16 slot=21 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in int16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int16_array
+        method AddInt16Array slot=22 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=239
+            in string name=name
+            pass_array int16 name=value
+        method AddInt16Array slot=23 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array int16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt16Array slot=24 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array int16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int32
+        method AddInt32 slot=31 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=274
+            in string name=name
+            in int32 name=value
+        method AddInt32 slot=32 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=282
+            in string name=name
+            in int32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt32 slot=33 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in int32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int32_array
+        method AddInt32Array slot=34 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array int32 name=value
+        method AddInt32Array slot=35 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array int32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt32Array slot=36 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array int32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int64
+        method AddInt64 slot=43 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=50
+            in string name=name
+            in int64 name=value
+        method AddInt64 slot=44 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=113
+            in string name=name
+            in int64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt64 slot=45 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=192
+            in string name=name
+            in int64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_int64_array
+        method AddInt64Array slot=46 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=336
+            in string name=name
+            pass_array int64 name=value
+        method AddInt64Array slot=47 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array int64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddInt64Array slot=48 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array int64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_point
+        method AddPoint slot=103 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=57
+            in string name=name
+            in struct type=Windows.Foundation.Point name=value
+        method AddPoint slot=104 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=134
+            in string name=name
+            in struct type=Windows.Foundation.Point name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddPoint slot=105 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=211
+            in string name=name
+            in struct type=Windows.Foundation.Point name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_point_array
+        method AddPointArray slot=106 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=491
+            in string name=name
+            pass_array struct type=Windows.Foundation.Point name=value
+        method AddPointArray slot=107 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array struct type=Windows.Foundation.Point name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddPointArray slot=108 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array struct type=Windows.Foundation.Point name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_rect
+        method AddRect slot=115 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=55
+            in string name=name
+            in struct type=Windows.Foundation.Rect name=value
+        method AddRect slot=116 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=130
+            in string name=name
+            in struct type=Windows.Foundation.Rect name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddRect slot=117 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=205
+            in string name=name
+            in struct type=Windows.Foundation.Rect name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_rect_array
+        method AddRectArray slot=118 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array struct type=Windows.Foundation.Rect name=value
+        method AddRectArray slot=119 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array struct type=Windows.Foundation.Rect name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddRectArray slot=120 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array struct type=Windows.Foundation.Rect name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_single
+        method AddSingle slot=55 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=48
+            in string name=name
+            in single name=value
+        method AddSingle slot=56 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=110
+            in string name=name
+            in single name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddSingle slot=57 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=188
+            in string name=name
+            in single name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_single_array
+        method AddSingleArray slot=58 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array single name=value
+        method AddSingleArray slot=59 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array single name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddSingleArray slot=60 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array single name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_size
+        method AddSize slot=109 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=57
+            in string name=name
+            in struct type=Windows.Foundation.Size name=value
+        method AddSize slot=110 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=134
+            in string name=name
+            in struct type=Windows.Foundation.Size name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddSize slot=111 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=211
+            in string name=name
+            in struct type=Windows.Foundation.Size name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_size_array
+        method AddSizeArray slot=112 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array struct type=Windows.Foundation.Size name=value
+        method AddSizeArray slot=113 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array struct type=Windows.Foundation.Size name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddSizeArray slot=114 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array struct type=Windows.Foundation.Size name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_string
+        method AddString slot=79 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51
+            in string name=name
+            in string name=value
+        method AddString slot=80 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            in string name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddString slot=81 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in string name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_string_array
+        method AddStringArray slot=82 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=467
+            in string name=name
+            pass_array string name=value
+        method AddStringArray slot=83 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195 reverse=468
+            in string name=name
+            pass_array string name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddStringArray slot=84 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array string name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_time_span
+        method AddTimeSpan slot=97 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=64
+            in string name=name
+            in timespan name=value
+        method AddTimeSpan slot=98 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=135
+            in string name=name
+            in timespan name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddTimeSpan slot=99 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=213
+            in string name=name
+            in timespan name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_time_span_array
+        method AddTimeSpanArray slot=100 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=485
+            in string name=name
+            pass_array timespan name=value
+        method AddTimeSpanArray slot=101 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array timespan name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddTimeSpanArray slot=102 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array timespan name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint16
+        method AddUInt16 slot=25 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=253
+            in string name=name
+            in uint16 name=value
+        method AddUInt16 slot=26 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            in uint16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt16 slot=27 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in uint16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint16_array
+        method AddUInt16Array slot=28 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array uint16 name=value
+        method AddUInt16Array slot=29 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array uint16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt16Array slot=30 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array uint16 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint32
+        method AddUInt32 slot=37 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=300
+            in string name=name
+            in uint32 name=value
+        method AddUInt32 slot=38 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            in uint32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt32 slot=39 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            in uint32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint32_array
+        method AddUInt32Array slot=40 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117
+            in string name=name
+            pass_array uint32 name=value
+        method AddUInt32Array slot=41 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array uint32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt32Array slot=42 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array uint32 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint64
+        method AddUInt64 slot=49 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=50
+            in string name=name
+            in uint64 name=value
+        method AddUInt64 slot=50 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=113
+            in string name=name
+            in uint64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt64 slot=51 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=192
+            in string name=name
+            in uint64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint64_array
+        method AddUInt64Array slot=52 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=361
+            in string name=name
+            pass_array uint64 name=value
+        method AddUInt64Array slot=53 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195
+            in string name=name
+            pass_array uint64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt64Array slot=54 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array uint64 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint8
+        method AddUInt8 slot=13 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=174
+            in string name=name
+            in uint8 name=value
+        method AddUInt8 slot=14 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=188
+            in string name=name
+            in uint8 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt8 slot=15 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195 reverse=198
+            in string name=name
+            in uint8 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method add_uint8_array
+        method AddUInt8Array slot=16 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=117 reverse=204
+            in string name=name
+            pass_array uint8 name=value
+        method AddUInt8Array slot=17 inputs=3 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=195 reverse=212
+            in string name=name
+            pass_array uint8 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+        method AddUInt8Array slot=18 inputs=4 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=239
+            in string name=name
+            pass_array uint8 name=value
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingFieldFormat name=format
+            in int32 name=tags
+    method begin_struct
+        method BeginStruct slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=4 reverse=43
+            in string name=name
+        method BeginStruct slot=8 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=51 reverse=65
+            in string name=name
+            in int32 name=tags
+    method clear
+        method Clear slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=0 reverse=16
+    method end_struct
+        method EndStruct slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingFields shape=0 reverse=93
+
+enum Windows.Foundation.Diagnostics.LoggingLevel python_type
+    py LoggingLevel
+    signature enum(Windows.Foundation.Diagnostics.LoggingLevel;i4)
+
+enum Windows.Foundation.Diagnostics.LoggingOpcode python_type
+    py LoggingOpcode
+    signature enum(Windows.Foundation.Diagnostics.LoggingOpcode;i4)
+
+class Windows.Foundation.Diagnostics.LoggingOptions activatable python_type
+    py LoggingOptions
+    signature rc(Windows.Foundation.Diagnostics.LoggingOptions;{90bc7850-0192-4f5d-ac26-006adaca12d8})
+    default Windows.Foundation.Diagnostics.ILoggingOptions
+    requires Windows.Foundation.Diagnostics.ILoggingOptions
+    factory Windows.Foundation.Diagnostics.ILoggingOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptionsFactory shape=47 reverse=19
+            in int64 name=keywords implicit
+            out class type=Windows.Foundation.Diagnostics.LoggingOptions return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptionsFactory shape=47 reverse=19
+            in int64 name=keywords
+            out class type=Windows.Foundation.Diagnostics.LoggingOptions return
+    property task
+        get get_Task slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=121
+            out int16 return
+        put put_Task slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=141
+            in int16 name=value
+    property tags
+        get get_Tags slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=62
+            out int32 return
+        put put_Tags slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=99
+            in int32 name=value
+    property related_activity_id
+        get get_RelatedActivityId slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=202
+            out guid return
+        put put_RelatedActivityId slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=33
+            in guid name=value
+    property opcode
+        get get_Opcode slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=162
+            out enum32 type=Windows.Foundation.Diagnostics.LoggingOpcode return
+        put put_Opcode slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=173
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingOpcode name=value
+    property keywords
+        get get_Keywords slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=22
+            out int64 return
+        put put_Keywords slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=3 reverse=40
+            in int64 name=value
+    property activity_id
+        get get_ActivityId slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=4 reverse=186
+            out guid return
+        put put_ActivityId slot=15 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingOptions shape=33
+            in guid name=value
+
+class Windows.Foundation.Diagnostics.LoggingSession python_type closeable
+    py LoggingSession
+    signature rc(Windows.Foundation.Diagnostics.LoggingSession;{6221f306-9380-4ad7-baf5-41ea9310d768})
+    default Windows.Foundation.Diagnostics.ILoggingSession
+    requires Windows.Foundation.Diagnostics.ILoggingSession
+    requires Windows.Foundation.IClosable
+    factory Windows.Foundation.Diagnostics.ILoggingSessionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingSessionFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Foundation.Diagnostics.LoggingSession return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=22
+            out string return
+    method add_logging_channel
+        method AddLoggingChannel slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=62
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+        method AddLoggingChannel slot=9 inputs=2 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=51 reverse=100
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+            in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method remove_logging_channel
+        method RemoveLoggingChannel slot=10 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=121
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
+    method save_to_file_async
+        method SaveToFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=117 reverse=45
+            in interface type=Windows.Storage.IStorageFolder name=folder
+            in string name=fileName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+
+class Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings activatable python_type
+    py RuntimeBrokerErrorSettings
+    signature rc(Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings;{16369792-b03e-4ba1-8bb8-d28f4ab4d2c0})
+    default Windows.Foundation.Diagnostics.IErrorReportingSettings
+    requires Windows.Foundation.Diagnostics.IErrorReportingSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method get_error_options
+        method GetErrorOptions slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IErrorReportingSettings shape=4 reverse=43
+            out enum_u32 type=Windows.Foundation.Diagnostics.ErrorOptions return
+    method set_error_options
+        method SetErrorOptions slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IErrorReportingSettings shape=4 reverse=22
+            in enum_u32 type=Windows.Foundation.Diagnostics.ErrorOptions name=value
+
+class Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs python_type
+    py TracingStatusChangedEventArgs
+    signature rc(Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs;{410b7711-ff3b-477f-9c9a-d2efda302dc3})
+    default Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs
+    requires Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs
+    property enabled
+        get get_Enabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs shape=4 reverse=22
+            out boolean return
+    property trace_level
+        get get_TraceLevel slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> concrete
+    guid 0c6563b0-9d8b-5b60-994b-dee1174d1efb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{24c74216-fed2-404c-895f-1f9699cb02f7};rc(Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs;{269e976f-0d38-4c1a-b53f-b395d881df84}))
+    argument Windows.Foundation.Diagnostics.IFileLoggingSession
+    argument Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> concrete
+    guid 52c9c2a1-54a3-5ef9-9aff-014e7c454655
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{e9a50343-11d7-4f01-b5ca-cf495278c0a8};cinterface(IInspectable))
+    argument Windows.Foundation.Diagnostics.ILoggingChannel
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.IStorageFolder external
+    py winrt.windows.storage._IStorageFolder
+    guid 72d1cb78-b3ef-4f75-a80b-6fd9dae2944b
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

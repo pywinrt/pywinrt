@@ -1,0 +1,32 @@
+format 4.0
+generator 0.0.0
+namespace Windows.AI.Actions.Provider
+
+interface Windows.AI.Actions.Provider.IActionFeedbackHandler python_type
+    py _IActionFeedbackHandler
+    guid a3fc3c51-a8c6-52c8-ad77-37bf3e2b565c
+    signature {a3fc3c51-a8c6-52c8-ad77-37bf3e2b565c}
+    method process_feedback_async
+        method ProcessFeedbackAsync slot=6 inputs=2 outputs=1 declaring=Windows.AI.Actions.Provider.IActionFeedbackHandler shape=117 reverse=25
+            in class type=Windows.AI.Actions.ActionInvocationContext name=context
+            in class type=Windows.AI.Actions.ActionFeedback name=feedback
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.AI.Actions.Provider.IActionProvider python_type
+    py _IActionProvider
+    guid 62906c47-3d07-55f1-aefa-1522505afbbe
+    signature {62906c47-3d07-55f1-aefa-1522505afbbe}
+    method invoke_async
+        method InvokeAsync slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.Provider.IActionProvider shape=51 reverse=24
+            in class type=Windows.AI.Actions.ActionInvocationContext name=context
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.AI.Actions.ActionFeedback external
+    py winrt.windows.ai.actions.ActionFeedback
+
+class Windows.AI.Actions.ActionInvocationContext external
+    py winrt.windows.ai.actions.ActionInvocationContext
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

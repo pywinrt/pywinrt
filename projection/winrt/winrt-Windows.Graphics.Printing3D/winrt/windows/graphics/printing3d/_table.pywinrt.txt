@@ -1,0 +1,1014 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Printing3D
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3D3MFPackage> concrete
+    guid 6cf2eb38-e068-5558-94b0-0161192c5f19
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Printing3D.Printing3D3MFPackage;{f64dd5c8-2ab7-45a9-a1b7-267e948d5b18}))
+    argument Windows.Graphics.Printing3D.Printing3D3MFPackage
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3DMeshVerificationResult> concrete
+    guid 0f9eb6c4-19f5-5be9-9adb-64f24af115d8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Printing3D.Printing3DMeshVerificationResult;{195671ba-e93a-4e8a-a46f-dea8e852197e}))
+    argument Windows.Graphics.Printing3D.Printing3DMeshVerificationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3DModel> concrete
+    guid 1b27900b-10d5-53ff-9a34-4b31f31582b0
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Printing3D.Printing3DModel;{2d012ef0-52fb-919a-77b0-4b1a3b80324f}))
+    argument Windows.Graphics.Printing3D.Printing3DModel
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete
+    guid 430ecece-1418-5d19-81b2-5ddb381603cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IRandomAccessStream
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.Double> concrete
+    guid af873c66-2df0-5a95-ab54-25634da3ffa9
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};b1;f8)
+    argument System.Boolean
+    argument System.Double
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Graphics.Printing3D.IPrint3DManager
+    guid 4d2fcb0a-7366-4971-8bd5-17c4e3e8c6c0
+
+interface Windows.Graphics.Printing3D.IPrint3DManagerStatics
+    guid 0ef1cafe-a9ad-4c08-a917-1d1f863eabcb
+
+interface Windows.Graphics.Printing3D.IPrint3DTask
+    guid 8ce3d080-2118-4c28-80de-f426d70191ae
+
+interface Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs
+    guid cc1914af-2614-4f1d-accc-d6fc4fda5455
+
+interface Windows.Graphics.Printing3D.IPrint3DTaskRequest
+    guid 2595c46f-2245-4c5a-8731-0d604dc6bc3c
+
+interface Windows.Graphics.Printing3D.IPrint3DTaskRequestedEventArgs
+    guid 150cb77f-18c5-40d7-9f40-fab3096e05a9
+
+interface Windows.Graphics.Printing3D.IPrint3DTaskSourceChangedEventArgs
+    guid 5bcd34af-24e9-4c10-8d07-14c346ba3fcf
+
+interface Windows.Graphics.Printing3D.IPrint3DTaskSourceRequestedArgs
+    guid c77c9aba-24af-424d-a3bf-92250c355602
+
+interface Windows.Graphics.Printing3D.IPrinting3D3MFPackage
+    guid f64dd5c8-2ab7-45a9-a1b7-267e948d5b18
+
+interface Windows.Graphics.Printing3D.IPrinting3D3MFPackage2
+    guid 965c7ac4-93cb-4430-92b8-789cd454f883
+
+interface Windows.Graphics.Printing3D.IPrinting3D3MFPackageStatics
+    guid 7058d9af-7a9a-4787-b817-f6f459214823
+
+interface Windows.Graphics.Printing3D.IPrinting3DBaseMaterial
+    guid d0f0e743-c50c-4bcb-9d04-fc16adcea2c9
+
+interface Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup
+    guid 94f070b8-2515-4a8d-a1f0-d0fc13d06021
+
+interface Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroupFactory
+    guid 5c1546dc-8697-4193-976b-84bb4116e5bf
+
+interface Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics
+    guid 815a47bc-374a-476d-be92-3ecfd1cb9776
+
+interface Windows.Graphics.Printing3D.IPrinting3DColorMaterial
+    guid e1899928-7ce7-4285-a35d-f145c9510c7b
+
+interface Windows.Graphics.Printing3D.IPrinting3DColorMaterial2
+    guid fab0e852-0aef-44e9-9ddd-36eeea5acd44
+
+interface Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup
+    guid 001a6bd0-aadf-4226-afe9-f369a0b45004
+
+interface Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroupFactory
+    guid 71d38d6d-b1ea-4a5b-bc54-19c65f3df044
+
+interface Windows.Graphics.Printing3D.IPrinting3DComponent
+    guid 7e287845-bf7f-4cdb-a27f-30a01437fede
+
+interface Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix
+    guid 3279f335-0ef0-456b-9a21-49bebe8b51c2
+
+interface Windows.Graphics.Printing3D.IPrinting3DCompositeMaterial
+    guid 462238dd-562e-4f6c-882d-f4d841fd63c7
+
+interface Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup
+    guid 8d946a5b-40f1-496d-a5fb-340a5a678e30
+
+interface Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2
+    guid 06e86d62-7d3b-41e1-944c-bafde4555483
+
+interface Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroupFactory
+    guid d08ecd13-92ff-43aa-a627-8d43c22c817e
+
+interface Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions
+    guid bbfed397-2d74-46f7-be85-99a67bbb6629
+
+interface Windows.Graphics.Printing3D.IPrinting3DMaterial
+    guid 378db256-ed62-4952-b85b-03567d7c465e
+
+interface Windows.Graphics.Printing3D.IPrinting3DMesh
+    guid 192e90dc-0228-2e01-bc20-c5290cbf32c4
+
+interface Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult
+    guid 195671ba-e93a-4e8a-a46f-dea8e852197e
+
+interface Windows.Graphics.Printing3D.IPrinting3DModel
+    guid 2d012ef0-52fb-919a-77b0-4b1a3b80324f
+
+interface Windows.Graphics.Printing3D.IPrinting3DModel2
+    guid c92069c7-c841-47f3-a84e-a149fd08b657
+
+interface Windows.Graphics.Printing3D.IPrinting3DModelTexture
+    guid 5dafcf01-b59d-483c-97bb-a4d546d1c75c
+
+interface Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterial
+    guid 25a6254b-c6e9-484d-a214-a25e5776ba62
+
+interface Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup
+    guid f0950519-aeb9-4515-a39b-a088fbbb277c
+
+interface Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroupFactory
+    guid 323e196e-d4c6-451e-a814-4d78a210fe53
+
+interface Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial
+    guid 8d844bfb-07e9-4986-9833-8dd3d48c6859
+
+interface Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup
+    guid 627d7ca7-6d90-4fb9-9fc4-9feff3dfa892
+
+interface Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2
+    guid 69fbdbba-b12e-429b-8386-df5284f6e80f
+
+interface Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroupFactory
+    guid cbb049b0-468a-4c6f-b2a2-8eb8ba8dea48
+
+interface Windows.Graphics.Printing3D.IPrinting3DTextureResource
+    guid a70df32d-6ab1-44ae-bc45-a27382c0d38c
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<System.Double> concrete
+    guid f452d23c-bf05-5f3e-88e7-d17a6716b911
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};f8)
+    argument System.Double
+
+interface Windows.Foundation.Collections.IVector<System.UInt32> concrete
+    guid 534832ed-2a03-5604-890d-5a928cd427b9
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> concrete
+    guid 6a5aa59f-fe10-517b-b1a9-c685ecce1644
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DBaseMaterial;{d0f0e743-c50c-4bcb-9d04-fc16adcea2c9}))
+    argument Windows.Graphics.Printing3D.Printing3DBaseMaterial
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> concrete
+    guid 2b80d2cf-5449-5c81-8226-ebfc7d72f579
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup;{94f070b8-2515-4a8d-a1f0-d0fc13d06021}))
+    argument Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> concrete
+    guid 606166fd-6bf5-53a1-b1ae-c34892ef1663
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DColorMaterial;{e1899928-7ce7-4285-a35d-f145c9510c7b}))
+    argument Windows.Graphics.Printing3D.Printing3DColorMaterial
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> concrete
+    guid 7c8017f3-8365-5aa8-9fd0-a769f26e3fef
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DColorMaterialGroup;{001a6bd0-aadf-4226-afe9-f369a0b45004}))
+    argument Windows.Graphics.Printing3D.Printing3DColorMaterialGroup
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> concrete
+    guid 49e654c2-f372-582e-97cc-cb6b0fa3ba62
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DComponent;{7e287845-bf7f-4cdb-a27f-30a01437fede}))
+    argument Windows.Graphics.Printing3D.Printing3DComponent
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> concrete
+    guid f09f3dd7-61e6-5a8d-9ddf-57001f705de7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DComponentWithMatrix;{3279f335-0ef0-456b-9a21-49bebe8b51c2}))
+    argument Windows.Graphics.Printing3D.Printing3DComponentWithMatrix
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> concrete
+    guid c3b27a95-5efc-52c7-b5de-e82e059a722e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DCompositeMaterial;{462238dd-562e-4f6c-882d-f4d841fd63c7}))
+    argument Windows.Graphics.Printing3D.Printing3DCompositeMaterial
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> concrete
+    guid 1e4ccd78-b6c0-51b1-ab2b-c3422f02c24e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup;{8d946a5b-40f1-496d-a5fb-340a5a678e30}))
+    argument Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> concrete
+    guid bb11be6e-b592-5bc2-9a53-0127a9b32172
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DMesh;{192e90dc-0228-2e01-bc20-c5290cbf32c4}))
+    argument Windows.Graphics.Printing3D.Printing3DMesh
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> concrete
+    guid 4e72578f-9bea-5663-8699-e7fcad3547a7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DModelTexture;{5dafcf01-b59d-483c-97bb-a4d546d1c75c}))
+    argument Windows.Graphics.Printing3D.Printing3DModelTexture
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> concrete
+    guid e2196da6-6a29-59a2-9dd6-93062f44baad
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial;{25a6254b-c6e9-484d-a214-a25e5776ba62}))
+    argument Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> concrete
+    guid 22585b94-34a1-5b6a-bae3-bf44659812f3
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup;{f0950519-aeb9-4515-a39b-a088fbbb277c}))
+    argument Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> concrete
+    guid f16fbf2c-c783-5edf-ad7b-7fb7eacf1501
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial;{8d844bfb-07e9-4986-9833-8dd3d48c6859}))
+    argument Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> concrete
+    guid 7dc68e96-2a62-5e7a-85d5-4864d03591eb
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup;{627d7ca7-6d90-4fb9-9fc4-9feff3dfa892}))
+    argument Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> concrete
+    guid 120948c9-aaa5-5ee5-a133-3215d0561404
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing3D.Printing3DTextureResource;{a70df32d-6ab1-44ae-bc45-a27382c0d38c}))
+    argument Windows.Graphics.Printing3D.Printing3DTextureResource
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+    guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    argument System.UInt32
+
+class Windows.Graphics.Printing3D.Print3DManager python_type
+    py Print3DManager
+    signature rc(Windows.Graphics.Printing3D.Print3DManager;{4d2fcb0a-7366-4971-8bd5-17c4e3e8c6c0})
+    default Windows.Graphics.Printing3D.IPrint3DManager
+    requires Windows.Graphics.Printing3D.IPrint3DManager
+    factory Windows.Graphics.Printing3D.IPrint3DManagerStatics
+    event task_requested
+        add add_TaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DManager,Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_TaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DManager shape=26 reverse=53
+            in event_token name=token
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DManagerStatics shape=4 reverse=22 static
+            out class type=Windows.Graphics.Printing3D.Print3DManager return
+    method show_print_ui_async static
+        method ShowPrintUIAsync slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DManagerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Graphics.Printing3D.Print3DTask python_type
+    py Print3DTask
+    signature rc(Windows.Graphics.Printing3D.Print3DTask;{8ce3d080-2118-4c28-80de-f426d70191ae})
+    default Windows.Graphics.Printing3D.IPrint3DTask
+    requires Windows.Graphics.Printing3D.IPrint3DTask
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3D3MFPackage return
+    event completed
+        add add_Completed slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Completed slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=134
+            in event_token name=eventCookie
+    event source_changed
+        add add_SourceChanged slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_SourceChanged slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=167
+            in event_token name=eventCookie
+    event submitting
+        add add_Submitting slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,System.Object> name=eventHandler
+            out event_token return
+        remove remove_Submitting slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=82
+            in event_token name=eventCookie
+
+class Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs python_type
+    py Print3DTaskCompletedEventArgs
+    signature rc(Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs;{cc1914af-2614-4f1d-accc-d6fc4fda5455})
+    default Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs
+    requires Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs
+    property completion
+        get get_Completion slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing3D.Print3DTaskCompletion return
+    property extended_status
+        get get_ExtendedStatus slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTaskCompletedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing3D.Print3DTaskDetail return
+
+enum Windows.Graphics.Printing3D.Print3DTaskCompletion python_type
+    py Print3DTaskCompletion
+    signature enum(Windows.Graphics.Printing3D.Print3DTaskCompletion;i4)
+
+enum Windows.Graphics.Printing3D.Print3DTaskDetail python_type
+    py Print3DTaskDetail
+    signature enum(Windows.Graphics.Printing3D.Print3DTaskDetail;i4)
+
+class Windows.Graphics.Printing3D.Print3DTaskRequest python_type
+    py Print3DTaskRequest
+    signature rc(Windows.Graphics.Printing3D.Print3DTaskRequest;{2595c46f-2245-4c5a-8731-0d604dc6bc3c})
+    default Windows.Graphics.Printing3D.IPrint3DTaskRequest
+    requires Windows.Graphics.Printing3D.IPrint3DTaskRequest
+    method create_task
+        method CreateTask slot=6 inputs=3 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTaskRequest shape=195 reverse=26
+            in string name=title
+            in string name=printerId
+            in delegate type=Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler name=handler
+            out class type=Windows.Graphics.Printing3D.Print3DTask return
+
+class Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs python_type
+    py Print3DTaskRequestedEventArgs
+    signature rc(Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs;{150cb77f-18c5-40d7-9f40-fab3096e05a9})
+    default Windows.Graphics.Printing3D.IPrint3DTaskRequestedEventArgs
+    requires Windows.Graphics.Printing3D.IPrint3DTaskRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTaskRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Print3DTaskRequest return
+
+class Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs python_type
+    py Print3DTaskSourceChangedEventArgs
+    signature rc(Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs;{5bcd34af-24e9-4c10-8d07-14c346ba3fcf})
+    default Windows.Graphics.Printing3D.IPrint3DTaskSourceChangedEventArgs
+    requires Windows.Graphics.Printing3D.IPrint3DTaskSourceChangedEventArgs
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTaskSourceChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3D3MFPackage return
+
+class Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs python_type
+    py Print3DTaskSourceRequestedArgs
+    signature rc(Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs;{c77c9aba-24af-424d-a3bf-92250c355602})
+    default Windows.Graphics.Printing3D.IPrint3DTaskSourceRequestedArgs
+    requires Windows.Graphics.Printing3D.IPrint3DTaskSourceRequestedArgs
+    method set_source
+        method SetSource slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTaskSourceRequestedArgs shape=4 reverse=22
+            in class type=Windows.Graphics.Printing3D.Printing3D3MFPackage name=source
+
+delegate Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler python_type
+    py Print3DTaskSourceRequestedHandler
+    guid e9175e70-c917-46de-bb51-d9a94db3711f
+    signature delegate({e9175e70-c917-46de-bb51-d9a94db3711f})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs name=args
+
+class Windows.Graphics.Printing3D.Printing3D3MFPackage activatable python_type
+    py Printing3D3MFPackage
+    signature rc(Windows.Graphics.Printing3D.Printing3D3MFPackage;{f64dd5c8-2ab7-45a9-a1b7-267e948d5b18})
+    default Windows.Graphics.Printing3D.IPrinting3D3MFPackage
+    requires Windows.Graphics.Printing3D.IPrinting3D3MFPackage
+    requires Windows.Graphics.Printing3D.IPrinting3D3MFPackage2
+    factory Windows.Graphics.Printing3D.IPrinting3D3MFPackageStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property thumbnail
+        get get_Thumbnail slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=141
+            out class type=Windows.Graphics.Printing3D.Printing3DTextureResource return
+        put put_Thumbnail slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=162
+            in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
+    property print_ticket
+        get get_PrintTicket slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+        put put_PrintTicket slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=62
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    property model_part
+        get get_ModelPart slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+        put put_ModelPart slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=121
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    property textures
+        get get_Textures slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> return
+    property compression
+        get get_Compression slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage2 shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing3D.Printing3DPackageCompression return
+        put put_Compression slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage2 shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DPackageCompression name=value
+    method load_async static
+        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackageStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3D3MFPackage> return
+    method load_model_from_package_async
+        method LoadModelFromPackageAsync slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=51 reverse=187
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3DModel> return
+    method save_async
+        method SaveAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+    method save_model_to_package_async
+        method SaveModelToPackageAsync slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3D3MFPackage shape=51 reverse=196
+            in class type=Windows.Graphics.Printing3D.Printing3DModel name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Graphics.Printing3D.Printing3DBaseMaterial activatable python_type
+    py Printing3DBaseMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DBaseMaterial;{d0f0e743-c50c-4bcb-9d04-fc16adcea2c9})
+    default Windows.Graphics.Printing3D.IPrinting3DBaseMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DBaseMaterial
+    factory Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterial shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterial shape=4 reverse=43
+            in string name=value
+    property color
+        get get_Color slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterial shape=4 reverse=62
+            out class type=Windows.Graphics.Printing3D.Printing3DColorMaterial return
+        put put_Color slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterial shape=4 reverse=99
+            in class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=value
+    property abs static
+        get get_Abs slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics shape=4 reverse=22 static
+            out string return
+    property pla static
+        get get_Pla slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterialStatics shape=4 reverse=43 static
+            out string return
+
+class Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup python_type
+    py Printing3DBaseMaterialGroup
+    signature rc(Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup;{94f070b8-2515-4a8d-a1f0-d0fc13d06021})
+    default Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup
+    factory Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroupFactory shape=51 reverse=24
+            in uint32 name=MaterialGroupId
+            out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup return
+    property bases
+        get get_Bases slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> return
+    property material_group_id
+        get get_MaterialGroupId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DBaseMaterialGroup shape=4 reverse=43
+            out uint32 return
+
+struct Windows.Graphics.Printing3D.Printing3DBufferDescription python_type
+    py Printing3DBufferDescription
+    signature struct(Windows.Graphics.Printing3D.Printing3DBufferDescription;enum(Windows.Graphics.Printing3D.Printing3DBufferFormat;i4);u4)
+    field format Format enum32 type=Windows.Graphics.Printing3D.Printing3DBufferFormat
+    field stride Stride uint32
+
+enum Windows.Graphics.Printing3D.Printing3DBufferFormat python_type
+    py Printing3DBufferFormat
+    signature enum(Windows.Graphics.Printing3D.Printing3DBufferFormat;i4)
+
+class Windows.Graphics.Printing3D.Printing3DColorMaterial activatable python_type
+    py Printing3DColorMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DColorMaterial;{e1899928-7ce7-4285-a35d-f145c9510c7b})
+    default Windows.Graphics.Printing3D.IPrinting3DColorMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DColorMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DColorMaterial2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterial shape=4 reverse=22
+            out uint32 return
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterial shape=4 reverse=43
+            in uint32 name=value
+    property color
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterial2 shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterial2 shape=29
+            in struct type=Windows.UI.Color name=value
+
+class Windows.Graphics.Printing3D.Printing3DColorMaterialGroup python_type
+    py Printing3DColorMaterialGroup
+    signature rc(Windows.Graphics.Printing3D.Printing3DColorMaterialGroup;{001a6bd0-aadf-4226-afe9-f369a0b45004})
+    default Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup
+    factory Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroupFactory shape=51 reverse=24
+            in uint32 name=MaterialGroupId
+            out class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup return
+    property colors
+        get get_Colors slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> return
+    property material_group_id
+        get get_MaterialGroupId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DColorMaterialGroup shape=4 reverse=43
+            out uint32 return
+
+class Windows.Graphics.Printing3D.Printing3DComponent activatable python_type
+    py Printing3DComponent
+    signature rc(Windows.Graphics.Printing3D.Printing3DComponent;{7e287845-bf7f-4cdb-a27f-30a01437fede})
+    default Windows.Graphics.Printing3D.IPrinting3DComponent
+    requires Windows.Graphics.Printing3D.IPrinting3DComponent
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property type
+        get get_Type slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=141
+            out enum32 type=Windows.Graphics.Printing3D.Printing3DObjectType return
+        put put_Type slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=162
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DObjectType name=value
+    property thumbnail
+        get get_Thumbnail slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=99
+            out class type=Windows.Graphics.Printing3D.Printing3DTextureResource return
+        put put_Thumbnail slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=121
+            in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
+    property part_number
+        get get_PartNumber slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=194
+            out string return
+        put put_PartNumber slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=202
+            in string name=value
+    property name
+        get get_Name slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=173
+            out string return
+        put put_Name slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=186
+            in string name=value
+    property mesh
+        get get_Mesh slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DMesh return
+        put put_Mesh slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DMesh name=value
+    property components
+        get get_Components slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponent shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> return
+
+class Windows.Graphics.Printing3D.Printing3DComponentWithMatrix activatable python_type
+    py Printing3DComponentWithMatrix
+    signature rc(Windows.Graphics.Printing3D.Printing3DComponentWithMatrix;{3279f335-0ef0-456b-9a21-49bebe8b51c2})
+    default Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix
+    requires Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property matrix
+        get get_Matrix slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 return
+        put put_Matrix slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix shape=6
+            in struct type=Windows.Foundation.Numerics.Matrix4x4 name=value
+    property component
+        get get_Component slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DComponent return
+        put put_Component slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DComponentWithMatrix shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DComponent name=value
+
+class Windows.Graphics.Printing3D.Printing3DCompositeMaterial activatable python_type
+    py Printing3DCompositeMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DCompositeMaterial;{462238dd-562e-4f6c-882d-f4d841fd63c7})
+    default Windows.Graphics.Printing3D.IPrinting3DCompositeMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DCompositeMaterial
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property values
+        get get_Values slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterial shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Double> return
+
+class Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup python_type
+    py Printing3DCompositeMaterialGroup
+    signature rc(Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup;{8d946a5b-40f1-496d-a5fb-340a5a678e30})
+    default Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2
+    factory Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroupFactory shape=51 reverse=24
+            in uint32 name=MaterialGroupId
+            out class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup return
+    property composites
+        get get_Composites slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> return
+    property material_group_id
+        get get_MaterialGroupId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup shape=4 reverse=43
+            out uint32 return
+    property material_indices
+        get get_MaterialIndices slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.UInt32> return
+    property base_material_group
+        get get_BaseMaterialGroup slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2 shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup return
+        put put_BaseMaterialGroup slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DCompositeMaterialGroup2 shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=value
+
+class Windows.Graphics.Printing3D.Printing3DFaceReductionOptions activatable python_type
+    py Printing3DFaceReductionOptions
+    signature rc(Windows.Graphics.Printing3D.Printing3DFaceReductionOptions;{bbfed397-2d74-46f7-be85-99a67bbb6629})
+    default Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions
+    requires Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property target_triangle_count
+        get get_TargetTriangleCount slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=4 reverse=62
+            out uint32 return
+        put put_TargetTriangleCount slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=4 reverse=99
+            in uint32 name=value
+    property max_reduction_area
+        get get_MaxReductionArea slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=4 reverse=22
+            out double return
+        put put_MaxReductionArea slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=2 reverse=38
+            in double name=value
+    property max_edge_length
+        get get_MaxEdgeLength slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=4 reverse=121
+            out double return
+        put put_MaxEdgeLength slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DFaceReductionOptions shape=2 reverse=138
+            in double name=value
+
+class Windows.Graphics.Printing3D.Printing3DMaterial activatable python_type
+    py Printing3DMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DMaterial;{378db256-ed62-4952-b85b-03567d7c465e})
+    default Windows.Graphics.Printing3D.IPrinting3DMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DMaterial
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property base_groups
+        get get_BaseGroups slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMaterial shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> return
+    property color_groups
+        get get_ColorGroups slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMaterial shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> return
+    property composite_groups
+        get get_CompositeGroups slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMaterial shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> return
+    property multiple_property_groups
+        get get_MultiplePropertyGroups slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMaterial shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> return
+    property texture2_coord_groups
+        get get_Texture2CoordGroups slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMaterial shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> return
+
+class Windows.Graphics.Printing3D.Printing3DMesh activatable python_type
+    py Printing3DMesh
+    signature rc(Windows.Graphics.Printing3D.Printing3DMesh;{192e90dc-0228-2e01-bc20-c5290cbf32c4})
+    default Windows.Graphics.Printing3D.IPrinting3DMesh
+    requires Windows.Graphics.Printing3D.IPrinting3DMesh
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property vertex_positions_description
+        get get_VertexPositionsDescription slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=121
+            out struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription return
+        put put_VertexPositionsDescription slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=23
+            in struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription name=value
+    property vertex_normals_description
+        get get_VertexNormalsDescription slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=162
+            out struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription return
+        put put_VertexNormalsDescription slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=23
+            in struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription name=value
+    property vertex_count
+        get get_VertexCount slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=22
+            out uint32 return
+        put put_VertexCount slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=43
+            in uint32 name=value
+    property triangle_material_indices_description
+        get get_TriangleMaterialIndicesDescription slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=202
+            out struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription return
+        put put_TriangleMaterialIndicesDescription slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=23
+            in struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription name=value
+    property triangle_indices_description
+        get get_TriangleIndicesDescription slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=186
+            out struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription return
+        put put_TriangleIndicesDescription slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=23
+            in struct type=Windows.Graphics.Printing3D.Printing3DBufferDescription name=value
+    property index_count
+        get get_IndexCount slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=62
+            out uint32 return
+        put put_IndexCount slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=99
+            in uint32 name=value
+    property buffer_description_set
+        get get_BufferDescriptionSet slot=26 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=255
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    property buffer_set
+        get get_BufferSet slot=27 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=259
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    method create_triangle_indices
+        method CreateTriangleIndices slot=23 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=242
+            in uint32 name=value
+    method create_triangle_material_indices
+        method CreateTriangleMaterialIndices slot=25 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=252
+            in uint32 name=value
+    method create_vertex_normals
+        method CreateVertexNormals slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=232
+            in uint32 name=value
+    method create_vertex_positions
+        method CreateVertexPositions slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=223
+            in uint32 name=value
+    method get_triangle_indices
+        method GetTriangleIndices slot=22 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=237
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_triangle_material_indices
+        method GetTriangleMaterialIndices slot=24 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=247
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_vertex_normals
+        method GetVertexNormals slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=228
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_vertex_positions
+        method GetVertexPositions slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=4 reverse=218
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method verify_async
+        method VerifyAsync slot=28 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMesh shape=51 reverse=264
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DMeshVerificationMode name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printing3DMeshVerificationResult> return
+
+enum Windows.Graphics.Printing3D.Printing3DMeshVerificationMode python_type
+    py Printing3DMeshVerificationMode
+    signature enum(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode;i4)
+
+class Windows.Graphics.Printing3D.Printing3DMeshVerificationResult python_type
+    py Printing3DMeshVerificationResult
+    signature rc(Windows.Graphics.Printing3D.Printing3DMeshVerificationResult;{195671ba-e93a-4e8a-a46f-dea8e852197e})
+    default Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult
+    requires Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult
+    property is_valid
+        get get_IsValid slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult shape=4 reverse=22
+            out boolean return
+    property nonmanifold_triangles
+        get get_NonmanifoldTriangles slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+    property reversed_normal_triangles
+        get get_ReversedNormalTriangles slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMeshVerificationResult shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+
+class Windows.Graphics.Printing3D.Printing3DModel activatable python_type
+    py Printing3DModel
+    signature rc(Windows.Graphics.Printing3D.Printing3DModel;{2d012ef0-52fb-919a-77b0-4b1a3b80324f})
+    default Windows.Graphics.Printing3D.IPrinting3DModel
+    requires Windows.Graphics.Printing3D.IPrinting3DModel
+    requires Windows.Graphics.Printing3D.IPrinting3DModel2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property version
+        get get_Version slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=194
+            out string return
+        put put_Version slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=202
+            in string name=value
+    property unit
+        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing3D.Printing3DModelUnit return
+        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DModelUnit name=value
+    property material
+        get get_Material slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=141
+            out class type=Windows.Graphics.Printing3D.Printing3DMaterial return
+        put put_Material slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=162
+            in class type=Windows.Graphics.Printing3D.Printing3DMaterial name=value
+    property build
+        get get_Build slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=173
+            out class type=Windows.Graphics.Printing3D.Printing3DComponent return
+        put put_Build slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=186
+            in class type=Windows.Graphics.Printing3D.Printing3DComponent name=value
+    property components
+        get get_Components slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> return
+    property meshes
+        get get_Meshes slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> return
+    property metadata
+        get get_Metadata slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property required_extensions
+        get get_RequiredExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property textures
+        get get_Textures slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> return
+    method clone
+        method Clone slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=228
+            out class type=Windows.Graphics.Printing3D.Printing3DModel return
+    method repair_async
+        method RepairAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel shape=4 reverse=223
+            out interface type=Windows.Foundation.IAsyncAction return
+    method repair_with_progress_async
+        method RepairWithProgressAsync slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.Double> return
+    method try_partial_repair_async
+        method TryPartialRepairAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method TryPartialRepairAsync slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=89
+            in timespan name=maxWaitTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_reduce_faces_async
+        method TryReduceFacesAsync slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.Double> return
+        method TryReduceFacesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=51 reverse=100
+            in class type=Windows.Graphics.Printing3D.Printing3DFaceReductionOptions name=printing3DFaceReductionOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.Double> return
+        method TryReduceFacesAsync slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModel2 shape=135
+            in class type=Windows.Graphics.Printing3D.Printing3DFaceReductionOptions name=printing3DFaceReductionOptions
+            in timespan name=maxWait
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.Double> return
+
+class Windows.Graphics.Printing3D.Printing3DModelTexture activatable python_type
+    py Printing3DModelTexture
+    signature rc(Windows.Graphics.Printing3D.Printing3DModelTexture;{5dafcf01-b59d-483c-97bb-a4d546d1c75c})
+    default Windows.Graphics.Printing3D.IPrinting3DModelTexture
+    requires Windows.Graphics.Printing3D.IPrinting3DModelTexture
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property tile_style_v
+        get get_TileStyleV slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=121
+            out enum32 type=Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior return
+        put put_TileStyleV slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=141
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior name=value
+    property tile_style_u
+        get get_TileStyleU slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=62
+            out enum32 type=Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior return
+        put put_TileStyleU slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=99
+            in enum32 type=Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior name=value
+    property texture_resource
+        get get_TextureResource slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DTextureResource return
+        put put_TextureResource slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DModelTexture shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
+
+enum Windows.Graphics.Printing3D.Printing3DModelUnit python_type
+    py Printing3DModelUnit
+    signature enum(Windows.Graphics.Printing3D.Printing3DModelUnit;i4)
+
+class Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial activatable python_type
+    py Printing3DMultiplePropertyMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial;{25a6254b-c6e9-484d-a214-a25e5776ba62})
+    default Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterial
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property material_indices
+        get get_MaterialIndices slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterial shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.UInt32> return
+
+class Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup python_type
+    py Printing3DMultiplePropertyMaterialGroup
+    signature rc(Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup;{f0950519-aeb9-4515-a39b-a088fbbb277c})
+    default Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup
+    factory Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroupFactory shape=51 reverse=24
+            in uint32 name=MaterialGroupId
+            out class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup return
+    property material_group_id
+        get get_MaterialGroupId slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup shape=4 reverse=62
+            out uint32 return
+    property material_group_indices
+        get get_MaterialGroupIndices slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.UInt32> return
+    property multiple_properties
+        get get_MultipleProperties slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DMultiplePropertyMaterialGroup shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> return
+
+enum Windows.Graphics.Printing3D.Printing3DObjectType python_type
+    py Printing3DObjectType
+    signature enum(Windows.Graphics.Printing3D.Printing3DObjectType;i4)
+
+enum Windows.Graphics.Printing3D.Printing3DPackageCompression python_type
+    py Printing3DPackageCompression
+    signature enum(Windows.Graphics.Printing3D.Printing3DPackageCompression;i4)
+
+class Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial activatable python_type
+    py Printing3DTexture2CoordMaterial
+    signature rc(Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial;{8d844bfb-07e9-4986-9833-8dd3d48c6859})
+    default Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial
+    requires Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property v
+        get get_V slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=4 reverse=121
+            out double return
+        put put_V slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=2 reverse=138
+            in double name=value
+    property u
+        get get_U slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=4 reverse=62
+            out double return
+        put put_U slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=2
+            in double name=value
+    property texture
+        get get_Texture slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DModelTexture return
+        put put_Texture slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterial shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=value
+
+class Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup python_type
+    py Printing3DTexture2CoordMaterialGroup
+    signature rc(Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup;{627d7ca7-6d90-4fb9-9fc4-9feff3dfa892})
+    default Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup
+    requires Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2
+    factory Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroupFactory shape=51 reverse=24
+            in uint32 name=MaterialGroupId
+            out class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup return
+    property material_group_id
+        get get_MaterialGroupId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup shape=4 reverse=43
+            out uint32 return
+    property texture2_coords
+        get get_Texture2Coords slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> return
+    property texture
+        get get_Texture slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2 shape=4 reverse=22
+            out class type=Windows.Graphics.Printing3D.Printing3DModelTexture return
+        put put_Texture slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTexture2CoordMaterialGroup2 shape=4 reverse=43
+            in class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=value
+
+enum Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior python_type
+    py Printing3DTextureEdgeBehavior
+    signature enum(Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior;i4)
+
+class Windows.Graphics.Printing3D.Printing3DTextureResource activatable python_type
+    py Printing3DTextureResource
+    signature rc(Windows.Graphics.Printing3D.Printing3DTextureResource;{a70df32d-6ab1-44ae-bc45-a27382c0d38c})
+    default Windows.Graphics.Printing3D.IPrinting3DTextureResource
+    requires Windows.Graphics.Printing3D.IPrinting3DTextureResource
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property texture_data
+        get get_TextureData slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTextureResource shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
+        put put_TextureData slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTextureResource shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType name=value
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrinting3DTextureResource shape=4 reverse=62
+            out string return
+        put put_Name slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrinting3DTextureResource shape=4 reverse=99
+            in string name=value
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DManager,Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs> concrete
+    guid 77c464a3-a7c6-5512-9859-412db3f66ac4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing3D.Print3DManager;{4d2fcb0a-7366-4971-8bd5-17c4e3e8c6c0});rc(Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs;{150cb77f-18c5-40d7-9f40-fab3096e05a9}))
+    argument Windows.Graphics.Printing3D.Print3DManager
+    argument Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,System.Object> concrete
+    guid c0081611-7485-58a8-88be-82e712d8c1ba
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing3D.Print3DTask;{8ce3d080-2118-4c28-80de-f426d70191ae});cinterface(IInspectable))
+    argument Windows.Graphics.Printing3D.Print3DTask
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs> concrete
+    guid bccf7095-bc8e-5ff5-83c0-d5691e0aa24d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing3D.Print3DTask;{8ce3d080-2118-4c28-80de-f426d70191ae});rc(Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs;{cc1914af-2614-4f1d-accc-d6fc4fda5455}))
+    argument Windows.Graphics.Printing3D.Print3DTask
+    argument Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs> concrete
+    guid 58d36055-0241-555d-af7b-9f05e5daa412
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing3D.Print3DTask;{8ce3d080-2118-4c28-80de-f426d70191ae});rc(Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs;{5bcd34af-24e9-4c10-8d07-14c346ba3fcf}))
+    argument Windows.Graphics.Printing3D.Print3DTask
+    argument Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+struct Windows.Foundation.Numerics.Matrix4x4 external
+    py winrt.windows.foundation.numerics.Matrix4x4
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

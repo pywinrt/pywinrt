@@ -1,0 +1,828 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Holographic
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+struct Windows.Graphics.Holographic.HolographicAdapterId python_type
+    py HolographicAdapterId
+    signature struct(Windows.Graphics.Holographic.HolographicAdapterId;u4;i4)
+    field low_part LowPart uint32
+    field high_part HighPart int32
+
+class Windows.Graphics.Holographic.HolographicCamera python_type
+    py HolographicCamera
+    signature rc(Windows.Graphics.Holographic.HolographicCamera;{e4e98445-9bed-4980-9ba0-e87680d1cb74})
+    default Windows.Graphics.Holographic.IHolographicCamera
+    requires Windows.Graphics.Holographic.IHolographicCamera
+    requires Windows.Graphics.Holographic.IHolographicCamera2
+    requires Windows.Graphics.Holographic.IHolographicCamera3
+    requires Windows.Graphics.Holographic.IHolographicCamera4
+    requires Windows.Graphics.Holographic.IHolographicCamera5
+    requires Windows.Graphics.Holographic.IHolographicCamera6
+    property viewport_scale_factor
+        get get_ViewportScaleFactor slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=4 reverse=43
+            out double return
+        put put_ViewportScaleFactor slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=2
+            in double name=value
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=4 reverse=121
+            out uint32 return
+    property is_stereo
+        get get_IsStereo slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=4 reverse=99
+            out boolean return
+    property render_target_size
+        get get_RenderTargetSize slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=4 reverse=22
+            out struct type=Windows.Foundation.Size return
+    property display
+        get get_Display slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera2 shape=4 reverse=62
+            out class type=Windows.Graphics.Holographic.HolographicDisplay return
+    property left_viewport_parameters
+        get get_LeftViewportParameters slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera2 shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicCameraViewportParameters return
+    property right_viewport_parameters
+        get get_RightViewportParameters slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera2 shape=4 reverse=43
+            out class type=Windows.Graphics.Holographic.HolographicCameraViewportParameters return
+    property is_primary_layer_enabled
+        get get_IsPrimaryLayerEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera3 shape=4 reverse=22
+            out boolean return
+        put put_IsPrimaryLayerEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCamera3 shape=4 reverse=43
+            in boolean name=value
+    property max_quad_layer_count
+        get get_MaxQuadLayerCount slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera3 shape=4 reverse=62
+            out uint32 return
+    property quad_layers
+        get get_QuadLayers slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera3 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> return
+    property can_override_viewport
+        get get_CanOverrideViewport slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera4 shape=4 reverse=22
+            out boolean return
+    property is_hardware_content_protection_enabled
+        get get_IsHardwareContentProtectionEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera5 shape=4 reverse=43
+            out boolean return
+        put put_IsHardwareContentProtectionEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCamera5 shape=4 reverse=62
+            in boolean name=value
+    property is_hardware_content_protection_supported
+        get get_IsHardwareContentProtectionSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera5 shape=4 reverse=22
+            out boolean return
+    property view_configuration
+        get get_ViewConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCamera6 shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicViewConfiguration return
+    method set_far_plane_distance
+        method SetFarPlaneDistance slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=2 reverse=160
+            in double name=value
+    method set_near_plane_distance
+        method SetNearPlaneDistance slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCamera shape=2 reverse=138
+            in double name=value
+
+class Windows.Graphics.Holographic.HolographicCameraPose python_type
+    py HolographicCameraPose
+    signature rc(Windows.Graphics.Holographic.HolographicCameraPose;{0d7d7e30-12de-45bd-912b-c7f6561599d1})
+    default Windows.Graphics.Holographic.IHolographicCameraPose
+    requires Windows.Graphics.Holographic.IHolographicCameraPose
+    requires Windows.Graphics.Holographic.IHolographicCameraPose2
+    property far_plane_distance
+        get get_FarPlaneDistance slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=4 reverse=173
+            out double return
+    property holographic_camera
+        get get_HolographicCamera slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicCamera return
+    property near_plane_distance
+        get get_NearPlaneDistance slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=4 reverse=162
+            out double return
+    property projection_transform
+        get get_ProjectionTransform slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=4 reverse=99
+            out struct type=Windows.Graphics.Holographic.HolographicStereoTransform return
+    property viewport
+        get get_Viewport slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=4 reverse=43
+            out struct type=Windows.Foundation.Rect return
+    method override_projection_transform
+        method OverrideProjectionTransform slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraPose2 shape=5
+            in struct type=Windows.Graphics.Holographic.HolographicStereoTransform name=projectionTransform
+    method override_view_transform
+        method OverrideViewTransform slot=6 inputs=2 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraPose2 shape=52
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Graphics.Holographic.HolographicStereoTransform name=coordinateSystemToViewTransform
+    method override_viewport
+        method OverrideViewport slot=8 inputs=2 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraPose2 shape=75
+            in struct type=Windows.Foundation.Rect name=leftViewport
+            in struct type=Windows.Foundation.Rect name=rightViewport
+    method try_get_culling_frustum
+        method TryGetCullingFrustum slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=51 reverse=124
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingFrustum> return
+    method try_get_view_transform
+        method TryGetViewTransform slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=51 reverse=65
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out reference type=Windows.Foundation.IReference<Windows.Graphics.Holographic.HolographicStereoTransform> return
+    method try_get_visible_frustum
+        method TryGetVisibleFrustum slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraPose shape=51 reverse=144
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingFrustum> return
+
+class Windows.Graphics.Holographic.HolographicCameraRenderingParameters python_type
+    py HolographicCameraRenderingParameters
+    signature rc(Windows.Graphics.Holographic.HolographicCameraRenderingParameters;{8eac2ed1-5bf4-4e16-8236-ae0800c11d0d})
+    default Windows.Graphics.Holographic.IHolographicCameraRenderingParameters
+    requires Windows.Graphics.Holographic.IHolographicCameraRenderingParameters
+    requires Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2
+    requires Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3
+    requires Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4
+    property direct3d11_back_buffer
+        get get_Direct3D11BackBuffer slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters shape=4 reverse=121
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    property direct3d11_device
+        get get_Direct3D11Device slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters shape=4 reverse=99
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice return
+    property reprojection_mode
+        get get_ReprojectionMode slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2 shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Holographic.HolographicReprojectionMode return
+        put put_ReprojectionMode slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2 shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Holographic.HolographicReprojectionMode name=value
+    property is_content_protection_enabled
+        get get_IsContentProtectionEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3 shape=4 reverse=22
+            out boolean return
+        put put_IsContentProtectionEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3 shape=4 reverse=43
+            in boolean name=value
+    property depth_reprojection_method
+        get get_DepthReprojectionMethod slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4 shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod return
+        put put_DepthReprojectionMethod slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4 shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod name=value
+    method commit_direct3d11_depth_buffer
+        method CommitDirect3D11DepthBuffer slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2 shape=4 reverse=62
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=value
+    method set_focus_point
+        method SetFocusPoint slot=6 inputs=2 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters shape=56
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+        method SetFocusPoint slot=7 inputs=3 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters shape=133
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            in struct type=Windows.Foundation.Numerics.Vector3 name=normal
+        method SetFocusPoint slot=8 inputs=4 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicCameraRenderingParameters shape=209
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            in struct type=Windows.Foundation.Numerics.Vector3 name=normal
+            in struct type=Windows.Foundation.Numerics.Vector3 name=linearVelocity
+
+class Windows.Graphics.Holographic.HolographicCameraViewportParameters python_type
+    py HolographicCameraViewportParameters
+    signature rc(Windows.Graphics.Holographic.HolographicCameraViewportParameters;{80cdf3f7-842a-41e1-93ed-5692ab1fbb10})
+    default Windows.Graphics.Holographic.IHolographicCameraViewportParameters
+    requires Windows.Graphics.Holographic.IHolographicCameraViewportParameters
+    property hidden_area_mesh
+        get get_HiddenAreaMesh slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraViewportParameters shape=51 reverse=24
+            receive_array struct type=Windows.Foundation.Numerics.Vector2 return
+    property visible_area_mesh
+        get get_VisibleAreaMesh slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicCameraViewportParameters shape=51 reverse=44
+            receive_array struct type=Windows.Foundation.Numerics.Vector2 return
+
+enum Windows.Graphics.Holographic.HolographicDepthReprojectionMethod python_type
+    py HolographicDepthReprojectionMethod
+    signature enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4)
+
+class Windows.Graphics.Holographic.HolographicDisplay python_type
+    py HolographicDisplay
+    signature rc(Windows.Graphics.Holographic.HolographicDisplay;{9acea414-1d9f-4090-a388-90c06f6eae9c})
+    default Windows.Graphics.Holographic.IHolographicDisplay
+    requires Windows.Graphics.Holographic.IHolographicDisplay
+    requires Windows.Graphics.Holographic.IHolographicDisplay2
+    requires Windows.Graphics.Holographic.IHolographicDisplay3
+    factory Windows.Graphics.Holographic.IHolographicDisplayStatics
+    property adapter_id
+        get get_AdapterId slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=121
+            out struct type=Windows.Graphics.Holographic.HolographicAdapterId return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=22
+            out string return
+    property is_opaque
+        get get_IsOpaque slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=99
+            out boolean return
+    property is_stereo
+        get get_IsStereo slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=62
+            out boolean return
+    property max_viewport_size
+        get get_MaxViewportSize slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    property spatial_locator
+        get get_SpatialLocator slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay shape=4 reverse=141
+            out class type=Windows.Perception.Spatial.SpatialLocator return
+    property refresh_rate
+        get get_RefreshRate slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay2 shape=4 reverse=22
+            out double return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplayStatics shape=4 reverse=22 static
+            out class type=Windows.Graphics.Holographic.HolographicDisplay return
+    method try_get_view_configuration
+        method TryGetViewConfiguration slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicDisplay3 shape=51 reverse=24
+            in enum32 type=Windows.Graphics.Holographic.HolographicViewConfigurationKind name=kind
+            out class type=Windows.Graphics.Holographic.HolographicViewConfiguration return
+
+class Windows.Graphics.Holographic.HolographicFrame python_type
+    py HolographicFrame
+    signature rc(Windows.Graphics.Holographic.HolographicFrame;{c6988eb6-a8b9-3054-a6eb-d624b6536375})
+    default Windows.Graphics.Holographic.IHolographicFrame
+    requires Windows.Graphics.Holographic.IHolographicFrame
+    requires Windows.Graphics.Holographic.IHolographicFrame2
+    requires Windows.Graphics.Holographic.IHolographicFrame3
+    property added_cameras
+        get get_AddedCameras slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> return
+    property current_prediction
+        get get_CurrentPrediction slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=4 reverse=121
+            out class type=Windows.Graphics.Holographic.HolographicFramePrediction return
+    property duration
+        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=4 reverse=99
+            out timespan return
+    property removed_cameras
+        get get_RemovedCameras slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame3 shape=4 reverse=22
+            out struct type=Windows.Graphics.Holographic.HolographicFrameId return
+    method get_quad_layer_update_parameters
+        method GetQuadLayerUpdateParameters slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame2 shape=51 reverse=24
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=layer
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters return
+    method get_rendering_parameters
+        method GetRenderingParameters slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=51 reverse=65
+            in class type=Windows.Graphics.Holographic.HolographicCameraPose name=cameraPose
+            out class type=Windows.Graphics.Holographic.HolographicCameraRenderingParameters return
+    method present_using_current_prediction
+        method PresentUsingCurrentPrediction slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=4 reverse=162
+            out enum32 type=Windows.Graphics.Holographic.HolographicFramePresentResult return
+        method PresentUsingCurrentPrediction slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=51 reverse=174
+            in enum32 type=Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior name=waitBehavior
+            out enum32 type=Windows.Graphics.Holographic.HolographicFramePresentResult return
+    method update_current_prediction
+        method UpdateCurrentPrediction slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=0 reverse=137
+    method wait_for_frame_to_finish
+        method WaitForFrameToFinish slot=14 inputs=0 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicFrame shape=0 reverse=185
+
+struct Windows.Graphics.Holographic.HolographicFrameId python_type
+    py HolographicFrameId
+    signature struct(Windows.Graphics.Holographic.HolographicFrameId;u8)
+    field value Value uint64
+
+class Windows.Graphics.Holographic.HolographicFramePrediction python_type
+    py HolographicFramePrediction
+    signature rc(Windows.Graphics.Holographic.HolographicFramePrediction;{520f4de1-5c0a-4e79-a81e-6abe02bb2739})
+    default Windows.Graphics.Holographic.IHolographicFramePrediction
+    requires Windows.Graphics.Holographic.IHolographicFramePrediction
+    property camera_poses
+        get get_CameraPoses slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePrediction shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> return
+    property timestamp
+        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePrediction shape=4 reverse=43
+            out class type=Windows.Perception.PerceptionTimestamp return
+
+enum Windows.Graphics.Holographic.HolographicFramePresentResult python_type
+    py HolographicFramePresentResult
+    signature enum(Windows.Graphics.Holographic.HolographicFramePresentResult;i4)
+
+enum Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior python_type
+    py HolographicFramePresentWaitBehavior
+    signature enum(Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior;i4)
+
+class Windows.Graphics.Holographic.HolographicFramePresentationMonitor python_type closeable
+    py HolographicFramePresentationMonitor
+    signature rc(Windows.Graphics.Holographic.HolographicFramePresentationMonitor;{ca87256c-6fae-428e-bb83-25dfee51136b})
+    default Windows.Graphics.Holographic.IHolographicFramePresentationMonitor
+    requires Windows.Graphics.Holographic.IHolographicFramePresentationMonitor
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_reports deprecated
+        method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationMonitor shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> return
+
+class Windows.Graphics.Holographic.HolographicFramePresentationReport python_type
+    py HolographicFramePresentationReport
+    signature rc(Windows.Graphics.Holographic.HolographicFramePresentationReport;{80baf614-f2f4-4c8a-8de3-065c78f6d5de})
+    default Windows.Graphics.Holographic.IHolographicFramePresentationReport
+    requires Windows.Graphics.Holographic.IHolographicFramePresentationReport
+    property app_gpu_duration
+        get get_AppGpuDuration slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationReport shape=4 reverse=43 deprecated
+            out timespan return
+    property app_gpu_overrun
+        get get_AppGpuOverrun slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationReport shape=4 reverse=62 deprecated
+            out timespan return
+    property compositor_gpu_duration
+        get get_CompositorGpuDuration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationReport shape=4 reverse=22 deprecated
+            out timespan return
+    property missed_presentation_opportunity_count
+        get get_MissedPresentationOpportunityCount slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationReport shape=4 reverse=99 deprecated
+            out uint32 return
+    property presentation_count
+        get get_PresentationCount slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationReport shape=4 reverse=121 deprecated
+            out uint32 return
+
+class Windows.Graphics.Holographic.HolographicFrameRenderingReport python_type
+    py HolographicFrameRenderingReport
+    signature rc(Windows.Graphics.Holographic.HolographicFrameRenderingReport;{05f32de4-e384-51b3-b934-f0d3a0f78606})
+    default Windows.Graphics.Holographic.IHolographicFrameRenderingReport
+    requires Windows.Graphics.Holographic.IHolographicFrameRenderingReport
+    property frame_id
+        get get_FrameId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameRenderingReport shape=4 reverse=22
+            out struct type=Windows.Graphics.Holographic.HolographicFrameId return
+    property missed_latch_count
+        get get_MissedLatchCount slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameRenderingReport shape=4 reverse=43
+            out uint32 return
+    property system_relative_actual_gpu_finish_time
+        get get_SystemRelativeActualGpuFinishTime slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameRenderingReport shape=4 reverse=99
+            out timespan return
+    property system_relative_frame_ready_time
+        get get_SystemRelativeFrameReadyTime slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameRenderingReport shape=4 reverse=62
+            out timespan return
+    property system_relative_target_latch_time
+        get get_SystemRelativeTargetLatchTime slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameRenderingReport shape=4 reverse=121
+            out timespan return
+
+class Windows.Graphics.Holographic.HolographicFrameScanoutMonitor python_type closeable
+    py HolographicFrameScanoutMonitor
+    signature rc(Windows.Graphics.Holographic.HolographicFrameScanoutMonitor;{7e83efa9-843c-5401-8095-9bc1b8b08638})
+    default Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor
+    requires Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_reports
+        method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
+
+class Windows.Graphics.Holographic.HolographicFrameScanoutReport python_type
+    py HolographicFrameScanoutReport
+    signature rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f})
+    default Windows.Graphics.Holographic.IHolographicFrameScanoutReport
+    requires Windows.Graphics.Holographic.IHolographicFrameScanoutReport
+    property missed_scanout_count
+        get get_MissedScanoutCount slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutReport shape=4 reverse=43
+            out uint32 return
+    property rendering_report
+        get get_RenderingReport slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutReport shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicFrameRenderingReport return
+    property system_relative_latch_time
+        get get_SystemRelativeLatchTime slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutReport shape=4 reverse=62
+            out timespan return
+    property system_relative_photon_time
+        get get_SystemRelativePhotonTime slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutReport shape=4 reverse=121
+            out timespan return
+    property system_relative_scanout_start_time
+        get get_SystemRelativeScanoutStartTime slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutReport shape=4 reverse=99
+            out timespan return
+
+class Windows.Graphics.Holographic.HolographicQuadLayer python_type closeable
+    py HolographicQuadLayer
+    signature rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331})
+    default Windows.Graphics.Holographic.IHolographicQuadLayer
+    requires Windows.Foundation.IClosable
+    requires Windows.Graphics.Holographic.IHolographicQuadLayer
+    factory Windows.Graphics.Holographic.IHolographicQuadLayerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerFactory shape=79 reverse=31
+            in struct type=Windows.Foundation.Size name=size
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerFactory shape=151 reverse=52
+            in struct type=Windows.Foundation.Size name=size
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
+    property pixel_format
+        get get_PixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayer shape=4 reverse=22
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayer shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters python_type
+    py HolographicQuadLayerUpdateParameters
+    signature rc(Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters;{2b0ea3b0-798d-5bca-55c2-2c0c762ebb08})
+    default Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters
+    requires Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters
+    requires Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2
+    property can_acquire_with_hardware_protection
+        get get_CanAcquireWithHardwareProtection slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2 shape=4 reverse=22
+            out boolean return
+    method acquire_buffer_to_update_content
+        method AcquireBufferToUpdateContent slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=4 reverse=22
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    method acquire_buffer_to_update_content_with_hardware_protection
+        method AcquireBufferToUpdateContentWithHardwareProtection slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2 shape=4 reverse=43
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    method update_content_protection_enabled
+        method UpdateContentProtectionEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=4 reverse=62
+            in boolean name=value
+    method update_extents
+        method UpdateExtents slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=10
+            in struct type=Windows.Foundation.Numerics.Vector2 name=value
+    method update_location_with_display_relative_mode
+        method UpdateLocationWithDisplayRelativeMode slot=11 inputs=2 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=77
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
+    method update_location_with_stationary_mode
+        method UpdateLocationWithStationaryMode slot=10 inputs=3 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=132
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
+    method update_viewport
+        method UpdateViewport slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters shape=8
+            in struct type=Windows.Foundation.Rect name=value
+
+enum Windows.Graphics.Holographic.HolographicReprojectionMode python_type
+    py HolographicReprojectionMode
+    signature enum(Windows.Graphics.Holographic.HolographicReprojectionMode;i4)
+
+class Windows.Graphics.Holographic.HolographicSpace python_type
+    py HolographicSpace
+    signature rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7})
+    default Windows.Graphics.Holographic.IHolographicSpace
+    requires Windows.Graphics.Holographic.IHolographicSpace
+    requires Windows.Graphics.Holographic.IHolographicSpace2
+    requires Windows.Graphics.Holographic.IHolographicSpace3
+    factory Windows.Graphics.Holographic.IHolographicSpaceStatics2
+    factory Windows.Graphics.Holographic.IHolographicSpaceStatics
+    factory Windows.Graphics.Holographic.IHolographicSpaceStatics3
+    property primary_adapter_id
+        get get_PrimaryAdapterId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=4 reverse=22
+            out struct type=Windows.Graphics.Holographic.HolographicAdapterId return
+    property user_presence
+        get get_UserPresence slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Holographic.HolographicSpaceUserPresence return
+    property is_available static
+        get get_IsAvailable slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=4 reverse=43 static
+            out boolean return
+    property is_supported static
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=4 reverse=22 static
+            out boolean return
+    property is_configured static
+        get get_IsConfigured slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics3 shape=4 reverse=22 static
+            out boolean return
+    event camera_added
+        add add_CameraAdded slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs> name=handler
+            out event_token return
+        remove remove_CameraAdded slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=26 reverse=110
+            in event_token name=cookie
+    event camera_removed
+        add add_CameraRemoved slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_CameraRemoved slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=26 reverse=156
+            in event_token name=cookie
+    event user_presence_changed
+        add add_UserPresenceChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,System.Object> name=handler
+            out event_token return
+        remove remove_UserPresenceChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=26 reverse=82
+            in event_token name=token
+    event is_available_changed static
+        add add_IsAvailableChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=51 reverse=65 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_IsAvailableChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=26 reverse=110 static
+            in event_token name=token
+    method create_for_core_window static
+        method CreateForCoreWindow slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics shape=51 reverse=24 static
+            in class type=Windows.UI.Core.CoreWindow name=window
+            out class type=Windows.Graphics.Holographic.HolographicSpace return
+    method create_frame_presentation_monitor deprecated
+        method CreateFramePresentationMonitor slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=51 reverse=144 deprecated
+            in uint32 name=maxQueuedReports
+            out class type=Windows.Graphics.Holographic.HolographicFramePresentationMonitor return
+    method create_frame_scanout_monitor
+        method CreateFrameScanoutMonitor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace3 shape=51 reverse=24
+            in uint32 name=maxQueuedReports
+            out class type=Windows.Graphics.Holographic.HolographicFrameScanoutMonitor return
+    method create_next_frame
+        method CreateNextFrame slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=4 reverse=162
+            out class type=Windows.Graphics.Holographic.HolographicFrame return
+    method set_direct3d11_device
+        method SetDirect3D11Device slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=4 reverse=43
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=value
+    method wait_for_next_frame_ready
+        method WaitForNextFrameReady slot=9 inputs=0 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=0 reverse=93
+    method wait_for_next_frame_ready_with_head_start
+        method WaitForNextFrameReadyWithHeadStart slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=26 reverse=134
+            in timespan name=requestedHeadStartDuration
+
+class Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs python_type
+    py HolographicSpaceCameraAddedEventArgs
+    signature rc(Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs;{58f1da35-bbb3-3c8f-993d-6c80e7feb99f})
+    default Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs
+    requires Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs
+    property camera
+        get get_Camera slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicCamera return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs python_type
+    py HolographicSpaceCameraRemovedEventArgs
+    signature rc(Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs;{805444a8-f2ae-322e-8da9-836a0a95a4c1})
+    default Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs
+    requires Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs
+    property camera
+        get get_Camera slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Holographic.HolographicCamera return
+
+enum Windows.Graphics.Holographic.HolographicSpaceUserPresence python_type
+    py HolographicSpaceUserPresence
+    signature enum(Windows.Graphics.Holographic.HolographicSpaceUserPresence;i4)
+
+struct Windows.Graphics.Holographic.HolographicStereoTransform python_type
+    py HolographicStereoTransform
+    signature struct(Windows.Graphics.Holographic.HolographicStereoTransform;struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4);struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4))
+    field left Left struct type=Windows.Foundation.Numerics.Matrix4x4
+    field right Right struct type=Windows.Foundation.Numerics.Matrix4x4
+
+class Windows.Graphics.Holographic.HolographicViewConfiguration python_type
+    py HolographicViewConfiguration
+    signature rc(Windows.Graphics.Holographic.HolographicViewConfiguration;{5c1de6e6-67e9-5004-b02c-67a3a122b576})
+    default Windows.Graphics.Holographic.IHolographicViewConfiguration
+    requires Windows.Graphics.Holographic.IHolographicViewConfiguration
+    requires Windows.Graphics.Holographic.IHolographicViewConfiguration2
+    property pixel_format
+        get get_PixelFormat slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=121
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+        put put_PixelFormat slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=141
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+    property is_enabled
+        get get_IsEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=202
+            out boolean return
+        put put_IsEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=210
+            in boolean name=value
+    property display
+        get get_Display slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=194
+            out class type=Windows.Graphics.Holographic.HolographicDisplay return
+    property is_stereo
+        get get_IsStereo slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=162
+            out boolean return
+    property kind
+        get get_Kind slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=186
+            out enum32 type=Windows.Graphics.Holographic.HolographicViewConfigurationKind return
+    property native_render_target_size
+        get get_NativeRenderTargetSize slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=22
+            out struct type=Windows.Foundation.Size return
+    property refresh_rate
+        get get_RefreshRate slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=173
+            out double return
+    property render_target_size
+        get get_RenderTargetSize slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    property supported_pixel_formats
+        get get_SupportedPixelFormats slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> return
+    property supported_depth_reprojection_methods
+        get get_SupportedDepthReprojectionMethods slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> return
+    method request_render_target_size
+        method RequestRenderTargetSize slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicViewConfiguration shape=79
+            in struct type=Windows.Foundation.Size name=size
+            out struct type=Windows.Foundation.Size return
+
+enum Windows.Graphics.Holographic.HolographicViewConfigurationKind python_type
+    py HolographicViewConfigurationKind
+    signature enum(Windows.Graphics.Holographic.HolographicViewConfigurationKind;i4)
+
+interface Windows.Graphics.Holographic.IHolographicCamera
+    guid e4e98445-9bed-4980-9ba0-e87680d1cb74
+
+interface Windows.Graphics.Holographic.IHolographicCamera2
+    guid b55b9f1a-ba8c-4f84-ad79-2e7e1e2450f3
+
+interface Windows.Graphics.Holographic.IHolographicCamera3
+    guid 45aa4fb3-7b59-524e-4a3f-4a6ad6650477
+
+interface Windows.Graphics.Holographic.IHolographicCamera4
+    guid 9a2531d6-4723-4f39-a9a5-9d05181d9b44
+
+interface Windows.Graphics.Holographic.IHolographicCamera5
+    guid 229706f2-628d-4ef5-9c08-a63fdd7787c6
+
+interface Windows.Graphics.Holographic.IHolographicCamera6
+    guid 0209194f-632d-5154-ab52-0b5d15b12505
+
+interface Windows.Graphics.Holographic.IHolographicCameraPose
+    guid 0d7d7e30-12de-45bd-912b-c7f6561599d1
+
+interface Windows.Graphics.Holographic.IHolographicCameraPose2
+    guid 232be073-5d2d-4560-814e-2697c4fce16b
+
+interface Windows.Graphics.Holographic.IHolographicCameraRenderingParameters
+    guid 8eac2ed1-5bf4-4e16-8236-ae0800c11d0d
+
+interface Windows.Graphics.Holographic.IHolographicCameraRenderingParameters2
+    guid 261270e3-b696-4634-94d6-be0681643599
+
+interface Windows.Graphics.Holographic.IHolographicCameraRenderingParameters3
+    guid b1aa513f-136d-4b06-b9d4-e4b914cd0683
+
+interface Windows.Graphics.Holographic.IHolographicCameraRenderingParameters4
+    guid 0878fa4c-e163-57dc-82b7-c406ab3e0537
+
+interface Windows.Graphics.Holographic.IHolographicCameraViewportParameters
+    guid 80cdf3f7-842a-41e1-93ed-5692ab1fbb10
+
+interface Windows.Graphics.Holographic.IHolographicDisplay
+    guid 9acea414-1d9f-4090-a388-90c06f6eae9c
+
+interface Windows.Graphics.Holographic.IHolographicDisplay2
+    guid 75ac3f82-e755-436c-8d96-4d32d131473e
+
+interface Windows.Graphics.Holographic.IHolographicDisplay3
+    guid fc4c6ac6-6480-5008-b29e-157d77c843f7
+
+interface Windows.Graphics.Holographic.IHolographicDisplayStatics
+    guid cb374983-e7b0-4841-8355-3ae5b536e9a4
+
+interface Windows.Graphics.Holographic.IHolographicFrame
+    guid c6988eb6-a8b9-3054-a6eb-d624b6536375
+
+interface Windows.Graphics.Holographic.IHolographicFrame2
+    guid 283f37bf-3bf2-5e91-6633-870574e6f217
+
+interface Windows.Graphics.Holographic.IHolographicFrame3
+    guid e5e964c9-8a27-55d3-9f98-94530d369052
+
+interface Windows.Graphics.Holographic.IHolographicFramePrediction
+    guid 520f4de1-5c0a-4e79-a81e-6abe02bb2739
+
+interface Windows.Graphics.Holographic.IHolographicFramePresentationMonitor
+    guid ca87256c-6fae-428e-bb83-25dfee51136b
+
+interface Windows.Graphics.Holographic.IHolographicFramePresentationReport
+    guid 80baf614-f2f4-4c8a-8de3-065c78f6d5de
+
+interface Windows.Graphics.Holographic.IHolographicFrameRenderingReport
+    guid 05f32de4-e384-51b3-b934-f0d3a0f78606
+
+interface Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor
+    guid 7e83efa9-843c-5401-8095-9bc1b8b08638
+
+interface Windows.Graphics.Holographic.IHolographicFrameScanoutReport
+    guid 0ebbe606-03a0-5ca0-b46e-bba068d7233f
+
+interface Windows.Graphics.Holographic.IHolographicQuadLayer
+    guid 903460c9-c9d9-5d5c-41ac-a2d5ab0fd331
+
+interface Windows.Graphics.Holographic.IHolographicQuadLayerFactory
+    guid a67538f3-5a14-5a10-489a-455065b37b76
+
+interface Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters
+    guid 2b0ea3b0-798d-5bca-55c2-2c0c762ebb08
+
+interface Windows.Graphics.Holographic.IHolographicQuadLayerUpdateParameters2
+    guid 4f33d32d-82c1-46c1-8980-3cb70d98182b
+
+interface Windows.Graphics.Holographic.IHolographicSpace
+    guid 4380dba6-5e78-434f-807c-3433d1efe8b7
+
+interface Windows.Graphics.Holographic.IHolographicSpace2
+    guid 4f81a9a8-b7ff-4883-9827-7d677287ea70
+
+interface Windows.Graphics.Holographic.IHolographicSpace3
+    guid df1733d1-f224-587e-8d71-1e8fc8f07b1f
+
+interface Windows.Graphics.Holographic.IHolographicSpaceCameraAddedEventArgs
+    guid 58f1da35-bbb3-3c8f-993d-6c80e7feb99f
+
+interface Windows.Graphics.Holographic.IHolographicSpaceCameraRemovedEventArgs
+    guid 805444a8-f2ae-322e-8da9-836a0a95a4c1
+
+interface Windows.Graphics.Holographic.IHolographicSpaceStatics
+    guid 364e6064-c8f2-3ba1-8391-66b8489e67fd
+
+interface Windows.Graphics.Holographic.IHolographicSpaceStatics2
+    guid 0e777088-75fc-48af-8758-0652f6f07c59
+
+interface Windows.Graphics.Holographic.IHolographicSpaceStatics3
+    guid 3b00de3d-b1a3-4dfe-8e79-fec5909e6df8
+
+interface Windows.Graphics.Holographic.IHolographicViewConfiguration
+    guid 5c1de6e6-67e9-5004-b02c-67a3a122b576
+
+interface Windows.Graphics.Holographic.IHolographicViewConfiguration2
+    guid e241756e-e0d0-5019-9af5-1b165bc2f54e
+
+interface Windows.Foundation.IReference<Windows.Graphics.Holographic.HolographicStereoTransform> concrete
+    guid 6e67ce78-cc67-52c0-b635-991db0bff5ca
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Graphics.Holographic.HolographicStereoTransform;struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4);struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4)))
+    argument Windows.Graphics.Holographic.HolographicStereoTransform
+
+interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingFrustum> concrete
+    guid f434face-0c36-5749-a8a0-0bb6ce78a614
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Perception.Spatial.SpatialBoundingFrustum;struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4)))
+    argument Windows.Perception.Spatial.SpatialBoundingFrustum
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete
+    guid a8081e2b-440d-53fc-a310-cf8a07ea0935
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f}))
+    argument Windows.Graphics.Holographic.HolographicFrameScanoutReport
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> concrete
+    guid da24dfcc-4c54-5193-921d-c685b57de559
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331}))
+    argument Windows.Graphics.Holographic.HolographicQuadLayer
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete
+    guid 1edda1c2-0f6e-516c-80b8-7687dcd1280e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> concrete
+    guid 01d6c0ae-ada5-50b0-8562-41fb1205bb4a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicCamera;{e4e98445-9bed-4980-9ba0-e87680d1cb74}))
+    argument Windows.Graphics.Holographic.HolographicCamera
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> concrete
+    guid 17c5dfb1-6e87-5a17-a791-ac07f8ee9292
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicCameraPose;{0d7d7e30-12de-45bd-912b-c7f6561599d1}))
+    argument Windows.Graphics.Holographic.HolographicCameraPose
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> concrete
+    guid 7ac6dc9e-ea0b-594a-b0ed-2d1764ec58e9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4))
+    argument Windows.Graphics.Holographic.HolographicDepthReprojectionMethod
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> concrete
+    guid 014f37ba-abc1-5d85-855e-ec053183a635
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicFramePresentationReport;{80baf614-f2f4-4c8a-8de3-065c78f6d5de}))
+    argument Windows.Graphics.Holographic.HolographicFramePresentationReport
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,System.Object> concrete
+    guid 67aae2f2-42d8-5503-9131-deeb45a6ca03
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});cinterface(IInspectable))
+    argument Windows.Graphics.Holographic.HolographicSpace
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs> concrete
+    guid 71d80b7c-1d27-5102-83d1-4f0efc7c9d6f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});rc(Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs;{58f1da35-bbb3-3c8f-993d-6c80e7feb99f}))
+    argument Windows.Graphics.Holographic.HolographicSpace
+    argument Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs> concrete
+    guid db68cfc3-0874-502a-a3b9-2b1fe86c67be
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});rc(Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs;{805444a8-f2ae-322e-8da9-836a0a95a4c1}))
+    argument Windows.Graphics.Holographic.HolographicSpace
+    argument Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+struct Windows.Foundation.Numerics.Matrix4x4 external
+    py winrt.windows.foundation.numerics.Matrix4x4
+
+struct Windows.Foundation.Numerics.Quaternion external
+    py winrt.windows.foundation.numerics.Quaternion
+
+struct Windows.Foundation.Numerics.Vector2 external
+    py winrt.windows.foundation.numerics.Vector2
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat external
+    py winrt.windows.graphics.directx.DirectXPixelFormat
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DDevice
+    guid a37624ab-8d5f-4650-9d3e-9eae3d9bc670
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+class Windows.Perception.PerceptionTimestamp external
+    py winrt.windows.perception.PerceptionTimestamp
+
+struct Windows.Perception.Spatial.SpatialBoundingFrustum external
+    py winrt.windows.perception.spatial.SpatialBoundingFrustum
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem external
+    py winrt.windows.perception.spatial.SpatialCoordinateSystem
+
+class Windows.Perception.Spatial.SpatialLocator external
+    py winrt.windows.perception.spatial.SpatialLocator
+
+class Windows.UI.Core.CoreWindow external
+    py winrt.windows.ui.core.CoreWindow

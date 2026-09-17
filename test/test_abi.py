@@ -11,6 +11,10 @@ that is the copy ``winrt.doctor``, the packaging tooling and
 the one it was compiled against would send all three the wrong way.
 """
 
+from test._util import skip_without_projection
+
+skip_without_projection()
+
 import sys
 import unittest
 from collections.abc import Iterator

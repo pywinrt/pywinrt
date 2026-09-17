@@ -1,0 +1,680 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Geolocation
+
+enum Windows.Devices.Geolocation.AltitudeReferenceSystem python_type
+    py AltitudeReferenceSystem
+    signature enum(Windows.Devices.Geolocation.AltitudeReferenceSystem;i4)
+
+struct Windows.Devices.Geolocation.BasicGeoposition python_type
+    py BasicGeoposition
+    signature struct(Windows.Devices.Geolocation.BasicGeoposition;f8;f8;f8)
+    field latitude Latitude double
+    field longitude Longitude double
+    field altitude Altitude double
+
+class Windows.Devices.Geolocation.CivicAddress python_type
+    py CivicAddress
+    signature rc(Windows.Devices.Geolocation.CivicAddress;{a8567a1a-64f4-4d48-bcea-f6b008eca34c})
+    default Windows.Devices.Geolocation.ICivicAddress
+    requires Windows.Devices.Geolocation.ICivicAddress
+    property city
+        get get_City slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.ICivicAddress shape=4 reverse=62
+            out string return
+    property country
+        get get_Country slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.ICivicAddress shape=4 reverse=22
+            out string return
+    property postal_code
+        get get_PostalCode slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.ICivicAddress shape=4 reverse=99
+            out string return
+    property state
+        get get_State slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.ICivicAddress shape=4 reverse=43
+            out string return
+    property timestamp
+        get get_Timestamp slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.ICivicAddress shape=4 reverse=121
+            out datetime return
+
+class Windows.Devices.Geolocation.GeoboundingBox python_type
+    py GeoboundingBox
+    signature rc(Windows.Devices.Geolocation.GeoboundingBox;{0896c80b-274f-43da-9a06-cbfcdaeb4ec2})
+    default Windows.Devices.Geolocation.IGeoboundingBox
+    requires Windows.Devices.Geolocation.IGeoboundingBox
+    requires Windows.Devices.Geolocation.IGeoshape
+    factory Windows.Devices.Geolocation.IGeoboundingBoxStatics
+    factory Windows.Devices.Geolocation.IGeoboundingBoxFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxFactory shape=158
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=northwestCorner
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=southeastCorner
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxFactory shape=225
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=northwestCorner
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=southeastCorner
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxFactory shape=259
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=northwestCorner
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=southeastCorner
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            in uint32 name=spatialReferenceId
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+    property center
+        get get_Center slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBox shape=4 reverse=62
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+    property max_altitude
+        get get_MaxAltitude slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBox shape=4 reverse=121
+            out double return
+    property min_altitude
+        get get_MinAltitude slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBox shape=4 reverse=99
+            out double return
+    property northwest_corner
+        get get_NorthwestCorner slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBox shape=4 reverse=22
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+    property southeast_corner
+        get get_SoutheastCorner slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBox shape=4 reverse=43
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+    property altitude_reference_system
+        get get_AltitudeReferenceSystem slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=62
+            out enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem return
+    property geoshape_type
+        get get_GeoshapeType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.GeoshapeType return
+    property spatial_reference_id
+        get get_SpatialReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=43
+            out uint32 return
+    method try_compute static
+        method TryCompute slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxStatics shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+        method TryCompute slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxStatics shape=117 reverse=45 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeRefSystem
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+        method TryCompute slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxStatics shape=195 reverse=68 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeRefSystem
+            in uint32 name=spatialReferenceId
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+
+class Windows.Devices.Geolocation.Geocircle python_type
+    py Geocircle
+    signature rc(Windows.Devices.Geolocation.Geocircle;{39e45843-a7f9-4e63-92a7-ba0c28d124b1})
+    default Windows.Devices.Geolocation.IGeocircle
+    requires Windows.Devices.Geolocation.IGeocircle
+    requires Windows.Devices.Geolocation.IGeoshape
+    factory Windows.Devices.Geolocation.IGeocircleFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeocircleFactory shape=156
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            in double name=radius
+            out class type=Windows.Devices.Geolocation.Geocircle return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.IGeocircleFactory shape=222
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            in double name=radius
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            out class type=Windows.Devices.Geolocation.Geocircle return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Devices.Geolocation.IGeocircleFactory shape=258
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            in double name=radius
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            in uint32 name=spatialReferenceId
+            out class type=Windows.Devices.Geolocation.Geocircle return
+    property center
+        get get_Center slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocircle shape=4 reverse=22
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+    property radius
+        get get_Radius slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocircle shape=4 reverse=43
+            out double return
+    property altitude_reference_system
+        get get_AltitudeReferenceSystem slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=62
+            out enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem return
+    property geoshape_type
+        get get_GeoshapeType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.GeoshapeType return
+    property spatial_reference_id
+        get get_SpatialReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=43
+            out uint32 return
+
+class Windows.Devices.Geolocation.Geocoordinate python_type
+    py Geocoordinate
+    signature rc(Windows.Devices.Geolocation.Geocoordinate;{ee21a3aa-976a-4c70-803d-083ea55bcbc4})
+    default Windows.Devices.Geolocation.IGeocoordinate
+    requires Windows.Devices.Geolocation.IGeocoordinate
+    requires Windows.Devices.Geolocation.IGeocoordinateWithPositionData
+    requires Windows.Devices.Geolocation.IGeocoordinateWithPoint
+    requires Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp
+    requires Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
+    property accuracy
+        get get_Accuracy slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=99
+            out double return
+    property altitude
+        get get_Altitude slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=62 deprecated
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property altitude_accuracy
+        get get_AltitudeAccuracy slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property heading
+        get get_Heading slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property latitude
+        get get_Latitude slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=22 deprecated
+            out double return
+    property longitude
+        get get_Longitude slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=43 deprecated
+            out double return
+    property speed
+        get get_Speed slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property timestamp
+        get get_Timestamp slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinate shape=4 reverse=173
+            out datetime return
+    property point
+        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateWithPoint shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property position_source
+        get get_PositionSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateWithPositionData shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.PositionSource return
+    property satellite_data
+        get get_SatelliteData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateWithPositionData shape=4 reverse=43
+            out class type=Windows.Devices.Geolocation.GeocoordinateSatelliteData return
+    property position_source_timestamp
+        get get_PositionSourceTimestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property is_remote_source
+        get get_IsRemoteSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Geolocation.GeocoordinateSatelliteData python_type
+    py GeocoordinateSatelliteData
+    signature rc(Windows.Devices.Geolocation.GeocoordinateSatelliteData;{c32a74d9-2608-474c-912c-06dd490f4af7})
+    default Windows.Devices.Geolocation.IGeocoordinateSatelliteData
+    requires Windows.Devices.Geolocation.IGeocoordinateSatelliteData
+    requires Windows.Devices.Geolocation.IGeocoordinateSatelliteData2
+    property horizontal_dilution_of_precision
+        get get_HorizontalDilutionOfPrecision slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateSatelliteData shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property position_dilution_of_precision
+        get get_PositionDilutionOfPrecision slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateSatelliteData shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property vertical_dilution_of_precision
+        get get_VerticalDilutionOfPrecision slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateSatelliteData shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property geometric_dilution_of_precision
+        get get_GeometricDilutionOfPrecision slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateSatelliteData2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property time_dilution_of_precision
+        get get_TimeDilutionOfPrecision slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeocoordinateSatelliteData2 shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+
+enum Windows.Devices.Geolocation.GeolocationAccessStatus python_type
+    py GeolocationAccessStatus
+    signature enum(Windows.Devices.Geolocation.GeolocationAccessStatus;i4)
+
+class Windows.Devices.Geolocation.Geolocator activatable python_type
+    py Geolocator
+    signature rc(Windows.Devices.Geolocation.Geolocator;{a9c3bf62-4524-4989-8aa9-de019d2e551f})
+    default Windows.Devices.Geolocation.IGeolocator
+    requires Windows.Devices.Geolocation.IGeolocator
+    requires Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy
+    requires Windows.Devices.Geolocation.IGeolocator2
+    factory Windows.Devices.Geolocation.IGeolocatorStatics
+    factory Windows.Devices.Geolocation.IGeolocatorStatics2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property report_interval
+        get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=121
+            out uint32 return
+        put put_ReportInterval slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=141
+            in uint32 name=value
+    property movement_threshold
+        get get_MovementThreshold slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=62
+            out double return
+        put put_MovementThreshold slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator shape=2
+            in double name=value
+    property desired_accuracy
+        get get_DesiredAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.PositionAccuracy return
+        put put_DesiredAccuracy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=43
+            in enum32 type=Windows.Devices.Geolocation.PositionAccuracy name=value
+    property location_status
+        get get_LocationStatus slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=162
+            out enum32 type=Windows.Devices.Geolocation.PositionStatus return
+    property desired_accuracy_in_meters
+        get get_DesiredAccuracyInMeters slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_DesiredAccuracyInMeters slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property default_geoposition static
+        get get_DefaultGeoposition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics2 shape=4 reverse=62 static
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Geolocation.BasicGeoposition> return
+        put put_DefaultGeoposition slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocatorStatics2 shape=4 reverse=43 static
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Geolocation.BasicGeoposition> name=value
+    property is_default_geoposition_recommended static
+        get get_IsDefaultGeopositionRecommended slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics2 shape=4 reverse=22 static
+            out boolean return
+    event position_changed
+        add add_PositionChanged slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.PositionChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PositionChanged slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator shape=26 reverse=397
+            in event_token name=token
+    event status_changed
+        add add_StatusChanged slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.StatusChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StatusChanged slot=18 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator shape=26 reverse=398
+            in event_token name=token
+    method allow_fallback_to_consentless_positions
+        method AllowFallbackToConsentlessPositions slot=6 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.IGeolocator2 shape=0 reverse=16
+    method get_geoposition_async
+        method GetGeopositionAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geoposition> return
+        method GetGeopositionAsync slot=14 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocator shape=170
+            in timespan name=maximumAge
+            in timespan name=timeout
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geoposition> return
+    method get_geoposition_history_async static deprecated
+        method GetGeopositionHistoryAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics shape=89 static deprecated
+            in datetime name=startTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition>> return
+        method GetGeopositionHistoryAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics shape=170 static deprecated
+            in datetime name=startTime
+            in timespan name=duration
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition>> return
+    method request_access_async static
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.GeolocationAccessStatus> return
+
+class Windows.Devices.Geolocation.Geopath python_type
+    py Geopath
+    signature rc(Windows.Devices.Geolocation.Geopath;{e53fd7b9-2da4-4714-a652-de8593289898})
+    default Windows.Devices.Geolocation.IGeopath
+    requires Windows.Devices.Geolocation.IGeopath
+    requires Windows.Devices.Geolocation.IGeoshape
+    factory Windows.Devices.Geolocation.IGeopathFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeopathFactory shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            out class type=Windows.Devices.Geolocation.Geopath return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeopathFactory shape=117 reverse=45
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            out class type=Windows.Devices.Geolocation.Geopath return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.IGeopathFactory shape=195 reverse=68
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> name=positions
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            in uint32 name=spatialReferenceId
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property positions
+        get get_Positions slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeopath shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.BasicGeoposition> return
+    property altitude_reference_system
+        get get_AltitudeReferenceSystem slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=62
+            out enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem return
+    property geoshape_type
+        get get_GeoshapeType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.GeoshapeType return
+    property spatial_reference_id
+        get get_SpatialReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=43
+            out uint32 return
+
+class Windows.Devices.Geolocation.Geopoint python_type
+    py Geopoint
+    signature rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef})
+    default Windows.Devices.Geolocation.IGeopoint
+    requires Windows.Devices.Geolocation.IGeopoint
+    requires Windows.Devices.Geolocation.IGeoshape
+    factory Windows.Devices.Geolocation.IGeopointFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeopointFactory shape=82
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            out class type=Windows.Devices.Geolocation.Geopoint return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeopointFactory shape=157
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            out class type=Windows.Devices.Geolocation.Geopoint return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.IGeopointFactory shape=224
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=position
+            in enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem name=altitudeReferenceSystem
+            in uint32 name=spatialReferenceId
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeopoint shape=4 reverse=22
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+    property altitude_reference_system
+        get get_AltitudeReferenceSystem slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=62
+            out enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem return
+    property geoshape_type
+        get get_GeoshapeType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.GeoshapeType return
+    property spatial_reference_id
+        get get_SpatialReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=43
+            out uint32 return
+
+class Windows.Devices.Geolocation.Geoposition python_type
+    py Geoposition
+    signature rc(Windows.Devices.Geolocation.Geoposition;{c18d0454-7d41-4ff7-a957-9dffb4ef7f5b})
+    default Windows.Devices.Geolocation.IGeoposition
+    requires Windows.Devices.Geolocation.IGeoposition
+    requires Windows.Devices.Geolocation.IGeoposition2
+    property civic_address
+        get get_CivicAddress slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoposition shape=4 reverse=43
+            out class type=Windows.Devices.Geolocation.CivicAddress return
+    property coordinate
+        get get_Coordinate slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoposition shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geocoordinate return
+    property venue_data
+        get get_VenueData slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoposition2 shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.VenueData return
+
+enum Windows.Devices.Geolocation.GeoshapeType python_type
+    py GeoshapeType
+    signature enum(Windows.Devices.Geolocation.GeoshapeType;i4)
+
+class Windows.Devices.Geolocation.Geovisit python_type
+    py Geovisit
+    signature rc(Windows.Devices.Geolocation.Geovisit;{b1877a76-9ef6-41ab-a0dd-793ece76e2de})
+    default Windows.Devices.Geolocation.IGeovisit
+    requires Windows.Devices.Geolocation.IGeovisit
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisit shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geoposition return
+    property state_change
+        get get_StateChange slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisit shape=4 reverse=43
+            out enum32 type=Windows.Devices.Geolocation.VisitStateChange return
+    property timestamp
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisit shape=4 reverse=62
+            out datetime return
+
+class Windows.Devices.Geolocation.GeovisitMonitor activatable python_type
+    py GeovisitMonitor
+    signature rc(Windows.Devices.Geolocation.GeovisitMonitor;{80118aaf-5944-4591-83c1-396647f54f2c})
+    default Windows.Devices.Geolocation.IGeovisitMonitor
+    requires Windows.Devices.Geolocation.IGeovisitMonitor
+    factory Windows.Devices.Geolocation.IGeovisitMonitorStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property monitoring_scope
+        get get_MonitoringScope slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisitMonitor shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.VisitMonitoringScope return
+    event visit_state_changed
+        add add_VisitStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisitMonitor shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.GeovisitMonitor,Windows.Devices.Geolocation.GeovisitStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_VisitStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeovisitMonitor shape=26 reverse=134
+            in event_token name=token
+    method get_last_report_async static
+        method GetLastReportAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisitMonitorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geovisit> return
+    method start
+        method Start slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.IGeovisitMonitor shape=4 reverse=43
+            in enum32 type=Windows.Devices.Geolocation.VisitMonitoringScope name=value
+    method stop
+        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.IGeovisitMonitor shape=0 reverse=55
+
+class Windows.Devices.Geolocation.GeovisitStateChangedEventArgs python_type
+    py GeovisitStateChangedEventArgs
+    signature rc(Windows.Devices.Geolocation.GeovisitStateChangedEventArgs;{ceb4d1ff-8b53-4968-beed-4cecd029ce15})
+    default Windows.Devices.Geolocation.IGeovisitStateChangedEventArgs
+    requires Windows.Devices.Geolocation.IGeovisitStateChangedEventArgs
+    property visit
+        get get_Visit slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisitStateChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geovisit return
+
+class Windows.Devices.Geolocation.GeovisitTriggerDetails python_type
+    py GeovisitTriggerDetails
+    signature rc(Windows.Devices.Geolocation.GeovisitTriggerDetails;{ea770d9e-d1c9-454b-99b7-b2f8cdd2482f})
+    default Windows.Devices.Geolocation.IGeovisitTriggerDetails
+    requires Windows.Devices.Geolocation.IGeovisitTriggerDetails
+    method read_reports
+        method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeovisitTriggerDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geovisit> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.GeolocationAccessStatus> concrete
+    guid de2b24d0-b726-57b1-a7c5-e5a13932b7de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Geolocation.GeolocationAccessStatus;i4))
+    argument Windows.Devices.Geolocation.GeolocationAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geoposition> concrete
+    guid ee73ecf0-099d-57e5-8407-5b32e5af1cc4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Geolocation.Geoposition;{c18d0454-7d41-4ff7-a957-9dffb4ef7f5b}))
+    argument Windows.Devices.Geolocation.Geoposition
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geovisit> concrete
+    guid 8d1c950a-efb9-5440-a6a7-820a839be07b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Geolocation.Geovisit;{b1877a76-9ef6-41ab-a0dd-793ece76e2de}))
+    argument Windows.Devices.Geolocation.Geovisit
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition>> concrete
+    guid 9454b533-efb4-5385-8d3a-437fabc32d91
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geoposition;{c18d0454-7d41-4ff7-a957-9dffb4ef7f5b})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition>
+
+interface Windows.Devices.Geolocation.ICivicAddress
+    guid a8567a1a-64f4-4d48-bcea-f6b008eca34c
+
+interface Windows.Devices.Geolocation.IGeoboundingBox
+    guid 0896c80b-274f-43da-9a06-cbfcdaeb4ec2
+
+interface Windows.Devices.Geolocation.IGeoboundingBoxFactory
+    guid 4dfba589-0411-4abc-b3b5-5bbccb57d98c
+
+interface Windows.Devices.Geolocation.IGeoboundingBoxStatics
+    guid 67b80708-e61a-4cd0-841b-93233792b5ca
+
+interface Windows.Devices.Geolocation.IGeocircle
+    guid 39e45843-a7f9-4e63-92a7-ba0c28d124b1
+
+interface Windows.Devices.Geolocation.IGeocircleFactory
+    guid afd6531f-72b1-4f7d-87cc-4ed4c9849c05
+
+interface Windows.Devices.Geolocation.IGeocoordinate
+    guid ee21a3aa-976a-4c70-803d-083ea55bcbc4
+
+interface Windows.Devices.Geolocation.IGeocoordinateSatelliteData
+    guid c32a74d9-2608-474c-912c-06dd490f4af7
+
+interface Windows.Devices.Geolocation.IGeocoordinateSatelliteData2
+    guid 761c8cfd-a19d-5a51-80f5-71676115483e
+
+interface Windows.Devices.Geolocation.IGeocoordinateWithPoint
+    guid feea0525-d22c-4d46-b527-0b96066fc7db
+
+interface Windows.Devices.Geolocation.IGeocoordinateWithPositionData
+    guid 95e634be-dbd6-40ac-b8f2-a65c0340d9a6
+
+interface Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp
+    guid 8543fc02-c9f1-4610-afe0-8bc3a6a87036
+
+interface Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
+    guid 397cebd7-ee38-5f3b-8900-c4a7bc9cf953
+
+interface Windows.Devices.Geolocation.IGeolocator
+    guid a9c3bf62-4524-4989-8aa9-de019d2e551f
+
+interface Windows.Devices.Geolocation.IGeolocator2
+    guid d1b42e6d-8891-43b4-ad36-27c6fe9a97b1
+
+interface Windows.Devices.Geolocation.IGeolocatorStatics
+    guid 9a8e7571-2df5-4591-9f87-eb5fd894e9b7
+
+interface Windows.Devices.Geolocation.IGeolocatorStatics2
+    guid 993011a2-fa1c-4631-a71d-0dbeb1250d9c
+
+interface Windows.Devices.Geolocation.IGeolocatorWithScalarAccuracy
+    guid 96f5d3c1-b80f-460a-994d-a96c47a51aa4
+
+interface Windows.Devices.Geolocation.IGeopath
+    guid e53fd7b9-2da4-4714-a652-de8593289898
+
+interface Windows.Devices.Geolocation.IGeopathFactory
+    guid 27bea9c8-c7e7-4359-9b9b-fca3e05ef593
+
+interface Windows.Devices.Geolocation.IGeopoint
+    guid 6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef
+
+interface Windows.Devices.Geolocation.IGeopointFactory
+    guid db6b8d33-76bd-4e30-8af7-a844dc37b7a0
+
+interface Windows.Devices.Geolocation.IGeoposition
+    guid c18d0454-7d41-4ff7-a957-9dffb4ef7f5b
+
+interface Windows.Devices.Geolocation.IGeoposition2
+    guid 7f62f697-8671-4b0d-86f8-474a8496187c
+
+interface Windows.Devices.Geolocation.IGeoshape python_type
+    py _IGeoshape
+    guid c99ca2af-c729-43c1-8fab-d6dec914df7e
+    signature {c99ca2af-c729-43c1-8fab-d6dec914df7e}
+    property altitude_reference_system
+        get get_AltitudeReferenceSystem slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=62
+            out enum32 type=Windows.Devices.Geolocation.AltitudeReferenceSystem return
+    property geoshape_type
+        get get_GeoshapeType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.GeoshapeType return
+    property spatial_reference_id
+        get get_SpatialReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IGeoshape shape=4 reverse=43
+            out uint32 return
+
+interface Windows.Devices.Geolocation.IGeovisit
+    guid b1877a76-9ef6-41ab-a0dd-793ece76e2de
+
+interface Windows.Devices.Geolocation.IGeovisitMonitor
+    guid 80118aaf-5944-4591-83c1-396647f54f2c
+
+interface Windows.Devices.Geolocation.IGeovisitMonitorStatics
+    guid bcf976a7-bbf2-4cdd-95cf-554c82edfb87
+
+interface Windows.Devices.Geolocation.IGeovisitStateChangedEventArgs
+    guid ceb4d1ff-8b53-4968-beed-4cecd029ce15
+
+interface Windows.Devices.Geolocation.IGeovisitTriggerDetails
+    guid ea770d9e-d1c9-454b-99b7-b2f8cdd2482f
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.BasicGeoposition> concrete
+    guid 922399a8-0093-5009-a8d2-f87b0eae75f5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Devices.Geolocation.BasicGeoposition;f8;f8;f8))
+    argument Windows.Devices.Geolocation.BasicGeoposition
+
+interface Windows.Devices.Geolocation.IPositionChangedEventArgs
+    guid 37859ce5-9d1e-46c5-bf3b-6ad8cac1a093
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Devices.Geolocation.BasicGeoposition> concrete
+    guid e4d5dda6-f57c-57cc-b67f-2939a901dabe
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Devices.Geolocation.BasicGeoposition;f8;f8;f8))
+    argument Windows.Devices.Geolocation.BasicGeoposition
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Devices.Geolocation.IStatusChangedEventArgs
+    guid 3453d2da-8c93-4111-a205-9aecfc9be5c0
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.BasicGeoposition> concrete
+    guid 177f5719-e234-59db-99ba-f7fdddf31430
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Devices.Geolocation.BasicGeoposition;f8;f8;f8))
+    argument Windows.Devices.Geolocation.BasicGeoposition
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition> concrete
+    guid d572ccf3-0c60-553f-a624-c71648af8e7a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geoposition;{c18d0454-7d41-4ff7-a957-9dffb4ef7f5b}))
+    argument Windows.Devices.Geolocation.Geoposition
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geovisit> concrete
+    guid 90ad35e9-f1de-5ba7-abbf-04a21976d362
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geovisit;{b1877a76-9ef6-41ab-a0dd-793ece76e2de}))
+    argument Windows.Devices.Geolocation.Geovisit
+
+interface Windows.Devices.Geolocation.IVenueData
+    guid 66f39187-60e3-4b2f-b527-4f53f1c3c677
+
+enum Windows.Devices.Geolocation.PositionAccuracy python_type
+    py PositionAccuracy
+    signature enum(Windows.Devices.Geolocation.PositionAccuracy;i4)
+
+class Windows.Devices.Geolocation.PositionChangedEventArgs python_type
+    py PositionChangedEventArgs
+    signature rc(Windows.Devices.Geolocation.PositionChangedEventArgs;{37859ce5-9d1e-46c5-bf3b-6ad8cac1a093})
+    default Windows.Devices.Geolocation.IPositionChangedEventArgs
+    requires Windows.Devices.Geolocation.IPositionChangedEventArgs
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IPositionChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geoposition return
+
+enum Windows.Devices.Geolocation.PositionSource python_type
+    py PositionSource
+    signature enum(Windows.Devices.Geolocation.PositionSource;i4)
+
+enum Windows.Devices.Geolocation.PositionStatus python_type
+    py PositionStatus
+    signature enum(Windows.Devices.Geolocation.PositionStatus;i4)
+
+class Windows.Devices.Geolocation.StatusChangedEventArgs python_type
+    py StatusChangedEventArgs
+    signature rc(Windows.Devices.Geolocation.StatusChangedEventArgs;{3453d2da-8c93-4111-a205-9aecfc9be5c0})
+    default Windows.Devices.Geolocation.IStatusChangedEventArgs
+    requires Windows.Devices.Geolocation.IStatusChangedEventArgs
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IStatusChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.PositionStatus return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.PositionChangedEventArgs> concrete
+    guid df3c6164-4e7b-5e8e-9a7e-13da059dec1e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Geolocation.Geolocator;{a9c3bf62-4524-4989-8aa9-de019d2e551f});rc(Windows.Devices.Geolocation.PositionChangedEventArgs;{37859ce5-9d1e-46c5-bf3b-6ad8cac1a093}))
+    argument Windows.Devices.Geolocation.Geolocator
+    argument Windows.Devices.Geolocation.PositionChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.StatusChangedEventArgs> concrete
+    guid 97fcf582-de6b-5cd3-9690-e2ecbb66da4d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Geolocation.Geolocator;{a9c3bf62-4524-4989-8aa9-de019d2e551f});rc(Windows.Devices.Geolocation.StatusChangedEventArgs;{3453d2da-8c93-4111-a205-9aecfc9be5c0}))
+    argument Windows.Devices.Geolocation.Geolocator
+    argument Windows.Devices.Geolocation.StatusChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.GeovisitMonitor,Windows.Devices.Geolocation.GeovisitStateChangedEventArgs> concrete
+    guid 76abc5ea-ee4f-5391-9b50-deca5d4311c9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Geolocation.GeovisitMonitor;{80118aaf-5944-4591-83c1-396647f54f2c});rc(Windows.Devices.Geolocation.GeovisitStateChangedEventArgs;{ceb4d1ff-8b53-4968-beed-4cecd029ce15}))
+    argument Windows.Devices.Geolocation.GeovisitMonitor
+    argument Windows.Devices.Geolocation.GeovisitStateChangedEventArgs
+
+class Windows.Devices.Geolocation.VenueData python_type
+    py VenueData
+    signature rc(Windows.Devices.Geolocation.VenueData;{66f39187-60e3-4b2f-b527-4f53f1c3c677})
+    default Windows.Devices.Geolocation.IVenueData
+    requires Windows.Devices.Geolocation.IVenueData
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IVenueData shape=4 reverse=22
+            out string return
+    property level
+        get get_Level slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.IVenueData shape=4 reverse=43
+            out string return
+
+enum Windows.Devices.Geolocation.VisitMonitoringScope python_type
+    py VisitMonitoringScope
+    signature enum(Windows.Devices.Geolocation.VisitMonitoringScope;i4)
+
+enum Windows.Devices.Geolocation.VisitStateChange python_type
+    py VisitStateChange
+    signature enum(Windows.Devices.Geolocation.VisitStateChange;i4)
+
+class System.Double external
+    py winrt.system.Double
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime

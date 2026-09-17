@@ -1,0 +1,487 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Authentication.Web.Core
+
+class Windows.Security.Authentication.Web.Core.FindAllAccountsResult python_type
+    py FindAllAccountsResult
+    signature rc(Windows.Security.Authentication.Web.Core.FindAllAccountsResult;{a5812b5d-b72e-420c-86ab-aac0d7b7261f})
+    default Windows.Security.Authentication.Web.Core.IFindAllAccountsResult
+    requires Windows.Security.Authentication.Web.Core.IFindAllAccountsResult
+    property accounts
+        get get_Accounts slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IFindAllAccountsResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> return
+    property provider_error
+        get get_ProviderError slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IFindAllAccountsResult shape=4 reverse=62
+            out class type=Windows.Security.Authentication.Web.Core.WebProviderError return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IFindAllAccountsResult shape=4 reverse=43
+            out enum32 type=Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus return
+
+enum Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus python_type
+    py FindAllWebAccountsStatus
+    signature enum(Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus;i4)
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> concrete
+    guid 9affb572-58c3-5c6c-9397-2b7704aa35c3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.FindAllAccountsResult;{a5812b5d-b72e-420c-86ab-aac0d7b7261f}))
+    argument Windows.Security.Authentication.Web.Core.FindAllAccountsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> concrete
+    guid 63824a59-b4fa-5e89-ba3c-d44e532a29d8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult;{88fad03c-901d-5ffa-9259-701d3ca08ef2}))
+    argument Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+    guid 0a815852-7c44-5674-b3d2-fa2e4c1e46c9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> concrete
+    guid acd76b54-297f-5a18-9143-20a309e2dfd3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    argument Windows.Security.Credentials.WebAccount
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> concrete
+    guid 88c66009-12f7-58e2-8dbe-6efc620c85ba
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Credentials.WebAccountProvider;{29dcc8c3-7ab9-4a7c-a336-b942f9dbf7c7}))
+    argument Windows.Security.Credentials.WebAccountProvider
+
+interface Windows.Security.Authentication.Web.Core.IFindAllAccountsResult
+    guid a5812b5d-b72e-420c-86ab-aac0d7b7261f
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> concrete
+    guid cb15d439-a910-542a-89ed-7cfe67848a83
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    argument Windows.Security.Credentials.WebAccount
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> concrete
+    guid 199e065c-8195-55da-9c10-8aeaf9ac1062
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Web.Core.WebTokenResponse;{67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a}))
+    argument Windows.Security.Authentication.Web.Core.WebTokenResponse
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> concrete
+    guid e0798d3d-2b4a-589a-ab12-02dccc158afc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    argument Windows.Security.Credentials.WebAccount
+
+interface Windows.Security.Authentication.Web.Core.IWebAccountEventArgs
+    guid 6fb7037d-424e-44ec-977c-ef2415462a5a
+
+interface Windows.Security.Authentication.Web.Core.IWebAccountMonitor
+    guid 7445f5fd-aa9d-4619-8d5d-c138a4ede3e5
+
+interface Windows.Security.Authentication.Web.Core.IWebAccountMonitor2
+    guid a7adc1f8-24b8-4f01-9ae5-24545e71233a
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse
+    guid 7fb013e8-0bd8-542b-b486-8323163a4b85
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponseFactory
+    guid 325f903e-77be-5365-81d9-0321cdd82195
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult
+    guid 88fad03c-901d-5ffa-9259-701d3ca08ef2
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics
+    guid 6aca7c92-a581-4479-9c10-752eff44fd34
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2
+    guid f584184a-8b57-4820-b6a4-70a5b6fcf44a
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3
+    guid 2404eeb2-8924-4d93-ab3a-99688b419d56
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4
+    guid 54e633fe-96e0-41e8-9832-1298897c2aaf
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5
+    guid d07c1ded-270f-4554-9966-27b7df05b965
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest
+    guid 7acfa5b6-529d-5e76-9846-f3fd999304d0
+
+interface Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory
+    guid 5f16b627-04c4-5f0b-8683-8bab58965656
+
+interface Windows.Security.Authentication.Web.Core.IWebProviderError
+    guid db191bb1-50c5-4809-8dca-09c99410245c
+
+interface Windows.Security.Authentication.Web.Core.IWebProviderErrorFactory
+    guid e3c40a2d-89ef-4e37-847f-a8b9d5a32910
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenRequest
+    guid b77b4d68-adcb-4673-b364-0cf7b35caf97
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenRequest2
+    guid d700c079-30c8-4397-9654-961c3be8b855
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenRequest3
+    guid 5a755b51-3bb1-41a5-a63d-90bc32c7db9a
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory
+    guid 6cf2141c-0ff0-4c67-b84f-99ddbe4a72c9
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenRequestResult
+    guid c12a8305-d1f8-4483-8d54-38fe292784ff
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenResponse
+    guid 67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a
+
+interface Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory
+    guid ab6bf7f8-5450-4ef6-97f7-052b0431c0f0
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,System.Object> concrete
+    guid c8cb498d-e0da-52a1-abf9-7198c7f5cb42
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authentication.Web.Core.WebAccountMonitor;{7445f5fd-aa9d-4619-8d5d-c138a4ede3e5});cinterface(IInspectable))
+    argument Windows.Security.Authentication.Web.Core.WebAccountMonitor
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> concrete
+    guid fa704f04-87b6-516b-9596-cd7cc092169b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authentication.Web.Core.WebAccountMonitor;{7445f5fd-aa9d-4619-8d5d-c138a4ede3e5});rc(Windows.Security.Authentication.Web.Core.WebAccountEventArgs;{6fb7037d-424e-44ec-977c-ef2415462a5a}))
+    argument Windows.Security.Authentication.Web.Core.WebAccountMonitor
+    argument Windows.Security.Authentication.Web.Core.WebAccountEventArgs
+
+class Windows.Security.Authentication.Web.Core.WebAccountEventArgs python_type
+    py WebAccountEventArgs
+    signature rc(Windows.Security.Authentication.Web.Core.WebAccountEventArgs;{6fb7037d-424e-44ec-977c-ef2415462a5a})
+    default Windows.Security.Authentication.Web.Core.IWebAccountEventArgs
+    requires Windows.Security.Authentication.Web.Core.IWebAccountEventArgs
+    property account
+        get get_Account slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountEventArgs shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccount return
+
+class Windows.Security.Authentication.Web.Core.WebAccountMonitor python_type
+    py WebAccountMonitor
+    signature rc(Windows.Security.Authentication.Web.Core.WebAccountMonitor;{7445f5fd-aa9d-4619-8d5d-c138a4ede3e5})
+    default Windows.Security.Authentication.Web.Core.IWebAccountMonitor
+    requires Windows.Security.Authentication.Web.Core.IWebAccountMonitor
+    requires Windows.Security.Authentication.Web.Core.IWebAccountMonitor2
+    event default_sign_in_account_changed
+        add add_DefaultSignInAccountChanged slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,System.Object> name=handler
+            out event_token return
+        remove remove_DefaultSignInAccountChanged slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=156
+            in event_token name=token
+    event removed
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
+            out event_token return
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=110
+            in event_token name=token
+    event updated
+        add add_Updated slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
+            out event_token return
+        remove remove_Updated slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=53
+            in event_token name=token
+    event account_picture_updated
+        add add_AccountPictureUpdated slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
+            out event_token return
+        remove remove_AccountPictureUpdated slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor2 shape=26 reverse=53
+            in event_token name=token
+
+class Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse python_type
+    py WebAuthenticationAddAccountResponse
+    signature rc(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse;{7fb013e8-0bd8-542b-b486-8323163a4b85})
+    default Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse
+    requires Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponseFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out class type=Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property web_account
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResponse shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccount return
+
+class Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult python_type
+    py WebAuthenticationAddAccountResult
+    signature rc(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult;{88fad03c-901d-5ffa-9259-701d3ca08ef2})
+    default Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult
+    requires Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult
+    property response_data
+        get get_ResponseData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult shape=4 reverse=22
+            out class type=Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse return
+    property response_error
+        get get_ResponseError slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult shape=4 reverse=62
+            out class type=Windows.Security.Authentication.Web.Core.WebProviderError return
+    property response_status
+        get get_ResponseStatus slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationAddAccountResult shape=4 reverse=43
+            out enum32 type=Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus return
+
+enum Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus python_type
+    py WebAuthenticationAddAccountStatus
+    signature enum(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus;i4)
+
+class Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager static python_type
+    py WebAuthenticationCoreManager
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics
+    method add_account_with_transfer_token_async static
+        method AddAccountWithTransferTokenAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5 shape=51 reverse=24 static
+            in class type=Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> return
+    method create_web_account_monitor static
+        method CreateWebAccountMonitor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3 shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> name=webAccounts
+            out class type=Windows.Security.Authentication.Web.Core.WebAccountMonitor return
+    method find_account_async static
+        method FindAccountAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=117 reverse=125 static
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=webAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
+    method find_account_provider_async static
+        method FindAccountProviderAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
+            in string name=webAccountProviderId
+            in string name=authority
+            in class type=Windows.System.User name=user
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+        method FindAccountProviderAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
+            in string name=webAccountProviderId
+            in string name=authority
+            in class type=Windows.System.User name=user
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+        method FindAccountProviderAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
+            in string name=webAccountProviderId
+            in string name=authority
+            in class type=Windows.System.User name=user
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+    method find_all_accounts_async static
+        method FindAllAccountsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 shape=51 reverse=24 static
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> return
+        method FindAllAccountsAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 shape=117 reverse=45 static
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=clientId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> return
+    method find_system_account_provider_async static
+        method FindSystemAccountProviderAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 shape=51 reverse=65 static
+            in string name=webAccountProviderId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+        method FindSystemAccountProviderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 shape=117 reverse=101 static
+            in string name=webAccountProviderId
+            in string name=authority
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+        method FindSystemAccountProviderAsync slot=10 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4 shape=195 reverse=126 static
+            in string name=webAccountProviderId
+            in string name=authority
+            in class type=Windows.System.User name=user
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
+    method get_token_silently_async static
+        method GetTokenSilentlyAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=51 reverse=24 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+        method GetTokenSilentlyAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=117 reverse=45 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+    method request_token_async static
+        method RequestTokenAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=51 reverse=65 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+        method RequestTokenAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=117 reverse=101 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+
+class Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest python_type
+    py WebAuthenticationTransferTokenRequest
+    signature rc(Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest;{7acfa5b6-529d-5e76-9846-f3fd999304d0})
+    default Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest
+    requires Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory shape=117 reverse=25
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=transferToken
+            out class type=Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequestFactory shape=195 reverse=46
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=transferToken
+            in string name=correlationId
+            out class type=Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest return
+    property transfer_token
+        get get_TransferToken slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=43
+            out string return
+        put put_TransferToken slot=8 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=62
+            in string name=value
+    property correlation_id
+        get get_CorrelationId slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=121
+            out string return
+        put put_CorrelationId slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=141
+            in string name=value
+    property properties
+        get get_Properties slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property web_account_provider
+        get get_WebAccountProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationTransferTokenRequest shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccountProvider return
+
+class Windows.Security.Authentication.Web.Core.WebProviderError python_type
+    py WebProviderError
+    signature rc(Windows.Security.Authentication.Web.Core.WebProviderError;{db191bb1-50c5-4809-8dca-09c99410245c})
+    default Windows.Security.Authentication.Web.Core.IWebProviderError
+    requires Windows.Security.Authentication.Web.Core.IWebProviderError
+    factory Windows.Security.Authentication.Web.Core.IWebProviderErrorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebProviderErrorFactory shape=117 reverse=25
+            in uint32 name=errorCode
+            in string name=errorMessage
+            out class type=Windows.Security.Authentication.Web.Core.WebProviderError return
+    property error_code
+        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebProviderError shape=4 reverse=22
+            out uint32 return
+    property error_message
+        get get_ErrorMessage slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebProviderError shape=4 reverse=43
+            out string return
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebProviderError shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+
+class Windows.Security.Authentication.Web.Core.WebTokenRequest python_type
+    py WebTokenRequest
+    signature rc(Windows.Security.Authentication.Web.Core.WebTokenRequest;{b77b4d68-adcb-4673-b364-0cf7b35caf97})
+    default Windows.Security.Authentication.Web.Core.IWebTokenRequest
+    requires Windows.Security.Authentication.Web.Core.IWebTokenRequest
+    requires Windows.Security.Authentication.Web.Core.IWebTokenRequest2
+    requires Windows.Security.Authentication.Web.Core.IWebTokenRequest3
+    factory Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=scope implicit
+            in string name=clientId implicit
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=scope
+            in string name=clientId implicit
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=scope
+            in string name=clientId
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
+        ctor .ctor slot=7 inputs=4 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=239
+            in class type=Windows.Security.Credentials.WebAccountProvider name=provider
+            in string name=scope
+            in string name=clientId
+            in enum32 type=Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType name=promptType
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
+    property client_id
+        get get_ClientId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest shape=4 reverse=62
+            out string return
+    property prompt_type
+        get get_PromptType slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest shape=4 reverse=99
+            out enum32 type=Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property scope
+        get get_Scope slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest shape=4 reverse=43
+            out string return
+    property web_account_provider
+        get get_WebAccountProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccountProvider return
+    property app_properties
+        get get_AppProperties slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property correlation_id
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest3 shape=4 reverse=22
+            out string return
+        put put_CorrelationId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequest3 shape=4 reverse=43
+            in string name=value
+
+enum Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType python_type
+    py WebTokenRequestPromptType
+    signature enum(Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType;i4)
+
+class Windows.Security.Authentication.Web.Core.WebTokenRequestResult python_type
+    py WebTokenRequestResult
+    signature rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff})
+    default Windows.Security.Authentication.Web.Core.IWebTokenRequestResult
+    requires Windows.Security.Authentication.Web.Core.IWebTokenRequestResult
+    property response_data
+        get get_ResponseData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> return
+    property response_error
+        get get_ResponseError slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestResult shape=4 reverse=62
+            out class type=Windows.Security.Authentication.Web.Core.WebProviderError return
+    property response_status
+        get get_ResponseStatus slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestResult shape=4 reverse=43
+            out enum32 type=Windows.Security.Authentication.Web.Core.WebTokenRequestStatus return
+    method invalidate_cache_async
+        method InvalidateCacheAsync slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestResult shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Security.Authentication.Web.Core.WebTokenRequestStatus python_type
+    py WebTokenRequestStatus
+    signature enum(Windows.Security.Authentication.Web.Core.WebTokenRequestStatus;i4)
+
+class Windows.Security.Authentication.Web.Core.WebTokenResponse activatable python_type
+    py WebTokenResponse
+    signature rc(Windows.Security.Authentication.Web.Core.WebTokenResponse;{67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a})
+    default Windows.Security.Authentication.Web.Core.IWebTokenResponse
+    requires Windows.Security.Authentication.Web.Core.IWebTokenResponse
+    factory Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=51 reverse=24
+            in string name=token implicit
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=51 reverse=24
+            in string name=token
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=117 reverse=45
+            in string name=token
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=195 reverse=68
+            in string name=token
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            in class type=Windows.Security.Authentication.Web.Core.WebProviderError name=error
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+    property properties
+        get get_Properties slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponse shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property provider_error
+        get get_ProviderError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponse shape=4 reverse=43
+            out class type=Windows.Security.Authentication.Web.Core.WebProviderError return
+    property token
+        get get_Token slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponse shape=4 reverse=22
+            out string return
+    property web_account
+        get get_WebAccount slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponse shape=4 reverse=62
+            out class type=Windows.Security.Credentials.WebAccount return
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Security.Credentials.WebAccount external
+    py winrt.windows.security.credentials.WebAccount
+
+class Windows.Security.Credentials.WebAccountProvider external
+    py winrt.windows.security.credentials.WebAccountProvider
+
+class Windows.System.User external
+    py winrt.windows.system.User

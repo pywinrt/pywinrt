@@ -1,0 +1,2420 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Contacts
+
+class Windows.ApplicationModel.Contacts.AggregateContactManager python_type
+    py AggregateContactManager
+    signature rc(Windows.ApplicationModel.Contacts.AggregateContactManager;{0379d5dd-db5a-4fd3-b54e-4df17917a212})
+    default Windows.ApplicationModel.Contacts.IAggregateContactManager
+    requires Windows.ApplicationModel.Contacts.IAggregateContactManager
+    requires Windows.ApplicationModel.Contacts.IAggregateContactManager2
+    method find_raw_contacts_async
+        method FindRawContactsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IAggregateContactManager shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>> return
+    method set_remote_identification_information_async
+        method SetRemoteIdentificationInformationAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IAggregateContactManager2 shape=195 reverse=26
+            in string name=contactListId
+            in string name=remoteSourceId
+            in string name=accountId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_link_contacts_async
+        method TryLinkContactsAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IAggregateContactManager shape=117 reverse=45
+            in class type=Windows.ApplicationModel.Contacts.Contact name=primaryContact
+            in class type=Windows.ApplicationModel.Contacts.Contact name=secondaryContact
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method try_set_preferred_source_for_picture_async
+        method TrySetPreferredSourceForPictureAsync slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IAggregateContactManager shape=117 reverse=101
+            in class type=Windows.ApplicationModel.Contacts.Contact name=aggregateContact
+            in class type=Windows.ApplicationModel.Contacts.Contact name=rawContact
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method unlink_raw_contact_async
+        method UnlinkRawContactAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IAggregateContactManager shape=51 reverse=65
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Contacts.Contact activatable python_type
+    py Contact
+    signature rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64})
+    default Windows.ApplicationModel.Contacts.IContact
+    requires Windows.ApplicationModel.Contacts.IContact
+    requires Windows.ApplicationModel.Contacts.IContact2
+    requires Windows.ApplicationModel.Contacts.IContactName
+    requires Windows.ApplicationModel.Contacts.IContact3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property thumbnail
+        get get_Thumbnail slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Thumbnail slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact shape=4 reverse=43
+            in string name=value
+    property fields
+        get get_Fields slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=43
+            in string name=value
+    property notes
+        get get_Notes slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=62
+            out string return
+        put put_Notes slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=99
+            in string name=value
+    property connected_service_accounts
+        get get_ConnectedServiceAccounts slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> return
+    property emails
+        get get_Emails slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> return
+    property addresses
+        get get_Addresses slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> return
+    property important_dates
+        get get_ImportantDates slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> return
+    property job_info
+        get get_JobInfo slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> return
+    property data_suppliers
+        get get_DataSuppliers slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property phones
+        get get_Phones slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> return
+    property provider_properties
+        get get_ProviderProperties slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=223
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    property significant_others
+        get get_SignificantOthers slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> return
+    property websites
+        get get_Websites slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact2 shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> return
+    property source_display_picture
+        get get_SourceDisplayPicture slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=218
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_SourceDisplayPicture slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=223
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property text_tone_token
+        get get_TextToneToken slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=228
+            out string return
+        put put_TextToneToken slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=232
+            in string name=value
+    property display_name_override
+        get get_DisplayNameOverride slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=247
+            out string return
+        put put_DisplayNameOverride slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=252
+            in string name=value
+    property display_picture_user_update_time
+        get get_DisplayPictureUserUpdateTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=43
+            out datetime return
+        put put_DisplayPictureUserUpdateTime slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=26 reverse=82
+            in datetime name=value
+    property nickname
+        get get_Nickname slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=255
+            out string return
+        put put_Nickname slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=259
+            in string name=value
+    property remote_id
+        get get_RemoteId slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=141
+            out string return
+        put put_RemoteId slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=162
+            in string name=value
+    property ring_tone_token
+        get get_RingToneToken slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=173
+            out string return
+        put put_RingToneToken slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=186
+            in string name=value
+    property contact_list_id
+        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=22
+            out string return
+    property large_display_picture
+        get get_LargeDisplayPicture slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=202
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property small_display_picture
+        get get_SmallDisplayPicture slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=210
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property sort_name
+        get get_SortName slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=263
+            out string return
+    property aggregate_id
+        get get_AggregateId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=121
+            out string return
+    property full_name
+        get get_FullName slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=242
+            out string return
+    property is_aggregate
+        get get_IsAggregate slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=237
+            out boolean return
+    property is_display_picture_manually_set
+        get get_IsDisplayPictureManuallySet slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=194
+            out boolean return
+    property is_me
+        get get_IsMe slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContact3 shape=4 reverse=99
+            out boolean return
+    property yomi_given_name
+        get get_YomiGivenName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=162
+            out string return
+        put put_YomiGivenName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=173
+            in string name=value
+    property honorific_name_suffix
+        get get_HonorificNameSuffix slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=202
+            out string return
+        put put_HonorificNameSuffix slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=210
+            in string name=value
+    property yomi_family_name
+        get get_YomiFamilyName slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=186
+            out string return
+        put put_YomiFamilyName slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=194
+            in string name=value
+    property middle_name
+        get get_MiddleName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=121
+            out string return
+        put put_MiddleName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=141
+            in string name=value
+    property last_name
+        get get_LastName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=62
+            out string return
+        put put_LastName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=99
+            in string name=value
+    property honorific_name_prefix
+        get get_HonorificNamePrefix slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=218
+            out string return
+        put put_HonorificNamePrefix slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=223
+            in string name=value
+    property first_name
+        get get_FirstName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=22
+            out string return
+        put put_FirstName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=43
+            in string name=value
+    property display_name
+        get get_DisplayName slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=228
+            out string return
+    property yomi_display_name
+        get get_YomiDisplayName slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactName shape=4 reverse=232
+            out string return
+
+class Windows.ApplicationModel.Contacts.ContactAddress activatable python_type
+    py ContactAddress
+    signature rc(Windows.ApplicationModel.Contacts.ContactAddress;{9739d39a-42ce-4872-8d70-3063aa584b70})
+    default Windows.ApplicationModel.Contacts.IContactAddress
+    requires Windows.ApplicationModel.Contacts.IContactAddress
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property street_address
+        get get_StreetAddress slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=22
+            out string return
+        put put_StreetAddress slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=43
+            in string name=value
+    property region
+        get get_Region slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=121
+            out string return
+        put put_Region slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=141
+            in string name=value
+    property postal_code
+        get get_PostalCode slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=186
+            out string return
+        put put_PostalCode slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=194
+            in string name=value
+    property locality
+        get get_Locality slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=62
+            out string return
+        put put_Locality slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=99
+            in string name=value
+    property kind
+        get get_Kind slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactAddressKind return
+        put put_Kind slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=210
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactAddressKind name=value
+    property description
+        get get_Description slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=218
+            out string return
+        put put_Description slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=223
+            in string name=value
+    property country
+        get get_Country slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=162
+            out string return
+        put put_Country slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAddress shape=4 reverse=173
+            in string name=value
+
+enum Windows.ApplicationModel.Contacts.ContactAddressKind python_type
+    py ContactAddressKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactAddressKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactAnnotation activatable python_type
+    py ContactAnnotation
+    signature rc(Windows.ApplicationModel.Contacts.ContactAnnotation;{821fc2ef-7d41-44a2-84c3-60a281dd7b86})
+    default Windows.ApplicationModel.Contacts.IContactAnnotation
+    requires Windows.ApplicationModel.Contacts.IContactAnnotation
+    requires Windows.ApplicationModel.Contacts.IContactAnnotation2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property supported_operations
+        get get_SupportedOperations slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=162
+            out enum_u32 type=Windows.ApplicationModel.Contacts.ContactAnnotationOperations return
+        put put_SupportedOperations slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=173
+            in enum_u32 type=Windows.ApplicationModel.Contacts.ContactAnnotationOperations name=value
+    property remote_id
+        get get_RemoteId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=121
+            out string return
+        put put_RemoteId slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=141
+            in string name=value
+    property contact_id
+        get get_ContactId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=62
+            out string return
+        put put_ContactId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=99
+            in string name=value
+    property annotation_list_id
+        get get_AnnotationListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=43
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=22
+            out string return
+    property is_disabled
+        get get_IsDisabled slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=186
+            out boolean return
+    property provider_properties
+        get get_ProviderProperties slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation shape=4 reverse=194
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property contact_list_id
+        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation2 shape=4 reverse=22
+            out string return
+        put put_ContactListId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactAnnotation2 shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Contacts.ContactAnnotationList python_type
+    py ContactAnnotationList
+    signature rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a})
+    default Windows.ApplicationModel.Contacts.IContactAnnotationList
+    requires Windows.ApplicationModel.Contacts.IContactAnnotationList
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=4 reverse=22
+            out string return
+    property provider_package_family_name
+        get get_ProviderPackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=4 reverse=43
+            out string return
+    property user_data_account_id
+        get get_UserDataAccountId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=4 reverse=62
+            out string return
+    method delete_annotation_async
+        method DeleteAnnotationAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=51 reverse=187
+            in class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=annotation
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_async
+        method DeleteAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_annotations_async
+        method FindAnnotationsAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> return
+    method find_annotations_by_remote_id_async
+        method FindAnnotationsByRemoteIdAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=51 reverse=163
+            in string name=remoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> return
+    method get_annotation_async
+        method GetAnnotationAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=51 reverse=144
+            in string name=annotationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotation> return
+    method try_save_annotation_async
+        method TrySaveAnnotationAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationList shape=51 reverse=124
+            in class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=annotation
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Contacts.ContactAnnotationOperations python_type
+    py ContactAnnotationOperations
+    signature enum(Windows.ApplicationModel.Contacts.ContactAnnotationOperations;u4)
+
+class Windows.ApplicationModel.Contacts.ContactAnnotationStore python_type
+    py ContactAnnotationStore
+    signature rc(Windows.ApplicationModel.Contacts.ContactAnnotationStore;{23acf4aa-7a77-457d-8203-987f4b31af09})
+    default Windows.ApplicationModel.Contacts.IContactAnnotationStore
+    requires Windows.ApplicationModel.Contacts.IContactAnnotationStore
+    requires Windows.ApplicationModel.Contacts.IContactAnnotationStore2
+    method create_annotation_list_async
+        method CreateAnnotationListAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationList> return
+        method CreateAnnotationListAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=144
+            in string name=userDataAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationList> return
+    method disable_annotation_async
+        method DisableAnnotationAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=100
+            in class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=annotation
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_annotation_lists_async
+        method FindAnnotationListsAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>> return
+    method find_annotations_for_contact_async
+        method FindAnnotationsForContactAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=65
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> return
+    method find_annotations_for_contact_list_async
+        method FindAnnotationsForContactListAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore2 shape=51 reverse=24
+            in string name=contactListId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> return
+    method find_contact_ids_by_email_async
+        method FindContactIdsByEmailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=24
+            in string name=emailAddress
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method find_contact_ids_by_phone_number_async
+        method FindContactIdsByPhoneNumberAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=44
+            in string name=phoneNumber
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method get_annotation_list_async
+        method GetAnnotationListAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactAnnotationStore shape=51 reverse=163
+            in string name=annotationListId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationList> return
+
+enum Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType python_type
+    py ContactAnnotationStoreAccessType
+    signature enum(Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType;i4)
+
+class Windows.ApplicationModel.Contacts.ContactBatch python_type
+    py ContactBatch
+    signature rc(Windows.ApplicationModel.Contacts.ContactBatch;{35d1972d-bfce-46bb-93f8-a5b06ec5e201})
+    default Windows.ApplicationModel.Contacts.IContactBatch
+    requires Windows.ApplicationModel.Contacts.IContactBatch
+    property contacts
+        get get_Contacts slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactBatch shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactBatch shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactBatchStatus return
+
+enum Windows.ApplicationModel.Contacts.ContactBatchStatus python_type
+    py ContactBatchStatus
+    signature enum(Windows.ApplicationModel.Contacts.ContactBatchStatus;i4)
+
+class Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader python_type closeable
+    py ContactCardDelayedDataLoader
+    signature rc(Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader;{b60af902-1546-434d-869c-6e3520760ef3})
+    default Windows.ApplicationModel.Contacts.IContactCardDelayedDataLoader
+    requires Windows.ApplicationModel.Contacts.IContactCardDelayedDataLoader
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method set_data
+        method SetData slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactCardDelayedDataLoader shape=4 reverse=22
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+
+enum Windows.ApplicationModel.Contacts.ContactCardHeaderKind python_type
+    py ContactCardHeaderKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactCardHeaderKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactCardOptions activatable python_type
+    py ContactCardOptions
+    signature rc(Windows.ApplicationModel.Contacts.ContactCardOptions;{8c0a4f7e-6ab6-4f3f-be72-817236eeea5b})
+    default Windows.ApplicationModel.Contacts.IContactCardOptions
+    requires Windows.ApplicationModel.Contacts.IContactCardOptions
+    requires Windows.ApplicationModel.Contacts.IContactCardOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property initial_tab_kind
+        get get_InitialTabKind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactCardOptions shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactCardTabKind return
+        put put_InitialTabKind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactCardOptions shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactCardTabKind name=value
+    property header_kind
+        get get_HeaderKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactCardOptions shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactCardHeaderKind return
+        put put_HeaderKind slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactCardOptions shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactCardHeaderKind name=value
+    property server_search_contact_list_ids
+        get get_ServerSearchContactListIds slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactCardOptions2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+enum Windows.ApplicationModel.Contacts.ContactCardTabKind python_type
+    py ContactCardTabKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactCardTabKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactChange python_type
+    py ContactChange
+    signature rc(Windows.ApplicationModel.Contacts.ContactChange;{951d4b10-6a59-4720-a4e1-363d98c135d5})
+    default Windows.ApplicationModel.Contacts.IContactChange
+    requires Windows.ApplicationModel.Contacts.IContactChange
+    property change_type
+        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChange shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactChangeType return
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChange shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+
+class Windows.ApplicationModel.Contacts.ContactChangeReader python_type
+    py ContactChangeReader
+    signature rc(Windows.ApplicationModel.Contacts.ContactChangeReader;{217319fa-2d0c-42e0-a9da-3ecd56a78a47})
+    default Windows.ApplicationModel.Contacts.IContactChangeReader
+    requires Windows.ApplicationModel.Contacts.IContactChangeReader
+    method accept_changes
+        method AcceptChanges slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactChangeReader shape=0 reverse=16
+    method accept_changes_through
+        method AcceptChangesThrough slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactChangeReader shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Contacts.ContactChange name=lastChangeToAccept
+    method read_batch_async
+        method ReadBatchAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChangeReader shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange>> return
+
+class Windows.ApplicationModel.Contacts.ContactChangeTracker python_type
+    py ContactChangeTracker
+    signature rc(Windows.ApplicationModel.Contacts.ContactChangeTracker;{6e992952-309b-404d-9712-b37bd30278aa})
+    default Windows.ApplicationModel.Contacts.IContactChangeTracker
+    requires Windows.ApplicationModel.Contacts.IContactChangeTracker
+    requires Windows.ApplicationModel.Contacts.IContactChangeTracker2
+    property is_tracking
+        get get_IsTracking slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChangeTracker2 shape=4 reverse=22
+            out boolean return
+    method enable
+        method Enable slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactChangeTracker shape=0 reverse=16
+    method get_change_reader
+        method GetChangeReader slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChangeTracker shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.ContactChangeReader return
+    method reset
+        method Reset slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactChangeTracker shape=0 reverse=55
+
+enum Windows.ApplicationModel.Contacts.ContactChangeType python_type
+    py ContactChangeType
+    signature enum(Windows.ApplicationModel.Contacts.ContactChangeType;i4)
+
+class Windows.ApplicationModel.Contacts.ContactChangedDeferral python_type
+    py ContactChangedDeferral
+    signature rc(Windows.ApplicationModel.Contacts.ContactChangedDeferral;{c5143ae8-1b03-46f8-b694-a523e83cfcb6})
+    default Windows.ApplicationModel.Contacts.IContactChangedDeferral
+    requires Windows.ApplicationModel.Contacts.IContactChangedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactChangedDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.Contacts.ContactChangedEventArgs python_type
+    py ContactChangedEventArgs
+    signature rc(Windows.ApplicationModel.Contacts.ContactChangedEventArgs;{525e7fd1-73f3-4b7d-a918-580be4366121})
+    default Windows.ApplicationModel.Contacts.IContactChangedEventArgs
+    requires Windows.ApplicationModel.Contacts.IContactChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactChangedDeferral return
+
+class Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount activatable python_type
+    py ContactConnectedServiceAccount
+    signature rc(Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount;{f6f83553-aa27-4731-8e4a-3dec5ce9eec9})
+    default Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount
+    requires Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property service_name
+        get get_ServiceName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount shape=4 reverse=62
+            out string return
+        put put_ServiceName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount shape=4 reverse=99
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Contacts.ContactDate activatable python_type
+    py ContactDate
+    signature rc(Windows.ApplicationModel.Contacts.ContactDate;{fe98ae66-b205-4934-9174-0ff2b0565707})
+    default Windows.ApplicationModel.Contacts.IContactDate
+    requires Windows.ApplicationModel.Contacts.IContactDate
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property year
+        get get_Year slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_Year slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property month
+        get get_Month slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Month slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property kind
+        get get_Kind slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactDateKind return
+        put put_Kind slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=173
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactDateKind name=value
+    property description
+        get get_Description slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=186
+            out string return
+        put put_Description slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=194
+            in string name=value
+    property day
+        get get_Day slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Day slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactDate shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+
+enum Windows.ApplicationModel.Contacts.ContactDateKind python_type
+    py ContactDateKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactDateKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactEmail activatable python_type
+    py ContactEmail
+    signature rc(Windows.ApplicationModel.Contacts.ContactEmail;{90a219a9-e3d3-4d63-993b-05b9a5393abf})
+    default Windows.ApplicationModel.Contacts.IContactEmail
+    requires Windows.ApplicationModel.Contacts.IContactEmail
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactEmailKind return
+        put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactEmailKind name=value
+    property description
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=121
+            out string return
+        put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=141
+            in string name=value
+    property address
+        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=22
+            out string return
+        put put_Address slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactEmail shape=4 reverse=43
+            in string name=value
+
+enum Windows.ApplicationModel.Contacts.ContactEmailKind python_type
+    py ContactEmailKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactEmailKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactField python_type
+    py ContactField
+    signature rc(Windows.ApplicationModel.Contacts.ContactField;{b176486a-d293-492c-a058-db575b3e3c0f})
+    default Windows.ApplicationModel.Contacts.IContactField
+    requires Windows.ApplicationModel.Contacts.IContactField
+    factory Windows.ApplicationModel.Contacts.IContactFieldFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=117 reverse=25
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=195 reverse=46
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=239 reverse=69
+            in string name=name
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+    property category
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=62
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=99
+            out string return
+
+enum Windows.ApplicationModel.Contacts.ContactFieldCategory python_type
+    py ContactFieldCategory
+    signature enum(Windows.ApplicationModel.Contacts.ContactFieldCategory;i4)
+
+class Windows.ApplicationModel.Contacts.ContactFieldFactory activatable python_type
+    py ContactFieldFactory
+    signature rc(Windows.ApplicationModel.Contacts.ContactFieldFactory;{85e2913f-0e4a-4a3e-8994-406ae7ed646e})
+    default Windows.ApplicationModel.Contacts.IContactFieldFactory
+    requires Windows.ApplicationModel.Contacts.IContactFieldFactory
+    requires Windows.ApplicationModel.Contacts.IContactLocationFieldFactory
+    requires Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method create_field
+        method CreateField slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=117 reverse=25
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        method CreateField slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=195 reverse=46
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        method CreateField slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=239 reverse=69
+            in string name=name
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+    method create_instant_message
+        method CreateInstantMessage slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=51 reverse=24
+            in string name=userName
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        method CreateInstantMessage slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=117 reverse=45
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        method CreateInstantMessage slot=8 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=267 reverse=70
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=service
+            in string name=displayText
+            in class type=Windows.Foundation.Uri name=verb
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+    method create_location
+        method CreateLocation slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=51 reverse=24
+            in string name=unstructuredAddress
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        method CreateLocation slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=117 reverse=45
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        method CreateLocation slot=8 inputs=7 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=286 reverse=71
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=street
+            in string name=city
+            in string name=region
+            in string name=country
+            in string name=postalCode
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+
+enum Windows.ApplicationModel.Contacts.ContactFieldType python_type
+    py ContactFieldType
+    signature enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4)
+
+class Windows.ApplicationModel.Contacts.ContactGroup python_type
+    py ContactGroup
+    signature rc(Windows.ApplicationModel.Contacts.ContactGroup;{59bdeb01-9e9a-475d-bfe5-a37b806d852c})
+    default Windows.ApplicationModel.Contacts.IContactGroup
+    requires Windows.ApplicationModel.Contacts.IContactGroup
+
+class Windows.ApplicationModel.Contacts.ContactInformation python_type
+    py ContactInformation
+    signature rc(Windows.ApplicationModel.Contacts.ContactInformation;{275eb6d4-6a2e-4278-a914-e460d5f088f6})
+    default Windows.ApplicationModel.Contacts.IContactInformation
+    requires Windows.ApplicationModel.Contacts.IContactInformation
+    property custom_fields
+        get get_CustomFields slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> return
+    property emails
+        get get_Emails slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> return
+    property instant_messages
+        get get_InstantMessages slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInstantMessageField> return
+    property locations
+        get get_Locations slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactLocationField> return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=22
+            out string return
+    property phone_numbers
+        get get_PhoneNumbers slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> return
+    method get_thumbnail_async
+        method GetThumbnailAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+    method query_custom_fields
+        method QueryCustomFields slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInformation shape=51 reverse=174
+            in string name=customName
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> return
+
+class Windows.ApplicationModel.Contacts.ContactInstantMessageField python_type
+    py ContactInstantMessageField
+    signature rc(Windows.ApplicationModel.Contacts.ContactInstantMessageField;{cce33b37-0d85-41fa-b43d-da599c3eb009})
+    default Windows.ApplicationModel.Contacts.IContactInstantMessageField
+    requires Windows.ApplicationModel.Contacts.IContactInstantMessageField
+    requires Windows.ApplicationModel.Contacts.IContactField
+    factory Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=51 reverse=24
+            in string name=userName
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=117 reverse=45
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        ctor .ctor slot=8 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=267 reverse=70
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=service
+            in string name=displayText
+            in class type=Windows.Foundation.Uri name=verb
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+    property category
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=62
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=99
+            out string return
+    property display_text
+        get get_DisplayText slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageField shape=4 reverse=62
+            out string return
+    property launch_uri
+        get get_LaunchUri slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageField shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+    property service
+        get get_Service slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageField shape=4 reverse=43
+            out string return
+    property user_name
+        get get_UserName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageField shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Contacts.ContactJobInfo activatable python_type
+    py ContactJobInfo
+    signature rc(Windows.ApplicationModel.Contacts.ContactJobInfo;{6d117b4c-ce50-4b43-9e69-b18258ea5315})
+    default Windows.ApplicationModel.Contacts.IContactJobInfo
+    requires Windows.ApplicationModel.Contacts.IContactJobInfo
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property title
+        get get_Title slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=162
+            out string return
+        put put_Title slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=173
+            in string name=value
+    property office
+        get get_Office slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=202
+            out string return
+        put put_Office slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=210
+            in string name=value
+    property manager
+        get get_Manager slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=186
+            out string return
+        put put_Manager slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=194
+            in string name=value
+    property description
+        get get_Description slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=228
+            out string return
+        put put_Description slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=232
+            in string name=value
+    property department
+        get get_Department slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=121
+            out string return
+        put put_Department slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=141
+            in string name=value
+    property company_yomi_name
+        get get_CompanyYomiName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=62
+            out string return
+        put put_CompanyYomiName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=99
+            in string name=value
+    property company_name
+        get get_CompanyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=22
+            out string return
+        put put_CompanyName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=43
+            in string name=value
+    property company_address
+        get get_CompanyAddress slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=218
+            out string return
+        put put_CompanyAddress slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactJobInfo shape=4 reverse=223
+            in string name=value
+
+class Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs static python_type
+    py ContactLaunchActionVerbs
+    factory Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics
+    property call static
+        get get_Call slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics shape=4 reverse=22 static
+            out string return
+    property map static
+        get get_Map slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics shape=4 reverse=62 static
+            out string return
+    property message static
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics shape=4 reverse=43 static
+            out string return
+    property post static
+        get get_Post slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics shape=4 reverse=99 static
+            out string return
+    property video_call static
+        get get_VideoCall slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics shape=4 reverse=121 static
+            out string return
+
+class Windows.ApplicationModel.Contacts.ContactList python_type
+    py ContactList
+    signature rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42})
+    default Windows.ApplicationModel.Contacts.IContactList
+    requires Windows.ApplicationModel.Contacts.IContactList
+    requires Windows.ApplicationModel.Contacts.IContactList2
+    requires Windows.ApplicationModel.Contacts.IContactList3
+    property supports_server_search
+        get get_SupportsServerSearch slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=218
+            out boolean return
+        put put_SupportsServerSearch slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList2 shape=4 reverse=43
+            in boolean name=value
+    property is_hidden
+        get get_IsHidden slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=121
+            out boolean return
+        put put_IsHidden slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=141
+            in boolean name=value
+    property other_app_write_access
+        get get_OtherAppWriteAccess slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess return
+        put put_OtherAppWriteAccess slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=62
+            in string name=value
+    property other_app_read_access
+        get get_OtherAppReadAccess slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess return
+        put put_OtherAppReadAccess slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=173
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess name=value
+    property change_tracker
+        get get_ChangeTracker slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=202
+            out class type=Windows.ApplicationModel.Contacts.ContactChangeTracker return
+    property source_display_name
+        get get_SourceDisplayName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=99
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=22
+            out string return
+    property sync_manager
+        get get_SyncManager slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=210
+            out class type=Windows.ApplicationModel.Contacts.ContactListSyncManager return
+    property user_data_account_id
+        get get_UserDataAccountId slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=223
+            out string return
+    property sync_constraints
+        get get_SyncConstraints slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList2 shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.ContactListSyncConstraints return
+    property limited_write_operations
+        get get_LimitedWriteOperations slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList3 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations return
+    event contact_changed
+        add add_ContactChanged slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=229
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactList,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> name=value
+            out event_token return
+        remove remove_ContactChanged slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=26 reverse=234
+            in event_token name=value
+    method delete_async
+        method DeleteAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=242
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_contact_async
+        method DeleteContactAsync slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=267
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_change_tracker
+        method GetChangeTracker slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList3 shape=51 reverse=44
+            in string name=identity
+            out class type=Windows.ApplicationModel.Contacts.ContactChangeTracker return
+    method get_contact_async
+        method GetContactAsync slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=271
+            in string name=contactId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method get_contact_from_remote_id_async
+        method GetContactFromRemoteIdAsync slot=24 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=248
+            in string name=remoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method get_contact_reader
+        method GetContactReader slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=255
+            out class type=Windows.ApplicationModel.Contacts.ContactReader return
+        method GetContactReader slot=27 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=260
+            in class type=Windows.ApplicationModel.Contacts.ContactQueryOptions name=options
+            out class type=Windows.ApplicationModel.Contacts.ContactReader return
+    method get_me_contact_async
+        method GetMeContactAsync slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=252
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method register_sync_manager_async
+        method RegisterSyncManagerAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList2 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_async
+        method SaveAsync slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=237
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_contact_async
+        method SaveContactAsync slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=264
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations python_type
+    py ContactListLimitedWriteOperations
+    signature rc(Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations;{e19813da-4a0b-44b8-9a1f-a0f3d218175f})
+    default Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations
+    requires Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations
+    method try_create_or_update_contact_async
+        method TryCreateOrUpdateContactAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_delete_contact_async
+        method TryDeleteContactAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations shape=51 reverse=44
+            in string name=contactId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess python_type
+    py ContactListOtherAppReadAccess
+    signature enum(Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess;i4)
+
+enum Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess python_type
+    py ContactListOtherAppWriteAccess
+    signature enum(Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess;i4)
+
+class Windows.ApplicationModel.Contacts.ContactListSyncConstraints python_type
+    py ContactListSyncConstraints
+    signature rc(Windows.ApplicationModel.Contacts.ContactListSyncConstraints;{b2b0bf01-3062-4e2e-969d-018d1987f314})
+    default Windows.ApplicationModel.Contacts.IContactListSyncConstraints
+    requires Windows.ApplicationModel.Contacts.IContactListSyncConstraints
+    property can_sync_descriptions
+        get get_CanSyncDescriptions slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=22
+            out boolean return
+        put put_CanSyncDescriptions slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=43
+            in boolean name=value
+    property max_company_phone_numbers
+        get get_MaxCompanyPhoneNumbers slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=237
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxCompanyPhoneNumbers slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=242
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_child_relationships
+        get get_MaxChildRelationships slot=56 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=441
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxChildRelationships slot=57 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=442
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_business_fax_phone_numbers
+        get get_MaxBusinessFaxPhoneNumbers slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=218
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxBusinessFaxPhoneNumbers slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=223
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_birthday_dates
+        get get_MaxBirthdayDates slot=40 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=312
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxBirthdayDates slot=41 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=316
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_assistant_phone_numbers
+        get get_MaxAssistantPhoneNumbers slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=247
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxAssistantPhoneNumbers slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=252
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_other_addresses
+        get get_MaxOtherAddresses slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=302
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxOtherAddresses slot=39 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=307
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_anniversary_dates
+        get get_MaxAnniversaryDates slot=42 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=319
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxAnniversaryDates slot=43 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=322
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_home_addresses
+        get get_MaxHomeAddresses slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=288
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxHomeAddresses slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=292
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_other_dates
+        get get_MaxOtherDates slot=44 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=326
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxOtherDates slot=45 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=330
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_mobile_phone_numbers
+        get get_MaxMobilePhoneNumbers slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxMobilePhoneNumbers slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_job_info
+        get get_MaxJobInfo slot=58 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=443
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxJobInfo slot=59 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=444
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_home_phone_numbers
+        get get_MaxHomePhoneNumbers slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxHomePhoneNumbers slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_home_fax_phone_numbers
+        get get_MaxHomeFaxPhoneNumbers slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=228
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxHomeFaxPhoneNumbers slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=232
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_other_email_addresses
+        get get_MaxOtherEmailAddresses slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=280
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxOtherEmailAddresses slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=285
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_personal_email_addresses
+        get get_MaxPersonalEmailAddresses slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=263
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxPersonalEmailAddresses slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=266
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_partner_relationships
+        get get_MaxPartnerRelationships slot=50 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=351
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxPartnerRelationships slot=51 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=355
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_parent_relationships
+        get get_MaxParentRelationships slot=54 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=368
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxParentRelationships slot=55 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=440
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_pager_phone_numbers
+        get get_MaxPagerPhoneNumbers slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=202
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxPagerPhoneNumbers slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=210
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_other_relationships
+        get get_MaxOtherRelationships slot=46 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=334
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxOtherRelationships slot=47 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=339
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_other_phone_numbers
+        get get_MaxOtherPhoneNumbers slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxOtherPhoneNumbers slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=194
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_radio_phone_numbers
+        get get_MaxRadioPhoneNumbers slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=255
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxRadioPhoneNumbers slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=259
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_work_phone_numbers
+        get get_MaxWorkPhoneNumbers slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxWorkPhoneNumbers slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_work_email_addresses
+        get get_MaxWorkEmailAddresses slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=270
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxWorkEmailAddresses slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=273
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_work_addresses
+        get get_MaxWorkAddresses slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=296
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxWorkAddresses slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=299
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_websites
+        get get_MaxWebsites slot=60 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=445
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxWebsites slot=61 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=446
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_spouse_relationships
+        get get_MaxSpouseRelationships slot=48 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=343
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxSpouseRelationships slot=49 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=347
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_sibling_relationships
+        get get_MaxSiblingRelationships slot=52 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=359
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxSiblingRelationships slot=53 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncConstraints shape=4 reverse=363
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+
+class Windows.ApplicationModel.Contacts.ContactListSyncManager python_type
+    py ContactListSyncManager
+    signature rc(Windows.ApplicationModel.Contacts.ContactListSyncManager;{146e83be-7925-4acc-9de5-21ddd06f8674})
+    default Windows.ApplicationModel.Contacts.IContactListSyncManager
+    requires Windows.ApplicationModel.Contacts.IContactListSyncManager
+    requires Windows.ApplicationModel.Contacts.IContactListSyncManager2
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactListSyncStatus return
+        put put_Status slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager2 shape=4 reverse=22
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactListSyncStatus name=value
+    property last_successful_sync_time
+        get get_LastSuccessfulSyncTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=4 reverse=43
+            out datetime return
+        put put_LastSuccessfulSyncTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager2 shape=26 reverse=53
+            in datetime name=value
+    property last_attempted_sync_time
+        get get_LastAttemptedSyncTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=4 reverse=62
+            out datetime return
+        put put_LastAttemptedSyncTime slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager2 shape=26 reverse=82
+            in datetime name=value
+    event sync_status_changed
+        add add_SyncStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactListSyncManager,System.Object> name=handler
+            out event_token return
+        remove remove_SyncStatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=26 reverse=156
+            in event_token name=token
+    method sync_async
+        method SyncAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Contacts.ContactListSyncStatus python_type
+    py ContactListSyncStatus
+    signature enum(Windows.ApplicationModel.Contacts.ContactListSyncStatus;i4)
+
+class Windows.ApplicationModel.Contacts.ContactLocationField python_type
+    py ContactLocationField
+    signature rc(Windows.ApplicationModel.Contacts.ContactLocationField;{9ec00f82-ab6e-4b36-89e3-b23bc0a1dacc})
+    default Windows.ApplicationModel.Contacts.IContactLocationField
+    requires Windows.ApplicationModel.Contacts.IContactLocationField
+    requires Windows.ApplicationModel.Contacts.IContactField
+    factory Windows.ApplicationModel.Contacts.IContactLocationFieldFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=51 reverse=24
+            in string name=unstructuredAddress
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=117 reverse=45
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        ctor .ctor slot=8 inputs=7 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=286 reverse=71
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=street
+            in string name=city
+            in string name=region
+            in string name=country
+            in string name=postalCode
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+    property category
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=62
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=99
+            out string return
+    property city
+        get get_City slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=62
+            out string return
+    property country
+        get get_Country slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=121
+            out string return
+    property postal_code
+        get get_PostalCode slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=141
+            out string return
+    property region
+        get get_Region slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=99
+            out string return
+    property street
+        get get_Street slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=43
+            out string return
+    property unstructured_address
+        get get_UnstructuredAddress slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationField shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Contacts.ContactManager static python_type
+    py ContactManager
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics3
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics2
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics5
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics4
+    property system_sort_order static
+        get get_SystemSortOrder slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=218 static
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder return
+        put put_SystemSortOrder slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=223 static
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder name=value
+    property system_display_name_order static
+        get get_SystemDisplayNameOrder slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=202 static
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder return
+        put put_SystemDisplayNameOrder slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=210 static
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder name=value
+    property include_middle_name_in_system_display_and_sort static
+        get get_IncludeMiddleNameInSystemDisplayAndSort slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics5 shape=4 reverse=43 static
+            out boolean return
+        put put_IncludeMiddleNameInSystemDisplayAndSort slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics5 shape=4 reverse=62 static
+            in boolean name=value
+    method convert_contact_to_v_card_async static
+        method ConvertContactToVCardAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> return
+        method ConvertContactToVCardAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=117 reverse=45 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in uint32 name=maxBytes
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> return
+    method convert_v_card_to_contact_async static
+        method ConvertVCardToContactAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=65 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=vCard
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics4 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.Contacts.ContactManagerForUser return
+    method is_show_contact_card_supported static
+        method IsShowContactCardSupported slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=141 static
+            out boolean return
+    method is_show_delay_loaded_contact_card_supported static
+        method IsShowDelayLoadedContactCardSupported slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=173 static
+            out boolean return
+    method is_show_full_contact_card_supported_async static
+        method IsShowFullContactCardSupportedAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics5 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_annotation_store_async static
+        method RequestAnnotationStoreAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=124 static
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationStore> return
+    method request_store_async static
+        method RequestStoreAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=100 static
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> return
+        method RequestStoreAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=100 static
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> return
+    method show_contact_card static
+        method ShowContactCard slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
+        method ShowContactCard slot=12 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
+        method ShowContactCard slot=12 inputs=4 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
+    method show_delay_loaded_contact_card static
+        method ShowDelayLoadedContactCard slot=14 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=248 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
+            out class type=Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader return
+        method ShowDelayLoadedContactCard slot=14 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=248 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
+            out class type=Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader return
+    method show_full_contact_card static
+        method ShowFullContactCard slot=15 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=196 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in class type=Windows.ApplicationModel.Contacts.FullContactCardOptions name=fullContactCardOptions
+
+class Windows.ApplicationModel.Contacts.ContactManagerForUser python_type
+    py ContactManagerForUser
+    signature rc(Windows.ApplicationModel.Contacts.ContactManagerForUser;{b74bba57-1076-4bef-aef3-54686d18387d})
+    default Windows.ApplicationModel.Contacts.IContactManagerForUser
+    requires Windows.ApplicationModel.Contacts.IContactManagerForUser
+    requires Windows.ApplicationModel.Contacts.IContactManagerForUser2
+    property system_sort_order
+        get get_SystemSortOrder slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=4 reverse=173
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder return
+        put put_SystemSortOrder slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=4 reverse=186
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder name=value
+    property system_display_name_order
+        get get_SystemDisplayNameOrder slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=4 reverse=141
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder return
+        put put_SystemDisplayNameOrder slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=4 reverse=162
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder name=value
+    property user
+        get get_User slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=4 reverse=194
+            out class type=Windows.System.User return
+    method convert_contact_to_v_card_async
+        method ConvertContactToVCardAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> return
+        method ConvertContactToVCardAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=117 reverse=45
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in uint32 name=maxBytes
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> return
+    method convert_v_card_to_contact_async
+        method ConvertVCardToContactAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=vCard
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method request_annotation_store_async
+        method RequestAnnotationStoreAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=51 reverse=124
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationStore> return
+    method request_store_async
+        method RequestStoreAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser shape=51 reverse=100
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> return
+    method show_full_contact_card
+        method ShowFullContactCard slot=6 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerForUser2 shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in class type=Windows.ApplicationModel.Contacts.FullContactCardOptions name=fullContactCardOptions
+
+class Windows.ApplicationModel.Contacts.ContactMatchReason python_type
+    py ContactMatchReason
+    signature rc(Windows.ApplicationModel.Contacts.ContactMatchReason;{bc922504-e7d8-413e-95f4-b75c54c74077})
+    default Windows.ApplicationModel.Contacts.IContactMatchReason
+    requires Windows.ApplicationModel.Contacts.IContactMatchReason
+    property field
+        get get_Field slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactMatchReason shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactMatchReasonKind return
+    property segments
+        get get_Segments slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactMatchReason shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
+    property text
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactMatchReason shape=4 reverse=62
+            out string return
+
+enum Windows.ApplicationModel.Contacts.ContactMatchReasonKind python_type
+    py ContactMatchReasonKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactMatchReasonKind;i4)
+
+enum Windows.ApplicationModel.Contacts.ContactNameOrder python_type
+    py ContactNameOrder
+    signature enum(Windows.ApplicationModel.Contacts.ContactNameOrder;i4)
+
+class Windows.ApplicationModel.Contacts.ContactPanel python_type
+    py ContactPanel
+    signature rc(Windows.ApplicationModel.Contacts.ContactPanel;{41bf1265-d2ee-4b97-a80a-7d8d64cca6f5})
+    default Windows.ApplicationModel.Contacts.IContactPanel
+    requires Windows.ApplicationModel.Contacts.IContactPanel
+    property header_color
+        get get_HeaderColor slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
+        put put_HeaderColor slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=4 reverse=62
+            in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
+    event closing
+        add add_Closing slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs> name=handler
+            out event_token return
+        remove remove_Closing slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=26 reverse=167
+            in event_token name=token
+    event launch_full_app_requested
+        add add_LaunchFullAppRequested slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_LaunchFullAppRequested slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=26 reverse=134
+            in event_token name=token
+    method close_panel
+        method ClosePanel slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=0 reverse=16
+
+class Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs python_type
+    py ContactPanelClosingEventArgs
+    signature rc(Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs;{222174d3-cf4b-46d7-b739-6edc16110bfb})
+    default Windows.ApplicationModel.Contacts.IContactPanelClosingEventArgs
+    requires Windows.ApplicationModel.Contacts.IContactPanelClosingEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanelClosingEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs python_type
+    py ContactPanelLaunchFullAppRequestedEventArgs
+    signature rc(Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs;{88d61c0e-23b4-4be8-8afc-072c25a4190d})
+    default Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs
+    requires Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs shape=4 reverse=43
+            in boolean name=value
+
+class Windows.ApplicationModel.Contacts.ContactPhone activatable python_type
+    py ContactPhone
+    signature rc(Windows.ApplicationModel.Contacts.ContactPhone;{467dab65-2712-4f52-b783-9ea8111c63cd})
+    default Windows.ApplicationModel.Contacts.IContactPhone
+    requires Windows.ApplicationModel.Contacts.IContactPhone
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property number
+        get get_Number slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=22
+            out string return
+        put put_Number slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=43
+            in string name=value
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactPhoneKind return
+        put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactPhoneKind name=value
+    property description
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=121
+            out string return
+        put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPhone shape=4 reverse=141
+            in string name=value
+
+enum Windows.ApplicationModel.Contacts.ContactPhoneKind python_type
+    py ContactPhoneKind
+    signature enum(Windows.ApplicationModel.Contacts.ContactPhoneKind;i4)
+
+class Windows.ApplicationModel.Contacts.ContactPicker activatable python_type
+    py ContactPicker
+    signature rc(Windows.ApplicationModel.Contacts.ContactPicker;{0e09fd91-42f8-4055-90a0-896f96738936})
+    default Windows.ApplicationModel.Contacts.IContactPicker
+    requires Windows.ApplicationModel.Contacts.IContactPicker
+    requires Windows.ApplicationModel.Contacts.IContactPicker2
+    requires Windows.ApplicationModel.Contacts.IContactPicker3
+    factory Windows.ApplicationModel.Contacts.IContactPickerStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property selection_mode
+        get get_SelectionMode slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactSelectionMode return
+        put put_SelectionMode slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactSelectionMode name=value
+    property commit_button_text
+        get get_CommitButtonText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=22
+            out string return
+        put put_CommitButtonText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=43
+            in string name=value
+    property desired_fields
+        get get_DesiredFields slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property desired_fields_with_contact_field_type
+        get get_DesiredFieldsWithContactFieldType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker3 shape=4 reverse=22
+            out class type=Windows.System.User return
+    method create_for_user static
+        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPickerStatics shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.Contacts.ContactPicker return
+    method is_supported_async static
+        method IsSupportedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPickerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method pick_contact_async
+        method PickContactAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method pick_contacts_async
+        method PickContactsAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact>> return
+    method pick_multiple_contacts_async
+        method PickMultipleContactsAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation>> return
+    method pick_single_contact_async
+        method PickSingleContactAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactInformation> return
+
+enum Windows.ApplicationModel.Contacts.ContactQueryDesiredFields python_type
+    py ContactQueryDesiredFields
+    signature enum(Windows.ApplicationModel.Contacts.ContactQueryDesiredFields;u4)
+
+class Windows.ApplicationModel.Contacts.ContactQueryOptions activatable python_type
+    py ContactQueryOptions
+    signature rc(Windows.ApplicationModel.Contacts.ContactQueryOptions;{4408cc9e-7d7c-42f0-8ac7-f50733ecdbc1})
+    default Windows.ApplicationModel.Contacts.IContactQueryOptions
+    requires Windows.ApplicationModel.Contacts.IContactQueryOptions
+    factory Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory shape=51 reverse=24
+            in string name=text implicit
+            out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory shape=51 reverse=24
+            in string name=text
+            out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory shape=117 reverse=45
+            in string name=text
+            in enum_u32 type=Windows.ApplicationModel.Contacts.ContactQuerySearchFields name=fields
+            out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return
+    property include_contacts_from_hidden_lists
+        get get_IncludeContactsFromHiddenLists slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=62
+            out boolean return
+        put put_IncludeContactsFromHiddenLists slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=99
+            in boolean name=value
+    property desired_operations
+        get get_DesiredOperations slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=162
+            out enum_u32 type=Windows.ApplicationModel.Contacts.ContactAnnotationOperations return
+        put put_DesiredOperations slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=173
+            in enum_u32 type=Windows.ApplicationModel.Contacts.ContactAnnotationOperations name=value
+    property desired_fields
+        get get_DesiredFields slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=121
+            out enum_u32 type=Windows.ApplicationModel.Contacts.ContactQueryDesiredFields return
+        put put_DesiredFields slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=141
+            in enum_u32 type=Windows.ApplicationModel.Contacts.ContactQueryDesiredFields name=value
+    property annotation_list_ids
+        get get_AnnotationListIds slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property contact_list_ids
+        get get_ContactListIds slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property text_search
+        get get_TextSearch slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactQueryTextSearch return
+
+enum Windows.ApplicationModel.Contacts.ContactQuerySearchFields python_type
+    py ContactQuerySearchFields
+    signature enum(Windows.ApplicationModel.Contacts.ContactQuerySearchFields;u4)
+
+enum Windows.ApplicationModel.Contacts.ContactQuerySearchScope python_type
+    py ContactQuerySearchScope
+    signature enum(Windows.ApplicationModel.Contacts.ContactQuerySearchScope;i4)
+
+class Windows.ApplicationModel.Contacts.ContactQueryTextSearch python_type
+    py ContactQueryTextSearch
+    signature rc(Windows.ApplicationModel.Contacts.ContactQueryTextSearch;{f7e3f9cb-a957-439b-a0b7-1c02a1963ff0})
+    default Windows.ApplicationModel.Contacts.IContactQueryTextSearch
+    requires Windows.ApplicationModel.Contacts.IContactQueryTextSearch
+    property text
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=62
+            out string return
+        put put_Text slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=99
+            in string name=value
+    property search_scope
+        get get_SearchScope slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=121
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactQuerySearchScope return
+        put put_SearchScope slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=141
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactQuerySearchScope name=value
+    property fields
+        get get_Fields slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.Contacts.ContactQuerySearchFields return
+        put put_Fields slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactQueryTextSearch shape=4 reverse=43
+            in enum_u32 type=Windows.ApplicationModel.Contacts.ContactQuerySearchFields name=value
+
+class Windows.ApplicationModel.Contacts.ContactReader python_type
+    py ContactReader
+    signature rc(Windows.ApplicationModel.Contacts.ContactReader;{d397e42e-1488-42f2-bf64-253f4884bfed})
+    default Windows.ApplicationModel.Contacts.IContactReader
+    requires Windows.ApplicationModel.Contacts.IContactReader
+    method get_matching_properties_with_match_reason
+        method GetMatchingPropertiesWithMatchReason slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactReader shape=51 reverse=44
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactMatchReason> return
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactBatch> return
+
+enum Windows.ApplicationModel.Contacts.ContactRelationship python_type
+    py ContactRelationship
+    signature enum(Windows.ApplicationModel.Contacts.ContactRelationship;i4)
+
+enum Windows.ApplicationModel.Contacts.ContactSelectionMode python_type
+    py ContactSelectionMode
+    signature enum(Windows.ApplicationModel.Contacts.ContactSelectionMode;i4)
+
+class Windows.ApplicationModel.Contacts.ContactSignificantOther activatable python_type
+    py ContactSignificantOther
+    signature rc(Windows.ApplicationModel.Contacts.ContactSignificantOther;{8873b5ab-c5fb-46d8-93fe-da3ff1934054})
+    default Windows.ApplicationModel.Contacts.IContactSignificantOther
+    requires Windows.ApplicationModel.Contacts.IContactSignificantOther
+    requires Windows.ApplicationModel.Contacts.IContactSignificantOther2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther shape=4 reverse=43
+            in string name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther shape=4 reverse=99
+            in string name=value
+    property relationship
+        get get_Relationship slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther2 shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactRelationship return
+        put put_Relationship slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactSignificantOther2 shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactRelationship name=value
+
+class Windows.ApplicationModel.Contacts.ContactStore python_type
+    py ContactStore
+    signature rc(Windows.ApplicationModel.Contacts.ContactStore;{2c220b10-3a6c-4293-b9bc-fe987f6e0d52})
+    default Windows.ApplicationModel.Contacts.IContactStore
+    requires Windows.ApplicationModel.Contacts.IContactStore
+    requires Windows.ApplicationModel.Contacts.IContactStore2
+    requires Windows.ApplicationModel.Contacts.IContactStore3
+    property aggregate_contact_manager
+        get get_AggregateContactManager slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Contacts.AggregateContactManager return
+    property change_tracker
+        get get_ChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactChangeTracker return
+    event contact_changed
+        add add_ContactChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactStore,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> name=value
+            out event_token return
+        remove remove_ContactChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=26 reverse=82
+            in event_token name=value
+    method create_contact_list_async
+        method CreateContactListAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=163
+            in string name=displayName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactList> return
+        method CreateContactListAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=117 reverse=204
+            in string name=displayName
+            in string name=userDataAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactList> return
+    method find_contact_lists_async
+        method FindContactListsAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>> return
+    method find_contacts_async
+        method FindContactsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>> return
+        method FindContactsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore shape=51 reverse=44
+            in string name=searchText
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>> return
+    method get_change_tracker
+        method GetChangeTracker slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore3 shape=51 reverse=24
+            in string name=identity
+            out class type=Windows.ApplicationModel.Contacts.ContactChangeTracker return
+    method get_contact_async
+        method GetContactAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore shape=51 reverse=65
+            in string name=contactId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+    method get_contact_list_async
+        method GetContactListAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=144
+            in string name=contactListId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactList> return
+    method get_contact_reader
+        method GetContactReader slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Contacts.ContactReader return
+        method GetContactReader slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=196
+            in class type=Windows.ApplicationModel.Contacts.ContactQueryOptions name=options
+            out class type=Windows.ApplicationModel.Contacts.ContactReader return
+    method get_me_contact_async
+        method GetMeContactAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+
+enum Windows.ApplicationModel.Contacts.ContactStoreAccessType python_type
+    py ContactStoreAccessType
+    signature enum(Windows.ApplicationModel.Contacts.ContactStoreAccessType;i4)
+
+class Windows.ApplicationModel.Contacts.ContactStoreNotificationTriggerDetails python_type
+    py ContactStoreNotificationTriggerDetails
+    signature rc(Windows.ApplicationModel.Contacts.ContactStoreNotificationTriggerDetails;{abb298d6-878a-4f8b-a9ce-46bb7d1c84ce})
+    default Windows.ApplicationModel.Contacts.IContactStoreNotificationTriggerDetails
+    requires Windows.ApplicationModel.Contacts.IContactStoreNotificationTriggerDetails
+
+class Windows.ApplicationModel.Contacts.ContactWebsite activatable python_type
+    py ContactWebsite
+    signature rc(Windows.ApplicationModel.Contacts.ContactWebsite;{9f130176-dc1b-4055-ad66-652f39d990e8})
+    default Windows.ApplicationModel.Contacts.IContactWebsite
+    requires Windows.ApplicationModel.Contacts.IContactWebsite
+    requires Windows.ApplicationModel.Contacts.IContactWebsite2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactWebsite shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactWebsite shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactWebsite shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactWebsite shape=4 reverse=99
+            in string name=value
+    property raw_value
+        get get_RawValue slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactWebsite2 shape=4 reverse=22
+            out string return
+        put put_RawValue slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactWebsite2 shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Contacts.FullContactCardOptions activatable python_type
+    py FullContactCardOptions
+    signature rc(Windows.ApplicationModel.Contacts.FullContactCardOptions;{8744436c-5cf9-4683-bdca-a1fdebf8dbce})
+    default Windows.ApplicationModel.Contacts.IFullContactCardOptions
+    requires Windows.ApplicationModel.Contacts.IFullContactCardOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property desired_remaining_view
+        get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IFullContactCardOptions shape=4 reverse=22
+            out enum32 type=Windows.UI.ViewManagement.ViewSizePreference return
+        put put_DesiredRemainingView slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IFullContactCardOptions shape=4 reverse=43
+            in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=value
+
+interface Windows.ApplicationModel.Contacts.IAggregateContactManager
+    guid 0379d5dd-db5a-4fd3-b54e-4df17917a212
+
+interface Windows.ApplicationModel.Contacts.IAggregateContactManager2
+    guid 5e8cc2d8-a9cd-4430-9c4b-01348db2ca50
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> concrete
+    guid 857db963-f62c-53c4-a3a0-f6bf0c8fd3d3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    argument Windows.ApplicationModel.Contacts.Contact
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotation> concrete
+    guid 61ea54c3-d629-5b5e-b581-630504b51702
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactAnnotation;{821fc2ef-7d41-44a2-84c3-60a281dd7b86}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotation
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationList> concrete
+    guid 3a0a5967-c17c-579f-ba05-cc56e0a1d091
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotationList
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationStore> concrete
+    guid c6912277-5dd3-5e50-a7eb-a5660646d432
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactAnnotationStore;{23acf4aa-7a77-457d-8203-987f4b31af09}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotationStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactBatch> concrete
+    guid 446fb5e0-5d2b-591d-b8de-fb7c95fc9f37
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactBatch;{35d1972d-bfce-46bb-93f8-a5b06ec5e201}))
+    argument Windows.ApplicationModel.Contacts.ContactBatch
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactInformation> concrete
+    guid 0e51c030-27aa-561f-bbd8-2f57c08fef83
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactInformation;{275eb6d4-6a2e-4278-a914-e460d5f088f6}))
+    argument Windows.ApplicationModel.Contacts.ContactInformation
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactList> concrete
+    guid ae816b3d-57a8-50a7-807e-2c768a364a4f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42}))
+    argument Windows.ApplicationModel.Contacts.ContactList
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> concrete
+    guid 235e0791-9a3e-5723-87f0-44ffb786c9e1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.ContactStore;{2c220b10-3a6c-4293-b9bc-fe987f6e0d52}))
+    argument Windows.ApplicationModel.Contacts.ContactStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult> concrete
+    guid 031adb6c-3aa3-5b09-a8fb-92ea0145dc40
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult;{7d9b2552-1579-4ddc-871f-a30a3aea9ba1}))
+    argument Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact>> concrete
+    guid 0f0ff4e8-d25d-53a8-ba87-1a6b23e4315c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64})))
+    argument Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>> concrete
+    guid 938328e5-d460-50cc-9c94-7026a6b2e5b2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> concrete
+    guid 8ebd10f1-c10b-50a4-a7e5-b1ae2c32bab7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotation;{821fc2ef-7d41-44a2-84c3-60a281dd7b86})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>> concrete
+    guid a549e2bf-9e24-5352-923d-ff184f96acbb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange>> concrete
+    guid 48db578e-9eab-5e97-82ee-0fd07996c666
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactChange;{951d4b10-6a59-4720-a4e1-363d98c135d5})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation>> concrete
+    guid eab8500a-6a6f-5b05-89c2-8dcd66023b3d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactInformation;{275eb6d4-6a2e-4278-a914-e460d5f088f6})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>> concrete
+    guid 79fd4783-5cc9-571b-bc42-e2e2f8ddf967
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> concrete
+    guid d90442ca-543c-504b-9eb9-294bcad8a283
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    argument Windows.Storage.Streams.RandomAccessStreamReference
+
+interface Windows.ApplicationModel.Contacts.IContact
+    guid ec0072f3-2118-4049-9ebc-17f0ab692b64
+
+interface Windows.ApplicationModel.Contacts.IContact2
+    guid f312f365-bb77-4c94-802d-8328cee40c08
+
+interface Windows.ApplicationModel.Contacts.IContact3
+    guid 48201e67-e08e-42a4-b561-41d08ca9575d
+
+interface Windows.ApplicationModel.Contacts.IContactAddress
+    guid 9739d39a-42ce-4872-8d70-3063aa584b70
+
+interface Windows.ApplicationModel.Contacts.IContactAnnotation
+    guid 821fc2ef-7d41-44a2-84c3-60a281dd7b86
+
+interface Windows.ApplicationModel.Contacts.IContactAnnotation2
+    guid b691ecf3-4ab7-4a1f-9941-0c9cf3171b75
+
+interface Windows.ApplicationModel.Contacts.IContactAnnotationList
+    guid 92a486aa-5c88-45b9-aad0-461888e68d8a
+
+interface Windows.ApplicationModel.Contacts.IContactAnnotationStore
+    guid 23acf4aa-7a77-457d-8203-987f4b31af09
+
+interface Windows.ApplicationModel.Contacts.IContactAnnotationStore2
+    guid 7ede23fd-61e7-4967-8ec5-bdf280a24063
+
+interface Windows.ApplicationModel.Contacts.IContactBatch
+    guid 35d1972d-bfce-46bb-93f8-a5b06ec5e201
+
+interface Windows.ApplicationModel.Contacts.IContactCardDelayedDataLoader
+    guid b60af902-1546-434d-869c-6e3520760ef3
+
+interface Windows.ApplicationModel.Contacts.IContactCardOptions
+    guid 8c0a4f7e-6ab6-4f3f-be72-817236eeea5b
+
+interface Windows.ApplicationModel.Contacts.IContactCardOptions2
+    guid 8f271ba0-d74b-4cc6-9f53-1b0eb5d1273c
+
+interface Windows.ApplicationModel.Contacts.IContactChange
+    guid 951d4b10-6a59-4720-a4e1-363d98c135d5
+
+interface Windows.ApplicationModel.Contacts.IContactChangeReader
+    guid 217319fa-2d0c-42e0-a9da-3ecd56a78a47
+
+interface Windows.ApplicationModel.Contacts.IContactChangeTracker
+    guid 6e992952-309b-404d-9712-b37bd30278aa
+
+interface Windows.ApplicationModel.Contacts.IContactChangeTracker2
+    guid 7f8ad0fc-9321-4d18-9c09-d708c63fcd31
+
+interface Windows.ApplicationModel.Contacts.IContactChangedDeferral
+    guid c5143ae8-1b03-46f8-b694-a523e83cfcb6
+
+interface Windows.ApplicationModel.Contacts.IContactChangedEventArgs
+    guid 525e7fd1-73f3-4b7d-a918-580be4366121
+
+interface Windows.ApplicationModel.Contacts.IContactConnectedServiceAccount
+    guid f6f83553-aa27-4731-8e4a-3dec5ce9eec9
+
+interface Windows.ApplicationModel.Contacts.IContactDate
+    guid fe98ae66-b205-4934-9174-0ff2b0565707
+
+interface Windows.ApplicationModel.Contacts.IContactEmail
+    guid 90a219a9-e3d3-4d63-993b-05b9a5393abf
+
+interface Windows.ApplicationModel.Contacts.IContactField python_type
+    py _IContactField
+    guid b176486a-d293-492c-a058-db575b3e3c0f
+    signature {b176486a-d293-492c-a058-db575b3e3c0f}
+    property category
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=62
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactField shape=4 reverse=99
+            out string return
+
+interface Windows.ApplicationModel.Contacts.IContactFieldFactory python_type
+    py _IContactFieldFactory
+    guid 85e2913f-0e4a-4a3e-8994-406ae7ed646e
+    signature {85e2913f-0e4a-4a3e-8994-406ae7ed646e}
+    method create_field
+        method CreateField slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=117 reverse=25
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        method CreateField slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=195 reverse=46
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+        method CreateField slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactFieldFactory shape=239 reverse=69
+            in string name=name
+            in string name=value
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactField return
+
+interface Windows.ApplicationModel.Contacts.IContactGroup
+    guid 59bdeb01-9e9a-475d-bfe5-a37b806d852c
+
+interface Windows.ApplicationModel.Contacts.IContactInformation
+    guid 275eb6d4-6a2e-4278-a914-e460d5f088f6
+
+interface Windows.ApplicationModel.Contacts.IContactInstantMessageField
+    guid cce33b37-0d85-41fa-b43d-da599c3eb009
+
+interface Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory python_type
+    py _IContactInstantMessageFieldFactory
+    guid ba0b6794-91a3-4bb2-b1b9-69a5dff0ba09
+    signature {ba0b6794-91a3-4bb2-b1b9-69a5dff0ba09}
+    method create_instant_message
+        method CreateInstantMessage slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=51 reverse=24
+            in string name=userName
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        method CreateInstantMessage slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=117 reverse=45
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+        method CreateInstantMessage slot=8 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory shape=267 reverse=70
+            in string name=userName
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=service
+            in string name=displayText
+            in class type=Windows.Foundation.Uri name=verb
+            out class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField return
+
+interface Windows.ApplicationModel.Contacts.IContactJobInfo
+    guid 6d117b4c-ce50-4b43-9e69-b18258ea5315
+
+interface Windows.ApplicationModel.Contacts.IContactLaunchActionVerbsStatics
+    guid fb1232d6-ee73-46e7-8761-11cd0157728f
+
+interface Windows.ApplicationModel.Contacts.IContactList
+    guid 16ddec75-392c-4845-9dfb-51a3e7ef3e42
+
+interface Windows.ApplicationModel.Contacts.IContactList2
+    guid cb3943b4-4550-4dcb-9229-40ff91fb0203
+
+interface Windows.ApplicationModel.Contacts.IContactList3
+    guid 1578ee57-26fc-41e8-a850-5aa32514aca9
+
+interface Windows.ApplicationModel.Contacts.IContactListLimitedWriteOperations
+    guid e19813da-4a0b-44b8-9a1f-a0f3d218175f
+
+interface Windows.ApplicationModel.Contacts.IContactListSyncConstraints
+    guid b2b0bf01-3062-4e2e-969d-018d1987f314
+
+interface Windows.ApplicationModel.Contacts.IContactListSyncManager
+    guid 146e83be-7925-4acc-9de5-21ddd06f8674
+
+interface Windows.ApplicationModel.Contacts.IContactListSyncManager2
+    guid a9591247-bb55-4e23-8128-370134a85d0d
+
+interface Windows.ApplicationModel.Contacts.IContactLocationField
+    guid 9ec00f82-ab6e-4b36-89e3-b23bc0a1dacc
+
+interface Windows.ApplicationModel.Contacts.IContactLocationFieldFactory python_type
+    py _IContactLocationFieldFactory
+    guid f79932d7-2fdf-43fe-8f18-41897390bcfe
+    signature {f79932d7-2fdf-43fe-8f18-41897390bcfe}
+    method create_location
+        method CreateLocation slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=51 reverse=24
+            in string name=unstructuredAddress
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        method CreateLocation slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=117 reverse=45
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+        method CreateLocation slot=8 inputs=7 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactLocationFieldFactory shape=286 reverse=71
+            in string name=unstructuredAddress
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldCategory name=category
+            in string name=street
+            in string name=city
+            in string name=region
+            in string name=country
+            in string name=postalCode
+            out class type=Windows.ApplicationModel.Contacts.ContactLocationField return
+
+interface Windows.ApplicationModel.Contacts.IContactManagerForUser
+    guid b74bba57-1076-4bef-aef3-54686d18387d
+
+interface Windows.ApplicationModel.Contacts.IContactManagerForUser2
+    guid 4d469c2e-3b75-4a73-bb30-736645472256
+
+interface Windows.ApplicationModel.Contacts.IContactManagerStatics
+    guid 81f21ac0-f661-4708-ba4f-d386bd0d622e
+
+interface Windows.ApplicationModel.Contacts.IContactManagerStatics2
+    guid a178e620-47d8-48cc-963c-9592b6e510c6
+
+interface Windows.ApplicationModel.Contacts.IContactManagerStatics3
+    guid c4cc3d42-7586-492a-930b-7bc138fc2139
+
+interface Windows.ApplicationModel.Contacts.IContactManagerStatics4
+    guid 24982272-347b-46dc-8d95-51bd41e15aaf
+
+interface Windows.ApplicationModel.Contacts.IContactManagerStatics5
+    guid f7591a87-acb7-4fad-90f2-a8ab64cdbba4
+
+interface Windows.ApplicationModel.Contacts.IContactMatchReason
+    guid bc922504-e7d8-413e-95f4-b75c54c74077
+
+interface Windows.ApplicationModel.Contacts.IContactName
+    guid f404e97b-9034-453c-8ebf-140a38c86f1d
+
+interface Windows.ApplicationModel.Contacts.IContactPanel
+    guid 41bf1265-d2ee-4b97-a80a-7d8d64cca6f5
+
+interface Windows.ApplicationModel.Contacts.IContactPanelClosingEventArgs
+    guid 222174d3-cf4b-46d7-b739-6edc16110bfb
+
+interface Windows.ApplicationModel.Contacts.IContactPanelLaunchFullAppRequestedEventArgs
+    guid 88d61c0e-23b4-4be8-8afc-072c25a4190d
+
+interface Windows.ApplicationModel.Contacts.IContactPhone
+    guid 467dab65-2712-4f52-b783-9ea8111c63cd
+
+interface Windows.ApplicationModel.Contacts.IContactPicker
+    guid 0e09fd91-42f8-4055-90a0-896f96738936
+
+interface Windows.ApplicationModel.Contacts.IContactPicker2
+    guid b35011cf-5cef-4d24-aa0c-340c5208725d
+
+interface Windows.ApplicationModel.Contacts.IContactPicker3
+    guid 0e723315-b243-4bed-8516-22b1a7ac0ace
+
+interface Windows.ApplicationModel.Contacts.IContactPickerStatics
+    guid 7488c029-6a53-4258-a3e9-62dff6784b6c
+
+interface Windows.ApplicationModel.Contacts.IContactQueryOptions
+    guid 4408cc9e-7d7c-42f0-8ac7-f50733ecdbc1
+
+interface Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory
+    guid 543fba47-8ce7-46cb-9dac-9aa42a1bc8e2
+
+interface Windows.ApplicationModel.Contacts.IContactQueryTextSearch
+    guid f7e3f9cb-a957-439b-a0b7-1c02a1963ff0
+
+interface Windows.ApplicationModel.Contacts.IContactReader
+    guid d397e42e-1488-42f2-bf64-253f4884bfed
+
+interface Windows.ApplicationModel.Contacts.IContactSignificantOther
+    guid 8873b5ab-c5fb-46d8-93fe-da3ff1934054
+
+interface Windows.ApplicationModel.Contacts.IContactSignificantOther2
+    guid 8d7bd474-3f03-45f8-ba0f-c4ed37d64219
+
+interface Windows.ApplicationModel.Contacts.IContactStore
+    guid 2c220b10-3a6c-4293-b9bc-fe987f6e0d52
+
+interface Windows.ApplicationModel.Contacts.IContactStore2
+    guid 18ce1c22-ebd5-4bfb-b690-5f4f27c4f0e8
+
+interface Windows.ApplicationModel.Contacts.IContactStore3
+    guid cb882c6c-004e-4050-87f0-840407ee6818
+
+interface Windows.ApplicationModel.Contacts.IContactStoreNotificationTriggerDetails
+    guid abb298d6-878a-4f8b-a9ce-46bb7d1c84ce
+
+interface Windows.ApplicationModel.Contacts.IContactWebsite
+    guid 9f130176-dc1b-4055-ad66-652f39d990e8
+
+interface Windows.ApplicationModel.Contacts.IContactWebsite2
+    guid f87ee91e-5647-4068-bb5e-4b6f437ce308
+
+interface Windows.ApplicationModel.Contacts.IFullContactCardOptions
+    guid 8744436c-5cf9-4683-bdca-a1fdebf8dbce
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.Contact> concrete
+    guid 63319996-7e0f-552e-872b-7b9adb1f4997
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    argument Windows.ApplicationModel.Contacts.Contact
+
+interface Windows.ApplicationModel.Contacts.IKnownContactFieldStatics
+    guid 2e0e1b12-d627-4fca-bad4-1faf168c7d14
+
+interface Windows.ApplicationModel.Contacts.IPinnedContactIdsQueryResult
+    guid 7d9b2552-1579-4ddc-871f-a30a3aea9ba1
+
+interface Windows.ApplicationModel.Contacts.IPinnedContactManager
+    guid fcbc740c-e1d6-45c3-b8b6-a35604e167a0
+
+interface Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics
+    guid f65ccc7e-fdf9-486a-ace9-bc311d0ae7f0
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.UI.Color> concrete
+    guid ab8e5d11-b0c1-5a21-95ae-f16bf3a37624
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.UI.Color;u1;u1;u1;u1))
+    argument Windows.UI.Color
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> concrete
+    guid 945779db-01d2-5839-8a92-7905ec92b28f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    argument Windows.ApplicationModel.Contacts.Contact
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> concrete
+    guid d0c298ee-1520-539e-84b3-a25909717d20
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactAddress;{9739d39a-42ce-4872-8d70-3063aa584b70}))
+    argument Windows.ApplicationModel.Contacts.ContactAddress
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> concrete
+    guid 2c55fb80-a759-5fae-bc29-9907e0976048
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount;{f6f83553-aa27-4731-8e4a-3dec5ce9eec9}))
+    argument Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> concrete
+    guid 3135d944-d914-5a4f-843e-a6d6cb69bcb1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactDate;{fe98ae66-b205-4934-9174-0ff2b0565707}))
+    argument Windows.ApplicationModel.Contacts.ContactDate
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> concrete
+    guid 4ce06787-dea1-559f-a70a-fcbe59dbd3a4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactEmail;{90a219a9-e3d3-4d63-993b-05b9a5393abf}))
+    argument Windows.ApplicationModel.Contacts.ContactEmail
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> concrete
+    guid 6fdc2115-1649-54a4-8faa-3049cefb05a4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> concrete
+    guid ea148f90-bb89-5604-9757-ecd1e7ce5311
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactJobInfo;{6d117b4c-ce50-4b43-9e69-b18258ea5315}))
+    argument Windows.ApplicationModel.Contacts.ContactJobInfo
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> concrete
+    guid 6d1f883a-1f30-5a87-b54a-8e2245ed1001
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactPhone;{467dab65-2712-4f52-b783-9ea8111c63cd}))
+    argument Windows.ApplicationModel.Contacts.ContactPhone
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> concrete
+    guid cec34450-8143-56e3-933a-d33051b74437
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactSignificantOther;{8873b5ab-c5fb-46d8-93fe-da3ff1934054}))
+    argument Windows.ApplicationModel.Contacts.ContactSignificantOther
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> concrete
+    guid 1931848e-e794-5775-b393-4a4518d63b09
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Contacts.ContactWebsite;{9f130176-dc1b-4055-ad66-652f39d990e8}))
+    argument Windows.ApplicationModel.Contacts.ContactWebsite
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> concrete
+    guid f9dd472b-4f50-583a-a3aa-b73af54806be
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{b176486a-d293-492c-a058-db575b3e3c0f})
+    argument Windows.ApplicationModel.Contacts.IContactField
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> concrete
+    guid 9bca75b8-b0fa-5761-b959-381927a5f9d0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    argument Windows.ApplicationModel.Contacts.Contact
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation> concrete
+    guid b79bca82-9ddb-51df-94ec-2f339cd906e9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotation;{821fc2ef-7d41-44a2-84c3-60a281dd7b86}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> concrete
+    guid 3bf71d9d-2037-5e08-a7e1-b937cf74bbd9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotationList
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange> concrete
+    guid e97bb481-b86d-504f-b309-44c9b098e92d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactChange;{951d4b10-6a59-4720-a4e1-363d98c135d5}))
+    argument Windows.ApplicationModel.Contacts.ContactChange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> concrete
+    guid 9c1b3046-f16a-57d7-87a7-eaa2e880d9a9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactField;{b176486a-d293-492c-a058-db575b3e3c0f}))
+    argument Windows.ApplicationModel.Contacts.ContactField
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation> concrete
+    guid b9e80b52-02cb-5824-95ab-5cca3de394d3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactInformation;{275eb6d4-6a2e-4278-a914-e460d5f088f6}))
+    argument Windows.ApplicationModel.Contacts.ContactInformation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInstantMessageField> concrete
+    guid b65efa04-cda8-597a-8abb-a6e1fe34c00f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactInstantMessageField;{cce33b37-0d85-41fa-b43d-da599c3eb009}))
+    argument Windows.ApplicationModel.Contacts.ContactInstantMessageField
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> concrete
+    guid a55c7dcf-e3c9-5afa-8667-ca68230d7724
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42}))
+    argument Windows.ApplicationModel.Contacts.ContactList
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactLocationField> concrete
+    guid 1febf4ca-48dd-5faf-a2d3-74770d8aa330
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactLocationField;{9ec00f82-ab6e-4b36-89e3-b23bc0a1dacc}))
+    argument Windows.ApplicationModel.Contacts.ContactLocationField
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactMatchReason> concrete
+    guid c82c0b6d-28d6-5c27-926d-96d027508871
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactMatchReason;{bc922504-e7d8-413e-95f4-b75c54c74077}))
+    argument Windows.ApplicationModel.Contacts.ContactMatchReason
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete
+    guid 2f245f9d-eb5f-5641-9dcc-6ab1946cc7e6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))
+    argument Windows.Data.Text.TextSegment
+
+class Windows.ApplicationModel.Contacts.KnownContactField static python_type
+    py KnownContactField
+    factory Windows.ApplicationModel.Contacts.IKnownContactFieldStatics
+    property email static
+        get get_Email slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=4 reverse=22 static deprecated
+            out string return
+    property instant_message static
+        get get_InstantMessage slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=4 reverse=99 static deprecated
+            out string return
+    property location static
+        get get_Location slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=4 reverse=62 static deprecated
+            out string return
+    property phone_number static
+        get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=4 reverse=43 static deprecated
+            out string return
+    method convert_name_to_type static deprecated
+        method ConvertNameToType slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=51 reverse=124 static deprecated
+            in string name=name
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    method convert_type_to_name static deprecated
+        method ConvertTypeToName slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=51 reverse=144 static deprecated
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
+            out string return
+
+class Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult python_type
+    py PinnedContactIdsQueryResult
+    signature rc(Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult;{7d9b2552-1579-4ddc-871f-a30a3aea9ba1})
+    default Windows.ApplicationModel.Contacts.IPinnedContactIdsQueryResult
+    requires Windows.ApplicationModel.Contacts.IPinnedContactIdsQueryResult
+    property contact_ids
+        get get_ContactIds slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactIdsQueryResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.ApplicationModel.Contacts.PinnedContactManager python_type
+    py PinnedContactManager
+    signature rc(Windows.ApplicationModel.Contacts.PinnedContactManager;{fcbc740c-e1d6-45c3-b8b6-a35604e167a0})
+    default Windows.ApplicationModel.Contacts.IPinnedContactManager
+    requires Windows.ApplicationModel.Contacts.IPinnedContactManager
+    factory Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=4 reverse=22
+            out class type=Windows.System.User return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Contacts.PinnedContactManager return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.Contacts.PinnedContactManager return
+    method get_pinned_contact_ids_async
+        method GetPinnedContactIdsAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult> return
+    method is_contact_pinned
+        method IsContactPinned slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in enum32 type=Windows.ApplicationModel.Contacts.PinnedContactSurface name=surface
+            out boolean return
+    method is_pin_surface_supported
+        method IsPinSurfaceSupported slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=51 reverse=44
+            in enum32 type=Windows.ApplicationModel.Contacts.PinnedContactSurface name=surface
+            out boolean return
+    method is_supported static
+        method IsSupported slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManagerStatics shape=4 reverse=62 static
+            out boolean return
+    method request_pin_contact_async
+        method RequestPinContactAsync slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=117 reverse=101
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in enum32 type=Windows.ApplicationModel.Contacts.PinnedContactSurface name=surface
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_pin_contacts_async
+        method RequestPinContactsAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=117 reverse=125
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.Contact> name=contacts
+            in enum32 type=Windows.ApplicationModel.Contacts.PinnedContactSurface name=surface
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_unpin_contact_async
+        method RequestUnpinContactAsync slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=117 reverse=145
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in enum32 type=Windows.ApplicationModel.Contacts.PinnedContactSurface name=surface
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method signal_contact_activity
+        method SignalContactActivity slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IPinnedContactManager shape=4 reverse=162
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+
+enum Windows.ApplicationModel.Contacts.PinnedContactSurface python_type
+    py PinnedContactSurface
+    signature enum(Windows.ApplicationModel.Contacts.PinnedContactSurface;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactList,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> concrete
+    guid c953dc00-30be-5379-bcac-435c6bad3ce6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42});rc(Windows.ApplicationModel.Contacts.ContactChangedEventArgs;{525e7fd1-73f3-4b7d-a918-580be4366121}))
+    argument Windows.ApplicationModel.Contacts.ContactList
+    argument Windows.ApplicationModel.Contacts.ContactChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactListSyncManager,System.Object> concrete
+    guid f0c4ce23-4e80-5cb1-9f43-fbdc1c609122
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.ContactListSyncManager;{146e83be-7925-4acc-9de5-21ddd06f8674});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Contacts.ContactListSyncManager
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs> concrete
+    guid 4357954b-bce6-5456-a511-fe8904e8090b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.ContactPanel;{41bf1265-d2ee-4b97-a80a-7d8d64cca6f5});rc(Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs;{222174d3-cf4b-46d7-b739-6edc16110bfb}))
+    argument Windows.ApplicationModel.Contacts.ContactPanel
+    argument Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs> concrete
+    guid c4030df2-ad34-5575-a369-5616577878eb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.ContactPanel;{41bf1265-d2ee-4b97-a80a-7d8d64cca6f5});rc(Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs;{88d61c0e-23b4-4be8-8afc-072c25a4190d}))
+    argument Windows.ApplicationModel.Contacts.ContactPanel
+    argument Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactStore,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> concrete
+    guid 5da35e68-7513-5ead-aad4-cdd3de4e5ae7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.ContactStore;{2c220b10-3a6c-4293-b9bc-fe987f6e0d52});rc(Windows.ApplicationModel.Contacts.ContactChangedEventArgs;{525e7fd1-73f3-4b7d-a918-580be4366121}))
+    argument Windows.ApplicationModel.Contacts.ContactStore
+    argument Windows.ApplicationModel.Contacts.ContactChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Data.Text.TextSegment external
+    py winrt.windows.data.text.TextSegment
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+class Windows.Storage.Streams.RandomAccessStreamReference external
+    py winrt.windows.storage.streams.RandomAccessStreamReference
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement
+
+enum Windows.UI.ViewManagement.ViewSizePreference external
+    py winrt.windows.ui.viewmanagement.ViewSizePreference

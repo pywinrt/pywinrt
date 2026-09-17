@@ -1,0 +1,216 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.PushNotifications
+
+delegate Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs> concrete
+    guid 7d4309e7-b3ca-5fde-9b37-be323adb370f
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs;{20e1a24c-1a34-5beb-aae2-40c232c8c140}))
+    argument Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> concrete
+    guid 70945a09-331a-5e40-b854-66b7a3233bab
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.PushNotifications.PushNotificationChannel;{2b28102e-ef0b-4f39-9b8a-a3c194de7081}))
+    argument Windows.Networking.PushNotifications.PushNotificationChannel
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannel
+    guid 2b28102e-ef0b-4f39-9b8a-a3c194de7081
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser
+    guid a4c45704-1182-42c7-8890-f563c4890dc4
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2
+    guid c38b066a-7cc1-4dac-87fd-be6e920414a4
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics
+    guid 8baf9b65-77a1-4588-bd19-861529a9dcf0
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2
+    guid b444a65d-a7e9-4b28-950e-f375a907f9df
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3
+    guid 4701fefe-0ede-4a3f-ae78-bfa471496925
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4
+    guid bc540efb-7820-5a5b-9c01-b4757f774025
+
+interface Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs
+    guid 20e1a24c-1a34-5beb-aae2-40c232c8c140
+
+interface Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs
+    guid d1065e0c-36cd-484c-b935-0a99b753cf00
+
+interface Windows.Networking.PushNotifications.IRawNotification
+    guid 1a227281-3b79-42ac-9963-22ab00d4f0b7
+
+interface Windows.Networking.PushNotifications.IRawNotification2
+    guid e6d0cf19-0c6f-4cdd-9424-eec5be014d26
+
+interface Windows.Networking.PushNotifications.IRawNotification3
+    guid 62737dde-8a73-424c-ab44-5635f40a96e5
+
+class Windows.Networking.PushNotifications.PushNotificationChannel python_type
+    py PushNotificationChannel
+    signature rc(Windows.Networking.PushNotifications.PushNotificationChannel;{2b28102e-ef0b-4f39-9b8a-a3c194de7081})
+    default Windows.Networking.PushNotifications.IPushNotificationChannel
+    requires Windows.Networking.PushNotifications.IPushNotificationChannel
+    property expiration_time
+        get get_ExpirationTime slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4 reverse=43
+            out datetime return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4 reverse=22
+            out string return
+    event push_notification_received
+        add add_PushNotificationReceived slot=9 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PushNotificationReceived slot=10 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=26 reverse=134
+            in event_token name=token
+    method close
+        method Close slot=8 inputs=0 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=0 reverse=55
+
+class Windows.Networking.PushNotifications.PushNotificationChannelManager static python_type
+    py PushNotificationChannelManager
+    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2
+    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics
+    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3
+    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4
+    event channels_revoked static
+        add add_ChannelsRevoked slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=51 reverse=24 static
+            in delegate type=Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs> name=handler
+            out event_token return
+        remove remove_ChannelsRevoked slot=7 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=26 reverse=53 static
+            in event_token name=token
+    method create_push_notification_channel_for_application_async static
+        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 reverse=44 static
+            in string name=applicationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+    method create_push_notification_channel_for_secondary_tile_async static
+        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 reverse=65 static
+            in string name=tileId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3 shape=4 reverse=22 static
+            out class type=Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser return
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser return
+
+class Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser python_type
+    py PushNotificationChannelManagerForUser
+    signature rc(Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser;{a4c45704-1182-42c7-8890-f563c4890dc4})
+    default Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser
+    requires Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser
+    requires Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2
+    property user
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4 reverse=99
+            out class type=Windows.System.User return
+    method create_push_notification_channel_for_application_async
+        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51 reverse=44
+            in string name=applicationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+    method create_push_notification_channel_for_secondary_tile_async
+        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51 reverse=65
+            in string name=tileId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+    method create_raw_push_notification_channel_with_alternate_key_for_application_async
+        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=117 reverse=25
+            in interface type=Windows.Storage.Streams.IBuffer name=appServerKey
+            in string name=channelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=195 reverse=46
+            in interface type=Windows.Storage.Streams.IBuffer name=appServerKey
+            in string name=channelId
+            in string name=appId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
+
+class Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs python_type
+    py PushNotificationChannelsRevokedEventArgs
+    signature rc(Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs;{20e1a24c-1a34-5beb-aae2-40c232c8c140})
+    default Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs
+    requires Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs
+
+class Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs python_type
+    py PushNotificationReceivedEventArgs
+    signature rc(Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs;{d1065e0c-36cd-484c-b935-0a99b753cf00})
+    default Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs
+    requires Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs
+    property cancel
+        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Cancel slot=6 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=22
+            in boolean name=value
+    property badge_notification
+        get get_BadgeNotification slot=11 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=141
+            out class type=Windows.UI.Notifications.BadgeNotification return
+    property notification_type
+        get get_NotificationType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=62
+            out enum32 type=Windows.Networking.PushNotifications.PushNotificationType return
+    property raw_notification
+        get get_RawNotification slot=12 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=162
+            out class type=Windows.Networking.PushNotifications.RawNotification return
+    property tile_notification
+        get get_TileNotification slot=10 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=121
+            out class type=Windows.UI.Notifications.TileNotification return
+    property toast_notification
+        get get_ToastNotification slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.UI.Notifications.ToastNotification return
+
+enum Windows.Networking.PushNotifications.PushNotificationType python_type
+    py PushNotificationType
+    signature enum(Windows.Networking.PushNotifications.PushNotificationType;i4)
+
+class Windows.Networking.PushNotifications.RawNotification python_type
+    py RawNotification
+    signature rc(Windows.Networking.PushNotifications.RawNotification;{1a227281-3b79-42ac-9963-22ab00d4f0b7})
+    default Windows.Networking.PushNotifications.IRawNotification
+    requires Windows.Networking.PushNotifications.IRawNotification
+    requires Windows.Networking.PushNotifications.IRawNotification2
+    requires Windows.Networking.PushNotifications.IRawNotification3
+    property content
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification shape=4 reverse=22
+            out string return
+    property channel_id
+        get get_ChannelId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4 reverse=43
+            out string return
+    property headers
+        get get_Headers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property content_bytes
+        get get_ContentBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification3 shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs> concrete
+    guid 55fa217d-1fc3-5863-b980-7094d4379694
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.PushNotifications.PushNotificationChannel;{2b28102e-ef0b-4f39-9b8a-a3c194de7081});rc(Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs;{d1065e0c-36cd-484c-b935-0a99b753cf00}))
+    argument Windows.Networking.PushNotifications.PushNotificationChannel
+    argument Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+class Windows.UI.Notifications.BadgeNotification external
+    py winrt.windows.ui.notifications.BadgeNotification
+
+class Windows.UI.Notifications.TileNotification external
+    py winrt.windows.ui.notifications.TileNotification
+
+class Windows.UI.Notifications.ToastNotification external
+    py winrt.windows.ui.notifications.ToastNotification

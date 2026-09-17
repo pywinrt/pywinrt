@@ -1,0 +1,206 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Dispatching
+
+class Microsoft.UI.Dispatching.DispatcherExitDeferral activatable python_type
+    py DispatcherExitDeferral
+    signature rc(Microsoft.UI.Dispatching.DispatcherExitDeferral;{910b5aac-3310-563e-8418-f3005579729e})
+    default Microsoft.UI.Dispatching.IDispatcherExitDeferral
+    requires Microsoft.UI.Dispatching.IDispatcherExitDeferral
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherExitDeferral shape=0 reverse=16
+
+class Microsoft.UI.Dispatching.DispatcherQueue python_type
+    py DispatcherQueue
+    signature rc(Microsoft.UI.Dispatching.DispatcherQueue;{f6ebf8fa-be1c-5bf6-a467-73da28738ae8})
+    default Microsoft.UI.Dispatching.IDispatcherQueue
+    requires Microsoft.UI.Dispatching.IDispatcherQueue
+    requires Microsoft.UI.Dispatching.IDispatcherQueue2
+    requires Microsoft.UI.Dispatching.IDispatcherQueue3
+    factory Microsoft.UI.Dispatching.IDispatcherQueueStatics
+    property has_thread_access
+        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue2 shape=4 reverse=22
+            out boolean return
+    event shutdown_completed
+        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
+            out event_token return
+        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=167
+            in event_token name=token
+    event shutdown_starting
+        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
+            out event_token return
+        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=134
+            in event_token name=token
+    event framework_shutdown_completed
+        add add_FrameworkShutdownCompleted slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
+            out event_token return
+        remove remove_FrameworkShutdownCompleted slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=181
+            in event_token name=token
+    event framework_shutdown_starting
+        add add_FrameworkShutdownStarting slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
+            out event_token return
+        remove remove_FrameworkShutdownStarting slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=156
+            in event_token name=token
+    method create_timer
+        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=4 reverse=22
+            out class type=Microsoft.UI.Dispatching.DispatcherQueueTimer return
+    method enqueue_event_loop_exit
+        method EnqueueEventLoopExit slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=16
+    method ensure_system_dispatcher_queue
+        method EnsureSystemDispatcherQueue slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=37
+    method get_for_current_thread static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Dispatching.DispatcherQueue return
+    method run_event_loop
+        method RunEventLoop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=55
+        method RunEventLoop slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=100
+            in enum_u32 type=Microsoft.UI.Dispatching.DispatcherRunOptions name=options
+            in class type=Microsoft.UI.Dispatching.DispatcherExitDeferral name=deferral
+    method try_enqueue
+        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=44
+            in delegate type=Microsoft.UI.Dispatching.DispatcherQueueHandler name=callback
+            out boolean return
+        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=117 reverse=66
+            in enum32 type=Microsoft.UI.Dispatching.DispatcherQueuePriority name=priority
+            in delegate type=Microsoft.UI.Dispatching.DispatcherQueueHandler name=callback
+            out boolean return
+
+class Microsoft.UI.Dispatching.DispatcherQueueController python_type
+    py DispatcherQueueController
+    signature rc(Microsoft.UI.Dispatching.DispatcherQueueController;{bce8178d-2183-584c-9e5b-f9366f6ae484})
+    default Microsoft.UI.Dispatching.IDispatcherQueueController
+    requires Microsoft.UI.Dispatching.IDispatcherQueueController
+    requires Microsoft.UI.Dispatching.IDispatcherQueueController2
+    factory Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics
+    property dispatcher_queue
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4 reverse=22
+            out class type=Microsoft.UI.Dispatching.DispatcherQueue return
+    method create_on_current_thread static
+        method CreateOnCurrentThread slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Dispatching.DispatcherQueueController return
+    method create_on_dedicated_thread static
+        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Dispatching.DispatcherQueueController return
+    method shutdown_queue
+        method ShutdownQueue slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController2 shape=0 reverse=16
+    method shutdown_queue_async
+        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+delegate Microsoft.UI.Dispatching.DispatcherQueueHandler python_type
+    py DispatcherQueueHandler
+    guid 2e0872a9-4e29-5f14-b688-fb96d5f9d5f8
+    signature delegate({2e0872a9-4e29-5f14-b688-fb96d5f9d5f8})
+    method -
+        method Invoke slot=3 inputs=0 outputs=0 shape=0 reverse=0
+
+enum Microsoft.UI.Dispatching.DispatcherQueuePriority python_type
+    py DispatcherQueuePriority
+    signature enum(Microsoft.UI.Dispatching.DispatcherQueuePriority;i4)
+
+class Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs python_type
+    py DispatcherQueueShutdownStartingEventArgs
+    signature rc(Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs;{32519be5-072b-5660-a70e-8835c9b8157d})
+    default Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs
+    requires Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Microsoft.UI.Dispatching.DispatcherQueueTimer python_type
+    py DispatcherQueueTimer
+    signature rc(Microsoft.UI.Dispatching.DispatcherQueueTimer;{ad4d63fd-88fe-541f-ac11-bf2dc1ed2ce5})
+    default Microsoft.UI.Dispatching.IDispatcherQueueTimer
+    requires Microsoft.UI.Dispatching.IDispatcherQueueTimer
+    property is_repeating
+        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=99
+            out boolean return
+        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=121
+            in boolean name=value
+    property interval
+        get get_Interval slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=22
+            out timespan return
+        put put_Interval slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26 reverse=53
+            in timespan name=value
+    property is_running
+        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=62
+            out boolean return
+    event tick
+        add add_Tick slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueueTimer,System.Object> name=handler
+            out event_token return
+        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26 reverse=192
+            in event_token name=token
+    method start
+        method Start slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=137
+    method stop
+        method Stop slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=159
+
+enum Microsoft.UI.Dispatching.DispatcherRunOptions python_type
+    py DispatcherRunOptions
+    signature enum(Microsoft.UI.Dispatching.DispatcherRunOptions;u4)
+
+interface Microsoft.UI.Dispatching.IDispatcherExitDeferral
+    guid 910b5aac-3310-563e-8418-f3005579729e
+
+interface Microsoft.UI.Dispatching.IDispatcherQueue
+    guid f6ebf8fa-be1c-5bf6-a467-73da28738ae8
+
+interface Microsoft.UI.Dispatching.IDispatcherQueue2
+    guid 0cf48751-f1ac-59b8-ba52-6ce7a1444d6f
+
+interface Microsoft.UI.Dispatching.IDispatcherQueue3
+    guid 14a7a175-5c27-5a35-b079-21960cf764a8
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueController
+    guid bce8178d-2183-584c-9e5b-f9366f6ae484
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueController2
+    guid 4c68ee2a-1cb1-5591-a3a2-9b590b8f8b9a
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics
+    guid f18d6145-722b-593d-bcf2-a61e713f0037
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs
+    guid 32519be5-072b-5660-a70e-8835c9b8157d
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueStatics
+    guid cd3382ea-a455-5124-b63a-ca40d34ca23c
+
+interface Microsoft.UI.Dispatching.IDispatcherQueueTimer
+    guid ad4d63fd-88fe-541f-ac11-bf2dc1ed2ce5
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> concrete
+    guid ecd63a61-4dbf-57bc-880c-a255dfe352c3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueue;{f6ebf8fa-be1c-5bf6-a467-73da28738ae8});rc(Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs;{32519be5-072b-5660-a70e-8835c9b8157d}))
+    argument Microsoft.UI.Dispatching.DispatcherQueue
+    argument Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> concrete
+    guid 3bdaf5dd-3da4-5b44-adb3-6990540afac6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueue;{f6ebf8fa-be1c-5bf6-a467-73da28738ae8});cinterface(IInspectable))
+    argument Microsoft.UI.Dispatching.DispatcherQueue
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueueTimer,System.Object> concrete
+    guid 2182a2ac-7545-566a-984f-b10f07bab089
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueueTimer;{ad4d63fd-88fe-541f-ac11-bf2dc1ed2ce5});cinterface(IInspectable))
+    argument Microsoft.UI.Dispatching.DispatcherQueueTimer
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

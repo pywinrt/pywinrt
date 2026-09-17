@@ -1,0 +1,201 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Navigation
+
+class Microsoft.UI.Xaml.Navigation.FrameNavigationOptions composable python_type
+    py FrameNavigationOptions
+    signature rc(Microsoft.UI.Xaml.Navigation.FrameNavigationOptions;{390de593-14cf-5312-af99-6cd8d59ec5d5})
+    default Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions
+    requires Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions
+    composable Microsoft.UI.Xaml.Navigation.IFrameNavigationOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IFrameNavigationOptionsFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Navigation.FrameNavigationOptions return
+    property transition_info_override
+        get get_TransitionInfoOverride slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
+        put put_TransitionInfoOverride slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=99
+            in class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo name=value
+    property is_navigation_stack_enabled
+        get get_IsNavigationStackEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=22
+            out boolean return
+        put put_IsNavigationStackEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=43
+            in boolean name=value
+
+interface Microsoft.UI.Xaml.Navigation.IFrameNavigationOptions
+    guid 390de593-14cf-5312-af99-6cd8d59ec5d5
+
+interface Microsoft.UI.Xaml.Navigation.IFrameNavigationOptionsFactory
+    guid ddf3f748-7127-5cee-9f79-ac281a234632
+
+interface Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs
+    guid 172fde12-e06f-5df6-930e-5facf7b3fbe7
+
+interface Microsoft.UI.Xaml.Navigation.INavigationEventArgs
+    guid 876b70b4-2923-5785-9cea-2e44aa0761bd
+
+interface Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs
+    guid f808f9a0-130c-5974-87f8-4433271a35a9
+
+interface Microsoft.UI.Xaml.Navigation.IPageStackEntry
+    guid d591f56e-4262-5c91-9d79-29165cd82100
+
+interface Microsoft.UI.Xaml.Navigation.IPageStackEntryFactory
+    guid 7e5a9469-6108-5e92-a499-5ee9f065a68a
+
+interface Microsoft.UI.Xaml.Navigation.IPageStackEntryStatics
+    guid 2f1d4cb7-923b-59bb-bfc4-750933f28385
+
+delegate Microsoft.UI.Xaml.Navigation.NavigatedEventHandler python_type
+    py NavigatedEventHandler
+    guid 8631b517-6d8e-58ee-82fe-d4034d1bd7c1
+    signature delegate({8631b517-6d8e-58ee-82fe-d4034d1bd7c1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Navigation.NavigationEventArgs name=e
+
+class Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs python_type
+    py NavigatingCancelEventArgs
+    signature rc(Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs;{172fde12-e06f-5df6-930e-5facf7b3fbe7})
+    default Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs
+    requires Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs
+    property cancel
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=43
+            in boolean name=value
+    property navigation_mode
+        get get_NavigationMode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=62
+            out enum32 type=Microsoft.UI.Xaml.Navigation.NavigationMode return
+    property navigation_transition_info
+        get get_NavigationTransitionInfo slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=141
+            out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
+    property parameter
+        get get_Parameter slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=121
+            out object return
+    property source_page_type
+        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+
+delegate Microsoft.UI.Xaml.Navigation.NavigatingCancelEventHandler python_type
+    py NavigatingCancelEventHandler
+    guid fcae1401-ec94-565f-9f48-7c4b6272b3b1
+    signature delegate({fcae1401-ec94-565f-9f48-7c4b6272b3b1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs name=e
+
+enum Microsoft.UI.Xaml.Navigation.NavigationCacheMode python_type
+    py NavigationCacheMode
+    signature enum(Microsoft.UI.Xaml.Navigation.NavigationCacheMode;i4)
+
+class Microsoft.UI.Xaml.Navigation.NavigationEventArgs python_type
+    py NavigationEventArgs
+    signature rc(Microsoft.UI.Xaml.Navigation.NavigationEventArgs;{876b70b4-2923-5785-9cea-2e44aa0761bd})
+    default Microsoft.UI.Xaml.Navigation.INavigationEventArgs
+    requires Microsoft.UI.Xaml.Navigation.INavigationEventArgs
+    property uri
+        get get_Uri slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=162
+            in class type=Windows.Foundation.Uri name=value
+    property content
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=22
+            out object return
+    property navigation_mode
+        get get_NavigationMode slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=121
+            out enum32 type=Microsoft.UI.Xaml.Navigation.NavigationMode return
+    property navigation_transition_info
+        get get_NavigationTransitionInfo slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
+    property parameter
+        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=43
+            out object return
+    property source_page_type
+        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+
+class Microsoft.UI.Xaml.Navigation.NavigationFailedEventArgs python_type
+    py NavigationFailedEventArgs
+    signature rc(Microsoft.UI.Xaml.Navigation.NavigationFailedEventArgs;{f808f9a0-130c-5974-87f8-4433271a35a9})
+    default Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs
+    requires Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs
+    property handled
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=62
+            in boolean name=value
+    property exception
+        get get_Exception slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=22
+            out hresult return
+    property source_page_type
+        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+
+delegate Microsoft.UI.Xaml.Navigation.NavigationFailedEventHandler python_type
+    py NavigationFailedEventHandler
+    guid 97ca2b56-d6eb-5fd2-a675-a339640eedba
+    signature delegate({97ca2b56-d6eb-5fd2-a675-a339640eedba})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Navigation.NavigationFailedEventArgs name=e
+
+enum Microsoft.UI.Xaml.Navigation.NavigationMode python_type
+    py NavigationMode
+    signature enum(Microsoft.UI.Xaml.Navigation.NavigationMode;i4)
+
+delegate Microsoft.UI.Xaml.Navigation.NavigationStoppedEventHandler python_type
+    py NavigationStoppedEventHandler
+    guid b9e796a6-7ffe-5a63-aef4-cbc331663b66
+    signature delegate({b9e796a6-7ffe-5a63-aef4-cbc331663b66})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Navigation.NavigationEventArgs name=e
+
+class Microsoft.UI.Xaml.Navigation.PageStackEntry python_type
+    py PageStackEntry
+    signature rc(Microsoft.UI.Xaml.Navigation.PageStackEntry;{d591f56e-4262-5c91-9d79-29165cd82100})
+    base Microsoft.UI.Xaml.DependencyObject
+    default Microsoft.UI.Xaml.Navigation.IPageStackEntry
+    requires Microsoft.UI.Xaml.Navigation.IPageStackEntry
+    factory Microsoft.UI.Xaml.Navigation.IPageStackEntryStatics
+    factory Microsoft.UI.Xaml.Navigation.IPageStackEntryFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntryFactory shape=230
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=sourcePageType
+            in object name=parameter
+            in class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo name=navigationTransitionInfo
+            out class type=Microsoft.UI.Xaml.Navigation.PageStackEntry return
+    property navigation_transition_info
+        get get_NavigationTransitionInfo slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
+    property parameter
+        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=43
+            out object return
+    property source_page_type
+        get get_SourcePageType slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=22
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+    property source_page_type_property static
+        get get_SourcePageTypeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntryStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.DependencyObject external
+    py winui3.microsoft.ui.xaml.DependencyObject
+
+class Microsoft.UI.Xaml.DependencyProperty external
+    py winui3.microsoft.ui.xaml.DependencyProperty
+
+class Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo external
+    py winui3.microsoft.ui.xaml.media.animation.NavigationTransitionInfo
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+struct Windows.UI.Xaml.Interop.TypeName external
+    py winrt.windows.ui.xaml.interop.TypeName

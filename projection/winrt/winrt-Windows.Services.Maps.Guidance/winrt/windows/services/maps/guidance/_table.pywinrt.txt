@@ -1,0 +1,522 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Services.Maps.Guidance
+
+enum Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem python_type
+    py GuidanceAudioMeasurementSystem
+    signature enum(Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem;i4)
+
+enum Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind python_type
+    py GuidanceAudioNotificationKind
+    signature enum(Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind;i4)
+
+class Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs python_type
+    py GuidanceAudioNotificationRequestedEventArgs
+    signature rc(Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs;{ca2aa24a-c7c2-4d4c-9d7c-499576bceddb})
+    default Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs
+    requires Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs
+    property audio_file_paths
+        get get_AudioFilePaths slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property audio_notification
+        get get_AudioNotification slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind return
+    property audio_text
+        get get_AudioText slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs shape=4 reverse=62
+            out string return
+
+enum Windows.Services.Maps.Guidance.GuidanceAudioNotifications python_type
+    py GuidanceAudioNotifications
+    signature enum(Windows.Services.Maps.Guidance.GuidanceAudioNotifications;u4)
+
+class Windows.Services.Maps.Guidance.GuidanceLaneInfo python_type
+    py GuidanceLaneInfo
+    signature rc(Windows.Services.Maps.Guidance.GuidanceLaneInfo;{8404d114-6581-43b7-ac15-c9079bf90df1})
+    default Windows.Services.Maps.Guidance.IGuidanceLaneInfo
+    requires Windows.Services.Maps.Guidance.IGuidanceLaneInfo
+    property is_on_route
+        get get_IsOnRoute slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceLaneInfo shape=4 reverse=43
+            out boolean return
+    property lane_markers
+        get get_LaneMarkers slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceLaneInfo shape=4 reverse=22
+            out enum_u32 type=Windows.Services.Maps.Guidance.GuidanceLaneMarkers return
+
+enum Windows.Services.Maps.Guidance.GuidanceLaneMarkers python_type
+    py GuidanceLaneMarkers
+    signature enum(Windows.Services.Maps.Guidance.GuidanceLaneMarkers;u4)
+
+class Windows.Services.Maps.Guidance.GuidanceManeuver python_type
+    py GuidanceManeuver
+    signature rc(Windows.Services.Maps.Guidance.GuidanceManeuver;{fc09326c-ecc9-4928-a2a1-7232b99b94a1})
+    default Windows.Services.Maps.Guidance.IGuidanceManeuver
+    requires Windows.Services.Maps.Guidance.IGuidanceManeuver
+    property departure_road_name
+        get get_DepartureRoadName slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=99
+            out string return
+    property departure_short_road_name
+        get get_DepartureShortRoadName slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=141
+            out string return
+    property distance_from_previous_maneuver
+        get get_DistanceFromPreviousManeuver slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=62
+            out int32 return
+    property distance_from_route_start
+        get get_DistanceFromRouteStart slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=43
+            out int32 return
+    property end_angle
+        get get_EndAngle slot=15 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=194
+            out int32 return
+    property instruction_text
+        get get_InstructionText slot=17 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=210
+            out string return
+    property kind
+        get get_Kind slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=173
+            out enum32 type=Windows.Services.Maps.Guidance.GuidanceManeuverKind return
+    property next_road_name
+        get get_NextRoadName slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=121
+            out string return
+    property next_short_road_name
+        get get_NextShortRoadName slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=162
+            out string return
+    property road_signpost
+        get get_RoadSignpost slot=16 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=202
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoadSignpost return
+    property start_angle
+        get get_StartAngle slot=14 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=186
+            out int32 return
+    property start_location
+        get get_StartLocation slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceManeuver shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+
+enum Windows.Services.Maps.Guidance.GuidanceManeuverKind python_type
+    py GuidanceManeuverKind
+    signature enum(Windows.Services.Maps.Guidance.GuidanceManeuverKind;i4)
+
+class Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate python_type
+    py GuidanceMapMatchedCoordinate
+    signature rc(Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate;{b7acb168-2912-4a99-aff1-798609b981fe})
+    default Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate
+    requires Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate
+    property current_heading
+        get get_CurrentHeading slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate shape=4 reverse=43
+            out double return
+    property current_speed
+        get get_CurrentSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate shape=4 reverse=62
+            out double return
+    property is_on_street
+        get get_IsOnStreet slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate shape=4 reverse=99
+            out boolean return
+    property location
+        get get_Location slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property road
+        get get_Road slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate shape=4 reverse=121
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment return
+
+enum Windows.Services.Maps.Guidance.GuidanceMode python_type
+    py GuidanceMode
+    signature enum(Windows.Services.Maps.Guidance.GuidanceMode;i4)
+
+class Windows.Services.Maps.Guidance.GuidanceNavigator python_type
+    py GuidanceNavigator
+    signature rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67})
+    default Windows.Services.Maps.Guidance.IGuidanceNavigator
+    requires Windows.Services.Maps.Guidance.IGuidanceNavigator
+    requires Windows.Services.Maps.Guidance.IGuidanceNavigator2
+    factory Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics
+    factory Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2
+    property audio_notifications
+        get get_AudioNotifications slot=15 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=194
+            out enum_u32 type=Windows.Services.Maps.Guidance.GuidanceAudioNotifications return
+        put put_AudioNotifications slot=16 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=202
+            in enum_u32 type=Windows.Services.Maps.Guidance.GuidanceAudioNotifications name=value
+    property audio_measurement_system
+        get get_AudioMeasurementSystem slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=173
+            out enum32 type=Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem return
+        put put_AudioMeasurementSystem slot=14 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=186
+            in enum32 type=Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem name=value
+    property is_guidance_audio_muted
+        get get_IsGuidanceAudioMuted slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator2 shape=4 reverse=62
+            out boolean return
+        put put_IsGuidanceAudioMuted slot=9 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator2 shape=4 reverse=99
+            in boolean name=value
+    property use_app_provided_voice static
+        get get_UseAppProvidedVoice slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2 shape=4 reverse=22 static
+            out boolean return
+    event destination_reached
+        add add_DestinationReached slot=19 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> name=handler
+            out event_token return
+        remove remove_DestinationReached slot=20 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26 reverse=399
+            in event_token name=token
+    event guidance_updated
+        add add_GuidanceUpdated slot=17 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs> name=handler
+            out event_token return
+        remove remove_GuidanceUpdated slot=18 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26 reverse=398
+            in event_token name=token
+    event reroute_failed
+        add add_RerouteFailed slot=25 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=253
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> name=handler
+            out event_token return
+        remove remove_RerouteFailed slot=26 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26 reverse=257
+            in event_token name=token
+    event rerouted
+        add add_Rerouted slot=23 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=243
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs> name=handler
+            out event_token return
+        remove remove_Rerouted slot=24 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26
+            in event_token name=token
+    event rerouting
+        add add_Rerouting slot=21 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> name=handler
+            out event_token return
+        remove remove_Rerouting slot=22 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26 reverse=400
+            in event_token name=token
+    event user_location_lost
+        add add_UserLocationLost slot=27 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=260
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> name=handler
+            out event_token return
+        remove remove_UserLocationLost slot=28 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26
+            in event_token name=token
+    event user_location_restored
+        add add_UserLocationRestored slot=29 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> name=handler
+            out event_token return
+        remove remove_UserLocationRestored slot=30 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=26 reverse=272
+            in event_token name=token
+    event audio_notification_requested
+        add add_AudioNotificationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs> name=value
+            out event_token return
+        remove remove_AudioNotificationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator2 shape=26 reverse=53
+            in event_token name=token
+    method get_current static
+        method GetCurrent slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics shape=4 reverse=22 static
+            out class type=Windows.Services.Maps.Guidance.GuidanceNavigator return
+    method pause
+        method Pause slot=9 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=0 reverse=93
+    method repeat_last_audio_notification
+        method RepeatLastAudioNotification slot=12 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=0 reverse=159
+    method resume
+        method Resume slot=10 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=0 reverse=117
+    method set_guidance_voice
+        method SetGuidanceVoice slot=31 inputs=2 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=274
+            in int32 name=voiceId
+            in string name=voiceFolder
+    method start_navigating
+        method StartNavigating slot=6 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=22
+            in class type=Windows.Services.Maps.Guidance.GuidanceRoute name=route
+    method start_simulating
+        method StartSimulating slot=7 inputs=2 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=51 reverse=44
+            in class type=Windows.Services.Maps.Guidance.GuidanceRoute name=route
+            in int32 name=speedInMetersPerSecond
+    method start_tracking
+        method StartTracking slot=8 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=0 reverse=55
+    method stop
+        method Stop slot=11 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=0 reverse=137
+    method update_user_location
+        method UpdateUserLocation slot=32 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=4 reverse=280
+            in class type=Windows.Devices.Geolocation.Geocoordinate name=userLocation
+        method UpdateUserLocation slot=33 inputs=2 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceNavigator shape=58
+            in class type=Windows.Devices.Geolocation.Geocoordinate name=userLocation
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=positionOverride
+
+class Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs python_type
+    py GuidanceReroutedEventArgs
+    signature rc(Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs;{115d4008-d528-454e-bb94-a50341d2c9f1})
+    default Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs
+    requires Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs
+    property route
+        get get_Route slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs shape=4 reverse=22
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoute return
+
+class Windows.Services.Maps.Guidance.GuidanceRoadSegment python_type
+    py GuidanceRoadSegment
+    signature rc(Windows.Services.Maps.Guidance.GuidanceRoadSegment;{b32758a6-be78-4c63-afe7-6c2957479b3e})
+    default Windows.Services.Maps.Guidance.IGuidanceRoadSegment
+    requires Windows.Services.Maps.Guidance.IGuidanceRoadSegment
+    requires Windows.Services.Maps.Guidance.IGuidanceRoadSegment2
+    property id
+        get get_Id slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=141
+            out string return
+    property is_highway
+        get get_IsHighway slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=162
+            out boolean return
+    property is_toll_road
+        get get_IsTollRoad slot=14 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=186
+            out boolean return
+    property is_tunnel
+        get get_IsTunnel slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=173
+            out boolean return
+    property path
+        get get_Path slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=121
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property road_name
+        get get_RoadName slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=22
+            out string return
+    property short_road_name
+        get get_ShortRoadName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=43
+            out string return
+    property speed_limit
+        get get_SpeedLimit slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=62
+            out double return
+    property travel_time
+        get get_TravelTime slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment shape=4 reverse=99
+            out timespan return
+    property is_scenic
+        get get_IsScenic slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSegment2 shape=4 reverse=22
+            out boolean return
+
+class Windows.Services.Maps.Guidance.GuidanceRoadSignpost python_type
+    py GuidanceRoadSignpost
+    signature rc(Windows.Services.Maps.Guidance.GuidanceRoadSignpost;{f1a728b6-f77a-4742-8312-53300f9845f0})
+    default Windows.Services.Maps.Guidance.IGuidanceRoadSignpost
+    requires Windows.Services.Maps.Guidance.IGuidanceRoadSignpost
+    property background_color
+        get get_BackgroundColor slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSignpost shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+    property exit
+        get get_Exit slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSignpost shape=4 reverse=43
+            out string return
+    property exit_directions
+        get get_ExitDirections slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSignpost shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property exit_number
+        get get_ExitNumber slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSignpost shape=4 reverse=22
+            out string return
+    property foreground_color
+        get get_ForegroundColor slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoadSignpost shape=4 reverse=99
+            out struct type=Windows.UI.Color return
+
+class Windows.Services.Maps.Guidance.GuidanceRoute python_type
+    py GuidanceRoute
+    signature rc(Windows.Services.Maps.Guidance.GuidanceRoute;{3a14545d-801a-40bd-a286-afb2010cce6c})
+    default Windows.Services.Maps.Guidance.IGuidanceRoute
+    requires Windows.Services.Maps.Guidance.IGuidanceRoute
+    factory Windows.Services.Maps.Guidance.IGuidanceRouteStatics
+    property bounding_box
+        get get_BoundingBox slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=99
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+    property distance
+        get get_Distance slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=43
+            out int32 return
+    property duration
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=22
+            out timespan return
+    property maneuvers
+        get get_Maneuvers slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> return
+    property path
+        get get_Path slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=121
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property road_segments
+        get get_RoadSegments slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> return
+    method can_create_from_map_route static
+        method CanCreateFromMapRoute slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRouteStatics shape=51 reverse=24 static
+            in class type=Windows.Services.Maps.MapRoute name=mapRoute
+            out boolean return
+    method convert_to_map_route
+        method ConvertToMapRoute slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRoute shape=4 reverse=162
+            out class type=Windows.Services.Maps.MapRoute return
+    method try_create_from_map_route static
+        method TryCreateFromMapRoute slot=7 inputs=1 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceRouteStatics shape=51 reverse=44 static
+            in class type=Windows.Services.Maps.MapRoute name=mapRoute
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoute return
+
+class Windows.Services.Maps.Guidance.GuidanceTelemetryCollector python_type
+    py GuidanceTelemetryCollector
+    signature rc(Windows.Services.Maps.Guidance.GuidanceTelemetryCollector;{db1f8da5-b878-4d92-98dd-347d23d38262})
+    default Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector
+    requires Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector
+    factory Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics
+    property upload_frequency
+        get get_UploadFrequency slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=4 reverse=141
+            out int32 return
+        put put_UploadFrequency slot=12 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=4 reverse=162
+            in int32 name=value
+    property speed_trigger
+        get get_SpeedTrigger slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=4 reverse=99
+            out double return
+        put put_SpeedTrigger slot=10 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=2 reverse=119
+            in double name=value
+    property enabled
+        get get_Enabled slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=4 reverse=22
+            out boolean return
+        put put_Enabled slot=7 inputs=1 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=4 reverse=43
+            in boolean name=value
+    method clear_local_data
+        method ClearLocalData slot=8 inputs=0 outputs=0 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector shape=0 reverse=55
+    method get_current static
+        method GetCurrent slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics shape=4 reverse=22 static
+            out class type=Windows.Services.Maps.Guidance.GuidanceTelemetryCollector return
+
+class Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs python_type
+    py GuidanceUpdatedEventArgs
+    signature rc(Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs;{fdac160b-9e8d-4de3-a9fa-b06321d18db9})
+    default Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs
+    requires Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs
+    property after_next_maneuver
+        get get_AfterNextManeuver slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=99
+            out class type=Windows.Services.Maps.Guidance.GuidanceManeuver return
+    property after_next_maneuver_distance
+        get get_AfterNextManeuverDistance slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=121
+            out int32 return
+    property current_location
+        get get_CurrentLocation slot=17 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=210
+            out class type=Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate return
+    property distance_to_destination
+        get get_DistanceToDestination slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=141
+            out int32 return
+    property elapsed_distance
+        get get_ElapsedDistance slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=162
+            out int32 return
+    property elapsed_time
+        get get_ElapsedTime slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=173
+            out timespan return
+    property is_new_maneuver
+        get get_IsNewManeuver slot=18 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=218
+            out boolean return
+    property lane_info
+        get get_LaneInfo slot=19 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> return
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Services.Maps.Guidance.GuidanceMode return
+    property next_maneuver
+        get get_NextManeuver slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=43
+            out class type=Windows.Services.Maps.Guidance.GuidanceManeuver return
+    property next_maneuver_distance
+        get get_NextManeuverDistance slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=62
+            out int32 return
+    property road_name
+        get get_RoadName slot=15 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=194
+            out string return
+    property route
+        get get_Route slot=16 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=202
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoute return
+    property time_to_destination
+        get get_TimeToDestination slot=14 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs shape=4 reverse=186
+            out timespan return
+
+interface Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs
+    guid ca2aa24a-c7c2-4d4c-9d7c-499576bceddb
+
+interface Windows.Services.Maps.Guidance.IGuidanceLaneInfo
+    guid 8404d114-6581-43b7-ac15-c9079bf90df1
+
+interface Windows.Services.Maps.Guidance.IGuidanceManeuver
+    guid fc09326c-ecc9-4928-a2a1-7232b99b94a1
+
+interface Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate
+    guid b7acb168-2912-4a99-aff1-798609b981fe
+
+interface Windows.Services.Maps.Guidance.IGuidanceNavigator
+    guid 08f17ef7-8e3f-4d9a-be8a-108f9a012c67
+
+interface Windows.Services.Maps.Guidance.IGuidanceNavigator2
+    guid 6cdc50d1-041c-4bf3-b633-a101fc2f6b57
+
+interface Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics
+    guid 00fd9513-4456-4e66-a143-3add6be08426
+
+interface Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2
+    guid 54c5c3e2-7784-4c85-8c95-d0c6efb43965
+
+interface Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs
+    guid 115d4008-d528-454e-bb94-a50341d2c9f1
+
+interface Windows.Services.Maps.Guidance.IGuidanceRoadSegment
+    guid b32758a6-be78-4c63-afe7-6c2957479b3e
+
+interface Windows.Services.Maps.Guidance.IGuidanceRoadSegment2
+    guid 2474a61d-1723-49f1-895b-47a2c4aa9c55
+
+interface Windows.Services.Maps.Guidance.IGuidanceRoadSignpost
+    guid f1a728b6-f77a-4742-8312-53300f9845f0
+
+interface Windows.Services.Maps.Guidance.IGuidanceRoute
+    guid 3a14545d-801a-40bd-a286-afb2010cce6c
+
+interface Windows.Services.Maps.Guidance.IGuidanceRouteStatics
+    guid f56d926a-55ed-49c1-b09c-4b8223b50db3
+
+interface Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector
+    guid db1f8da5-b878-4d92-98dd-347d23d38262
+
+interface Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics
+    guid 36532047-f160-44fb-b578-94577ca05990
+
+interface Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs
+    guid fdac160b-9e8d-4de3-a9fa-b06321d18db9
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> concrete
+    guid 81493670-e515-5c62-b34c-6e3d996cad31
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceLaneInfo;{8404d114-6581-43b7-ac15-c9079bf90df1}))
+    argument Windows.Services.Maps.Guidance.GuidanceLaneInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> concrete
+    guid 875644d8-57a4-59d6-9d2c-5d450d39d2f6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceManeuver;{fc09326c-ecc9-4928-a2a1-7232b99b94a1}))
+    argument Windows.Services.Maps.Guidance.GuidanceManeuver
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> concrete
+    guid f04c7cc2-4d54-5244-beb2-8f4f05c184e6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceRoadSegment;{b32758a6-be78-4c63-afe7-6c2957479b3e}))
+    argument Windows.Services.Maps.Guidance.GuidanceRoadSegment
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> concrete
+    guid 3f496c35-3dca-5e91-8730-6ef77e9d70bd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});cinterface(IInspectable))
+    argument Windows.Services.Maps.Guidance.GuidanceNavigator
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs> concrete
+    guid 743db36f-e9aa-557a-9fd7-304c9b0499df
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs;{ca2aa24a-c7c2-4d4c-9d7c-499576bceddb}))
+    argument Windows.Services.Maps.Guidance.GuidanceNavigator
+    argument Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs> concrete
+    guid 61b92b1b-f22f-581b-bfa0-4868c314c63a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs;{115d4008-d528-454e-bb94-a50341d2c9f1}))
+    argument Windows.Services.Maps.Guidance.GuidanceNavigator
+    argument Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs> concrete
+    guid 82b3f7df-bf13-5445-aadc-ec61b50fbb46
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs;{fdac160b-9e8d-4de3-a9fa-b06321d18db9}))
+    argument Windows.Services.Maps.Guidance.GuidanceNavigator
+    argument Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.Devices.Geolocation.BasicGeoposition external
+    py winrt.windows.devices.geolocation.BasicGeoposition
+
+class Windows.Devices.Geolocation.GeoboundingBox external
+    py winrt.windows.devices.geolocation.GeoboundingBox
+
+class Windows.Devices.Geolocation.Geocoordinate external
+    py winrt.windows.devices.geolocation.Geocoordinate
+
+class Windows.Devices.Geolocation.Geopath external
+    py winrt.windows.devices.geolocation.Geopath
+
+class Windows.Devices.Geolocation.Geopoint external
+    py winrt.windows.devices.geolocation.Geopoint
+
+class Windows.Services.Maps.MapRoute external
+    py winrt.windows.services.maps.MapRoute
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

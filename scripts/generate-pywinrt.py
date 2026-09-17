@@ -18,9 +18,9 @@ def versioned_package(package: str) -> str:
 
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
 RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
-# The hand-written runtime headers ship in the winrt-runtime wheel, so the
-# generated version header that they include has to land there too.
-RUNTIME_INCLUDE_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt"
+# The ABI call shape census, which every run merges into and which the runtime
+# compiles the trampolines from. See runtime/src/table-format.md.
+RUNTIME_SRC_PATH = RUNTIME_PATH / "src"
 
 DOTNET: list[str] = []
 PYWINRT_EXE: str | pathlib.Path
@@ -67,7 +67,6 @@ WINDOWS_SDK = (
     / "References"
     / "10.0.26100.0"
 )
-SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
 include_args: list[str] = []
@@ -82,12 +81,10 @@ subprocess.check_call(
         PYWINRT_EXE,
         "--input",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "winrt",
-        "--header-path",
-        SDK_PACKAGE_PATH,
-        "--base-header-path",
-        RUNTIME_INCLUDE_PATH,
         "--nullability-json",
         WINDOWS_SDK_NULLABILITY_JSON_PATH,
     ]
@@ -113,6 +110,8 @@ subprocess.check_call(
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "webview2",
         "--nullability-json",
@@ -130,13 +129,6 @@ MICROSOFT_UI_XAML_PACKAGE_METADATA = (
     / "lib"
     / "uap10.0"
 )
-MICROSOFT_UI_XAML_PACKAGE_PATH = (
-    PROJECTION_PATH
-    / "winrt-Microsoft.UI.Xaml"
-    / "src"
-    / "winrt_microsoft_ui_xaml"
-    / "pywinrt"
-)
 MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "microsoft.ui.xaml.json"
 )
@@ -151,10 +143,10 @@ subprocess.check_call(
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "winui2",
-        "--header-path",
-        MICROSOFT_UI_XAML_PACKAGE_PATH,
         "--nullability-json",
         MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH,
     ]
@@ -176,13 +168,6 @@ WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
     / "lib"
     / "uap10.0.18362"
 )
-WINDOWS_APP_SDK_PACKAGE_PATH = (
-    PROJECTION_PATH
-    / "winrt-WindowsAppSDK"
-    / "src"
-    / "winrt_windows_app_sdk"
-    / "pywinrt"
-)
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
 )
@@ -199,10 +184,10 @@ subprocess.check_call(
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "winui3",
-        "--header-path",
-        WINDOWS_APP_SDK_PACKAGE_PATH,
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
     ]
@@ -229,6 +214,8 @@ subprocess.check_call(
         f"test-winrt;{TEST_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "test-winrt",
         "--nullability-json",

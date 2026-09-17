@@ -1,0 +1,14 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Html
+
+class Windows.Data.Html.HtmlUtilities static python_type
+    py HtmlUtilities
+    factory Windows.Data.Html.IHtmlUtilities
+    method convert_to_text static
+        method ConvertToText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Html.IHtmlUtilities shape=51 reverse=24 static
+            in string name=html
+            out string return
+
+interface Windows.Data.Html.IHtmlUtilities
+    guid fec00add-2399-4fac-b5a7-05e9acd7181d

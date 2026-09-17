@@ -1,0 +1,297 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.SpeechSynthesis
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> concrete
+    guid df9d48ad-9cea-560c-9edc-cb8852cb55e3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechSynthesis.SpeechSynthesisStream;{83e46e93-244c-4622-ba0b-6229c4d0d65d}))
+    argument Windows.Media.SpeechSynthesis.SpeechSynthesisStream
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+    guid eccb574a-c684-5572-a679-6b0842cfb57f
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    argument System.UInt32
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    guid d26b2819-897f-5c7d-84d6-56d796561431
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+
+interface Windows.Media.SpeechSynthesis.IInstalledVoicesStatic
+    guid 7d526ecc-7533-4c3f-85be-888c2baeebdc
+
+interface Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2
+    guid 64255f2e-358d-4058-be9a-fd3fcb423530
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesisStream
+    guid 83e46e93-244c-4622-ba0b-6229c4d0d65d
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesizer
+    guid ce9f7c76-97f4-4ced-ad68-d51c458e45c6
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesizer2
+    guid a7c5ecb2-4339-4d6a-bbf8-c7a4f1544c2e
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions
+    guid a0e23871-cc3d-43c9-91b1-ee185324d83d
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2
+    guid 1cbef60e-119c-4bed-b118-d250c3a25793
+
+interface Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3
+    guid 401ed877-902c-4814-a582-a5d0c0769fa8
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete
+    guid 0313ae7a-2803-5d45-b5a1-a0fc5cd55e7c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    argument Windows.Media.Core.TimedMetadataTrack
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> concrete
+    guid b543562c-02b1-5824-80a8-9854130cdadd
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{1803def8-dca5-4b6f-9c20-e3d3c0643625})
+    argument Windows.Media.IMediaMarker
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> concrete
+    guid ee8d63ce-51ac-5984-891b-d232fa7f6453
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.SpeechSynthesis.VoiceInformation;{b127d6a4-1291-4604-aa9c-83134083352c}))
+    argument Windows.Media.SpeechSynthesis.VoiceInformation
+
+interface Windows.Media.SpeechSynthesis.IVoiceInformation
+    guid b127d6a4-1291-4604-aa9c-83134083352c
+
+enum Windows.Media.SpeechSynthesis.SpeechAppendedSilence python_type
+    py SpeechAppendedSilence
+    signature enum(Windows.Media.SpeechSynthesis.SpeechAppendedSilence;i4)
+
+enum Windows.Media.SpeechSynthesis.SpeechPunctuationSilence python_type
+    py SpeechPunctuationSilence
+    signature enum(Windows.Media.SpeechSynthesis.SpeechPunctuationSilence;i4)
+
+class Windows.Media.SpeechSynthesis.SpeechSynthesisStream python_type closeable
+    py SpeechSynthesisStream
+    signature rc(Windows.Media.SpeechSynthesis.SpeechSynthesisStream;{83e46e93-244c-4622-ba0b-6229c4d0d65d})
+    default Windows.Media.SpeechSynthesis.ISpeechSynthesisStream
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesisStream
+    requires Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    requires Windows.Storage.Streams.IContentTypeProvider
+    requires Windows.Media.Core.ITimedMetadataTrackProvider
+    property timed_metadata_tracks
+        get get_TimedMetadataTracks slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesisStream shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> return
+    property content_type
+        get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
+            out string return
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Media.SpeechSynthesis.SpeechSynthesizer activatable python_type closeable
+    py SpeechSynthesizer
+    signature rc(Windows.Media.SpeechSynthesis.SpeechSynthesizer;{ce9f7c76-97f4-4ced-ad68-d51c458e45c6})
+    default Windows.Media.SpeechSynthesis.ISpeechSynthesizer
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesizer
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesizer2
+    factory Windows.Media.SpeechSynthesis.IInstalledVoicesStatic
+    factory Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property voice
+        get get_Voice slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4 reverse=99
+            out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
+        put put_Voice slot=8 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4 reverse=62
+            in class type=Windows.Media.SpeechSynthesis.VoiceInformation name=value
+    property options
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer2 shape=4 reverse=22
+            out class type=Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions return
+    property all_voices static
+        get get_AllVoices slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> return
+    property default_voice static
+        get get_DefaultVoice slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 reverse=43 static
+            out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method synthesize_ssml_to_stream_async
+        method SynthesizeSsmlToStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51 reverse=44
+            in string name=Ssml
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> return
+    method synthesize_text_to_stream_async
+        method SynthesizeTextToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51 reverse=24
+            in string name=text
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> return
+    method try_set_default_voice_async static
+        method TrySetDefaultVoiceAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2 shape=51 reverse=24 static
+            in class type=Windows.Media.SpeechSynthesis.VoiceInformation name=voice
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions python_type
+    py SpeechSynthesizerOptions
+    signature rc(Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions;{a0e23871-cc3d-43c9-91b1-ee185324d83d})
+    default Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2
+    requires Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3
+    property include_word_boundary_metadata
+        get get_IncludeWordBoundaryMetadata slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=22
+            out boolean return
+        put put_IncludeWordBoundaryMetadata slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=43
+            in boolean name=value
+    property include_sentence_boundary_metadata
+        get get_IncludeSentenceBoundaryMetadata slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=62
+            out boolean return
+        put put_IncludeSentenceBoundaryMetadata slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=99
+            in boolean name=value
+    property speaking_rate
+        get get_SpeakingRate slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=62
+            out double return
+        put put_SpeakingRate slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2
+            in double name=value
+    property audio_volume
+        get get_AudioVolume slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=22
+            out double return
+        put put_AudioVolume slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2 reverse=38
+            in double name=value
+    property audio_pitch
+        get get_AudioPitch slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=121
+            out double return
+        put put_AudioPitch slot=11 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2 reverse=138
+            in double name=value
+    property punctuation_silence
+        get get_PunctuationSilence slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=62
+            out enum32 type=Windows.Media.SpeechSynthesis.SpeechPunctuationSilence return
+        put put_PunctuationSilence slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=99
+            in enum32 type=Windows.Media.SpeechSynthesis.SpeechPunctuationSilence name=value
+    property appended_silence
+        get get_AppendedSilence slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechSynthesis.SpeechAppendedSilence return
+        put put_AppendedSilence slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=43
+            in enum32 type=Windows.Media.SpeechSynthesis.SpeechAppendedSilence name=value
+
+enum Windows.Media.SpeechSynthesis.VoiceGender python_type
+    py VoiceGender
+    signature enum(Windows.Media.SpeechSynthesis.VoiceGender;i4)
+
+class Windows.Media.SpeechSynthesis.VoiceInformation python_type
+    py VoiceInformation
+    signature rc(Windows.Media.SpeechSynthesis.VoiceInformation;{b127d6a4-1291-4604-aa9c-83134083352c})
+    default Windows.Media.SpeechSynthesis.IVoiceInformation
+    requires Windows.Media.SpeechSynthesis.IVoiceInformation
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=99
+            out string return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=22
+            out string return
+    property gender
+        get get_Gender slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechSynthesis.VoiceGender return
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=43
+            out string return
+    property language
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=62
+            out string return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Media.IMediaMarker external
+    py winrt.windows.media._IMediaMarker
+    guid 1803def8-dca5-4b6f-9c20-e3d3c0643625
+
+interface Windows.Media.Core.ITimedMetadataTrackProvider external
+    py winrt.windows.media.core._ITimedMetadataTrackProvider
+    guid 3b7f2024-f74e-4ade-93c5-219da05b6856
+
+class Windows.Media.Core.TimedMetadataTrack external
+    py winrt.windows.media.core.TimedMetadataTrack
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IContentTypeProvider external
+    py winrt.windows.storage.streams._IContentTypeProvider
+    guid 97d098a5-3b99-4de9-88a5-e11d2f50c795
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+enum Windows.Storage.Streams.InputStreamOptions external
+    py winrt.windows.storage.streams.InputStreamOptions

@@ -1,0 +1,709 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Payments
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> concrete
+    guid a467410a-11de-5090-b905-96a562d85de5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult;{7696fe55-d5d3-4d3d-b345-45591759c510}))
+    argument Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> concrete
+    guid cf290deb-5549-57c3-8abd-53b76c643cca
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.PaymentRequestSubmitResult;{7b9c3912-30f2-4e90-b249-8ce7d78ffe56}))
+    argument Windows.ApplicationModel.Payments.PaymentRequestSubmitResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> concrete
+    guid b61b704c-e5fa-5524-8b95-7d03f5d36ae9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72}))
+    argument Windows.ApplicationModel.Payments.PaymentItem
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> concrete
+    guid 8c9ed87e-4add-58a8-ad9a-9dfa48ca250a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4}))
+    argument Windows.ApplicationModel.Payments.PaymentMethodData
+
+interface Windows.ApplicationModel.Payments.IPaymentAddress
+    guid 5f2264e9-6f3a-4166-a018-0a0b06bb32b5
+
+interface Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResult
+    guid 7696fe55-d5d3-4d3d-b345-45591759c510
+
+interface Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResultFactory
+    guid bbdcaa3e-7d49-4f69-aa53-2a0f8164b7c9
+
+interface Windows.ApplicationModel.Payments.IPaymentCurrencyAmount
+    guid e3a3e9e0-b41f-4987-bdcb-071331f2daa4
+
+interface Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory
+    guid 3257d338-140c-4575-8535-f773178c09a7
+
+interface Windows.ApplicationModel.Payments.IPaymentDetails
+    guid 53bb2d7d-e0eb-4053-8eae-ce7c48e02945
+
+interface Windows.ApplicationModel.Payments.IPaymentDetailsFactory
+    guid cfe8afee-c0ea-4ca1-8bc7-6de67b1f3763
+
+interface Windows.ApplicationModel.Payments.IPaymentDetailsModifier
+    guid be1c7d65-4323-41d7-b305-dfcb765f69de
+
+interface Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory
+    guid 79005286-54de-429c-9e4f-5dce6e10ebce
+
+interface Windows.ApplicationModel.Payments.IPaymentItem
+    guid 685ac88b-79b2-4b76-9e03-a876223dfe72
+
+interface Windows.ApplicationModel.Payments.IPaymentItemFactory
+    guid c6ab7ad8-2503-4d1d-a778-02b2e5927b2c
+
+interface Windows.ApplicationModel.Payments.IPaymentMediator
+    guid fb0ee829-ec0c-449a-83da-7ae3073365a2
+
+interface Windows.ApplicationModel.Payments.IPaymentMediator2
+    guid ceef98f1-e407-4128-8e73-d93d5f822786
+
+interface Windows.ApplicationModel.Payments.IPaymentMerchantInfo
+    guid 63445050-0e94-4ed6-aacb-e6012bd327a7
+
+interface Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory
+    guid 9e89ced3-ccb7-4167-a8ec-e10ae96dbcd1
+
+interface Windows.ApplicationModel.Payments.IPaymentMethodData
+    guid d1d3caf4-de98-4129-b1b7-c3ad86237bf4
+
+interface Windows.ApplicationModel.Payments.IPaymentMethodDataFactory
+    guid 8addd27f-9baa-4a82-8342-a8210992a36b
+
+interface Windows.ApplicationModel.Payments.IPaymentOptions
+    guid aaa30854-1f2b-4365-8251-01b58915a5bc
+
+interface Windows.ApplicationModel.Payments.IPaymentRequest
+    guid b74942e1-ed7b-47eb-bc08-78cc5d6896b6
+
+interface Windows.ApplicationModel.Payments.IPaymentRequest2
+    guid b63ccfb5-5998-493e-a04c-67048a50f141
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs
+    guid c6145e44-cd8b-4be4-b555-27c99194c0c5
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestChangedResult
+    guid df699e5c-16c4-47ad-9401-8440ec0757db
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory
+    guid 08740f56-1d33-4431-814b-67ea24bf21db
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestFactory
+    guid 3e8a79dc-6b74-42d3-b103-f0de35fb1848
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestFactory2
+    guid e6ce1325-a506-4372-b7ef-1a031d5662d1
+
+interface Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult
+    guid 7b9c3912-30f2-4e90-b249-8ce7d78ffe56
+
+interface Windows.ApplicationModel.Payments.IPaymentResponse
+    guid e1389457-8bd2-4888-9fa8-97985545108e
+
+interface Windows.ApplicationModel.Payments.IPaymentShippingOption
+    guid 13372ada-9753-4574-8966-93145a76c7f9
+
+interface Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory
+    guid 5de5f917-b2d7-446b-9d73-6123fbca3bc6
+
+interface Windows.ApplicationModel.Payments.IPaymentToken
+    guid bbcac013-ccd0-41f2-b2a1-0a2e4b5dce25
+
+interface Windows.ApplicationModel.Payments.IPaymentTokenFactory
+    guid 988cd7aa-4753-4904-8373-dd7b08b995c1
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> concrete
+    guid da7e871c-6e0c-5e32-be40-10715a9f75eb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentDetailsModifier;{be1c7d65-4323-41d7-b305-dfcb765f69de}))
+    argument Windows.ApplicationModel.Payments.PaymentDetailsModifier
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> concrete
+    guid 6baf1241-1fa6-5c22-83ef-415e93cdf7b1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72}))
+    argument Windows.ApplicationModel.Payments.PaymentItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> concrete
+    guid 1011b9ba-6a05-5b16-82cf-0175085105e0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4}))
+    argument Windows.ApplicationModel.Payments.PaymentMethodData
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> concrete
+    guid 8c8128eb-8c33-56dd-9648-39e8040312d4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentShippingOption;{13372ada-9753-4574-8966-93145a76c7f9}))
+    argument Windows.ApplicationModel.Payments.PaymentShippingOption
+
+class Windows.ApplicationModel.Payments.PaymentAddress activatable python_type
+    py PaymentAddress
+    signature rc(Windows.ApplicationModel.Payments.PaymentAddress;{5f2264e9-6f3a-4166-a018-0a0b06bb32b5})
+    default Windows.ApplicationModel.Payments.IPaymentAddress
+    requires Windows.ApplicationModel.Payments.IPaymentAddress
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property sorting_code
+        get get_SortingCode slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=218
+            out string return
+        put put_SortingCode slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=223
+            in string name=value
+    property region
+        get get_Region slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=121
+            out string return
+        put put_Region slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=141
+            in string name=value
+    property recipient
+        get get_Recipient slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=247
+            out string return
+        put put_Recipient slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=252
+            in string name=value
+    property postal_code
+        get get_PostalCode slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=202
+            out string return
+        put put_PostalCode slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=210
+            in string name=value
+    property phone_number
+        get get_PhoneNumber slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=255
+            out string return
+        put put_PhoneNumber slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=259
+            in string name=value
+    property organization
+        get get_Organization slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=237
+            out string return
+        put put_Organization slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=242
+            in string name=value
+    property language_code
+        get get_LanguageCode slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=228
+            out string return
+        put put_LanguageCode slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=232
+            in string name=value
+    property dependent_locality
+        get get_DependentLocality slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=186
+            out string return
+        put put_DependentLocality slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=194
+            in string name=value
+    property country
+        get get_Country slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=22
+            out string return
+        put put_Country slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=43
+            in string name=value
+    property city
+        get get_City slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=162
+            out string return
+        put put_City slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=173
+            in string name=value
+    property address_lines
+        get get_AddressLines slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+        put put_AddressLines slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=99
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=value
+    property properties
+        get get_Properties slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentAddress shape=4 reverse=263
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+class Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult python_type
+    py PaymentCanMakePaymentResult
+    signature rc(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult;{7696fe55-d5d3-4d3d-b345-45591759c510})
+    default Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResult
+    requires Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResult
+    factory Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResultFactory shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus name=value
+            out class type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCanMakePaymentResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus return
+
+enum Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus python_type
+    py PaymentCanMakePaymentResultStatus
+    signature enum(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus;i4)
+
+class Windows.ApplicationModel.Payments.PaymentCurrencyAmount python_type
+    py PaymentCurrencyAmount
+    signature rc(Windows.ApplicationModel.Payments.PaymentCurrencyAmount;{e3a3e9e0-b41f-4987-bdcb-071331f2daa4})
+    default Windows.ApplicationModel.Payments.IPaymentCurrencyAmount
+    requires Windows.ApplicationModel.Payments.IPaymentCurrencyAmount
+    factory Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory shape=117 reverse=25
+            in string name=value
+            in string name=currency
+            out class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmountFactory shape=195 reverse=46
+            in string name=value
+            in string name=currency
+            in string name=currencySystem
+            out class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount return
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=121
+            out string return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=141
+            in string name=value
+    property currency_system
+        get get_CurrencySystem slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=62
+            out string return
+        put put_CurrencySystem slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=99
+            in string name=value
+    property currency
+        get get_Currency slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=22
+            out string return
+        put put_Currency slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentCurrencyAmount shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Payments.PaymentDetails activatable python_type
+    py PaymentDetails
+    signature rc(Windows.ApplicationModel.Payments.PaymentDetails;{53bb2d7d-e0eb-4053-8eae-ce7c48e02945})
+    default Windows.ApplicationModel.Payments.IPaymentDetails
+    requires Windows.ApplicationModel.Payments.IPaymentDetails
+    factory Windows.ApplicationModel.Payments.IPaymentDetailsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsFactory shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total implicit
+            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsFactory shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
+            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsFactory shape=117 reverse=45
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> name=displayItems
+            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+    property total
+        get get_Total slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Payments.PaymentItem return
+        put put_Total slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=value
+    property shipping_options
+        get get_ShippingOptions slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> return
+        put put_ShippingOptions slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=141
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> name=value
+    property modifiers
+        get get_Modifiers slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> return
+        put put_Modifiers slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=173
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> name=value
+    property display_items
+        get get_DisplayItems slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> return
+        put put_DisplayItems slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentDetails shape=4 reverse=99
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> name=value
+
+class Windows.ApplicationModel.Payments.PaymentDetailsModifier python_type
+    py PaymentDetailsModifier
+    signature rc(Windows.ApplicationModel.Payments.PaymentDetailsModifier;{be1c7d65-4323-41d7-b305-dfcb765f69de})
+    default Windows.ApplicationModel.Payments.IPaymentDetailsModifier
+    requires Windows.ApplicationModel.Payments.IPaymentDetailsModifier
+    factory Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedMethodIds
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
+            out class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory shape=195 reverse=46
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedMethodIds
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> name=additionalDisplayItems
+            out class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifierFactory shape=239 reverse=69
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedMethodIds
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> name=additionalDisplayItems
+            in string name=jsonData
+            out class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier return
+    property additional_display_items
+        get get_AdditionalDisplayItems slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifier shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> return
+    property json_data
+        get get_JsonData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifier shape=4 reverse=22
+            out string return
+    property supported_method_ids
+        get get_SupportedMethodIds slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifier shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property total
+        get get_Total slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsModifier shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Payments.PaymentItem return
+
+class Windows.ApplicationModel.Payments.PaymentItem python_type
+    py PaymentItem
+    signature rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72})
+    default Windows.ApplicationModel.Payments.IPaymentItem
+    requires Windows.ApplicationModel.Payments.IPaymentItem
+    factory Windows.ApplicationModel.Payments.IPaymentItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentItemFactory shape=117 reverse=25
+            in string name=label
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=amount
+            out class type=Windows.ApplicationModel.Payments.PaymentItem return
+    property pending
+        get get_Pending slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=121
+            out boolean return
+        put put_Pending slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=141
+            in boolean name=value
+    property label
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=22
+            out string return
+        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=43
+            in string name=value
+    property amount
+        get get_Amount slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount return
+        put put_Amount slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentItem shape=4 reverse=99
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=value
+
+class Windows.ApplicationModel.Payments.PaymentMediator activatable python_type
+    py PaymentMediator
+    signature rc(Windows.ApplicationModel.Payments.PaymentMediator;{fb0ee829-ec0c-449a-83da-7ae3073365a2})
+    default Windows.ApplicationModel.Payments.IPaymentMediator
+    requires Windows.ApplicationModel.Payments.IPaymentMediator
+    requires Windows.ApplicationModel.Payments.IPaymentMediator2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method can_make_payment_async
+        method CanMakePaymentAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMediator2 shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Payments.PaymentRequest name=paymentRequest
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> return
+    method get_supported_method_ids_async
+        method GetSupportedMethodIdsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMediator shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method submit_payment_request_async
+        method SubmitPaymentRequestAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMediator shape=51 reverse=44
+            in class type=Windows.ApplicationModel.Payments.PaymentRequest name=paymentRequest
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> return
+        method SubmitPaymentRequestAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMediator shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Payments.PaymentRequest name=paymentRequest
+            in delegate type=Windows.ApplicationModel.Payments.PaymentRequestChangedHandler name=changeHandler
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> return
+
+class Windows.ApplicationModel.Payments.PaymentMerchantInfo activatable python_type
+    py PaymentMerchantInfo
+    signature rc(Windows.ApplicationModel.Payments.PaymentMerchantInfo;{63445050-0e94-4ed6-aacb-e6012bd327a7})
+    default Windows.ApplicationModel.Payments.IPaymentMerchantInfo
+    requires Windows.ApplicationModel.Payments.IPaymentMerchantInfo
+    factory Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri implicit
+            out class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo return
+    property package_full_name
+        get get_PackageFullName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfo shape=4 reverse=22
+            out string return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfo shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+
+class Windows.ApplicationModel.Payments.PaymentMethodData python_type
+    py PaymentMethodData
+    signature rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4})
+    default Windows.ApplicationModel.Payments.IPaymentMethodData
+    requires Windows.ApplicationModel.Payments.IPaymentMethodData
+    factory Windows.ApplicationModel.Payments.IPaymentMethodDataFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMethodDataFactory shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedMethodIds
+            out class type=Windows.ApplicationModel.Payments.PaymentMethodData return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMethodDataFactory shape=117 reverse=45
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedMethodIds
+            in string name=jsonData
+            out class type=Windows.ApplicationModel.Payments.PaymentMethodData return
+    property json_data
+        get get_JsonData slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMethodData shape=4 reverse=43
+            out string return
+    property supported_method_ids
+        get get_SupportedMethodIds slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMethodData shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+enum Windows.ApplicationModel.Payments.PaymentOptionPresence python_type
+    py PaymentOptionPresence
+    signature enum(Windows.ApplicationModel.Payments.PaymentOptionPresence;i4)
+
+class Windows.ApplicationModel.Payments.PaymentOptions activatable python_type
+    py PaymentOptions
+    signature rc(Windows.ApplicationModel.Payments.PaymentOptions;{aaa30854-1f2b-4365-8251-01b58915a5bc})
+    default Windows.ApplicationModel.Payments.IPaymentOptions
+    requires Windows.ApplicationModel.Payments.IPaymentOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property shipping_type
+        get get_ShippingType slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentShippingType return
+        put put_ShippingType slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentShippingType name=value
+    property request_shipping
+        get get_RequestShipping slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=162
+            out boolean return
+        put put_RequestShipping slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=173
+            in boolean name=value
+    property request_payer_phone_number
+        get get_RequestPayerPhoneNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=121
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence return
+        put put_RequestPayerPhoneNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=141
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence name=value
+    property request_payer_name
+        get get_RequestPayerName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence return
+        put put_RequestPayerName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence name=value
+    property request_payer_email
+        get get_RequestPayerEmail slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence return
+        put put_RequestPayerEmail slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentOptions shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentOptionPresence name=value
+
+class Windows.ApplicationModel.Payments.PaymentRequest python_type
+    py PaymentRequest
+    signature rc(Windows.ApplicationModel.Payments.PaymentRequest;{b74942e1-ed7b-47eb-bc08-78cc5d6896b6})
+    default Windows.ApplicationModel.Payments.IPaymentRequest
+    requires Windows.ApplicationModel.Payments.IPaymentRequest
+    requires Windows.ApplicationModel.Payments.IPaymentRequest2
+    factory Windows.ApplicationModel.Payments.IPaymentRequestFactory
+    factory Windows.ApplicationModel.Payments.IPaymentRequestFactory2
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory shape=117 reverse=25
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=details
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> name=methodData
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory shape=195 reverse=46
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=details
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> name=methodData
+            in class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo name=merchantInfo
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory shape=239 reverse=69
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=details
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> name=methodData
+            in class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo name=merchantInfo
+            in class type=Windows.ApplicationModel.Payments.PaymentOptions name=options
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory2 shape=267
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=details
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> name=methodData
+            in class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo name=merchantInfo
+            in class type=Windows.ApplicationModel.Payments.PaymentOptions name=options
+            in string name=id
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+    property details
+        get get_Details slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequest shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+    property merchant_info
+        get get_MerchantInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequest shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo return
+    property method_data
+        get get_MethodData slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequest shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> return
+    property options
+        get get_Options slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequest shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Payments.PaymentOptions return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequest2 shape=4 reverse=22
+            out string return
+
+enum Windows.ApplicationModel.Payments.PaymentRequestChangeKind python_type
+    py PaymentRequestChangeKind
+    signature enum(Windows.ApplicationModel.Payments.PaymentRequestChangeKind;i4)
+
+class Windows.ApplicationModel.Payments.PaymentRequestChangedArgs python_type
+    py PaymentRequestChangedArgs
+    signature rc(Windows.ApplicationModel.Payments.PaymentRequestChangedArgs;{c6145e44-cd8b-4be4-b555-27c99194c0c5})
+    default Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs
+    requires Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs
+    property change_kind
+        get get_ChangeKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentRequestChangeKind return
+    property selected_shipping_option
+        get get_SelectedShippingOption slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+    property shipping_address
+        get get_ShippingAddress slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Payments.PaymentAddress return
+    method acknowledge
+        method Acknowledge slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedArgs shape=4 reverse=99
+            in class type=Windows.ApplicationModel.Payments.PaymentRequestChangedResult name=changeResult
+
+delegate Windows.ApplicationModel.Payments.PaymentRequestChangedHandler python_type
+    py PaymentRequestChangedHandler
+    guid 5078b9e1-f398-4f2c-a27e-94d371cf6c7d
+    signature delegate({5078b9e1-f398-4f2c-a27e-94d371cf6c7d})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Payments.PaymentRequest name=paymentRequest
+            in class type=Windows.ApplicationModel.Payments.PaymentRequestChangedArgs name=args
+
+class Windows.ApplicationModel.Payments.PaymentRequestChangedResult python_type
+    py PaymentRequestChangedResult
+    signature rc(Windows.ApplicationModel.Payments.PaymentRequestChangedResult;{df699e5c-16c4-47ad-9401-8440ec0757db})
+    default Windows.ApplicationModel.Payments.IPaymentRequestChangedResult
+    requires Windows.ApplicationModel.Payments.IPaymentRequestChangedResult
+    factory Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory shape=51 reverse=24
+            in boolean name=changeAcceptedByMerchant
+            out class type=Windows.ApplicationModel.Payments.PaymentRequestChangedResult return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResultFactory shape=117 reverse=45
+            in boolean name=changeAcceptedByMerchant
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=updatedPaymentDetails
+            out class type=Windows.ApplicationModel.Payments.PaymentRequestChangedResult return
+    property updated_payment_details
+        get get_UpdatedPaymentDetails slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=121
+            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+        put put_UpdatedPaymentDetails slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=141
+            in class type=Windows.ApplicationModel.Payments.PaymentDetails name=value
+    property message
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=62
+            out string return
+        put put_Message slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=99
+            in string name=value
+    property change_accepted_by_merchant
+        get get_ChangeAcceptedByMerchant slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=22
+            out boolean return
+        put put_ChangeAcceptedByMerchant slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentRequestChangedResult shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus python_type
+    py PaymentRequestCompletionStatus
+    signature enum(Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus;i4)
+
+enum Windows.ApplicationModel.Payments.PaymentRequestStatus python_type
+    py PaymentRequestStatus
+    signature enum(Windows.ApplicationModel.Payments.PaymentRequestStatus;i4)
+
+class Windows.ApplicationModel.Payments.PaymentRequestSubmitResult python_type
+    py PaymentRequestSubmitResult
+    signature rc(Windows.ApplicationModel.Payments.PaymentRequestSubmitResult;{7b9c3912-30f2-4e90-b249-8ce7d78ffe56})
+    default Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult
+    requires Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult
+    property response
+        get get_Response slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Payments.PaymentResponse return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestSubmitResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentRequestStatus return
+
+class Windows.ApplicationModel.Payments.PaymentResponse python_type
+    py PaymentResponse
+    signature rc(Windows.ApplicationModel.Payments.PaymentResponse;{e1389457-8bd2-4888-9fa8-97985545108e})
+    default Windows.ApplicationModel.Payments.IPaymentResponse
+    requires Windows.ApplicationModel.Payments.IPaymentResponse
+    property payer_email
+        get get_PayerEmail slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=99
+            out string return
+    property payer_name
+        get get_PayerName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=121
+            out string return
+    property payer_phone_number
+        get get_PayerPhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=141
+            out string return
+    property payment_token
+        get get_PaymentToken slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Payments.PaymentToken return
+    property shipping_address
+        get get_ShippingAddress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Payments.PaymentAddress return
+    property shipping_option
+        get get_ShippingOption slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+    method complete_async
+        method CompleteAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentResponse shape=51 reverse=163
+            in enum32 type=Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus name=status
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Payments.PaymentShippingOption python_type
+    py PaymentShippingOption
+    signature rc(Windows.ApplicationModel.Payments.PaymentShippingOption;{13372ada-9753-4574-8966-93145a76c7f9})
+    default Windows.ApplicationModel.Payments.IPaymentShippingOption
+    requires Windows.ApplicationModel.Payments.IPaymentShippingOption
+    factory Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory shape=117 reverse=25
+            in string name=label
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=amount
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory shape=195 reverse=46
+            in string name=label
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=amount
+            in boolean name=selected
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOptionFactory shape=239 reverse=69
+            in string name=label
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=amount
+            in boolean name=selected
+            in string name=tag
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+    property tag
+        get get_Tag slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=121
+            out string return
+        put put_Tag slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=141
+            in string name=value
+    property label
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=22
+            out string return
+        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=43
+            in string name=value
+    property is_selected
+        get get_IsSelected slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=162
+            out boolean return
+        put put_IsSelected slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=173
+            in boolean name=value
+    property amount
+        get get_Amount slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount return
+        put put_Amount slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.IPaymentShippingOption shape=4 reverse=99
+            in class type=Windows.ApplicationModel.Payments.PaymentCurrencyAmount name=value
+
+enum Windows.ApplicationModel.Payments.PaymentShippingType python_type
+    py PaymentShippingType
+    signature enum(Windows.ApplicationModel.Payments.PaymentShippingType;i4)
+
+class Windows.ApplicationModel.Payments.PaymentToken python_type
+    py PaymentToken
+    signature rc(Windows.ApplicationModel.Payments.PaymentToken;{bbcac013-ccd0-41f2-b2a1-0a2e4b5dce25})
+    default Windows.ApplicationModel.Payments.IPaymentToken
+    requires Windows.ApplicationModel.Payments.IPaymentToken
+    factory Windows.ApplicationModel.Payments.IPaymentTokenFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentTokenFactory shape=51 reverse=24
+            in string name=paymentMethodId
+            out class type=Windows.ApplicationModel.Payments.PaymentToken return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentTokenFactory shape=117 reverse=45
+            in string name=paymentMethodId
+            in string name=jsonDetails
+            out class type=Windows.ApplicationModel.Payments.PaymentToken return
+    property json_details
+        get get_JsonDetails slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentToken shape=4 reverse=43
+            out string return
+    property payment_method_id
+        get get_PaymentMethodId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentToken shape=4 reverse=22
+            out string return
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet

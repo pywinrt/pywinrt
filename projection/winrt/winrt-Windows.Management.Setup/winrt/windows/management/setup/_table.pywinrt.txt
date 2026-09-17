@@ -1,0 +1,304 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Management.Setup
+
+class Windows.Management.Setup.AgentProvisioningProgressReport activatable python_type
+    py AgentProvisioningProgressReport
+    signature rc(Windows.Management.Setup.AgentProvisioningProgressReport;{5097398a-70cc-5181-a7af-d31c167323d1})
+    default Windows.Management.Setup.IAgentProvisioningProgressReport
+    requires Windows.Management.Setup.IAgentProvisioningProgressReport
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=22
+            out enum32 type=Windows.Management.Setup.DeploymentAgentProgressState return
+        put put_State slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=43
+            in enum32 type=Windows.Management.Setup.DeploymentAgentProgressState name=value
+    property progress_percentage
+        get get_ProgressPercentage slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=62
+            out double return
+        put put_ProgressPercentage slot=9 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=2
+            in double name=value
+    property estimated_time_remaining
+        get get_EstimatedTimeRemaining slot=10 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=121
+            out timespan return
+        put put_EstimatedTimeRemaining slot=11 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=26 reverse=156
+            in timespan name=value
+    property display_progress_secondary
+        get get_DisplayProgressSecondary slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=186
+            out string return
+        put put_DisplayProgressSecondary slot=15 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=194
+            in string name=value
+    property display_progress
+        get get_DisplayProgress slot=12 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=162
+            out string return
+        put put_DisplayProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=173
+            in string name=value
+    property current_batch_index
+        get get_CurrentBatchIndex slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=210
+            out uint32 return
+        put put_CurrentBatchIndex slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=218
+            in uint32 name=value
+    property batches
+        get get_Batches slot=16 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkloadBatch> return
+
+enum Windows.Management.Setup.DeploymentAgentProgressState python_type
+    py DeploymentAgentProgressState
+    signature enum(Windows.Management.Setup.DeploymentAgentProgressState;i4)
+
+enum Windows.Management.Setup.DeploymentSessionConnectionChange python_type
+    py DeploymentSessionConnectionChange
+    signature enum(Windows.Management.Setup.DeploymentSessionConnectionChange;i4)
+
+class Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs python_type
+    py DeploymentSessionConnectionChangedEventArgs
+    signature rc(Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs;{8d40c631-6e4b-5d59-92f8-0de54c2a3c6b})
+    default Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs
+    requires Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs
+    property change
+        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Management.Setup.DeploymentSessionConnectionChange return
+    property session_id
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4 reverse=22
+            out string return
+
+delegate Windows.Management.Setup.DeploymentSessionHeartbeatRequested python_type
+    py DeploymentSessionHeartbeatRequested
+    guid c94a770b-5b05-4595-9e69-79070484377e
+    signature delegate({c94a770b-5b05-4595-9e69-79070484377e})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs name=eventArgs
+
+class Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs python_type
+    py DeploymentSessionHeartbeatRequestedEventArgs
+    signature rc(Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs;{09d81fa0-1036-58e6-b63b-fe343c45005f})
+    default Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs
+    requires Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.Management.Setup.DeploymentSessionStateChange python_type
+    py DeploymentSessionStateChange
+    signature enum(Windows.Management.Setup.DeploymentSessionStateChange;i4)
+
+class Windows.Management.Setup.DeploymentSessionStateChangedEventArgs python_type
+    py DeploymentSessionStateChangedEventArgs
+    signature rc(Windows.Management.Setup.DeploymentSessionStateChangedEventArgs;{fbd3b7f3-88cb-5703-b8a5-0218de8fed81})
+    default Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs
+    requires Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs
+    property change
+        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Management.Setup.DeploymentSessionStateChange return
+    property session_id
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4 reverse=22
+            out string return
+
+class Windows.Management.Setup.DeploymentWorkload python_type
+    py DeploymentWorkload
+    signature rc(Windows.Management.Setup.DeploymentWorkload;{1cefd3d4-456c-50d1-9312-cc5c818fc12e})
+    default Windows.Management.Setup.IDeploymentWorkload
+    requires Windows.Management.Setup.IDeploymentWorkload
+    factory Windows.Management.Setup.IDeploymentWorkloadFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadFactory shape=51 reverse=24
+            in string name=id
+            out class type=Windows.Management.Setup.DeploymentWorkload return
+    property state_details
+        get get_StateDetails slot=23 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=242
+            out string return
+        put put_StateDetails slot=24 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=247
+            in string name=value
+    property state
+        get get_State slot=21 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=232
+            out enum32 type=Windows.Management.Setup.DeploymentWorkloadState return
+        put put_State slot=22 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=237
+            in enum32 type=Windows.Management.Setup.DeploymentWorkloadState name=value
+    property start_time
+        get get_StartTime slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_StartTime slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=121
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property possible_resolution
+        get get_PossibleResolution slot=19 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=223
+            out string return
+        put put_PossibleResolution slot=20 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=228
+            in string name=value
+    property possible_cause
+        get get_PossibleCause slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=210
+            out string return
+        put put_PossibleCause slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=218
+            in string name=value
+    property error_message
+        get get_ErrorMessage slot=15 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=194
+            out string return
+        put put_ErrorMessage slot=16 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=202
+            in string name=value
+    property error_code
+        get get_ErrorCode slot=13 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=173
+            out uint32 return
+        put put_ErrorCode slot=14 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=186
+            in uint32 name=value
+    property end_time
+        get get_EndTime slot=11 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_EndTime slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=162
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property display_friendly_name
+        get get_DisplayFriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=43
+            out string return
+        put put_DisplayFriendlyName slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=62
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=22
+            out string return
+
+class Windows.Management.Setup.DeploymentWorkloadBatch python_type
+    py DeploymentWorkloadBatch
+    signature rc(Windows.Management.Setup.DeploymentWorkloadBatch;{5e56e3df-b9c0-5fee-ba3f-e89d800a9bf2})
+    default Windows.Management.Setup.IDeploymentWorkloadBatch
+    requires Windows.Management.Setup.IDeploymentWorkloadBatch
+    factory Windows.Management.Setup.IDeploymentWorkloadBatchFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatchFactory shape=51 reverse=24
+            in uint32 name=id
+            out class type=Windows.Management.Setup.DeploymentWorkloadBatch return
+    property display_category_title
+        get get_DisplayCategoryTitle slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=43
+            out string return
+        put put_DisplayCategoryTitle slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=62
+            in string name=value
+    property batch_workloads
+        get get_BatchWorkloads slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkload> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=22
+            out uint32 return
+
+enum Windows.Management.Setup.DeploymentWorkloadState python_type
+    py DeploymentWorkloadState
+    signature enum(Windows.Management.Setup.DeploymentWorkloadState;i4)
+
+class Windows.Management.Setup.DevicePreparationExecutionContext python_type
+    py DevicePreparationExecutionContext
+    signature rc(Windows.Management.Setup.DevicePreparationExecutionContext;{084f221b-2484-5e81-a4e7-83f6caf19dc4})
+    default Windows.Management.Setup.IDevicePreparationExecutionContext
+    requires Windows.Management.Setup.IDevicePreparationExecutionContext
+    property context
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDevicePreparationExecutionContext shape=4 reverse=22
+            out string return
+
+interface Windows.Management.Setup.IAgentProvisioningProgressReport
+    guid 5097398a-70cc-5181-a7af-d31c167323d1
+
+interface Windows.Foundation.IAsyncOperation<Windows.Management.Setup.DevicePreparationExecutionContext> concrete
+    guid 7275b4fe-ba33-55bd-830f-470f0f6d9a78
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Management.Setup.DevicePreparationExecutionContext;{084f221b-2484-5e81-a4e7-83f6caf19dc4}))
+    argument Windows.Management.Setup.DevicePreparationExecutionContext
+
+interface Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs
+    guid 8d40c631-6e4b-5d59-92f8-0de54c2a3c6b
+
+interface Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs
+    guid 09d81fa0-1036-58e6-b63b-fe343c45005f
+
+interface Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs
+    guid fbd3b7f3-88cb-5703-b8a5-0218de8fed81
+
+interface Windows.Management.Setup.IDeploymentWorkload
+    guid 1cefd3d4-456c-50d1-9312-cc5c818fc12e
+
+interface Windows.Management.Setup.IDeploymentWorkloadBatch
+    guid 5e56e3df-b9c0-5fee-ba3f-e89d800a9bf2
+
+interface Windows.Management.Setup.IDeploymentWorkloadBatchFactory
+    guid d0209697-9560-5a05-bdf6-f1af535cb0d4
+
+interface Windows.Management.Setup.IDeploymentWorkloadFactory
+    guid 41426c72-22a3-5339-bdf1-51268169aa61
+
+interface Windows.Management.Setup.IDevicePreparationExecutionContext
+    guid 084f221b-2484-5e81-a4e7-83f6caf19dc4
+
+interface Windows.Management.Setup.IMachineProvisioningProgressReporter
+    guid ebd8677f-dfd2-59da-ac3d-753ee1667cbb
+
+interface Windows.Management.Setup.IMachineProvisioningProgressReporterStatics
+    guid 77682c17-5da3-51fc-a042-c7b53458ddb5
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkload> concrete
+    guid 61b531b2-c040-5f95-9423-7fe1aab69d8d
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Management.Setup.DeploymentWorkload;{1cefd3d4-456c-50d1-9312-cc5c818fc12e}))
+    argument Windows.Management.Setup.DeploymentWorkload
+
+interface Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkloadBatch> concrete
+    guid 0b1bd2b8-bbed-5d64-8712-ee309a3bfad9
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Management.Setup.DeploymentWorkloadBatch;{5e56e3df-b9c0-5fee-ba3f-e89d800a9bf2}))
+    argument Windows.Management.Setup.DeploymentWorkloadBatch
+
+class Windows.Management.Setup.MachineProvisioningProgressReporter python_type
+    py MachineProvisioningProgressReporter
+    signature rc(Windows.Management.Setup.MachineProvisioningProgressReporter;{ebd8677f-dfd2-59da-ac3d-753ee1667cbb})
+    default Windows.Management.Setup.IMachineProvisioningProgressReporter
+    requires Windows.Management.Setup.IMachineProvisioningProgressReporter
+    factory Windows.Management.Setup.IMachineProvisioningProgressReporterStatics
+    property session_connection
+        get get_SessionConnection slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=43
+            out enum32 type=Windows.Management.Setup.DeploymentSessionConnectionChange return
+    property session_id
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=22
+            out guid return
+    property session_state
+        get get_SessionState slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=62
+            out enum32 type=Windows.Management.Setup.DeploymentSessionStateChange return
+    event session_connection_changed
+        add add_SessionConnectionChanged slot=11 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SessionConnectionChanged slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=167
+            in event_token name=token
+    event session_state_changed
+        add add_SessionStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SessionStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=134
+            in event_token name=token
+    method get_device_preparation_execution_context_async
+        method GetDevicePreparationExecutionContextAsync slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=186
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Management.Setup.DevicePreparationExecutionContext> return
+    method get_for_launch_uri static
+        method GetForLaunchUri slot=6 inputs=2 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporterStatics shape=117 reverse=25 static
+            in class type=Windows.Foundation.Uri name=launchUri
+            in delegate type=Windows.Management.Setup.DeploymentSessionHeartbeatRequested name=heartbeatHandler
+            out class type=Windows.Management.Setup.MachineProvisioningProgressReporter return
+    method report_progress
+        method ReportProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=173
+            in class type=Windows.Management.Setup.AgentProvisioningProgressReport name=updateReport
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs> concrete
+    guid 3091fe0b-29c3-596c-bae3-aca1aed1a4dc
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Setup.MachineProvisioningProgressReporter;{ebd8677f-dfd2-59da-ac3d-753ee1667cbb});rc(Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs;{8d40c631-6e4b-5d59-92f8-0de54c2a3c6b}))
+    argument Windows.Management.Setup.MachineProvisioningProgressReporter
+    argument Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionStateChangedEventArgs> concrete
+    guid b0ab7b86-bb33-5a2c-9417-61dc56e65665
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Setup.MachineProvisioningProgressReporter;{ebd8677f-dfd2-59da-ac3d-753ee1667cbb});rc(Windows.Management.Setup.DeploymentSessionStateChangedEventArgs;{fbd3b7f3-88cb-5703-b8a5-0218de8fed81}))
+    argument Windows.Management.Setup.MachineProvisioningProgressReporter
+    argument Windows.Management.Setup.DeploymentSessionStateChangedEventArgs
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

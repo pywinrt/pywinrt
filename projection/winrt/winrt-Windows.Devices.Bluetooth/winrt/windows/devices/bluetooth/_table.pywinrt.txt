@@ -1,0 +1,957 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Bluetooth
+
+class Windows.Devices.Bluetooth.BluetoothAdapter python_type
+    py BluetoothAdapter
+    signature rc(Windows.Devices.Bluetooth.BluetoothAdapter;{7974f04c-5f7a-4a34-9225-a855f84b1a8b})
+    default Windows.Devices.Bluetooth.IBluetoothAdapter
+    requires Windows.Devices.Bluetooth.IBluetoothAdapter
+    requires Windows.Devices.Bluetooth.IBluetoothAdapter2
+    requires Windows.Devices.Bluetooth.IBluetoothAdapter3
+    requires Windows.Devices.Bluetooth.IBluetoothAdapter4
+    factory Windows.Devices.Bluetooth.IBluetoothAdapterStatics
+    property bluetooth_address
+        get get_BluetoothAddress slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=43
+            out uint64 return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=22
+            out string return
+    property is_advertisement_offload_supported
+        get get_IsAdvertisementOffloadSupported slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=162
+            out boolean return
+    property is_central_role_supported
+        get get_IsCentralRoleSupported slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=141
+            out boolean return
+    property is_classic_supported
+        get get_IsClassicSupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=62
+            out boolean return
+    property is_low_energy_supported
+        get get_IsLowEnergySupported slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=99
+            out boolean return
+    property is_peripheral_role_supported
+        get get_IsPeripheralRoleSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=121
+            out boolean return
+    property are_classic_secure_connections_supported
+        get get_AreClassicSecureConnectionsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter2 shape=4 reverse=22
+            out boolean return
+    property are_low_energy_secure_connections_supported
+        get get_AreLowEnergySecureConnectionsSupported slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter2 shape=4 reverse=43
+            out boolean return
+    property is_extended_advertising_supported
+        get get_IsExtendedAdvertisingSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter3 shape=4 reverse=22
+            out boolean return
+    property max_advertisement_data_length
+        get get_MaxAdvertisementDataLength slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter3 shape=4 reverse=43
+            out uint32 return
+    property is_low_energy_coded_phy_supported
+        get get_IsLowEnergyCodedPhySupported slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter4 shape=4 reverse=43
+            out boolean return
+    property is_low_energy_uncoded2_m_phy_supported
+        get get_IsLowEnergyUncoded2MPhySupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter4 shape=4 reverse=22
+            out boolean return
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapterStatics shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothAdapter> return
+    method get_default_async static
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapterStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothAdapter> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapterStatics shape=4 reverse=22 static
+            out string return
+    method get_radio_async
+        method GetRadioAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> return
+
+enum Windows.Devices.Bluetooth.BluetoothAddressType python_type
+    py BluetoothAddressType
+    signature enum(Windows.Devices.Bluetooth.BluetoothAddressType;i4)
+
+enum Windows.Devices.Bluetooth.BluetoothCacheMode python_type
+    py BluetoothCacheMode
+    signature enum(Windows.Devices.Bluetooth.BluetoothCacheMode;i4)
+
+class Windows.Devices.Bluetooth.BluetoothClassOfDevice python_type
+    py BluetoothClassOfDevice
+    signature rc(Windows.Devices.Bluetooth.BluetoothClassOfDevice;{d640227e-d7d7-4661-9454-65039ca17a2b})
+    default Windows.Devices.Bluetooth.IBluetoothClassOfDevice
+    requires Windows.Devices.Bluetooth.IBluetoothClassOfDevice
+    factory Windows.Devices.Bluetooth.IBluetoothClassOfDeviceStatics
+    property major_class
+        get get_MajorClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDevice shape=4 reverse=43
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothMajorClass return
+    property minor_class
+        get get_MinorClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDevice shape=4 reverse=62
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothMinorClass return
+    property raw_value
+        get get_RawValue slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDevice shape=4 reverse=22
+            out uint32 return
+    property service_capabilities
+        get get_ServiceCapabilities slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDevice shape=4 reverse=99
+            out enum_u32 type=Windows.Devices.Bluetooth.BluetoothServiceCapabilities return
+    method from_parts static
+        method FromParts slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDeviceStatics shape=195 reverse=46 static
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothMajorClass name=majorClass
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothMinorClass name=minorClass
+            in enum_u32 type=Windows.Devices.Bluetooth.BluetoothServiceCapabilities name=serviceCapabilities
+            out class type=Windows.Devices.Bluetooth.BluetoothClassOfDevice return
+    method from_raw_value static
+        method FromRawValue slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothClassOfDeviceStatics shape=51 reverse=24 static
+            in uint32 name=rawValue
+            out class type=Windows.Devices.Bluetooth.BluetoothClassOfDevice return
+
+enum Windows.Devices.Bluetooth.BluetoothConnectionStatus python_type
+    py BluetoothConnectionStatus
+    signature enum(Windows.Devices.Bluetooth.BluetoothConnectionStatus;i4)
+
+class Windows.Devices.Bluetooth.BluetoothDevice python_type closeable
+    py BluetoothDevice
+    signature rc(Windows.Devices.Bluetooth.BluetoothDevice;{2335b156-90d2-4a04-aef5-0e20b9e6b707})
+    default Windows.Devices.Bluetooth.IBluetoothDevice
+    requires Windows.Devices.Bluetooth.IBluetoothDevice
+    requires Windows.Devices.Bluetooth.IBluetoothDevice2
+    requires Windows.Devices.Bluetooth.IBluetoothDevice3
+    requires Windows.Devices.Bluetooth.IBluetoothDevice4
+    requires Windows.Devices.Bluetooth.IBluetoothDevice5
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Bluetooth.IBluetoothDeviceStatics
+    factory Windows.Devices.Bluetooth.IBluetoothDeviceStatics2
+    property bluetooth_address
+        get get_BluetoothAddress slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=173
+            out uint64 return
+    property class_of_device
+        get get_ClassOfDevice slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=99
+            out class type=Windows.Devices.Bluetooth.BluetoothClassOfDevice return
+    property connection_status
+        get get_ConnectionStatus slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=162
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothConnectionStatus return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=22
+            out string return
+    property host_name
+        get get_HostName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=43
+            out class type=Windows.Networking.HostName return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=62
+            out string return
+    property rfcomm_services
+        get get_RfcommServices slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=141 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> return
+    property sdp_records
+        get get_SdpRecords slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> return
+    property device_information
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice2 shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property device_access_information
+        get get_DeviceAccessInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
+    property bluetooth_device_id
+        get get_BluetoothDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice4 shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.BluetoothDeviceId return
+    property was_secure_connection_used_for_pairing
+        get get_WasSecureConnectionUsedForPairing slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice5 shape=4 reverse=22
+            out boolean return
+    event connection_status_changed
+        add add_ConnectionStatusChanged slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=51 reverse=219
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothDevice,System.Object> name=handler
+            out event_token return
+        remove remove_ConnectionStatusChanged slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=26 reverse=226
+            in event_token name=token
+    event name_changed
+        add add_NameChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothDevice,System.Object> name=handler
+            out event_token return
+        remove remove_NameChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=26 reverse=200
+            in event_token name=token
+    event sdp_records_changed
+        add add_SdpRecordsChanged slot=16 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothDevice,System.Object> name=handler
+            out event_token return
+        remove remove_SdpRecordsChanged slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothDevice shape=26 reverse=215
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_bluetooth_address_async static
+        method FromBluetoothAddressAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics shape=47 reverse=60 static
+            in uint64 name=address
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothDevice> return
+    method from_host_name_async static
+        method FromHostNameAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics shape=51 reverse=44 static
+            in class type=Windows.Networking.HostName name=hostName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothDevice> return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothDevice> return
+    method get_device_selector static
+        method GetDeviceSelector slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics shape=4 reverse=99 static
+            out string return
+    method get_device_selector_from_bluetooth_address static
+        method GetDeviceSelectorFromBluetoothAddress slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics2 shape=47 reverse=98 static
+            in uint64 name=bluetoothAddress
+            out string return
+    method get_device_selector_from_class_of_device static
+        method GetDeviceSelectorFromClassOfDevice slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics2 shape=51 reverse=124 static
+            in class type=Windows.Devices.Bluetooth.BluetoothClassOfDevice name=classOfDevice
+            out string return
+    method get_device_selector_from_connection_status static
+        method GetDeviceSelectorFromConnectionStatus slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics2 shape=51 reverse=44 static
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothConnectionStatus name=connectionStatus
+            out string return
+    method get_device_selector_from_device_name static
+        method GetDeviceSelectorFromDeviceName slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics2 shape=51 reverse=65 static
+            in string name=deviceName
+            out string return
+    method get_device_selector_from_pairing_state static
+        method GetDeviceSelectorFromPairingState slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceStatics2 shape=51 reverse=24 static
+            in boolean name=pairingState
+            out string return
+    method get_rfcomm_services_async
+        method GetRfcommServicesAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> return
+        method GetRfcommServicesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=51 reverse=100
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> return
+    method get_rfcomm_services_for_id_async
+        method GetRfcommServicesForIdAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=51 reverse=124
+            in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> return
+        method GetRfcommServicesForIdAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=117 reverse=145
+            in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> return
+    method request_access_async
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDevice3 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> return
+
+class Windows.Devices.Bluetooth.BluetoothDeviceId python_type
+    py BluetoothDeviceId
+    signature rc(Windows.Devices.Bluetooth.BluetoothDeviceId;{c17949af-57c1-4642-bcce-e6c06b20ae76})
+    default Windows.Devices.Bluetooth.IBluetoothDeviceId
+    requires Windows.Devices.Bluetooth.IBluetoothDeviceId
+    factory Windows.Devices.Bluetooth.IBluetoothDeviceIdStatics
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceId shape=4 reverse=22
+            out string return
+    property is_classic_device
+        get get_IsClassicDevice slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceId shape=4 reverse=43
+            out boolean return
+    property is_low_energy_device
+        get get_IsLowEnergyDevice slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceId shape=4 reverse=62
+            out boolean return
+    method from_id static
+        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothDeviceIdStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out class type=Windows.Devices.Bluetooth.BluetoothDeviceId return
+
+enum Windows.Devices.Bluetooth.BluetoothError python_type
+    py BluetoothError
+    signature enum(Windows.Devices.Bluetooth.BluetoothError;i4)
+
+class Windows.Devices.Bluetooth.BluetoothLEAppearance python_type
+    py BluetoothLEAppearance
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEAppearance;{5d2079f2-66a8-4258-985e-02b4d9509f18})
+    default Windows.Devices.Bluetooth.IBluetoothLEAppearance
+    requires Windows.Devices.Bluetooth.IBluetoothLEAppearance
+    factory Windows.Devices.Bluetooth.IBluetoothLEAppearanceStatics
+    property category
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearance shape=4 reverse=43
+            out uint16 return
+    property raw_value
+        get get_RawValue slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearance shape=4 reverse=22
+            out uint16 return
+    property sub_category
+        get get_SubCategory slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearance shape=4 reverse=62
+            out uint16 return
+    method from_parts static
+        method FromParts slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceStatics shape=117 reverse=45 static
+            in uint16 name=appearanceCategory
+            in uint16 name=appearanceSubCategory
+            out class type=Windows.Devices.Bluetooth.BluetoothLEAppearance return
+    method from_raw_value static
+        method FromRawValue slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceStatics shape=51 reverse=24 static
+            in uint16 name=rawValue
+            out class type=Windows.Devices.Bluetooth.BluetoothLEAppearance return
+
+class Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories static python_type
+    py BluetoothLEAppearanceCategories
+    factory Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics
+    property barcode_scanner static
+        get get_BarcodeScanner slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=210 static
+            out uint16 return
+    property blood_pressure static
+        get get_BloodPressure slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=228 static
+            out uint16 return
+    property clock static
+        get get_Clock slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=121 static
+            out uint16 return
+    property computer static
+        get get_Computer slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=62 static
+            out uint16 return
+    property cycling static
+        get get_Cycling slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=247 static
+            out uint16 return
+    property display static
+        get get_Display slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=141 static
+            out uint16 return
+    property eye_glasses static
+        get get_EyeGlasses slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=173 static
+            out uint16 return
+    property glucose_meter static
+        get get_GlucoseMeter slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=237 static
+            out uint16 return
+    property heart_rate static
+        get get_HeartRate slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=223 static
+            out uint16 return
+    property human_interface_device static
+        get get_HumanInterfaceDevice slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=232 static
+            out uint16 return
+    property keyring static
+        get get_Keyring slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=194 static
+            out uint16 return
+    property media_player static
+        get get_MediaPlayer slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=202 static
+            out uint16 return
+    property outdoor_sport_activity static
+        get get_OutdoorSportActivity slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=259 static
+            out uint16 return
+    property phone static
+        get get_Phone slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=43 static
+            out uint16 return
+    property pulse_oximeter static
+        get get_PulseOximeter slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=252 static
+            out uint16 return
+    property remote_control static
+        get get_RemoteControl slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=162 static
+            out uint16 return
+    property running_walking static
+        get get_RunningWalking slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=242 static
+            out uint16 return
+    property tag static
+        get get_Tag slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=186 static
+            out uint16 return
+    property thermometer static
+        get get_Thermometer slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=218 static
+            out uint16 return
+    property uncategorized static
+        get get_Uncategorized slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=22 static
+            out uint16 return
+    property watch static
+        get get_Watch slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=99 static
+            out uint16 return
+    property weight_scale static
+        get get_WeightScale slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics shape=4 reverse=255 static
+            out uint16 return
+
+class Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories static python_type
+    py BluetoothLEAppearanceSubcategories
+    factory Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics
+    property barcode_scanner static
+        get get_BarcodeScanner slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=223 static
+            out uint16 return
+    property blood_pressure_arm static
+        get get_BloodPressureArm slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=121 static
+            out uint16 return
+    property blood_pressure_wrist static
+        get get_BloodPressureWrist slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=141 static
+            out uint16 return
+    property card_reader static
+        get get_CardReader slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=210 static
+            out uint16 return
+    property cycling_cadence_sensor static
+        get get_CyclingCadenceSensor slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=252 static
+            out uint16 return
+    property cycling_computer static
+        get get_CyclingComputer slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=242 static
+            out uint16 return
+    property cycling_power_sensor static
+        get get_CyclingPowerSensor slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=255 static
+            out uint16 return
+    property cycling_speed_cadence_sensor static
+        get get_CyclingSpeedCadenceSensor slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=259 static
+            out uint16 return
+    property cycling_speed_sensor static
+        get get_CyclingSpeedSensor slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=247 static
+            out uint16 return
+    property digital_pen static
+        get get_DigitalPen slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=218 static
+            out uint16 return
+    property digitizer_tablet static
+        get get_DigitizerTablet slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=202 static
+            out uint16 return
+    property gamepad static
+        get get_Gamepad slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=194 static
+            out uint16 return
+    property generic static
+        get get_Generic slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=22 static
+            out uint16 return
+    property heart_rate_belt static
+        get get_HeartRateBelt slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=99 static
+            out uint16 return
+    property joystick static
+        get get_Joystick slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=186 static
+            out uint16 return
+    property keyboard static
+        get get_Keyboard slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=162 static
+            out uint16 return
+    property location_display static
+        get get_LocationDisplay slot=30 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=270 static
+            out uint16 return
+    property location_navigation_display static
+        get get_LocationNavigationDisplay slot=31 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=273 static
+            out uint16 return
+    property location_navigation_pod static
+        get get_LocationNavigationPod slot=33 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=285 static
+            out uint16 return
+    property location_pod static
+        get get_LocationPod slot=32 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=280 static
+            out uint16 return
+    property mouse static
+        get get_Mouse slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=173 static
+            out uint16 return
+    property oximeter_fingertip static
+        get get_OximeterFingertip slot=28 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=263 static
+            out uint16 return
+    property oximeter_wrist_worn static
+        get get_OximeterWristWorn slot=29 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=266 static
+            out uint16 return
+    property running_walking_in_shoe static
+        get get_RunningWalkingInShoe slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=228 static
+            out uint16 return
+    property running_walking_on_hip static
+        get get_RunningWalkingOnHip slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=237 static
+            out uint16 return
+    property running_walking_on_shoe static
+        get get_RunningWalkingOnShoe slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=232 static
+            out uint16 return
+    property sports_watch static
+        get get_SportsWatch slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=43 static
+            out uint16 return
+    property thermometer_ear static
+        get get_ThermometerEar slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics shape=4 reverse=62 static
+            out uint16 return
+
+class Windows.Devices.Bluetooth.BluetoothLEConnectionParameters python_type
+    py BluetoothLEConnectionParameters
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEConnectionParameters;{33cb0771-8da9-508f-a366-1ca388c929ab})
+    default Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters
+    requires Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters
+    property connection_interval
+        get get_ConnectionInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters shape=4 reverse=62
+            out uint16 return
+    property connection_latency
+        get get_ConnectionLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters shape=4 reverse=43
+            out uint16 return
+    property link_timeout
+        get get_LinkTimeout slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters shape=4 reverse=22
+            out uint16 return
+
+class Windows.Devices.Bluetooth.BluetoothLEConnectionPhy python_type
+    py BluetoothLEConnectionPhy
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEConnectionPhy;{781e5e48-621e-5a7e-8be6-1b9561ff63c9})
+    default Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy
+    requires Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy
+    property receive_info
+        get get_ReceiveInfo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo return
+    property transmit_info
+        get get_TransmitInfo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo return
+
+class Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo python_type
+    py BluetoothLEConnectionPhyInfo
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo;{9a100bdd-602e-5c27-a1ae-b230015a6394})
+    default Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo
+    requires Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo
+    property is_coded_phy
+        get get_IsCodedPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4 reverse=62
+            out boolean return
+    property is_uncoded1_m_phy
+        get get_IsUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4 reverse=22
+            out boolean return
+    property is_uncoded2_m_phy
+        get get_IsUncoded2MPhy slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4 reverse=43
+            out boolean return
+
+class Windows.Devices.Bluetooth.BluetoothLEDevice python_type closeable
+    py BluetoothLEDevice
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEDevice;{b5ee2f7b-4ad8-4642-ac48-80a0b500e887})
+    default Windows.Devices.Bluetooth.IBluetoothLEDevice
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice2
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice3
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice4
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice5
+    requires Windows.Devices.Bluetooth.IBluetoothLEDevice6
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics
+    factory Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2
+    property bluetooth_address
+        get get_BluetoothAddress slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=4 reverse=121
+            out uint64 return
+    property connection_status
+        get get_ConnectionStatus slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=4 reverse=99
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothConnectionStatus return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=4 reverse=22
+            out string return
+    property gatt_services
+        get get_GattServices slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=4 reverse=62 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=4 reverse=43
+            out string return
+    property appearance
+        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice2 shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.BluetoothLEAppearance return
+    property bluetooth_address_type
+        get get_BluetoothAddressType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice2 shape=4 reverse=62
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothAddressType return
+    property device_information
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice2 shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property device_access_information
+        get get_DeviceAccessInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
+    property bluetooth_device_id
+        get get_BluetoothDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice4 shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.BluetoothDeviceId return
+    property was_secure_connection_used_for_pairing
+        get get_WasSecureConnectionUsedForPairing slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice5 shape=4 reverse=22
+            out boolean return
+    event connection_status_changed
+        add add_ConnectionStatusChanged slot=16 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> name=handler
+            out event_token return
+        remove remove_ConnectionStatusChanged slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=26 reverse=215
+            in event_token name=token
+    event gatt_services_changed
+        add add_GattServicesChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> name=handler
+            out event_token return
+        remove remove_GattServicesChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=26 reverse=200
+            in event_token name=token
+    event name_changed
+        add add_NameChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> name=handler
+            out event_token return
+        remove remove_NameChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=26 reverse=181
+            in event_token name=token
+    event connection_parameters_changed
+        add add_ConnectionParametersChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> name=handler
+            out event_token return
+        remove remove_ConnectionParametersChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=26 reverse=134
+            in event_token name=token
+    event connection_phy_changed
+        add add_ConnectionPhyChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> name=handler
+            out event_token return
+        remove remove_ConnectionPhyChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=26 reverse=167
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_bluetooth_address_async static
+        method FromBluetoothAddressAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics shape=47 reverse=41 static
+            in uint64 name=bluetoothAddress
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothLEDevice> return
+        method FromBluetoothAddressAsync slot=12 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=108 reverse=417 static
+            in uint64 name=bluetoothAddress
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothAddressType name=bluetoothAddressType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothLEDevice> return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothLEDevice> return
+    method get_connection_parameters
+        method GetConnectionParameters slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.BluetoothLEConnectionParameters return
+    method get_connection_phy
+        method GetConnectionPhy slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.BluetoothLEConnectionPhy return
+    method get_device_selector static
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics shape=4 reverse=62 static
+            out string return
+    method get_device_selector_from_appearance static
+        method GetDeviceSelectorFromAppearance slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=51 reverse=144 static
+            in class type=Windows.Devices.Bluetooth.BluetoothLEAppearance name=appearance
+            out string return
+    method get_device_selector_from_bluetooth_address static
+        method GetDeviceSelectorFromBluetoothAddress slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=47 reverse=98 static
+            in uint64 name=bluetoothAddress
+            out string return
+        method GetDeviceSelectorFromBluetoothAddress slot=10 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=108 static
+            in uint64 name=bluetoothAddress
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothAddressType name=bluetoothAddressType
+            out string return
+    method get_device_selector_from_connection_status static
+        method GetDeviceSelectorFromConnectionStatus slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=51 reverse=44 static
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothConnectionStatus name=connectionStatus
+            out string return
+    method get_device_selector_from_device_name static
+        method GetDeviceSelectorFromDeviceName slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=51 reverse=65 static
+            in string name=deviceName
+            out string return
+    method get_device_selector_from_pairing_state static
+        method GetDeviceSelectorFromPairingState slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=51 reverse=24 static
+            in boolean name=pairingState
+            out string return
+    method get_gatt_service deprecated
+        method GetGattService slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=94 deprecated
+            in guid name=serviceUuid
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return
+    method get_gatt_services_async
+        method GetGattServicesAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> return
+        method GetGattServicesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=51 reverse=100
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> return
+    method get_gatt_services_for_uuid_async
+        method GetGattServicesForUuidAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=94
+            in guid name=serviceUuid
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> return
+        method GetGattServicesForUuidAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=177
+            in guid name=serviceUuid
+            in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> return
+    method request_access_async
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice3 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> return
+    method request_preferred_connection_parameters
+        method RequestPreferredConnectionParameters slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice6 shape=51 reverse=65
+            in class type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters name=preferredConnectionParameters
+            out class type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest return
+
+class Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters python_type
+    py BluetoothLEPreferredConnectionParameters
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters;{f2f44344-7372-5f7b-9b34-29c944f5a715})
+    default Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters
+    requires Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters
+    factory Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics
+    property connection_latency
+        get get_ConnectionLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters shape=4 reverse=43
+            out uint16 return
+    property link_timeout
+        get get_LinkTimeout slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters shape=4 reverse=22
+            out uint16 return
+    property max_connection_interval
+        get get_MaxConnectionInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters shape=4 reverse=99
+            out uint16 return
+    property min_connection_interval
+        get get_MinConnectionInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters shape=4 reverse=62
+            out uint16 return
+    property balanced static
+        get get_Balanced slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters return
+    property power_optimized static
+        get get_PowerOptimized slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics shape=4 reverse=62 static
+            out class type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters return
+    property throughput_optimized static
+        get get_ThroughputOptimized slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics shape=4 reverse=43 static
+            out class type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters return
+
+class Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest python_type closeable
+    py BluetoothLEPreferredConnectionParametersRequest
+    signature rc(Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest;{8a375276-a528-5266-b661-cce6a5ff9739})
+    default Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersRequest
+    requires Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersRequest
+    requires Windows.Foundation.IClosable
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersRequest shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+enum Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus python_type
+    py BluetoothLEPreferredConnectionParametersRequestStatus
+    signature enum(Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus;i4)
+
+enum Windows.Devices.Bluetooth.BluetoothMajorClass python_type
+    py BluetoothMajorClass
+    signature enum(Windows.Devices.Bluetooth.BluetoothMajorClass;i4)
+
+enum Windows.Devices.Bluetooth.BluetoothMinorClass python_type
+    py BluetoothMinorClass
+    signature enum(Windows.Devices.Bluetooth.BluetoothMinorClass;i4)
+
+enum Windows.Devices.Bluetooth.BluetoothServiceCapabilities python_type
+    py BluetoothServiceCapabilities
+    signature enum(Windows.Devices.Bluetooth.BluetoothServiceCapabilities;u4)
+
+class Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter activatable python_type
+    py BluetoothSignalStrengthFilter
+    signature rc(Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter;{df7b7391-6bb5-4cfe-90b1-5d7324edcf7f})
+    default Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter
+    requires Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property sampling_interval
+        get get_SamplingInterval slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_SamplingInterval slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property out_of_range_timeout
+        get get_OutOfRangeTimeout slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_OutOfRangeTimeout slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property out_of_range_threshold_in_dbm
+        get get_OutOfRangeThresholdInDBm slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Int16> return
+        put put_OutOfRangeThresholdInDBm slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Int16> name=value
+    property in_range_threshold_in_dbm
+        get get_InRangeThresholdInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Int16> return
+        put put_InRangeThresholdInDBm slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.Int16> name=value
+
+class Windows.Devices.Bluetooth.BluetoothUuidHelper static python_type
+    py BluetoothUuidHelper
+    factory Windows.Devices.Bluetooth.IBluetoothUuidHelperStatics
+    method from_short_id static
+        method FromShortId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothUuidHelperStatics shape=51 reverse=24 static
+            in uint32 name=shortId
+            out guid return
+    method try_get_short_id static
+        method TryGetShortId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothUuidHelperStatics shape=94 reverse=54 static
+            in guid name=uuid
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothAdapter> concrete
+    guid 46fce70c-6c07-5a3a-b775-26f99402553f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.BluetoothAdapter;{7974f04c-5f7a-4a34-9225-a855f84b1a8b}))
+    argument Windows.Devices.Bluetooth.BluetoothAdapter
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothDevice> concrete
+    guid b58d8d19-44bd-5ac0-a0d6-1b50800f3181
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.BluetoothDevice;{2335b156-90d2-4a04-aef5-0e20b9e6b707}))
+    argument Windows.Devices.Bluetooth.BluetoothDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.BluetoothLEDevice> concrete
+    guid 375f9d67-74a2-5f91-a11d-169093718d41
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.BluetoothLEDevice;{b5ee2f7b-4ad8-4642-ac48-80a0b500e887}))
+    argument Windows.Devices.Bluetooth.BluetoothLEDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> concrete
+    guid e7c667f6-e874-500f-86ff-760ca6f07a58
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult;{171dd3ee-016d-419d-838a-576cf475a3d8}))
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> concrete
+    guid b7f2f74d-bf9c-5721-bf6e-03f1b4409588
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult;{3b48388c-7ccf-488e-9625-d259a5732d55}))
+    argument Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> concrete
+    guid c00bc2f2-a7f8-5f3f-80d1-2808ef6bca10
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Enumeration.DeviceAccessStatus;i4))
+    argument Windows.Devices.Enumeration.DeviceAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> concrete
+    guid eac62c40-8dbc-5854-8ba0-b7b9940e7389
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Radios.Radio;{252118df-b33e-416a-875f-1cf38ae2d83e}))
+    argument Windows.Devices.Radios.Radio
+
+interface Windows.Devices.Bluetooth.IBluetoothAdapter
+    guid 7974f04c-5f7a-4a34-9225-a855f84b1a8b
+
+interface Windows.Devices.Bluetooth.IBluetoothAdapter2
+    guid ac94cecc-24d5-41b3-916d-1097c50b102b
+
+interface Windows.Devices.Bluetooth.IBluetoothAdapter3
+    guid 8f8624e0-cba9-5211-9f89-3aac62b4c6b8
+
+interface Windows.Devices.Bluetooth.IBluetoothAdapter4
+    guid f875f3e1-6d9a-5d5e-aee5-a17248e5f6dd
+
+interface Windows.Devices.Bluetooth.IBluetoothAdapterStatics
+    guid 8b02fb6a-ac4c-4741-8661-8eab7d17ea9f
+
+interface Windows.Devices.Bluetooth.IBluetoothClassOfDevice
+    guid d640227e-d7d7-4661-9454-65039ca17a2b
+
+interface Windows.Devices.Bluetooth.IBluetoothClassOfDeviceStatics
+    guid e46135bd-0fa2-416c-91b4-c1e48ca061c1
+
+interface Windows.Devices.Bluetooth.IBluetoothDevice
+    guid 2335b156-90d2-4a04-aef5-0e20b9e6b707
+
+interface Windows.Devices.Bluetooth.IBluetoothDevice2
+    guid 0133f954-b156-4dd0-b1f5-c11bc31a5163
+
+interface Windows.Devices.Bluetooth.IBluetoothDevice3
+    guid 57fff78b-651a-4454-b90f-eb21ef0b0d71
+
+interface Windows.Devices.Bluetooth.IBluetoothDevice4
+    guid 817c34ad-0e9c-42b2-a8dc-3e8094940d12
+
+interface Windows.Devices.Bluetooth.IBluetoothDevice5
+    guid b5e0b385-5e85-4559-a10d-1c7281379f96
+
+interface Windows.Devices.Bluetooth.IBluetoothDeviceId
+    guid c17949af-57c1-4642-bcce-e6c06b20ae76
+
+interface Windows.Devices.Bluetooth.IBluetoothDeviceIdStatics
+    guid a7884e67-3efb-4f31-bbc2-810e09977404
+
+interface Windows.Devices.Bluetooth.IBluetoothDeviceStatics
+    guid 0991df51-57db-4725-bbd7-84f64327ec2c
+
+interface Windows.Devices.Bluetooth.IBluetoothDeviceStatics2
+    guid c29e8e2f-4e14-4477-aa1b-b8b47e5b7ece
+
+interface Windows.Devices.Bluetooth.IBluetoothLEAppearance
+    guid 5d2079f2-66a8-4258-985e-02b4d9509f18
+
+interface Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics
+    guid 6d4d54fe-046a-4185-aab6-824cf0610861
+
+interface Windows.Devices.Bluetooth.IBluetoothLEAppearanceStatics
+    guid a193c0c7-4504-4f4a-9ba5-cd1054e5e065
+
+interface Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics
+    guid e57ba606-2144-415a-8312-71ccf291f8d1
+
+interface Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters
+    guid 33cb0771-8da9-508f-a366-1ca388c929ab
+
+interface Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy
+    guid 781e5e48-621e-5a7e-8be6-1b9561ff63c9
+
+interface Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo
+    guid 9a100bdd-602e-5c27-a1ae-b230015a6394
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice
+    guid b5ee2f7b-4ad8-4642-ac48-80a0b500e887
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice2
+    guid 26f062b3-7aee-4d31-baba-b1b9775f5916
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice3
+    guid aee9e493-44ac-40dc-af33-b2c13c01ca46
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice4
+    guid 2b605031-2248-4b2f-acf0-7cee36fc5870
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice5
+    guid 9d6a1260-5287-458e-95ba-17c8b7bb326e
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDevice6
+    guid ca7190ef-0cae-573c-a1ca-e1fc5bfc39e2
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics
+    guid c8cf1a19-f0b6-4bf0-8689-41303de2d9f4
+
+interface Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2
+    guid 5f12c06b-3bac-43e8-ad16-563271bd41c2
+
+interface Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters
+    guid f2f44344-7372-5f7b-9b34-29c944f5a715
+
+interface Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersRequest
+    guid 8a375276-a528-5266-b661-cce6a5ff9739
+
+interface Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics
+    guid 0e3e8edc-2751-55aa-a838-8faeee818d72
+
+interface Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter
+    guid df7b7391-6bb5-4cfe-90b1-5d7324edcf7f
+
+interface Windows.Devices.Bluetooth.IBluetoothUuidHelperStatics
+    guid 17df0cd8-cf74-4b21-afe6-f57a11bcdea0
+
+interface Windows.Foundation.IReference<System.Int16> concrete
+    guid 6ec9e41b-6709-5647-9918-a1270110fc4e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i2)
+    argument System.Int16
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete
+    guid 7c8e7fdd-a1a1-528a-81d1-296769227a08
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> concrete
+    guid 97df6b82-d15c-597e-ba69-492207a1c108
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService;{ae81ff1f-c5a1-4c40-8c28-f3efd69062f3}))
+    argument Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> concrete
+    guid fd944562-11d6-5eab-bd72-701993b68fac
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothDevice,System.Object> concrete
+    guid db56ce1c-5e9f-5138-9227-b1a66d60bc1b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.BluetoothDevice;{2335b156-90d2-4a04-aef5-0e20b9e6b707});cinterface(IInspectable))
+    argument Windows.Devices.Bluetooth.BluetoothDevice
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object> concrete
+    guid a90661e2-372e-5d1e-bbbb-b8a2ce0e7c4d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.BluetoothLEDevice;{b5ee2f7b-4ad8-4642-ac48-80a0b500e887});cinterface(IInspectable))
+    argument Windows.Devices.Bluetooth.BluetoothLEDevice
+    argument System.Object
+
+class System.Int16 external
+    py winrt.system.Int16
+
+class System.Object external
+    py winrt.system.Object
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattDeviceService
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattDeviceServicesResult
+
+class Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService external
+    py winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceService
+
+class Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult external
+    py winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceServicesResult
+
+class Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId external
+    py winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId
+
+class Windows.Devices.Enumeration.DeviceAccessInformation external
+    py winrt.windows.devices.enumeration.DeviceAccessInformation
+
+enum Windows.Devices.Enumeration.DeviceAccessStatus external
+    py winrt.windows.devices.enumeration.DeviceAccessStatus
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+class Windows.Devices.Radios.Radio external
+    py winrt.windows.devices.radios.Radio
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

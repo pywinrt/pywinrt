@@ -1,0 +1,1822 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Input
+
+class Windows.UI.Input.AttachableInputObject composable python_type closeable
+    py AttachableInputObject
+    signature rc(Windows.UI.Input.AttachableInputObject;{9b822734-a3c1-542a-b2f4-0e32b773fb07})
+    default Windows.UI.Input.IAttachableInputObject
+    requires Windows.UI.Input.IAttachableInputObject
+    requires Windows.Foundation.IClosable
+    composable Windows.UI.Input.IAttachableInputObjectFactory
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+struct Windows.UI.Input.CrossSlideThresholds python_type
+    py CrossSlideThresholds
+    signature struct(Windows.UI.Input.CrossSlideThresholds;f4;f4;f4;f4)
+    field selection_start SelectionStart single
+    field speed_bump_start SpeedBumpStart single
+    field speed_bump_end SpeedBumpEnd single
+    field rearrange_start RearrangeStart single
+
+class Windows.UI.Input.CrossSlidingEventArgs python_type
+    py CrossSlidingEventArgs
+    signature rc(Windows.UI.Input.CrossSlidingEventArgs;{e9374738-6f88-41d9-8720-78e08e398349})
+    default Windows.UI.Input.ICrossSlidingEventArgs
+    requires Windows.UI.Input.ICrossSlidingEventArgs
+    requires Windows.UI.Input.ICrossSlidingEventArgs2
+    property cross_sliding_state
+        get get_CrossSlidingState slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.ICrossSlidingEventArgs shape=4 reverse=62
+            out enum32 type=Windows.UI.Input.CrossSlidingState return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ICrossSlidingEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ICrossSlidingEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ICrossSlidingEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+enum Windows.UI.Input.CrossSlidingState python_type
+    py CrossSlidingState
+    signature enum(Windows.UI.Input.CrossSlidingState;i4)
+
+class Windows.UI.Input.DraggingEventArgs python_type
+    py DraggingEventArgs
+    signature rc(Windows.UI.Input.DraggingEventArgs;{1c905384-083c-4bd3-b559-179cddeb33ec})
+    default Windows.UI.Input.IDraggingEventArgs
+    requires Windows.UI.Input.IDraggingEventArgs
+    requires Windows.UI.Input.IDraggingEventArgs2
+    property dragging_state
+        get get_DraggingState slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IDraggingEventArgs shape=4 reverse=62
+            out enum32 type=Windows.UI.Input.DraggingState return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IDraggingEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IDraggingEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IDraggingEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+enum Windows.UI.Input.DraggingState python_type
+    py DraggingState
+    signature enum(Windows.UI.Input.DraggingState;i4)
+
+class Windows.UI.Input.EdgeGesture python_type
+    py EdgeGesture
+    signature rc(Windows.UI.Input.EdgeGesture;{580d5292-2ab1-49aa-a7f0-33bd3f8df9f1})
+    default Windows.UI.Input.IEdgeGesture
+    requires Windows.UI.Input.IEdgeGesture
+    factory Windows.UI.Input.IEdgeGestureStatics
+    event canceled
+        add add_Canceled slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.IEdgeGesture shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> name=handler
+            out event_token return
+        remove remove_Canceled slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IEdgeGesture shape=26 reverse=156
+            in event_token name=token
+    event completed
+        add add_Completed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.IEdgeGesture shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> name=handler
+            out event_token return
+        remove remove_Completed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.IEdgeGesture shape=26 reverse=110
+            in event_token name=token
+    event starting
+        add add_Starting slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.IEdgeGesture shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> name=handler
+            out event_token return
+        remove remove_Starting slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IEdgeGesture shape=26 reverse=53
+            in event_token name=token
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IEdgeGestureStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Input.EdgeGesture return
+
+class Windows.UI.Input.EdgeGestureEventArgs python_type
+    py EdgeGestureEventArgs
+    signature rc(Windows.UI.Input.EdgeGestureEventArgs;{44fa4a24-2d09-42e1-8b5e-368208796a4c})
+    default Windows.UI.Input.IEdgeGestureEventArgs
+    requires Windows.UI.Input.IEdgeGestureEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IEdgeGestureEventArgs shape=4 reverse=22
+            out enum32 type=Windows.UI.Input.EdgeGestureKind return
+
+enum Windows.UI.Input.EdgeGestureKind python_type
+    py EdgeGestureKind
+    signature enum(Windows.UI.Input.EdgeGestureKind;i4)
+
+enum Windows.UI.Input.GazeInputAccessStatus python_type
+    py GazeInputAccessStatus
+    signature enum(Windows.UI.Input.GazeInputAccessStatus;i4)
+
+class Windows.UI.Input.GestureRecognizer activatable python_type
+    py GestureRecognizer
+    signature rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0})
+    default Windows.UI.Input.IGestureRecognizer
+    requires Windows.UI.Input.IGestureRecognizer
+    requires Windows.UI.Input.IGestureRecognizer2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property show_gesture_feedback
+        get get_ShowGestureFeedback slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=121
+            out boolean return
+        put put_ShowGestureFeedback slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=141
+            in boolean name=value
+    property pivot_radius
+        get get_PivotRadius slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=186
+            out single return
+        put put_PivotRadius slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1
+            in single name=value
+    property pivot_center
+        get get_PivotCenter slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=162
+            out struct type=Windows.Foundation.Point return
+        put put_PivotCenter slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=10 reverse=177
+            in struct type=Windows.Foundation.Point name=value
+    property manipulation_exact
+        get get_ManipulationExact slot=28 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=263
+            out boolean return
+        put put_ManipulationExact slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=266
+            in boolean name=value
+    property inertia_translation_displacement
+        get get_InertiaTranslationDisplacement slot=22 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=237
+            out single return
+        put put_InertiaTranslationDisplacement slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1 reverse=241
+            in single name=value
+    property inertia_translation_deceleration
+        get get_InertiaTranslationDeceleration slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=202
+            out single return
+        put put_InertiaTranslationDeceleration slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1
+            in single name=value
+    property inertia_rotation_deceleration
+        get get_InertiaRotationDeceleration slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=218
+            out single return
+        put put_InertiaRotationDeceleration slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1
+            in single name=value
+    property inertia_rotation_angle
+        get get_InertiaRotationAngle slot=24 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=247
+            out single return
+        put put_InertiaRotationAngle slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1 reverse=251
+            in single name=value
+    property inertia_expansion_deceleration
+        get get_InertiaExpansionDeceleration slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=228
+            out single return
+        put put_InertiaExpansionDeceleration slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1
+            in single name=value
+    property inertia_expansion
+        get get_InertiaExpansion slot=26 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=255
+            out single return
+        put put_InertiaExpansion slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=1
+            in single name=value
+    property gesture_settings
+        get get_GestureSettings slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=22
+            out enum_u32 type=Windows.UI.Input.GestureSettings return
+        put put_GestureSettings slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=43
+            in enum_u32 type=Windows.UI.Input.GestureSettings name=value
+    property cross_slide_thresholds
+        get get_CrossSlideThresholds slot=30 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=270
+            out struct type=Windows.UI.Input.CrossSlideThresholds return
+        put put_CrossSlideThresholds slot=31 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=8
+            in struct type=Windows.UI.Input.CrossSlideThresholds name=value
+    property cross_slide_horizontally
+        get get_CrossSlideHorizontally slot=32 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=280
+            out boolean return
+        put put_CrossSlideHorizontally slot=33 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=285
+            in boolean name=value
+    property cross_slide_exact
+        get get_CrossSlideExact slot=34 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=288
+            out boolean return
+        put put_CrossSlideExact slot=35 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=292
+            in boolean name=value
+    property auto_process_inertia
+        get get_AutoProcessInertia slot=36 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=296
+            out boolean return
+        put put_AutoProcessInertia slot=37 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=299
+            in boolean name=value
+    property is_active
+        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=99
+            out boolean return
+    property is_inertial
+        get get_IsInertial slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=62
+            out boolean return
+    property mouse_wheel_parameters
+        get get_MouseWheelParameters slot=38 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=302
+            out class type=Windows.UI.Input.MouseWheelParameters return
+    property translation_min_contact_count
+        get get_TranslationMinContactCount slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=218
+            out uint32 return
+        put put_TranslationMinContactCount slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=223
+            in uint32 name=value
+    property translation_max_contact_count
+        get get_TranslationMaxContactCount slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=228
+            out uint32 return
+        put put_TranslationMaxContactCount slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=232
+            in uint32 name=value
+    property tap_min_contact_count
+        get get_TapMinContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=22
+            out uint32 return
+        put put_TapMinContactCount slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=43
+            in uint32 name=value
+    property tap_max_contact_count
+        get get_TapMaxContactCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=62
+            out uint32 return
+        put put_TapMaxContactCount slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=99
+            in uint32 name=value
+    property hold_start_delay
+        get get_HoldStartDelay slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=202
+            out timespan return
+        put put_HoldStartDelay slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=26 reverse=215
+            in timespan name=value
+    property hold_radius
+        get get_HoldRadius slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=186
+            out single return
+        put put_HoldRadius slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=1
+            in single name=value
+    property hold_min_contact_count
+        get get_HoldMinContactCount slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=121
+            out uint32 return
+        put put_HoldMinContactCount slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=141
+            in uint32 name=value
+    property hold_max_contact_count
+        get get_HoldMaxContactCount slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=162
+            out uint32 return
+        put put_HoldMaxContactCount slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer2 shape=4 reverse=173
+            in uint32 name=value
+    event cross_sliding
+        add add_CrossSliding slot=62 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.CrossSlidingEventArgs> name=handler
+            out event_token return
+        remove remove_CrossSliding slot=63 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26
+            in event_token name=token
+    event dragging
+        add add_Dragging slot=52 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=360
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.DraggingEventArgs> name=handler
+            out event_token return
+        remove remove_Dragging slot=53 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=367
+            in event_token name=token
+    event holding
+        add add_Holding slot=50 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=352
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.HoldingEventArgs> name=handler
+            out event_token return
+        remove remove_Holding slot=51 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=357
+            in event_token name=token
+    event manipulation_completed
+        add add_ManipulationCompleted slot=60 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationCompleted slot=61 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26
+            in event_token name=token
+    event manipulation_inertia_starting
+        add add_ManipulationInertiaStarting slot=58 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationInertiaStartingEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationInertiaStarting slot=59 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26
+            in event_token name=token
+    event manipulation_started
+        add add_ManipulationStarted slot=54 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=369
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationStarted slot=55 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=372
+            in event_token name=token
+    event manipulation_updated
+        add add_ManipulationUpdated slot=56 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=373
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationUpdated slot=57 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=377
+            in event_token name=token
+    event right_tapped
+        add add_RightTapped slot=48 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=344
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.RightTappedEventArgs> name=handler
+            out event_token return
+        remove remove_RightTapped slot=49 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=350
+            in event_token name=token
+    event tapped
+        add add_Tapped slot=46 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=335
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.TappedEventArgs> name=handler
+            out event_token return
+        remove remove_Tapped slot=47 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=26 reverse=342
+            in event_token name=token
+    method can_be_double_tap
+        method CanBeDoubleTap slot=39 inputs=1 outputs=1 declaring=Windows.UI.Input.IGestureRecognizer shape=51 reverse=308
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out boolean return
+    method complete_gesture
+        method CompleteGesture slot=45 inputs=0 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=0
+    method process_down_event
+        method ProcessDownEvent slot=40 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=312
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method process_inertia
+        method ProcessInertia slot=44 inputs=0 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=0
+    method process_mouse_wheel_event
+        method ProcessMouseWheelEvent slot=43 inputs=3 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=117
+            in class type=Windows.UI.Input.PointerPoint name=value
+            in boolean name=isShiftKeyDown
+            in boolean name=isControlKeyDown
+    method process_move_events
+        method ProcessMoveEvents slot=41 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=316
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> name=value
+    method process_up_event
+        method ProcessUpEvent slot=42 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=319
+            in class type=Windows.UI.Input.PointerPoint name=value
+
+enum Windows.UI.Input.GestureSettings python_type
+    py GestureSettings
+    signature enum(Windows.UI.Input.GestureSettings;u4)
+
+class Windows.UI.Input.HoldingEventArgs python_type
+    py HoldingEventArgs
+    signature rc(Windows.UI.Input.HoldingEventArgs;{2bf755c5-e799-41b4-bb40-242f40959b71})
+    default Windows.UI.Input.IHoldingEventArgs
+    requires Windows.UI.Input.IHoldingEventArgs
+    requires Windows.UI.Input.IHoldingEventArgs2
+    property holding_state
+        get get_HoldingState slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IHoldingEventArgs shape=4 reverse=62
+            out enum32 type=Windows.UI.Input.HoldingState return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IHoldingEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IHoldingEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IHoldingEventArgs2 shape=4 reverse=22
+            out uint32 return
+    property current_contact_count
+        get get_CurrentContactCount slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IHoldingEventArgs2 shape=4 reverse=43
+            out uint32 return
+
+enum Windows.UI.Input.HoldingState python_type
+    py HoldingState
+    signature enum(Windows.UI.Input.HoldingState;i4)
+
+interface Windows.UI.Input.IAttachableInputObject
+    guid 9b822734-a3c1-542a-b2f4-0e32b773fb07
+
+interface Windows.UI.Input.IAttachableInputObjectFactory
+    guid a4c54c4e-42bc-58fa-a640-ea1516f4c06b
+
+interface Windows.UI.Input.ICrossSlidingEventArgs
+    guid e9374738-6f88-41d9-8720-78e08e398349
+
+interface Windows.UI.Input.ICrossSlidingEventArgs2
+    guid eefb7d48-c070-59f3-8dab-bcaf621d8687
+
+interface Windows.UI.Input.IDraggingEventArgs
+    guid 1c905384-083c-4bd3-b559-179cddeb33ec
+
+interface Windows.UI.Input.IDraggingEventArgs2
+    guid 71efdbf9-382a-55ca-b4b9-008123c1bf1a
+
+interface Windows.UI.Input.IEdgeGesture
+    guid 580d5292-2ab1-49aa-a7f0-33bd3f8df9f1
+
+interface Windows.UI.Input.IEdgeGestureEventArgs
+    guid 44fa4a24-2d09-42e1-8b5e-368208796a4c
+
+interface Windows.UI.Input.IEdgeGestureStatics
+    guid bc6a8519-18ee-4043-9839-4fc584d60a14
+
+interface Windows.UI.Input.IGestureRecognizer
+    guid b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0
+
+interface Windows.UI.Input.IGestureRecognizer2
+    guid d646097f-6ef7-5746-8ba8-8ff2206e6f3b
+
+interface Windows.UI.Input.IHoldingEventArgs
+    guid 2bf755c5-e799-41b4-bb40-242f40959b71
+
+interface Windows.UI.Input.IHoldingEventArgs2
+    guid 141da9ea-4c79-5674-afea-493fdeb91f19
+
+interface Windows.UI.Input.IInputActivationListener
+    guid 5d6d4ed2-28c7-5ae3-aa74-c918a9f243ca
+
+interface Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
+    guid 7699b465-1dcf-5791-b4b9-6cafbeed2056
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerSystemMenuItemKind> concrete
+    guid 4516010f-fd98-5e1d-bf3f-aeaf79f1f3da
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.UI.Input.RadialControllerSystemMenuItemKind;i4))
+    argument Windows.UI.Input.RadialControllerSystemMenuItemKind
+
+interface Windows.UI.Input.IKeyboardDeliveryInterceptor
+    guid b4baf068-8f49-446c-8db5-8c0ffe85cc9e
+
+interface Windows.UI.Input.IKeyboardDeliveryInterceptorStatics
+    guid f9f63ba2-ceba-4755-8a7e-14c0ffecd239
+
+interface Windows.UI.Input.IManipulationCompletedEventArgs
+    guid b34ab22b-d19b-46ff-9f38-dec7754bb9e7
+
+interface Windows.UI.Input.IManipulationCompletedEventArgs2
+    guid f0c0dce7-30a9-5b96-886f-6560a85e4757
+
+interface Windows.UI.Input.IManipulationInertiaStartingEventArgs
+    guid dd37a898-26bf-467a-9ce5-ccf3fb11371e
+
+interface Windows.UI.Input.IManipulationInertiaStartingEventArgs2
+    guid c25409b8-f9fa-5a45-bd97-dcbbb2201860
+
+interface Windows.UI.Input.IManipulationStartedEventArgs
+    guid ddec873e-cfce-4932-8c1d-3c3d011a34c0
+
+interface Windows.UI.Input.IManipulationStartedEventArgs2
+    guid 2da3db4e-e583-5055-afaa-16fd986531a6
+
+interface Windows.UI.Input.IManipulationUpdatedEventArgs
+    guid cb354ce5-abb8-4f9f-b3ce-8181aa61ad82
+
+interface Windows.UI.Input.IManipulationUpdatedEventArgs2
+    guid f3dfb96a-3306-5903-a1c5-ff9757a8689e
+
+interface Windows.UI.Input.IMouseWheelParameters
+    guid ead0ca44-9ded-4037-8149-5e4cc2564468
+
+interface Windows.UI.Input.IPhysicalGestureRecognizer
+    guid 79a29f4d-32a6-5aa5-a999-42b0b420c66d
+
+interface Windows.UI.Input.IPointerPoint
+    guid e995317d-7296-42d9-8233-c5be73b74a4a
+
+interface Windows.UI.Input.IPointerPointPhysicalPosition
+    guid 003185a3-a5e7-4859-9c0b-89340204806c
+
+interface Windows.UI.Input.IPointerPointProperties
+    guid c79d8a4b-c163-4ee7-803f-67ce79f9972d
+
+interface Windows.UI.Input.IPointerPointProperties2
+    guid 22c3433a-c83b-41c0-a296-5e232d64d6af
+
+interface Windows.UI.Input.IPointerPointStatics
+    guid a506638d-2a1a-413e-bc75-9f38381cc069
+
+interface Windows.UI.Input.IPointerPointTransform python_type
+    py _IPointerPointTransform
+    guid 4d5fe14f-b87c-4028-bc9c-59e9947fb056
+    signature {4d5fe14f-b87c-4028-bc9c-59e9947fb056}
+    property inverse
+        get get_Inverse slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointTransform shape=4 reverse=22
+            out interface type=Windows.UI.Input.IPointerPointTransform return
+    method transform_bounds
+        method TransformBounds slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.IPointerPointTransform shape=74 reverse=73
+            in struct type=Windows.Foundation.Rect name=rect
+            out struct type=Windows.Foundation.Rect return
+    method try_transform
+        method TryTransform slot=7 inputs=1 outputs=2 declaring=Windows.UI.Input.IPointerPointTransform shape=151 reverse=52
+            in struct type=Windows.Foundation.Point name=inPoint
+            out struct type=Windows.Foundation.Point name=outPoint
+            out boolean return
+
+interface Windows.UI.Input.IPointerVisualizationSettings
+    guid 4d1e6461-84f7-499d-bd91-2a36e2b7aaa2
+
+interface Windows.UI.Input.IPointerVisualizationSettingsStatics
+    guid 68870edb-165b-4214-b4f3-584eca8c8a69
+
+interface Windows.UI.Input.IRadialController
+    guid 3055d1c8-df51-43d4-b23b-0e1037467a09
+
+interface Windows.UI.Input.IRadialController2
+    guid 3d577eff-4cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerButtonClickedEventArgs
+    guid 206aa438-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerButtonClickedEventArgs2
+    guid 3d577ef3-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerButtonHoldingEventArgs
+    guid 3d577eee-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerButtonPressedEventArgs
+    guid 3d577eed-4cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerButtonReleasedEventArgs
+    guid 3d577eef-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerConfiguration
+    guid a6b79ecb-6a52-4430-910c-56370a9d6b42
+
+interface Windows.UI.Input.IRadialControllerConfiguration2
+    guid 3d577ef7-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerConfigurationStatics
+    guid 79b6b0e5-069a-4486-a99d-8db772b9642f
+
+interface Windows.UI.Input.IRadialControllerConfigurationStatics2
+    guid 53e08b17-e205-48d3-9caf-80ff47c4d7c7
+
+interface Windows.UI.Input.IRadialControllerControlAcquiredEventArgs
+    guid 206aa439-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2
+    guid 3d577ef4-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerMenu
+    guid 8506b35d-f640-4412-aba0-bad077e5ea8a
+
+interface Windows.UI.Input.IRadialControllerMenuItem
+    guid c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba
+
+interface Windows.UI.Input.IRadialControllerMenuItemStatics
+    guid 249e0887-d842-4524-9df8-e0d647edc887
+
+interface Windows.UI.Input.IRadialControllerMenuItemStatics2
+    guid 0cbb70be-7e3e-48bd-be04-2c7fcaa9c1ff
+
+interface Windows.UI.Input.IRadialControllerRotationChangedEventArgs
+    guid 206aa435-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerRotationChangedEventArgs2
+    guid 3d577eec-4cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerScreenContact
+    guid 206aa434-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs
+    guid 206aa437-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2
+    guid 3d577ef1-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs
+    guid 3d577ef2-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs
+    guid 206aa436-e651-11e5-bf62-2c27d7404e85
+
+interface Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2
+    guid 3d577ef0-3cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.IRadialControllerStatics
+    guid faded0b7-b84c-4894-87aa-8f25aa5f288b
+
+interface Windows.Foundation.IReference<System.Single> concrete
+    guid 719cc2ba-3e76-5def-9f1a-38d85a145ea8
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f4)
+    argument System.Single
+
+interface Windows.UI.Input.IRightTappedEventArgs
+    guid 4cbf40bd-af7a-4a36-9476-b1dce141709a
+
+interface Windows.UI.Input.IRightTappedEventArgs2
+    guid 61c7b7bb-9f57-5857-a33c-c58c3dfa959e
+
+interface Windows.UI.Input.ISystemButtonEventController
+    guid 59b893a9-73bc-52b5-ba41-82511b2cb46c
+
+interface Windows.UI.Input.ISystemButtonEventControllerStatics
+    guid 632fb07b-20bd-5e15-af4a-00dbf2064ffa
+
+interface Windows.UI.Input.ISystemFunctionButtonEventArgs
+    guid 4833896f-80d1-5dd6-92a7-62a508ffef5a
+
+interface Windows.UI.Input.ISystemFunctionLockChangedEventArgs
+    guid cd040608-fcf9-585c-beab-f1d2eaf364ab
+
+interface Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs
+    guid b212b94e-7a6f-58ae-b304-bae61d0371b9
+
+interface Windows.UI.Input.ITappedEventArgs
+    guid cfa126e4-253a-4c3c-953b-395c37aed309
+
+interface Windows.UI.Input.ITappedEventArgs2
+    guid 294388f2-177e-51d5-be56-ee0866fa968c
+
+interface Windows.UI.Input.ITouchpadGesturesController
+    guid 28c13cdd-e068-549f-89c6-1a440c6fc327
+
+interface Windows.UI.Input.ITouchpadGesturesControllerStatics
+    guid 207ef171-1a73-51cd-a694-8840e09dbafa
+
+interface Windows.UI.Input.ITouchpadGlobalActionEventArgs
+    guid 6edad206-e4e3-5f39-9d13-8575e8e2a12b
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete
+    guid dfa655cf-fde7-5048-b4bf-c909231b7edb
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    argument Windows.UI.Input.PointerPoint
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> concrete
+    guid bfde94e7-70f8-5cc0-98e2-8c0f8ce524ab
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba}))
+    argument Windows.UI.Input.RadialControllerMenuItem
+
+class Windows.UI.Input.InputActivationListener python_type
+    py InputActivationListener
+    signature rc(Windows.UI.Input.InputActivationListener;{5d6d4ed2-28c7-5ae3-aa74-c918a9f243ca})
+    base Windows.UI.Input.AttachableInputObject
+    default Windows.UI.Input.IInputActivationListener
+    requires Windows.UI.Input.IInputActivationListener
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IInputActivationListener shape=4 reverse=22
+            out enum32 type=Windows.UI.Input.InputActivationState return
+    event input_activation_changed
+        add add_InputActivationChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.IInputActivationListener shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.InputActivationListener,Windows.UI.Input.InputActivationListenerActivationChangedEventArgs> name=handler
+            out event_token return
+        remove remove_InputActivationChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IInputActivationListener shape=26 reverse=82
+            in event_token name=token
+
+class Windows.UI.Input.InputActivationListenerActivationChangedEventArgs python_type
+    py InputActivationListenerActivationChangedEventArgs
+    signature rc(Windows.UI.Input.InputActivationListenerActivationChangedEventArgs;{7699b465-1dcf-5791-b4b9-6cafbeed2056})
+    default Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
+    requires Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.UI.Input.InputActivationState return
+
+enum Windows.UI.Input.InputActivationState python_type
+    py InputActivationState
+    signature enum(Windows.UI.Input.InputActivationState;i4)
+
+class Windows.UI.Input.KeyboardDeliveryInterceptor python_type
+    py KeyboardDeliveryInterceptor
+    signature rc(Windows.UI.Input.KeyboardDeliveryInterceptor;{b4baf068-8f49-446c-8db5-8c0ffe85cc9e})
+    default Windows.UI.Input.IKeyboardDeliveryInterceptor
+    requires Windows.UI.Input.IKeyboardDeliveryInterceptor
+    factory Windows.UI.Input.IKeyboardDeliveryInterceptorStatics
+    property is_interception_enabled_when_in_foreground
+        get get_IsInterceptionEnabledWhenInForeground slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=4 reverse=22
+            out boolean return
+        put put_IsInterceptionEnabledWhenInForeground slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=4 reverse=43
+            in boolean name=value
+    event key_down
+        add add_KeyDown slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.KeyboardDeliveryInterceptor,Windows.UI.Core.KeyEventArgs> name=handler
+            out event_token return
+        remove remove_KeyDown slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=26 reverse=110
+            in event_token name=token
+    event key_up
+        add add_KeyUp slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.KeyboardDeliveryInterceptor,Windows.UI.Core.KeyEventArgs> name=handler
+            out event_token return
+        remove remove_KeyUp slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptor shape=26 reverse=156
+            in event_token name=token
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IKeyboardDeliveryInterceptorStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Input.KeyboardDeliveryInterceptor return
+
+class Windows.UI.Input.ManipulationCompletedEventArgs python_type
+    py ManipulationCompletedEventArgs
+    signature rc(Windows.UI.Input.ManipulationCompletedEventArgs;{b34ab22b-d19b-46ff-9f38-dec7754bb9e7})
+    default Windows.UI.Input.IManipulationCompletedEventArgs
+    requires Windows.UI.Input.IManipulationCompletedEventArgs
+    requires Windows.UI.Input.IManipulationCompletedEventArgs2
+    property cumulative
+        get get_Cumulative slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs shape=4 reverse=62
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property velocities
+        get get_Velocities slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Input.ManipulationVelocities return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs2 shape=4 reverse=22
+            out uint32 return
+    property current_contact_count
+        get get_CurrentContactCount slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationCompletedEventArgs2 shape=4 reverse=43
+            out uint32 return
+
+struct Windows.UI.Input.ManipulationDelta python_type
+    py ManipulationDelta
+    signature struct(Windows.UI.Input.ManipulationDelta;struct(Windows.Foundation.Point;f4;f4);f4;f4;f4)
+    field translation Translation struct type=Windows.Foundation.Point
+    field scale Scale single
+    field rotation Rotation single
+    field expansion Expansion single
+
+class Windows.UI.Input.ManipulationInertiaStartingEventArgs python_type
+    py ManipulationInertiaStartingEventArgs
+    signature rc(Windows.UI.Input.ManipulationInertiaStartingEventArgs;{dd37a898-26bf-467a-9ce5-ccf3fb11371e})
+    default Windows.UI.Input.IManipulationInertiaStartingEventArgs
+    requires Windows.UI.Input.IManipulationInertiaStartingEventArgs
+    requires Windows.UI.Input.IManipulationInertiaStartingEventArgs2
+    property cumulative
+        get get_Cumulative slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property delta
+        get get_Delta slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs shape=4 reverse=62
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property velocities
+        get get_Velocities slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs shape=4 reverse=121
+            out struct type=Windows.UI.Input.ManipulationVelocities return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationInertiaStartingEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+class Windows.UI.Input.ManipulationStartedEventArgs python_type
+    py ManipulationStartedEventArgs
+    signature rc(Windows.UI.Input.ManipulationStartedEventArgs;{ddec873e-cfce-4932-8c1d-3c3d011a34c0})
+    default Windows.UI.Input.IManipulationStartedEventArgs
+    requires Windows.UI.Input.IManipulationStartedEventArgs
+    requires Windows.UI.Input.IManipulationStartedEventArgs2
+    property cumulative
+        get get_Cumulative slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationStartedEventArgs shape=4 reverse=62
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationStartedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationStartedEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationStartedEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+class Windows.UI.Input.ManipulationUpdatedEventArgs python_type
+    py ManipulationUpdatedEventArgs
+    signature rc(Windows.UI.Input.ManipulationUpdatedEventArgs;{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82})
+    default Windows.UI.Input.IManipulationUpdatedEventArgs
+    requires Windows.UI.Input.IManipulationUpdatedEventArgs
+    requires Windows.UI.Input.IManipulationUpdatedEventArgs2
+    property cumulative
+        get get_Cumulative slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs shape=4 reverse=99
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property delta
+        get get_Delta slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs shape=4 reverse=62
+            out struct type=Windows.UI.Input.ManipulationDelta return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property velocities
+        get get_Velocities slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs shape=4 reverse=121
+            out struct type=Windows.UI.Input.ManipulationVelocities return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs2 shape=4 reverse=22
+            out uint32 return
+    property current_contact_count
+        get get_CurrentContactCount slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IManipulationUpdatedEventArgs2 shape=4 reverse=43
+            out uint32 return
+
+struct Windows.UI.Input.ManipulationVelocities python_type
+    py ManipulationVelocities
+    signature struct(Windows.UI.Input.ManipulationVelocities;struct(Windows.Foundation.Point;f4;f4);f4;f4)
+    field linear Linear struct type=Windows.Foundation.Point
+    field angular Angular single
+    field expansion Expansion single
+
+class Windows.UI.Input.MouseWheelParameters python_type
+    py MouseWheelParameters
+    signature rc(Windows.UI.Input.MouseWheelParameters;{ead0ca44-9ded-4037-8149-5e4cc2564468})
+    default Windows.UI.Input.IMouseWheelParameters
+    requires Windows.UI.Input.IMouseWheelParameters
+    property page_translation
+        get get_PageTranslation slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.IMouseWheelParameters shape=4 reverse=162
+            out struct type=Windows.Foundation.Point return
+        put put_PageTranslation slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.IMouseWheelParameters shape=10 reverse=177
+            in struct type=Windows.Foundation.Point name=value
+    property delta_scale
+        get get_DeltaScale slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IMouseWheelParameters shape=4 reverse=62
+            out single return
+        put put_DeltaScale slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.IMouseWheelParameters shape=1 reverse=94
+            in single name=value
+    property delta_rotation_angle
+        get get_DeltaRotationAngle slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IMouseWheelParameters shape=4 reverse=121
+            out single return
+        put put_DeltaRotationAngle slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IMouseWheelParameters shape=1
+            in single name=value
+    property char_translation
+        get get_CharTranslation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IMouseWheelParameters shape=4 reverse=22
+            out struct type=Windows.Foundation.Point return
+        put put_CharTranslation slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IMouseWheelParameters shape=10
+            in struct type=Windows.Foundation.Point name=value
+
+class Windows.UI.Input.PhysicalGestureRecognizer activatable python_type
+    py PhysicalGestureRecognizer
+    signature rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d})
+    default Windows.UI.Input.IPhysicalGestureRecognizer
+    requires Windows.UI.Input.IPhysicalGestureRecognizer
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property translation_min_contact_count
+        get get_TranslationMinContactCount slot=21 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=232
+            out uint32 return
+        put put_TranslationMinContactCount slot=22 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=237
+            in uint32 name=value
+    property translation_max_contact_count
+        get get_TranslationMaxContactCount slot=23 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=242
+            out uint32 return
+        put put_TranslationMaxContactCount slot=24 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=247
+            in uint32 name=value
+    property tap_min_contact_count
+        get get_TapMinContactCount slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=99
+            out uint32 return
+        put put_TapMinContactCount slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=121
+            in uint32 name=value
+    property tap_max_contact_count
+        get get_TapMaxContactCount slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=141
+            out uint32 return
+        put put_TapMaxContactCount slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=162
+            in uint32 name=value
+    property hold_start_delay
+        get get_HoldStartDelay slot=19 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=223
+            out timespan return
+        put put_HoldStartDelay slot=20 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=399
+            in timespan name=value
+    property hold_radius
+        get get_HoldRadius slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=210
+            out single return
+        put put_HoldRadius slot=18 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=1
+            in single name=value
+    property hold_min_contact_count
+        get get_HoldMinContactCount slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=173
+            out uint32 return
+        put put_HoldMinContactCount slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=186
+            in uint32 name=value
+    property hold_max_contact_count
+        get get_HoldMaxContactCount slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=194
+            out uint32 return
+        put put_HoldMaxContactCount slot=16 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=202
+            in uint32 name=value
+    property gesture_settings
+        get get_GestureSettings slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=43
+            out enum_u32 type=Windows.UI.Input.GestureSettings return
+        put put_GestureSettings slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=62
+            in enum_u32 type=Windows.UI.Input.GestureSettings name=value
+    property is_active
+        get get_IsActive slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=22
+            out boolean return
+    event holding
+        add add_Holding slot=37 inputs=1 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=51 reverse=300
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.HoldingEventArgs> name=handler
+            out event_token return
+        remove remove_Holding slot=38 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=305
+            in event_token name=token
+    event manipulation_completed
+        add add_ManipulationCompleted slot=33 inputs=1 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=51 reverse=286
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationCompleted slot=34 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=291
+            in event_token name=token
+    event manipulation_started
+        add add_ManipulationStarted slot=29 inputs=1 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationStarted slot=30 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=272
+            in event_token name=token
+    event manipulation_updated
+        add add_ManipulationUpdated slot=31 inputs=1 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=51 reverse=274
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> name=handler
+            out event_token return
+        remove remove_ManipulationUpdated slot=32 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=283
+            in event_token name=token
+    event tapped
+        add add_Tapped slot=35 inputs=1 outputs=1 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=51 reverse=293
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.TappedEventArgs> name=handler
+            out event_token return
+        remove remove_Tapped slot=36 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=26 reverse=298
+            in event_token name=token
+    method complete_gesture
+        method CompleteGesture slot=28 inputs=0 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=0
+    method process_down_event
+        method ProcessDownEvent slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=252
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method process_move_events
+        method ProcessMoveEvents slot=26 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=255
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> name=value
+    method process_up_event
+        method ProcessUpEvent slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.IPhysicalGestureRecognizer shape=4 reverse=259
+            in class type=Windows.UI.Input.PointerPoint name=value
+
+class Windows.UI.Input.PointerPoint python_type
+    py PointerPoint
+    signature rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a})
+    default Windows.UI.Input.IPointerPoint
+    requires Windows.UI.Input.IPointerPoint
+    requires Windows.UI.Input.IPointerPointPhysicalPosition
+    factory Windows.UI.Input.IPointerPointStatics
+    property frame_id
+        get get_FrameId slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=121
+            out uint32 return
+    property is_in_contact
+        get get_IsInContact slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=162
+            out boolean return
+    property pointer_device
+        get get_PointerDevice slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=22
+            out class type=Windows.Devices.Input.PointerDevice return
+    property pointer_id
+        get get_PointerId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=99
+            out uint32 return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property properties
+        get get_Properties slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=173
+            out class type=Windows.UI.Input.PointerPointProperties return
+    property raw_position
+        get get_RawPosition slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=62
+            out struct type=Windows.Foundation.Point return
+    property timestamp
+        get get_Timestamp slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPoint shape=4 reverse=141
+            out uint64 return
+    property is_physical_position_supported
+        get get_IsPhysicalPositionSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointPhysicalPosition shape=4 reverse=22
+            out boolean return
+    property physical_position
+        get get_PhysicalPosition slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointPhysicalPosition shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    method get_current_point static
+        method GetCurrentPoint slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.IPointerPointStatics shape=51 reverse=24 static
+            in uint32 name=pointerId
+            out class type=Windows.UI.Input.PointerPoint return
+        method GetCurrentPoint slot=8 inputs=2 outputs=1 declaring=Windows.UI.Input.IPointerPointStatics shape=117 reverse=66 static
+            in uint32 name=pointerId
+            in interface type=Windows.UI.Input.IPointerPointTransform name=transform
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_intermediate_points static
+        method GetIntermediatePoints slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.IPointerPointStatics shape=51 reverse=44 static
+            in uint32 name=pointerId
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> return
+        method GetIntermediatePoints slot=9 inputs=2 outputs=1 declaring=Windows.UI.Input.IPointerPointStatics shape=117 reverse=101 static
+            in uint32 name=pointerId
+            in interface type=Windows.UI.Input.IPointerPointTransform name=transform
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> return
+
+class Windows.UI.Input.PointerPointProperties python_type
+    py PointerPointProperties
+    signature rc(Windows.UI.Input.PointerPointProperties;{c79d8a4b-c163-4ee7-803f-67ce79f9972d})
+    default Windows.UI.Input.IPointerPointProperties
+    requires Windows.UI.Input.IPointerPointProperties
+    requires Windows.UI.Input.IPointerPointProperties2
+    property contact_rect
+        get get_ContactRect slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=173
+            out struct type=Windows.Foundation.Rect return
+    property contact_rect_raw
+        get get_ContactRectRaw slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=186
+            out struct type=Windows.Foundation.Rect return
+    property is_barrel_button_pressed
+        get get_IsBarrelButtonPressed slot=24 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=247
+            out boolean return
+    property is_canceled
+        get get_IsCanceled slot=23 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=242
+            out boolean return
+    property is_eraser
+        get get_IsEraser slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=62
+            out boolean return
+    property is_horizontal_mouse_wheel
+        get get_IsHorizontalMouseWheel slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=228
+            out boolean return
+    property is_in_range
+        get get_IsInRange slot=22 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=237
+            out boolean return
+    property is_inverted
+        get get_IsInverted slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=43
+            out boolean return
+    property is_left_button_pressed
+        get get_IsLeftButtonPressed slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=202
+            out boolean return
+    property is_middle_button_pressed
+        get get_IsMiddleButtonPressed slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=218
+            out boolean return
+    property is_primary
+        get get_IsPrimary slot=21 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=232
+            out boolean return
+    property is_right_button_pressed
+        get get_IsRightButtonPressed slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=210
+            out boolean return
+    property is_x_button1_pressed
+        get get_IsXButton1Pressed slot=25 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=252
+            out boolean return
+    property is_x_button2_pressed
+        get get_IsXButton2Pressed slot=26 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=255
+            out boolean return
+    property mouse_wheel_delta
+        get get_MouseWheelDelta slot=19 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=223
+            out int32 return
+    property orientation
+        get get_Orientation slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=99
+            out single return
+    property pointer_update_kind
+        get get_PointerUpdateKind slot=27 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=259
+            out enum32 type=Windows.UI.Input.PointerUpdateKind return
+    property pressure
+        get get_Pressure slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=22
+            out single return
+    property touch_confidence
+        get get_TouchConfidence slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=194
+            out boolean return
+    property twist
+        get get_Twist slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=162
+            out single return
+    property x_tilt
+        get get_XTilt slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=121
+            out single return
+    property y_tilt
+        get get_YTilt slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=4 reverse=141
+            out single return
+    property z_distance
+        get get_ZDistance slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Single> return
+    method get_usage_value
+        method GetUsageValue slot=29 inputs=2 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=117
+            in uint32 name=usagePage
+            in uint32 name=usageId
+            out int32 return
+    method has_usage
+        method HasUsage slot=28 inputs=2 outputs=1 declaring=Windows.UI.Input.IPointerPointProperties shape=117
+            in uint32 name=usagePage
+            in uint32 name=usageId
+            out boolean return
+
+enum Windows.UI.Input.PointerUpdateKind python_type
+    py PointerUpdateKind
+    signature enum(Windows.UI.Input.PointerUpdateKind;i4)
+
+class Windows.UI.Input.PointerVisualizationSettings python_type
+    py PointerVisualizationSettings
+    signature rc(Windows.UI.Input.PointerVisualizationSettings;{4d1e6461-84f7-499d-bd91-2a36e2b7aaa2})
+    default Windows.UI.Input.IPointerVisualizationSettings
+    requires Windows.UI.Input.IPointerVisualizationSettings
+    factory Windows.UI.Input.IPointerVisualizationSettingsStatics
+    property is_contact_feedback_enabled
+        get get_IsContactFeedbackEnabled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerVisualizationSettings shape=4 reverse=43
+            out boolean return
+        put put_IsContactFeedbackEnabled slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.IPointerVisualizationSettings shape=4 reverse=22
+            in boolean name=value
+    property is_barrel_button_feedback_enabled
+        get get_IsBarrelButtonFeedbackEnabled slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerVisualizationSettings shape=4 reverse=99
+            out boolean return
+        put put_IsBarrelButtonFeedbackEnabled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IPointerVisualizationSettings shape=4 reverse=62
+            in boolean name=value
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IPointerVisualizationSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Input.PointerVisualizationSettings return
+
+class Windows.UI.Input.RadialController python_type
+    py RadialController
+    signature rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09})
+    default Windows.UI.Input.IRadialController
+    requires Windows.UI.Input.IRadialController
+    requires Windows.UI.Input.IRadialController2
+    factory Windows.UI.Input.IRadialControllerStatics
+    property use_automatic_haptic_feedback
+        get get_UseAutomaticHapticFeedback slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialController shape=4 reverse=99
+            out boolean return
+        put put_UseAutomaticHapticFeedback slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=4 reverse=121
+            in boolean name=value
+    property rotation_resolution_in_degrees
+        get get_RotationResolutionInDegrees slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialController shape=4 reverse=43
+            out double return
+        put put_RotationResolutionInDegrees slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=2
+            in double name=value
+    property menu
+        get get_Menu slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialController shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerMenu return
+    event button_clicked
+        add add_ButtonClicked slot=21 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonClickedEventArgs> name=handler
+            out event_token return
+        remove remove_ButtonClicked slot=22 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=400
+            in event_token name=token
+    event control_acquired
+        add add_ControlAcquired slot=23 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=243
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerControlAcquiredEventArgs> name=handler
+            out event_token return
+        remove remove_ControlAcquired slot=24 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26
+            in event_token name=cookie
+    event control_lost
+        add add_ControlLost slot=17 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,System.Object> name=handler
+            out event_token return
+        remove remove_ControlLost slot=18 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=398
+            in event_token name=cookie
+    event rotation_changed
+        add add_RotationChanged slot=19 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerRotationChangedEventArgs> name=handler
+            out event_token return
+        remove remove_RotationChanged slot=20 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=399
+            in event_token name=token
+    event screen_contact_continued
+        add add_ScreenContactContinued slot=15 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs> name=handler
+            out event_token return
+        remove remove_ScreenContactContinued slot=16 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=397
+            in event_token name=cookie
+    event screen_contact_ended
+        add add_ScreenContactEnded slot=13 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,System.Object> name=handler
+            out event_token return
+        remove remove_ScreenContactEnded slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=192
+            in event_token name=cookie
+    event screen_contact_started
+        add add_ScreenContactStarted slot=11 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactStartedEventArgs> name=handler
+            out event_token return
+        remove remove_ScreenContactStarted slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController shape=26 reverse=167
+            in event_token name=cookie
+    event button_holding
+        add add_ButtonHolding slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController2 shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonHoldingEventArgs> name=handler
+            out event_token return
+        remove remove_ButtonHolding slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController2 shape=26 reverse=110
+            in event_token name=token
+    event button_pressed
+        add add_ButtonPressed slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonPressedEventArgs> name=handler
+            out event_token return
+        remove remove_ButtonPressed slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController2 shape=26 reverse=53
+            in event_token name=token
+    event button_released
+        add add_ButtonReleased slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialController2 shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonReleasedEventArgs> name=handler
+            out event_token return
+        remove remove_ButtonReleased slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialController2 shape=26 reverse=156
+            in event_token name=token
+    method create_for_current_view static
+        method CreateForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Input.RadialController return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerStatics shape=4 reverse=22 static
+            out boolean return
+
+class Windows.UI.Input.RadialControllerButtonClickedEventArgs python_type
+    py RadialControllerButtonClickedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerButtonClickedEventArgs;{206aa438-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerButtonClickedEventArgs
+    requires Windows.UI.Input.IRadialControllerButtonClickedEventArgs
+    requires Windows.UI.Input.IRadialControllerButtonClickedEventArgs2
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonClickedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonClickedEventArgs2 shape=4 reverse=22
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerButtonHoldingEventArgs python_type
+    py RadialControllerButtonHoldingEventArgs
+    signature rc(Windows.UI.Input.RadialControllerButtonHoldingEventArgs;{3d577eee-3cee-11e6-b535-001bdc06ab3b})
+    default Windows.UI.Input.IRadialControllerButtonHoldingEventArgs
+    requires Windows.UI.Input.IRadialControllerButtonHoldingEventArgs
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonHoldingEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonHoldingEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerButtonPressedEventArgs python_type
+    py RadialControllerButtonPressedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerButtonPressedEventArgs;{3d577eed-4cee-11e6-b535-001bdc06ab3b})
+    default Windows.UI.Input.IRadialControllerButtonPressedEventArgs
+    requires Windows.UI.Input.IRadialControllerButtonPressedEventArgs
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonPressedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonPressedEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerButtonReleasedEventArgs python_type
+    py RadialControllerButtonReleasedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerButtonReleasedEventArgs;{3d577eef-3cee-11e6-b535-001bdc06ab3b})
+    default Windows.UI.Input.IRadialControllerButtonReleasedEventArgs
+    requires Windows.UI.Input.IRadialControllerButtonReleasedEventArgs
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonReleasedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerButtonReleasedEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerConfiguration python_type
+    py RadialControllerConfiguration
+    signature rc(Windows.UI.Input.RadialControllerConfiguration;{a6b79ecb-6a52-4430-910c-56370a9d6b42})
+    default Windows.UI.Input.IRadialControllerConfiguration
+    requires Windows.UI.Input.IRadialControllerConfiguration
+    requires Windows.UI.Input.IRadialControllerConfiguration2
+    factory Windows.UI.Input.IRadialControllerConfigurationStatics2
+    factory Windows.UI.Input.IRadialControllerConfigurationStatics
+    property is_menu_suppressed
+        get get_IsMenuSuppressed slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfiguration2 shape=4 reverse=99
+            out boolean return
+        put put_IsMenuSuppressed slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfiguration2 shape=4 reverse=62
+            in boolean name=value
+    property active_controller_when_menu_is_suppressed
+        get get_ActiveControllerWhenMenuIsSuppressed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfiguration2 shape=4 reverse=43
+            out class type=Windows.UI.Input.RadialController return
+        put put_ActiveControllerWhenMenuIsSuppressed slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfiguration2 shape=4 reverse=22
+            in class type=Windows.UI.Input.RadialController name=value
+    property is_app_controller_enabled static
+        get get_IsAppControllerEnabled slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfigurationStatics2 shape=4 reverse=99 static
+            out boolean return
+        put put_IsAppControllerEnabled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfigurationStatics2 shape=4 reverse=62 static
+            in boolean name=value
+    property app_controller static
+        get get_AppController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfigurationStatics2 shape=4 reverse=43 static
+            out class type=Windows.UI.Input.RadialController return
+        put put_AppController slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfigurationStatics2 shape=4 reverse=22 static
+            in class type=Windows.UI.Input.RadialController name=value
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfigurationStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Input.RadialControllerConfiguration return
+    method reset_to_default_menu_items
+        method ResetToDefaultMenuItems slot=7 inputs=0 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfiguration shape=0 reverse=37
+    method set_default_menu_items
+        method SetDefaultMenuItems slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerConfiguration shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerSystemMenuItemKind> name=buttons
+    method try_select_default_menu_item
+        method TrySelectDefaultMenuItem slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfiguration shape=51 reverse=65
+            in enum32 type=Windows.UI.Input.RadialControllerSystemMenuItemKind name=type
+            out boolean return
+
+class Windows.UI.Input.RadialControllerControlAcquiredEventArgs python_type
+    py RadialControllerControlAcquiredEventArgs
+    signature rc(Windows.UI.Input.RadialControllerControlAcquiredEventArgs;{206aa439-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerControlAcquiredEventArgs
+    requires Windows.UI.Input.IRadialControllerControlAcquiredEventArgs
+    requires Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerControlAcquiredEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property is_button_pressed
+        get get_IsButtonPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2 shape=4 reverse=22
+            out boolean return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2 shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerMenu python_type
+    py RadialControllerMenu
+    signature rc(Windows.UI.Input.RadialControllerMenu;{8506b35d-f640-4412-aba0-bad077e5ea8a})
+    default Windows.UI.Input.IRadialControllerMenu
+    requires Windows.UI.Input.IRadialControllerMenu
+    property is_enabled
+        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=43
+            out boolean return
+        put put_IsEnabled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=62
+            in boolean name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> return
+    method get_selected_menu_item
+        method GetSelectedMenuItem slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=99
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    method select_menu_item
+        method SelectMenuItem slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=121
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=menuItem
+    method try_select_previously_selected_menu_item
+        method TrySelectPreviouslySelectedMenuItem slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenu shape=4 reverse=141
+            out boolean return
+
+class Windows.UI.Input.RadialControllerMenuItem python_type
+    py RadialControllerMenuItem
+    signature rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba})
+    default Windows.UI.Input.IRadialControllerMenuItem
+    requires Windows.UI.Input.IRadialControllerMenuItem
+    factory Windows.UI.Input.IRadialControllerMenuItemStatics
+    factory Windows.UI.Input.IRadialControllerMenuItemStatics2
+    property tag
+        get get_Tag slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItem shape=4 reverse=43
+            out object return
+        put put_Tag slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerMenuItem shape=4 reverse=62
+            in object name=value
+    property display_text
+        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItem shape=4 reverse=22
+            out string return
+    event invoked
+        add add_Invoked slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItem shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialControllerMenuItem,System.Object> name=handler
+            out event_token return
+        remove remove_Invoked slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.IRadialControllerMenuItem shape=26 reverse=134
+            in event_token name=token
+    method create_from_font_glyph static
+        method CreateFromFontGlyph slot=6 inputs=3 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItemStatics2 shape=195 reverse=26 static
+            in string name=displayText
+            in string name=glyph
+            in string name=fontFamily
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+        method CreateFromFontGlyph slot=7 inputs=4 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItemStatics2 shape=239 static
+            in string name=displayText
+            in string name=glyph
+            in string name=fontFamily
+            in class type=Windows.Foundation.Uri name=fontUri
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    method create_from_icon static
+        method CreateFromIcon slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItemStatics shape=117 reverse=25 static
+            in string name=displayText
+            in class type=Windows.Storage.Streams.RandomAccessStreamReference name=icon
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    method create_from_known_icon static
+        method CreateFromKnownIcon slot=7 inputs=2 outputs=1 declaring=Windows.UI.Input.IRadialControllerMenuItemStatics shape=117 reverse=45 static
+            in string name=displayText
+            in enum32 type=Windows.UI.Input.RadialControllerMenuKnownIcon name=value
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+
+enum Windows.UI.Input.RadialControllerMenuKnownIcon python_type
+    py RadialControllerMenuKnownIcon
+    signature enum(Windows.UI.Input.RadialControllerMenuKnownIcon;i4)
+
+class Windows.UI.Input.RadialControllerRotationChangedEventArgs python_type
+    py RadialControllerRotationChangedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerRotationChangedEventArgs;{206aa435-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerRotationChangedEventArgs
+    requires Windows.UI.Input.IRadialControllerRotationChangedEventArgs
+    requires Windows.UI.Input.IRadialControllerRotationChangedEventArgs2
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerRotationChangedEventArgs shape=4 reverse=43
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property rotation_delta_in_degrees
+        get get_RotationDeltaInDegrees slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerRotationChangedEventArgs shape=4 reverse=22
+            out double return
+    property is_button_pressed
+        get get_IsButtonPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerRotationChangedEventArgs2 shape=4 reverse=22
+            out boolean return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerRotationChangedEventArgs2 shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerScreenContact python_type
+    py RadialControllerScreenContact
+    signature rc(Windows.UI.Input.RadialControllerScreenContact;{206aa434-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerScreenContact
+    requires Windows.UI.Input.IRadialControllerScreenContact
+    property bounds
+        get get_Bounds slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContact shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContact shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+
+class Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs python_type
+    py RadialControllerScreenContactContinuedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs;{206aa437-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs
+    requires Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs
+    requires Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property is_button_pressed
+        get get_IsButtonPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2 shape=4 reverse=22
+            out boolean return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2 shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerScreenContactEndedEventArgs python_type
+    py RadialControllerScreenContactEndedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerScreenContactEndedEventArgs;{3d577ef2-3cee-11e6-b535-001bdc06ab3b})
+    default Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs
+    requires Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs
+    property is_button_pressed
+        get get_IsButtonPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs shape=4 reverse=22
+            out boolean return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+class Windows.UI.Input.RadialControllerScreenContactStartedEventArgs python_type
+    py RadialControllerScreenContactStartedEventArgs
+    signature rc(Windows.UI.Input.RadialControllerScreenContactStartedEventArgs;{206aa436-e651-11e5-bf62-2c27d7404e85})
+    default Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs
+    requires Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs
+    requires Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2
+    property contact
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialControllerScreenContact return
+    property is_button_pressed
+        get get_IsButtonPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2 shape=4 reverse=22
+            out boolean return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2 shape=4 reverse=43
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+
+enum Windows.UI.Input.RadialControllerSystemMenuItemKind python_type
+    py RadialControllerSystemMenuItemKind
+    signature enum(Windows.UI.Input.RadialControllerSystemMenuItemKind;i4)
+
+class Windows.UI.Input.RightTappedEventArgs python_type
+    py RightTappedEventArgs
+    signature rc(Windows.UI.Input.RightTappedEventArgs;{4cbf40bd-af7a-4a36-9476-b1dce141709a})
+    default Windows.UI.Input.IRightTappedEventArgs
+    requires Windows.UI.Input.IRightTappedEventArgs
+    requires Windows.UI.Input.IRightTappedEventArgs2
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRightTappedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IRightTappedEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IRightTappedEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+class Windows.UI.Input.SystemButtonEventController python_type
+    py SystemButtonEventController
+    signature rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c})
+    base Windows.UI.Input.AttachableInputObject
+    default Windows.UI.Input.ISystemButtonEventController
+    requires Windows.UI.Input.ISystemButtonEventController
+    factory Windows.UI.Input.ISystemButtonEventControllerStatics
+    event system_function_button_pressed
+        add add_SystemFunctionButtonPressed slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.ISystemButtonEventController shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs> name=handler
+            out event_token return
+        remove remove_SystemFunctionButtonPressed slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemButtonEventController shape=26 reverse=53
+            in event_token name=token
+    event system_function_button_released
+        add add_SystemFunctionButtonReleased slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.ISystemButtonEventController shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs> name=handler
+            out event_token return
+        remove remove_SystemFunctionButtonReleased slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemButtonEventController shape=26 reverse=110
+            in event_token name=token
+    event system_function_lock_changed
+        add add_SystemFunctionLockChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.ISystemButtonEventController shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SystemFunctionLockChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemButtonEventController shape=26 reverse=156
+            in event_token name=token
+    event system_function_lock_indicator_changed
+        add add_SystemFunctionLockIndicatorChanged slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.ISystemButtonEventController shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SystemFunctionLockIndicatorChanged slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemButtonEventController shape=26 reverse=181
+            in event_token name=token
+    method create_for_dispatcher_queue static
+        method CreateForDispatcherQueue slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.ISystemButtonEventControllerStatics shape=51 reverse=24 static
+            in class type=Windows.System.DispatcherQueue name=queue
+            out class type=Windows.UI.Input.SystemButtonEventController return
+
+class Windows.UI.Input.SystemFunctionButtonEventArgs python_type
+    py SystemFunctionButtonEventArgs
+    signature rc(Windows.UI.Input.SystemFunctionButtonEventArgs;{4833896f-80d1-5dd6-92a7-62a508ffef5a})
+    default Windows.UI.Input.ISystemFunctionButtonEventArgs
+    requires Windows.UI.Input.ISystemFunctionButtonEventArgs
+    property handled
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionButtonEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemFunctionButtonEventArgs shape=4 reverse=62
+            in boolean name=value
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionButtonEventArgs shape=4 reverse=22
+            out uint64 return
+
+class Windows.UI.Input.SystemFunctionLockChangedEventArgs python_type
+    py SystemFunctionLockChangedEventArgs
+    signature rc(Windows.UI.Input.SystemFunctionLockChangedEventArgs;{cd040608-fcf9-585c-beab-f1d2eaf364ab})
+    default Windows.UI.Input.ISystemFunctionLockChangedEventArgs
+    requires Windows.UI.Input.ISystemFunctionLockChangedEventArgs
+    property handled
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockChangedEventArgs shape=4 reverse=62
+            out boolean return
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemFunctionLockChangedEventArgs shape=4 reverse=99
+            in boolean name=value
+    property is_locked
+        get get_IsLocked slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockChangedEventArgs shape=4 reverse=43
+            out boolean return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockChangedEventArgs shape=4 reverse=22
+            out uint64 return
+
+class Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs python_type
+    py SystemFunctionLockIndicatorChangedEventArgs
+    signature rc(Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs;{b212b94e-7a6f-58ae-b304-bae61d0371b9})
+    default Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs
+    requires Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs
+    property handled
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs shape=4 reverse=62
+            out boolean return
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs shape=4 reverse=99
+            in boolean name=value
+    property is_indicator_on
+        get get_IsIndicatorOn slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs shape=4 reverse=43
+            out boolean return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs shape=4 reverse=22
+            out uint64 return
+
+class Windows.UI.Input.TappedEventArgs python_type
+    py TappedEventArgs
+    signature rc(Windows.UI.Input.TappedEventArgs;{cfa126e4-253a-4c3c-953b-395c37aed309})
+    default Windows.UI.Input.ITappedEventArgs
+    requires Windows.UI.Input.ITappedEventArgs
+    requires Windows.UI.Input.ITappedEventArgs2
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ITappedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ITappedEventArgs shape=4 reverse=43
+            out struct type=Windows.Foundation.Point return
+    property tap_count
+        get get_TapCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.ITappedEventArgs shape=4 reverse=62
+            out uint32 return
+    property contact_count
+        get get_ContactCount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ITappedEventArgs2 shape=4 reverse=22
+            out uint32 return
+
+class Windows.UI.Input.TouchpadGesturesController python_type
+    py TouchpadGesturesController
+    signature rc(Windows.UI.Input.TouchpadGesturesController;{28c13cdd-e068-549f-89c6-1a440c6fc327})
+    default Windows.UI.Input.ITouchpadGesturesController
+    requires Windows.UI.Input.ITouchpadGesturesController
+    factory Windows.UI.Input.ITouchpadGesturesControllerStatics
+    property supported_gestures
+        get get_SupportedGestures slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=4 reverse=62
+            out enum_u32 type=Windows.UI.Input.TouchpadGlobalGestureKinds return
+        put put_SupportedGestures slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=4 reverse=99
+            in enum_u32 type=Windows.UI.Input.TouchpadGlobalGestureKinds name=value
+    property enabled
+        get get_Enabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=4 reverse=22
+            out boolean return
+        put put_Enabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=4 reverse=43
+            in boolean name=value
+    event global_action_performed
+        add add_GlobalActionPerformed slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Input.TouchpadGlobalActionEventArgs> name=handler
+            out event_token return
+        remove remove_GlobalActionPerformed slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=26 reverse=215
+            in event_token name=token
+    event pointer_moved
+        add add_PointerMoved slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Core.PointerEventArgs> name=handler
+            out event_token return
+        remove remove_PointerMoved slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=26 reverse=181
+            in event_token name=token
+    event pointer_pressed
+        add add_PointerPressed slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Core.PointerEventArgs> name=handler
+            out event_token return
+        remove remove_PointerPressed slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=26 reverse=156
+            in event_token name=token
+    event pointer_released
+        add add_PointerReleased slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesController shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Core.PointerEventArgs> name=handler
+            out event_token return
+        remove remove_PointerReleased slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.ITouchpadGesturesController shape=26 reverse=200
+            in event_token name=token
+    method create_for_process static
+        method CreateForProcess slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesControllerStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Input.TouchpadGesturesController return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGesturesControllerStatics shape=4 reverse=22 static
+            out boolean return
+
+enum Windows.UI.Input.TouchpadGlobalAction python_type
+    py TouchpadGlobalAction
+    signature enum(Windows.UI.Input.TouchpadGlobalAction;i4)
+
+class Windows.UI.Input.TouchpadGlobalActionEventArgs python_type
+    py TouchpadGlobalActionEventArgs
+    signature rc(Windows.UI.Input.TouchpadGlobalActionEventArgs;{6edad206-e4e3-5f39-9d13-8575e8e2a12b})
+    default Windows.UI.Input.ITouchpadGlobalActionEventArgs
+    requires Windows.UI.Input.ITouchpadGlobalActionEventArgs
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGlobalActionEventArgs shape=4 reverse=22
+            out enum32 type=Windows.UI.Input.TouchpadGlobalAction return
+    property pointer_device
+        get get_PointerDevice slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGlobalActionEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Input.PointerDevice return
+
+enum Windows.UI.Input.TouchpadGlobalGestureKinds python_type
+    py TouchpadGlobalGestureKinds
+    signature enum(Windows.UI.Input.TouchpadGlobalGestureKinds;u4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> concrete
+    guid b62d7f11-c7b1-5bf0-a347-3366252db4ce
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.EdgeGesture;{580d5292-2ab1-49aa-a7f0-33bd3f8df9f1});rc(Windows.UI.Input.EdgeGestureEventArgs;{44fa4a24-2d09-42e1-8b5e-368208796a4c}))
+    argument Windows.UI.Input.EdgeGesture
+    argument Windows.UI.Input.EdgeGestureEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.CrossSlidingEventArgs> concrete
+    guid 1fc1eb70-0c26-5cf0-9e50-843a34083613
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.CrossSlidingEventArgs;{e9374738-6f88-41d9-8720-78e08e398349}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.CrossSlidingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.DraggingEventArgs> concrete
+    guid be7cca42-98dd-5d72-9e91-976113d7985e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.DraggingEventArgs;{1c905384-083c-4bd3-b559-179cddeb33ec}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.DraggingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.HoldingEventArgs> concrete
+    guid 0027bdf5-6948-53f7-afbe-d4d8fe500feb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.HoldingEventArgs;{2bf755c5-e799-41b4-bb40-242f40959b71}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.HoldingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> concrete
+    guid c24f5605-3059-52cc-bdf3-7098146d34d7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationCompletedEventArgs;{b34ab22b-d19b-46ff-9f38-dec7754bb9e7}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.ManipulationCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationInertiaStartingEventArgs> concrete
+    guid 350a72ab-34a5-5193-913d-3d4c5983842c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationInertiaStartingEventArgs;{dd37a898-26bf-467a-9ce5-ccf3fb11371e}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.ManipulationInertiaStartingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> concrete
+    guid 110d75c8-ba5e-5462-8b2d-4a1582574b61
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationStartedEventArgs;{ddec873e-cfce-4932-8c1d-3c3d011a34c0}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.ManipulationStartedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> concrete
+    guid eb5216f5-020a-5e40-9c4b-48912c690e2d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationUpdatedEventArgs;{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.ManipulationUpdatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.RightTappedEventArgs> concrete
+    guid 8420d242-ba34-5b17-92f3-8f767f1d0de4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.RightTappedEventArgs;{4cbf40bd-af7a-4a36-9476-b1dce141709a}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.RightTappedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.TappedEventArgs> concrete
+    guid 27f3ad57-8994-5712-8b83-a93ba17c03c2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.TappedEventArgs;{cfa126e4-253a-4c3c-953b-395c37aed309}))
+    argument Windows.UI.Input.GestureRecognizer
+    argument Windows.UI.Input.TappedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.InputActivationListener,Windows.UI.Input.InputActivationListenerActivationChangedEventArgs> concrete
+    guid 27256541-ca03-5192-bb2e-8ef1daf0bdeb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.InputActivationListener;{5d6d4ed2-28c7-5ae3-aa74-c918a9f243ca});rc(Windows.UI.Input.InputActivationListenerActivationChangedEventArgs;{7699b465-1dcf-5791-b4b9-6cafbeed2056}))
+    argument Windows.UI.Input.InputActivationListener
+    argument Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.KeyboardDeliveryInterceptor,Windows.UI.Core.KeyEventArgs> concrete
+    guid 2c1caf11-9d6f-5e0f-a9ea-4c7c734d73d6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.KeyboardDeliveryInterceptor;{b4baf068-8f49-446c-8db5-8c0ffe85cc9e});rc(Windows.UI.Core.KeyEventArgs;{5ff5e930-2544-4a17-bd78-1f2fdebb106b}))
+    argument Windows.UI.Input.KeyboardDeliveryInterceptor
+    argument Windows.UI.Core.KeyEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.HoldingEventArgs> concrete
+    guid adaa5f37-ba59-5c13-83e1-811a8c1c26ee
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.HoldingEventArgs;{2bf755c5-e799-41b4-bb40-242f40959b71}))
+    argument Windows.UI.Input.PhysicalGestureRecognizer
+    argument Windows.UI.Input.HoldingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> concrete
+    guid 7577ec2c-6f2b-5de1-8dbb-205f02dc46e4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationCompletedEventArgs;{b34ab22b-d19b-46ff-9f38-dec7754bb9e7}))
+    argument Windows.UI.Input.PhysicalGestureRecognizer
+    argument Windows.UI.Input.ManipulationCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> concrete
+    guid 80fefaa0-0335-5b09-8fe1-33854fe7e8c0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationStartedEventArgs;{ddec873e-cfce-4932-8c1d-3c3d011a34c0}))
+    argument Windows.UI.Input.PhysicalGestureRecognizer
+    argument Windows.UI.Input.ManipulationStartedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> concrete
+    guid fd08d645-0934-5c84-a498-fe313030966d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationUpdatedEventArgs;{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82}))
+    argument Windows.UI.Input.PhysicalGestureRecognizer
+    argument Windows.UI.Input.ManipulationUpdatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.TappedEventArgs> concrete
+    guid dde6ff59-be05-528a-947c-da5db69f8e6a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.TappedEventArgs;{cfa126e4-253a-4c3c-953b-395c37aed309}))
+    argument Windows.UI.Input.PhysicalGestureRecognizer
+    argument Windows.UI.Input.TappedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,System.Object> concrete
+    guid 5e0f93b1-c2f2-5351-82aa-6cf5f4c2d068
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});cinterface(IInspectable))
+    argument Windows.UI.Input.RadialController
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonClickedEventArgs> concrete
+    guid d09d9fcc-edb8-56c0-856d-70e477a9ddf3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonClickedEventArgs;{206aa438-e651-11e5-bf62-2c27d7404e85}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerButtonClickedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonHoldingEventArgs> concrete
+    guid 4c44f2ff-3a4a-51ba-a01f-9f2002471f59
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonHoldingEventArgs;{3d577eee-3cee-11e6-b535-001bdc06ab3b}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerButtonHoldingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonPressedEventArgs> concrete
+    guid 660bee4a-4fed-5a62-aa5d-8113b477bc69
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonPressedEventArgs;{3d577eed-4cee-11e6-b535-001bdc06ab3b}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerButtonPressedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonReleasedEventArgs> concrete
+    guid c22ff62c-c642-5d50-9340-fe163122720c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonReleasedEventArgs;{3d577eef-3cee-11e6-b535-001bdc06ab3b}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerButtonReleasedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerControlAcquiredEventArgs> concrete
+    guid 4ec5f3fd-b217-5452-a2bd-9725ce9f6675
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerControlAcquiredEventArgs;{206aa439-e651-11e5-bf62-2c27d7404e85}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerControlAcquiredEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerRotationChangedEventArgs> concrete
+    guid 8fe73ac9-8a36-5152-815d-03310ee8bf85
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerRotationChangedEventArgs;{206aa435-e651-11e5-bf62-2c27d7404e85}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerRotationChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs> concrete
+    guid 30579e67-fb4f-5d38-83b4-9cb610090def
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs;{206aa437-e651-11e5-bf62-2c27d7404e85}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactStartedEventArgs> concrete
+    guid 1f2d584e-3ad8-5049-b451-3a44a102fa82
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerScreenContactStartedEventArgs;{206aa436-e651-11e5-bf62-2c27d7404e85}))
+    argument Windows.UI.Input.RadialController
+    argument Windows.UI.Input.RadialControllerScreenContactStartedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialControllerMenuItem,System.Object> concrete
+    guid 5c90d6fb-e4f8-5be2-8544-9de33f82c41a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba});cinterface(IInspectable))
+    argument Windows.UI.Input.RadialControllerMenuItem
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs> concrete
+    guid b19c7b2a-a907-5297-8279-adba1140218d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionButtonEventArgs;{4833896f-80d1-5dd6-92a7-62a508ffef5a}))
+    argument Windows.UI.Input.SystemButtonEventController
+    argument Windows.UI.Input.SystemFunctionButtonEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockChangedEventArgs> concrete
+    guid 52c14f10-ff66-5358-bbfe-022df20e79ea
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionLockChangedEventArgs;{cd040608-fcf9-585c-beab-f1d2eaf364ab}))
+    argument Windows.UI.Input.SystemButtonEventController
+    argument Windows.UI.Input.SystemFunctionLockChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs> concrete
+    guid e0846333-0428-5440-93d7-1829d3ca674f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs;{b212b94e-7a6f-58ae-b304-bae61d0371b9}))
+    argument Windows.UI.Input.SystemButtonEventController
+    argument Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Core.PointerEventArgs> concrete
+    guid 0b05a28c-2064-5b06-94f3-324fb004ece0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.TouchpadGesturesController;{28c13cdd-e068-549f-89c6-1a440c6fc327});rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    argument Windows.UI.Input.TouchpadGesturesController
+    argument Windows.UI.Core.PointerEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Input.TouchpadGlobalActionEventArgs> concrete
+    guid 3fdb14d0-c3b2-576e-b900-aaa14e0ff77c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.TouchpadGesturesController;{28c13cdd-e068-549f-89c6-1a440c6fc327});rc(Windows.UI.Input.TouchpadGlobalActionEventArgs;{6edad206-e4e3-5f39-9d13-8575e8e2a12b}))
+    argument Windows.UI.Input.TouchpadGesturesController
+    argument Windows.UI.Input.TouchpadGlobalActionEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.Single external
+    py winrt.system.Single
+
+class Windows.Devices.Haptics.SimpleHapticsController external
+    py winrt.windows.devices.haptics.SimpleHapticsController
+
+class Windows.Devices.Input.PointerDevice external
+    py winrt.windows.devices.input.PointerDevice
+
+enum Windows.Devices.Input.PointerDeviceType external
+    py winrt.windows.devices.input.PointerDeviceType
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Storage.Streams.RandomAccessStreamReference external
+    py winrt.windows.storage.streams.RandomAccessStreamReference
+
+class Windows.System.DispatcherQueue external
+    py winrt.windows.system.DispatcherQueue
+
+class Windows.UI.Core.KeyEventArgs external
+    py winrt.windows.ui.core.KeyEventArgs
+
+class Windows.UI.Core.PointerEventArgs external
+    py winrt.windows.ui.core.PointerEventArgs

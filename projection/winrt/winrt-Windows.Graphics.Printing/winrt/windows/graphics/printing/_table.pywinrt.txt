@@ -1,0 +1,657 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Printing
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Graphics.Printing.IPrintDocumentSource python_type
+    py _IPrintDocumentSource
+    guid dedc0c30-f1eb-47df-aae6-ed5427511f01
+    signature {dedc0c30-f1eb-47df-aae6-ed5427511f01}
+
+interface Windows.Graphics.Printing.IPrintManager
+    guid ff2a9694-8c99-44fd-ae4a-19d9aa9a0f0a
+
+interface Windows.Graphics.Printing.IPrintManagerStatic
+    guid 58185dcd-e634-4654-84f0-e0152a8217ac
+
+interface Windows.Graphics.Printing.IPrintManagerStatic2
+    guid 35a99955-e6ab-4139-9abd-b86a729b3598
+
+interface Windows.Graphics.Printing.IPrintPageInfo
+    guid dd4be9c9-a6a1-4ada-930e-da872a4f23d3
+
+interface Windows.Graphics.Printing.IPrintPageRange
+    guid f8a06c54-6e7c-51c5-57fd-0660c2d71513
+
+interface Windows.Graphics.Printing.IPrintPageRangeFactory
+    guid 408fd45f-e047-5f85-7129-fb085a4fad14
+
+interface Windows.Graphics.Printing.IPrintPageRangeOptions
+    guid ce6db728-1357-46b2-a923-79f995f448fc
+
+interface Windows.Graphics.Printing.IPrintTask
+    guid 61d80247-6cf6-4fad-84e2-a5e82e2d4ceb
+
+interface Windows.Graphics.Printing.IPrintTask2
+    guid 36234877-3e53-4d9d-8f5e-316ac8dedae1
+
+interface Windows.Graphics.Printing.IPrintTaskCompletedEventArgs
+    guid 5bcd34af-24e9-4c10-8d07-14c346ba3fce
+
+interface Windows.Graphics.Printing.IPrintTaskOptions
+    guid 5a0a66bb-d289-41bb-96dd-57e28338ae3f
+
+interface Windows.Graphics.Printing.IPrintTaskOptions2
+    guid eb9b1606-9a36-4b59-8617-b217849262e1
+
+interface Windows.Graphics.Printing.IPrintTaskOptionsCore python_type
+    py _IPrintTaskOptionsCore
+    guid 1bdbb474-4ed1-41eb-be3c-72d18ed67337
+    signature {1bdbb474-4ed1-41eb-be3c-72d18ed67337}
+    method get_page_description
+        method GetPageDescription slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCore shape=51 reverse=24
+            in uint32 name=jobPageNumber
+            out struct type=Windows.Graphics.Printing.PrintPageDescription return
+
+interface Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties python_type
+    py _IPrintTaskOptionsCoreProperties
+    guid c1b71832-9e93-4e55-814b-3326a59efce1
+    signature {c1b71832-9e93-4e55-814b-3326a59efce1}
+    property binding
+        get get_Binding slot=25 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=252
+            out enum32 type=Windows.Graphics.Printing.PrintBinding return
+        put put_Binding slot=24 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=247
+            in enum32 type=Windows.Graphics.Printing.PrintBinding name=value
+    property collation
+        get get_Collation slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=223
+            out enum32 type=Windows.Graphics.Printing.PrintCollation return
+        put put_Collation slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=218
+            in enum32 type=Windows.Graphics.Printing.PrintCollation name=value
+    property color_mode
+        get get_ColorMode slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=194
+            out enum32 type=Windows.Graphics.Printing.PrintColorMode return
+        put put_ColorMode slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=186
+            in enum32 type=Windows.Graphics.Printing.PrintColorMode name=value
+    property duplex
+        get get_Duplex slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=210
+            out enum32 type=Windows.Graphics.Printing.PrintDuplex return
+        put put_Duplex slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=202
+            in enum32 type=Windows.Graphics.Printing.PrintDuplex name=value
+    property hole_punch
+        get get_HolePunch slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=242
+            out enum32 type=Windows.Graphics.Printing.PrintHolePunch return
+        put put_HolePunch slot=22 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=237
+            in enum32 type=Windows.Graphics.Printing.PrintHolePunch name=value
+    property max_copies
+        get get_MaxCopies slot=27 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=259
+            out uint32 return
+    property media_size
+        get get_MediaSize slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.PrintMediaSize return
+        put put_MediaSize slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=22
+            in enum32 type=Windows.Graphics.Printing.PrintMediaSize name=value
+    property media_type
+        get get_MediaType slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=99
+            out enum32 type=Windows.Graphics.Printing.PrintMediaType return
+        put put_MediaType slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=62
+            in enum32 type=Windows.Graphics.Printing.PrintMediaType name=value
+    property min_copies
+        get get_MinCopies slot=26 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=255
+            out uint32 return
+    property number_of_copies
+        get get_NumberOfCopies slot=29 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=266
+            out uint32 return
+        put put_NumberOfCopies slot=28 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=263
+            in uint32 name=value
+    property orientation
+        get get_Orientation slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=141
+            out enum32 type=Windows.Graphics.Printing.PrintOrientation return
+        put put_Orientation slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=121
+            in enum32 type=Windows.Graphics.Printing.PrintOrientation name=value
+    property print_quality
+        get get_PrintQuality slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=173
+            out enum32 type=Windows.Graphics.Printing.PrintQuality return
+        put put_PrintQuality slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=162
+            in enum32 type=Windows.Graphics.Printing.PrintQuality name=value
+    property staple
+        get get_Staple slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=232
+            out enum32 type=Windows.Graphics.Printing.PrintStaple return
+        put put_Staple slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=228
+            in enum32 type=Windows.Graphics.Printing.PrintStaple name=value
+
+interface Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration python_type
+    py _IPrintTaskOptionsCoreUIConfiguration
+    guid 62e69e23-9a1e-4336-b74f-3cc7f4cff709
+    signature {62e69e23-9a1e-4336-b74f-3cc7f4cff709}
+    property displayed_options
+        get get_DisplayedOptions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+interface Windows.Graphics.Printing.IPrintTaskProgressingEventArgs
+    guid 810cd3cb-b410-4282-a073-5ac378234174
+
+interface Windows.Graphics.Printing.IPrintTaskRequest
+    guid 6ff61e2e-2722-4240-a67c-f364849a17f3
+
+interface Windows.Graphics.Printing.IPrintTaskRequestedDeferral
+    guid cfefb3f0-ce3e-42c7-9496-64800c622c44
+
+interface Windows.Graphics.Printing.IPrintTaskRequestedEventArgs
+    guid d0aff924-a31b-454c-a7b6-5d0cc522fc16
+
+interface Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs
+    guid f9f067be-f456-41f0-9c98-5ce73e851410
+
+interface Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral
+    guid 4a1560d1-6992-4d9d-8555-4ca4563fb166
+
+interface Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport
+    guid 295d70c0-c2cb-4b7d-b0ea-93095091a220
+
+interface Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic
+    guid b4483d26-0dd0-4cd4-baff-930fc7d6a574
+
+interface Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2
+    guid 3be38bf4-7a44-4269-9a52-81261e289ee9
+
+interface Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
+    guid bbf68e86-3858-41b3-a799-55dd9888d475
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing.PrintPageRange> concrete
+    guid 1d314a18-2a16-542f-a986-1b7841b878aa
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Printing.PrintPageRange;{f8a06c54-6e7c-51c5-57fd-0660c2d71513}))
+    argument Windows.Graphics.Printing.PrintPageRange
+
+enum Windows.Graphics.Printing.PrintBinding python_type
+    py PrintBinding
+    signature enum(Windows.Graphics.Printing.PrintBinding;i4)
+
+enum Windows.Graphics.Printing.PrintBordering python_type
+    py PrintBordering
+    signature enum(Windows.Graphics.Printing.PrintBordering;i4)
+
+enum Windows.Graphics.Printing.PrintCollation python_type
+    py PrintCollation
+    signature enum(Windows.Graphics.Printing.PrintCollation;i4)
+
+enum Windows.Graphics.Printing.PrintColorMode python_type
+    py PrintColorMode
+    signature enum(Windows.Graphics.Printing.PrintColorMode;i4)
+
+enum Windows.Graphics.Printing.PrintDuplex python_type
+    py PrintDuplex
+    signature enum(Windows.Graphics.Printing.PrintDuplex;i4)
+
+enum Windows.Graphics.Printing.PrintHolePunch python_type
+    py PrintHolePunch
+    signature enum(Windows.Graphics.Printing.PrintHolePunch;i4)
+
+class Windows.Graphics.Printing.PrintManager python_type
+    py PrintManager
+    signature rc(Windows.Graphics.Printing.PrintManager;{ff2a9694-8c99-44fd-ae4a-19d9aa9a0f0a})
+    default Windows.Graphics.Printing.IPrintManager
+    requires Windows.Graphics.Printing.IPrintManager
+    factory Windows.Graphics.Printing.IPrintManagerStatic2
+    factory Windows.Graphics.Printing.IPrintManagerStatic
+    event print_task_requested
+        add add_PrintTaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintManager,Windows.Graphics.Printing.PrintTaskRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_PrintTaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintManager shape=26 reverse=53
+            in event_token name=eventCookie
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintManagerStatic shape=4 reverse=22 static
+            out class type=Windows.Graphics.Printing.PrintManager return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintManagerStatic2 shape=4 reverse=22 static
+            out boolean return
+    method show_print_ui_async static
+        method ShowPrintUIAsync slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintManagerStatic shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.Graphics.Printing.PrintMediaSize python_type
+    py PrintMediaSize
+    signature enum(Windows.Graphics.Printing.PrintMediaSize;i4)
+
+enum Windows.Graphics.Printing.PrintMediaType python_type
+    py PrintMediaType
+    signature enum(Windows.Graphics.Printing.PrintMediaType;i4)
+
+enum Windows.Graphics.Printing.PrintOrientation python_type
+    py PrintOrientation
+    signature enum(Windows.Graphics.Printing.PrintOrientation;i4)
+
+struct Windows.Graphics.Printing.PrintPageDescription python_type
+    py PrintPageDescription
+    signature struct(Windows.Graphics.Printing.PrintPageDescription;struct(Windows.Foundation.Size;f4;f4);struct(Windows.Foundation.Rect;f4;f4;f4;f4);u4;u4)
+    field page_size PageSize struct type=Windows.Foundation.Size
+    field imageable_rect ImageableRect struct type=Windows.Foundation.Rect
+    field dpi_x DpiX uint32
+    field dpi_y DpiY uint32
+
+class Windows.Graphics.Printing.PrintPageInfo activatable python_type
+    py PrintPageInfo
+    signature rc(Windows.Graphics.Printing.PrintPageInfo;{dd4be9c9-a6a1-4ada-930e-da872a4f23d3})
+    default Windows.Graphics.Printing.IPrintPageInfo
+    requires Windows.Graphics.Printing.IPrintPageInfo
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property page_size
+        get get_PageSize slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=99
+            out struct type=Windows.Foundation.Size return
+        put put_PageSize slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=10
+            in struct type=Windows.Foundation.Size name=value
+    property orientation
+        get get_Orientation slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=194
+            out enum32 type=Windows.Graphics.Printing.PrintOrientation return
+        put put_Orientation slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=186
+            in enum32 type=Windows.Graphics.Printing.PrintOrientation name=value
+    property media_size
+        get get_MediaSize slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.PrintMediaSize return
+        put put_MediaSize slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=22
+            in enum32 type=Windows.Graphics.Printing.PrintMediaSize name=value
+    property dpi_y
+        get get_DpiY slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=173
+            out uint32 return
+        put put_DpiY slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=162
+            in uint32 name=value
+    property dpi_x
+        get get_DpiX slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=141
+            out uint32 return
+        put put_DpiX slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageInfo shape=4 reverse=121
+            in uint32 name=value
+
+class Windows.Graphics.Printing.PrintPageRange python_type
+    py PrintPageRange
+    signature rc(Windows.Graphics.Printing.PrintPageRange;{f8a06c54-6e7c-51c5-57fd-0660c2d71513})
+    default Windows.Graphics.Printing.IPrintPageRange
+    requires Windows.Graphics.Printing.IPrintPageRange
+    factory Windows.Graphics.Printing.IPrintPageRangeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeFactory shape=117 reverse=25
+            in int32 name=firstPage
+            in int32 name=lastPage implicit
+            out class type=Windows.Graphics.Printing.PrintPageRange return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeFactory shape=117 reverse=25
+            in int32 name=firstPage
+            in int32 name=lastPage
+            out class type=Windows.Graphics.Printing.PrintPageRange return
+    property first_page_number
+        get get_FirstPageNumber slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRange shape=4 reverse=22
+            out int32 return
+    property last_page_number
+        get get_LastPageNumber slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRange shape=4 reverse=43
+            out int32 return
+
+class Windows.Graphics.Printing.PrintPageRangeOptions python_type
+    py PrintPageRangeOptions
+    signature rc(Windows.Graphics.Printing.PrintPageRangeOptions;{ce6db728-1357-46b2-a923-79f995f448fc})
+    default Windows.Graphics.Printing.IPrintPageRangeOptions
+    requires Windows.Graphics.Printing.IPrintPageRangeOptions
+    property allow_custom_set_of_pages
+        get get_AllowCustomSetOfPages slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=141
+            out boolean return
+        put put_AllowCustomSetOfPages slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=121
+            in boolean name=value
+    property allow_current_page
+        get get_AllowCurrentPage slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=99
+            out boolean return
+        put put_AllowCurrentPage slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=62
+            in boolean name=value
+    property allow_all_pages
+        get get_AllowAllPages slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=43
+            out boolean return
+        put put_AllowAllPages slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintPageRangeOptions shape=4 reverse=22
+            in boolean name=value
+
+enum Windows.Graphics.Printing.PrintQuality python_type
+    py PrintQuality
+    signature enum(Windows.Graphics.Printing.PrintQuality;i4)
+
+enum Windows.Graphics.Printing.PrintStaple python_type
+    py PrintStaple
+    signature enum(Windows.Graphics.Printing.PrintStaple;i4)
+
+class Windows.Graphics.Printing.PrintTask python_type
+    py PrintTask
+    signature rc(Windows.Graphics.Printing.PrintTask;{61d80247-6cf6-4fad-84e2-a5e82e2d4ceb})
+    default Windows.Graphics.Printing.IPrintTask
+    requires Windows.Graphics.Printing.IPrintTask
+    requires Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport
+    requires Windows.Graphics.Printing.IPrintTask2
+    property options
+        get get_Options slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintTaskOptions return
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackagePropertySet return
+    property source
+        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=4 reverse=43
+            out interface type=Windows.Graphics.Printing.IPrintDocumentSource return
+    property is_preview_enabled
+        get get_IsPreviewEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask2 shape=4 reverse=43
+            out boolean return
+        put put_IsPreviewEnabled slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTask2 shape=4 reverse=22
+            in boolean name=value
+    property is_printer_target_enabled
+        get get_IsPrinterTargetEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport shape=4 reverse=43
+            out boolean return
+        put put_IsPrinterTargetEnabled slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport shape=4 reverse=22
+            in boolean name=value
+    property is_3d_manufacturing_target_enabled
+        get get_Is3DManufacturingTargetEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport shape=4 reverse=99
+            out boolean return
+        put put_Is3DManufacturingTargetEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport shape=4 reverse=62
+            in boolean name=value
+    event completed
+        add add_Completed slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,Windows.Graphics.Printing.PrintTaskCompletedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Completed slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTask shape=26 reverse=397
+            in event_token name=eventCookie
+    event previewing
+        add add_Previewing slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,System.Object> name=eventHandler
+            out event_token return
+        remove remove_Previewing slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTask shape=26 reverse=134
+            in event_token name=eventCookie
+    event progressing
+        add add_Progressing slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,Windows.Graphics.Printing.PrintTaskProgressingEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Progressing slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTask shape=26 reverse=192
+            in event_token name=eventCookie
+    event submitting
+        add add_Submitting slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTask shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,System.Object> name=eventHandler
+            out event_token return
+        remove remove_Submitting slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTask shape=26 reverse=167
+            in event_token name=eventCookie
+
+class Windows.Graphics.Printing.PrintTaskCompletedEventArgs python_type
+    py PrintTaskCompletedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintTaskCompletedEventArgs;{5bcd34af-24e9-4c10-8d07-14c346ba3fce})
+    default Windows.Graphics.Printing.IPrintTaskCompletedEventArgs
+    requires Windows.Graphics.Printing.IPrintTaskCompletedEventArgs
+    property completion
+        get get_Completion slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing.PrintTaskCompletion return
+
+enum Windows.Graphics.Printing.PrintTaskCompletion python_type
+    py PrintTaskCompletion
+    signature enum(Windows.Graphics.Printing.PrintTaskCompletion;i4)
+
+class Windows.Graphics.Printing.PrintTaskOptions python_type
+    py PrintTaskOptions
+    signature rc(Windows.Graphics.Printing.PrintTaskOptions;{1bdbb474-4ed1-41eb-be3c-72d18ed67337})
+    default Windows.Graphics.Printing.IPrintTaskOptionsCore
+    requires Windows.Graphics.Printing.IPrintTaskOptionsCore
+    requires Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties
+    requires Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration
+    requires Windows.Graphics.Printing.IPrintTaskOptions
+    requires Windows.Graphics.Printing.IPrintTaskOptions2
+    property bordering
+        get get_Bordering slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptions shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.PrintBordering return
+        put put_Bordering slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptions shape=4 reverse=22
+            in enum32 type=Windows.Graphics.Printing.PrintBordering name=value
+    property page_range_options
+        get get_PageRangeOptions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptions2 shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintPageRangeOptions return
+    property custom_page_ranges
+        get get_CustomPageRanges slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptions2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing.PrintPageRange> return
+    property media_type
+        get get_MediaType slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=99
+            out enum32 type=Windows.Graphics.Printing.PrintMediaType return
+        put put_MediaType slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=62
+            in enum32 type=Windows.Graphics.Printing.PrintMediaType name=value
+    property hole_punch
+        get get_HolePunch slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=242
+            out enum32 type=Windows.Graphics.Printing.PrintHolePunch return
+        put put_HolePunch slot=22 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=237
+            in enum32 type=Windows.Graphics.Printing.PrintHolePunch name=value
+    property binding
+        get get_Binding slot=25 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=252
+            out enum32 type=Windows.Graphics.Printing.PrintBinding return
+        put put_Binding slot=24 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=247
+            in enum32 type=Windows.Graphics.Printing.PrintBinding name=value
+    property duplex
+        get get_Duplex slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=210
+            out enum32 type=Windows.Graphics.Printing.PrintDuplex return
+        put put_Duplex slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=202
+            in enum32 type=Windows.Graphics.Printing.PrintDuplex name=value
+    property color_mode
+        get get_ColorMode slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=194
+            out enum32 type=Windows.Graphics.Printing.PrintColorMode return
+        put put_ColorMode slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=186
+            in enum32 type=Windows.Graphics.Printing.PrintColorMode name=value
+    property collation
+        get get_Collation slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=223
+            out enum32 type=Windows.Graphics.Printing.PrintCollation return
+        put put_Collation slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=218
+            in enum32 type=Windows.Graphics.Printing.PrintCollation name=value
+    property staple
+        get get_Staple slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=232
+            out enum32 type=Windows.Graphics.Printing.PrintStaple return
+        put put_Staple slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=228
+            in enum32 type=Windows.Graphics.Printing.PrintStaple name=value
+    property print_quality
+        get get_PrintQuality slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=173
+            out enum32 type=Windows.Graphics.Printing.PrintQuality return
+        put put_PrintQuality slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=162
+            in enum32 type=Windows.Graphics.Printing.PrintQuality name=value
+    property orientation
+        get get_Orientation slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=141
+            out enum32 type=Windows.Graphics.Printing.PrintOrientation return
+        put put_Orientation slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=121
+            in enum32 type=Windows.Graphics.Printing.PrintOrientation name=value
+    property media_size
+        get get_MediaSize slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.PrintMediaSize return
+        put put_MediaSize slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=22
+            in enum32 type=Windows.Graphics.Printing.PrintMediaSize name=value
+    property number_of_copies
+        get get_NumberOfCopies slot=29 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=266
+            out uint32 return
+        put put_NumberOfCopies slot=28 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=263
+            in uint32 name=value
+    property max_copies
+        get get_MaxCopies slot=27 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=259
+            out uint32 return
+    property min_copies
+        get get_MinCopies slot=26 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties shape=4 reverse=255
+            out uint32 return
+    property displayed_options
+        get get_DisplayedOptions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_page_description
+        method GetPageDescription slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCore shape=51 reverse=24
+            in uint32 name=jobPageNumber
+            out struct type=Windows.Graphics.Printing.PrintPageDescription return
+    method get_page_print_ticket
+        method GetPagePrintTicket slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptions shape=51 reverse=65
+            in class type=Windows.Graphics.Printing.PrintPageInfo name=printPageInfo
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+
+class Windows.Graphics.Printing.PrintTaskProgressingEventArgs python_type
+    py PrintTaskProgressingEventArgs
+    signature rc(Windows.Graphics.Printing.PrintTaskProgressingEventArgs;{810cd3cb-b410-4282-a073-5ac378234174})
+    default Windows.Graphics.Printing.IPrintTaskProgressingEventArgs
+    requires Windows.Graphics.Printing.IPrintTaskProgressingEventArgs
+    property document_page_count
+        get get_DocumentPageCount slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskProgressingEventArgs shape=4 reverse=22
+            out uint32 return
+
+class Windows.Graphics.Printing.PrintTaskRequest python_type
+    py PrintTaskRequest
+    signature rc(Windows.Graphics.Printing.PrintTaskRequest;{6ff61e2e-2722-4240-a67c-f364849a17f3})
+    default Windows.Graphics.Printing.IPrintTaskRequest
+    requires Windows.Graphics.Printing.IPrintTaskRequest
+    property deadline
+        get get_Deadline slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskRequest shape=4 reverse=22
+            out datetime return
+    method create_print_task
+        method CreatePrintTask slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskRequest shape=117 reverse=45
+            in string name=title
+            in delegate type=Windows.Graphics.Printing.PrintTaskSourceRequestedHandler name=handler
+            out class type=Windows.Graphics.Printing.PrintTask return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskRequest shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintTaskRequestedDeferral return
+
+class Windows.Graphics.Printing.PrintTaskRequestedDeferral python_type
+    py PrintTaskRequestedDeferral
+    signature rc(Windows.Graphics.Printing.PrintTaskRequestedDeferral;{cfefb3f0-ce3e-42c7-9496-64800c622c44})
+    default Windows.Graphics.Printing.IPrintTaskRequestedDeferral
+    requires Windows.Graphics.Printing.IPrintTaskRequestedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskRequestedDeferral shape=0 reverse=16
+
+class Windows.Graphics.Printing.PrintTaskRequestedEventArgs python_type
+    py PrintTaskRequestedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintTaskRequestedEventArgs;{d0aff924-a31b-454c-a7b6-5d0cc522fc16})
+    default Windows.Graphics.Printing.IPrintTaskRequestedEventArgs
+    requires Windows.Graphics.Printing.IPrintTaskRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintTaskRequest return
+
+class Windows.Graphics.Printing.PrintTaskSourceRequestedArgs python_type
+    py PrintTaskSourceRequestedArgs
+    signature rc(Windows.Graphics.Printing.PrintTaskSourceRequestedArgs;{f9f067be-f456-41f0-9c98-5ce73e851410})
+    default Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs
+    requires Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs
+    property deadline
+        get get_Deadline slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs shape=4 reverse=22
+            out datetime return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral return
+    method set_source
+        method SetSource slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs shape=4 reverse=43
+            in interface type=Windows.Graphics.Printing.IPrintDocumentSource name=source
+
+class Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral python_type
+    py PrintTaskSourceRequestedDeferral
+    signature rc(Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral;{4a1560d1-6992-4d9d-8555-4ca4563fb166})
+    default Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral
+    requires Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral shape=0 reverse=16
+
+delegate Windows.Graphics.Printing.PrintTaskSourceRequestedHandler python_type
+    py PrintTaskSourceRequestedHandler
+    guid 6c109fa8-5cb6-4b3a-8663-f39cb02dc9b4
+    signature delegate({6c109fa8-5cb6-4b3a-8663-f39cb02dc9b4})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Graphics.Printing.PrintTaskSourceRequestedArgs name=args
+
+class Windows.Graphics.Printing.StandardPrintTaskOptions static python_type
+    py StandardPrintTaskOptions
+    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
+    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2
+    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic
+    property copies static
+        get get_Copies slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=202 static
+            out string return
+    property binding static
+        get get_Binding slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=194 static
+            out string return
+    property collation static
+        get get_Collation slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=162 static
+            out string return
+    property color_mode static
+        get get_ColorMode slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=121 static
+            out string return
+    property media_type static
+        get get_MediaType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=43 static
+            out string return
+    property duplex static
+        get get_Duplex slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=141 static
+            out string return
+    property hole_punch static
+        get get_HolePunch slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=186 static
+            out string return
+    property input_bin static
+        get get_InputBin slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=218 static
+            out string return
+    property media_size static
+        get get_MediaSize slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=22 static
+            out string return
+    property n_up static
+        get get_NUp slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=210 static
+            out string return
+    property orientation static
+        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=62 static
+            out string return
+    property print_quality static
+        get get_PrintQuality slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=99 static
+            out string return
+    property staple static
+        get get_Staple slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=173 static
+            out string return
+    property bordering static
+        get get_Bordering slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2 shape=4 reverse=22 static
+            out string return
+    property custom_page_ranges static
+        get get_CustomPageRanges slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3 shape=4 reverse=22 static
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintManager,Windows.Graphics.Printing.PrintTaskRequestedEventArgs> concrete
+    guid 8a8cb877-70c5-54ce-8b42-d790e2914859
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintManager;{ff2a9694-8c99-44fd-ae4a-19d9aa9a0f0a});rc(Windows.Graphics.Printing.PrintTaskRequestedEventArgs;{d0aff924-a31b-454c-a7b6-5d0cc522fc16}))
+    argument Windows.Graphics.Printing.PrintManager
+    argument Windows.Graphics.Printing.PrintTaskRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,System.Object> concrete
+    guid 4cc141d4-c0d9-5220-b1ce-80fff3bd2d44
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintTask;{61d80247-6cf6-4fad-84e2-a5e82e2d4ceb});cinterface(IInspectable))
+    argument Windows.Graphics.Printing.PrintTask
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,Windows.Graphics.Printing.PrintTaskCompletedEventArgs> concrete
+    guid b0b02549-b9ad-5226-898a-7b563b46640c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintTask;{61d80247-6cf6-4fad-84e2-a5e82e2d4ceb});rc(Windows.Graphics.Printing.PrintTaskCompletedEventArgs;{5bcd34af-24e9-4c10-8d07-14c346ba3fce}))
+    argument Windows.Graphics.Printing.PrintTask
+    argument Windows.Graphics.Printing.PrintTaskCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintTask,Windows.Graphics.Printing.PrintTaskProgressingEventArgs> concrete
+    guid c08d0524-5899-536c-8f46-55fdaa4cf78b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintTask;{61d80247-6cf6-4fad-84e2-a5e82e2d4ceb});rc(Windows.Graphics.Printing.PrintTaskProgressingEventArgs;{810cd3cb-b410-4282-a073-5ac378234174}))
+    argument Windows.Graphics.Printing.PrintTask
+    argument Windows.Graphics.Printing.PrintTaskProgressingEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.DataTransfer.DataPackagePropertySet external
+    py winrt.windows.applicationmodel.datatransfer.DataPackagePropertySet
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da

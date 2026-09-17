@@ -1,0 +1,185 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.ExchangeActiveSyncProvisioning
+
+class Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation activatable python_type
+    py EasClientDeviceInformation
+    signature rc(Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation;{54dfd981-1968-4ca3-b958-e595d16505eb})
+    default Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation
+    requires Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation
+    requires Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property friendly_name
+        get get_FriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=62
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=22
+            out guid return
+    property operating_system
+        get get_OperatingSystem slot=7 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=43
+            out string return
+    property system_manufacturer
+        get get_SystemManufacturer slot=9 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=99
+            out string return
+    property system_product_name
+        get get_SystemProductName slot=10 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=121
+            out string return
+    property system_sku
+        get get_SystemSku slot=11 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation shape=4 reverse=141
+            out string return
+    property system_firmware_version
+        get get_SystemFirmwareVersion slot=7 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2 shape=4 reverse=43
+            out string return
+    property system_hardware_version
+        get get_SystemHardwareVersion slot=6 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2 shape=4 reverse=22
+            out string return
+
+class Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy activatable python_type
+    py EasClientSecurityPolicy
+    signature rc(Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy;{45b72362-dfba-4a9b-aced-6fe2adcb6420})
+    default Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy
+    requires Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property require_encryption
+        get get_RequireEncryption slot=6 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=22
+            out boolean return
+        put put_RequireEncryption slot=7 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=43
+            in boolean name=value
+    property password_history
+        get get_PasswordHistory slot=16 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=202
+            out uint32 return
+        put put_PasswordHistory slot=17 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=210
+            in uint32 name=value
+    property password_expiration
+        get get_PasswordExpiration slot=14 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=186
+            out timespan return
+        put put_PasswordExpiration slot=15 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=26 reverse=200
+            in timespan name=value
+    property min_password_length
+        get get_MinPasswordLength slot=8 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=62
+            out uint8 return
+        put put_MinPasswordLength slot=9 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=99
+            in uint8 name=value
+    property min_password_complex_characters
+        get get_MinPasswordComplexCharacters slot=12 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=162
+            out uint8 return
+        put put_MinPasswordComplexCharacters slot=13 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=173
+            in uint8 name=value
+    property max_password_failed_attempts
+        get get_MaxPasswordFailedAttempts slot=18 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=218
+            out uint8 return
+        put put_MaxPasswordFailedAttempts slot=19 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=223
+            in uint8 name=value
+    property max_inactivity_time_lock
+        get get_MaxInactivityTimeLock slot=20 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=228
+            out timespan return
+        put put_MaxInactivityTimeLock slot=21 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=26 reverse=234
+            in timespan name=value
+    property disallow_convenience_logon
+        get get_DisallowConvenienceLogon slot=10 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=121
+            out boolean return
+        put put_DisallowConvenienceLogon slot=11 inputs=1 outputs=0 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=141
+            in boolean name=value
+    method apply_async
+        method ApplyAsync slot=23 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=242
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> return
+    method check_compliance
+        method CheckCompliance slot=22 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy shape=4 reverse=237
+            out class type=Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults return
+
+class Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults python_type
+    py EasComplianceResults
+    signature rc(Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults;{463c299c-7f19-4c66-b403-cb45dd57a2b3})
+    default Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults
+    requires Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults
+    requires Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2
+    property compliant
+        get get_Compliant slot=6 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=22
+            out boolean return
+    property disallow_convenience_logon_result
+        get get_DisallowConvenienceLogonResult slot=9 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=99
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult return
+    property max_inactivity_time_lock_result
+        get get_MaxInactivityTimeLockResult slot=14 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=186
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult return
+    property max_password_failed_attempts_result
+        get get_MaxPasswordFailedAttemptsResult slot=13 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=173
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult return
+    property min_password_complex_characters_result
+        get get_MinPasswordComplexCharactersResult slot=10 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=121
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult return
+    property min_password_length_result
+        get get_MinPasswordLengthResult slot=8 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=62
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult return
+    property password_expiration_result
+        get get_PasswordExpirationResult slot=11 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=141
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult return
+    property password_history_result
+        get get_PasswordHistoryResult slot=12 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=162
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult return
+    property require_encryption_result
+        get get_RequireEncryptionResult slot=7 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults shape=4 reverse=43
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult return
+    property encryption_provider_type
+        get get_EncryptionProviderType slot=6 inputs=0 outputs=1 declaring=Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2 shape=4 reverse=22
+            out enum32 type=Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType return
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult python_type
+    py EasDisallowConvenienceLogonResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType python_type
+    py EasEncryptionProviderType
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult python_type
+    py EasMaxInactivityTimeLockResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult python_type
+    py EasMaxPasswordFailedAttemptsResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult python_type
+    py EasMinPasswordComplexCharactersResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult python_type
+    py EasMinPasswordLengthResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult python_type
+    py EasPasswordExpirationResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult python_type
+    py EasPasswordHistoryResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult;i4)
+
+enum Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult python_type
+    py EasRequireEncryptionResult
+    signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult;i4)
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> concrete
+    guid fc3a733a-7ded-5e92-a569-b43389ee8827
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults;{463c299c-7f19-4c66-b403-cb45dd57a2b3}))
+    argument Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults
+
+interface Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation
+    guid 54dfd981-1968-4ca3-b958-e595d16505eb
+
+interface Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2
+    guid ffb35923-bb26-4d6a-81bc-165aee0ad754
+
+interface Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy
+    guid 45b72362-dfba-4a9b-aced-6fe2adcb6420
+
+interface Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults
+    guid 463c299c-7f19-4c66-b403-cb45dd57a2b3
+
+interface Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2
+    guid 2fbe60c9-1aa8-47f5-88bb-cb3ef0bffb15

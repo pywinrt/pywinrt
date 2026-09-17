@@ -1,0 +1,110 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.I2c.Provider
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.I2c.Provider.II2cControllerProvider>> concrete
+    guid 5fe77838-1125-5b2c-a281-e06a3dfbb76e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{61c2bb82-4510-4163-a87c-4e15a9558980}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.I2c.Provider.II2cControllerProvider>
+
+interface Windows.Devices.I2c.Provider.II2cControllerProvider python_type
+    py _II2cControllerProvider
+    guid 61c2bb82-4510-4163-a87c-4e15a9558980
+    signature {61c2bb82-4510-4163-a87c-4e15a9558980}
+    method get_device_provider
+        method GetDeviceProvider slot=6 inputs=1 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cControllerProvider shape=51 reverse=24
+            in class type=Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings name=settings
+            out interface type=Windows.Devices.I2c.Provider.II2cDeviceProvider return
+
+interface Windows.Devices.I2c.Provider.II2cDeviceProvider python_type closeable
+    py _II2cDeviceProvider
+    guid ad342654-57e8-453e-8329-d1e447d103a9
+    signature {ad342654-57e8-453e-8329-d1e447d103a9}
+    requires Windows.Foundation.IClosable
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=4 reverse=22
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read
+        method Read slot=9 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=51 reverse=100
+            fill_array uint8 name=buffer
+    method read_partial
+        method ReadPartial slot=10 inputs=1 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=117 reverse=125
+            fill_array uint8 name=buffer
+            out struct type=Windows.Devices.I2c.Provider.ProviderI2cTransferResult return
+    method write
+        method Write slot=7 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=51 reverse=44
+            pass_array uint8 name=buffer
+    method write_partial
+        method WritePartial slot=8 inputs=1 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=117 reverse=66
+            pass_array uint8 name=buffer
+            out struct type=Windows.Devices.I2c.Provider.ProviderI2cTransferResult return
+    method write_read
+        method WriteRead slot=11 inputs=2 outputs=0 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=195 reverse=146
+            pass_array uint8 name=writeBuffer
+            fill_array uint8 name=readBuffer
+    method write_read_partial
+        method WriteReadPartial slot=12 inputs=2 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cDeviceProvider shape=239 reverse=166
+            pass_array uint8 name=writeBuffer
+            fill_array uint8 name=readBuffer
+            out struct type=Windows.Devices.I2c.Provider.ProviderI2cTransferResult return
+
+interface Windows.Devices.I2c.Provider.II2cProvider python_type
+    py _II2cProvider
+    guid 6f13083e-bf62-4fe2-a95a-f08999669818
+    signature {6f13083e-bf62-4fe2-a95a-f08999669818}
+    method get_controllers_async
+        method GetControllersAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.II2cProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.I2c.Provider.II2cControllerProvider>> return
+
+interface Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings
+    guid e9db4e34-e510-44b7-809d-f2f85b555339
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.I2c.Provider.II2cControllerProvider> concrete
+    guid 511f8a39-98ca-550d-af25-1df2c1193c01
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{61c2bb82-4510-4163-a87c-4e15a9558980})
+    argument Windows.Devices.I2c.Provider.II2cControllerProvider
+
+enum Windows.Devices.I2c.Provider.ProviderI2cBusSpeed python_type
+    py ProviderI2cBusSpeed
+    signature enum(Windows.Devices.I2c.Provider.ProviderI2cBusSpeed;i4)
+
+class Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings python_type
+    py ProviderI2cConnectionSettings
+    signature rc(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings;{e9db4e34-e510-44b7-809d-f2f85b555339})
+    default Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings
+    requires Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings
+    property slave_address
+        get get_SlaveAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=22
+            out int32 return
+        put put_SlaveAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=43
+            in int32 name=value
+    property sharing_mode
+        get get_SharingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=121
+            out enum32 type=Windows.Devices.I2c.Provider.ProviderI2cSharingMode return
+        put put_SharingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=141
+            in enum32 type=Windows.Devices.I2c.Provider.ProviderI2cSharingMode name=value
+    property bus_speed
+        get get_BusSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=62
+            out enum32 type=Windows.Devices.I2c.Provider.ProviderI2cBusSpeed return
+        put put_BusSpeed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=99
+            in enum32 type=Windows.Devices.I2c.Provider.ProviderI2cBusSpeed name=value
+
+enum Windows.Devices.I2c.Provider.ProviderI2cSharingMode python_type
+    py ProviderI2cSharingMode
+    signature enum(Windows.Devices.I2c.Provider.ProviderI2cSharingMode;i4)
+
+struct Windows.Devices.I2c.Provider.ProviderI2cTransferResult python_type
+    py ProviderI2cTransferResult
+    signature struct(Windows.Devices.I2c.Provider.ProviderI2cTransferResult;enum(Windows.Devices.I2c.Provider.ProviderI2cTransferStatus;i4);u4)
+    field status Status enum32 type=Windows.Devices.I2c.Provider.ProviderI2cTransferStatus
+    field bytes_transferred BytesTransferred uint32
+
+enum Windows.Devices.I2c.Provider.ProviderI2cTransferStatus python_type
+    py ProviderI2cTransferStatus
+    signature enum(Windows.Devices.I2c.Provider.ProviderI2cTransferStatus;i4)
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e

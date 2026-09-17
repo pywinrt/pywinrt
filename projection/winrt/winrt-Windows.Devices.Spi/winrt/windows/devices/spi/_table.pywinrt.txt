@@ -1,0 +1,202 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Spi
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> concrete
+    guid b6b0df6f-c097-5844-93bd-7821998fdb8e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    argument Windows.Devices.Spi.SpiController
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> concrete
+    guid feb8466a-878f-577b-bbca-89575cfc56e4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Spi.SpiDevice;{05d5356d-11b6-4d39-84d5-95dfb4c9f2ce}))
+    argument Windows.Devices.Spi.SpiDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> concrete
+    guid 89624331-f802-56f7-9b33-17c616ecbcfa
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>
+
+interface Windows.Devices.Spi.ISpiBusInfo
+    guid 9929444a-54f2-48c6-b952-9c32fc02c669
+
+interface Windows.Devices.Spi.ISpiConnectionSettings
+    guid 5283a37f-f935-4b9f-a7a7-3a7890afa5ce
+
+interface Windows.Devices.Spi.ISpiConnectionSettingsFactory
+    guid ff99081e-10c4-44b7-9fea-a748b5a46f31
+
+interface Windows.Devices.Spi.ISpiController
+    guid a8d3c829-9895-4159-a934-8741f1ee6d27
+
+interface Windows.Devices.Spi.ISpiControllerStatics
+    guid 0d5229e2-138b-4e48-b964-4f2f79b9c5a2
+
+interface Windows.Devices.Spi.ISpiDevice
+    guid 05d5356d-11b6-4d39-84d5-95dfb4c9f2ce
+
+interface Windows.Devices.Spi.ISpiDeviceStatics python_type
+    py _ISpiDeviceStatics
+    guid a278e559-5720-4d3f-bd93-56f5ff5a5879
+    signature {a278e559-5720-4d3f-bd93-56f5ff5a5879}
+    method from_id_async
+        method FromIdAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=117 reverse=101
+            in string name=busId
+            in class type=Windows.Devices.Spi.SpiConnectionSettings name=settings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> return
+    method get_bus_info
+        method GetBusInfo slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=51 reverse=65
+            in string name=busId
+            out class type=Windows.Devices.Spi.SpiBusInfo return
+    method get_device_selector
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=4 reverse=22
+            out string return
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=51 reverse=44
+            in string name=friendlyName
+            out string return
+
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+    guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> concrete
+    guid 35fec489-44a2-5543-8a0c-b52e2f9cf87c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    argument Windows.Devices.Spi.SpiController
+
+class Windows.Devices.Spi.SpiBusInfo python_type
+    py SpiBusInfo
+    signature rc(Windows.Devices.Spi.SpiBusInfo;{9929444a-54f2-48c6-b952-9c32fc02c669})
+    default Windows.Devices.Spi.ISpiBusInfo
+    requires Windows.Devices.Spi.ISpiBusInfo
+    property chip_select_line_count
+        get get_ChipSelectLineCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiBusInfo shape=4 reverse=22
+            out int32 return
+    property max_clock_frequency
+        get get_MaxClockFrequency slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiBusInfo shape=4 reverse=62
+            out int32 return
+    property min_clock_frequency
+        get get_MinClockFrequency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiBusInfo shape=4 reverse=43
+            out int32 return
+    property supported_data_bit_lengths
+        get get_SupportedDataBitLengths slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiBusInfo shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
+
+class Windows.Devices.Spi.SpiConnectionSettings python_type
+    py SpiConnectionSettings
+    signature rc(Windows.Devices.Spi.SpiConnectionSettings;{5283a37f-f935-4b9f-a7a7-3a7890afa5ce})
+    default Windows.Devices.Spi.ISpiConnectionSettings
+    requires Windows.Devices.Spi.ISpiConnectionSettings
+    factory Windows.Devices.Spi.ISpiConnectionSettingsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettingsFactory shape=51 reverse=24
+            in int32 name=chipSelectLine
+            out class type=Windows.Devices.Spi.SpiConnectionSettings return
+    property sharing_mode
+        get get_SharingMode slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=186
+            out enum32 type=Windows.Devices.Spi.SpiSharingMode return
+        put put_SharingMode slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=194
+            in enum32 type=Windows.Devices.Spi.SpiSharingMode name=value
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=62
+            out enum32 type=Windows.Devices.Spi.SpiMode return
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=99
+            in enum32 type=Windows.Devices.Spi.SpiMode name=value
+    property data_bit_length
+        get get_DataBitLength slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=121
+            out int32 return
+        put put_DataBitLength slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=141
+            in int32 name=value
+    property clock_frequency
+        get get_ClockFrequency slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=162
+            out int32 return
+        put put_ClockFrequency slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=173
+            in int32 name=value
+    property chip_select_line
+        get get_ChipSelectLine slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=22
+            out int32 return
+        put put_ChipSelectLine slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiConnectionSettings shape=4 reverse=43
+            in int32 name=value
+
+class Windows.Devices.Spi.SpiController python_type
+    py SpiController
+    signature rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27})
+    default Windows.Devices.Spi.ISpiController
+    requires Windows.Devices.Spi.ISpiController
+    factory Windows.Devices.Spi.ISpiControllerStatics
+    method get_controllers_async static
+        method GetControllersAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiControllerStatics shape=51 reverse=44 static
+            in interface type=Windows.Devices.Spi.Provider.ISpiProvider name=provider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiControllerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> return
+    method get_device
+        method GetDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiController shape=51 reverse=24
+            in class type=Windows.Devices.Spi.SpiConnectionSettings name=settings
+            out class type=Windows.Devices.Spi.SpiDevice return
+
+class Windows.Devices.Spi.SpiDevice python_type closeable
+    py SpiDevice
+    signature rc(Windows.Devices.Spi.SpiDevice;{05d5356d-11b6-4d39-84d5-95dfb4c9f2ce})
+    default Windows.Devices.Spi.ISpiDevice
+    requires Windows.Devices.Spi.ISpiDevice
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Spi.ISpiDeviceStatics
+    property connection_settings
+        get get_ConnectionSettings slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiDevice shape=4 reverse=43
+            out class type=Windows.Devices.Spi.SpiConnectionSettings return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiDevice shape=4 reverse=22
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=117 reverse=101 static
+            in string name=busId
+            in class type=Windows.Devices.Spi.SpiConnectionSettings name=settings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> return
+    method get_bus_info static
+        method GetBusInfo slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=51 reverse=65 static
+            in string name=busId
+            out class type=Windows.Devices.Spi.SpiBusInfo return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=4 reverse=22 static
+            out string return
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=51 reverse=44 static
+            in string name=friendlyName
+            out string return
+    method read
+        method Read slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiDevice shape=51 reverse=100
+            fill_array uint8 name=buffer
+    method transfer_full_duplex
+        method TransferFullDuplex slot=11 inputs=2 outputs=0 declaring=Windows.Devices.Spi.ISpiDevice shape=195 reverse=146
+            pass_array uint8 name=writeBuffer
+            fill_array uint8 name=readBuffer
+    method transfer_sequential
+        method TransferSequential slot=10 inputs=2 outputs=0 declaring=Windows.Devices.Spi.ISpiDevice shape=195 reverse=126
+            pass_array uint8 name=writeBuffer
+            fill_array uint8 name=readBuffer
+    method write
+        method Write slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Spi.ISpiDevice shape=51 reverse=65
+            pass_array uint8 name=buffer
+
+enum Windows.Devices.Spi.SpiMode python_type
+    py SpiMode
+    signature enum(Windows.Devices.Spi.SpiMode;i4)
+
+enum Windows.Devices.Spi.SpiSharingMode python_type
+    py SpiSharingMode
+    signature enum(Windows.Devices.Spi.SpiSharingMode;i4)
+
+class System.Int32 external
+    py winrt.system.Int32
+
+interface Windows.Devices.Spi.Provider.ISpiProvider external
+    py winrt.windows.devices.spi.provider._ISpiProvider
+    guid 96b461e2-77d4-48ce-aaa0-75715a8362cf
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e

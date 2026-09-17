@@ -1,0 +1,56 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Diagnostics.Telemetry
+
+interface Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics
+    guid 9bf3f25d-d5c3-4eea-8dbe-9c8dbb0d9d8f
+
+interface Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationResult
+    guid 4d8518ab-2292-49bd-a15a-3d71d2145112
+
+interface Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings
+    guid 819a8582-ca19-415e-bb79-9c224bfa3a73
+
+class Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient static python_type
+    py PlatformTelemetryClient
+    factory Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics
+    method register static
+        method Register slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics shape=51 reverse=24 static
+            in string name=id
+            out class type=Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult return
+        method Register slot=7 inputs=2 outputs=1 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryClientStatics shape=117 reverse=45 static
+            in string name=id
+            in class type=Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings name=settings
+            out class type=Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult return
+
+class Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult python_type
+    py PlatformTelemetryRegistrationResult
+    signature rc(Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult;{4d8518ab-2292-49bd-a15a-3d71d2145112})
+    default Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationResult
+    requires Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationResult shape=4 reverse=22
+            out enum32 type=Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus return
+
+class Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings activatable python_type
+    py PlatformTelemetryRegistrationSettings
+    signature rc(Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings;{819a8582-ca19-415e-bb79-9c224bfa3a73})
+    default Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings
+    requires Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property upload_quota_size
+        get get_UploadQuotaSize slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings shape=4 reverse=62
+            out uint32 return
+        put put_UploadQuotaSize slot=9 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings shape=4 reverse=99
+            in uint32 name=value
+    property storage_size
+        get get_StorageSize slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings shape=4 reverse=22
+            out uint32 return
+        put put_StorageSize slot=7 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.Telemetry.IPlatformTelemetryRegistrationSettings shape=4 reverse=43
+            in uint32 name=value
+
+enum Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus python_type
+    py PlatformTelemetryRegistrationStatus
+    signature enum(Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus;i4)

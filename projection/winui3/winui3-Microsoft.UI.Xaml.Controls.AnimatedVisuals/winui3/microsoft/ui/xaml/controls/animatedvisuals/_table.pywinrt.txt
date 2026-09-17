@@ -1,0 +1,209 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Controls.AnimatedVisuals
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource activatable python_type
+    py AnimatedAcceptVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedAcceptVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource activatable python_type
+    py AnimatedBackVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource activatable python_type
+    py AnimatedChevronDownSmallVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronDownSmallVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource activatable python_type
+    py AnimatedChevronRightDownSmallVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronRightDownSmallVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource activatable python_type
+    py AnimatedChevronUpDownSmallVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedChevronUpDownSmallVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource activatable python_type
+    py AnimatedFindVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedFindVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource activatable python_type
+    py AnimatedGlobalNavigationButtonVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedGlobalNavigationButtonVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource activatable python_type
+    py AnimatedSettingsVisualSource
+    signature rc(Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource;{294765c3-70e3-555c-9657-01fc4051169d})
+    default Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource
+    requires Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property markers
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> return
+    method set_color_property
+        method SetColorProperty slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 shape=67 reverse=384
+            in string name=propertyName
+            in struct type=Windows.UI.Color name=value
+    method try_create_animated_visual
+        method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out object name=diagnostics
+            out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Double> concrete
+    guid d18743cf-94d6-54ac-9da2-f4755fa8e4f2
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;f8)
+    argument System.String
+    argument System.Double
+
+class Microsoft.UI.Composition.Compositor external
+    py winui3.microsoft.ui.composition.Compositor
+
+interface Microsoft.UI.Xaml.Controls.IAnimatedVisual external
+    py winui3.microsoft.ui.xaml.controls._IAnimatedVisual
+    guid 645ff609-fd6b-5fef-bdc0-9c34eff33c64
+
+interface Microsoft.UI.Xaml.Controls.IAnimatedVisualSource external
+    py winui3.microsoft.ui.xaml.controls._IAnimatedVisualSource
+    guid 294765c3-70e3-555c-9657-01fc4051169d
+
+interface Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 external
+    py winui3.microsoft.ui.xaml.controls._IAnimatedVisualSource2
+    guid 1a3b53a7-a8fe-59a1-b544-43a4d9c81ef2
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

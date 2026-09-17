@@ -1,0 +1,770 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Globalization.NumberFormatting
+
+class Windows.Globalization.NumberFormatting.CurrencyFormatter python_type
+    py CurrencyFormatter
+    signature rc(Windows.Globalization.NumberFormatting.CurrencyFormatter;{11730ca5-4b00-41b2-b332-73b12a497d54})
+    default Windows.Globalization.NumberFormatting.ICurrencyFormatter
+    requires Windows.Globalization.NumberFormatting.ICurrencyFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatterOptions
+    requires Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatter2
+    requires Windows.Globalization.NumberFormatting.INumberParser
+    requires Windows.Globalization.NumberFormatting.ICurrencyFormatter2
+    requires Windows.Globalization.NumberFormatting.ISignificantDigitsOption
+    requires Windows.Globalization.NumberFormatting.INumberRounderOption
+    requires Windows.Globalization.NumberFormatting.ISignedZeroOption
+    factory Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=51 reverse=24
+            in string name=currencyCode
+            out class type=Windows.Globalization.NumberFormatting.CurrencyFormatter return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=195 reverse=46
+            in string name=currencyCode
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
+            in string name=geographicRegion
+            out class type=Windows.Globalization.NumberFormatting.CurrencyFormatter return
+    property currency
+        get get_Currency slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4 reverse=22
+            out string return
+        put put_Currency slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4 reverse=43 deprecated
+            in string name=value
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=22
+            out enum32 type=Windows.Globalization.NumberFormatting.CurrencyFormatterMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=43
+            in enum32 type=Windows.Globalization.NumberFormatting.CurrencyFormatterMode name=value
+    property numeral_system
+        get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
+            out string return
+        put put_NumeralSystem slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=210
+            in string name=value
+    property is_grouped
+        get get_IsGrouped slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=162
+            out boolean return
+        put put_IsGrouped slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=173
+            in boolean name=value
+    property is_decimal_point_always_displayed
+        get get_IsDecimalPointAlwaysDisplayed slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=186
+            out boolean return
+        put put_IsDecimalPointAlwaysDisplayed slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=194
+            in boolean name=value
+    property integer_digits
+        get get_IntegerDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=62
+            out int32 return
+        put put_IntegerDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=99
+            in int32 name=value
+    property fraction_digits
+        get get_FractionDigits slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=121
+            out int32 return
+        put put_FractionDigits slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=141
+            in int32 name=value
+    property geographic_region
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=43
+            out string return
+    property resolved_geographic_region
+        get get_ResolvedGeographicRegion slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=223
+            out string return
+    property resolved_language
+        get get_ResolvedLanguage slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=218
+            out string return
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property number_rounder
+        get get_NumberRounder slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=22
+            out interface type=Windows.Globalization.NumberFormatting.INumberRounder return
+        put put_NumberRounder slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=43
+            in interface type=Windows.Globalization.NumberFormatting.INumberRounder name=value
+    property is_zero_signed
+        get get_IsZeroSigned slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=22
+            out boolean return
+        put put_IsZeroSigned slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=43
+            in boolean name=value
+    property significant_digits
+        get get_SignificantDigits slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=22
+            out int32 return
+        put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
+            in int32 name=value
+    method apply_rounding_for_currency
+        method ApplyRoundingForCurrency slot=8 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=62
+            in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=roundingAlgorithm
+    method format
+        method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
+            in double name=value
+            out string return
+    method format_double
+        method FormatDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=46 reverse=58
+            in double name=value
+            out string return
+    method format_int
+        method FormatInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method FormatUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=41
+            in uint64 name=value
+            out string return
+    method parse_double
+        method ParseDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=65
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse_int
+        method ParseInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=24
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Int64> return
+    method parse_uint
+        method ParseUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=44
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+
+enum Windows.Globalization.NumberFormatting.CurrencyFormatterMode python_type
+    py CurrencyFormatterMode
+    signature enum(Windows.Globalization.NumberFormatting.CurrencyFormatterMode;i4)
+
+class Windows.Globalization.NumberFormatting.DecimalFormatter activatable python_type
+    py DecimalFormatter
+    signature rc(Windows.Globalization.NumberFormatting.DecimalFormatter;{a5007c49-7676-4db7-8631-1b6ff265caa9})
+    default Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatterOptions
+    requires Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatter2
+    requires Windows.Globalization.NumberFormatting.INumberParser
+    requires Windows.Globalization.NumberFormatting.ISignificantDigitsOption
+    requires Windows.Globalization.NumberFormatting.INumberRounderOption
+    requires Windows.Globalization.NumberFormatting.ISignedZeroOption
+    factory Windows.Globalization.NumberFormatting.IDecimalFormatterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
+            in string name=geographicRegion implicit
+            out class type=Windows.Globalization.NumberFormatting.DecimalFormatter return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
+            in string name=geographicRegion
+            out class type=Windows.Globalization.NumberFormatting.DecimalFormatter return
+    property is_decimal_point_always_displayed
+        get get_IsDecimalPointAlwaysDisplayed slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=186
+            out boolean return
+        put put_IsDecimalPointAlwaysDisplayed slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=194
+            in boolean name=value
+    property integer_digits
+        get get_IntegerDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=62
+            out int32 return
+        put put_IntegerDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=99
+            in int32 name=value
+    property is_grouped
+        get get_IsGrouped slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=162
+            out boolean return
+        put put_IsGrouped slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=173
+            in boolean name=value
+    property numeral_system
+        get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
+            out string return
+        put put_NumeralSystem slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=210
+            in string name=value
+    property fraction_digits
+        get get_FractionDigits slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=121
+            out int32 return
+        put put_FractionDigits slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=141
+            in int32 name=value
+    property geographic_region
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=43
+            out string return
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property resolved_geographic_region
+        get get_ResolvedGeographicRegion slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=223
+            out string return
+    property resolved_language
+        get get_ResolvedLanguage slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=218
+            out string return
+    property number_rounder
+        get get_NumberRounder slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=22
+            out interface type=Windows.Globalization.NumberFormatting.INumberRounder return
+        put put_NumberRounder slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=43
+            in interface type=Windows.Globalization.NumberFormatting.INumberRounder name=value
+    property is_zero_signed
+        get get_IsZeroSigned slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=22
+            out boolean return
+        put put_IsZeroSigned slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=43
+            in boolean name=value
+    property significant_digits
+        get get_SignificantDigits slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=22
+            out int32 return
+        put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
+            in int32 name=value
+    method format
+        method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
+            in double name=value
+            out string return
+    method format_double
+        method FormatDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=46 reverse=58
+            in double name=value
+            out string return
+    method format_int
+        method FormatInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method FormatUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=41
+            in uint64 name=value
+            out string return
+    method parse_double
+        method ParseDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=65
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse_int
+        method ParseInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=24
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Int64> return
+    method parse_uint
+        method ParseUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=44
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+
+interface Windows.Globalization.NumberFormatting.ICurrencyFormatter
+    guid 11730ca5-4b00-41b2-b332-73b12a497d54
+
+interface Windows.Globalization.NumberFormatting.ICurrencyFormatter2
+    guid 072c2f1d-e7ba-4197-920e-247c92f7dea6
+
+interface Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory
+    guid 86c7537e-b938-4aa2-84b0-2c33dc5b1450
+
+interface Windows.Globalization.NumberFormatting.IDecimalFormatterFactory
+    guid 0d018c9a-e393-46b8-b830-7a69c8f89fbb
+
+interface Windows.Globalization.NumberFormatting.IIncrementNumberRounder
+    guid 70a64ff8-66ab-4155-9da1-739e46764543
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Globalization.NumberFormatting.INumberFormatter python_type
+    py _INumberFormatter
+    guid a5007c49-7676-4db7-8631-1b6ff265caa9
+    signature {a5007c49-7676-4db7-8631-1b6ff265caa9}
+    method format
+        method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
+            in double name=value
+            out string return
+    method format_int
+        method Format slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method Format slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=47 reverse=41
+            in uint64 name=value
+            out string return
+
+interface Windows.Globalization.NumberFormatting.INumberFormatter2 python_type
+    py _INumberFormatter2
+    guid d4a8c1f0-80d0-4b0d-a89e-882c1e8f8310
+    signature {d4a8c1f0-80d0-4b0d-a89e-882c1e8f8310}
+    method format_double
+        method FormatDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=46 reverse=58
+            in double name=value
+            out string return
+    method format_int
+        method FormatInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method FormatUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=41
+            in uint64 name=value
+            out string return
+
+interface Windows.Globalization.NumberFormatting.INumberFormatterOptions python_type
+    py _INumberFormatterOptions
+    guid 80332d21-aee1-4a39-baa2-07ed8c96daf6
+    signature {80332d21-aee1-4a39-baa2-07ed8c96daf6}
+    property fraction_digits
+        get get_FractionDigits slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=121
+            out int32 return
+        put put_FractionDigits slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=141
+            in int32 name=value
+    property geographic_region
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=43
+            out string return
+    property integer_digits
+        get get_IntegerDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=62
+            out int32 return
+        put put_IntegerDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=99
+            in int32 name=value
+    property is_decimal_point_always_displayed
+        get get_IsDecimalPointAlwaysDisplayed slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=186
+            out boolean return
+        put put_IsDecimalPointAlwaysDisplayed slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=194
+            in boolean name=value
+    property is_grouped
+        get get_IsGrouped slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=162
+            out boolean return
+        put put_IsGrouped slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=173
+            in boolean name=value
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property numeral_system
+        get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
+            out string return
+        put put_NumeralSystem slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=210
+            in string name=value
+    property resolved_geographic_region
+        get get_ResolvedGeographicRegion slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=223
+            out string return
+    property resolved_language
+        get get_ResolvedLanguage slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=218
+            out string return
+
+interface Windows.Globalization.NumberFormatting.INumberParser python_type
+    py _INumberParser
+    guid e6659412-4a13-4a53-83a1-392fbe4cff9f
+    signature {e6659412-4a13-4a53-83a1-392fbe4cff9f}
+    method parse_double
+        method ParseDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=65
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse_int
+        method ParseInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=24
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Int64> return
+    method parse_uint
+        method ParseUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=44
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+
+interface Windows.Globalization.NumberFormatting.INumberRounder python_type
+    py _INumberRounder
+    guid 5473c375-38ed-4631-b80c-ef34fc48b7f5
+    signature {5473c375-38ed-4631-b80c-ef34fc48b7f5}
+    method round_double
+        method RoundDouble slot=11 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=46 reverse=139
+            in double name=value
+            out double return
+    method round_int32
+        method RoundInt32 slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=24
+            in int32 name=value
+            out int32 return
+    method round_int64
+        method RoundInt64 slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=60
+            in int64 name=value
+            out int64 return
+    method round_single
+        method RoundSingle slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=40 reverse=118
+            in single name=value
+            out single return
+    method round_uint32
+        method RoundUInt32 slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=44
+            in uint32 name=value
+            out uint32 return
+    method round_uint64
+        method RoundUInt64 slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=98
+            in uint64 name=value
+            out uint64 return
+
+interface Windows.Globalization.NumberFormatting.INumberRounderOption python_type
+    py _INumberRounderOption
+    guid 3b088433-646f-4efe-8d48-66eb2e49e736
+    signature {3b088433-646f-4efe-8d48-66eb2e49e736}
+    property number_rounder
+        get get_NumberRounder slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=22
+            out interface type=Windows.Globalization.NumberFormatting.INumberRounder return
+        put put_NumberRounder slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=43
+            in interface type=Windows.Globalization.NumberFormatting.INumberRounder name=value
+
+interface Windows.Globalization.NumberFormatting.INumeralSystemTranslator
+    guid 28f5bc2c-8c23-4234-ad2e-fa5a3a426e9b
+
+interface Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory
+    guid 9630c8da-36ef-4d88-a85c-6f0d98d620a6
+
+interface Windows.Globalization.NumberFormatting.IPercentFormatterFactory
+    guid b7828aef-fed4-4018-a6e2-e09961e03765
+
+interface Windows.Globalization.NumberFormatting.IPermilleFormatterFactory
+    guid 2b37b4ac-e638-4ed5-a998-62f6b06a49ae
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.Int64> concrete
+    guid 4dda9e24-e69f-5c6a-a0a6-93427365af2a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i8)
+    argument System.Int64
+
+interface Windows.Foundation.IReference<System.UInt64> concrete
+    guid 6755e376-53bb-568b-a11d-17239868309e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8)
+    argument System.UInt64
+
+interface Windows.Globalization.NumberFormatting.ISignedZeroOption python_type
+    py _ISignedZeroOption
+    guid fd1cdd31-0a3c-49c4-a642-96a1564f4f30
+    signature {fd1cdd31-0a3c-49c4-a642-96a1564f4f30}
+    property is_zero_signed
+        get get_IsZeroSigned slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=22
+            out boolean return
+        put put_IsZeroSigned slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=43
+            in boolean name=value
+
+interface Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder
+    guid f5941bca-6646-4913-8c76-1b191ff94dfd
+
+interface Windows.Globalization.NumberFormatting.ISignificantDigitsOption python_type
+    py _ISignificantDigitsOption
+    guid 1d4dfcdd-2d43-4ee8-bbf1-c1b26a711a58
+    signature {1d4dfcdd-2d43-4ee8-bbf1-c1b26a711a58}
+    property significant_digits
+        get get_SignificantDigits slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=22
+            out int32 return
+        put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
+            in int32 name=value
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.Globalization.NumberFormatting.IncrementNumberRounder activatable python_type
+    py IncrementNumberRounder
+    signature rc(Windows.Globalization.NumberFormatting.IncrementNumberRounder;{5473c375-38ed-4631-b80c-ef34fc48b7f5})
+    default Windows.Globalization.NumberFormatting.INumberRounder
+    requires Windows.Globalization.NumberFormatting.INumberRounder
+    requires Windows.Globalization.NumberFormatting.IIncrementNumberRounder
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property rounding_algorithm
+        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=22
+            out enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm return
+        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=43
+            in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=value
+    property increment
+        get get_Increment slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=62
+            out double return
+        put put_Increment slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=2
+            in double name=value
+    method round_double
+        method RoundDouble slot=11 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=46 reverse=139
+            in double name=value
+            out double return
+    method round_int32
+        method RoundInt32 slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=24
+            in int32 name=value
+            out int32 return
+    method round_int64
+        method RoundInt64 slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=60
+            in int64 name=value
+            out int64 return
+    method round_single
+        method RoundSingle slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=40 reverse=118
+            in single name=value
+            out single return
+    method round_uint32
+        method RoundUInt32 slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=44
+            in uint32 name=value
+            out uint32 return
+    method round_uint64
+        method RoundUInt64 slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=98
+            in uint64 name=value
+            out uint64 return
+
+class Windows.Globalization.NumberFormatting.NumeralSystemTranslator activatable python_type
+    py NumeralSystemTranslator
+    signature rc(Windows.Globalization.NumberFormatting.NumeralSystemTranslator;{28f5bc2c-8c23-4234-ad2e-fa5a3a426e9b})
+    default Windows.Globalization.NumberFormatting.INumeralSystemTranslator
+    requires Windows.Globalization.NumberFormatting.INumeralSystemTranslator
+    factory Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
+            out class type=Windows.Globalization.NumberFormatting.NumeralSystemTranslator return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
+            out class type=Windows.Globalization.NumberFormatting.NumeralSystemTranslator return
+    property numeral_system
+        get get_NumeralSystem slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=62
+            out string return
+        put put_NumeralSystem slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=99
+            in string name=value
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property resolved_language
+        get get_ResolvedLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=43
+            out string return
+    method translate_numerals
+        method TranslateNumerals slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=51 reverse=124
+            in string name=value
+            out string return
+
+class Windows.Globalization.NumberFormatting.PercentFormatter activatable python_type
+    py PercentFormatter
+    signature rc(Windows.Globalization.NumberFormatting.PercentFormatter;{a5007c49-7676-4db7-8631-1b6ff265caa9})
+    default Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatterOptions
+    requires Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatter2
+    requires Windows.Globalization.NumberFormatting.INumberParser
+    requires Windows.Globalization.NumberFormatting.ISignificantDigitsOption
+    requires Windows.Globalization.NumberFormatting.INumberRounderOption
+    requires Windows.Globalization.NumberFormatting.ISignedZeroOption
+    factory Windows.Globalization.NumberFormatting.IPercentFormatterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
+            in string name=geographicRegion implicit
+            out class type=Windows.Globalization.NumberFormatting.PercentFormatter return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
+            in string name=geographicRegion
+            out class type=Windows.Globalization.NumberFormatting.PercentFormatter return
+    property is_decimal_point_always_displayed
+        get get_IsDecimalPointAlwaysDisplayed slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=186
+            out boolean return
+        put put_IsDecimalPointAlwaysDisplayed slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=194
+            in boolean name=value
+    property integer_digits
+        get get_IntegerDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=62
+            out int32 return
+        put put_IntegerDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=99
+            in int32 name=value
+    property is_grouped
+        get get_IsGrouped slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=162
+            out boolean return
+        put put_IsGrouped slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=173
+            in boolean name=value
+    property numeral_system
+        get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
+            out string return
+        put put_NumeralSystem slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=210
+            in string name=value
+    property fraction_digits
+        get get_FractionDigits slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=121
+            out int32 return
+        put put_FractionDigits slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=141
+            in int32 name=value
+    property geographic_region
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=43
+            out string return
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property resolved_geographic_region
+        get get_ResolvedGeographicRegion slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=223
+            out string return
+    property resolved_language
+        get get_ResolvedLanguage slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=218
+            out string return
+    property number_rounder
+        get get_NumberRounder slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=22
+            out interface type=Windows.Globalization.NumberFormatting.INumberRounder return
+        put put_NumberRounder slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=43
+            in interface type=Windows.Globalization.NumberFormatting.INumberRounder name=value
+    property is_zero_signed
+        get get_IsZeroSigned slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=22
+            out boolean return
+        put put_IsZeroSigned slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=43
+            in boolean name=value
+    property significant_digits
+        get get_SignificantDigits slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=22
+            out int32 return
+        put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
+            in int32 name=value
+    method format
+        method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
+            in double name=value
+            out string return
+    method format_double
+        method FormatDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=46 reverse=58
+            in double name=value
+            out string return
+    method format_int
+        method FormatInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method FormatUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=41
+            in uint64 name=value
+            out string return
+    method parse_double
+        method ParseDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=65
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse_int
+        method ParseInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=24
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Int64> return
+    method parse_uint
+        method ParseUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=44
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+
+class Windows.Globalization.NumberFormatting.PermilleFormatter activatable python_type
+    py PermilleFormatter
+    signature rc(Windows.Globalization.NumberFormatting.PermilleFormatter;{a5007c49-7676-4db7-8631-1b6ff265caa9})
+    default Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatterOptions
+    requires Windows.Globalization.NumberFormatting.INumberFormatter
+    requires Windows.Globalization.NumberFormatting.INumberFormatter2
+    requires Windows.Globalization.NumberFormatting.INumberParser
+    requires Windows.Globalization.NumberFormatting.ISignificantDigitsOption
+    requires Windows.Globalization.NumberFormatting.INumberRounderOption
+    requires Windows.Globalization.NumberFormatting.ISignedZeroOption
+    factory Windows.Globalization.NumberFormatting.IPermilleFormatterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
+            in string name=geographicRegion implicit
+            out class type=Windows.Globalization.NumberFormatting.PermilleFormatter return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117 reverse=25
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
+            in string name=geographicRegion
+            out class type=Windows.Globalization.NumberFormatting.PermilleFormatter return
+    property is_decimal_point_always_displayed
+        get get_IsDecimalPointAlwaysDisplayed slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=186
+            out boolean return
+        put put_IsDecimalPointAlwaysDisplayed slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=194
+            in boolean name=value
+    property integer_digits
+        get get_IntegerDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=62
+            out int32 return
+        put put_IntegerDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=99
+            in int32 name=value
+    property is_grouped
+        get get_IsGrouped slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=162
+            out boolean return
+        put put_IsGrouped slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=173
+            in boolean name=value
+    property numeral_system
+        get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
+            out string return
+        put put_NumeralSystem slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=210
+            in string name=value
+    property fraction_digits
+        get get_FractionDigits slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=121
+            out int32 return
+        put put_FractionDigits slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=141
+            in int32 name=value
+    property geographic_region
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=43
+            out string return
+    property languages
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property resolved_geographic_region
+        get get_ResolvedGeographicRegion slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=223
+            out string return
+    property resolved_language
+        get get_ResolvedLanguage slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=218
+            out string return
+    property number_rounder
+        get get_NumberRounder slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=22
+            out interface type=Windows.Globalization.NumberFormatting.INumberRounder return
+        put put_NumberRounder slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumberRounderOption shape=4 reverse=43
+            in interface type=Windows.Globalization.NumberFormatting.INumberRounder name=value
+    property is_zero_signed
+        get get_IsZeroSigned slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=22
+            out boolean return
+        put put_IsZeroSigned slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignedZeroOption shape=4 reverse=43
+            in boolean name=value
+    property significant_digits
+        get get_SignificantDigits slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=22
+            out int32 return
+        put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
+            in int32 name=value
+    method format
+        method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
+            in double name=value
+            out string return
+    method format_double
+        method FormatDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=46 reverse=58
+            in double name=value
+            out string return
+    method format_int
+        method FormatInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=19
+            in int64 name=value
+            out string return
+    method format_uint
+        method FormatUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter2 shape=47 reverse=41
+            in uint64 name=value
+            out string return
+    method parse_double
+        method ParseDouble slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=65
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse_int
+        method ParseInt slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=24
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.Int64> return
+    method parse_uint
+        method ParseUInt slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberParser shape=51 reverse=44
+            in string name=text
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+
+enum Windows.Globalization.NumberFormatting.RoundingAlgorithm python_type
+    py RoundingAlgorithm
+    signature enum(Windows.Globalization.NumberFormatting.RoundingAlgorithm;i4)
+
+class Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder activatable python_type
+    py SignificantDigitsNumberRounder
+    signature rc(Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder;{5473c375-38ed-4631-b80c-ef34fc48b7f5})
+    default Windows.Globalization.NumberFormatting.INumberRounder
+    requires Windows.Globalization.NumberFormatting.INumberRounder
+    requires Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property significant_digits
+        get get_SignificantDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=62
+            out uint32 return
+        put put_SignificantDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=99
+            in uint32 name=value
+    property rounding_algorithm
+        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=22
+            out enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm return
+        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=43
+            in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=value
+    method round_double
+        method RoundDouble slot=11 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=46 reverse=139
+            in double name=value
+            out double return
+    method round_int32
+        method RoundInt32 slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=24
+            in int32 name=value
+            out int32 return
+    method round_int64
+        method RoundInt64 slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=60
+            in int64 name=value
+            out int64 return
+    method round_single
+        method RoundSingle slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=40 reverse=118
+            in single name=value
+            out single return
+    method round_uint32
+        method RoundUInt32 slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=51 reverse=44
+            in uint32 name=value
+            out uint32 return
+    method round_uint64
+        method RoundUInt64 slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=47 reverse=98
+            in uint64 name=value
+            out uint64 return
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Int64 external
+    py winrt.system.Int64
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt64 external
+    py winrt.system.UInt64

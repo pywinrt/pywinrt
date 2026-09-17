@@ -1,0 +1,89 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Calls.Provider
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    guid 20613479-0ef9-4454-871c-afb66a14b6a5
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2
+    guid 04c7e980-9ac2-4768-b536-b68da4957d02
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3
+    guid 49330fb4-d1a7-43a2-aeee-c07b6dbaf068
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics
+    guid ccfc5a0a-9af7-6149-39d0-e076fcce1395
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
+    guid 8bf3ee3f-40f4-4380-8c7c-aea2c9b8dd7a
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3
+    guid 2ed69764-a6e3-50f0-b76a-d67cb39bdfde
+
+class Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin activatable python_type
+    py PhoneCallOrigin
+    signature rc(Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin;{20613479-0ef9-4454-871c-afb66a14b6a5})
+    default Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property location
+        get get_Location slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=121 deprecated
+            out string return
+        put put_Location slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=141 deprecated
+            in string name=value
+    property category_description
+        get get_CategoryDescription slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=62 deprecated
+            out string return
+        put put_CategoryDescription slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=99 deprecated
+            in string name=value
+    property category
+        get get_Category slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=22 deprecated
+            out string return
+        put put_Category slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 reverse=43 deprecated
+            in string name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2 shape=4 reverse=22 deprecated
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2 shape=4 reverse=43 deprecated
+            in string name=value
+    property display_picture
+        get get_DisplayPicture slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3 shape=4 reverse=22 deprecated
+            out class type=Windows.Storage.StorageFile return
+        put put_DisplayPicture slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3 shape=4 reverse=43 deprecated
+            in class type=Windows.Storage.StorageFile name=value
+
+class Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager static python_type
+    py PhoneCallOriginManager
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3
+    property is_current_app_active_call_origin_app static
+        get get_IsCurrentAppActiveCallOriginApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=4 reverse=22 static deprecated
+            out boolean return
+    property is_supported static
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3 shape=4 reverse=22 static deprecated
+            out boolean return
+    method request_set_as_active_call_origin_app_async static deprecated
+        method RequestSetAsActiveCallOriginAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2 shape=4 reverse=22 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_call_origin static deprecated
+        method SetCallOrigin slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=94 reverse=87 static deprecated
+            in guid name=requestId
+            in class type=Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin name=callOrigin
+    method show_phone_call_origin_settings_ui static deprecated
+        method ShowPhoneCallOriginSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=0 reverse=37 static deprecated
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

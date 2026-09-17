@@ -1,0 +1,395 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Profile
+
+class Windows.System.Profile.AnalyticsInfo static python_type
+    py AnalyticsInfo
+    factory Windows.System.Profile.IAnalyticsInfoStatics
+    factory Windows.System.Profile.IAnalyticsInfoStatics2
+    property device_form static
+        get get_DeviceForm slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IAnalyticsInfoStatics shape=4 reverse=43 static
+            out string return
+    property version_info static
+        get get_VersionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IAnalyticsInfoStatics shape=4 reverse=22 static
+            out class type=Windows.System.Profile.AnalyticsVersionInfo return
+    method get_system_properties_async static
+        method GetSystemPropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Profile.IAnalyticsInfoStatics2 shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=attributeNames
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> return
+
+class Windows.System.Profile.AnalyticsVersionInfo python_type
+    py AnalyticsVersionInfo
+    signature rc(Windows.System.Profile.AnalyticsVersionInfo;{926130b8-9955-4c74-bdc1-7cd0decf9b03})
+    default Windows.System.Profile.IAnalyticsVersionInfo
+    requires Windows.System.Profile.IAnalyticsVersionInfo
+    requires Windows.System.Profile.IAnalyticsVersionInfo2
+    property device_family
+        get get_DeviceFamily slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IAnalyticsVersionInfo shape=4 reverse=22
+            out string return
+    property device_family_version
+        get get_DeviceFamilyVersion slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IAnalyticsVersionInfo shape=4 reverse=43
+            out string return
+    property product_name
+        get get_ProductName slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IAnalyticsVersionInfo2 shape=4 reverse=22
+            out string return
+
+class Windows.System.Profile.AppApplicability static python_type
+    py AppApplicability
+    factory Windows.System.Profile.IAppApplicabilityStatics
+    method get_unsupported_app_requirements static
+        method GetUnsupportedAppRequirements slot=6 inputs=1 outputs=1 declaring=Windows.System.Profile.IAppApplicabilityStatics shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilities
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> return
+
+class Windows.System.Profile.EducationSettings static python_type
+    py EducationSettings
+    factory Windows.System.Profile.IEducationSettingsStatics
+    property is_education_environment static
+        get get_IsEducationEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IEducationSettingsStatics shape=4 reverse=22 static
+            out boolean return
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+class Windows.System.Profile.HardwareIdentification static python_type
+    py HardwareIdentification
+    factory Windows.System.Profile.IHardwareIdentificationStatics
+    method get_package_specific_token static
+        method GetPackageSpecificToken slot=6 inputs=1 outputs=1 declaring=Windows.System.Profile.IHardwareIdentificationStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.Streams.IBuffer name=nonce
+            out class type=Windows.System.Profile.HardwareToken return
+
+class Windows.System.Profile.HardwareToken python_type
+    py HardwareToken
+    signature rc(Windows.System.Profile.HardwareToken;{28f6d4c0-fb12-40a4-8167-7f4e03d2724c})
+    default Windows.System.Profile.IHardwareToken
+    requires Windows.System.Profile.IHardwareToken
+    property certificate
+        get get_Certificate slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.IHardwareToken shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IHardwareToken shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property signature
+        get get_Signature slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IHardwareToken shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+interface Windows.System.Profile.IAnalyticsInfoStatics
+    guid 1d5ee066-188d-5ba9-4387-acaeb0e7e305
+
+interface Windows.System.Profile.IAnalyticsInfoStatics2
+    guid 101704ea-a7f9-46d2-ab94-016865afdb25
+
+interface Windows.System.Profile.IAnalyticsVersionInfo
+    guid 926130b8-9955-4c74-bdc1-7cd0decf9b03
+
+interface Windows.System.Profile.IAnalyticsVersionInfo2
+    guid 76e915b1-ff36-407c-9f57-160d3e540747
+
+interface Windows.System.Profile.IAppApplicabilityStatics
+    guid 1664a082-0f38-5c99-83e4-48995970861c
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> concrete
+    guid 817944b6-f046-5391-bb0b-4cc34d8040f3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string))
+    argument Windows.Foundation.Collections.IMapView<System.String,System.String>
+
+interface Windows.System.Profile.IEducationSettingsStatics
+    guid fc53f0ef-4d3e-4e13-9b23-505f4d091e92
+
+interface Windows.System.Profile.IHardwareIdentificationStatics
+    guid 971260e0-f170-4a42-bd55-a900b212dae2
+
+interface Windows.System.Profile.IHardwareToken
+    guid 28f6d4c0-fb12-40a4-8167-7f4e03d2724c
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.System.Profile.IKnownRetailInfoPropertiesStatics
+    guid 99571178-500f-487e-8e75-29e551728712
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.System.Profile.IPlatformAutomaticAppSignInManagerStatics
+    guid 1ac9afce-8dd5-5c2d-b420-767d1f3b7d03
+
+interface Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics
+    guid b6e24c1b-7b1c-4b32-8c62-a66597ce723a
+
+interface Windows.System.Profile.IRetailInfoStatics
+    guid 0712c6b8-8b92-4f2a-8499-031f1798d6ef
+
+interface Windows.System.Profile.ISharedModeSettingsStatics
+    guid 893df40e-cad6-4d50-8c49-6fcfc03edb29
+
+interface Windows.System.Profile.ISharedModeSettingsStatics2
+    guid 608988a4-ccf1-4ee8-a5e2-fd6a1d0cfac8
+
+interface Windows.System.Profile.ISmartAppControlPolicyStatics
+    guid 5ff8c75b-073e-5015-8d98-5ff224180a0b
+
+interface Windows.System.Profile.ISystemIdentificationInfo
+    guid 0c659e7d-c3c2-4d33-a2df-21bc41916eb3
+
+interface Windows.System.Profile.ISystemIdentificationStatics
+    guid 5581f42a-d3df-4d93-a37d-c41a616c6d01
+
+interface Windows.System.Profile.ISystemSetupInfoStatics
+    guid b8366a4b-fb6a-4571-be0a-9a0f67954123
+
+interface Windows.System.Profile.IUnsupportedAppRequirement
+    guid 6182445c-894b-5cbc-8976-a98e0a9b998d
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> concrete
+    guid 5b638c58-9d04-5d1a-92fb-860852c3e4d0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Profile.UnsupportedAppRequirement;{6182445c-894b-5cbc-8976-a98e0a9b998d}))
+    argument Windows.System.Profile.UnsupportedAppRequirement
+
+interface Windows.System.Profile.IWindowsIntegrityPolicyStatics
+    guid 7d1d81db-8d63-4789-9ea5-ddcf65a94f3c
+
+class Windows.System.Profile.KnownRetailInfoProperties static python_type
+    py KnownRetailInfoProperties
+    factory Windows.System.Profile.IKnownRetailInfoPropertiesStatics
+    property battery_life_description static
+        get get_BatteryLifeDescription slot=16 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=202 static
+            out string return
+    property display_description static
+        get get_DisplayDescription slot=15 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=194 static
+            out string return
+    property display_model_name static
+        get get_DisplayModelName slot=9 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=99 static
+            out string return
+    property form_factor static
+        get get_FormFactor slot=12 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=162 static
+            out string return
+    property front_camera_description static
+        get get_FrontCameraDescription slot=21 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=232 static
+            out string return
+    property graphics_description static
+        get get_GraphicsDescription slot=20 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=228 static
+            out string return
+    property has_nfc static
+        get get_HasNfc slot=23 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=242 static
+            out string return
+    property has_optical_drive static
+        get get_HasOpticalDrive slot=25 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=252 static
+            out string return
+    property has_sd_slot static
+        get get_HasSdSlot slot=24 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=247 static
+            out string return
+    property is_featured static
+        get get_IsFeatured slot=11 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=141 static
+            out string return
+    property is_office_installed static
+        get get_IsOfficeInstalled slot=26 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=255 static
+            out string return
+    property manufacturer_name static
+        get get_ManufacturerName slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=43 static
+            out string return
+    property memory static
+        get get_Memory slot=18 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=218 static
+            out string return
+    property model_name static
+        get get_ModelName slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=62 static
+            out string return
+    property price static
+        get get_Price slot=10 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=121 static
+            out string return
+    property processor_description static
+        get get_ProcessorDescription slot=17 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=210 static
+            out string return
+    property rear_camera_description static
+        get get_RearCameraDescription slot=22 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=237 static
+            out string return
+    property retail_access_code static
+        get get_RetailAccessCode slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=22 static
+            out string return
+    property screen_size static
+        get get_ScreenSize slot=13 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=173 static
+            out string return
+    property storage_description static
+        get get_StorageDescription slot=19 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=223 static
+            out string return
+    property weight static
+        get get_Weight slot=14 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=186 static
+            out string return
+    property windows_edition static
+        get get_WindowsEdition slot=27 inputs=0 outputs=1 declaring=Windows.System.Profile.IKnownRetailInfoPropertiesStatics shape=4 reverse=259 static
+            out string return
+
+class Windows.System.Profile.PlatformAutomaticAppSignInManager static python_type
+    py PlatformAutomaticAppSignInManager
+    factory Windows.System.Profile.IPlatformAutomaticAppSignInManagerStatics
+    property policy static
+        get get_Policy slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IPlatformAutomaticAppSignInManagerStatics shape=4 reverse=22 static
+            out enum32 type=Windows.System.Profile.PlatformAutomaticAppSignInPolicy return
+
+enum Windows.System.Profile.PlatformAutomaticAppSignInPolicy python_type
+    py PlatformAutomaticAppSignInPolicy
+    signature enum(Windows.System.Profile.PlatformAutomaticAppSignInPolicy;i4)
+
+enum Windows.System.Profile.PlatformDataCollectionLevel python_type
+    py PlatformDataCollectionLevel
+    signature enum(Windows.System.Profile.PlatformDataCollectionLevel;i4)
+
+class Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings static python_type
+    py PlatformDiagnosticsAndUsageDataSettings
+    factory Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics
+    property collection_level static
+        get get_CollectionLevel slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=4 reverse=22 static
+            out enum32 type=Windows.System.Profile.PlatformDataCollectionLevel return
+    event collection_level_changed static
+        add add_CollectionLevelChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_CollectionLevelChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=26 reverse=82 static
+            in event_token name=token
+    method can_collect_diagnostics static
+        method CanCollectDiagnostics slot=9 inputs=1 outputs=1 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=51 reverse=100 static
+            in enum32 type=Windows.System.Profile.PlatformDataCollectionLevel name=level
+            out boolean return
+
+class Windows.System.Profile.RetailInfo static python_type
+    py RetailInfo
+    factory Windows.System.Profile.IRetailInfoStatics
+    property is_demo_mode_enabled static
+        get get_IsDemoModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IRetailInfoStatics shape=4 reverse=22 static
+            out boolean return
+    property properties static
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IRetailInfoStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.System.Profile.SharedModeSettings static python_type
+    py SharedModeSettings
+    factory Windows.System.Profile.ISharedModeSettingsStatics2
+    factory Windows.System.Profile.ISharedModeSettingsStatics
+    property is_enabled static
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISharedModeSettingsStatics shape=4 reverse=22 static
+            out boolean return
+    property should_avoid_local_storage static
+        get get_ShouldAvoidLocalStorage slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISharedModeSettingsStatics2 shape=4 reverse=22 static
+            out boolean return
+
+class Windows.System.Profile.SmartAppControlPolicy static python_type
+    py SmartAppControlPolicy
+    factory Windows.System.Profile.ISmartAppControlPolicyStatics
+    property is_enabled static
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISmartAppControlPolicyStatics shape=4 reverse=22 static
+            out boolean return
+    event changed static
+        add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.ISmartAppControlPolicyStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.ISmartAppControlPolicyStatics shape=26 reverse=82 static
+            in event_token name=token
+
+class Windows.System.Profile.SystemIdentification static python_type
+    py SystemIdentification
+    factory Windows.System.Profile.ISystemIdentificationStatics
+    method get_system_id_for_publisher static
+        method GetSystemIdForPublisher slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISystemIdentificationStatics shape=4 reverse=22 static
+            out class type=Windows.System.Profile.SystemIdentificationInfo return
+    method get_system_id_for_user static
+        method GetSystemIdForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.ISystemIdentificationStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.Profile.SystemIdentificationInfo return
+
+class Windows.System.Profile.SystemIdentificationInfo python_type
+    py SystemIdentificationInfo
+    signature rc(Windows.System.Profile.SystemIdentificationInfo;{0c659e7d-c3c2-4d33-a2df-21bc41916eb3})
+    default Windows.System.Profile.ISystemIdentificationInfo
+    requires Windows.System.Profile.ISystemIdentificationInfo
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISystemIdentificationInfo shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property source
+        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.ISystemIdentificationInfo shape=4 reverse=43
+            out enum32 type=Windows.System.Profile.SystemIdentificationSource return
+
+enum Windows.System.Profile.SystemIdentificationSource python_type
+    py SystemIdentificationSource
+    signature enum(Windows.System.Profile.SystemIdentificationSource;i4)
+
+enum Windows.System.Profile.SystemOutOfBoxExperienceState python_type
+    py SystemOutOfBoxExperienceState
+    signature enum(Windows.System.Profile.SystemOutOfBoxExperienceState;i4)
+
+class Windows.System.Profile.SystemSetupInfo static python_type
+    py SystemSetupInfo
+    factory Windows.System.Profile.ISystemSetupInfoStatics
+    property out_of_box_experience_state static
+        get get_OutOfBoxExperienceState slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISystemSetupInfoStatics shape=4 reverse=22 static
+            out enum32 type=Windows.System.Profile.SystemOutOfBoxExperienceState return
+    event out_of_box_experience_state_changed static
+        add add_OutOfBoxExperienceStateChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.ISystemSetupInfoStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_OutOfBoxExperienceStateChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.ISystemSetupInfoStatics shape=26 reverse=82 static
+            in event_token name=token
+
+class Windows.System.Profile.UnsupportedAppRequirement python_type
+    py UnsupportedAppRequirement
+    signature rc(Windows.System.Profile.UnsupportedAppRequirement;{6182445c-894b-5cbc-8976-a98e0a9b998d})
+    default Windows.System.Profile.IUnsupportedAppRequirement
+    requires Windows.System.Profile.IUnsupportedAppRequirement
+    property reasons
+        get get_Reasons slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IUnsupportedAppRequirement shape=4 reverse=43
+            out enum_u32 type=Windows.System.Profile.UnsupportedAppRequirementReasons return
+    property requirement
+        get get_Requirement slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IUnsupportedAppRequirement shape=4 reverse=22
+            out string return
+
+enum Windows.System.Profile.UnsupportedAppRequirementReasons python_type
+    py UnsupportedAppRequirementReasons
+    signature enum(Windows.System.Profile.UnsupportedAppRequirementReasons;u4)
+
+class Windows.System.Profile.WindowsIntegrityPolicy static python_type
+    py WindowsIntegrityPolicy
+    factory Windows.System.Profile.IWindowsIntegrityPolicyStatics
+    property can_disable static
+        get get_CanDisable slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=4 reverse=62 static
+            out boolean return
+    property is_disable_supported static
+        get get_IsDisableSupported slot=9 inputs=0 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=4 reverse=99 static
+            out boolean return
+    property is_enabled static
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=4 reverse=22 static
+            out boolean return
+    property is_enabled_for_trial static
+        get get_IsEnabledForTrial slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=4 reverse=43 static
+            out boolean return
+    event policy_changed static
+        add add_PolicyChanged slot=10 inputs=1 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=51 reverse=124 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_PolicyChanged slot=11 inputs=1 outputs=0 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=26 reverse=156 static
+            in event_token name=token
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+class Windows.System.User external
+    py winrt.windows.system.User

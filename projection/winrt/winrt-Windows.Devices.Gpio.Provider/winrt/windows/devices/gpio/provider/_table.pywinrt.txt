@@ -1,0 +1,109 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Gpio.Provider
+
+class Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs python_type
+    py GpioPinProviderValueChangedEventArgs
+    signature rc(Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs;{32a6d6f2-3d5b-44cd-8fbe-13a69f2edb24})
+    default Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs
+    requires Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs
+    factory Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory shape=51 reverse=24
+            in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinEdge name=edge
+            out class type=Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs return
+    property edge
+        get get_Edge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinEdge return
+
+interface Windows.Devices.Gpio.Provider.IGpioControllerProvider python_type
+    py _IGpioControllerProvider
+    guid ad11cec7-19ea-4b21-874f-b91aed4a25db
+    signature {ad11cec7-19ea-4b21-874f-b91aed4a25db}
+    property pin_count
+        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioControllerProvider shape=4 reverse=22
+            out int32 return
+    method open_pin_provider
+        method OpenPinProvider slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioControllerProvider shape=117 reverse=45
+            in int32 name=pin
+            in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioSharingMode name=sharingMode
+            out interface type=Windows.Devices.Gpio.Provider.IGpioPinProvider return
+
+interface Windows.Devices.Gpio.Provider.IGpioPinProvider python_type
+    py _IGpioPinProvider
+    guid 42344cb7-6abc-40ff-9ce7-73b85301b900
+    signature {42344cb7-6abc-40ff-9ce7-73b85301b900}
+    property debounce_timeout
+        get get_DebounceTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=62
+            out timespan return
+        put put_DebounceTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=26 reverse=110
+            in timespan name=value
+    property pin_number
+        get get_PinNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=121
+            out int32 return
+    property sharing_mode
+        get get_SharingMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=141
+            out enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioSharingMode return
+    event value_changed
+        add add_ValueChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Gpio.Provider.IGpioPinProvider,Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ValueChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=26 reverse=53
+            in event_token name=token
+    method get_drive_mode
+        method GetDriveMode slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=173
+            out enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode return
+    method is_drive_mode_supported
+        method IsDriveModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=51 reverse=163
+            in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode name=driveMode
+            out boolean return
+    method read
+        method Read slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=202
+            out enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinValue return
+    method set_drive_mode
+        method SetDriveMode slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=186
+            in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode name=value
+    method write
+        method Write slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.Provider.IGpioPinProvider shape=4 reverse=194
+            in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinValue name=value
+
+interface Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs
+    guid 32a6d6f2-3d5b-44cd-8fbe-13a69f2edb24
+
+interface Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory
+    guid 3ecb0b59-568c-4392-b24a-8a59a902b1f1
+
+interface Windows.Devices.Gpio.Provider.IGpioProvider python_type
+    py _IGpioProvider
+    guid 44e82707-08ca-434a-afe0-d61580446f7e
+    signature {44e82707-08ca-434a-afe0-d61580446f7e}
+    method get_controllers
+        method GetControllers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Gpio.Provider.IGpioControllerProvider> return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Gpio.Provider.IGpioControllerProvider> concrete
+    guid f429355f-7a16-5dcf-a575-db7d2a20eced
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ad11cec7-19ea-4b21-874f-b91aed4a25db})
+    argument Windows.Devices.Gpio.Provider.IGpioControllerProvider
+
+enum Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode python_type
+    py ProviderGpioPinDriveMode
+    signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode;i4)
+
+enum Windows.Devices.Gpio.Provider.ProviderGpioPinEdge python_type
+    py ProviderGpioPinEdge
+    signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge;i4)
+
+enum Windows.Devices.Gpio.Provider.ProviderGpioPinValue python_type
+    py ProviderGpioPinValue
+    signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinValue;i4)
+
+enum Windows.Devices.Gpio.Provider.ProviderGpioSharingMode python_type
+    py ProviderGpioSharingMode
+    signature enum(Windows.Devices.Gpio.Provider.ProviderGpioSharingMode;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Gpio.Provider.IGpioPinProvider,Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs> concrete
+    guid af259d89-9e01-529e-a879-c6763142d160
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{42344cb7-6abc-40ff-9ce7-73b85301b900};rc(Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs;{32a6d6f2-3d5b-44cd-8fbe-13a69f2edb24}))
+    argument Windows.Devices.Gpio.Provider.IGpioPinProvider
+    argument Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs

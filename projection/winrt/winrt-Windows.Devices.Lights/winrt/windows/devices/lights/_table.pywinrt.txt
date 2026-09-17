@@ -1,0 +1,293 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Lights
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> concrete
+    guid 52a69dfd-f0d6-5931-b8e1-f38066d71bf2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Lights.Lamp;{047d5b9a-ea45-4b2b-b1a2-14dff00bde7b}))
+    argument Windows.Devices.Lights.Lamp
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.LampArray> concrete
+    guid 3e9a9900-6eb1-5db1-b778-9a64a16542f8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Lights.LampArray;{7ace9787-c8a0-4e95-a1e0-d58676538649}))
+    argument Windows.Devices.Lights.LampArray
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Devices.Lights.ILamp
+    guid 047d5b9a-ea45-4b2b-b1a2-14dff00bde7b
+
+interface Windows.Devices.Lights.ILampArray
+    guid 7ace9787-c8a0-4e95-a1e0-d58676538649
+
+interface Windows.Devices.Lights.ILampArray2
+    guid 050c181f-60a8-4711-a1af-1b1b4c658ea2
+
+interface Windows.Devices.Lights.ILampArrayStatics
+    guid 7bb8c98d-5fc1-452d-bb1f-4ad410d398ff
+
+interface Windows.Devices.Lights.ILampAvailabilityChangedEventArgs
+    guid 4f6e3ded-07a2-499d-9260-67e304532ba4
+
+interface Windows.Devices.Lights.ILampInfo
+    guid 30bb521c-0acf-49da-8c10-150b9cf62713
+
+interface Windows.Devices.Lights.ILampStatics
+    guid a822416c-8885-401e-b821-8e8b38a8e8ec
+
+interface Windows.Foundation.IReference<Windows.UI.Color> concrete
+    guid ab8e5d11-b0c1-5a21-95ae-f16bf3a37624
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.UI.Color;u1;u1;u1;u1))
+    argument Windows.UI.Color
+
+class Windows.Devices.Lights.Lamp python_type closeable
+    py Lamp
+    signature rc(Windows.Devices.Lights.Lamp;{047d5b9a-ea45-4b2b-b1a2-14dff00bde7b})
+    default Windows.Devices.Lights.ILamp
+    requires Windows.Devices.Lights.ILamp
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Lights.ILampStatics
+    property is_enabled
+        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=43
+            out boolean return
+        put put_IsEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=62
+            in boolean name=value
+    property color
+        get get_Color slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=162
+            out struct type=Windows.UI.Color return
+        put put_Color slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=29
+            in struct type=Windows.UI.Color name=value
+    property brightness_level
+        get get_BrightnessLevel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=99
+            out single return
+        put put_BrightnessLevel slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=1 reverse=391
+            in single name=value
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=22
+            out string return
+    property is_color_settable
+        get get_IsColorSettable slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=141
+            out boolean return
+    event availability_changed
+        add add_AvailabilityChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AvailabilityChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=26 reverse=200
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> return
+    method get_default_async static
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 reverse=22 static
+            out string return
+
+class Windows.Devices.Lights.LampArray python_type
+    py LampArray
+    signature rc(Windows.Devices.Lights.LampArray;{7ace9787-c8a0-4e95-a1e0-d58676538649})
+    default Windows.Devices.Lights.ILampArray
+    requires Windows.Devices.Lights.ILampArray
+    requires Windows.Devices.Lights.ILampArray2
+    factory Windows.Devices.Lights.ILampArrayStatics
+    property is_enabled
+        get get_IsEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=186
+            out boolean return
+        put put_IsEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=194
+            in boolean name=value
+    property brightness_level
+        get get_BrightnessLevel slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=202
+            out double return
+        put put_BrightnessLevel slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=2
+            in double name=value
+    property bounding_box
+        get get_BoundingBox slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=173
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=22
+            out string return
+    property hardware_product_id
+        get get_HardwareProductId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=62
+            out uint16 return
+    property hardware_vendor_id
+        get get_HardwareVendorId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=43
+            out uint16 return
+    property hardware_version
+        get get_HardwareVersion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=99
+            out uint16 return
+    property is_connected
+        get get_IsConnected slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=218
+            out boolean return
+    property lamp_array_kind
+        get get_LampArrayKind slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=121
+            out enum32 type=Windows.Devices.Lights.LampArrayKind return
+    property lamp_count
+        get get_LampCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=141
+            out int32 return
+    property min_update_interval
+        get get_MinUpdateInterval slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=162
+            out timespan return
+    property supports_virtual_keys
+        get get_SupportsVirtualKeys slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=223
+            out boolean return
+    property is_available
+        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=4 reverse=22
+            out boolean return
+    event availability_changed
+        add add_AvailabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.LampArray,System.Object> name=handler
+            out event_token return
+        remove remove_AvailabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray2 shape=26 reverse=82
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.LampArray> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=4 reverse=22 static
+            out string return
+    method get_indices_for_key
+        method GetIndicesForKey slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117
+            in enum32 type=Windows.System.VirtualKey name=key
+            receive_array int32 return
+    method get_indices_for_purposes
+        method GetIndicesForPurposes slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117 reverse=239
+            in enum_u32 type=Windows.Devices.Lights.LampPurposes name=purposes
+            receive_array int32 return
+    method get_lamp_info
+        method GetLampInfo slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51 reverse=229
+            in int32 name=lampIndex
+            out class type=Windows.Devices.Lights.LampInfo return
+    method request_message_async
+        method RequestMessageAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51 reverse=274
+            in int32 name=messageId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method send_message_async
+        method SendMessageAsync slot=30 inputs=2 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117
+            in int32 name=messageId
+            in interface type=Windows.Storage.Streams.IBuffer name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_color
+        method SetColor slot=23 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=29
+            in struct type=Windows.UI.Color name=desiredColor
+    method set_color_for_index
+        method SetColorForIndex slot=24 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=67
+            in int32 name=lampIndex
+            in struct type=Windows.UI.Color name=desiredColor
+    method set_colors_for_indices
+        method SetColorsForIndices slot=26 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=195
+            pass_array struct type=Windows.UI.Color name=desiredColors
+            pass_array int32 name=lampIndexes
+    method set_colors_for_key
+        method SetColorsForKey slot=27 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=92
+            in struct type=Windows.UI.Color name=desiredColor
+            in enum32 type=Windows.System.VirtualKey name=key
+    method set_colors_for_keys
+        method SetColorsForKeys slot=28 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=195
+            pass_array struct type=Windows.UI.Color name=desiredColors
+            pass_array enum32 type=Windows.System.VirtualKey name=keys
+    method set_colors_for_purposes
+        method SetColorsForPurposes slot=29 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=92
+            in struct type=Windows.UI.Color name=desiredColor
+            in enum_u32 type=Windows.Devices.Lights.LampPurposes name=purposes
+    method set_single_color_for_indices
+        method SetSingleColorForIndices slot=25 inputs=2 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=175
+            in struct type=Windows.UI.Color name=desiredColor
+            pass_array int32 name=lampIndexes
+
+enum Windows.Devices.Lights.LampArrayKind python_type
+    py LampArrayKind
+    signature enum(Windows.Devices.Lights.LampArrayKind;i4)
+
+class Windows.Devices.Lights.LampAvailabilityChangedEventArgs python_type
+    py LampAvailabilityChangedEventArgs
+    signature rc(Windows.Devices.Lights.LampAvailabilityChangedEventArgs;{4f6e3ded-07a2-499d-9260-67e304532ba4})
+    default Windows.Devices.Lights.ILampAvailabilityChangedEventArgs
+    requires Windows.Devices.Lights.ILampAvailabilityChangedEventArgs
+    property is_available
+        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampAvailabilityChangedEventArgs shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Lights.LampInfo python_type
+    py LampInfo
+    signature rc(Windows.Devices.Lights.LampInfo;{30bb521c-0acf-49da-8c10-150b9cf62713})
+    default Windows.Devices.Lights.ILampInfo
+    requires Windows.Devices.Lights.ILampInfo
+    property blue_level_count
+        get get_BlueLevelCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=141
+            out int32 return
+    property fixed_color
+        get get_FixedColor slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=173
+            out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
+    property gain_level_count
+        get get_GainLevelCount slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=162
+            out int32 return
+    property green_level_count
+        get get_GreenLevelCount slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=121
+            out int32 return
+    property index
+        get get_Index slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=22
+            out int32 return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property purposes
+        get get_Purposes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=43
+            out enum_u32 type=Windows.Devices.Lights.LampPurposes return
+    property red_level_count
+        get get_RedLevelCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=99
+            out int32 return
+    property update_latency
+        get get_UpdateLatency slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=194
+            out timespan return
+    method get_nearest_supported_color
+        method GetNearestSupportedColor slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=92
+            in struct type=Windows.UI.Color name=desiredColor
+            out struct type=Windows.UI.Color return
+
+enum Windows.Devices.Lights.LampPurposes python_type
+    py LampPurposes
+    signature enum(Windows.Devices.Lights.LampPurposes;u4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs> concrete
+    guid 556a02d9-7685-576f-89ca-b62dc481d29d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.Lamp;{047d5b9a-ea45-4b2b-b1a2-14dff00bde7b});rc(Windows.Devices.Lights.LampAvailabilityChangedEventArgs;{4f6e3ded-07a2-499d-9260-67e304532ba4}))
+    argument Windows.Devices.Lights.Lamp
+    argument Windows.Devices.Lights.LampAvailabilityChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.LampArray,System.Object> concrete
+    guid 1229c9f2-783e-5bc8-9a1e-772e45e66401
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.LampArray;{7ace9787-c8a0-4e95-a1e0-d58676538649});cinterface(IInspectable))
+    argument Windows.Devices.Lights.LampArray
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+enum Windows.System.VirtualKey external
+    py winrt.windows.system.VirtualKey
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

@@ -1,0 +1,751 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Perception.Spatial
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor>> concrete
+    guid bbe07728-da33-52c5-aae0-a5e74cdf0471
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869})))
+    argument Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialAnchorExportSufficiency> concrete
+    guid 260957b8-5b76-5159-8dc5-e03d74aa5f3d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.Spatial.SpatialAnchorExportSufficiency;{77c25b2b-3409-4088-b91b-fdfd05d1648f}))
+    argument Windows.Perception.Spatial.SpatialAnchorExportSufficiency
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialAnchorStore> concrete
+    guid 1cd05e51-1457-5023-8f5d-fe5e5a953423
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.Spatial.SpatialAnchorStore;{b0bc3636-486a-3cb0-9e6f-1245165c4db6}))
+    argument Windows.Perception.Spatial.SpatialAnchorStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> concrete
+    guid b425d126-1069-563f-a863-44a30a8f071d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4))
+    argument Windows.Perception.Spatial.SpatialPerceptionAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialStageFrameOfReference> concrete
+    guid b4d8b1bf-1d66-5458-a5df-3f4f6c366c58
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.Spatial.SpatialStageFrameOfReference;{7a8a3464-ad0d-4590-ab86-33062b674926}))
+    argument Windows.Perception.Spatial.SpatialStageFrameOfReference
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> concrete
+    guid 55f0fa8a-afd4-5541-a1c3-36f12147d606
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869})))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> concrete
+    guid 627298e7-068d-53f6-9154-d7d8d8091463
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869}))
+    argument System.String
+    argument Windows.Perception.Spatial.SpatialAnchor
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> concrete
+    guid 2d344564-21b1-5470-b013-488cdde45c48
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869}))
+    argument System.String
+    argument Windows.Perception.Spatial.SpatialAnchor
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<Windows.Foundation.Numerics.Matrix4x4> concrete
+    guid dacbffdc-68ef-5fd0-b657-782d0ac9807e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4))
+    argument Windows.Foundation.Numerics.Matrix4x4
+
+interface Windows.Perception.Spatial.ISpatialAnchor
+    guid 0529e5ce-1d34-3702-bcec-eabff578a869
+
+interface Windows.Perception.Spatial.ISpatialAnchor2
+    guid ed17c908-a695-4cf6-92fd-97263ba71047
+
+interface Windows.Perception.Spatial.ISpatialAnchorExportSufficiency
+    guid 77c25b2b-3409-4088-b91b-fdfd05d1648f
+
+interface Windows.Perception.Spatial.ISpatialAnchorExporter
+    guid 9a2a4338-24fb-4269-89c5-88304aeef20f
+
+interface Windows.Perception.Spatial.ISpatialAnchorExporterStatics
+    guid ed2507b8-2475-439c-85ff-7fed341fdc88
+
+interface Windows.Perception.Spatial.ISpatialAnchorManagerStatics
+    guid 88e30eab-f3b7-420b-b086-8a80c07d910d
+
+interface Windows.Perception.Spatial.ISpatialAnchorRawCoordinateSystemAdjustedEventArgs
+    guid a1e81eb8-56c7-3117-a2e4-81e0fcf28e00
+
+interface Windows.Perception.Spatial.ISpatialAnchorStatics
+    guid a9928642-0174-311c-ae79-0e5107669f16
+
+interface Windows.Perception.Spatial.ISpatialAnchorStore
+    guid b0bc3636-486a-3cb0-9e6f-1245165c4db6
+
+interface Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics
+    guid 03bbf9b9-12d8-4bce-8835-c5df3ac0adab
+
+interface Windows.Perception.Spatial.ISpatialBoundingVolume
+    guid fb2065da-68c3-33df-b7af-4c787207999c
+
+interface Windows.Perception.Spatial.ISpatialBoundingVolumeStatics
+    guid 05889117-b3e1-36d8-b017-566181a5b196
+
+interface Windows.Perception.Spatial.ISpatialCoordinateSystem
+    guid 69ebca4b-60a3-3586-a653-59a7bd676d07
+
+interface Windows.Perception.Spatial.ISpatialEntity
+    guid 166de955-e1eb-454c-ba08-e6c0668ddc65
+
+interface Windows.Perception.Spatial.ISpatialEntityAddedEventArgs
+    guid a397f49b-156a-4707-ac2c-d31d570ed399
+
+interface Windows.Perception.Spatial.ISpatialEntityFactory
+    guid e1f1e325-349f-4225-a2f3-4b01c15fe056
+
+interface Windows.Perception.Spatial.ISpatialEntityRemovedEventArgs
+    guid 91741800-536d-4e9f-abf6-415b5444d651
+
+interface Windows.Perception.Spatial.ISpatialEntityStore
+    guid 329788ba-e513-4f06-889d-1be30ecf43e6
+
+interface Windows.Perception.Spatial.ISpatialEntityStoreStatics
+    guid 6b4b389e-7c50-4e92-8a62-4d1d4b7ccd3e
+
+interface Windows.Perception.Spatial.ISpatialEntityUpdatedEventArgs
+    guid e5671766-627b-43cb-a49f-b3be6d47deed
+
+interface Windows.Perception.Spatial.ISpatialEntityWatcher
+    guid b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959
+
+interface Windows.Perception.Spatial.ISpatialLocation
+    guid 1d81d29d-24a1-37d5-8fa1-39b4f9ad67e2
+
+interface Windows.Perception.Spatial.ISpatialLocation2
+    guid 117f2416-38a7-4a18-b404-ab8fabe1d78b
+
+interface Windows.Perception.Spatial.ISpatialLocator
+    guid f6478925-9e0c-3bb6-997e-b64ecca24cf4
+
+interface Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference
+    guid e1774ef6-1f4f-499c-9625-ef5e6ed7a048
+
+interface Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs
+    guid b8a84063-e3f4-368b-9061-9ea9d1d6cc16
+
+interface Windows.Perception.Spatial.ISpatialLocatorStatics
+    guid b76e3340-a7c2-361b-bb82-56e93b89b1bb
+
+interface Windows.Perception.Spatial.ISpatialStageFrameOfReference
+    guid 7a8a3464-ad0d-4590-ab86-33062b674926
+
+interface Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics
+    guid f78d5c4d-a0a4-499c-8d91-a8c965d40654
+
+interface Windows.Perception.Spatial.ISpatialStationaryFrameOfReference
+    guid 09dbccb9-bcf8-3e7f-be7e-7edccbb178a8
+
+class Windows.Perception.Spatial.SpatialAnchor python_type
+    py SpatialAnchor
+    signature rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869})
+    default Windows.Perception.Spatial.ISpatialAnchor
+    requires Windows.Perception.Spatial.ISpatialAnchor
+    requires Windows.Perception.Spatial.ISpatialAnchor2
+    factory Windows.Perception.Spatial.ISpatialAnchorStatics
+    property coordinate_system
+        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property raw_coordinate_system
+        get get_RawCoordinateSystem slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=4 reverse=43
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property removed_by_user
+        get get_RemovedByUser slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchor2 shape=4 reverse=22
+            out boolean return
+    event raw_coordinate_system_adjusted
+        add add_RawCoordinateSystemAdjusted slot=8 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs> name=handler
+            out event_token return
+        remove remove_RawCoordinateSystemAdjusted slot=9 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=26 reverse=110
+            in event_token name=cookie
+    method try_create_relative_to static
+        method TryCreateRelativeTo slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStatics shape=51 reverse=24 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out class type=Windows.Perception.Spatial.SpatialAnchor return
+        method TryCreateRelativeTo slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStatics shape=131 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            out class type=Windows.Perception.Spatial.SpatialAnchor return
+        method TryCreateRelativeTo slot=8 inputs=3 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStatics shape=207 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=position
+            in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
+            out class type=Windows.Perception.Spatial.SpatialAnchor return
+
+enum Windows.Perception.Spatial.SpatialAnchorExportPurpose python_type
+    py SpatialAnchorExportPurpose
+    signature enum(Windows.Perception.Spatial.SpatialAnchorExportPurpose;i4)
+
+class Windows.Perception.Spatial.SpatialAnchorExportSufficiency python_type
+    py SpatialAnchorExportSufficiency
+    signature rc(Windows.Perception.Spatial.SpatialAnchorExportSufficiency;{77c25b2b-3409-4088-b91b-fdfd05d1648f})
+    default Windows.Perception.Spatial.ISpatialAnchorExportSufficiency
+    requires Windows.Perception.Spatial.ISpatialAnchorExportSufficiency
+    property is_minimally_sufficient
+        get get_IsMinimallySufficient slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExportSufficiency shape=4 reverse=22
+            out boolean return
+    property recommended_sufficiency_level
+        get get_RecommendedSufficiencyLevel slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExportSufficiency shape=4 reverse=62
+            out double return
+    property sufficiency_level
+        get get_SufficiencyLevel slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExportSufficiency shape=4 reverse=43
+            out double return
+
+class Windows.Perception.Spatial.SpatialAnchorExporter python_type
+    py SpatialAnchorExporter
+    signature rc(Windows.Perception.Spatial.SpatialAnchorExporter;{9a2a4338-24fb-4269-89c5-88304aeef20f})
+    default Windows.Perception.Spatial.ISpatialAnchorExporter
+    requires Windows.Perception.Spatial.ISpatialAnchorExporter
+    factory Windows.Perception.Spatial.ISpatialAnchorExporterStatics
+    method get_anchor_export_sufficiency_async
+        method GetAnchorExportSufficiencyAsync slot=6 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExporter shape=117 reverse=25
+            in class type=Windows.Perception.Spatial.SpatialAnchor name=anchor
+            in enum32 type=Windows.Perception.Spatial.SpatialAnchorExportPurpose name=purpose
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialAnchorExportSufficiency> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExporterStatics shape=4 reverse=22 static
+            out class type=Windows.Perception.Spatial.SpatialAnchorExporter return
+    method request_access_async static
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExporterStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> return
+    method try_export_anchor_async
+        method TryExportAnchorAsync slot=7 inputs=3 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorExporter shape=195 reverse=46
+            in class type=Windows.Perception.Spatial.SpatialAnchor name=anchor
+            in enum32 type=Windows.Perception.Spatial.SpatialAnchorExportPurpose name=purpose
+            in interface type=Windows.Storage.Streams.IOutputStream name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Perception.Spatial.SpatialAnchorManager static python_type
+    py SpatialAnchorManager
+    factory Windows.Perception.Spatial.ISpatialAnchorManagerStatics
+    method request_store_async static
+        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorManagerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialAnchorStore> return
+
+class Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs python_type
+    py SpatialAnchorRawCoordinateSystemAdjustedEventArgs
+    signature rc(Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs;{a1e81eb8-56c7-3117-a2e4-81e0fcf28e00})
+    default Windows.Perception.Spatial.ISpatialAnchorRawCoordinateSystemAdjustedEventArgs
+    requires Windows.Perception.Spatial.ISpatialAnchorRawCoordinateSystemAdjustedEventArgs
+    property old_raw_coordinate_system_to_new_raw_coordinate_system_transform
+        get get_OldRawCoordinateSystemToNewRawCoordinateSystemTransform slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorRawCoordinateSystemAdjustedEventArgs shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 return
+
+class Windows.Perception.Spatial.SpatialAnchorStore python_type
+    py SpatialAnchorStore
+    signature rc(Windows.Perception.Spatial.SpatialAnchorStore;{b0bc3636-486a-3cb0-9e6f-1245165c4db6})
+    default Windows.Perception.Spatial.ISpatialAnchorStore
+    requires Windows.Perception.Spatial.ISpatialAnchorStore
+    method clear
+        method Clear slot=9 inputs=0 outputs=0 declaring=Windows.Perception.Spatial.ISpatialAnchorStore shape=0 reverse=93
+    method get_all_saved_anchors
+        method GetAllSavedAnchors slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStore shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> return
+    method remove
+        method Remove slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialAnchorStore shape=4 reverse=62
+            in string name=id
+    method try_save
+        method TrySave slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStore shape=117 reverse=45
+            in string name=id
+            in class type=Windows.Perception.Spatial.SpatialAnchor name=anchor
+            out boolean return
+
+class Windows.Perception.Spatial.SpatialAnchorTransferManager static python_type
+    py SpatialAnchorTransferManager
+    factory Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics
+    method request_access_async static deprecated
+        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=4 reverse=62 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> return
+    method try_export_anchors_async static deprecated
+        method TryExportAnchorsAsync slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=117 reverse=45 static deprecated
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> name=anchors
+            in interface type=Windows.Storage.Streams.IOutputStream name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_import_anchors_async static deprecated
+        method TryImportAnchorsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=51 reverse=24 static deprecated
+            in interface type=Windows.Storage.Streams.IInputStream name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor>> return
+
+struct Windows.Perception.Spatial.SpatialBoundingBox python_type
+    py SpatialBoundingBox
+    signature struct(Windows.Perception.Spatial.SpatialBoundingBox;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4))
+    field center Center struct type=Windows.Foundation.Numerics.Vector3
+    field extents Extents struct type=Windows.Foundation.Numerics.Vector3
+
+struct Windows.Perception.Spatial.SpatialBoundingFrustum python_type
+    py SpatialBoundingFrustum
+    signature struct(Windows.Perception.Spatial.SpatialBoundingFrustum;struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4))
+    field near Near struct type=Windows.Foundation.Numerics.Plane
+    field far Far struct type=Windows.Foundation.Numerics.Plane
+    field right Right struct type=Windows.Foundation.Numerics.Plane
+    field left Left struct type=Windows.Foundation.Numerics.Plane
+    field top Top struct type=Windows.Foundation.Numerics.Plane
+    field bottom Bottom struct type=Windows.Foundation.Numerics.Plane
+
+struct Windows.Perception.Spatial.SpatialBoundingOrientedBox python_type
+    py SpatialBoundingOrientedBox
+    signature struct(Windows.Perception.Spatial.SpatialBoundingOrientedBox;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Quaternion;f4;f4;f4;f4))
+    field center Center struct type=Windows.Foundation.Numerics.Vector3
+    field extents Extents struct type=Windows.Foundation.Numerics.Vector3
+    field orientation Orientation struct type=Windows.Foundation.Numerics.Quaternion
+
+struct Windows.Perception.Spatial.SpatialBoundingSphere python_type
+    py SpatialBoundingSphere
+    signature struct(Windows.Perception.Spatial.SpatialBoundingSphere;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4)
+    field center Center struct type=Windows.Foundation.Numerics.Vector3
+    field radius Radius single
+
+class Windows.Perception.Spatial.SpatialBoundingVolume python_type
+    py SpatialBoundingVolume
+    signature rc(Windows.Perception.Spatial.SpatialBoundingVolume;{fb2065da-68c3-33df-b7af-4c787207999c})
+    default Windows.Perception.Spatial.ISpatialBoundingVolume
+    requires Windows.Perception.Spatial.ISpatialBoundingVolume
+    factory Windows.Perception.Spatial.ISpatialBoundingVolumeStatics
+    method from_box static
+        method FromBox slot=6 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialBoundingVolumeStatics shape=129 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Perception.Spatial.SpatialBoundingBox name=box
+            out class type=Windows.Perception.Spatial.SpatialBoundingVolume return
+    method from_frustum static
+        method FromFrustum slot=9 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialBoundingVolumeStatics shape=127 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Perception.Spatial.SpatialBoundingFrustum name=frustum
+            out class type=Windows.Perception.Spatial.SpatialBoundingVolume return
+    method from_oriented_box static
+        method FromOrientedBox slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialBoundingVolumeStatics shape=128 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Perception.Spatial.SpatialBoundingOrientedBox name=box
+            out class type=Windows.Perception.Spatial.SpatialBoundingVolume return
+    method from_sphere static
+        method FromSphere slot=8 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialBoundingVolumeStatics shape=130 static
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Perception.Spatial.SpatialBoundingSphere name=sphere
+            out class type=Windows.Perception.Spatial.SpatialBoundingVolume return
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem python_type
+    py SpatialCoordinateSystem
+    signature rc(Windows.Perception.Spatial.SpatialCoordinateSystem;{69ebca4b-60a3-3586-a653-59a7bd676d07})
+    default Windows.Perception.Spatial.ISpatialCoordinateSystem
+    requires Windows.Perception.Spatial.ISpatialCoordinateSystem
+    method try_get_transform_to
+        method TryGetTransformTo slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialCoordinateSystem shape=51 reverse=24
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=target
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Matrix4x4> return
+
+class Windows.Perception.Spatial.SpatialEntity python_type
+    py SpatialEntity
+    signature rc(Windows.Perception.Spatial.SpatialEntity;{166de955-e1eb-454c-ba08-e6c0668ddc65})
+    default Windows.Perception.Spatial.ISpatialEntity
+    requires Windows.Perception.Spatial.ISpatialEntity
+    factory Windows.Perception.Spatial.ISpatialEntityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityFactory shape=51 reverse=24
+            in class type=Windows.Perception.Spatial.SpatialAnchor name=spatialAnchor
+            out class type=Windows.Perception.Spatial.SpatialEntity return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityFactory shape=117 reverse=45
+            in class type=Windows.Perception.Spatial.SpatialAnchor name=spatialAnchor
+            in class type=Windows.Foundation.Collections.ValueSet name=propertySet
+            out class type=Windows.Perception.Spatial.SpatialEntity return
+    property anchor
+        get get_Anchor slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntity shape=4 reverse=43
+            out class type=Windows.Perception.Spatial.SpatialAnchor return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntity shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntity shape=4 reverse=62
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+class Windows.Perception.Spatial.SpatialEntityAddedEventArgs python_type
+    py SpatialEntityAddedEventArgs
+    signature rc(Windows.Perception.Spatial.SpatialEntityAddedEventArgs;{a397f49b-156a-4707-ac2c-d31d570ed399})
+    default Windows.Perception.Spatial.ISpatialEntityAddedEventArgs
+    requires Windows.Perception.Spatial.ISpatialEntityAddedEventArgs
+    property entity
+        get get_Entity slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityAddedEventArgs shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialEntity return
+
+class Windows.Perception.Spatial.SpatialEntityRemovedEventArgs python_type
+    py SpatialEntityRemovedEventArgs
+    signature rc(Windows.Perception.Spatial.SpatialEntityRemovedEventArgs;{91741800-536d-4e9f-abf6-415b5444d651})
+    default Windows.Perception.Spatial.ISpatialEntityRemovedEventArgs
+    requires Windows.Perception.Spatial.ISpatialEntityRemovedEventArgs
+    property entity
+        get get_Entity slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityRemovedEventArgs shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialEntity return
+
+class Windows.Perception.Spatial.SpatialEntityStore python_type
+    py SpatialEntityStore
+    signature rc(Windows.Perception.Spatial.SpatialEntityStore;{329788ba-e513-4f06-889d-1be30ecf43e6})
+    default Windows.Perception.Spatial.ISpatialEntityStore
+    requires Windows.Perception.Spatial.ISpatialEntityStore
+    factory Windows.Perception.Spatial.ISpatialEntityStoreStatics
+    property is_supported static
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityStoreStatics shape=4 reverse=22 static
+            out boolean return
+    method create_entity_watcher
+        method CreateEntityWatcher slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityStore shape=4 reverse=62
+            out class type=Windows.Perception.Spatial.SpatialEntityWatcher return
+    method remove_async
+        method RemoveAsync slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityStore shape=51 reverse=44
+            in class type=Windows.Perception.Spatial.SpatialEntity name=entity
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_async
+        method SaveAsync slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityStore shape=51 reverse=24
+            in class type=Windows.Perception.Spatial.SpatialEntity name=entity
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_get static
+        method TryGet slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityStoreStatics shape=51 reverse=44 static
+            in class type=Windows.System.RemoteSystems.RemoteSystemSession name=session
+            out class type=Windows.Perception.Spatial.SpatialEntityStore return
+
+class Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs python_type
+    py SpatialEntityUpdatedEventArgs
+    signature rc(Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs;{e5671766-627b-43cb-a49f-b3be6d47deed})
+    default Windows.Perception.Spatial.ISpatialEntityUpdatedEventArgs
+    requires Windows.Perception.Spatial.ISpatialEntityUpdatedEventArgs
+    property entity
+        get get_Entity slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityUpdatedEventArgs shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialEntity return
+
+class Windows.Perception.Spatial.SpatialEntityWatcher python_type
+    py SpatialEntityWatcher
+    signature rc(Windows.Perception.Spatial.SpatialEntityWatcher;{b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959})
+    default Windows.Perception.Spatial.ISpatialEntityWatcher
+    requires Windows.Perception.Spatial.ISpatialEntityWatcher
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=4 reverse=22
+            out enum32 type=Windows.Perception.Spatial.SpatialEntityWatcherStatus return
+    event added
+        add add_Added slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityAddedEventArgs> name=handler
+            out event_token return
+        remove remove_Added slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=82
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=13 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=14 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=192
+            in event_token name=token
+    event removed
+        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=167
+            in event_token name=token
+    event updated
+        add add_Updated slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs> name=handler
+            out event_token return
+        remove remove_Updated slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=134
+            in event_token name=token
+    method start
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=0 reverse=193
+    method stop
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=0 reverse=201
+
+enum Windows.Perception.Spatial.SpatialEntityWatcherStatus python_type
+    py SpatialEntityWatcherStatus
+    signature enum(Windows.Perception.Spatial.SpatialEntityWatcherStatus;i4)
+
+enum Windows.Perception.Spatial.SpatialLocatability python_type
+    py SpatialLocatability
+    signature enum(Windows.Perception.Spatial.SpatialLocatability;i4)
+
+class Windows.Perception.Spatial.SpatialLocation python_type
+    py SpatialLocation
+    signature rc(Windows.Perception.Spatial.SpatialLocation;{1d81d29d-24a1-37d5-8fa1-39b4f9ad67e2})
+    default Windows.Perception.Spatial.ISpatialLocation
+    requires Windows.Perception.Spatial.ISpatialLocation
+    requires Windows.Perception.Spatial.ISpatialLocation2
+    property absolute_angular_acceleration
+        get get_AbsoluteAngularAcceleration slot=11 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=141 deprecated
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+    property absolute_angular_velocity
+        get get_AbsoluteAngularVelocity slot=10 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=121 deprecated
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+    property absolute_linear_acceleration
+        get get_AbsoluteLinearAcceleration slot=9 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=99
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property absolute_linear_velocity
+        get get_AbsoluteLinearVelocity slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property orientation
+        get get_Orientation slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=43
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property absolute_angular_acceleration_axis_angle
+        get get_AbsoluteAngularAccelerationAxisAngle slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation2 shape=4 reverse=43
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property absolute_angular_velocity_axis_angle
+        get get_AbsoluteAngularVelocityAxisAngle slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocation2 shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+
+class Windows.Perception.Spatial.SpatialLocator python_type
+    py SpatialLocator
+    signature rc(Windows.Perception.Spatial.SpatialLocator;{f6478925-9e0c-3bb6-997e-b64ecca24cf4})
+    default Windows.Perception.Spatial.ISpatialLocator
+    requires Windows.Perception.Spatial.ISpatialLocator
+    factory Windows.Perception.Spatial.ISpatialLocatorStatics
+    property locatability
+        get get_Locatability slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=4 reverse=22
+            out enum32 type=Windows.Perception.Spatial.SpatialLocatability return
+    event locatability_changed
+        add add_LocatabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,System.Object> name=handler
+            out event_token return
+        remove remove_LocatabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocator shape=26 reverse=82
+            in event_token name=cookie
+    event positional_tracking_deactivating
+        add add_PositionalTrackingDeactivating slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs> name=handler
+            out event_token return
+        remove remove_PositionalTrackingDeactivating slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocator shape=26 reverse=134
+            in event_token name=cookie
+    method create_attached_frame_of_reference_at_current_heading
+        method CreateAttachedFrameOfReferenceAtCurrentHeading slot=12 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=4 reverse=162
+            out class type=Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference return
+        method CreateAttachedFrameOfReferenceAtCurrentHeading slot=13 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            out class type=Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference return
+        method CreateAttachedFrameOfReferenceAtCurrentHeading slot=14 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=147
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=relativeOrientation
+            out class type=Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference return
+        method CreateAttachedFrameOfReferenceAtCurrentHeading slot=15 inputs=3 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=220
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=relativeOrientation
+            in double name=relativeHeadingInRadians
+            out class type=Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference return
+    method create_stationary_frame_of_reference_at_current_location
+        method CreateStationaryFrameOfReferenceAtCurrentLocation slot=16 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=4 reverse=202
+            out class type=Windows.Perception.Spatial.SpatialStationaryFrameOfReference return
+        method CreateStationaryFrameOfReferenceAtCurrentLocation slot=17 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            out class type=Windows.Perception.Spatial.SpatialStationaryFrameOfReference return
+        method CreateStationaryFrameOfReferenceAtCurrentLocation slot=18 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=147
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=relativeOrientation
+            out class type=Windows.Perception.Spatial.SpatialStationaryFrameOfReference return
+        method CreateStationaryFrameOfReferenceAtCurrentLocation slot=19 inputs=3 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=220
+            in struct type=Windows.Foundation.Numerics.Vector3 name=relativePosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=relativeOrientation
+            in double name=relativeHeadingInRadians
+            out class type=Windows.Perception.Spatial.SpatialStationaryFrameOfReference return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorStatics shape=4 reverse=22 static
+            out class type=Windows.Perception.Spatial.SpatialLocator return
+    method try_locate_at_timestamp
+        method TryLocateAtTimestamp slot=11 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=117 reverse=145
+            in class type=Windows.Perception.PerceptionTimestamp name=timestamp
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out class type=Windows.Perception.Spatial.SpatialLocation return
+
+class Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference python_type
+    py SpatialLocatorAttachedFrameOfReference
+    signature rc(Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference;{e1774ef6-1f4f-499c-9625-ef5e6ed7a048})
+    default Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference
+    requires Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference
+    property relative_position
+        get get_RelativePosition slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+        put put_RelativePosition slot=7 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=9
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+    property relative_orientation
+        get get_RelativeOrientation slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+        put put_RelativeOrientation slot=9 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=8 reverse=105
+            in struct type=Windows.Foundation.Numerics.Quaternion name=value
+    method adjust_heading
+        method AdjustHeading slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=2 reverse=119
+            in double name=headingOffsetInRadians
+    method get_stationary_coordinate_system_at_timestamp
+        method GetStationaryCoordinateSystemAtTimestamp slot=11 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=51 reverse=144
+            in class type=Windows.Perception.PerceptionTimestamp name=timestamp
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    method try_get_relative_heading_at_timestamp
+        method TryGetRelativeHeadingAtTimestamp slot=12 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorAttachedFrameOfReference shape=51 reverse=163
+            in class type=Windows.Perception.PerceptionTimestamp name=timestamp
+            out reference type=Windows.Foundation.IReference<System.Double> return
+
+class Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs python_type
+    py SpatialLocatorPositionalTrackingDeactivatingEventArgs
+    signature rc(Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs;{b8a84063-e3f4-368b-9061-9ea9d1d6cc16})
+    default Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs
+    requires Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs
+    property canceled
+        get get_Canceled slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Canceled slot=7 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocatorPositionalTrackingDeactivatingEventArgs shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.Perception.Spatial.SpatialLookDirectionRange python_type
+    py SpatialLookDirectionRange
+    signature enum(Windows.Perception.Spatial.SpatialLookDirectionRange;i4)
+
+enum Windows.Perception.Spatial.SpatialMovementRange python_type
+    py SpatialMovementRange
+    signature enum(Windows.Perception.Spatial.SpatialMovementRange;i4)
+
+enum Windows.Perception.Spatial.SpatialPerceptionAccessStatus python_type
+    py SpatialPerceptionAccessStatus
+    signature enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4)
+
+struct Windows.Perception.Spatial.SpatialRay python_type
+    py SpatialRay
+    signature struct(Windows.Perception.Spatial.SpatialRay;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4))
+    field origin Origin struct type=Windows.Foundation.Numerics.Vector3
+    field direction Direction struct type=Windows.Foundation.Numerics.Vector3
+
+class Windows.Perception.Spatial.SpatialStageFrameOfReference python_type
+    py SpatialStageFrameOfReference
+    signature rc(Windows.Perception.Spatial.SpatialStageFrameOfReference;{7a8a3464-ad0d-4590-ab86-33062b674926})
+    default Windows.Perception.Spatial.ISpatialStageFrameOfReference
+    requires Windows.Perception.Spatial.ISpatialStageFrameOfReference
+    factory Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics
+    property coordinate_system
+        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property look_direction_range
+        get get_LookDirectionRange slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=4 reverse=62
+            out enum32 type=Windows.Perception.Spatial.SpatialLookDirectionRange return
+    property movement_range
+        get get_MovementRange slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=4 reverse=43
+            out enum32 type=Windows.Perception.Spatial.SpatialMovementRange return
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=4 reverse=22 static
+            out class type=Windows.Perception.Spatial.SpatialStageFrameOfReference return
+    event current_changed static
+        add add_CurrentChanged slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_CurrentChanged slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=26 reverse=82 static
+            in event_token name=cookie
+    method get_coordinate_system_at_current_location
+        method GetCoordinateSystemAtCurrentLocation slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=51 reverse=100
+            in class type=Windows.Perception.Spatial.SpatialLocator name=locator
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    method request_new_stage_async static
+        method RequestNewStageAsync slot=9 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialStageFrameOfReference> return
+    method try_get_movement_bounds
+        method TryGetMovementBounds slot=10 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=117 reverse=125
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            receive_array struct type=Windows.Foundation.Numerics.Vector3 return
+
+class Windows.Perception.Spatial.SpatialStationaryFrameOfReference python_type
+    py SpatialStationaryFrameOfReference
+    signature rc(Windows.Perception.Spatial.SpatialStationaryFrameOfReference;{09dbccb9-bcf8-3e7f-be7e-7edccbb178a8})
+    default Windows.Perception.Spatial.ISpatialStationaryFrameOfReference
+    requires Windows.Perception.Spatial.ISpatialStationaryFrameOfReference
+    property coordinate_system
+        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStationaryFrameOfReference shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs> concrete
+    guid fa43f9e4-3558-59c8-9a77-6e8b765adcc8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialAnchor;{0529e5ce-1d34-3702-bcec-eabff578a869});rc(Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs;{a1e81eb8-56c7-3117-a2e4-81e0fcf28e00}))
+    argument Windows.Perception.Spatial.SpatialAnchor
+    argument Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,System.Object> concrete
+    guid 50171823-30a9-5938-9f3b-358d86169f2e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialEntityWatcher;{b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959});cinterface(IInspectable))
+    argument Windows.Perception.Spatial.SpatialEntityWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityAddedEventArgs> concrete
+    guid f8edae01-6a30-52cc-b543-8abdb26529b4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialEntityWatcher;{b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959});rc(Windows.Perception.Spatial.SpatialEntityAddedEventArgs;{a397f49b-156a-4707-ac2c-d31d570ed399}))
+    argument Windows.Perception.Spatial.SpatialEntityWatcher
+    argument Windows.Perception.Spatial.SpatialEntityAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityRemovedEventArgs> concrete
+    guid 36f982ad-eaa2-5263-861e-2acf030c9e17
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialEntityWatcher;{b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959});rc(Windows.Perception.Spatial.SpatialEntityRemovedEventArgs;{91741800-536d-4e9f-abf6-415b5444d651}))
+    argument Windows.Perception.Spatial.SpatialEntityWatcher
+    argument Windows.Perception.Spatial.SpatialEntityRemovedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs> concrete
+    guid a15fd0c0-8a0a-5a7d-897a-f206cc509190
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialEntityWatcher;{b3b85fa0-6d5e-4bbc-805d-5fe5b9ba1959});rc(Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs;{e5671766-627b-43cb-a49f-b3be6d47deed}))
+    argument Windows.Perception.Spatial.SpatialEntityWatcher
+    argument Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,System.Object> concrete
+    guid dbb08ab5-6b40-55fb-83d3-50d5373a3b20
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialLocator;{f6478925-9e0c-3bb6-997e-b64ecca24cf4});cinterface(IInspectable))
+    argument Windows.Perception.Spatial.SpatialLocator
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs> concrete
+    guid 34bf236c-e5d6-501f-8693-bc1d8d431d7e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.SpatialLocator;{f6478925-9e0c-3bb6-997e-b64ecca24cf4});rc(Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs;{b8a84063-e3f4-368b-9061-9ea9d1d6cc16}))
+    argument Windows.Perception.Spatial.SpatialLocator
+    argument Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+struct Windows.Foundation.Numerics.Matrix4x4 external
+    py winrt.windows.foundation.numerics.Matrix4x4
+
+struct Windows.Foundation.Numerics.Plane external
+    py winrt.windows.foundation.numerics.Plane
+
+struct Windows.Foundation.Numerics.Quaternion external
+    py winrt.windows.foundation.numerics.Quaternion
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+class Windows.Perception.PerceptionTimestamp external
+    py winrt.windows.perception.PerceptionTimestamp
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+class Windows.System.RemoteSystems.RemoteSystemSession external
+    py winrt.windows.system.remotesystems.RemoteSystemSession

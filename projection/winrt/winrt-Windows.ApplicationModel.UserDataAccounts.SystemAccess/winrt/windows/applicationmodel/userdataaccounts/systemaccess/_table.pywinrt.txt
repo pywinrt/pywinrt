@@ -1,0 +1,329 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserDataAccounts.SystemAccess
+
+enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType python_type
+    py DeviceAccountAuthenticationType
+    signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType;i4)
+
+class Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration activatable python_type
+    py DeviceAccountConfiguration
+    signature rc(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration;{ad0123a3-fbdc-4d1b-be43-5a27ea4a1b63})
+    default Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration
+    requires Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration
+    requires Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property email_address
+        get get_EmailAddress slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=162
+            out string return
+        put put_EmailAddress slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=173
+            in string name=value
+    property domain
+        get get_Domain slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=186
+            out string return
+        put put_Domain slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=194
+            in string name=value
+    property device_account_type_id
+        get get_DeviceAccountTypeId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=62
+            out string return
+        put put_DeviceAccountTypeId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=99
+            in string name=value
+    property outgoing_server_address
+        get get_OutgoingServerAddress slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=270
+            out string return
+        put put_OutgoingServerAddress slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=273
+            in string name=value
+    property contacts_sync_enabled
+        get get_ContactsSyncEnabled slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=218
+            out boolean return
+        put put_ContactsSyncEnabled slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=223
+            in boolean name=value
+    property calendar_sync_enabled
+        get get_CalendarSyncEnabled slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=228
+            out boolean return
+        put put_CalendarSyncEnabled slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=232
+            in boolean name=value
+    property account_name
+        get get_AccountName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=22
+            out string return
+        put put_AccountName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=43
+            in string name=value
+    property incoming_server_username
+        get get_IncomingServerUsername slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=263
+            out string return
+        put put_IncomingServerUsername slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=266
+            in string name=value
+    property incoming_server_requires_ssl
+        get get_IncomingServerRequiresSsl slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=255
+            out boolean return
+        put put_IncomingServerRequiresSsl slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=259
+            in boolean name=value
+    property incoming_server_port
+        get get_IncomingServerPort slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=247
+            out int32 return
+        put put_IncomingServerPort slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=252
+            in int32 name=value
+    property incoming_server_address
+        get get_IncomingServerAddress slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=237
+            out string return
+        put put_IncomingServerAddress slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=242
+            in string name=value
+    property email_sync_enabled
+        get get_EmailSyncEnabled slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=202
+            out boolean return
+        put put_EmailSyncEnabled slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=210
+            in boolean name=value
+    property server_type
+        get get_ServerType slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=121
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType return
+        put put_ServerType slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=141
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType name=value
+    property outgoing_server_username
+        get get_OutgoingServerUsername slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=296
+            out string return
+        put put_OutgoingServerUsername slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=299
+            in string name=value
+    property outgoing_server_requires_ssl
+        get get_OutgoingServerRequiresSsl slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=288
+            out boolean return
+        put put_OutgoingServerRequiresSsl slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=292
+            in boolean name=value
+    property outgoing_server_port
+        get get_OutgoingServerPort slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=280
+            out int32 return
+        put put_OutgoingServerPort slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration shape=4 reverse=285
+            in int32 name=value
+    property account_icon_id
+        get get_AccountIconId slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId return
+        put put_AccountIconId slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId name=value
+    property cal_dav_server_url
+        get get_CalDavServerUrl slot=42 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=319
+            out class type=Windows.Foundation.Uri return
+        put put_CalDavServerUrl slot=43 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=322
+            in class type=Windows.Foundation.Uri name=value
+    property cal_dav_requires_ssl
+        get get_CalDavRequiresSsl slot=44 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=326
+            out boolean return
+        put put_CalDavRequiresSsl slot=45 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=330
+            in boolean name=value
+    property auto_select_authentication_certificate
+        get get_AutoSelectAuthenticationCertificate slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=270
+            out boolean return
+        put put_AutoSelectAuthenticationCertificate slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=273
+            in boolean name=value
+    property authentication_type
+        get get_AuthenticationType slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType return
+        put put_AuthenticationType slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=210
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType name=value
+    property authentication_certificate_id
+        get get_AuthenticationCertificateId slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=280
+            out string return
+        put put_AuthenticationCertificateId slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=285
+            in string name=value
+    property is_outgoing_server_authentication_enabled
+        get get_IsOutgoingServerAuthenticationEnabled slot=54 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=368
+            out boolean return
+        put put_IsOutgoingServerAuthenticationEnabled slot=55 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=440
+            in boolean name=value
+    property is_client_authentication_certificate_required
+        get get_IsClientAuthenticationCertificateRequired slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=263
+            out boolean return
+        put put_IsClientAuthenticationCertificateRequired slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=266
+            in boolean name=value
+    property incoming_server_credential
+        get get_IncomingServerCredential slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_IncomingServerCredential slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=43
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property is_outgoing_server_authentication_required
+        get get_IsOutgoingServerAuthenticationRequired slot=52 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=359
+            out boolean return
+        put put_IsOutgoingServerAuthenticationRequired slot=53 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=363
+            in boolean name=value
+    property card_dav_sync_schedule_kind
+        get get_CardDavSyncScheduleKind slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=288
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind return
+        put put_CardDavSyncScheduleKind slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=292
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind name=value
+    property always_download_full_message
+        get get_AlwaysDownloadFullMessage slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=232
+            out boolean return
+        put put_AlwaysDownloadFullMessage slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=237
+            in boolean name=value
+    property card_dav_server_url
+        get get_CardDavServerUrl slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=302
+            out class type=Windows.Foundation.Uri return
+        put put_CardDavServerUrl slot=39 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=307
+            in class type=Windows.Foundation.Uri name=value
+    property card_dav_requires_ssl
+        get get_CardDavRequiresSsl slot=40 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=312
+            out boolean return
+        put put_CardDavRequiresSsl slot=41 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=316
+            in boolean name=value
+    property cal_dav_sync_schedule_kind
+        get get_CalDavSyncScheduleKind slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=296
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind return
+        put put_CalDavSyncScheduleKind slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=299
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind name=value
+    property incoming_server_certificate_hash
+        get get_IncomingServerCertificateHash slot=50 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=351
+            out string return
+        put put_IncomingServerCertificateHash slot=51 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=355
+            in string name=value
+    property was_outgoing_server_certificate_hash_confirmed
+        get get_WasOutgoingServerCertificateHashConfirmed slot=56 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=441
+            out boolean return
+        put put_WasOutgoingServerCertificateHashConfirmed slot=57 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=442
+            in boolean name=value
+    property was_modified_by_user
+        get get_WasModifiedByUser slot=46 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=334
+            out boolean return
+        put put_WasModifiedByUser slot=47 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=339
+            in boolean name=value
+    property sync_schedule_kind
+        get get_SyncScheduleKind slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=247
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind return
+        put put_SyncScheduleKind slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=252
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind name=value
+    property sso_account_id
+        get get_SsoAccountId slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=223
+            out string return
+        put put_SsoAccountId slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=228
+            in string name=value
+    property was_incoming_server_certificate_hash_confirmed
+        get get_WasIncomingServerCertificateHashConfirmed slot=48 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=343
+            out boolean return
+        put put_WasIncomingServerCertificateHashConfirmed slot=49 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=347
+            in boolean name=value
+    property o_auth_refresh_token
+        get get_OAuthRefreshToken slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=121
+            out string return
+        put put_OAuthRefreshToken slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=141
+            in string name=value
+    property is_externally_managed
+        get get_IsExternallyManaged slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=162
+            out boolean return
+        put put_IsExternallyManaged slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=173
+            in boolean name=value
+    property mail_age_filter
+        get get_MailAgeFilter slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=255
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter return
+        put put_MailAgeFilter slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=259
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter name=value
+    property is_sync_schedule_managed_by_system
+        get get_IsSyncScheduleManagedBySystem slot=60 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=445
+            out boolean return
+        put put_IsSyncScheduleManagedBySystem slot=61 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=446
+            in boolean name=value
+    property outgoing_server_certificate_hash
+        get get_OutgoingServerCertificateHash slot=58 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=443
+            out string return
+        put put_OutgoingServerCertificateHash slot=59 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=444
+            in string name=value
+    property outgoing_server_credential
+        get get_OutgoingServerCredential slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_OutgoingServerCredential slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property does_policy_allow_mail_sync
+        get get_DoesPolicyAllowMailSync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=242
+            out boolean return
+    property is_sso_authentication_supported
+        get get_IsSsoAuthenticationSupported slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2 shape=4 reverse=218
+            out boolean return
+
+enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId python_type
+    py DeviceAccountIconId
+    signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId;i4)
+
+enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter python_type
+    py DeviceAccountMailAgeFilter
+    signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter;i4)
+
+enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType python_type
+    py DeviceAccountServerType
+    signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType;i4)
+
+enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind python_type
+    py DeviceAccountSyncScheduleKind
+    signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration> concrete
+    guid 469859f3-6b7b-5399-8a8c-fe615b95ae07
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration;{ad0123a3-fbdc-4d1b-be43-5a27ea4a1b63}))
+    argument Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration
+    guid ad0123a3-fbdc-4d1b-be43-5a27ea4a1b63
+
+interface Windows.ApplicationModel.UserDataAccounts.SystemAccess.IDeviceAccountConfiguration2
+    guid f2b2e5a6-728d-4a4a-8945-2bf8580136de
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration> concrete
+    guid a9c3ea6e-9dd9-52fe-9d27-f9e4dedd4d3f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration;{ad0123a3-fbdc-4d1b-be43-5a27ea4a1b63}))
+    argument Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration
+
+interface Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics
+    guid 9d6b11b9-cbe5-45f5-822b-c267b81dbdb6
+
+interface Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2
+    guid 943f854d-4b4e-439f-83d3-979b27c05ac7
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.ApplicationModel.UserDataAccounts.SystemAccess.UserDataAccountSystemAccessManager static python_type
+    py UserDataAccountSystemAccessManager
+    factory Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics
+    factory Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2
+    method add_and_show_device_accounts_async static
+        method AddAndShowDeviceAccountsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration> name=accounts
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method create_device_account_async static
+        method CreateDeviceAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 shape=51 reverse=44 static
+            in class type=Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration name=account
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method delete_device_account_async static
+        method DeleteDeviceAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 shape=51 reverse=65 static
+            in string name=accountId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_device_account_configuration_async static
+        method GetDeviceAccountConfigurationAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 shape=51 reverse=100 static
+            in string name=accountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration> return
+    method suppress_local_account_with_account_async static
+        method SuppressLocalAccountWithAccountAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.SystemAccess.IUserDataAccountSystemAccessManagerStatics2 shape=51 reverse=24 static
+            in string name=userDataAccountId
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential

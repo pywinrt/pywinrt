@@ -1,0 +1,11 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Automation.Text
+
+enum Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint python_type
+    py TextPatternRangeEndpoint
+    signature enum(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint;i4)
+
+enum Microsoft.UI.Xaml.Automation.Text.TextUnit python_type
+    py TextUnit
+    signature enum(Microsoft.UI.Xaml.Automation.Text.TextUnit;i4)

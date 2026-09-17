@@ -1,0 +1,203 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Services.Maps.LocalSearch
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.LocalSearch.LocalLocationFinderResult> concrete
+    guid 08e69b32-f420-5280-a721-075b4fd03d94
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Maps.LocalSearch.LocalLocationFinderResult;{d09b6cc6-f338-4191-9fd8-5440b9a68f52}))
+    argument Windows.Services.Maps.LocalSearch.LocalLocationFinderResult
+
+interface Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics
+    guid f49399f5-8261-4321-9974-ef92d49a8dca
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocation
+    guid bb0fe9ab-4502-4f2c-94a9-0d60de0e2163
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocation2
+    guid 6e9e307c-ecb5-4ffc-bb8c-ba50ba8c2dc6
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult
+    guid d09b6cc6-f338-4191-9fd8-5440b9a68f52
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics
+    guid d2ef7344-a0de-48ca-81a8-07c7dcfd37ab
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem
+    guid 23548c72-a1c7-43f1-a4f0-1091c39ec640
+
+interface Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo
+    guid cb1dab56-3354-4311-8bc0-a2d4d5eb806e
+
+interface Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics
+    guid dd1ca9a7-a9c6-491b-bc09-e80fcea48ee6
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> concrete
+    guid 619192f2-4f9d-5629-ab01-b18512503d73
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.LocalSearch.LocalLocation;{bb0fe9ab-4502-4f2c-94a9-0d60de0e2163}))
+    argument Windows.Services.Maps.LocalSearch.LocalLocation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> concrete
+    guid 65535172-cd91-5b4c-aa60-dab146301284
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem;{23548c72-a1c7-43f1-a4f0-1091c39ec640}))
+    argument Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem
+
+class Windows.Services.Maps.LocalSearch.LocalCategories static python_type
+    py LocalCategories
+    factory Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics
+    property all static
+        get get_All slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=121 static
+            out string return
+    property bank_and_credit_unions static
+        get get_BankAndCreditUnions slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=22 static
+            out string return
+    property eat_drink static
+        get get_EatDrink slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=43 static
+            out string return
+    property hospitals static
+        get get_Hospitals slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=62 static
+            out string return
+    property hotels_and_motels static
+        get get_HotelsAndMotels slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=99 static
+            out string return
+    property parking static
+        get get_Parking slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=141 static
+            out string return
+    property see_do static
+        get get_SeeDo slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=162 static
+            out string return
+    property shop static
+        get get_Shop slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=173 static
+            out string return
+
+class Windows.Services.Maps.LocalSearch.LocalLocation python_type
+    py LocalLocation
+    signature rc(Windows.Services.Maps.LocalSearch.LocalLocation;{bb0fe9ab-4502-4f2c-94a9-0d60de0e2163})
+    default Windows.Services.Maps.LocalSearch.ILocalLocation
+    requires Windows.Services.Maps.LocalSearch.ILocalLocation
+    requires Windows.Services.Maps.LocalSearch.ILocalLocation2
+    property address
+        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=22
+            out class type=Windows.Services.Maps.MapAddress return
+    property data_attribution
+        get get_DataAttribution slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=162
+            out string return
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=62
+            out string return
+    property display_name
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=99
+            out string return
+    property identifier
+        get get_Identifier slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=43
+            out string return
+    property phone_number
+        get get_PhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=141
+            out string return
+    property point
+        get get_Point slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=121
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property category
+        get get_Category slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=22
+            out string return
+    property hours_of_operation
+        get get_HoursOfOperation slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> return
+    property rating_info
+        get get_RatingInfo slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=43
+            out class type=Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo return
+
+class Windows.Services.Maps.LocalSearch.LocalLocationFinder static python_type
+    py LocalLocationFinder
+    factory Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics
+    method find_local_locations_async static
+        method FindLocalLocationsAsync slot=6 inputs=4 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics shape=239 reverse=27 static
+            in string name=searchTerm
+            in class type=Windows.Devices.Geolocation.Geocircle name=searchArea
+            in string name=localCategory
+            in uint32 name=maxResults
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.LocalSearch.LocalLocationFinderResult> return
+
+class Windows.Services.Maps.LocalSearch.LocalLocationFinderResult python_type
+    py LocalLocationFinderResult
+    signature rc(Windows.Services.Maps.LocalSearch.LocalLocationFinderResult;{d09b6cc6-f338-4191-9fd8-5440b9a68f52})
+    default Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult
+    requires Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult
+    property local_locations
+        get get_LocalLocations slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus return
+
+enum Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus python_type
+    py LocalLocationFinderStatus
+    signature enum(Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus;i4)
+
+class Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem python_type
+    py LocalLocationHoursOfOperationItem
+    signature rc(Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem;{23548c72-a1c7-43f1-a4f0-1091c39ec640})
+    default Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem
+    requires Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem
+    property day
+        get get_Day slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=22
+            out enum32 type=Windows.Globalization.DayOfWeek return
+    property span
+        get get_Span slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=62
+            out timespan return
+    property start
+        get get_Start slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=43
+            out timespan return
+
+class Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo python_type
+    py LocalLocationRatingInfo
+    signature rc(Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo;{cb1dab56-3354-4311-8bc0-a2d4d5eb806e})
+    default Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo
+    requires Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo
+    property aggregate_rating
+        get get_AggregateRating slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property provider_identifier
+        get get_ProviderIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=62
+            out string return
+    property rating_count
+        get get_RatingCount slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+
+class Windows.Services.Maps.LocalSearch.PlaceInfoHelper static python_type
+    py PlaceInfoHelper
+    factory Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics
+    method create_from_local_location static
+        method CreateFromLocalLocation slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics shape=51 reverse=24 static
+            in class type=Windows.Services.Maps.LocalSearch.LocalLocation name=location
+            out class type=Windows.Services.Maps.PlaceInfo return
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class Windows.Devices.Geolocation.Geocircle external
+    py winrt.windows.devices.geolocation.Geocircle
+
+class Windows.Devices.Geolocation.Geopoint external
+    py winrt.windows.devices.geolocation.Geopoint
+
+enum Windows.Globalization.DayOfWeek external
+    py winrt.windows.globalization.DayOfWeek
+
+class Windows.Services.Maps.MapAddress external
+    py winrt.windows.services.maps.MapAddress
+
+class Windows.Services.Maps.PlaceInfo external
+    py winrt.windows.services.maps.PlaceInfo

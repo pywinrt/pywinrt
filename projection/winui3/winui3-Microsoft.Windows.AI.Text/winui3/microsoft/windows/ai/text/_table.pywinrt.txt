@@ -1,0 +1,233 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.AI.Text
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> concrete
+    guid 172f62b5-1d49-535f-8c07-4ddd02066f36
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Text.LanguageModel;{6331c629-8c86-5bfe-8c4e-9ca5573cc14b}))
+    argument Microsoft.Windows.AI.Text.LanguageModel
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    guid 39c32af0-c9b4-595f-9e9b-c6c289ad9ea1
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> concrete
+    guid 5aec37a6-a5fa-5c0d-9da7-7614e0b4ed76
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e});string)
+    argument Microsoft.Windows.AI.Text.LanguageModelResponseResult
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> concrete
+    guid cff503d4-0ecb-5924-acbf-796ca6c7d373
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98});string)
+    argument Microsoft.Windows.AI.Text.TextToTableResponseResult
+    argument System.String
+
+interface Microsoft.Windows.AI.Text.ILanguageModel
+    guid 6331c629-8c86-5bfe-8c4e-9ca5573cc14b
+
+interface Microsoft.Windows.AI.Text.ILanguageModelContext
+    guid 518b305c-7b69-5a33-8129-d47d6b8eec4e
+
+interface Microsoft.Windows.AI.Text.ILanguageModelOptions
+    guid 7f380003-5a09-5f1f-afb0-aa483e3670cc
+
+interface Microsoft.Windows.AI.Text.ILanguageModelResponseResult
+    guid 3a256fff-a426-5d3b-8e4b-3ac84162471e
+
+interface Microsoft.Windows.AI.Text.ILanguageModelStatics
+    guid 8f18f9af-6095-553b-8d9d-6bcc98026546
+
+interface Microsoft.Windows.AI.Text.ITextRewriter
+    guid eb1e7cf0-e110-506c-b0ea-7a288d8e7778
+
+interface Microsoft.Windows.AI.Text.ITextRewriterFactory
+    guid f452e60d-ef50-5bc9-b483-217d5b4e7151
+
+interface Microsoft.Windows.AI.Text.ITextSummarizer
+    guid eef548c5-d7bc-50be-a8ab-29e241b78bd1
+
+interface Microsoft.Windows.AI.Text.ITextSummarizerFactory
+    guid b6a75913-4a1e-59e7-856a-ae7ab2383864
+
+interface Microsoft.Windows.AI.Text.ITextToTableConverter
+    guid a008d9ad-25ce-5a6b-9ceb-d8e95d04e10b
+
+interface Microsoft.Windows.AI.Text.ITextToTableConverterFactory
+    guid bb84cbb5-19c8-5857-b65d-705aa1486404
+
+interface Microsoft.Windows.AI.Text.ITextToTableResponseResult
+    guid 391fbf11-59cd-575d-834a-9ef823116f98
+
+interface Microsoft.Windows.AI.Text.ITextToTableRow
+    guid 036294fe-e53c-5e66-93d2-7c92338db881
+
+class Microsoft.Windows.AI.Text.LanguageModel python_type closeable
+    py LanguageModel
+    signature rc(Microsoft.Windows.AI.Text.LanguageModel;{6331c629-8c86-5bfe-8c4e-9ca5573cc14b})
+    default Microsoft.Windows.AI.Text.ILanguageModel
+    requires Microsoft.Windows.AI.Text.ILanguageModel
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Text.ILanguageModelStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+
+class Microsoft.Windows.AI.Text.LanguageModelContext python_type closeable
+    py LanguageModelContext
+    signature rc(Microsoft.Windows.AI.Text.LanguageModelContext;{518b305c-7b69-5a33-8129-d47d6b8eec4e})
+    default Microsoft.Windows.AI.Text.ILanguageModelContext
+    requires Microsoft.Windows.AI.Text.ILanguageModelContext
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Microsoft.Windows.AI.Text.LanguageModelOptions activatable python_type
+    py LanguageModelOptions
+    signature rc(Microsoft.Windows.AI.Text.LanguageModelOptions;{7f380003-5a09-5f1f-afb0-aa483e3670cc})
+    default Microsoft.Windows.AI.Text.ILanguageModelOptions
+    requires Microsoft.Windows.AI.Text.ILanguageModelOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property top_p
+        get get_TopP slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=62
+            out single return
+        put put_TopP slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=1 reverse=94
+            in single name=value
+    property top_k
+        get get_TopK slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=121
+            out uint32 return
+        put put_TopK slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=141
+            in uint32 name=value
+    property temperature
+        get get_Temperature slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=22
+            out single return
+        put put_Temperature slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=1
+            in single name=value
+    property content_filter_options
+        get get_ContentFilterOptions slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=162
+            out class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions return
+        put put_ContentFilterOptions slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=173
+            in class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions name=value
+
+class Microsoft.Windows.AI.Text.LanguageModelResponseResult python_type
+    py LanguageModelResponseResult
+    signature rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e})
+    default Microsoft.Windows.AI.Text.ILanguageModelResponseResult
+    requires Microsoft.Windows.AI.Text.ILanguageModelResponseResult
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=62
+            out hresult return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=43
+            out enum32 type=Microsoft.Windows.AI.Text.LanguageModelResponseStatus return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=22
+            out string return
+
+enum Microsoft.Windows.AI.Text.LanguageModelResponseStatus python_type
+    py LanguageModelResponseStatus
+    signature enum(Microsoft.Windows.AI.Text.LanguageModelResponseStatus;i4)
+
+class Microsoft.Windows.AI.Text.TextRewriter python_type
+    py TextRewriter
+    signature rc(Microsoft.Windows.AI.Text.TextRewriter;{eb1e7cf0-e110-506c-b0ea-7a288d8e7778})
+    default Microsoft.Windows.AI.Text.ITextRewriter
+    requires Microsoft.Windows.AI.Text.ITextRewriter
+    factory Microsoft.Windows.AI.Text.ITextRewriterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriterFactory shape=51 reverse=24
+            in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
+            out class type=Microsoft.Windows.AI.Text.TextRewriter return
+    method rewrite_async
+        method RewriteAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriter shape=51 reverse=24
+            in string name=text
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
+
+class Microsoft.Windows.AI.Text.TextSummarizer python_type
+    py TextSummarizer
+    signature rc(Microsoft.Windows.AI.Text.TextSummarizer;{eef548c5-d7bc-50be-a8ab-29e241b78bd1})
+    default Microsoft.Windows.AI.Text.ITextSummarizer
+    requires Microsoft.Windows.AI.Text.ITextSummarizer
+    factory Microsoft.Windows.AI.Text.ITextSummarizerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizerFactory shape=51 reverse=24
+            in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
+            out class type=Microsoft.Windows.AI.Text.TextSummarizer return
+    method summarize_async
+        method SummarizeAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51 reverse=24
+            in string name=text
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
+    method summarize_paragraph_async
+        method SummarizeParagraphAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51 reverse=44
+            in string name=text
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
+
+class Microsoft.Windows.AI.Text.TextToTableConverter python_type
+    py TextToTableConverter
+    signature rc(Microsoft.Windows.AI.Text.TextToTableConverter;{a008d9ad-25ce-5a6b-9ceb-d8e95d04e10b})
+    default Microsoft.Windows.AI.Text.ITextToTableConverter
+    requires Microsoft.Windows.AI.Text.ITextToTableConverter
+    factory Microsoft.Windows.AI.Text.ITextToTableConverterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverterFactory shape=51 reverse=24
+            in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
+            out class type=Microsoft.Windows.AI.Text.TextToTableConverter return
+    method convert_async
+        method ConvertAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverter shape=51 reverse=24
+            in string name=text
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> return
+
+class Microsoft.Windows.AI.Text.TextToTableResponseResult python_type
+    py TextToTableResponseResult
+    signature rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98})
+    default Microsoft.Windows.AI.Text.ITextToTableResponseResult
+    requires Microsoft.Windows.AI.Text.ITextToTableResponseResult
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4 reverse=62
+            out hresult return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4 reverse=43
+            out enum32 type=Microsoft.Windows.AI.Text.LanguageModelResponseStatus return
+    method get_rows
+        method GetRows slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=51 reverse=24
+            receive_array class type=Microsoft.Windows.AI.Text.TextToTableRow return
+
+class Microsoft.Windows.AI.Text.TextToTableRow python_type
+    py TextToTableRow
+    signature rc(Microsoft.Windows.AI.Text.TextToTableRow;{036294fe-e53c-5e66-93d2-7c92338db881})
+    default Microsoft.Windows.AI.Text.ITextToTableRow
+    requires Microsoft.Windows.AI.Text.ITextToTableRow
+    method get_columns
+        method GetColumns slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableRow shape=51 reverse=24
+            receive_array string return
+
+class Microsoft.Windows.AI.AIFeatureReadyResult external
+    py winui3.microsoft.windows.ai.AIFeatureReadyResult
+
+enum Microsoft.Windows.AI.AIFeatureReadyState external
+    py winui3.microsoft.windows.ai.AIFeatureReadyState
+
+class Microsoft.Windows.AI.ContentSafety.ContentFilterOptions external
+    py winui3.microsoft.windows.ai.contentsafety.ContentFilterOptions
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e

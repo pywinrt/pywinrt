@@ -260,8 +260,6 @@ static partial class StringExtensions
     /// <summary>
     /// Converts a WinRT dotted namespace to a C++- :: namespace.
     /// </summary>
-    public static string ToCppNamespace(this string ns) => ns.Replace(".", "::");
-
     /// <summary>
     /// Strips generic bits from type names (e.g '1)
     /// </summary>

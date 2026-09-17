@@ -1,0 +1,317 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Core.Direct
+
+interface Windows.UI.Xaml.Core.Direct.IXamlDirect
+    guid 5ffa1295-add2-590f-a051-70989b866ade
+
+interface Windows.UI.Xaml.Core.Direct.IXamlDirectObject python_type
+    py _IXamlDirectObject
+    guid 10614a82-cee4-4645-ba25-d071ce778355
+    signature {10614a82-cee4-4645-ba25-d071ce778355}
+
+interface Windows.UI.Xaml.Core.Direct.IXamlDirectStatics
+    guid 321887cc-14e4-5c6f-878d-fbb604ad7d17
+
+class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
+    py XamlDirect
+    signature rc(Windows.UI.Xaml.Core.Direct.XamlDirect;{5ffa1295-add2-590f-a051-70989b866ade})
+    default Windows.UI.Xaml.Core.Direct.IXamlDirect
+    requires Windows.UI.Xaml.Core.Direct.IXamlDirect
+    factory Windows.UI.Xaml.Core.Direct.IXamlDirectStatics
+    method add_event_handler
+        method AddEventHandler slot=55 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 default_overload
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlEventIndex name=eventIndex
+            in object name=handler
+        method AddEventHandler slot=56 inputs=4 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=195
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlEventIndex name=eventIndex
+            in object name=handler
+            in boolean name=handledEventsToo
+    method add_to_collection
+        method AddToCollection slot=50 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=352
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
+    method clear_collection
+        method ClearCollection slot=54 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=4 reverse=368
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+    method clear_property
+        method ClearProperty slot=47 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=340
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+    method create_instance
+        method CreateInstance slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=65
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlTypeIndex name=typeIndex
+            out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
+    method get_boolean_property
+        method GetBooleanProperty slot=30 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out boolean return
+    method get_collection_count
+        method GetCollectionCount slot=48 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=344
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            out uint32 return
+    method get_color_property
+        method GetColorProperty slot=39 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=309
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Color return
+    method get_corner_radius_property
+        method GetCornerRadiusProperty slot=40 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.CornerRadius return
+    method get_date_time_property
+        method GetDateTimeProperty slot=34 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out datetime return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirectStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Core.Direct.XamlDirect return
+    method get_double_property
+        method GetDoubleProperty slot=31 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=275
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out double return
+    method get_duration_property
+        method GetDurationProperty slot=41 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.Duration return
+    method get_enum_property
+        method GetEnumProperty slot=46 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=336
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out uint32 return
+    method get_grid_length_property
+        method GetGridLengthProperty slot=42 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.GridLength return
+    method get_int32_property
+        method GetInt32Property slot=32 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=282
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out int32 return
+    method get_matrix_3d_property
+        method GetMatrix3DProperty slot=45 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.Media.Media3D.Matrix3D return
+    method get_matrix_property
+        method GetMatrixProperty slot=44 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.Media.Matrix return
+    method get_object
+        method GetObject slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=24
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            out object return
+    method get_object_property
+        method GetObjectProperty slot=28 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out object return
+    method get_point_property
+        method GetPointProperty slot=35 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.Foundation.Point return
+    method get_rect_property
+        method GetRectProperty slot=36 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.Foundation.Rect return
+    method get_size_property
+        method GetSizeProperty slot=37 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.Foundation.Size return
+    method get_string_property
+        method GetStringProperty slot=33 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out string return
+    method get_thickness_property
+        method GetThicknessProperty slot=43 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out struct type=Windows.UI.Xaml.Thickness return
+    method get_time_span_property
+        method GetTimeSpanProperty slot=38 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out timespan return
+    method get_xaml_direct_object
+        method GetXamlDirectObject slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=44
+            in object name=object
+            out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
+    method get_xaml_direct_object_from_collection_at
+        method GetXamlDirectObjectFromCollectionAt slot=49 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in uint32 name=index
+            out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
+    method get_xaml_direct_object_property
+        method GetXamlDirectObjectProperty slot=29 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
+    method insert_into_collection_at
+        method InsertIntoCollectionAt slot=51 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in uint32 name=index
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
+    method remove_event_handler
+        method RemoveEventHandler slot=57 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=376
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlEventIndex name=eventIndex
+            in object name=handler
+    method remove_from_collection
+        method RemoveFromCollection slot=52 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=361
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
+            out boolean return
+    method remove_from_collection_at
+        method RemoveFromCollectionAt slot=53 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=365
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in uint32 name=index
+    method set_boolean_property
+        method SetBooleanProperty slot=11 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=145
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in boolean name=value
+    method set_color_property
+        method SetColorProperty slot=20 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=126
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Color name=value
+    method set_corner_radius_property
+        method SetCornerRadiusProperty slot=21 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=122
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.CornerRadius name=value
+    method set_date_time_property
+        method SetDateTimeProperty slot=15 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=125
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in datetime name=value
+    method set_double_property
+        method SetDoubleProperty slot=12 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=115
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in double name=value
+    method set_duration_property
+        method SetDurationProperty slot=22 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=124
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.Duration name=value
+    method set_enum_property
+        method SetEnumProperty slot=27 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=261
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in uint32 name=value
+    method set_grid_length_property
+        method SetGridLengthProperty slot=23 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=123
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.GridLength name=value
+    method set_int32_property
+        method SetInt32Property slot=13 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=175
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in int32 name=value
+    method set_matrix_3d_property
+        method SetMatrix3DProperty slot=26 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=120
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.Media.Media3D.Matrix3D name=value
+    method set_matrix_property
+        method SetMatrixProperty slot=25 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=121
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.Media.Matrix name=value
+    method set_object_property
+        method SetObjectProperty slot=9 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=101
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in object name=value
+    method set_point_property
+        method SetPointProperty slot=16 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=119
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.Foundation.Point name=value
+    method set_rect_property
+        method SetRectProperty slot=17 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=118
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.Foundation.Rect name=value
+    method set_size_property
+        method SetSizeProperty slot=18 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=119
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.Foundation.Size name=value
+    method set_string_property
+        method SetStringProperty slot=14 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=188
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in string name=value
+    method set_thickness_property
+        method SetThicknessProperty slot=24 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=122
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in struct type=Windows.UI.Xaml.Thickness name=value
+    method set_time_span_property
+        method SetTimeSpanProperty slot=19 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=125
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in timespan name=value
+    method set_xaml_direct_object_property
+        method SetXamlDirectObjectProperty slot=10 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=125
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
+            in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
+            in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
+
+enum Windows.UI.Xaml.Core.Direct.XamlEventIndex python_type
+    py XamlEventIndex
+    signature enum(Windows.UI.Xaml.Core.Direct.XamlEventIndex;i4)
+
+enum Windows.UI.Xaml.Core.Direct.XamlPropertyIndex python_type
+    py XamlPropertyIndex
+    signature enum(Windows.UI.Xaml.Core.Direct.XamlPropertyIndex;i4)
+
+enum Windows.UI.Xaml.Core.Direct.XamlTypeIndex python_type
+    py XamlTypeIndex
+    signature enum(Windows.UI.Xaml.Core.Direct.XamlTypeIndex;i4)
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+struct Windows.UI.Xaml.CornerRadius external
+    py winrt.windows.ui.xaml.CornerRadius
+
+struct Windows.UI.Xaml.Duration external
+    py winrt.windows.ui.xaml.Duration
+
+struct Windows.UI.Xaml.GridLength external
+    py winrt.windows.ui.xaml.GridLength
+
+struct Windows.UI.Xaml.Thickness external
+    py winrt.windows.ui.xaml.Thickness
+
+struct Windows.UI.Xaml.Media.Matrix external
+    py winrt.windows.ui.xaml.media.Matrix
+
+struct Windows.UI.Xaml.Media.Media3D.Matrix3D external
+    py winrt.windows.ui.xaml.media.media3d.Matrix3D

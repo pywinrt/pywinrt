@@ -1,0 +1,1876 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Email
+
+class Windows.ApplicationModel.Email.EmailAttachment activatable python_type
+    py EmailAttachment
+    signature rc(Windows.ApplicationModel.Email.EmailAttachment;{f353caf9-57c8-4adb-b992-60fceb584f54})
+    default Windows.ApplicationModel.Email.IEmailAttachment
+    requires Windows.ApplicationModel.Email.IEmailAttachment
+    requires Windows.ApplicationModel.Email.IEmailAttachment2
+    factory Windows.ApplicationModel.Email.IEmailAttachmentFactory2
+    factory Windows.ApplicationModel.Email.IEmailAttachmentFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
+            in string name=fileName implicit
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=data implicit
+            in string name=mimeType implicit
+            out class type=Windows.ApplicationModel.Email.EmailAttachment return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
+            in string name=fileName
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=data
+            in string name=mimeType implicit
+            out class type=Windows.ApplicationModel.Email.EmailAttachment return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
+            in string name=fileName
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=data
+            in string name=mimeType
+            out class type=Windows.ApplicationModel.Email.EmailAttachment return
+    property file_name
+        get get_FileName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment shape=4 reverse=22
+            out string return
+        put put_FileName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment shape=4 reverse=43
+            in string name=value
+    property data
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Data slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property mime_type
+        get get_MimeType slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=218
+            out string return
+        put put_MimeType slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=223
+            in string name=value
+    property is_inline
+        get get_IsInline slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=202
+            out boolean return
+        put put_IsInline slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=210
+            in boolean name=value
+    property estimated_download_size_in_bytes
+        get get_EstimatedDownloadSizeInBytes slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=173
+            out uint64 return
+        put put_EstimatedDownloadSizeInBytes slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=3
+            in uint64 name=value
+    property download_state
+        get get_DownloadState slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=141
+            out enum32 type=Windows.ApplicationModel.Email.EmailAttachmentDownloadState return
+        put put_DownloadState slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=162
+            in enum32 type=Windows.ApplicationModel.Email.EmailAttachmentDownloadState name=value
+    property content_location
+        get get_ContentLocation slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=99
+            out string return
+        put put_ContentLocation slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=121
+            in string name=value
+    property content_id
+        get get_ContentId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=43
+            out string return
+        put put_ContentId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=62
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=22
+            out string return
+    property is_from_base_message
+        get get_IsFromBaseMessage slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachment2 shape=4 reverse=194
+            out boolean return
+
+enum Windows.ApplicationModel.Email.EmailAttachmentDownloadState python_type
+    py EmailAttachmentDownloadState
+    signature enum(Windows.ApplicationModel.Email.EmailAttachmentDownloadState;i4)
+
+enum Windows.ApplicationModel.Email.EmailBatchStatus python_type
+    py EmailBatchStatus
+    signature enum(Windows.ApplicationModel.Email.EmailBatchStatus;i4)
+
+enum Windows.ApplicationModel.Email.EmailCertificateValidationStatus python_type
+    py EmailCertificateValidationStatus
+    signature enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4)
+
+class Windows.ApplicationModel.Email.EmailConversation python_type
+    py EmailConversation
+    signature rc(Windows.ApplicationModel.Email.EmailConversation;{da18c248-a0bc-4349-902d-90f66389f51b})
+    default Windows.ApplicationModel.Email.IEmailConversation
+    requires Windows.ApplicationModel.Email.IEmailConversation
+    property flag_state
+        get get_FlagState slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Email.EmailFlagState return
+    property has_attachment
+        get get_HasAttachment slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=99
+            out boolean return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=22
+            out string return
+    property importance
+        get get_Importance slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=121
+            out enum32 type=Windows.ApplicationModel.Email.EmailImportance return
+    property last_email_response_kind
+        get get_LastEmailResponseKind slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=141
+            out enum32 type=Windows.ApplicationModel.Email.EmailMessageResponseKind return
+    property latest_sender
+        get get_LatestSender slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=202
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+    property mailbox_id
+        get get_MailboxId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=43
+            out string return
+    property message_count
+        get get_MessageCount slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=162
+            out uint32 return
+    property most_recent_message_id
+        get get_MostRecentMessageId slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=173
+            out string return
+    property most_recent_message_time
+        get get_MostRecentMessageTime slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=186
+            out datetime return
+    property preview
+        get get_Preview slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=194
+            out string return
+    property subject
+        get get_Subject slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=210
+            out string return
+    property unread_message_count
+        get get_UnreadMessageCount slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=218
+            out uint32 return
+    method find_messages_async
+        method FindMessagesAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=4 reverse=223
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage>> return
+        method FindMessagesAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversation shape=51 reverse=229
+            in uint32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage>> return
+
+class Windows.ApplicationModel.Email.EmailConversationBatch python_type
+    py EmailConversationBatch
+    signature rc(Windows.ApplicationModel.Email.EmailConversationBatch;{b8c1ab81-01c5-432a-9df1-fe85d98a279a})
+    default Windows.ApplicationModel.Email.IEmailConversationBatch
+    requires Windows.ApplicationModel.Email.IEmailConversationBatch
+    property conversations
+        get get_Conversations slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversationBatch shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailConversation> return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversationBatch shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Email.EmailBatchStatus return
+
+class Windows.ApplicationModel.Email.EmailConversationReader python_type
+    py EmailConversationReader
+    signature rc(Windows.ApplicationModel.Email.EmailConversationReader;{b4630f82-2875-44c8-9b8c-85beb3a3c653})
+    default Windows.ApplicationModel.Email.IEmailConversationReader
+    requires Windows.ApplicationModel.Email.IEmailConversationReader
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailConversationReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailConversationBatch> return
+
+enum Windows.ApplicationModel.Email.EmailFlagState python_type
+    py EmailFlagState
+    signature enum(Windows.ApplicationModel.Email.EmailFlagState;i4)
+
+class Windows.ApplicationModel.Email.EmailFolder python_type
+    py EmailFolder
+    signature rc(Windows.ApplicationModel.Email.EmailFolder;{a24f7771-996c-4864-b1ba-ed1240e57d11})
+    default Windows.ApplicationModel.Email.IEmailFolder
+    requires Windows.ApplicationModel.Email.IEmailFolder
+    property remote_id
+        get get_RemoteId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=43
+            out string return
+        put put_RemoteId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=62
+            in string name=value
+    property last_successful_sync_time
+        get get_LastSuccessfulSyncTime slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=194
+            out datetime return
+        put put_LastSuccessfulSyncTime slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=26 reverse=397
+            in datetime name=value
+    property is_sync_enabled
+        get get_IsSyncEnabled slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=173
+            out boolean return
+        put put_IsSyncEnabled slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=186
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=141
+            out string return
+        put put_DisplayName slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=162
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=210
+            out enum32 type=Windows.ApplicationModel.Email.EmailSpecialFolderKind return
+    property mailbox_id
+        get get_MailboxId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=99
+            out string return
+    property parent_folder_id
+        get get_ParentFolderId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=121
+            out string return
+    method create_folder_async
+        method CreateFolderAsync slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=219
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailFolder> return
+    method delete_async
+        method DeleteAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=223
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_child_folders_async
+        method FindChildFoldersAsync slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=228
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailFolder>> return
+    method get_conversation_reader
+        method GetConversationReader slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=232
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+        method GetConversationReader slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=238
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+    method get_message_async
+        method GetMessageAsync slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=243
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessage> return
+    method get_message_counts_async
+        method GetMessageCountsAsync slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=255
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailItemCounts> return
+    method get_message_reader
+        method GetMessageReader slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=247
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+        method GetMessageReader slot=25 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=253
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+    method save_message_async
+        method SaveMessageAsync slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=271
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_move_async
+        method TryMoveAsync slot=27 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=51 reverse=260
+            in class type=Windows.ApplicationModel.Email.EmailFolder name=newParentFolder
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method TryMoveAsync slot=28 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=117
+            in class type=Windows.ApplicationModel.Email.EmailFolder name=newParentFolder
+            in string name=newFolderName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_save_async
+        method TrySaveAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailFolder shape=4 reverse=266
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Email.EmailImportance python_type
+    py EmailImportance
+    signature enum(Windows.ApplicationModel.Email.EmailImportance;i4)
+
+class Windows.ApplicationModel.Email.EmailIrmInfo activatable python_type
+    py EmailIrmInfo
+    signature rc(Windows.ApplicationModel.Email.EmailIrmInfo;{90f52193-b1a0-4ebd-a6b6-ddca55606e0e})
+    default Windows.ApplicationModel.Email.IEmailIrmInfo
+    requires Windows.ApplicationModel.Email.IEmailIrmInfo
+    factory Windows.ApplicationModel.Email.IEmailIrmInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfoFactory shape=169
+            in datetime name=expiration implicit
+            in class type=Windows.ApplicationModel.Email.EmailIrmTemplate name=irmTemplate implicit
+            out class type=Windows.ApplicationModel.Email.EmailIrmInfo return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfoFactory shape=169
+            in datetime name=expiration
+            in class type=Windows.ApplicationModel.Email.EmailIrmTemplate name=irmTemplate
+            out class type=Windows.ApplicationModel.Email.EmailIrmInfo return
+    property can_remove_irm_on_response
+        get get_CanRemoveIrmOnResponse slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=202
+            out boolean return
+        put put_CanRemoveIrmOnResponse slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=210
+            in boolean name=value
+    property can_print_data
+        get get_CanPrintData slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=186
+            out boolean return
+        put put_CanPrintData slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=194
+            in boolean name=value
+    property can_modify_recipients_on_response
+        get get_CanModifyRecipientsOnResponse slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=162
+            out boolean return
+        put put_CanModifyRecipientsOnResponse slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=173
+            in boolean name=value
+    property can_forward
+        get get_CanForward slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=121
+            out boolean return
+        put put_CanForward slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=141
+            in boolean name=value
+    property can_extract_data
+        get get_CanExtractData slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=62
+            out boolean return
+        put put_CanExtractData slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=99
+            in boolean name=value
+    property can_reply
+        get get_CanReply slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=218
+            out boolean return
+        put put_CanReply slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=223
+            in boolean name=value
+    property can_edit
+        get get_CanEdit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=22
+            out boolean return
+        put put_CanEdit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=43
+            in boolean name=value
+    property template
+        get get_Template slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=263
+            out class type=Windows.ApplicationModel.Email.EmailIrmTemplate return
+        put put_Template slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=266
+            in class type=Windows.ApplicationModel.Email.EmailIrmTemplate name=value
+    property is_programatic_access_allowed
+        get get_IsProgramaticAccessAllowed slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=255
+            out boolean return
+        put put_IsProgramaticAccessAllowed slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=259
+            in boolean name=value
+    property is_irm_originator
+        get get_IsIrmOriginator slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=247
+            out boolean return
+        put put_IsIrmOriginator slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=252
+            in boolean name=value
+    property expiration_date
+        get get_ExpirationDate slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=237
+            out datetime return
+        put put_ExpirationDate slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=26 reverse=245
+            in datetime name=value
+    property can_reply_all
+        get get_CanReplyAll slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=228
+            out boolean return
+        put put_CanReplyAll slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmInfo shape=4 reverse=232
+            in boolean name=value
+
+class Windows.ApplicationModel.Email.EmailIrmTemplate activatable python_type
+    py EmailIrmTemplate
+    signature rc(Windows.ApplicationModel.Email.EmailIrmTemplate;{f327758d-546d-4bea-a963-54a38b2cc016})
+    default Windows.ApplicationModel.Email.IEmailIrmTemplate
+    requires Windows.ApplicationModel.Email.IEmailIrmTemplate
+    factory Windows.ApplicationModel.Email.IEmailIrmTemplateFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplateFactory shape=195 reverse=26
+            in string name=id implicit
+            in string name=name implicit
+            in string name=description implicit
+            out class type=Windows.ApplicationModel.Email.EmailIrmTemplate return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplateFactory shape=195 reverse=26
+            in string name=id
+            in string name=name
+            in string name=description
+            out class type=Windows.ApplicationModel.Email.EmailIrmTemplate return
+    property name
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=121
+            out string return
+        put put_Name slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=141
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=43
+            in string name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplate shape=4 reverse=99
+            in string name=value
+
+class Windows.ApplicationModel.Email.EmailItemCounts python_type
+    py EmailItemCounts
+    signature rc(Windows.ApplicationModel.Email.EmailItemCounts;{5bd13321-fec8-4bab-83ba-0baf3c1f6cbd})
+    default Windows.ApplicationModel.Email.IEmailItemCounts
+    requires Windows.ApplicationModel.Email.IEmailItemCounts
+    property flagged
+        get get_Flagged slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailItemCounts shape=4 reverse=22
+            out uint32 return
+    property important
+        get get_Important slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailItemCounts shape=4 reverse=43
+            out uint32 return
+    property total
+        get get_Total slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailItemCounts shape=4 reverse=62
+            out uint32 return
+    property unread
+        get get_Unread slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailItemCounts shape=4 reverse=99
+            out uint32 return
+
+class Windows.ApplicationModel.Email.EmailMailbox python_type
+    py EmailMailbox
+    signature rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25})
+    default Windows.ApplicationModel.Email.IEmailMailbox
+    requires Windows.ApplicationModel.Email.IEmailMailbox
+    requires Windows.ApplicationModel.Email.IEmailMailbox2
+    requires Windows.ApplicationModel.Email.IEmailMailbox3
+    requires Windows.ApplicationModel.Email.IEmailMailbox4
+    requires Windows.ApplicationModel.Email.IEmailMailbox5
+    property other_app_write_access
+        get get_OtherAppWriteAccess slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=218
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess return
+        put put_OtherAppWriteAccess slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=223
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess name=value
+    property mail_address
+        get get_MailAddress slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=173
+            out string return
+        put put_MailAddress slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=186
+            in string name=value
+    property other_app_read_access
+        get get_OtherAppReadAccess slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess return
+        put put_OtherAppReadAccess slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=210
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess name=value
+    property display_name
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=62
+            out string return
+        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=99
+            in string name=value
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=121
+            out string return
+    property is_data_encrypted_under_lock
+        get get_IsDataEncryptedUnderLock slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=162
+            out boolean return
+    property is_owned_by_current_app
+        get get_IsOwnedByCurrentApp slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=141
+            out boolean return
+    property mail_address_aliases
+        get get_MailAddressAliases slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property capabilities
+        get get_Capabilities slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Email.EmailMailboxCapabilities return
+    property change_tracker
+        get get_ChangeTracker slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Email.EmailMailboxChangeTracker return
+    property policies
+        get get_Policies slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=228
+            out class type=Windows.ApplicationModel.Email.EmailMailboxPolicies return
+    property source_display_name
+        get get_SourceDisplayName slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=232
+            out string return
+    property sync_manager
+        get get_SyncManager slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=237
+            out class type=Windows.ApplicationModel.Email.EmailMailboxSyncManager return
+    property user_data_account_id
+        get get_UserDataAccountId slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=242
+            out string return
+    property linked_mailbox_id
+        get get_LinkedMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox2 shape=4 reverse=22
+            out string return
+    property network_account_id
+        get get_NetworkAccountId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox2 shape=4 reverse=43
+            out string return
+    property network_id
+        get get_NetworkId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox2 shape=4 reverse=62
+            out string return
+    event mailbox_changed
+        add add_MailboxChanged slot=51 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=356
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.EmailMailbox,Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs> name=pHandler
+            out event_token return
+        remove remove_MailboxChanged slot=52 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=26 reverse=362
+            in event_token name=token
+    method change_message_flag_state_async
+        method ChangeMessageFlagStateAsync slot=37 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117
+            in string name=messageId
+            in enum32 type=Windows.ApplicationModel.Email.EmailFlagState name=flagState
+            out interface type=Windows.Foundation.IAsyncAction return
+    method create_response_message_async
+        method CreateResponseMessageAsync slot=47 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=267
+            in string name=messageId
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageResponseKind name=responseType
+            in string name=subject
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageBodyKind name=responseHeaderType
+            in string name=responseHeader
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessage> return
+    method delete_async
+        method DeleteAsync slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=263
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_message_async
+        method DeleteMessageAsync slot=41 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=317
+            in string name=messageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method download_attachment_async
+        method DownloadAttachmentAsync slot=46 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=335
+            in string name=attachmentId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method download_message_async
+        method DownloadMessageAsync slot=45 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=331
+            in string name=messageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_change_tracker
+        method GetChangeTracker slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox5 shape=51 reverse=24
+            in string name=identity
+            out class type=Windows.ApplicationModel.Email.EmailMailboxChangeTracker return
+    method get_conversation_async
+        method GetConversationAsync slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=267
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailConversation> return
+    method get_conversation_reader
+        method GetConversationReader slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=247
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+        method GetConversationReader slot=25 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=253
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+    method get_folder_async
+        method GetFolderAsync slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=271
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailFolder> return
+    method get_message_async
+        method GetMessageAsync slot=31 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=274
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessage> return
+    method get_message_reader
+        method GetMessageReader slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=255
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+        method GetMessageReader slot=27 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=260
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+    method get_special_folder_async
+        method GetSpecialFolderAsync slot=32 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=281
+            in enum32 type=Windows.ApplicationModel.Email.EmailSpecialFolderKind name=folderType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailFolder> return
+    method mark_folder_as_seen_async
+        method MarkFolderAsSeenAsync slot=35 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=293
+            in string name=folderId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method mark_folder_sync_enabled_async
+        method MarkFolderSyncEnabledAsync slot=42 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117
+            in string name=folderId
+            in boolean name=isSyncEnabled
+            out interface type=Windows.Foundation.IAsyncAction return
+    method mark_message_as_seen_async
+        method MarkMessageAsSeenAsync slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=289
+            in string name=messageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method mark_message_read_async
+        method MarkMessageReadAsync slot=36 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117
+            in string name=messageId
+            in boolean name=isRead
+            out interface type=Windows.Foundation.IAsyncAction return
+    method register_sync_manager_async
+        method RegisterSyncManagerAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox4 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method resolve_recipients_async
+        method ResolveRecipientsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox3 shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=recipients
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipientResolutionResult>> return
+    method save_async
+        method SaveAsync slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=4 reverse=285
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_draft_async
+        method SaveDraftAsync slot=44 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=327
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+    method send_message_async
+        method SendMessageAsync slot=43 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=323
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+        method SendMessageAsync slot=53 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            in boolean name=smartSend
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_create_folder_async
+        method TryCreateFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox3 shape=117 reverse=101
+            in string name=parentFolderId
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult> return
+    method try_delete_folder_async
+        method TryDeleteFolderAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox3 shape=51 reverse=124
+            in string name=folderId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus> return
+    method try_empty_folder_async
+        method TryEmptyFolderAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox3 shape=51 reverse=65
+            in string name=folderId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus> return
+    method try_forward_meeting_async
+        method TryForwardMeetingAsync slot=49 inputs=6 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=278
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=meeting
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient> name=recipients
+            in string name=subject
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageBodyKind name=forwardHeaderType
+            in string name=forwardHeader
+            in string name=comment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_get_auto_reply_settings_async
+        method TryGetAutoReplySettingsAsync slot=55 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=371
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind name=requestedFormat
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings> return
+    method try_move_folder_async
+        method TryMoveFolderAsync slot=39 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117 reverse=309
+            in string name=folderId
+            in string name=newParentFolderId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method TryMoveFolderAsync slot=40 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=195
+            in string name=folderId
+            in string name=newParentFolderId
+            in string name=newFolderName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_move_message_async
+        method TryMoveMessageAsync slot=38 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=117
+            in string name=messageId
+            in string name=newParentFolderId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_propose_new_time_for_meeting_async
+        method TryProposeNewTimeForMeetingAsync slot=50 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=273
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=meeting
+            in datetime name=newStartTime
+            in timespan name=newDuration
+            in string name=subject
+            in string name=comment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_set_auto_reply_settings_async
+        method TrySetAutoReplySettingsAsync slot=54 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=51 reverse=369
+            in class type=Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings name=autoReplySettings
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_update_meeting_response_async
+        method TryUpdateMeetingResponseAsync slot=48 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox shape=267
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=meeting
+            in enum32 type=Windows.ApplicationModel.Email.EmailMeetingResponseType name=response
+            in string name=subject
+            in string name=comment
+            in boolean name=sendUpdate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method validate_certificates_async
+        method ValidateCertificatesAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailbox3 shape=51 reverse=44
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=certificates
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailCertificateValidationStatus>> return
+
+class Windows.ApplicationModel.Email.EmailMailboxAction python_type
+    py EmailMailboxAction
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxAction;{ac9889fa-21fa-4927-9210-d410582fdf3e})
+    default Windows.ApplicationModel.Email.IEmailMailboxAction
+    requires Windows.ApplicationModel.Email.IEmailMailboxAction
+    property change_number
+        get get_ChangeNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAction shape=4 reverse=43
+            out uint64 return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAction shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxActionKind return
+
+enum Windows.ApplicationModel.Email.EmailMailboxActionKind python_type
+    py EmailMailboxActionKind
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxActionKind;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation python_type
+    py EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation;i4)
+
+class Windows.ApplicationModel.Email.EmailMailboxAutoReply python_type
+    py EmailMailboxAutoReply
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxAutoReply;{e223254c-8ab4-485b-b31f-04d15476bd59})
+    default Windows.ApplicationModel.Email.IEmailMailboxAutoReply
+    requires Windows.ApplicationModel.Email.IEmailMailboxAutoReply
+    property response
+        get get_Response slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReply shape=4 reverse=62
+            out string return
+        put put_Response slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReply shape=4 reverse=99
+            in string name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReply shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReply shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind python_type
+    py EmailMailboxAutoReplyMessageResponseKind
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind;i4)
+
+class Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings activatable python_type
+    py EmailMailboxAutoReplySettings
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings;{a87a9fa8-0ac6-4b77-ba77-a6b99e9a27b8})
+    default Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings
+    requires Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property start_time
+        get get_StartTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_StartTime slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property response_kind
+        get get_ResponseKind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind return
+        put put_ResponseKind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=43
+            in boolean name=value
+    property end_time
+        get get_EndTime slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_EndTime slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property internal_reply
+        get get_InternalReply slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Email.EmailMailboxAutoReply return
+    property known_external_reply
+        get get_KnownExternalReply slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=194
+            out class type=Windows.ApplicationModel.Email.EmailMailboxAutoReply return
+    property unknown_external_reply
+        get get_UnknownExternalReply slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings shape=4 reverse=202
+            out class type=Windows.ApplicationModel.Email.EmailMailboxAutoReply return
+
+class Windows.ApplicationModel.Email.EmailMailboxCapabilities python_type
+    py EmailMailboxCapabilities
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxCapabilities;{eedec3a6-89db-4305-82c4-439e0a33da11})
+    default Windows.ApplicationModel.Email.IEmailMailboxCapabilities
+    requires Windows.ApplicationModel.Email.IEmailMailboxCapabilities
+    requires Windows.ApplicationModel.Email.IEmailMailboxCapabilities2
+    requires Windows.ApplicationModel.Email.IEmailMailboxCapabilities3
+    property can_smart_send
+        get get_CanSmartSend slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=173
+            out boolean return
+        put put_CanSmartSend slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=173
+            in boolean name=value
+    property can_update_meeting_responses
+        get get_CanUpdateMeetingResponses slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=99
+            out boolean return
+        put put_CanUpdateMeetingResponses slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=99
+            in boolean name=value
+    property can_server_search_mailbox
+        get get_CanServerSearchMailbox slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=141
+            out boolean return
+        put put_CanServerSearchMailbox slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=141
+            in boolean name=value
+    property can_server_search_folders
+        get get_CanServerSearchFolders slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=121
+            out boolean return
+        put put_CanServerSearchFolders slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=121
+            in boolean name=value
+    property can_forward_meetings
+        get get_CanForwardMeetings slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=22
+            out boolean return
+        put put_CanForwardMeetings slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=22
+            in boolean name=value
+    property can_propose_new_time_for_meetings
+        get get_CanProposeNewTimeForMeetings slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=162
+            out boolean return
+        put put_CanProposeNewTimeForMeetings slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=162
+            in boolean name=value
+    property can_get_and_set_internal_auto_replies
+        get get_CanGetAndSetInternalAutoReplies slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=62
+            out boolean return
+        put put_CanGetAndSetInternalAutoReplies slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=62
+            in boolean name=value
+    property can_get_and_set_external_auto_replies
+        get get_CanGetAndSetExternalAutoReplies slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities shape=4 reverse=43
+            out boolean return
+        put put_CanGetAndSetExternalAutoReplies slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=43
+            in boolean name=value
+    property can_validate_certificates
+        get get_CanValidateCertificates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=43
+            out boolean return
+        put put_CanValidateCertificates slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=194
+            in boolean name=value
+    property can_resolve_recipients
+        get get_CanResolveRecipients slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=22
+            out boolean return
+        put put_CanResolveRecipients slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=186
+            in boolean name=value
+    property can_move_folder
+        get get_CanMoveFolder slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=141
+            out boolean return
+        put put_CanMoveFolder slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=223
+            in boolean name=value
+    property can_empty_folder
+        get get_CanEmptyFolder slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=62
+            out boolean return
+        put put_CanEmptyFolder slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=202
+            in boolean name=value
+    property can_delete_folder
+        get get_CanDeleteFolder slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=121
+            out boolean return
+        put put_CanDeleteFolder slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=218
+            in boolean name=value
+    property can_create_folder
+        get get_CanCreateFolder slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities2 shape=4 reverse=99
+            out boolean return
+        put put_CanCreateFolder slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxCapabilities3 shape=4 reverse=210
+            in boolean name=value
+
+class Windows.ApplicationModel.Email.EmailMailboxChange python_type
+    py EmailMailboxChange
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxChange;{61edf54b-11ef-400c-adde-8cde65c85e66})
+    default Windows.ApplicationModel.Email.IEmailMailboxChange
+    requires Windows.ApplicationModel.Email.IEmailMailboxChange
+    property change_type
+        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChange shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxChangeType return
+    property folder
+        get get_Folder slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChange shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Email.EmailFolder return
+    property mailbox_actions
+        get get_MailboxActions slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChange shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailMailboxAction> return
+    property message
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChange shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Email.EmailMessage return
+
+class Windows.ApplicationModel.Email.EmailMailboxChangeReader python_type
+    py EmailMailboxChangeReader
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxChangeReader;{bdbd0ebb-c53d-4331-97be-be75a2146a75})
+    default Windows.ApplicationModel.Email.IEmailMailboxChangeReader
+    requires Windows.ApplicationModel.Email.IEmailMailboxChangeReader
+    method accept_changes
+        method AcceptChanges slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeReader shape=0 reverse=16
+    method accept_changes_through
+        method AcceptChangesThrough slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeReader shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Email.EmailMailboxChange name=lastChangeToAcknowledge
+    method read_batch_async
+        method ReadBatchAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeReader shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailboxChange>> return
+
+class Windows.ApplicationModel.Email.EmailMailboxChangeTracker python_type
+    py EmailMailboxChangeTracker
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxChangeTracker;{7ae48638-5166-42b7-8882-fd21c92bdd4b})
+    default Windows.ApplicationModel.Email.IEmailMailboxChangeTracker
+    requires Windows.ApplicationModel.Email.IEmailMailboxChangeTracker
+    property is_tracking
+        get get_IsTracking slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeTracker shape=4 reverse=22
+            out boolean return
+    method enable
+        method Enable slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeTracker shape=0 reverse=37
+    method get_change_reader
+        method GetChangeReader slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeTracker shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Email.EmailMailboxChangeReader return
+    method reset
+        method Reset slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangeTracker shape=0 reverse=93
+
+enum Windows.ApplicationModel.Email.EmailMailboxChangeType python_type
+    py EmailMailboxChangeType
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxChangeType;i4)
+
+class Windows.ApplicationModel.Email.EmailMailboxChangedDeferral python_type
+    py EmailMailboxChangedDeferral
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxChangedDeferral;{779a74c1-97c5-4b54-b30d-306232623e6d})
+    default Windows.ApplicationModel.Email.IEmailMailboxChangedDeferral
+    requires Windows.ApplicationModel.Email.IEmailMailboxChangedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangedDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs python_type
+    py EmailMailboxChangedEventArgs
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs;{3cfd5f6e-01d4-4e4a-a44c-b22dd42ec207})
+    default Windows.ApplicationModel.Email.IEmailMailboxChangedEventArgs
+    requires Windows.ApplicationModel.Email.IEmailMailboxChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Email.EmailMailboxChangedDeferral return
+
+class Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult python_type
+    py EmailMailboxCreateFolderResult
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult;{b228557f-2885-4998-b595-8a2d374ce950})
+    default Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult
+    requires Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult
+    property folder
+        get get_Folder slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Email.EmailFolder return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus return
+
+enum Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus python_type
+    py EmailMailboxCreateFolderStatus
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus python_type
+    py EmailMailboxDeleteFolderStatus
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus python_type
+    py EmailMailboxEmptyFolderStatus
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess python_type
+    py EmailMailboxOtherAppReadAccess
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess python_type
+    py EmailMailboxOtherAppWriteAccess
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess;i4)
+
+class Windows.ApplicationModel.Email.EmailMailboxPolicies python_type
+    py EmailMailboxPolicies
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxPolicies;{1f3345c5-1c3b-4dc7-b410-6373783e545d})
+    default Windows.ApplicationModel.Email.IEmailMailboxPolicies
+    requires Windows.ApplicationModel.Email.IEmailMailboxPolicies
+    requires Windows.ApplicationModel.Email.IEmailMailboxPolicies2
+    requires Windows.ApplicationModel.Email.IEmailMailboxPolicies3
+    property required_smime_signing_algorithm
+        get get_RequiredSmimeSigningAlgorithm slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm> return
+        put put_RequiredSmimeSigningAlgorithm slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm> name=value
+    property required_smime_encryption_algorithm
+        get get_RequiredSmimeEncryptionAlgorithm slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm> return
+        put put_RequiredSmimeEncryptionAlgorithm slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=62
+            in reference type=Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm> name=value
+    property allowed_smime_encryption_algorithm_negotiation
+        get get_AllowedSmimeEncryptionAlgorithmNegotiation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation return
+        put put_AllowedSmimeEncryptionAlgorithmNegotiation slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=22
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation name=value
+    property allow_smime_soft_certificates
+        get get_AllowSmimeSoftCertificates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies shape=4 reverse=43
+            out boolean return
+        put put_AllowSmimeSoftCertificates slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=43
+            in boolean name=value
+    property must_sign_smime_messages
+        get get_MustSignSmimeMessages slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies2 shape=4 reverse=43
+            out boolean return
+        put put_MustSignSmimeMessages slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=141
+            in boolean name=value
+    property must_encrypt_smime_messages
+        get get_MustEncryptSmimeMessages slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies2 shape=4 reverse=22
+            out boolean return
+        put put_MustEncryptSmimeMessages slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxPolicies3 shape=4 reverse=121
+            in boolean name=value
+
+enum Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm python_type
+    py EmailMailboxSmimeEncryptionAlgorithm
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm;i4)
+
+enum Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm python_type
+    py EmailMailboxSmimeSigningAlgorithm
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm;i4)
+
+class Windows.ApplicationModel.Email.EmailMailboxSyncManager python_type
+    py EmailMailboxSyncManager
+    signature rc(Windows.ApplicationModel.Email.EmailMailboxSyncManager;{517ac55a-3591-4b5d-85bc-c71dde862263})
+    default Windows.ApplicationModel.Email.IEmailMailboxSyncManager
+    requires Windows.ApplicationModel.Email.IEmailMailboxSyncManager
+    requires Windows.ApplicationModel.Email.IEmailMailboxSyncManager2
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailMailboxSyncStatus return
+        put put_Status slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager2 shape=4 reverse=22
+            in enum32 type=Windows.ApplicationModel.Email.EmailMailboxSyncStatus name=value
+    property last_successful_sync_time
+        get get_LastSuccessfulSyncTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=4 reverse=43
+            out datetime return
+        put put_LastSuccessfulSyncTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager2 shape=26 reverse=53
+            in datetime name=value
+    property last_attempted_sync_time
+        get get_LastAttemptedSyncTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=4 reverse=62
+            out datetime return
+        put put_LastAttemptedSyncTime slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager2 shape=26 reverse=82
+            in datetime name=value
+    event sync_status_changed
+        add add_SyncStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.EmailMailboxSyncManager,System.Object> name=handler
+            out event_token return
+        remove remove_SyncStatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=26 reverse=156
+            in event_token name=token
+    method sync_async
+        method SyncAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMailboxSyncManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Email.EmailMailboxSyncStatus python_type
+    py EmailMailboxSyncStatus
+    signature enum(Windows.ApplicationModel.Email.EmailMailboxSyncStatus;i4)
+
+class Windows.ApplicationModel.Email.EmailManager static python_type
+    py EmailManager
+    factory Windows.ApplicationModel.Email.IEmailManagerStatics2
+    factory Windows.ApplicationModel.Email.IEmailManagerStatics
+    factory Windows.ApplicationModel.Email.IEmailManagerStatics3
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerStatics3 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.Email.EmailManagerForUser return
+    method request_store_async static
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.ApplicationModel.Email.EmailStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailStore> return
+    method show_compose_new_email_async static
+        method ShowComposeNewEmailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Email.EmailManagerForUser python_type
+    py EmailManagerForUser
+    signature rc(Windows.ApplicationModel.Email.EmailManagerForUser;{f773de9f-3ca5-4b0f-90c1-156e40174ce5})
+    default Windows.ApplicationModel.Email.IEmailManagerForUser
+    requires Windows.ApplicationModel.Email.IEmailManagerForUser
+    property user
+        get get_User slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerForUser shape=4 reverse=62
+            out class type=Windows.System.User return
+    method request_store_async
+        method RequestStoreAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerForUser shape=51 reverse=44
+            in enum32 type=Windows.ApplicationModel.Email.EmailStoreAccessType name=accessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailStore> return
+    method show_compose_new_email_async
+        method ShowComposeNewEmailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerForUser shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Email.EmailMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Email.EmailMeetingInfo activatable python_type
+    py EmailMeetingInfo
+    signature rc(Windows.ApplicationModel.Email.EmailMeetingInfo;{31c03fa9-7933-415f-a275-d165ba07026b})
+    default Windows.ApplicationModel.Email.IEmailMeetingInfo
+    requires Windows.ApplicationModel.Email.IEmailMeetingInfo
+    requires Windows.ApplicationModel.Email.IEmailMeetingInfo2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property location
+        get get_Location slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=218
+            out string return
+        put put_Location slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=223
+            in string name=value
+    property is_response_requested
+        get get_IsResponseRequested slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=202
+            out boolean return
+        put put_IsResponseRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=210
+            in boolean name=value
+    property is_all_day
+        get get_IsAllDay slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=186
+            out boolean return
+        put put_IsAllDay slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=194
+            in boolean name=value
+    property allow_new_time_proposal
+        get get_AllowNewTimeProposal slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=22
+            out boolean return
+        put put_AllowNewTimeProposal slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=43
+            in boolean name=value
+    property duration
+        get get_Duration slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=162
+            out timespan return
+        put put_Duration slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=26 reverse=181
+            in timespan name=value
+    property appointment_roaming_id
+        get get_AppointmentRoamingId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=62
+            out string return
+        put put_AppointmentRoamingId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=99
+            in string name=value
+    property appointment_original_start_time
+        get get_AppointmentOriginalStartTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_AppointmentOriginalStartTime slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property proposed_duration
+        get get_ProposedDuration slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=237
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_ProposedDuration slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=242
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=duration
+    property remote_change_number
+        get get_RemoteChangeNumber slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=263
+            out uint64 return
+        put put_RemoteChangeNumber slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=3
+            in uint64 name=value
+    property start_time
+        get get_StartTime slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=270
+            out datetime return
+        put put_StartTime slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=26 reverse=277
+            in datetime name=value
+    property recurrence_start_time
+        get get_RecurrenceStartTime slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=247
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_RecurrenceStartTime slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=252
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property recurrence
+        get get_Recurrence slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=255
+            out class type=Windows.ApplicationModel.Appointments.AppointmentRecurrence return
+        put put_Recurrence slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=259
+            in class type=Windows.ApplicationModel.Appointments.AppointmentRecurrence name=value
+    property proposed_start_time
+        get get_ProposedStartTime slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=228
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_ProposedStartTime slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo shape=4 reverse=232
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=proposedStartTime
+    property is_reported_out_of_date_by_server
+        get get_IsReportedOutOfDateByServer slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMeetingInfo2 shape=4 reverse=22
+            out boolean return
+
+enum Windows.ApplicationModel.Email.EmailMeetingResponseType python_type
+    py EmailMeetingResponseType
+    signature enum(Windows.ApplicationModel.Email.EmailMeetingResponseType;i4)
+
+class Windows.ApplicationModel.Email.EmailMessage activatable python_type
+    py EmailMessage
+    signature rc(Windows.ApplicationModel.Email.EmailMessage;{6c6d948d-80b5-48f8-b0b1-e04e430f44e5})
+    default Windows.ApplicationModel.Email.IEmailMessage
+    requires Windows.ApplicationModel.Email.IEmailMessage
+    requires Windows.ApplicationModel.Email.IEmailMessage2
+    requires Windows.ApplicationModel.Email.IEmailMessage3
+    requires Windows.ApplicationModel.Email.IEmailMessage4
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property subject
+        get get_Subject slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=22
+            out string return
+        put put_Subject slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=43
+            in string name=value
+    property body
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=62
+            out string return
+        put put_Body slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=99
+            in string name=value
+    property bcc
+        get get_Bcc slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailRecipient> return
+    property cc
+        get get_CC slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailRecipient> return
+    property attachments
+        get get_Attachments slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailAttachment> return
+    property to
+        get get_To slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailRecipient> return
+    property allow_internet_images
+        get get_AllowInternetImages slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=162
+            out boolean return
+        put put_AllowInternetImages slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=173
+            in boolean name=value
+    property flag_state
+        get get_FlagState slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=223
+            out enum32 type=Windows.ApplicationModel.Email.EmailFlagState return
+        put put_FlagState slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=228
+            in enum32 type=Windows.ApplicationModel.Email.EmailFlagState name=value
+    property estimated_download_size_in_bytes
+        get get_EstimatedDownloadSizeInBytes slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=210
+            out uint32 return
+        put put_EstimatedDownloadSizeInBytes slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=218
+            in uint32 name=value
+    property download_state
+        get get_DownloadState slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=194
+            out enum32 type=Windows.ApplicationModel.Email.EmailMessageDownloadState return
+        put put_DownloadState slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=202
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageDownloadState name=value
+    property importance
+        get get_Importance slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=237
+            out enum32 type=Windows.ApplicationModel.Email.EmailImportance return
+        put put_Importance slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=242
+            in enum32 type=Windows.ApplicationModel.Email.EmailImportance name=value
+    property irm_info
+        get get_IrmInfo slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=252
+            out class type=Windows.ApplicationModel.Email.EmailIrmInfo return
+        put put_IrmInfo slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=255
+            in class type=Windows.ApplicationModel.Email.EmailIrmInfo name=value
+    property original_code_page
+        get get_OriginalCodePage slot=37 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=299
+            out int32 return
+        put put_OriginalCodePage slot=38 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=302
+            in int32 name=value
+    property sent_time
+        get get_SentTime slot=45 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=330
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_SentTime slot=46 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=334
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property sender
+        get get_Sender slot=43 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=322
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+        put put_Sender slot=44 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=326
+            in class type=Windows.ApplicationModel.Email.EmailRecipient name=value
+    property remote_id
+        get get_RemoteId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=43
+            out string return
+        put put_RemoteId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=62
+            in string name=value
+    property preview
+        get get_Preview slot=39 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=307
+            out string return
+        put put_Preview slot=40 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=312
+            in string name=value
+    property message_class
+        get get_MessageClass slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=288
+            out string return
+        put put_MessageClass slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=292
+            in string name=value
+    property meeting_info
+        get get_MeetingInfo slot=47 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=339
+            out class type=Windows.ApplicationModel.Email.EmailMeetingInfo return
+        put put_MeetingInfo slot=48 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=343
+            in class type=Windows.ApplicationModel.Email.EmailMeetingInfo name=value
+    property last_response_kind
+        get get_LastResponseKind slot=41 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=316
+            out enum32 type=Windows.ApplicationModel.Email.EmailMessageResponseKind return
+        put put_LastResponseKind slot=42 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=319
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageResponseKind name=value
+    property is_seen
+        get get_IsSeen slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=270
+            out boolean return
+        put put_IsSeen slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=273
+            in boolean name=value
+    property is_read
+        get get_IsRead slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=263
+            out boolean return
+        put put_IsRead slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=266
+            in boolean name=value
+    property is_server_search_message
+        get get_IsServerSearchMessage slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=280
+            out boolean return
+    property is_smart_sendable
+        get get_IsSmartSendable slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=285
+            out boolean return
+    property mailbox_id
+        get get_MailboxId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=99
+            out string return
+    property change_number
+        get get_ChangeNumber slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=186
+            out uint64 return
+    property conversation_id
+        get get_ConversationId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=121
+            out string return
+    property normalized_subject
+        get get_NormalizedSubject slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=296
+            out string return
+    property folder_id
+        get get_FolderId slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=141
+            out string return
+    property has_partial_bodies
+        get get_HasPartialBodies slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=232
+            out boolean return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=22
+            out string return
+    property in_response_to_message_id
+        get get_InResponseToMessageId slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=247
+            out string return
+    property is_draft_message
+        get get_IsDraftMessage slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=4 reverse=259
+            out boolean return
+    property smime_kind
+        get get_SmimeKind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage3 shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Email.EmailMessageSmimeKind return
+        put put_SmimeKind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage3 shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageSmimeKind name=value
+    property smime_data
+        get get_SmimeData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage3 shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_SmimeData slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage3 shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property sent_representing
+        get get_SentRepresenting slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage4 shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+        put put_SentRepresenting slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage4 shape=4 reverse=62
+            in class type=Windows.ApplicationModel.Email.EmailRecipient name=value
+    property reply_to
+        get get_ReplyTo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage4 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailRecipient> return
+    method get_body_stream
+        method GetBodyStream slot=49 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=51 reverse=348
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageBodyKind name=type
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    method set_body_stream
+        method SetBodyStream slot=50 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailMessage2 shape=51 reverse=352
+            in enum32 type=Windows.ApplicationModel.Email.EmailMessageBodyKind name=type
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
+
+class Windows.ApplicationModel.Email.EmailMessageBatch python_type
+    py EmailMessageBatch
+    signature rc(Windows.ApplicationModel.Email.EmailMessageBatch;{605cd08f-25d9-4f1b-9e51-0514c0149653})
+    default Windows.ApplicationModel.Email.IEmailMessageBatch
+    requires Windows.ApplicationModel.Email.IEmailMessageBatch
+    property messages
+        get get_Messages slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessageBatch shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage> return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessageBatch shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Email.EmailBatchStatus return
+
+enum Windows.ApplicationModel.Email.EmailMessageBodyKind python_type
+    py EmailMessageBodyKind
+    signature enum(Windows.ApplicationModel.Email.EmailMessageBodyKind;i4)
+
+enum Windows.ApplicationModel.Email.EmailMessageDownloadState python_type
+    py EmailMessageDownloadState
+    signature enum(Windows.ApplicationModel.Email.EmailMessageDownloadState;i4)
+
+class Windows.ApplicationModel.Email.EmailMessageReader python_type
+    py EmailMessageReader
+    signature rc(Windows.ApplicationModel.Email.EmailMessageReader;{2f4abe9f-6213-4a85-a3b0-f92d1a839d19})
+    default Windows.ApplicationModel.Email.IEmailMessageReader
+    requires Windows.ApplicationModel.Email.IEmailMessageReader
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailMessageReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessageBatch> return
+
+enum Windows.ApplicationModel.Email.EmailMessageResponseKind python_type
+    py EmailMessageResponseKind
+    signature enum(Windows.ApplicationModel.Email.EmailMessageResponseKind;i4)
+
+enum Windows.ApplicationModel.Email.EmailMessageSmimeKind python_type
+    py EmailMessageSmimeKind
+    signature enum(Windows.ApplicationModel.Email.EmailMessageSmimeKind;i4)
+
+enum Windows.ApplicationModel.Email.EmailQueryKind python_type
+    py EmailQueryKind
+    signature enum(Windows.ApplicationModel.Email.EmailQueryKind;i4)
+
+class Windows.ApplicationModel.Email.EmailQueryOptions activatable python_type
+    py EmailQueryOptions
+    signature rc(Windows.ApplicationModel.Email.EmailQueryOptions;{45504b9b-3e7f-4d52-b6dd-d6fd4e1fbd9a})
+    default Windows.ApplicationModel.Email.IEmailQueryOptions
+    requires Windows.ApplicationModel.Email.IEmailQueryOptions
+    factory Windows.ApplicationModel.Email.IEmailQueryOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptionsFactory shape=51 reverse=24
+            in string name=text implicit
+            out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptionsFactory shape=51 reverse=24
+            in string name=text
+            out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptionsFactory shape=117 reverse=45
+            in string name=text
+            in enum_u32 type=Windows.ApplicationModel.Email.EmailQuerySearchFields name=fields
+            out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
+    property sort_property
+        get get_SortProperty slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.Email.EmailQuerySortProperty return
+        put put_SortProperty slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=121
+            in enum32 type=Windows.ApplicationModel.Email.EmailQuerySortProperty name=value
+    property sort_direction
+        get get_SortDirection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Email.EmailQuerySortDirection return
+        put put_SortDirection slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=62
+            in enum32 type=Windows.ApplicationModel.Email.EmailQuerySortDirection name=value
+    property kind
+        get get_Kind slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=141
+            out enum32 type=Windows.ApplicationModel.Email.EmailQueryKind return
+        put put_Kind slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=162
+            in enum32 type=Windows.ApplicationModel.Email.EmailQueryKind name=value
+    property folder_ids
+        get get_FolderIds slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property text_search
+        get get_TextSearch slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Email.EmailQueryTextSearch return
+
+enum Windows.ApplicationModel.Email.EmailQuerySearchFields python_type
+    py EmailQuerySearchFields
+    signature enum(Windows.ApplicationModel.Email.EmailQuerySearchFields;u4)
+
+enum Windows.ApplicationModel.Email.EmailQuerySearchScope python_type
+    py EmailQuerySearchScope
+    signature enum(Windows.ApplicationModel.Email.EmailQuerySearchScope;i4)
+
+enum Windows.ApplicationModel.Email.EmailQuerySortDirection python_type
+    py EmailQuerySortDirection
+    signature enum(Windows.ApplicationModel.Email.EmailQuerySortDirection;i4)
+
+enum Windows.ApplicationModel.Email.EmailQuerySortProperty python_type
+    py EmailQuerySortProperty
+    signature enum(Windows.ApplicationModel.Email.EmailQuerySortProperty;i4)
+
+class Windows.ApplicationModel.Email.EmailQueryTextSearch python_type
+    py EmailQueryTextSearch
+    signature rc(Windows.ApplicationModel.Email.EmailQueryTextSearch;{9fa0a288-3c5d-46a5-a6e2-31d6fd17e540})
+    default Windows.ApplicationModel.Email.IEmailQueryTextSearch
+    requires Windows.ApplicationModel.Email.IEmailQueryTextSearch
+    property text
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=121
+            out string return
+        put put_Text slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=141
+            in string name=value
+    property search_scope
+        get get_SearchScope slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Email.EmailQuerySearchScope return
+        put put_SearchScope slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Email.EmailQuerySearchScope name=value
+    property fields
+        get get_Fields slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.Email.EmailQuerySearchFields return
+        put put_Fields slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailQueryTextSearch shape=4 reverse=43
+            in enum_u32 type=Windows.ApplicationModel.Email.EmailQuerySearchFields name=value
+
+class Windows.ApplicationModel.Email.EmailRecipient activatable python_type
+    py EmailRecipient
+    signature rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53})
+    default Windows.ApplicationModel.Email.IEmailRecipient
+    requires Windows.ApplicationModel.Email.IEmailRecipient
+    factory Windows.ApplicationModel.Email.IEmailRecipientFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientFactory shape=51 reverse=24
+            in string name=address implicit
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientFactory shape=51 reverse=24
+            in string name=address
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientFactory shape=117 reverse=45
+            in string name=address
+            in string name=name
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipient shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailRecipient shape=4 reverse=43
+            in string name=value
+    property address
+        get get_Address slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipient shape=4 reverse=62
+            out string return
+        put put_Address slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailRecipient shape=4 reverse=99
+            in string name=value
+
+class Windows.ApplicationModel.Email.EmailRecipientResolutionResult activatable python_type
+    py EmailRecipientResolutionResult
+    signature rc(Windows.ApplicationModel.Email.EmailRecipientResolutionResult;{918338fa-8d8d-4573-80d1-07172a34b98d})
+    default Windows.ApplicationModel.Email.IEmailRecipientResolutionResult
+    requires Windows.ApplicationModel.Email.IEmailRecipientResolutionResult
+    requires Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientResolutionResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Email.EmailRecipientResolutionStatus return
+        put put_Status slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2 shape=4 reverse=22
+            in enum32 type=Windows.ApplicationModel.Email.EmailRecipientResolutionStatus name=value
+    property public_keys
+        get get_PublicKeys slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientResolutionResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+    method set_public_keys
+        method SetPublicKeys slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2 shape=4 reverse=43
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=value
+
+enum Windows.ApplicationModel.Email.EmailRecipientResolutionStatus python_type
+    py EmailRecipientResolutionStatus
+    signature enum(Windows.ApplicationModel.Email.EmailRecipientResolutionStatus;i4)
+
+enum Windows.ApplicationModel.Email.EmailSpecialFolderKind python_type
+    py EmailSpecialFolderKind
+    signature enum(Windows.ApplicationModel.Email.EmailSpecialFolderKind;i4)
+
+class Windows.ApplicationModel.Email.EmailStore python_type
+    py EmailStore
+    signature rc(Windows.ApplicationModel.Email.EmailStore;{f803226e-9137-4f8b-a470-279ac3058eb6})
+    default Windows.ApplicationModel.Email.IEmailStore
+    requires Windows.ApplicationModel.Email.IEmailStore
+    method create_mailbox_async
+        method CreateMailboxAsync slot=15 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=117 reverse=197
+            in string name=accountName
+            in string name=accountAddress
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailbox> return
+        method CreateMailboxAsync slot=16 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=195 reverse=205
+            in string name=accountName
+            in string name=accountAddress
+            in string name=userDataAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailbox> return
+    method find_mailboxes_async
+        method FindMailboxesAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>> return
+    method get_conversation_async
+        method GetConversationAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=163
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailConversation> return
+    method get_conversation_reader
+        method GetConversationReader slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+        method GetConversationReader slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=65
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailConversationReader return
+    method get_folder_async
+        method GetFolderAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=174
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailFolder> return
+    method get_mailbox_async
+        method GetMailboxAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=144
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailbox> return
+    method get_message_async
+        method GetMessageAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=187
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessage> return
+    method get_message_reader
+        method GetMessageReader slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+        method GetMessageReader slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailStore shape=51 reverse=124
+            in class type=Windows.ApplicationModel.Email.EmailQueryOptions name=options
+            out class type=Windows.ApplicationModel.Email.EmailMessageReader return
+
+enum Windows.ApplicationModel.Email.EmailStoreAccessType python_type
+    py EmailStoreAccessType
+    signature enum(Windows.ApplicationModel.Email.EmailStoreAccessType;i4)
+
+class Windows.ApplicationModel.Email.EmailStoreNotificationTriggerDetails python_type
+    py EmailStoreNotificationTriggerDetails
+    signature rc(Windows.ApplicationModel.Email.EmailStoreNotificationTriggerDetails;{ce17563c-46e6-43c9-96f7-facf7dd710cb})
+    default Windows.ApplicationModel.Email.IEmailStoreNotificationTriggerDetails
+    requires Windows.ApplicationModel.Email.IEmailStoreNotificationTriggerDetails
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailConversation> concrete
+    guid 6885966c-13b9-59cc-b358-adf82eec842a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailConversation;{da18c248-a0bc-4349-902d-90f66389f51b}))
+    argument Windows.ApplicationModel.Email.EmailConversation
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailConversationBatch> concrete
+    guid 7d87db9c-947d-5e0c-8cf2-245998d19d8f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailConversationBatch;{b8c1ab81-01c5-432a-9df1-fe85d98a279a}))
+    argument Windows.ApplicationModel.Email.EmailConversationBatch
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailFolder> concrete
+    guid 6132274f-733d-5391-9077-0867fc330916
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailFolder;{a24f7771-996c-4864-b1ba-ed1240e57d11}))
+    argument Windows.ApplicationModel.Email.EmailFolder
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailItemCounts> concrete
+    guid 5856790d-5204-5a99-b69e-c7162fd25869
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailItemCounts;{5bd13321-fec8-4bab-83ba-0baf3c1f6cbd}))
+    argument Windows.ApplicationModel.Email.EmailItemCounts
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailbox> concrete
+    guid 6f01f05e-988d-5b28-aba8-dbaabb4eb0d9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25}))
+    argument Windows.ApplicationModel.Email.EmailMailbox
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings> concrete
+    guid b354d4c4-e4a0-5a3c-b897-8deb458ac673
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings;{a87a9fa8-0ac6-4b77-ba77-a6b99e9a27b8}))
+    argument Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult> concrete
+    guid 6d5a0e81-6949-50f9-bffb-92be1216724d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult;{b228557f-2885-4998-b595-8a2d374ce950}))
+    argument Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus> concrete
+    guid 6860f87f-0297-5adf-aa16-9f1f08e2d950
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus;i4))
+    argument Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus> concrete
+    guid 0033a74e-9baa-5f50-8d6e-238635e6fdd3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus;i4))
+    argument Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessage> concrete
+    guid 73157119-fa58-5d2d-817c-b5630c1511e4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailMessage;{6c6d948d-80b5-48f8-b0b1-e04e430f44e5}))
+    argument Windows.ApplicationModel.Email.EmailMessage
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailMessageBatch> concrete
+    guid 37fea119-0f1e-5012-88bb-f0179f8f4de5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailMessageBatch;{605cd08f-25d9-4f1b-9e51-0514c0149653}))
+    argument Windows.ApplicationModel.Email.EmailMessageBatch
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Email.EmailStore> concrete
+    guid 7c9df991-5d99-55b4-b439-064edd097ac4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Email.EmailStore;{f803226e-9137-4f8b-a470-279ac3058eb6}))
+    argument Windows.ApplicationModel.Email.EmailStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailCertificateValidationStatus>> concrete
+    guid f3e7ef5b-8894-5488-97ef-029ca4913947
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4)))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailCertificateValidationStatus>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailFolder>> concrete
+    guid 0c1ca8b9-7f85-534d-98f1-0f5cd8e72c1f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailFolder;{a24f7771-996c-4864-b1ba-ed1240e57d11})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailFolder>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>> concrete
+    guid 5bed07ec-f5d5-5b25-b067-9b22a4a762ea
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailboxChange>> concrete
+    guid 81153d29-d502-5050-af64-b1333462d16a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailboxChange;{61edf54b-11ef-400c-adde-8cde65c85e66})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailboxChange>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage>> concrete
+    guid 47065121-dc80-59f9-8719-3f0c6eef8753
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMessage;{6c6d948d-80b5-48f8-b0b1-e04e430f44e5})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipientResolutionResult>> concrete
+    guid 12a76f8e-ed11-5c2b-81c6-110296fc7a43
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailRecipientResolutionResult;{918338fa-8d8d-4573-80d1-07172a34b98d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipientResolutionResult>
+
+interface Windows.ApplicationModel.Email.IEmailAttachment
+    guid f353caf9-57c8-4adb-b992-60fceb584f54
+
+interface Windows.ApplicationModel.Email.IEmailAttachment2
+    guid 225f1070-b0ff-4571-9d54-a706c48d55c6
+
+interface Windows.ApplicationModel.Email.IEmailAttachmentFactory
+    guid 796eac46-ed56-4979-8708-abb8bc854b7d
+
+interface Windows.ApplicationModel.Email.IEmailAttachmentFactory2
+    guid 23259435-51f9-427d-adcd-241023c8cfb7
+
+interface Windows.ApplicationModel.Email.IEmailConversation
+    guid da18c248-a0bc-4349-902d-90f66389f51b
+
+interface Windows.ApplicationModel.Email.IEmailConversationBatch
+    guid b8c1ab81-01c5-432a-9df1-fe85d98a279a
+
+interface Windows.ApplicationModel.Email.IEmailConversationReader
+    guid b4630f82-2875-44c8-9b8c-85beb3a3c653
+
+interface Windows.ApplicationModel.Email.IEmailFolder
+    guid a24f7771-996c-4864-b1ba-ed1240e57d11
+
+interface Windows.ApplicationModel.Email.IEmailIrmInfo
+    guid 90f52193-b1a0-4ebd-a6b6-ddca55606e0e
+
+interface Windows.ApplicationModel.Email.IEmailIrmInfoFactory
+    guid 314bb18c-e3e6-4d7b-be8d-91a96311b01b
+
+interface Windows.ApplicationModel.Email.IEmailIrmTemplate
+    guid f327758d-546d-4bea-a963-54a38b2cc016
+
+interface Windows.ApplicationModel.Email.IEmailIrmTemplateFactory
+    guid 3da31876-8738-4418-b9cb-471b936fe71e
+
+interface Windows.ApplicationModel.Email.IEmailItemCounts
+    guid 5bd13321-fec8-4bab-83ba-0baf3c1f6cbd
+
+interface Windows.ApplicationModel.Email.IEmailMailbox
+    guid a8790649-cf5b-411b-80b1-4a6a1484ce25
+
+interface Windows.ApplicationModel.Email.IEmailMailbox2
+    guid 14f8e404-6ca2-4ab2-9241-79cd7bf46346
+
+interface Windows.ApplicationModel.Email.IEmailMailbox3
+    guid 3da5897b-458b-408a-8e37-ac8b05d8af56
+
+interface Windows.ApplicationModel.Email.IEmailMailbox4
+    guid 5d1f301b-f222-48a7-b7b6-716356cd26a1
+
+interface Windows.ApplicationModel.Email.IEmailMailbox5
+    guid 39967087-0092-49be-bd0e-5d4dc9d96d90
+
+interface Windows.ApplicationModel.Email.IEmailMailboxAction
+    guid ac9889fa-21fa-4927-9210-d410582fdf3e
+
+interface Windows.ApplicationModel.Email.IEmailMailboxAutoReply
+    guid e223254c-8ab4-485b-b31f-04d15476bd59
+
+interface Windows.ApplicationModel.Email.IEmailMailboxAutoReplySettings
+    guid a87a9fa8-0ac6-4b77-ba77-a6b99e9a27b8
+
+interface Windows.ApplicationModel.Email.IEmailMailboxCapabilities
+    guid eedec3a6-89db-4305-82c4-439e0a33da11
+
+interface Windows.ApplicationModel.Email.IEmailMailboxCapabilities2
+    guid 69723ee4-2f21-4cbc-88ab-2e7602a4806b
+
+interface Windows.ApplicationModel.Email.IEmailMailboxCapabilities3
+    guid f690e944-56f2-45aa-872c-0ce9f3db0b5c
+
+interface Windows.ApplicationModel.Email.IEmailMailboxChange
+    guid 61edf54b-11ef-400c-adde-8cde65c85e66
+
+interface Windows.ApplicationModel.Email.IEmailMailboxChangeReader
+    guid bdbd0ebb-c53d-4331-97be-be75a2146a75
+
+interface Windows.ApplicationModel.Email.IEmailMailboxChangeTracker
+    guid 7ae48638-5166-42b7-8882-fd21c92bdd4b
+
+interface Windows.ApplicationModel.Email.IEmailMailboxChangedDeferral
+    guid 779a74c1-97c5-4b54-b30d-306232623e6d
+
+interface Windows.ApplicationModel.Email.IEmailMailboxChangedEventArgs
+    guid 3cfd5f6e-01d4-4e4a-a44c-b22dd42ec207
+
+interface Windows.ApplicationModel.Email.IEmailMailboxCreateFolderResult
+    guid b228557f-2885-4998-b595-8a2d374ce950
+
+interface Windows.ApplicationModel.Email.IEmailMailboxPolicies
+    guid 1f3345c5-1c3b-4dc7-b410-6373783e545d
+
+interface Windows.ApplicationModel.Email.IEmailMailboxPolicies2
+    guid bab58afb-a14b-497c-a8e2-55eac29cc4b5
+
+interface Windows.ApplicationModel.Email.IEmailMailboxPolicies3
+    guid bdd4a01f-4867-414a-81a2-803919c44191
+
+interface Windows.ApplicationModel.Email.IEmailMailboxSyncManager
+    guid 517ac55a-3591-4b5d-85bc-c71dde862263
+
+interface Windows.ApplicationModel.Email.IEmailMailboxSyncManager2
+    guid cd8dc97e-95c1-4f89-81b7-e6aecb6695fc
+
+interface Windows.ApplicationModel.Email.IEmailManagerForUser
+    guid f773de9f-3ca5-4b0f-90c1-156e40174ce5
+
+interface Windows.ApplicationModel.Email.IEmailManagerStatics
+    guid f5128654-55c5-4890-a824-216c2618ce7f
+
+interface Windows.ApplicationModel.Email.IEmailManagerStatics2
+    guid ac052da3-b194-425d-b6d9-d0f04135eda2
+
+interface Windows.ApplicationModel.Email.IEmailManagerStatics3
+    guid 4a722395-843e-4945-b3aa-349e07a362c5
+
+interface Windows.ApplicationModel.Email.IEmailMeetingInfo
+    guid 31c03fa9-7933-415f-a275-d165ba07026b
+
+interface Windows.ApplicationModel.Email.IEmailMeetingInfo2
+    guid 7e59386d-b0d9-4fe5-867c-e31ed2b588b8
+
+interface Windows.ApplicationModel.Email.IEmailMessage
+    guid 6c6d948d-80b5-48f8-b0b1-e04e430f44e5
+
+interface Windows.ApplicationModel.Email.IEmailMessage2
+    guid fdc8248b-9f1a-44db-bd3c-65c384770f86
+
+interface Windows.ApplicationModel.Email.IEmailMessage3
+    guid a1ea675c-e598-4d29-a018-fc7b7eece0a1
+
+interface Windows.ApplicationModel.Email.IEmailMessage4
+    guid 317cf181-3e7f-4a05-8394-3e10336dd435
+
+interface Windows.ApplicationModel.Email.IEmailMessageBatch
+    guid 605cd08f-25d9-4f1b-9e51-0514c0149653
+
+interface Windows.ApplicationModel.Email.IEmailMessageReader
+    guid 2f4abe9f-6213-4a85-a3b0-f92d1a839d19
+
+interface Windows.ApplicationModel.Email.IEmailQueryOptions
+    guid 45504b9b-3e7f-4d52-b6dd-d6fd4e1fbd9a
+
+interface Windows.ApplicationModel.Email.IEmailQueryOptionsFactory
+    guid 88f1a1b8-78ab-4ee8-b4e3-046d6e2fe5e2
+
+interface Windows.ApplicationModel.Email.IEmailQueryTextSearch
+    guid 9fa0a288-3c5d-46a5-a6e2-31d6fd17e540
+
+interface Windows.ApplicationModel.Email.IEmailRecipient
+    guid cae825b3-4478-4814-b900-c902b5e19b53
+
+interface Windows.ApplicationModel.Email.IEmailRecipientFactory
+    guid 5500b84d-c79a-4ef8-b909-722e18e3935d
+
+interface Windows.ApplicationModel.Email.IEmailRecipientResolutionResult
+    guid 918338fa-8d8d-4573-80d1-07172a34b98d
+
+interface Windows.ApplicationModel.Email.IEmailRecipientResolutionResult2
+    guid 5e420bb6-ce5b-4bde-b9d4-e16da0b09fca
+
+interface Windows.ApplicationModel.Email.IEmailStore
+    guid f803226e-9137-4f8b-a470-279ac3058eb6
+
+interface Windows.ApplicationModel.Email.IEmailStoreNotificationTriggerDetails
+    guid ce17563c-46e6-43c9-96f7-facf7dd710cb
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient> concrete
+    guid 5f18cab2-236d-5ec5-bc64-e3e63d29e774
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53}))
+    argument Windows.ApplicationModel.Email.EmailRecipient
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> concrete
+    guid 0c7d1423-e8fd-5a91-b55c-8bfbe7ac2d40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    argument Windows.Security.Cryptography.Certificates.Certificate
+
+interface Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm> concrete
+    guid 433b124d-60e6-5b7a-96bc-8681de5f5e75
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm;i4))
+    argument Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm
+
+interface Windows.Foundation.IReference<Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm> concrete
+    guid e498a622-f168-5104-a53b-faf996f51632
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm;i4))
+    argument Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailAttachment> concrete
+    guid 07b0ebc8-70af-5deb-9861-dc93e2b038e9
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Email.EmailAttachment;{f353caf9-57c8-4adb-b992-60fceb584f54}))
+    argument Windows.ApplicationModel.Email.EmailAttachment
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailMailboxAction> concrete
+    guid 4c954eb2-f15c-5869-abd7-2e328de4a4af
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Email.EmailMailboxAction;{ac9889fa-21fa-4927-9210-d410582fdf3e}))
+    argument Windows.ApplicationModel.Email.EmailMailboxAction
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Email.EmailRecipient> concrete
+    guid 1151f664-39c5-5aaa-8a2e-3350e611624b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53}))
+    argument Windows.ApplicationModel.Email.EmailRecipient
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> concrete
+    guid a5665ff7-b44e-57e3-bd7a-ef191aa5519c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4))
+    argument Windows.ApplicationModel.Email.EmailCertificateValidationStatus
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailConversation> concrete
+    guid 0a7c62d7-fc19-5bd7-b37a-0d6242df48c0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailConversation;{da18c248-a0bc-4349-902d-90f66389f51b}))
+    argument Windows.ApplicationModel.Email.EmailConversation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailFolder> concrete
+    guid 4e35d275-abdf-5e2c-b3e8-7546ed5ad573
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailFolder;{a24f7771-996c-4864-b1ba-ed1240e57d11}))
+    argument Windows.ApplicationModel.Email.EmailFolder
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox> concrete
+    guid d4816e16-43c9-5b63-a444-6189acb56f6e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25}))
+    argument Windows.ApplicationModel.Email.EmailMailbox
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailboxChange> concrete
+    guid 9ea98fb4-9e7e-5caa-a320-cc7ab5338084
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailboxChange;{61edf54b-11ef-400c-adde-8cde65c85e66}))
+    argument Windows.ApplicationModel.Email.EmailMailboxChange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMessage> concrete
+    guid 51b8edf2-6ca6-55de-be45-1d1fc51df076
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMessage;{6c6d948d-80b5-48f8-b0b1-e04e430f44e5}))
+    argument Windows.ApplicationModel.Email.EmailMessage
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> concrete
+    guid 9307eb24-38f6-525e-ba0d-3b4e863fe0f8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailRecipientResolutionResult;{918338fa-8d8d-4573-80d1-07172a34b98d}))
+    argument Windows.ApplicationModel.Email.EmailRecipientResolutionResult
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete
+    guid 963f7013-77c2-51c5-8038-b5bcef633edb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    argument Windows.Security.Cryptography.Certificates.Certificate
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.EmailMailbox,Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs> concrete
+    guid 20789b0d-1555-51fc-87a5-2222250b9b06
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25});rc(Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs;{3cfd5f6e-01d4-4e4a-a44c-b22dd42ec207}))
+    argument Windows.ApplicationModel.Email.EmailMailbox
+    argument Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.EmailMailboxSyncManager,System.Object> concrete
+    guid 5cbe61bb-d615-5b82-bb11-412e32664c07
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.EmailMailboxSyncManager;{517ac55a-3591-4b5d-85bc-c71dde862263});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Email.EmailMailboxSyncManager
+    argument System.Object
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Appointments.AppointmentRecurrence external
+    py winrt.windows.applicationmodel.appointments.AppointmentRecurrence
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Security.Cryptography.Certificates.Certificate external
+    py winrt.windows.security.cryptography.certificates.Certificate
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.System.User external
+    py winrt.windows.system.User

@@ -1,0 +1,624 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Miracast
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverApplySettingsResult> concrete
+    guid 6fec734b-823d-5b06-ad81-0455f97f556f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverApplySettingsResult;{d0aa6272-09cd-58e1-a4f2-5d5143d312f9}))
+    argument Windows.Media.Miracast.MiracastReceiverApplySettingsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSession> concrete
+    guid 5ab880e1-2c0d-5d2f-bf95-037515624a8c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverSession;{1d2bcdb4-ef8b-5209-bfc9-c32116504803}))
+    argument Windows.Media.Miracast.MiracastReceiverSession
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSessionStartResult> concrete
+    guid a4520f20-1984-52e5-9b70-15a9ce94aef8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverSessionStartResult;{b7c573ee-40ca-51ff-95f2-c9de34f2e90e}))
+    argument Windows.Media.Miracast.MiracastReceiverSessionStartResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSettings> concrete
+    guid 922c5527-4300-5995-8ddc-923dd4ba7010
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverSettings;{57cd2f24-c55a-5fbe-9464-eb05307705dd}))
+    argument Windows.Media.Miracast.MiracastReceiverSettings
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverStatus> concrete
+    guid aa26649e-265d-5e79-8eef-a7fe894dc9f2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverStatus;{c28a5591-23ab-519e-ad09-90bff6dcc87e}))
+    argument Windows.Media.Miracast.MiracastReceiverStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverVideoStreamSettings> concrete
+    guid 67ca293b-c811-57b2-b4fc-007b7efb64a0
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Miracast.MiracastReceiverVideoStreamSettings;{169b5e1b-149d-52d0-b126-6f89744e4f50}))
+    argument Windows.Media.Miracast.MiracastReceiverVideoStreamSettings
+
+interface Windows.Media.Miracast.IMiracastReceiver
+    guid 7a315258-e444-51b4-aff7-b88daa1229e0
+
+interface Windows.Media.Miracast.IMiracastReceiverApplySettingsResult
+    guid d0aa6272-09cd-58e1-a4f2-5d5143d312f9
+
+interface Windows.Media.Miracast.IMiracastReceiverConnection
+    guid 704b2f36-d2e5-551f-a854-f822b7917d28
+
+interface Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs
+    guid 7d8dfa39-307a-5c0f-94bd-d0c69d169982
+
+interface Windows.Media.Miracast.IMiracastReceiverCursorImageChannel
+    guid d9ac332d-723a-5a9d-b90a-81153efa2a0f
+
+interface Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings
+    guid ccdbedff-bd00-5b9c-8e4c-00cacf86b634
+
+interface Windows.Media.Miracast.IMiracastReceiverDisconnectedEventArgs
+    guid d9a15e5e-5fee-57e6-b4b0-04727db93229
+
+interface Windows.Media.Miracast.IMiracastReceiverGameControllerDevice
+    guid 2d7171e8-bed4-5118-a058-e2477eb5888d
+
+interface Windows.Media.Miracast.IMiracastReceiverInputDevices
+    guid da35bb02-28aa-5ee8-96f5-a42901c66f00
+
+interface Windows.Media.Miracast.IMiracastReceiverKeyboardDevice
+    guid beb67272-06c0-54ff-ac96-217464ff2501
+
+interface Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs
+    guid 17cf519e-1246-531d-945a-6b158e39c3aa
+
+interface Windows.Media.Miracast.IMiracastReceiverSession
+    guid 1d2bcdb4-ef8b-5209-bfc9-c32116504803
+
+interface Windows.Media.Miracast.IMiracastReceiverSessionStartResult
+    guid b7c573ee-40ca-51ff-95f2-c9de34f2e90e
+
+interface Windows.Media.Miracast.IMiracastReceiverSettings
+    guid 57cd2f24-c55a-5fbe-9464-eb05307705dd
+
+interface Windows.Media.Miracast.IMiracastReceiverStatus
+    guid c28a5591-23ab-519e-ad09-90bff6dcc87e
+
+interface Windows.Media.Miracast.IMiracastReceiverStreamControl
+    guid 38ea2d8b-2769-5ad7-8a8a-254b9df7ba82
+
+interface Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings
+    guid 169b5e1b-149d-52d0-b126-6f89744e4f50
+
+interface Windows.Media.Miracast.IMiracastTransmitter
+    guid 342d79fd-2e64-5508-8a30-833d1eac70d0
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Miracast.MiracastReceiverConnection> concrete
+    guid 98ac8f8c-2322-54cf-b2c6-7a56a9d2220b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Miracast.MiracastReceiverConnection;{704b2f36-d2e5-551f-a854-f822b7917d28}))
+    argument Windows.Media.Miracast.MiracastReceiverConnection
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Miracast.MiracastTransmitter> concrete
+    guid 4e1bf46c-49f6-5892-bcf7-80564ea2b606
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Miracast.MiracastTransmitter;{342d79fd-2e64-5508-8a30-833d1eac70d0}))
+    argument Windows.Media.Miracast.MiracastTransmitter
+
+class Windows.Media.Miracast.MiracastReceiver activatable python_type
+    py MiracastReceiver
+    signature rc(Windows.Media.Miracast.MiracastReceiver;{7a315258-e444-51b4-aff7-b88daa1229e0})
+    default Windows.Media.Miracast.IMiracastReceiver
+    requires Windows.Media.Miracast.IMiracastReceiver
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    event status_changed
+        add add_StatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiver,System.Object> name=handler
+            out event_token return
+        remove remove_StatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiver shape=26 reverse=192
+            in event_token name=token
+    method clear_known_transmitters
+        method ClearKnownTransmitters slot=17 inputs=0 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiver shape=0 reverse=209
+    method create_session
+        method CreateSession slot=15 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=51 reverse=196
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=view
+            out class type=Windows.Media.Miracast.MiracastReceiverSession return
+    method create_session_async
+        method CreateSessionAsync slot=16 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=51 reverse=203
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=view
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSession> return
+    method disconnect_all_and_apply_settings
+        method DisconnectAllAndApplySettings slot=9 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=51 reverse=100
+            in class type=Windows.Media.Miracast.MiracastReceiverSettings name=settings
+            out class type=Windows.Media.Miracast.MiracastReceiverApplySettingsResult return
+    method disconnect_all_and_apply_settings_async
+        method DisconnectAllAndApplySettingsAsync slot=10 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=51 reverse=124
+            in class type=Windows.Media.Miracast.MiracastReceiverSettings name=settings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverApplySettingsResult> return
+    method get_current_settings
+        method GetCurrentSettings slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=43
+            out class type=Windows.Media.Miracast.MiracastReceiverSettings return
+    method get_current_settings_async
+        method GetCurrentSettingsAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSettings> return
+    method get_default_settings
+        method GetDefaultSettings slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverSettings return
+    method get_status
+        method GetStatus slot=11 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=141
+            out class type=Windows.Media.Miracast.MiracastReceiverStatus return
+    method get_status_async
+        method GetStatusAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverStatus> return
+    method remove_known_transmitter
+        method RemoveKnownTransmitter slot=18 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiver shape=4 reverse=218
+            in class type=Windows.Media.Miracast.MiracastTransmitter name=transmitter
+
+class Windows.Media.Miracast.MiracastReceiverApplySettingsResult python_type
+    py MiracastReceiverApplySettingsResult
+    signature rc(Windows.Media.Miracast.MiracastReceiverApplySettingsResult;{d0aa6272-09cd-58e1-a4f2-5d5143d312f9})
+    default Windows.Media.Miracast.IMiracastReceiverApplySettingsResult
+    requires Windows.Media.Miracast.IMiracastReceiverApplySettingsResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverApplySettingsResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverApplySettingsResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverApplySettingsStatus return
+
+enum Windows.Media.Miracast.MiracastReceiverApplySettingsStatus python_type
+    py MiracastReceiverApplySettingsStatus
+    signature enum(Windows.Media.Miracast.MiracastReceiverApplySettingsStatus;i4)
+
+enum Windows.Media.Miracast.MiracastReceiverAuthorizationMethod python_type
+    py MiracastReceiverAuthorizationMethod
+    signature enum(Windows.Media.Miracast.MiracastReceiverAuthorizationMethod;i4)
+
+class Windows.Media.Miracast.MiracastReceiverConnection python_type closeable
+    py MiracastReceiverConnection
+    signature rc(Windows.Media.Miracast.MiracastReceiverConnection;{704b2f36-d2e5-551f-a854-f822b7917d28})
+    default Windows.Media.Miracast.IMiracastReceiverConnection
+    requires Windows.Media.Miracast.IMiracastReceiverConnection
+    requires Windows.Foundation.IClosable
+    property cursor_image_channel
+        get get_CursorImageChannel slot=14 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=186
+            out class type=Windows.Media.Miracast.MiracastReceiverCursorImageChannel return
+    property input_devices
+        get get_InputDevices slot=13 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=173
+            out class type=Windows.Media.Miracast.MiracastReceiverInputDevices return
+    property stream_control
+        get get_StreamControl slot=15 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=194
+            out class type=Windows.Media.Miracast.MiracastReceiverStreamControl return
+    property transmitter
+        get get_Transmitter slot=12 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=162
+            out class type=Windows.Media.Miracast.MiracastTransmitter return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method disconnect
+        method Disconnect slot=6 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=22
+            in enum32 type=Windows.Media.Miracast.MiracastReceiverDisconnectReason name=reason
+        method Disconnect slot=7 inputs=2 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=51 reverse=44
+            in enum32 type=Windows.Media.Miracast.MiracastReceiverDisconnectReason name=reason
+            in string name=message
+    method pause
+        method Pause slot=8 inputs=0 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=0 reverse=55
+    method pause_async
+        method PauseAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+    method resume
+        method Resume slot=10 inputs=0 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=0 reverse=117
+    method resume_async
+        method ResumeAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnection shape=4 reverse=141
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs python_type
+    py MiracastReceiverConnectionCreatedEventArgs
+    signature rc(Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs;{7d8dfa39-307a-5c0f-94bd-d0c69d169982})
+    default Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs
+    requires Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverConnection return
+    property pin
+        get get_Pin slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs shape=4 reverse=43
+            out string return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverConnectionCreatedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Miracast.MiracastReceiverCursorImageChannel python_type
+    py MiracastReceiverCursorImageChannel
+    signature rc(Windows.Media.Miracast.MiracastReceiverCursorImageChannel;{d9ac332d-723a-5a9d-b90a-81153efa2a0f})
+    default Windows.Media.Miracast.IMiracastReceiverCursorImageChannel
+    requires Windows.Media.Miracast.IMiracastReceiverCursorImageChannel
+    property image_stream
+        get get_ImageStream slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=4 reverse=22
+            out boolean return
+    property max_image_size
+        get get_MaxImageSize slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=4 reverse=43
+            out struct type=Windows.Graphics.SizeInt32 return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=4 reverse=62
+            out struct type=Windows.Graphics.PointInt32 return
+    event image_stream_changed
+        add add_ImageStreamChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverCursorImageChannel,System.Object> name=handler
+            out event_token return
+        remove remove_ImageStreamChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=26 reverse=156
+            in event_token name=token
+    event position_changed
+        add add_PositionChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverCursorImageChannel,System.Object> name=handler
+            out event_token return
+        remove remove_PositionChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannel shape=26 reverse=181
+            in event_token name=token
+
+class Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings python_type
+    py MiracastReceiverCursorImageChannelSettings
+    signature rc(Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings;{ccdbedff-bd00-5b9c-8e4c-00cacf86b634})
+    default Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings
+    requires Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings
+    property max_image_size
+        get get_MaxImageSize slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings shape=4 reverse=62
+            out struct type=Windows.Graphics.SizeInt32 return
+        put put_MaxImageSize slot=9 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings shape=22
+            in struct type=Windows.Graphics.SizeInt32 name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverCursorImageChannelSettings shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.Media.Miracast.MiracastReceiverDisconnectReason python_type
+    py MiracastReceiverDisconnectReason
+    signature enum(Windows.Media.Miracast.MiracastReceiverDisconnectReason;i4)
+
+class Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs python_type
+    py MiracastReceiverDisconnectedEventArgs
+    signature rc(Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs;{d9a15e5e-5fee-57e6-b4b0-04727db93229})
+    default Windows.Media.Miracast.IMiracastReceiverDisconnectedEventArgs
+    requires Windows.Media.Miracast.IMiracastReceiverDisconnectedEventArgs
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverDisconnectedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverConnection return
+
+class Windows.Media.Miracast.MiracastReceiverGameControllerDevice python_type
+    py MiracastReceiverGameControllerDevice
+    signature rc(Windows.Media.Miracast.MiracastReceiverGameControllerDevice;{2d7171e8-bed4-5118-a058-e2477eb5888d})
+    default Windows.Media.Miracast.IMiracastReceiverGameControllerDevice
+    requires Windows.Media.Miracast.IMiracastReceiverGameControllerDevice
+    property transmit_input
+        get get_TransmitInput slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=22
+            out boolean return
+        put put_TransmitInput slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=43
+            in boolean name=value
+    property mode
+        get get_Mode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=121
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode return
+        put put_Mode slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=141
+            in enum32 type=Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode name=value
+    property is_requested_by_transmitter
+        get get_IsRequestedByTransmitter slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=62
+            out boolean return
+    property is_transmitting_input
+        get get_IsTransmittingInput slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=4 reverse=99
+            out boolean return
+    event changed
+        add add_Changed slot=12 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverGameControllerDevice,System.Object> name=handler
+            out event_token return
+        remove remove_Changed slot=13 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverGameControllerDevice shape=26 reverse=181
+            in event_token name=token
+
+enum Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode python_type
+    py MiracastReceiverGameControllerDeviceUsageMode
+    signature enum(Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode;i4)
+
+class Windows.Media.Miracast.MiracastReceiverInputDevices python_type
+    py MiracastReceiverInputDevices
+    signature rc(Windows.Media.Miracast.MiracastReceiverInputDevices;{da35bb02-28aa-5ee8-96f5-a42901c66f00})
+    default Windows.Media.Miracast.IMiracastReceiverInputDevices
+    requires Windows.Media.Miracast.IMiracastReceiverInputDevices
+    property game_controller
+        get get_GameController slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverInputDevices shape=4 reverse=43
+            out class type=Windows.Media.Miracast.MiracastReceiverGameControllerDevice return
+    property keyboard
+        get get_Keyboard slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverInputDevices shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverKeyboardDevice return
+
+class Windows.Media.Miracast.MiracastReceiverKeyboardDevice python_type
+    py MiracastReceiverKeyboardDevice
+    signature rc(Windows.Media.Miracast.MiracastReceiverKeyboardDevice;{beb67272-06c0-54ff-ac96-217464ff2501})
+    default Windows.Media.Miracast.IMiracastReceiverKeyboardDevice
+    requires Windows.Media.Miracast.IMiracastReceiverKeyboardDevice
+    property transmit_input
+        get get_TransmitInput slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=4 reverse=22
+            out boolean return
+        put put_TransmitInput slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=4 reverse=43
+            in boolean name=value
+    property is_requested_by_transmitter
+        get get_IsRequestedByTransmitter slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=4 reverse=62
+            out boolean return
+    property is_transmitting_input
+        get get_IsTransmittingInput slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=4 reverse=99
+            out boolean return
+    event changed
+        add add_Changed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverKeyboardDevice,System.Object> name=handler
+            out event_token return
+        remove remove_Changed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverKeyboardDevice shape=26 reverse=156
+            in event_token name=token
+
+enum Windows.Media.Miracast.MiracastReceiverListeningStatus python_type
+    py MiracastReceiverListeningStatus
+    signature enum(Windows.Media.Miracast.MiracastReceiverListeningStatus;i4)
+
+class Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs python_type
+    py MiracastReceiverMediaSourceCreatedEventArgs
+    signature rc(Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs;{17cf519e-1246-531d-945a-6b158e39c3aa})
+    default Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs
+    requires Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverConnection return
+    property cursor_image_channel_settings
+        get get_CursorImageChannelSettings slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs shape=4 reverse=62
+            out class type=Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings return
+    property media_source
+        get get_MediaSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs shape=4 reverse=43
+            out class type=Windows.Media.Core.MediaSource return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverMediaSourceCreatedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Miracast.MiracastReceiverSession python_type closeable
+    py MiracastReceiverSession
+    signature rc(Windows.Media.Miracast.MiracastReceiverSession;{1d2bcdb4-ef8b-5209-bfc9-c32116504803})
+    default Windows.Media.Miracast.IMiracastReceiverSession
+    requires Windows.Media.Miracast.IMiracastReceiverSession
+    requires Windows.Foundation.IClosable
+    property max_simultaneous_connections
+        get get_MaxSimultaneousConnections slot=14 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=186
+            out int32 return
+        put put_MaxSimultaneousConnections slot=15 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=194
+            in int32 name=value
+    property allow_connection_takeover
+        get get_AllowConnectionTakeover slot=12 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=162
+            out boolean return
+        put put_AllowConnectionTakeover slot=13 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=173
+            in boolean name=value
+    event connection_created
+        add add_ConnectionCreated slot=6 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs> name=handler
+            out event_token return
+        remove remove_ConnectionCreated slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=26 reverse=53
+            in event_token name=token
+    event disconnected
+        add add_Disconnected slot=10 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs> name=handler
+            out event_token return
+        remove remove_Disconnected slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=26 reverse=156
+            in event_token name=token
+    event media_source_created
+        add add_MediaSourceCreated slot=8 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs> name=handler
+            out event_token return
+        remove remove_MediaSourceCreated slot=9 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=26 reverse=110
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method start
+        method Start slot=16 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=202
+            out class type=Windows.Media.Miracast.MiracastReceiverSessionStartResult return
+    method start_async
+        method StartAsync slot=17 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSession shape=4 reverse=210
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverSessionStartResult> return
+
+class Windows.Media.Miracast.MiracastReceiverSessionStartResult python_type
+    py MiracastReceiverSessionStartResult
+    signature rc(Windows.Media.Miracast.MiracastReceiverSessionStartResult;{b7c573ee-40ca-51ff-95f2-c9de34f2e90e})
+    default Windows.Media.Miracast.IMiracastReceiverSessionStartResult
+    requires Windows.Media.Miracast.IMiracastReceiverSessionStartResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSessionStartResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSessionStartResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverSessionStartStatus return
+
+enum Windows.Media.Miracast.MiracastReceiverSessionStartStatus python_type
+    py MiracastReceiverSessionStartStatus
+    signature enum(Windows.Media.Miracast.MiracastReceiverSessionStartStatus;i4)
+
+class Windows.Media.Miracast.MiracastReceiverSettings python_type
+    py MiracastReceiverSettings
+    signature rc(Windows.Media.Miracast.MiracastReceiverSettings;{57cd2f24-c55a-5fbe-9464-eb05307705dd})
+    default Windows.Media.Miracast.IMiracastReceiverSettings
+    requires Windows.Media.Miracast.IMiracastReceiverSettings
+    property require_authorization_from_known_transmitters
+        get get_RequireAuthorizationFromKnownTransmitters slot=14 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=186
+            out boolean return
+        put put_RequireAuthorizationFromKnownTransmitters slot=15 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=194
+            in boolean name=value
+    property model_number
+        get get_ModelNumber slot=10 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=121
+            out string return
+        put put_ModelNumber slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=141
+            in string name=value
+    property model_name
+        get get_ModelName slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=62
+            out string return
+        put put_ModelName slot=9 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=99
+            in string name=value
+    property friendly_name
+        get get_FriendlyName slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=22
+            out string return
+        put put_FriendlyName slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=43
+            in string name=value
+    property authorization_method
+        get get_AuthorizationMethod slot=12 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=162
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverAuthorizationMethod return
+        put put_AuthorizationMethod slot=13 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverSettings shape=4 reverse=173
+            in enum32 type=Windows.Media.Miracast.MiracastReceiverAuthorizationMethod name=value
+
+class Windows.Media.Miracast.MiracastReceiverStatus python_type
+    py MiracastReceiverStatus
+    signature rc(Windows.Media.Miracast.MiracastReceiverStatus;{c28a5591-23ab-519e-ad09-90bff6dcc87e})
+    default Windows.Media.Miracast.IMiracastReceiverStatus
+    requires Windows.Media.Miracast.IMiracastReceiverStatus
+    property is_connection_takeover_supported
+        get get_IsConnectionTakeoverSupported slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStatus shape=4 reverse=62
+            out boolean return
+    property known_transmitters
+        get get_KnownTransmitters slot=10 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStatus shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Miracast.MiracastTransmitter> return
+    property listening_status
+        get get_ListeningStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStatus shape=4 reverse=22
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverListeningStatus return
+    property max_simultaneous_connections
+        get get_MaxSimultaneousConnections slot=9 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStatus shape=4 reverse=99
+            out int32 return
+    property wi_fi_status
+        get get_WiFiStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStatus shape=4 reverse=43
+            out enum32 type=Windows.Media.Miracast.MiracastReceiverWiFiStatus return
+
+class Windows.Media.Miracast.MiracastReceiverStreamControl python_type
+    py MiracastReceiverStreamControl
+    signature rc(Windows.Media.Miracast.MiracastReceiverStreamControl;{38ea2d8b-2769-5ad7-8a8a-254b9df7ba82})
+    default Windows.Media.Miracast.IMiracastReceiverStreamControl
+    requires Windows.Media.Miracast.IMiracastReceiverStreamControl
+    property mute_audio
+        get get_MuteAudio slot=10 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=4 reverse=121
+            out boolean return
+        put put_MuteAudio slot=11 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=4 reverse=141
+            in boolean name=value
+    method get_video_stream_settings
+        method GetVideoStreamSettings slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=4 reverse=22
+            out class type=Windows.Media.Miracast.MiracastReceiverVideoStreamSettings return
+    method get_video_stream_settings_async
+        method GetVideoStreamSettingsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Miracast.MiracastReceiverVideoStreamSettings> return
+    method suggest_video_stream_settings
+        method SuggestVideoStreamSettings slot=8 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=4 reverse=62
+            in class type=Windows.Media.Miracast.MiracastReceiverVideoStreamSettings name=settings
+    method suggest_video_stream_settings_async
+        method SuggestVideoStreamSettingsAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverStreamControl shape=51 reverse=100
+            in class type=Windows.Media.Miracast.MiracastReceiverVideoStreamSettings name=settings
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Miracast.MiracastReceiverVideoStreamSettings python_type
+    py MiracastReceiverVideoStreamSettings
+    signature rc(Windows.Media.Miracast.MiracastReceiverVideoStreamSettings;{169b5e1b-149d-52d0-b126-6f89744e4f50})
+    default Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings
+    requires Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings shape=4 reverse=22
+            out struct type=Windows.Graphics.SizeInt32 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings shape=22
+            in struct type=Windows.Graphics.SizeInt32 name=value
+    property bitrate
+        get get_Bitrate slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings shape=4 reverse=62
+            out int32 return
+        put put_Bitrate slot=9 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastReceiverVideoStreamSettings shape=4 reverse=99
+            in int32 name=value
+
+enum Windows.Media.Miracast.MiracastReceiverWiFiStatus python_type
+    py MiracastReceiverWiFiStatus
+    signature enum(Windows.Media.Miracast.MiracastReceiverWiFiStatus;i4)
+
+class Windows.Media.Miracast.MiracastTransmitter python_type
+    py MiracastTransmitter
+    signature rc(Windows.Media.Miracast.MiracastTransmitter;{342d79fd-2e64-5508-8a30-833d1eac70d0})
+    default Windows.Media.Miracast.IMiracastTransmitter
+    requires Windows.Media.Miracast.IMiracastTransmitter
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=43
+            in string name=value
+    property authorization_status
+        get get_AuthorizationStatus slot=8 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=62
+            out enum32 type=Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus return
+        put put_AuthorizationStatus slot=9 inputs=1 outputs=0 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=99
+            in enum32 type=Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus name=value
+    property last_connection_time
+        get get_LastConnectionTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=162
+            out datetime return
+    property mac_address
+        get get_MacAddress slot=11 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=141
+            out string return
+    method get_connections
+        method GetConnections slot=10 inputs=0 outputs=1 declaring=Windows.Media.Miracast.IMiracastTransmitter shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Miracast.MiracastReceiverConnection> return
+
+enum Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus python_type
+    py MiracastTransmitterAuthorizationStatus
+    signature enum(Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiver,System.Object> concrete
+    guid 44eb06ea-0014-5aed-83a1-95d225d06688
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiver;{7a315258-e444-51b4-aff7-b88daa1229e0});cinterface(IInspectable))
+    argument Windows.Media.Miracast.MiracastReceiver
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverCursorImageChannel,System.Object> concrete
+    guid 401d6f64-cb30-59c3-a663-f84ab6edf1fa
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverCursorImageChannel;{d9ac332d-723a-5a9d-b90a-81153efa2a0f});cinterface(IInspectable))
+    argument Windows.Media.Miracast.MiracastReceiverCursorImageChannel
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverGameControllerDevice,System.Object> concrete
+    guid 10a9d2a7-5049-5e19-9d22-72da7d6bb643
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverGameControllerDevice;{2d7171e8-bed4-5118-a058-e2477eb5888d});cinterface(IInspectable))
+    argument Windows.Media.Miracast.MiracastReceiverGameControllerDevice
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverKeyboardDevice,System.Object> concrete
+    guid 97d896c7-a5ea-5209-92c0-a0278087afd1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverKeyboardDevice;{beb67272-06c0-54ff-ac96-217464ff2501});cinterface(IInspectable))
+    argument Windows.Media.Miracast.MiracastReceiverKeyboardDevice
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs> concrete
+    guid 69d03828-7a8a-549a-8253-7850e4db605a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverSession;{1d2bcdb4-ef8b-5209-bfc9-c32116504803});rc(Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs;{7d8dfa39-307a-5c0f-94bd-d0c69d169982}))
+    argument Windows.Media.Miracast.MiracastReceiverSession
+    argument Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs> concrete
+    guid a4964b5f-147c-57e3-82d0-cc7de5ff2def
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverSession;{1d2bcdb4-ef8b-5209-bfc9-c32116504803});rc(Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs;{d9a15e5e-5fee-57e6-b4b0-04727db93229}))
+    argument Windows.Media.Miracast.MiracastReceiverSession
+    argument Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiverSession,Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs> concrete
+    guid 929ec57a-92cc-50f8-ae4a-bb6a67152e82
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Miracast.MiracastReceiverSession;{1d2bcdb4-ef8b-5209-bfc9-c32116504803});rc(Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs;{17cf519e-1246-531d-945a-6b158e39c3aa}))
+    argument Windows.Media.Miracast.MiracastReceiverSession
+    argument Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.ApplicationModel.Core.CoreApplicationView external
+    py winrt.windows.applicationmodel.core.CoreApplicationView
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Graphics.PointInt32 external
+    py winrt.windows.graphics.PointInt32
+
+struct Windows.Graphics.SizeInt32 external
+    py winrt.windows.graphics.SizeInt32
+
+class Windows.Media.Core.MediaSource external
+    py winrt.windows.media.core.MediaSource
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038

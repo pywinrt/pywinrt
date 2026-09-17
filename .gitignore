@@ -310,6 +310,10 @@ __pycache__/
 .venv/
 /wheelhouse/
 
+# A projection table is carried as text and compiled when the projection is
+# built, so the binary is build output wherever it turns up.
+_table.pywinrt
+
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config

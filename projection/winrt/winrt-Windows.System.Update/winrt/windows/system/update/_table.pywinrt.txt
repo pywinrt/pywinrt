@@ -1,0 +1,181 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Update
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.System.Update.ISystemUpdateItem
+    guid 779740eb-5624-519e-a8e2-09e9173b3fb7
+
+interface Windows.System.Update.ISystemUpdateLastErrorInfo
+    guid 7ee887f7-8a44-5b6e-bd07-7aece4116ea9
+
+interface Windows.System.Update.ISystemUpdateManagerStatics
+    guid b2d3fcef-2971-51be-b41a-8bd703bb701a
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Update.SystemUpdateItem> concrete
+    guid 7c77b64c-8be2-50e0-8ca5-d8265d80902b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Update.SystemUpdateItem;{779740eb-5624-519e-a8e2-09e9173b3fb7}))
+    argument Windows.System.Update.SystemUpdateItem
+
+enum Windows.System.Update.SystemUpdateAttentionRequiredReason python_type
+    py SystemUpdateAttentionRequiredReason
+    signature enum(Windows.System.Update.SystemUpdateAttentionRequiredReason;i4)
+
+class Windows.System.Update.SystemUpdateItem python_type
+    py SystemUpdateItem
+    signature rc(Windows.System.Update.SystemUpdateItem;{779740eb-5624-519e-a8e2-09e9173b3fb7})
+    default Windows.System.Update.ISystemUpdateItem
+    requires Windows.System.Update.ISystemUpdateItem
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=62
+            out string return
+    property download_progress
+        get get_DownloadProgress slot=11 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=141
+            out double return
+    property extended_error
+        get get_ExtendedError slot=13 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=173
+            out hresult return
+    property id
+        get get_Id slot=9 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=99
+            out string return
+    property install_progress
+        get get_InstallProgress slot=12 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=162
+            out double return
+    property revision
+        get get_Revision slot=10 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=121
+            out uint32 return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=22
+            out enum32 type=Windows.System.Update.SystemUpdateItemState return
+    property title
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateItem shape=4 reverse=43
+            out string return
+
+enum Windows.System.Update.SystemUpdateItemState python_type
+    py SystemUpdateItemState
+    signature enum(Windows.System.Update.SystemUpdateItemState;i4)
+
+class Windows.System.Update.SystemUpdateLastErrorInfo python_type
+    py SystemUpdateLastErrorInfo
+    signature rc(Windows.System.Update.SystemUpdateLastErrorInfo;{7ee887f7-8a44-5b6e-bd07-7aece4116ea9})
+    default Windows.System.Update.ISystemUpdateLastErrorInfo
+    requires Windows.System.Update.ISystemUpdateLastErrorInfo
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateLastErrorInfo shape=4 reverse=43
+            out hresult return
+    property is_interactive
+        get get_IsInteractive slot=8 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateLastErrorInfo shape=4 reverse=62
+            out boolean return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateLastErrorInfo shape=4 reverse=22
+            out enum32 type=Windows.System.Update.SystemUpdateManagerState return
+
+class Windows.System.Update.SystemUpdateManager static python_type
+    py SystemUpdateManager
+    factory Windows.System.Update.ISystemUpdateManagerStatics
+    property attention_required_reason static
+        get get_AttentionRequiredReason slot=24 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=247 static
+            out enum32 type=Windows.System.Update.SystemUpdateAttentionRequiredReason return
+    property download_progress static
+        get get_DownloadProgress slot=10 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=121 static
+            out double return
+    property extended_error static
+        get get_ExtendedError slot=22 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=237 static
+            out hresult return
+    property install_progress static
+        get get_InstallProgress slot=11 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=141 static
+            out double return
+    property last_error_info static
+        get get_LastErrorInfo slot=18 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=218 static
+            out class type=Windows.System.Update.SystemUpdateLastErrorInfo return
+    property last_update_check_time static
+        get get_LastUpdateCheckTime slot=16 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=202 static
+            out datetime return
+    property last_update_install_time static
+        get get_LastUpdateInstallTime slot=17 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=210 static
+            out datetime return
+    property state static
+        get get_State slot=7 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=43 static
+            out enum32 type=Windows.System.Update.SystemUpdateManagerState return
+    property user_active_hours_end static
+        get get_UserActiveHoursEnd slot=13 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=173 static
+            out timespan return
+    property user_active_hours_max static
+        get get_UserActiveHoursMax slot=14 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=186 static
+            out int32 return
+    property user_active_hours_start static
+        get get_UserActiveHoursStart slot=12 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=162 static
+            out timespan return
+    event state_changed static
+        add add_StateChanged slot=8 inputs=1 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=51 reverse=65 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_StateChanged slot=9 inputs=1 outputs=0 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=26 reverse=110 static
+            in event_token name=token
+    method block_automatic_reboot_async static
+        method BlockAutomaticRebootAsync slot=20 inputs=1 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=51 reverse=229 static
+            in string name=lockId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_automatic_reboot_block_ids static
+        method GetAutomaticRebootBlockIds slot=19 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=223 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method get_flight_ring static
+        method GetFlightRing slot=26 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=255 static
+            out string return
+    method get_update_items static
+        method GetUpdateItems slot=23 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=242 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Update.SystemUpdateItem> return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=22 static
+            out boolean return
+    method reboot_to_complete_install static
+        method RebootToCompleteInstall slot=28 inputs=0 outputs=0 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=0 static
+    method set_flight_ring static
+        method SetFlightRing slot=25 inputs=1 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=51 reverse=253 static
+            in string name=flightRing
+            out boolean return
+    method start_cancel_updates static
+        method StartCancelUpdates slot=29 inputs=0 outputs=0 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=0 reverse=265 static
+    method start_install static
+        method StartInstall slot=27 inputs=1 outputs=0 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=4 reverse=259 static
+            in enum32 type=Windows.System.Update.SystemUpdateStartInstallAction name=action
+    method try_set_user_active_hours static
+        method TrySetUserActiveHours slot=15 inputs=2 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=170 static
+            in timespan name=start
+            in timespan name=end
+            out boolean return
+    method unblock_automatic_reboot_async static
+        method UnblockAutomaticRebootAsync slot=21 inputs=1 outputs=1 declaring=Windows.System.Update.ISystemUpdateManagerStatics shape=51 reverse=233 static
+            in string name=lockId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.System.Update.SystemUpdateManagerState python_type
+    py SystemUpdateManagerState
+    signature enum(Windows.System.Update.SystemUpdateManagerState;i4)
+
+enum Windows.System.Update.SystemUpdateStartInstallAction python_type
+    py SystemUpdateStartInstallAction
+    signature enum(Windows.System.Update.SystemUpdateStartInstallAction;i4)
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String

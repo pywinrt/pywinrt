@@ -1,0 +1,824 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Cryptography.Core
+
+class Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames static python_type
+    py AsymmetricAlgorithmNames
+    factory Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics
+    factory Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2
+    property ecdsa_p521_sha512 static
+        get get_EcdsaP521Sha512 slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=173 static
+            out string return
+    property dsa_sha1 static
+        get get_DsaSha1 slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=186 static
+            out string return
+    property dsa_sha256 static
+        get get_DsaSha256 slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=194 static
+            out string return
+    property ecdsa_p256_sha256 static
+        get get_EcdsaP256Sha256 slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=141 static
+            out string return
+    property ecdsa_p384_sha384 static
+        get get_EcdsaP384Sha384 slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=162 static
+            out string return
+    property rsa_sign_pkcs1_sha256 static
+        get get_RsaSignPkcs1Sha256 slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=210 static
+            out string return
+    property rsa_oaep_sha1 static
+        get get_RsaOaepSha1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=43 static
+            out string return
+    property rsa_oaep_sha256 static
+        get get_RsaOaepSha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=62 static
+            out string return
+    property rsa_oaep_sha384 static
+        get get_RsaOaepSha384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=99 static
+            out string return
+    property rsa_oaep_sha512 static
+        get get_RsaOaepSha512 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=121 static
+            out string return
+    property rsa_pkcs1 static
+        get get_RsaPkcs1 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=22 static
+            out string return
+    property rsa_sign_pkcs1_sha1 static
+        get get_RsaSignPkcs1Sha1 slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=202 static
+            out string return
+    property rsa_sign_pkcs1_sha384 static
+        get get_RsaSignPkcs1Sha384 slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=218 static
+            out string return
+    property rsa_sign_pkcs1_sha512 static
+        get get_RsaSignPkcs1Sha512 slot=19 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=223 static
+            out string return
+    property rsa_sign_pss_sha1 static
+        get get_RsaSignPssSha1 slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=228 static
+            out string return
+    property rsa_sign_pss_sha256 static
+        get get_RsaSignPssSha256 slot=21 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=232 static
+            out string return
+    property rsa_sign_pss_sha384 static
+        get get_RsaSignPssSha384 slot=22 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=237 static
+            out string return
+    property rsa_sign_pss_sha512 static
+        get get_RsaSignPssSha512 slot=23 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics shape=4 reverse=242 static
+            out string return
+    property ecdsa_sha384 static
+        get get_EcdsaSha384 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2 shape=4 reverse=43 static
+            out string return
+    property ecdsa_sha512 static
+        get get_EcdsaSha512 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2 shape=4 reverse=62 static
+            out string return
+    property ecdsa_sha256 static
+        get get_EcdsaSha256 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider python_type
+    py AsymmetricKeyAlgorithmProvider
+    signature rc(Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider;{e8d2ff37-6259-4e88-b7e0-94191fde699e})
+    default Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2
+    factory Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProviderStatics
+    property algorithm_name
+        get get_AlgorithmName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=4 reverse=22
+            out string return
+    method create_key_pair
+        method CreateKeyPair slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=51 reverse=44
+            in uint32 name=keySize
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method create_key_pair_with_curve_name
+        method CreateKeyPairWithCurveName slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2 shape=51 reverse=24
+            in string name=curveName
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method create_key_pair_with_curve_parameters
+        method CreateKeyPairWithCurveParameters slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2 shape=117 reverse=45
+            pass_array uint8 name=parameters
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method import_key_pair
+        method ImportKeyPair slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IBuffer name=keyBlob
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+        method ImportKeyPair slot=9 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=117 reverse=101
+            in interface type=Windows.Storage.Streams.IBuffer name=keyBlob
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType name=BlobType
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method import_public_key
+        method ImportPublicKey slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=51 reverse=124
+            in interface type=Windows.Storage.Streams.IBuffer name=keyBlob
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+        method ImportPublicKey slot=11 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider shape=117 reverse=145
+            in interface type=Windows.Storage.Streams.IBuffer name=keyBlob
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType name=BlobType
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method open_algorithm static
+        method OpenAlgorithm slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProviderStatics shape=51 reverse=24 static
+            in string name=algorithm
+            out class type=Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider return
+
+enum Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm python_type
+    py Capi1KdfTargetAlgorithm
+    signature enum(Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm;i4)
+
+class Windows.Security.Cryptography.Core.CryptographicEngine static python_type
+    py CryptographicEngine
+    factory Windows.Security.Cryptography.Core.ICryptographicEngineStatics2
+    factory Windows.Security.Cryptography.Core.ICryptographicEngineStatics
+    method decrypt static
+        method Decrypt slot=7 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=195 reverse=46 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=iv
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method decrypt_and_authenticate static
+        method DecryptAndAuthenticate slot=9 inputs=5 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=267 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=nonce
+            in interface type=Windows.Storage.Streams.IBuffer name=authenticationTag
+            in interface type=Windows.Storage.Streams.IBuffer name=authenticatedData
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method decrypt_async static
+        method DecryptAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 shape=195 reverse=68 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=iv
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method derive_key_material static
+        method DeriveKeyMaterial slot=12 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=195 reverse=165 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in class type=Windows.Security.Cryptography.Core.KeyDerivationParameters name=parameters
+            in uint32 name=desiredKeySize
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method encrypt static
+        method Encrypt slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=195 reverse=26 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=iv
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method encrypt_and_authenticate static
+        method EncryptAndAuthenticate slot=8 inputs=4 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=239 reverse=69 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=nonce
+            in interface type=Windows.Storage.Streams.IBuffer name=authenticatedData
+            out class type=Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData return
+    method sign static
+        method Sign slot=10 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=117 reverse=125 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method sign_async static
+        method SignAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 shape=117 reverse=101 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method sign_hashed_data static
+        method SignHashedData slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 shape=117 reverse=25 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method sign_hashed_data_async static
+        method SignHashedDataAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 shape=117 reverse=125 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method verify_signature static
+        method VerifySignature slot=11 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=195 reverse=146 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=signature
+            out boolean return
+    method verify_signature_with_hash_input static
+        method VerifySignatureWithHashInput slot=7 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics2 shape=195 reverse=46 static
+            in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in interface type=Windows.Storage.Streams.IBuffer name=signature
+            out boolean return
+
+class Windows.Security.Cryptography.Core.CryptographicHash python_type
+    py CryptographicHash
+    signature rc(Windows.Security.Cryptography.Core.CryptographicHash;{5904d1b6-ad31-4603-a3a4-b1bda98e2562})
+    default Windows.Security.Cryptography.Core.IHashComputation
+    requires Windows.Security.Cryptography.Core.IHashComputation
+    method append
+        method Append slot=6 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Core.IHashComputation shape=4 reverse=22
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+    method get_value_and_reset
+        method GetValueAndReset slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashComputation shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Security.Cryptography.Core.CryptographicKey python_type
+    py CryptographicKey
+    signature rc(Windows.Security.Cryptography.Core.CryptographicKey;{ed2a3b70-8e7b-4009-8401-ffd1a62eeb27})
+    default Windows.Security.Cryptography.Core.ICryptographicKey
+    requires Windows.Security.Cryptography.Core.ICryptographicKey
+    property key_size
+        get get_KeySize slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicKey shape=4 reverse=22
+            out uint32 return
+    method export
+        method Export slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicKey shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+        method Export slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicKey shape=51 reverse=65
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType name=BlobType
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method export_public_key
+        method ExportPublicKey slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicKey shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IBuffer return
+        method ExportPublicKey slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicKey shape=51 reverse=124
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType name=BlobType
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+enum Windows.Security.Cryptography.Core.CryptographicPadding python_type
+    py CryptographicPadding
+    signature enum(Windows.Security.Cryptography.Core.CryptographicPadding;i4)
+
+enum Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType python_type
+    py CryptographicPrivateKeyBlobType
+    signature enum(Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType;i4)
+
+enum Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType python_type
+    py CryptographicPublicKeyBlobType
+    signature enum(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType;i4)
+
+class Windows.Security.Cryptography.Core.EccCurveNames static python_type
+    py EccCurveNames
+    factory Windows.Security.Cryptography.Core.IEccCurveNamesStatics
+    property all_ecc_curve_names static
+        get get_AllEccCurveNames slot=51 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=355 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property brainpool_p160r1 static
+        get get_BrainpoolP160r1 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=22 static
+            out string return
+    property brainpool_p160t1 static
+        get get_BrainpoolP160t1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=43 static
+            out string return
+    property brainpool_p192r1 static
+        get get_BrainpoolP192r1 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=62 static
+            out string return
+    property brainpool_p192t1 static
+        get get_BrainpoolP192t1 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=99 static
+            out string return
+    property brainpool_p224r1 static
+        get get_BrainpoolP224r1 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=121 static
+            out string return
+    property brainpool_p224t1 static
+        get get_BrainpoolP224t1 slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=141 static
+            out string return
+    property brainpool_p256r1 static
+        get get_BrainpoolP256r1 slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=162 static
+            out string return
+    property brainpool_p256t1 static
+        get get_BrainpoolP256t1 slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=173 static
+            out string return
+    property brainpool_p320r1 static
+        get get_BrainpoolP320r1 slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=186 static
+            out string return
+    property brainpool_p320t1 static
+        get get_BrainpoolP320t1 slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=194 static
+            out string return
+    property brainpool_p384r1 static
+        get get_BrainpoolP384r1 slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=202 static
+            out string return
+    property brainpool_p384t1 static
+        get get_BrainpoolP384t1 slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=210 static
+            out string return
+    property brainpool_p512r1 static
+        get get_BrainpoolP512r1 slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=218 static
+            out string return
+    property brainpool_p512t1 static
+        get get_BrainpoolP512t1 slot=19 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=223 static
+            out string return
+    property curve25519 static
+        get get_Curve25519 slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=228 static
+            out string return
+    property ec192wapi static
+        get get_Ec192wapi slot=21 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=232 static
+            out string return
+    property nist_p192 static
+        get get_NistP192 slot=22 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=237 static
+            out string return
+    property nist_p224 static
+        get get_NistP224 slot=23 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=242 static
+            out string return
+    property nist_p256 static
+        get get_NistP256 slot=24 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=247 static
+            out string return
+    property nist_p384 static
+        get get_NistP384 slot=25 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=252 static
+            out string return
+    property nist_p521 static
+        get get_NistP521 slot=26 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=255 static
+            out string return
+    property nums_p256t1 static
+        get get_NumsP256t1 slot=27 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=259 static
+            out string return
+    property nums_p384t1 static
+        get get_NumsP384t1 slot=28 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=263 static
+            out string return
+    property nums_p512t1 static
+        get get_NumsP512t1 slot=29 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=266 static
+            out string return
+    property sec_p160k1 static
+        get get_SecP160k1 slot=30 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=270 static
+            out string return
+    property sec_p160r1 static
+        get get_SecP160r1 slot=31 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=273 static
+            out string return
+    property sec_p160r2 static
+        get get_SecP160r2 slot=32 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=280 static
+            out string return
+    property sec_p192k1 static
+        get get_SecP192k1 slot=33 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=285 static
+            out string return
+    property sec_p192r1 static
+        get get_SecP192r1 slot=34 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=288 static
+            out string return
+    property sec_p224k1 static
+        get get_SecP224k1 slot=35 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=292 static
+            out string return
+    property sec_p224r1 static
+        get get_SecP224r1 slot=36 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=296 static
+            out string return
+    property sec_p256k1 static
+        get get_SecP256k1 slot=37 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=299 static
+            out string return
+    property sec_p256r1 static
+        get get_SecP256r1 slot=38 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=302 static
+            out string return
+    property sec_p384r1 static
+        get get_SecP384r1 slot=39 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=307 static
+            out string return
+    property sec_p521r1 static
+        get get_SecP521r1 slot=40 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=312 static
+            out string return
+    property wtls12 static
+        get get_Wtls12 slot=43 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=322 static
+            out string return
+    property wtls7 static
+        get get_Wtls7 slot=41 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=316 static
+            out string return
+    property wtls9 static
+        get get_Wtls9 slot=42 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=319 static
+            out string return
+    property x962_p192v1 static
+        get get_X962P192v1 slot=44 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=326 static
+            out string return
+    property x962_p192v2 static
+        get get_X962P192v2 slot=45 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=330 static
+            out string return
+    property x962_p192v3 static
+        get get_X962P192v3 slot=46 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=334 static
+            out string return
+    property x962_p239v1 static
+        get get_X962P239v1 slot=47 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=339 static
+            out string return
+    property x962_p239v2 static
+        get get_X962P239v2 slot=48 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=343 static
+            out string return
+    property x962_p239v3 static
+        get get_X962P239v3 slot=49 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=347 static
+            out string return
+    property x962_p256v1 static
+        get get_X962P256v1 slot=50 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEccCurveNamesStatics shape=4 reverse=351 static
+            out string return
+
+class Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData python_type
+    py EncryptedAndAuthenticatedData
+    signature rc(Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData;{6fa42fe7-1ecb-4b00-bea5-60b83f862f17})
+    default Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData
+    requires Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData
+    property authentication_tag
+        get get_AuthenticationTag slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property encrypted_data
+        get get_EncryptedData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Security.Cryptography.Core.HashAlgorithmNames static python_type
+    py HashAlgorithmNames
+    factory Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics
+    property md5 static
+        get get_Md5 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics shape=4 reverse=22 static
+            out string return
+    property sha1 static
+        get get_Sha1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics shape=4 reverse=43 static
+            out string return
+    property sha256 static
+        get get_Sha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics shape=4 reverse=62 static
+            out string return
+    property sha384 static
+        get get_Sha384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics shape=4 reverse=99 static
+            out string return
+    property sha512 static
+        get get_Sha512 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics shape=4 reverse=121 static
+            out string return
+
+class Windows.Security.Cryptography.Core.HashAlgorithmProvider python_type
+    py HashAlgorithmProvider
+    signature rc(Windows.Security.Cryptography.Core.HashAlgorithmProvider;{be9b3080-b2c3-422b-bce1-ec90efb5d7b5})
+    default Windows.Security.Cryptography.Core.IHashAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IHashAlgorithmProvider
+    factory Windows.Security.Cryptography.Core.IHashAlgorithmProviderStatics
+    property algorithm_name
+        get get_AlgorithmName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmProvider shape=4 reverse=22
+            out string return
+    property hash_length
+        get get_HashLength slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmProvider shape=4 reverse=43
+            out uint32 return
+    method create_hash
+        method CreateHash slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmProvider shape=4 reverse=99
+            out class type=Windows.Security.Cryptography.Core.CryptographicHash return
+    method hash_data
+        method HashData slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmProvider shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method open_algorithm static
+        method OpenAlgorithm slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IHashAlgorithmProviderStatics shape=51 reverse=24 static
+            in string name=algorithm
+            out class type=Windows.Security.Cryptography.Core.HashAlgorithmProvider return
+
+interface Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics
+    guid caf6fce4-67c0-46aa-84f9-752e77449f9b
+
+interface Windows.Security.Cryptography.Core.IAsymmetricAlgorithmNamesStatics2
+    guid f141c0d6-4bff-4f23-ba66-6045b137d5df
+
+interface Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider
+    guid e8d2ff37-6259-4e88-b7e0-94191fde699e
+
+interface Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProvider2
+    guid 4e322a7e-7c4d-4997-ac4f-1b848b36306e
+
+interface Windows.Security.Cryptography.Core.IAsymmetricKeyAlgorithmProviderStatics
+    guid 425bde18-a7f3-47a6-a8d2-c48d6033a65c
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Core.CryptographicKey> concrete
+    guid 81ca789b-98df-5c6a-9531-966238e3e7ae
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Cryptography.Core.CryptographicKey;{ed2a3b70-8e7b-4009-8401-ffd1a62eeb27}))
+    argument Windows.Security.Cryptography.Core.CryptographicKey
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Security.Cryptography.Core.ICryptographicEngineStatics
+    guid 9fea0639-6ff7-4c85-a095-95eb31715eb9
+
+interface Windows.Security.Cryptography.Core.ICryptographicEngineStatics2
+    guid 675948fe-df9f-4191-92c7-6ce6f58420e0
+
+interface Windows.Security.Cryptography.Core.ICryptographicKey
+    guid ed2a3b70-8e7b-4009-8401-ffd1a62eeb27
+
+interface Windows.Security.Cryptography.Core.IEccCurveNamesStatics
+    guid b3ff930c-aeeb-409e-b7d4-9b95295aaecf
+
+interface Windows.Security.Cryptography.Core.IEncryptedAndAuthenticatedData
+    guid 6fa42fe7-1ecb-4b00-bea5-60b83f862f17
+
+interface Windows.Security.Cryptography.Core.IHashAlgorithmNamesStatics
+    guid 6b5e0516-de96-4f0a-8d57-dcc9dae36c76
+
+interface Windows.Security.Cryptography.Core.IHashAlgorithmProvider
+    guid be9b3080-b2c3-422b-bce1-ec90efb5d7b5
+
+interface Windows.Security.Cryptography.Core.IHashAlgorithmProviderStatics
+    guid 9fac9741-5cc4-4336-ae38-6212b75a915a
+
+interface Windows.Security.Cryptography.Core.IHashComputation
+    guid 5904d1b6-ad31-4603-a3a4-b1bda98e2562
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics
+    guid 7b6e363e-94d2-4739-a57b-022e0c3a402a
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2
+    guid 57953fab-6044-466f-97f4-337b7808384d
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider
+    guid e1fba83b-4671-43b7-9158-763aaa98b6bf
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProviderStatics
+    guid 0a22097a-0a1c-443b-9418-b9498aeb1603
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationParameters
+    guid 7bf05967-047b-4a8c-964a-469ffd5522e2
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationParameters2
+    guid cd4166d1-417e-4f4c-b666-c0d879f3f8e0
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics
+    guid ea961fbe-f37f-4146-9dfe-a456f1735f4b
+
+interface Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics2
+    guid a5783dd5-58e3-4efb-b283-a1653126e1be
+
+interface Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics
+    guid 41412678-fb1e-43a4-895e-a9026e4390a3
+
+interface Windows.Security.Cryptography.Core.IMacAlgorithmProvider
+    guid 4a3fc5c3-1cbd-41ce-a092-aa0bc5d2d2f5
+
+interface Windows.Security.Cryptography.Core.IMacAlgorithmProvider2
+    guid 6da32a15-d931-42ed-8e7e-c301caee119c
+
+interface Windows.Security.Cryptography.Core.IMacAlgorithmProviderStatics
+    guid c9bdc147-cc77-4df0-9e4e-b921e080644c
+
+interface Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics
+    guid 77274814-d9d4-4cf5-b668-e0457df30894
+
+interface Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics
+    guid 6870727b-c996-4eae-84d7-79b2aeb73b9c
+
+interface Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+    guid 3d7e4a33-3bd0-4902-8ac8-470d50d21376
+
+interface Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics
+    guid 8d3b2326-1f37-491f-b60e-f5431b26b483
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames static python_type
+    py KeyDerivationAlgorithmNames
+    factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2
+    factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics
+    property pbkdf2_sha256 static
+        get get_Pbkdf2Sha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=62 static
+            out string return
+    property pbkdf2_md5 static
+        get get_Pbkdf2Md5 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=22 static
+            out string return
+    property pbkdf2_sha1 static
+        get get_Pbkdf2Sha1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=43 static
+            out string return
+    property sp800108_ctr_hmac_sha512 static
+        get get_Sp800108CtrHmacSha512 slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=194 static
+            out string return
+    property pbkdf2_sha384 static
+        get get_Pbkdf2Sha384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=99 static
+            out string return
+    property pbkdf2_sha512 static
+        get get_Pbkdf2Sha512 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=121 static
+            out string return
+    property sp800108_ctr_hmac_md5 static
+        get get_Sp800108CtrHmacMd5 slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=141 static
+            out string return
+    property sp800108_ctr_hmac_sha1 static
+        get get_Sp800108CtrHmacSha1 slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=162 static
+            out string return
+    property sp800108_ctr_hmac_sha256 static
+        get get_Sp800108CtrHmacSha256 slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=173 static
+            out string return
+    property sp800108_ctr_hmac_sha384 static
+        get get_Sp800108CtrHmacSha384 slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=186 static
+            out string return
+    property sp80056a_concat_md5 static
+        get get_Sp80056aConcatMd5 slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=202 static
+            out string return
+    property sp80056a_concat_sha1 static
+        get get_Sp80056aConcatSha1 slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=210 static
+            out string return
+    property sp80056a_concat_sha256 static
+        get get_Sp80056aConcatSha256 slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=218 static
+            out string return
+    property sp80056a_concat_sha384 static
+        get get_Sp80056aConcatSha384 slot=19 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=223 static
+            out string return
+    property sp80056a_concat_sha512 static
+        get get_Sp80056aConcatSha512 slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=228 static
+            out string return
+    property capi_kdf_sha1 static
+        get get_CapiKdfSha1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 shape=4 reverse=43 static
+            out string return
+    property capi_kdf_sha256 static
+        get get_CapiKdfSha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 shape=4 reverse=62 static
+            out string return
+    property capi_kdf_sha384 static
+        get get_CapiKdfSha384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 shape=4 reverse=99 static
+            out string return
+    property capi_kdf_sha512 static
+        get get_CapiKdfSha512 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 shape=4 reverse=121 static
+            out string return
+    property capi_kdf_md5 static
+        get get_CapiKdfMd5 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider python_type
+    py KeyDerivationAlgorithmProvider
+    signature rc(Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider;{e1fba83b-4671-43b7-9158-763aaa98b6bf})
+    default Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider
+    factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProviderStatics
+    property algorithm_name
+        get get_AlgorithmName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider shape=4 reverse=22
+            out string return
+    method create_key
+        method CreateKey slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProvider shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IBuffer name=keyMaterial
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method open_algorithm static
+        method OpenAlgorithm slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmProviderStatics shape=51 reverse=24 static
+            in string name=algorithm
+            out class type=Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider return
+
+class Windows.Security.Cryptography.Core.KeyDerivationParameters python_type
+    py KeyDerivationParameters
+    signature rc(Windows.Security.Cryptography.Core.KeyDerivationParameters;{7bf05967-047b-4a8c-964a-469ffd5522e2})
+    default Windows.Security.Cryptography.Core.IKeyDerivationParameters
+    requires Windows.Security.Cryptography.Core.IKeyDerivationParameters
+    requires Windows.Security.Cryptography.Core.IKeyDerivationParameters2
+    factory Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics
+    factory Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics2
+    property kdf_generic_binary
+        get get_KdfGenericBinary slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParameters shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_KdfGenericBinary slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParameters shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property iteration_count
+        get get_IterationCount slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParameters shape=4 reverse=62
+            out uint32 return
+    property capi1_kdf_target_algorithm
+        get get_Capi1KdfTargetAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParameters2 shape=4 reverse=22
+            out enum32 type=Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm return
+        put put_Capi1KdfTargetAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParameters2 shape=4 reverse=43
+            in enum32 type=Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm name=value
+    method build_for_capi1_kdf static
+        method BuildForCapi1Kdf slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm name=capi1KdfTargetAlgorithm
+            out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
+    method build_for_pbkdf2 static
+        method BuildForPbkdf2 slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics shape=117 reverse=25 static
+            in interface type=Windows.Storage.Streams.IBuffer name=pbkdf2Salt
+            in uint32 name=iterationCount
+            out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
+    method build_for_s_p800108 static
+        method BuildForSP800108 slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics shape=117 reverse=45 static
+            in interface type=Windows.Storage.Streams.IBuffer name=label
+            in interface type=Windows.Storage.Streams.IBuffer name=context
+            out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
+    method build_for_s_p80056a static
+        method BuildForSP80056a slot=8 inputs=5 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics shape=267 reverse=70 static
+            in interface type=Windows.Storage.Streams.IBuffer name=algorithmId
+            in interface type=Windows.Storage.Streams.IBuffer name=partyUInfo
+            in interface type=Windows.Storage.Streams.IBuffer name=partyVInfo
+            in interface type=Windows.Storage.Streams.IBuffer name=suppPubInfo
+            in interface type=Windows.Storage.Streams.IBuffer name=suppPrivInfo
+            out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
+
+class Windows.Security.Cryptography.Core.MacAlgorithmNames static python_type
+    py MacAlgorithmNames
+    factory Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics
+    property aes_cmac static
+        get get_AesCmac slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=141 static
+            out string return
+    property hmac_md5 static
+        get get_HmacMd5 slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=22 static
+            out string return
+    property hmac_sha1 static
+        get get_HmacSha1 slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=43 static
+            out string return
+    property hmac_sha256 static
+        get get_HmacSha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=62 static
+            out string return
+    property hmac_sha384 static
+        get get_HmacSha384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=99 static
+            out string return
+    property hmac_sha512 static
+        get get_HmacSha512 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmNamesStatics shape=4 reverse=121 static
+            out string return
+
+class Windows.Security.Cryptography.Core.MacAlgorithmProvider python_type
+    py MacAlgorithmProvider
+    signature rc(Windows.Security.Cryptography.Core.MacAlgorithmProvider;{4a3fc5c3-1cbd-41ce-a092-aa0bc5d2d2f5})
+    default Windows.Security.Cryptography.Core.IMacAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IMacAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.IMacAlgorithmProvider2
+    factory Windows.Security.Cryptography.Core.IMacAlgorithmProviderStatics
+    property algorithm_name
+        get get_AlgorithmName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmProvider shape=4 reverse=22
+            out string return
+    property mac_length
+        get get_MacLength slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmProvider shape=4 reverse=43
+            out uint32 return
+    method create_hash
+        method CreateHash slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmProvider2 shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=keyMaterial
+            out class type=Windows.Security.Cryptography.Core.CryptographicHash return
+    method create_key
+        method CreateKey slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmProvider shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IBuffer name=keyMaterial
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method open_algorithm static
+        method OpenAlgorithm slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.IMacAlgorithmProviderStatics shape=51 reverse=24 static
+            in string name=algorithm
+            out class type=Windows.Security.Cryptography.Core.MacAlgorithmProvider return
+
+class Windows.Security.Cryptography.Core.PersistedKeyProvider static python_type
+    py PersistedKeyProvider
+    factory Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics
+    method open_key_pair_from_certificate_async static
+        method OpenKeyPairFromCertificateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics shape=195 reverse=26 static
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
+            in string name=hashAlgorithmName
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPadding name=padding
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Core.CryptographicKey> return
+    method open_public_key_from_certificate static
+        method OpenPublicKeyFromCertificate slot=7 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.IPersistedKeyProviderStatics shape=195 reverse=46 static
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
+            in string name=hashAlgorithmName
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPadding name=padding
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+
+class Windows.Security.Cryptography.Core.SymmetricAlgorithmNames static python_type
+    py SymmetricAlgorithmNames
+    factory Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics
+    property aes_cbc static
+        get get_AesCbc slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=162 static
+            out string return
+    property aes_cbc_pkcs7 static
+        get get_AesCbcPkcs7 slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=202 static
+            out string return
+    property aes_ccm static
+        get get_AesCcm slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=194 static
+            out string return
+    property aes_ecb static
+        get get_AesEcb slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=173 static
+            out string return
+    property aes_ecb_pkcs7 static
+        get get_AesEcbPkcs7 slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=210 static
+            out string return
+    property aes_gcm static
+        get get_AesGcm slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=186 static
+            out string return
+    property des_cbc static
+        get get_DesCbc slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=22 static
+            out string return
+    property des_cbc_pkcs7 static
+        get get_DesCbcPkcs7 slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=218 static
+            out string return
+    property des_ecb static
+        get get_DesEcb slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=43 static
+            out string return
+    property des_ecb_pkcs7 static
+        get get_DesEcbPkcs7 slot=19 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=223 static
+            out string return
+    property rc2_cbc static
+        get get_Rc2Cbc slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=121 static
+            out string return
+    property rc2_cbc_pkcs7 static
+        get get_Rc2CbcPkcs7 slot=22 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=237 static
+            out string return
+    property rc2_ecb static
+        get get_Rc2Ecb slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=141 static
+            out string return
+    property rc2_ecb_pkcs7 static
+        get get_Rc2EcbPkcs7 slot=23 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=242 static
+            out string return
+    property rc4 static
+        get get_Rc4 slot=24 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=247 static
+            out string return
+    property triple_des_cbc static
+        get get_TripleDesCbc slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=62 static
+            out string return
+    property triple_des_cbc_pkcs7 static
+        get get_TripleDesCbcPkcs7 slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=228 static
+            out string return
+    property triple_des_ecb static
+        get get_TripleDesEcb slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=99 static
+            out string return
+    property triple_des_ecb_pkcs7 static
+        get get_TripleDesEcbPkcs7 slot=21 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics shape=4 reverse=232 static
+            out string return
+
+class Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider python_type
+    py SymmetricKeyAlgorithmProvider
+    signature rc(Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider;{3d7e4a33-3bd0-4902-8ac8-470d50d21376})
+    default Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+    requires Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+    factory Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics
+    property algorithm_name
+        get get_AlgorithmName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider shape=4 reverse=22
+            out string return
+    property block_length
+        get get_BlockLength slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider shape=4 reverse=43
+            out uint32 return
+    method create_symmetric_key
+        method CreateSymmetricKey slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IBuffer name=keyMaterial
+            out class type=Windows.Security.Cryptography.Core.CryptographicKey return
+    method open_algorithm static
+        method OpenAlgorithm slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics shape=51 reverse=24 static
+            in string name=algorithm
+            out class type=Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider return
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Security.Cryptography.Certificates.Certificate external
+    py winrt.windows.security.cryptography.certificates.Certificate
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

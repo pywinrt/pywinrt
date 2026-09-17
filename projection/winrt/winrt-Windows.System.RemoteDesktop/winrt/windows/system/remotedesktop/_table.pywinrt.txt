@@ -1,0 +1,13 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.RemoteDesktop
+
+interface Windows.System.RemoteDesktop.IInteractiveSessionStatics
+    guid 60884631-dd3a-4576-9c8d-e8027618bdce
+
+class Windows.System.RemoteDesktop.InteractiveSession static python_type
+    py InteractiveSession
+    factory Windows.System.RemoteDesktop.IInteractiveSessionStatics
+    property is_remote static
+        get get_IsRemote slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.IInteractiveSessionStatics shape=4 reverse=22 static
+            out boolean return

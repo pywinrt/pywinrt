@@ -1,0 +1,60 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.UIAutomation
+
+class Windows.UI.UIAutomation.AutomationConnection python_type
+    py AutomationConnection
+    signature rc(Windows.UI.UIAutomation.AutomationConnection;{aad262ed-0ef4-5d43-97be-a834e27b65b9})
+    default Windows.UI.UIAutomation.IAutomationConnection
+    requires Windows.UI.UIAutomation.IAutomationConnection
+    property app_user_model_id
+        get get_AppUserModelId slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationConnection shape=4 reverse=43
+            out string return
+    property executable_file_name
+        get get_ExecutableFileName slot=8 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationConnection shape=4 reverse=62
+            out string return
+    property is_remote_system
+        get get_IsRemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationConnection shape=4 reverse=22
+            out boolean return
+
+class Windows.UI.UIAutomation.AutomationConnectionBoundObject python_type
+    py AutomationConnectionBoundObject
+    signature rc(Windows.UI.UIAutomation.AutomationConnectionBoundObject;{5e8558fb-ca52-5b65-9830-dd2905816093})
+    default Windows.UI.UIAutomation.IAutomationConnectionBoundObject
+    requires Windows.UI.UIAutomation.IAutomationConnectionBoundObject
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationConnectionBoundObject shape=4 reverse=22
+            out class type=Windows.UI.UIAutomation.AutomationConnection return
+
+class Windows.UI.UIAutomation.AutomationElement python_type
+    py AutomationElement
+    signature rc(Windows.UI.UIAutomation.AutomationElement;{a1898370-2c07-56fd-993f-61a72a08058c})
+    default Windows.UI.UIAutomation.IAutomationElement
+    requires Windows.UI.UIAutomation.IAutomationElement
+    property app_user_model_id
+        get get_AppUserModelId slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationElement shape=4 reverse=43
+            out string return
+    property executable_file_name
+        get get_ExecutableFileName slot=8 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationElement shape=4 reverse=62
+            out string return
+    property is_remote_system
+        get get_IsRemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.IAutomationElement shape=4 reverse=22
+            out boolean return
+
+class Windows.UI.UIAutomation.AutomationTextRange python_type
+    py AutomationTextRange
+    signature rc(Windows.UI.UIAutomation.AutomationTextRange;{7e101b65-40d3-5994-85a9-0a0cb9a4ec98})
+    default Windows.UI.UIAutomation.IAutomationTextRange
+    requires Windows.UI.UIAutomation.IAutomationTextRange
+
+interface Windows.UI.UIAutomation.IAutomationConnection
+    guid aad262ed-0ef4-5d43-97be-a834e27b65b9
+
+interface Windows.UI.UIAutomation.IAutomationConnectionBoundObject
+    guid 5e8558fb-ca52-5b65-9830-dd2905816093
+
+interface Windows.UI.UIAutomation.IAutomationElement
+    guid a1898370-2c07-56fd-993f-61a72a08058c
+
+interface Windows.UI.UIAutomation.IAutomationTextRange
+    guid 7e101b65-40d3-5994-85a9-0a0cb9a4ec98

@@ -1,0 +1,404 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.Proximity
+
+class Windows.Networking.Proximity.ConnectionRequestedEventArgs python_type
+    py ConnectionRequestedEventArgs
+    signature rc(Windows.Networking.Proximity.ConnectionRequestedEventArgs;{eb6891ae-4f1e-4c66-bd0d-46924a942e08})
+    default Windows.Networking.Proximity.IConnectionRequestedEventArgs
+    requires Windows.Networking.Proximity.IConnectionRequestedEventArgs
+    property peer_information
+        get get_PeerInformation slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IConnectionRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Networking.Proximity.PeerInformation return
+
+delegate Windows.Networking.Proximity.DeviceArrivedEventHandler python_type
+    py DeviceArrivedEventHandler
+    guid efa9da69-f6e1-49c9-a49e-8e0fc58fb911
+    signature delegate({efa9da69-f6e1-49c9-a49e-8e0fc58fb911})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Networking.Proximity.ProximityDevice name=sender
+
+delegate Windows.Networking.Proximity.DeviceDepartedEventHandler python_type
+    py DeviceDepartedEventHandler
+    guid efa9da69-f6e2-49c9-a49e-8e0fc58fb911
+    signature delegate({efa9da69-f6e2-49c9-a49e-8e0fc58fb911})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Networking.Proximity.ProximityDevice name=sender
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>> concrete
+    guid a36ec4bc-607a-5180-a785-4042f8795c8b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Proximity.PeerInformation;{20024f08-9fff-45f4-b6e9-408b2ebef373})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Sockets.StreamSocket> concrete
+    guid fb3e3d3c-6fe5-5e27-a132-902247e2a93e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.Sockets.StreamSocket;{69a22cf3-fc7b-4857-af38-f6e7de6a5b49}))
+    argument Windows.Networking.Sockets.StreamSocket
+
+interface Windows.Networking.Proximity.IConnectionRequestedEventArgs
+    guid eb6891ae-4f1e-4c66-bd0d-46924a942e08
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Networking.Proximity.IPeerFinderStatics
+    guid 914b3b61-f6e1-47c4-a14c-148a1903d0c6
+
+interface Windows.Networking.Proximity.IPeerFinderStatics2
+    guid d6e73c65-fdd0-4b0b-9312-866408935d82
+
+interface Windows.Networking.Proximity.IPeerInformation
+    guid 20024f08-9fff-45f4-b6e9-408b2ebef373
+
+interface Windows.Networking.Proximity.IPeerInformation3
+    guid b20f612a-dbd0-40f8-95bd-2d4209c7836f
+
+interface Windows.Networking.Proximity.IPeerInformationWithHostAndService
+    guid ecc7ccad-1b70-4e8b-92db-bbe781419308
+
+interface Windows.Networking.Proximity.IPeerWatcher
+    guid 3cee21f8-2fa6-4679-9691-03c94a420f34
+
+interface Windows.Networking.Proximity.IProximityDevice
+    guid efa8a552-f6e1-4329-a0fc-ab6b0fd28262
+
+interface Windows.Networking.Proximity.IProximityDeviceStatics
+    guid 914ba01d-f6e1-47c4-a14c-148a1903d0c6
+
+interface Windows.Networking.Proximity.IProximityMessage
+    guid efab0782-f6e1-4675-a045-d8e320c24808
+
+interface Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs
+    guid c6a780ad-f6e1-4d54-96e2-33f620bca88a
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation> concrete
+    guid 948f92bc-2a05-5c80-95f2-96fe345852cc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Proximity.PeerInformation;{20024f08-9fff-45f4-b6e9-408b2ebef373}))
+    argument Windows.Networking.Proximity.PeerInformation
+
+delegate Windows.Networking.Proximity.MessageReceivedHandler python_type
+    py MessageReceivedHandler
+    guid efab0782-f6e2-4675-a045-d8e320c24808
+    signature delegate({efab0782-f6e2-4675-a045-d8e320c24808})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.Proximity.ProximityDevice name=sender
+            in class type=Windows.Networking.Proximity.ProximityMessage name=message
+
+delegate Windows.Networking.Proximity.MessageTransmittedHandler python_type
+    py MessageTransmittedHandler
+    guid efaa0b4a-f6e2-4d7d-856c-78fc8efc021e
+    signature delegate({efaa0b4a-f6e2-4d7d-856c-78fc8efc021e})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in class type=Windows.Networking.Proximity.ProximityDevice name=sender
+            in int64 name=messageId
+
+enum Windows.Networking.Proximity.PeerDiscoveryTypes python_type
+    py PeerDiscoveryTypes
+    signature enum(Windows.Networking.Proximity.PeerDiscoveryTypes;u4)
+
+class Windows.Networking.Proximity.PeerFinder static python_type
+    py PeerFinder
+    factory Windows.Networking.Proximity.IPeerFinderStatics2
+    factory Windows.Networking.Proximity.IPeerFinderStatics
+    property display_name static
+        get get_DisplayName slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=162 static
+            out string return
+        put put_DisplayName slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=173 static
+            in string name=value
+    property allow_wi_fi_direct static
+        get get_AllowWiFiDirect slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=121 static
+            out boolean return
+        put put_AllowWiFiDirect slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=141 static
+            in boolean name=value
+    property allow_infrastructure static
+        get get_AllowInfrastructure slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=62 static
+            out boolean return
+        put put_AllowInfrastructure slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=99 static
+            in boolean name=value
+    property allow_bluetooth static
+        get get_AllowBluetooth slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=22 static
+            out boolean return
+        put put_AllowBluetooth slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=43 static
+            in boolean name=value
+    property alternate_identities static
+        get get_AlternateIdentities slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=194 static
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property supported_discovery_types static
+        get get_SupportedDiscoveryTypes slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=186 static
+            out enum_u32 type=Windows.Networking.Proximity.PeerDiscoveryTypes return
+    property role static
+        get get_Role slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics2 shape=4 reverse=22 static
+            out enum32 type=Windows.Networking.Proximity.PeerRole return
+        put put_Role slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics2 shape=4 reverse=43 static
+            in enum32 type=Windows.Networking.Proximity.PeerRole name=value
+    property discovery_data static
+        get get_DiscoveryData slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics2 shape=4 reverse=62 static
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_DiscoveryData slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics2 shape=4 reverse=99 static
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    event connection_requested static
+        add add_ConnectionRequested slot=21 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=51 reverse=233 static
+            in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.ConnectionRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_ConnectionRequested slot=22 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=26 reverse=400 static
+            in event_token name=cookie
+    event triggered_connection_state_changed static
+        add add_TriggeredConnectionStateChanged slot=19 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=51 reverse=224 static
+            in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_TriggeredConnectionStateChanged slot=20 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=26 reverse=399 static
+            in event_token name=cookie
+    method connect_async static
+        method ConnectAsync slot=24 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=51 reverse=248 static
+            in class type=Windows.Networking.Proximity.PeerInformation name=peerInformation
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Sockets.StreamSocket> return
+    method create_watcher static
+        method CreateWatcher slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics2 shape=4 reverse=121 static
+            out class type=Windows.Networking.Proximity.PeerWatcher return
+    method find_all_peers_async static
+        method FindAllPeersAsync slot=23 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=242 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>> return
+    method start static
+        method Start slot=16 inputs=0 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=0 reverse=201 static
+        method Start slot=17 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=210 static
+            in string name=peerMessage
+    method stop static
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=0 reverse=217 static
+
+class Windows.Networking.Proximity.PeerInformation python_type
+    py PeerInformation
+    signature rc(Windows.Networking.Proximity.PeerInformation;{20024f08-9fff-45f4-b6e9-408b2ebef373})
+    default Windows.Networking.Proximity.IPeerInformation
+    requires Windows.Networking.Proximity.IPeerInformation
+    requires Windows.Networking.Proximity.IPeerInformation3
+    requires Windows.Networking.Proximity.IPeerInformationWithHostAndService
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerInformation shape=4 reverse=22
+            out string return
+    property discovery_data
+        get get_DiscoveryData slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerInformation3 shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerInformation3 shape=4 reverse=22
+            out string return
+    property host_name
+        get get_HostName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerInformationWithHostAndService shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property service_name
+        get get_ServiceName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerInformationWithHostAndService shape=4 reverse=43
+            out string return
+
+enum Windows.Networking.Proximity.PeerRole python_type
+    py PeerRole
+    signature enum(Windows.Networking.Proximity.PeerRole;i4)
+
+class Windows.Networking.Proximity.PeerWatcher python_type
+    py PeerWatcher
+    signature rc(Windows.Networking.Proximity.PeerWatcher;{3cee21f8-2fa6-4679-9691-03c94a420f34})
+    default Windows.Networking.Proximity.IPeerWatcher
+    requires Windows.Networking.Proximity.IPeerWatcher
+    property status
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=4 reverse=202
+            out enum32 type=Windows.Networking.Proximity.PeerWatcherStatus return
+    event added
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,Windows.Networking.Proximity.PeerInformation> name=handler
+            out event_token return
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=26 reverse=53
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=26 reverse=181
+            in event_token name=token
+    event removed
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,Windows.Networking.Proximity.PeerInformation> name=handler
+            out event_token return
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=26 reverse=110
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=26 reverse=200
+            in event_token name=token
+    event updated
+        add add_Updated slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IPeerWatcher shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,Windows.Networking.Proximity.PeerInformation> name=handler
+            out event_token return
+        remove remove_Updated slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=26 reverse=156
+            in event_token name=token
+    method start
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=0 reverse=209
+    method stop
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Networking.Proximity.IPeerWatcher shape=0 reverse=217
+
+enum Windows.Networking.Proximity.PeerWatcherStatus python_type
+    py PeerWatcherStatus
+    signature enum(Windows.Networking.Proximity.PeerWatcherStatus;i4)
+
+class Windows.Networking.Proximity.ProximityDevice python_type
+    py ProximityDevice
+    signature rc(Windows.Networking.Proximity.ProximityDevice;{efa8a552-f6e1-4329-a0fc-ab6b0fd28262})
+    default Windows.Networking.Proximity.IProximityDevice
+    requires Windows.Networking.Proximity.IProximityDevice
+    factory Windows.Networking.Proximity.IProximityDeviceStatics
+    property bits_per_second
+        get get_BitsPerSecond slot=20 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=4 reverse=228
+            out uint64 return
+    property device_id
+        get get_DeviceId slot=21 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=4 reverse=232
+            out string return
+    property max_message_bytes
+        get get_MaxMessageBytes slot=19 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=4 reverse=223
+            out uint32 return
+    event device_arrived
+        add add_DeviceArrived slot=15 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=51 reverse=196
+            in delegate type=Windows.Networking.Proximity.DeviceArrivedEventHandler name=arrivedHandler
+            out event_token return
+        remove remove_DeviceArrived slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IProximityDevice shape=26 reverse=397
+            in event_token name=cookie
+    event device_departed
+        add add_DeviceDeparted slot=17 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=51 reverse=211
+            in delegate type=Windows.Networking.Proximity.DeviceDepartedEventHandler name=departedHandler
+            out event_token return
+        remove remove_DeviceDeparted slot=18 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IProximityDevice shape=26 reverse=398
+            in event_token name=cookie
+    method from_id static
+        method FromId slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IProximityDeviceStatics shape=51 reverse=65 static
+            in string name=deviceId
+            out class type=Windows.Networking.Proximity.ProximityDevice return
+    method get_default static
+        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityDeviceStatics shape=4 reverse=43 static
+            out class type=Windows.Networking.Proximity.ProximityDevice return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityDeviceStatics shape=4 reverse=22 static
+            out string return
+    method publish_binary_message
+        method PublishBinaryMessage slot=9 inputs=2 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=117 reverse=101
+            in string name=messageType
+            in interface type=Windows.Storage.Streams.IBuffer name=message
+            out int64 return
+        method PublishBinaryMessage slot=10 inputs=3 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=195 reverse=126
+            in string name=messageType
+            in interface type=Windows.Storage.Streams.IBuffer name=message
+            in delegate type=Windows.Networking.Proximity.MessageTransmittedHandler name=messageTransmittedHandler
+            out int64 return
+    method publish_message
+        method PublishMessage slot=7 inputs=2 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=117 reverse=45
+            in string name=messageType
+            in string name=message
+            out int64 return
+        method PublishMessage slot=8 inputs=3 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=195 reverse=68
+            in string name=messageType
+            in string name=message
+            in delegate type=Windows.Networking.Proximity.MessageTransmittedHandler name=messageTransmittedHandler
+            out int64 return
+    method publish_uri_message
+        method PublishUriMessage slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=51 reverse=144
+            in class type=Windows.Foundation.Uri name=message
+            out int64 return
+        method PublishUriMessage slot=12 inputs=2 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=117 reverse=164
+            in class type=Windows.Foundation.Uri name=message
+            in delegate type=Windows.Networking.Proximity.MessageTransmittedHandler name=messageTransmittedHandler
+            out int64 return
+    method stop_publishing_message
+        method StopPublishingMessage slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IProximityDevice shape=3
+            in int64 name=messageId
+    method stop_subscribing_for_message
+        method StopSubscribingForMessage slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Proximity.IProximityDevice shape=3
+            in int64 name=subscriptionId
+    method subscribe_for_message
+        method SubscribeForMessage slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Proximity.IProximityDevice shape=117 reverse=25
+            in string name=messageType
+            in delegate type=Windows.Networking.Proximity.MessageReceivedHandler name=messageReceivedHandler
+            out int64 return
+
+class Windows.Networking.Proximity.ProximityMessage python_type
+    py ProximityMessage
+    signature rc(Windows.Networking.Proximity.ProximityMessage;{efab0782-f6e1-4675-a045-d8e320c24808})
+    default Windows.Networking.Proximity.IProximityMessage
+    requires Windows.Networking.Proximity.IProximityMessage
+    property data
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityMessage shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property data_as_string
+        get get_DataAsString slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityMessage shape=4 reverse=99
+            out string return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityMessage shape=4 reverse=22
+            out string return
+    property subscription_id
+        get get_SubscriptionId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IProximityMessage shape=4 reverse=43
+            out int64 return
+
+enum Windows.Networking.Proximity.TriggeredConnectState python_type
+    py TriggeredConnectState
+    signature enum(Windows.Networking.Proximity.TriggeredConnectState;i4)
+
+class Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs python_type
+    py TriggeredConnectionStateChangedEventArgs
+    signature rc(Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs;{c6a780ad-f6e1-4d54-96e2-33f620bca88a})
+    default Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs
+    requires Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs shape=4 reverse=43
+            out uint32 return
+    property socket
+        get get_Socket slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs shape=4 reverse=62
+            out class type=Windows.Networking.Sockets.StreamSocket return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Networking.Proximity.TriggeredConnectState return
+
+delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.ConnectionRequestedEventArgs> concrete
+    guid 512c383c-8b29-5079-953e-8dee8f8a8224
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Networking.Proximity.ConnectionRequestedEventArgs;{eb6891ae-4f1e-4c66-bd0d-46924a942e08}))
+    argument System.Object
+    argument Windows.Networking.Proximity.ConnectionRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs> concrete
+    guid 2e5ad6fa-3ca6-5518-bd4d-fefc4535580e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs;{c6a780ad-f6e1-4d54-96e2-33f620bca88a}))
+    argument System.Object
+    argument Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,System.Object> concrete
+    guid f4979ea1-7e06-50a8-88dc-3f29524e4fdb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Proximity.PeerWatcher;{3cee21f8-2fa6-4679-9691-03c94a420f34});cinterface(IInspectable))
+    argument Windows.Networking.Proximity.PeerWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Proximity.PeerWatcher,Windows.Networking.Proximity.PeerInformation> concrete
+    guid ad674bbf-6281-5943-9772-e0fd7664d4e1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Proximity.PeerWatcher;{3cee21f8-2fa6-4679-9691-03c94a420f34});rc(Windows.Networking.Proximity.PeerInformation;{20024f08-9fff-45f4-b6e9-408b2ebef373}))
+    argument Windows.Networking.Proximity.PeerWatcher
+    argument Windows.Networking.Proximity.PeerInformation
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+class Windows.Networking.Sockets.StreamSocket external
+    py winrt.windows.networking.sockets.StreamSocket
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

@@ -1,0 +1,467 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Text
+
+enum Windows.Data.Text.AlternateNormalizationFormat python_type
+    py AlternateNormalizationFormat
+    signature enum(Windows.Data.Text.AlternateNormalizationFormat;i4)
+
+class Windows.Data.Text.AlternateWordForm python_type
+    py AlternateWordForm
+    signature rc(Windows.Data.Text.AlternateWordForm;{47396c1e-51b9-4207-9146-248e636a1d1d})
+    default Windows.Data.Text.IAlternateWordForm
+    requires Windows.Data.Text.IAlternateWordForm
+    property alternate_text
+        get get_AlternateText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.IAlternateWordForm shape=4 reverse=43
+            out string return
+    property normalization_format
+        get get_NormalizationFormat slot=8 inputs=0 outputs=1 declaring=Windows.Data.Text.IAlternateWordForm shape=4 reverse=62
+            out enum32 type=Windows.Data.Text.AlternateNormalizationFormat return
+    property source_text_segment
+        get get_SourceTextSegment slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.IAlternateWordForm shape=4 reverse=22
+            out struct type=Windows.Data.Text.TextSegment return
+
+interface Windows.Data.Text.IAlternateWordForm
+    guid 47396c1e-51b9-4207-9146-248e636a1d1d
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> concrete
+    guid 6bc3019d-dd10-5510-b164-808c232b7d64
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> concrete
+    guid 784b0cec-1348-5334-91e5-2e013294e211
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b}))
+    argument Windows.Data.Text.SelectableWordSegment
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> concrete
+    guid d14dc94a-a311-5ddc-bf8b-d58795d87d6d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}))
+    argument Windows.Data.Text.WordSegment
+
+interface Windows.Data.Text.ISelectableWordSegment
+    guid 916a4cb7-8aa7-4c78-b374-5dedb752e60b
+
+interface Windows.Data.Text.ISelectableWordsSegmenter
+    guid f6dc31e7-4b13-45c5-8897-7d71269e085d
+
+interface Windows.Data.Text.ISelectableWordsSegmenterFactory
+    guid 8c7a7648-6057-4339-bc70-f210010a4150
+
+interface Windows.Data.Text.ISemanticTextQuery
+    guid 6a1cab51-1fb2-4909-80b8-35731a2b3e7f
+
+interface Windows.Data.Text.ISemanticTextQueryFactory
+    guid 238c0503-f995-4587-8777-a2b7d80acfef
+
+interface Windows.Data.Text.ITextConversionGenerator
+    guid 03606a5e-2aa9-4ab6-af8b-a562b63a8992
+
+interface Windows.Data.Text.ITextConversionGeneratorFactory
+    guid fcaa3781-3083-49ab-be15-56dfbbb74d6f
+
+interface Windows.Data.Text.ITextPhoneme
+    guid 9362a40a-9b7a-4569-94cf-d84f2f38cf9b
+
+interface Windows.Data.Text.ITextPredictionGenerator
+    guid 5eacab07-abf1-4cb6-9d9e-326f2b468756
+
+interface Windows.Data.Text.ITextPredictionGenerator2
+    guid b84723b8-2c77-486a-900a-a3453eedc15d
+
+interface Windows.Data.Text.ITextPredictionGeneratorFactory
+    guid 7257b416-8ba2-4751-9d30-9d85435653a2
+
+interface Windows.Data.Text.ITextReverseConversionGenerator
+    guid 51e7f514-9c51-4d86-ae1b-b498fbad8313
+
+interface Windows.Data.Text.ITextReverseConversionGenerator2
+    guid 1aafd2ec-85d6-46fd-828a-3a4830fa6e18
+
+interface Windows.Data.Text.ITextReverseConversionGeneratorFactory
+    guid 63bed326-1fda-41f6-89d5-23ddea3c729a
+
+interface Windows.Data.Text.IUnicodeCharactersStatics
+    guid 97909e87-9291-4f91-b6c8-b6e359d7a7fb
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> concrete
+    guid 6b742ff2-746a-5545-a6ed-3bba453cf5d9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.AlternateWordForm;{47396c1e-51b9-4207-9146-248e636a1d1d}))
+    argument Windows.Data.Text.AlternateWordForm
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> concrete
+    guid 33f90a72-86f4-5027-b50a-6939a1f9d560
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b}))
+    argument Windows.Data.Text.SelectableWordSegment
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> concrete
+    guid cfc6e66d-5e2a-582d-8b6d-fbf71cf3d0eb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b}))
+    argument Windows.Data.Text.TextPhoneme
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete
+    guid 2f245f9d-eb5f-5641-9dcc-6ab1946cc7e6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))
+    argument Windows.Data.Text.TextSegment
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> concrete
+    guid c706749a-e11d-5e07-8534-2bd23ec210f9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}))
+    argument Windows.Data.Text.WordSegment
+
+interface Windows.Data.Text.IWordSegment
+    guid d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a
+
+interface Windows.Data.Text.IWordsSegmenter
+    guid 86b4d4d1-b2fe-4e34-a81d-66640300454f
+
+interface Windows.Data.Text.IWordsSegmenterFactory
+    guid e6977274-fc35-455c-8bfb-6d7f4653ca97
+
+class Windows.Data.Text.SelectableWordSegment python_type
+    py SelectableWordSegment
+    signature rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b})
+    default Windows.Data.Text.ISelectableWordSegment
+    requires Windows.Data.Text.ISelectableWordSegment
+    property source_text_segment
+        get get_SourceTextSegment slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.ISelectableWordSegment shape=4 reverse=43
+            out struct type=Windows.Data.Text.TextSegment return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ISelectableWordSegment shape=4 reverse=22
+            out string return
+
+delegate Windows.Data.Text.SelectableWordSegmentsTokenizingHandler python_type
+    py SelectableWordSegmentsTokenizingHandler
+    guid 3a3dfc9c-aede-4dc7-9e6c-41c044bd3592
+    signature delegate({3a3dfc9c-aede-4dc7-9e6c-41c044bd3592})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> name=precedingWords
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> name=words
+
+class Windows.Data.Text.SelectableWordsSegmenter python_type
+    py SelectableWordsSegmenter
+    signature rc(Windows.Data.Text.SelectableWordsSegmenter;{f6dc31e7-4b13-45c5-8897-7d71269e085d})
+    default Windows.Data.Text.ISelectableWordsSegmenter
+    requires Windows.Data.Text.ISelectableWordsSegmenter
+    factory Windows.Data.Text.ISelectableWordsSegmenterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ISelectableWordsSegmenterFactory shape=51 reverse=24
+            in string name=language
+            out class type=Windows.Data.Text.SelectableWordsSegmenter return
+    property resolved_language
+        get get_ResolvedLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ISelectableWordsSegmenter shape=4 reverse=22
+            out string return
+    method get_token_at
+        method GetTokenAt slot=7 inputs=2 outputs=1 declaring=Windows.Data.Text.ISelectableWordsSegmenter shape=117 reverse=45
+            in string name=text
+            in uint32 name=startIndex
+            out class type=Windows.Data.Text.SelectableWordSegment return
+    method get_tokens
+        method GetTokens slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.ISelectableWordsSegmenter shape=51 reverse=65
+            in string name=text
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> return
+    method tokenize
+        method Tokenize slot=9 inputs=3 outputs=0 declaring=Windows.Data.Text.ISelectableWordsSegmenter shape=117 reverse=101
+            in string name=text
+            in uint32 name=startIndex
+            in delegate type=Windows.Data.Text.SelectableWordSegmentsTokenizingHandler name=handler
+
+class Windows.Data.Text.SemanticTextQuery python_type
+    py SemanticTextQuery
+    signature rc(Windows.Data.Text.SemanticTextQuery;{6a1cab51-1fb2-4909-80b8-35731a2b3e7f})
+    default Windows.Data.Text.ISemanticTextQuery
+    requires Windows.Data.Text.ISemanticTextQuery
+    factory Windows.Data.Text.ISemanticTextQueryFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ISemanticTextQueryFactory shape=51 reverse=24
+            in string name=aqsFilter
+            out class type=Windows.Data.Text.SemanticTextQuery return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Data.Text.ISemanticTextQueryFactory shape=117 reverse=45
+            in string name=aqsFilter
+            in string name=filterLanguage
+            out class type=Windows.Data.Text.SemanticTextQuery return
+    method find
+        method Find slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ISemanticTextQuery shape=51 reverse=24
+            in string name=content
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
+    method find_in_property
+        method FindInProperty slot=7 inputs=2 outputs=1 declaring=Windows.Data.Text.ISemanticTextQuery shape=117 reverse=45
+            in string name=propertyContent
+            in string name=propertyName
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
+
+class Windows.Data.Text.TextConversionGenerator python_type
+    py TextConversionGenerator
+    signature rc(Windows.Data.Text.TextConversionGenerator;{03606a5e-2aa9-4ab6-af8b-a562b63a8992})
+    default Windows.Data.Text.ITextConversionGenerator
+    requires Windows.Data.Text.ITextConversionGenerator
+    factory Windows.Data.Text.ITextConversionGeneratorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextConversionGeneratorFactory shape=51 reverse=24
+            in string name=languageTag
+            out class type=Windows.Data.Text.TextConversionGenerator return
+    property language_available_but_not_installed
+        get get_LanguageAvailableButNotInstalled slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextConversionGenerator shape=4 reverse=43
+            out boolean return
+    property resolved_language
+        get get_ResolvedLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextConversionGenerator shape=4 reverse=22
+            out string return
+    method get_candidates_async
+        method GetCandidatesAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextConversionGenerator shape=51 reverse=65
+            in string name=input
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+        method GetCandidatesAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Text.ITextConversionGenerator shape=117 reverse=101
+            in string name=input
+            in uint32 name=maxCandidates
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+
+class Windows.Data.Text.TextPhoneme python_type
+    py TextPhoneme
+    signature rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b})
+    default Windows.Data.Text.ITextPhoneme
+    requires Windows.Data.Text.ITextPhoneme
+    property display_text
+        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextPhoneme shape=4 reverse=22
+            out string return
+    property reading_text
+        get get_ReadingText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextPhoneme shape=4 reverse=43
+            out string return
+
+class Windows.Data.Text.TextPredictionGenerator python_type
+    py TextPredictionGenerator
+    signature rc(Windows.Data.Text.TextPredictionGenerator;{5eacab07-abf1-4cb6-9d9e-326f2b468756})
+    default Windows.Data.Text.ITextPredictionGenerator
+    requires Windows.Data.Text.ITextPredictionGenerator
+    requires Windows.Data.Text.ITextPredictionGenerator2
+    factory Windows.Data.Text.ITextPredictionGeneratorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextPredictionGeneratorFactory shape=51 reverse=24
+            in string name=languageTag
+            out class type=Windows.Data.Text.TextPredictionGenerator return
+    property language_available_but_not_installed
+        get get_LanguageAvailableButNotInstalled slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator shape=4 reverse=43
+            out boolean return
+    property resolved_language
+        get get_ResolvedLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator shape=4 reverse=22
+            out string return
+    property input_scope
+        get get_InputScope slot=8 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator2 shape=4 reverse=62
+            out enum32 type=Windows.UI.Text.Core.CoreTextInputScope return
+        put put_InputScope slot=9 inputs=1 outputs=0 declaring=Windows.Data.Text.ITextPredictionGenerator2 shape=4 reverse=99
+            in enum32 type=Windows.UI.Text.Core.CoreTextInputScope name=value
+    method get_candidates_async
+        method GetCandidatesAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator shape=51 reverse=65
+            in string name=input
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+        method GetCandidatesAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator shape=117 reverse=101
+            in string name=input
+            in uint32 name=maxCandidates
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+        method GetCandidatesAsync slot=6 inputs=4 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator2 shape=239 reverse=27
+            in string name=input
+            in uint32 name=maxCandidates
+            in enum_u32 type=Windows.Data.Text.TextPredictionOptions name=predictionOptions
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=previousStrings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method get_next_word_candidates_async
+        method GetNextWordCandidatesAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Text.ITextPredictionGenerator2 shape=117 reverse=45
+            in uint32 name=maxCandidates
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=previousStrings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+
+enum Windows.Data.Text.TextPredictionOptions python_type
+    py TextPredictionOptions
+    signature enum(Windows.Data.Text.TextPredictionOptions;u4)
+
+class Windows.Data.Text.TextReverseConversionGenerator python_type
+    py TextReverseConversionGenerator
+    signature rc(Windows.Data.Text.TextReverseConversionGenerator;{51e7f514-9c51-4d86-ae1b-b498fbad8313})
+    default Windows.Data.Text.ITextReverseConversionGenerator
+    requires Windows.Data.Text.ITextReverseConversionGenerator
+    requires Windows.Data.Text.ITextReverseConversionGenerator2
+    factory Windows.Data.Text.ITextReverseConversionGeneratorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextReverseConversionGeneratorFactory shape=51 reverse=24
+            in string name=languageTag
+            out class type=Windows.Data.Text.TextReverseConversionGenerator return
+    property language_available_but_not_installed
+        get get_LanguageAvailableButNotInstalled slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextReverseConversionGenerator shape=4 reverse=43
+            out boolean return
+    property resolved_language
+        get get_ResolvedLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.ITextReverseConversionGenerator shape=4 reverse=22
+            out string return
+    method convert_back_async
+        method ConvertBackAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextReverseConversionGenerator shape=51 reverse=65
+            in string name=input
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_phonemes_async
+        method GetPhonemesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.ITextReverseConversionGenerator2 shape=51 reverse=24
+            in string name=input
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> return
+
+struct Windows.Data.Text.TextSegment python_type
+    py TextSegment
+    signature struct(Windows.Data.Text.TextSegment;u4;u4)
+    field start_position StartPosition uint32
+    field length Length uint32
+
+class Windows.Data.Text.UnicodeCharacters static python_type
+    py UnicodeCharacters
+    factory Windows.Data.Text.IUnicodeCharactersStatics
+    method get_codepoint_from_surrogate_pair static
+        method GetCodepointFromSurrogatePair slot=6 inputs=2 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=117 reverse=25 static
+            in uint32 name=highSurrogate
+            in uint32 name=lowSurrogate
+            out uint32 return
+    method get_general_category static
+        method GetGeneralCategory slot=22 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=238 static
+            in uint32 name=codepoint
+            out enum32 type=Windows.Data.Text.UnicodeGeneralCategory return
+    method get_numeric_type static
+        method GetNumericType slot=21 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=233 static
+            in uint32 name=codepoint
+            out enum32 type=Windows.Data.Text.UnicodeNumericType return
+    method get_surrogate_pair_from_codepoint static
+        method GetSurrogatePairFromCodepoint slot=7 inputs=1 outputs=2 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=117 reverse=45 static
+            in uint32 name=codepoint
+            out char16 name=highSurrogate
+            out char16 name=lowSurrogate
+    method is_alphabetic static
+        method IsAlphabetic slot=13 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=174 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_cased static
+        method IsCased slot=14 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=187 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_grapheme_base static
+        method IsGraphemeBase slot=19 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=224 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_grapheme_extend static
+        method IsGraphemeExtend slot=20 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=229 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_high_surrogate static
+        method IsHighSurrogate slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=65 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_id_continue static
+        method IsIdContinue slot=18 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=219 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_id_start static
+        method IsIdStart slot=17 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=211 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_low_surrogate static
+        method IsLowSurrogate slot=9 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=100 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_lowercase static
+        method IsLowercase slot=16 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=203 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_noncharacter static
+        method IsNoncharacter slot=11 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=144 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_supplementary static
+        method IsSupplementary slot=10 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=124 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_uppercase static
+        method IsUppercase slot=15 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=196 static
+            in uint32 name=codepoint
+            out boolean return
+    method is_whitespace static
+        method IsWhitespace slot=12 inputs=1 outputs=1 declaring=Windows.Data.Text.IUnicodeCharactersStatics shape=51 reverse=163 static
+            in uint32 name=codepoint
+            out boolean return
+
+enum Windows.Data.Text.UnicodeGeneralCategory python_type
+    py UnicodeGeneralCategory
+    signature enum(Windows.Data.Text.UnicodeGeneralCategory;i4)
+
+enum Windows.Data.Text.UnicodeNumericType python_type
+    py UnicodeNumericType
+    signature enum(Windows.Data.Text.UnicodeNumericType;i4)
+
+class Windows.Data.Text.WordSegment python_type
+    py WordSegment
+    signature rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a})
+    default Windows.Data.Text.IWordSegment
+    requires Windows.Data.Text.IWordSegment
+    property alternate_forms
+        get get_AlternateForms slot=8 inputs=0 outputs=1 declaring=Windows.Data.Text.IWordSegment shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> return
+    property source_text_segment
+        get get_SourceTextSegment slot=7 inputs=0 outputs=1 declaring=Windows.Data.Text.IWordSegment shape=4 reverse=43
+            out struct type=Windows.Data.Text.TextSegment return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.IWordSegment shape=4 reverse=22
+            out string return
+
+delegate Windows.Data.Text.WordSegmentsTokenizingHandler python_type
+    py WordSegmentsTokenizingHandler
+    guid a5dd6357-bf2a-4c4f-a31f-29e71c6f8b35
+    signature delegate({a5dd6357-bf2a-4c4f-a31f-29e71c6f8b35})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> name=precedingWords
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> name=words
+
+class Windows.Data.Text.WordsSegmenter python_type
+    py WordsSegmenter
+    signature rc(Windows.Data.Text.WordsSegmenter;{86b4d4d1-b2fe-4e34-a81d-66640300454f})
+    default Windows.Data.Text.IWordsSegmenter
+    requires Windows.Data.Text.IWordsSegmenter
+    factory Windows.Data.Text.IWordsSegmenterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Text.IWordsSegmenterFactory shape=51 reverse=24
+            in string name=language
+            out class type=Windows.Data.Text.WordsSegmenter return
+    property resolved_language
+        get get_ResolvedLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.IWordsSegmenter shape=4 reverse=22
+            out string return
+    method get_token_at
+        method GetTokenAt slot=7 inputs=2 outputs=1 declaring=Windows.Data.Text.IWordsSegmenter shape=117 reverse=45
+            in string name=text
+            in uint32 name=startIndex
+            out class type=Windows.Data.Text.WordSegment return
+    method get_tokens
+        method GetTokens slot=8 inputs=1 outputs=1 declaring=Windows.Data.Text.IWordsSegmenter shape=51 reverse=65
+            in string name=text
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> return
+    method tokenize
+        method Tokenize slot=9 inputs=3 outputs=0 declaring=Windows.Data.Text.IWordsSegmenter shape=117 reverse=101
+            in string name=text
+            in uint32 name=startIndex
+            in delegate type=Windows.Data.Text.WordSegmentsTokenizingHandler name=handler
+
+class System.String external
+    py winrt.system.String
+
+enum Windows.UI.Text.Core.CoreTextInputScope external
+    py winrt.windows.ui.text.core.CoreTextInputScope

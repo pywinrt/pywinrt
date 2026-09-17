@@ -1,0 +1,1568 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.Sockets
+
+struct Windows.Networking.Sockets.BandwidthStatistics python_type
+    py BandwidthStatistics
+    signature struct(Windows.Networking.Sockets.BandwidthStatistics;u8;u8;u8;u8;b1;b1)
+    field outbound_bits_per_second OutboundBitsPerSecond uint64
+    field inbound_bits_per_second InboundBitsPerSecond uint64
+    field outbound_bits_per_second_instability OutboundBitsPerSecondInstability uint64
+    field inbound_bits_per_second_instability InboundBitsPerSecondInstability uint64
+    field outbound_bandwidth_peaked OutboundBandwidthPeaked boolean
+    field inbound_bandwidth_peaked InboundBandwidthPeaked boolean
+
+class Windows.Networking.Sockets.ControlChannelTrigger python_type closeable
+    py ControlChannelTrigger
+    signature rc(Windows.Networking.Sockets.ControlChannelTrigger;{7d1431a7-ee96-40e8-a199-8703cd969ec3})
+    default Windows.Networking.Sockets.IControlChannelTrigger
+    requires Windows.Networking.Sockets.IControlChannelTrigger
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IControlChannelTrigger2
+    factory Windows.Networking.Sockets.IControlChannelTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerFactory shape=117 reverse=25
+            in string name=channelId
+            in uint32 name=serverKeepAliveIntervalInMinutes
+            out class type=Windows.Networking.Sockets.ControlChannelTrigger return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerFactory shape=195 reverse=46
+            in string name=channelId
+            in uint32 name=serverKeepAliveIntervalInMinutes
+            in enum32 type=Windows.Networking.Sockets.ControlChannelTriggerResourceType name=resourceRequestType
+            out class type=Windows.Networking.Sockets.ControlChannelTrigger return
+    property server_keep_alive_interval_in_minutes
+        get get_ServerKeepAliveIntervalInMinutes slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=43
+            out uint32 return
+        put put_ServerKeepAliveIntervalInMinutes slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=62
+            in uint32 name=value
+    property control_channel_trigger_id
+        get get_ControlChannelTriggerId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=22
+            out string return
+    property current_keep_alive_interval_in_minutes
+        get get_CurrentKeepAliveIntervalInMinutes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=99
+            out uint32 return
+    property keep_alive_trigger
+        get get_KeepAliveTrigger slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=141
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTrigger return
+    property push_notification_trigger
+        get get_PushNotificationTrigger slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=162
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTrigger return
+    property transport_object
+        get get_TransportObject slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=121
+            out object return
+    property is_wake_from_low_power_supported
+        get get_IsWakeFromLowPowerSupported slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger2 shape=4 reverse=22
+            out boolean return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method decrease_network_keep_alive_interval
+        method DecreaseNetworkKeepAliveInterval slot=15 inputs=0 outputs=0 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=0 reverse=193
+    method flush_transport
+        method FlushTransport slot=16 inputs=0 outputs=0 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=0 reverse=201
+    method using_transport
+        method UsingTransport slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=173
+            in object name=transport
+    method wait_for_push_enabled
+        method WaitForPushEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTrigger shape=4 reverse=186
+            out enum32 type=Windows.Networking.Sockets.ControlChannelTriggerStatus return
+
+enum Windows.Networking.Sockets.ControlChannelTriggerResetReason python_type
+    py ControlChannelTriggerResetReason
+    signature enum(Windows.Networking.Sockets.ControlChannelTriggerResetReason;i4)
+
+enum Windows.Networking.Sockets.ControlChannelTriggerResourceType python_type
+    py ControlChannelTriggerResourceType
+    signature enum(Windows.Networking.Sockets.ControlChannelTriggerResourceType;i4)
+
+enum Windows.Networking.Sockets.ControlChannelTriggerStatus python_type
+    py ControlChannelTriggerStatus
+    signature enum(Windows.Networking.Sockets.ControlChannelTriggerStatus;i4)
+
+class Windows.Networking.Sockets.DatagramSocket activatable python_type closeable
+    py DatagramSocket
+    signature rc(Windows.Networking.Sockets.DatagramSocket;{7fe25bbb-c3bc-4677-8446-ca28a465a3af})
+    default Windows.Networking.Sockets.IDatagramSocket
+    requires Windows.Networking.Sockets.IDatagramSocket
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IDatagramSocket2
+    requires Windows.Networking.Sockets.IDatagramSocket3
+    factory Windows.Networking.Sockets.IDatagramSocketStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property control
+        get get_Control slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.DatagramSocketControl return
+    property information
+        get get_Information slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.DatagramSocketInformation return
+    property output_stream
+        get get_OutputStream slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event message_received
+        add add_MessageReceived slot=16 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.DatagramSocket,Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_MessageReceived slot=17 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket shape=26 reverse=215
+            in event_token name=eventCookie
+    method bind_endpoint_async
+        method BindEndpointAsync slot=12 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=117 reverse=164
+            in class type=Windows.Networking.HostName name=localHostName
+            in string name=localServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+    method bind_service_name_async
+        method BindServiceNameAsync slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=51 reverse=144
+            in string name=localServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method BindServiceNameAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket2 shape=117 reverse=25
+            in string name=localServiceName
+            in class type=Windows.Networking.Connectivity.NetworkAdapter name=adapter
+            out interface type=Windows.Foundation.IAsyncAction return
+    method cancel_io_async
+        method CancelIOAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method connect_async
+        method ConnectAsync slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=51 reverse=124
+            in class type=Windows.Networking.EndpointPair name=endpointPair
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ConnectAsync slot=9 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=117 reverse=101
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+    method enable_transfer_ownership
+        method EnableTransferOwnership slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=33
+            in guid name=taskId
+        method EnableTransferOwnership slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=94 reverse=87
+            in guid name=taskId
+            in enum32 type=Windows.Networking.Sockets.SocketActivityConnectedStandbyAction name=connectedStandbyAction
+    method get_endpoint_pairs_async static
+        method GetEndpointPairsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketStatics shape=117 reverse=25 static
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> return
+        method GetEndpointPairsAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketStatics shape=195 reverse=46 static
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            in enum_u32 type=Windows.Networking.HostNameSortOptions name=sortOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> return
+    method get_output_stream_async
+        method GetOutputStreamAsync slot=15 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=51 reverse=196
+            in class type=Windows.Networking.EndpointPair name=endpointPair
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IOutputStream> return
+        method GetOutputStreamAsync slot=14 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=117 reverse=188
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IOutputStream> return
+    method join_multicast_group
+        method JoinMulticastGroup slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket shape=4 reverse=173
+            in class type=Windows.Networking.HostName name=host
+    method transfer_ownership
+        method TransferOwnership slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=4 reverse=99
+            in string name=socketId
+        method TransferOwnership slot=10 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=51 reverse=124
+            in string name=socketId
+            in class type=Windows.Networking.Sockets.SocketActivityContext name=data
+        method TransferOwnership slot=11 inputs=3 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket3 shape=125
+            in string name=socketId
+            in class type=Windows.Networking.Sockets.SocketActivityContext name=data
+            in timespan name=keepAliveTime
+
+class Windows.Networking.Sockets.DatagramSocketControl python_type
+    py DatagramSocketControl
+    signature rc(Windows.Networking.Sockets.DatagramSocketControl;{52ac3f2e-349a-4135-bb58-b79b2647d390})
+    default Windows.Networking.Sockets.IDatagramSocketControl
+    requires Windows.Networking.Sockets.IDatagramSocketControl
+    requires Windows.Networking.Sockets.IDatagramSocketControl2
+    requires Windows.Networking.Sockets.IDatagramSocketControl3
+    property quality_of_service
+        get get_QualityOfService slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketControl shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketQualityOfService return
+        put put_QualityOfService slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocketControl shape=4 reverse=43
+            in enum32 type=Windows.Networking.Sockets.SocketQualityOfService name=value
+    property outbound_unicast_hop_limit
+        get get_OutboundUnicastHopLimit slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketControl shape=4 reverse=62
+            out uint8 return
+        put put_OutboundUnicastHopLimit slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocketControl shape=4 reverse=99
+            in uint8 name=value
+    property inbound_buffer_size_in_bytes
+        get get_InboundBufferSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketControl2 shape=4 reverse=22
+            out uint32 return
+        put put_InboundBufferSizeInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocketControl2 shape=4 reverse=43
+            in uint32 name=value
+    property dont_fragment
+        get get_DontFragment slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketControl2 shape=4 reverse=62
+            out boolean return
+        put put_DontFragment slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocketControl2 shape=4 reverse=99
+            in boolean name=value
+    property multicast_only
+        get get_MulticastOnly slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketControl3 shape=4 reverse=22
+            out boolean return
+        put put_MulticastOnly slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocketControl3 shape=4 reverse=43
+            in boolean name=value
+
+class Windows.Networking.Sockets.DatagramSocketInformation python_type
+    py DatagramSocketInformation
+    signature rc(Windows.Networking.Sockets.DatagramSocketInformation;{5f1a569a-55fb-48cd-9706-7a974f7b1585})
+    default Windows.Networking.Sockets.IDatagramSocketInformation
+    requires Windows.Networking.Sockets.IDatagramSocketInformation
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property local_port
+        get get_LocalPort slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketInformation shape=4 reverse=43
+            out string return
+    property remote_address
+        get get_RemoteAddress slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketInformation shape=4 reverse=62
+            out class type=Windows.Networking.HostName return
+    property remote_port
+        get get_RemotePort slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketInformation shape=4 reverse=99
+            out string return
+
+class Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs python_type
+    py DatagramSocketMessageReceivedEventArgs
+    signature rc(Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs;{9e2ddca2-1712-4ce4-b179-8c652c6d107e})
+    default Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs
+    requires Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs
+    property local_address
+        get get_LocalAddress slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Networking.HostName return
+    property remote_address
+        get get_RemoteAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property remote_port
+        get get_RemotePort slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs shape=4 reverse=43
+            out string return
+    method get_data_reader
+        method GetDataReader slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.Storage.Streams.DataReader return
+    method get_data_stream
+        method GetDataStream slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IInputStream return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> concrete
+    guid afc2ff8e-e393-566a-89c4-d043e940050d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IOutputStream> concrete
+    guid e8736833-d013-5361-977d-c5e99934680e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe6-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IOutputStream
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+    guid eccb574a-c684-5572-a679-6b0842cfb57f
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    argument System.UInt32
+    argument System.UInt32
+
+interface Windows.Networking.Sockets.IControlChannelTrigger
+    guid 7d1431a7-ee96-40e8-a199-8703cd969ec3
+
+interface Windows.Networking.Sockets.IControlChannelTrigger2
+    guid af00d237-51be-4514-9725-3556e1879580
+
+interface Windows.Networking.Sockets.IControlChannelTriggerEventDetails python_type
+    py _IControlChannelTriggerEventDetails
+    guid 1b36e047-89bb-4236-96ac-71d012bb4869
+    signature {1b36e047-89bb-4236-96ac-71d012bb4869}
+    property control_channel_trigger
+        get get_ControlChannelTrigger slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerEventDetails shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.ControlChannelTrigger return
+
+interface Windows.Networking.Sockets.IControlChannelTriggerFactory
+    guid da4b7cf0-8d71-446f-88c3-b95184a2d6cd
+
+interface Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails python_type
+    py _IControlChannelTriggerResetEventDetails
+    guid 6851038e-8ec4-42fe-9bb2-21e91b7bfcb1
+    signature {6851038e-8ec4-42fe-9bb2-21e91b7bfcb1}
+    property hardware_slot_reset
+        get get_HardwareSlotReset slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails shape=4 reverse=43
+            out boolean return
+    property reset_reason
+        get get_ResetReason slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.ControlChannelTriggerResetReason return
+    property software_slot_reset
+        get get_SoftwareSlotReset slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails shape=4 reverse=62
+            out boolean return
+
+interface Windows.Networking.Sockets.IDatagramSocket
+    guid 7fe25bbb-c3bc-4677-8446-ca28a465a3af
+
+interface Windows.Networking.Sockets.IDatagramSocket2
+    guid d83ba354-9a9d-4185-a20a-1424c9c2a7cd
+
+interface Windows.Networking.Sockets.IDatagramSocket3
+    guid 37544f09-ab92-4306-9ac1-0c381283d9c6
+
+interface Windows.Networking.Sockets.IDatagramSocketControl
+    guid 52ac3f2e-349a-4135-bb58-b79b2647d390
+
+interface Windows.Networking.Sockets.IDatagramSocketControl2
+    guid 33ead5c2-979c-4415-82a1-3cfaf646c192
+
+interface Windows.Networking.Sockets.IDatagramSocketControl3
+    guid d4eb8256-1f6d-4598-9b57-d42a001df349
+
+interface Windows.Networking.Sockets.IDatagramSocketInformation
+    guid 5f1a569a-55fb-48cd-9706-7a974f7b1585
+
+interface Windows.Networking.Sockets.IDatagramSocketMessageReceivedEventArgs
+    guid 9e2ddca2-1712-4ce4-b179-8c652c6d107e
+
+interface Windows.Networking.Sockets.IDatagramSocketStatics
+    guid e9c62aee-1494-4a21-bb7e-8589fc751d9d
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Networking.Sockets.SocketActivityInformation> concrete
+    guid e6ac8bee-a31c-5af2-9227-5be2f9e80763
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Networking.Sockets.SocketActivityInformation;{8d8a42e4-a87e-4b74-9968-185b2511defe}))
+    argument System.String
+    argument Windows.Networking.Sockets.SocketActivityInformation
+
+interface Windows.Networking.Sockets.IMessageWebSocket
+    guid 33727d08-34d5-4746-ad7b-8dde5bc2ef88
+
+interface Windows.Networking.Sockets.IMessageWebSocket2
+    guid bed0cee7-f9c8-440a-9ad5-737281d9742e
+
+interface Windows.Networking.Sockets.IMessageWebSocket3
+    guid 59d9defb-71af-4349-8487-911fcf681597
+
+interface Windows.Networking.Sockets.IMessageWebSocketControl
+    guid 8118388a-c629-4f0a-80fb-81fc05538862
+
+interface Windows.Networking.Sockets.IMessageWebSocketControl2
+    guid e30fd791-080c-400a-a712-27dfa9e744d8
+
+interface Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs
+    guid 478c22ac-4c4b-42ed-9ed7-1ef9f94fa3d5
+
+interface Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2
+    guid 89ce06fd-dd6f-4a07-87f9-f9eb4d89d83d
+
+interface Windows.Networking.Sockets.IServerMessageWebSocket
+    guid e3ac9240-813b-5efd-7e11-ae2305fc77f1
+
+interface Windows.Networking.Sockets.IServerMessageWebSocketControl
+    guid 69c2f051-1c1f-587a-4519-2181610192b7
+
+interface Windows.Networking.Sockets.IServerMessageWebSocketInformation
+    guid fc32b45f-4448-5505-6cc9-09afa8915f5d
+
+interface Windows.Networking.Sockets.IServerStreamWebSocket
+    guid 2ced5bbf-74f6-55e4-79df-9132680dfee8
+
+interface Windows.Networking.Sockets.IServerStreamWebSocketInformation
+    guid fc32b45f-4448-5505-6cc9-09aba8915f5d
+
+interface Windows.Networking.Sockets.ISocketActivityContext
+    guid 43b04d64-4c85-4396-a637-1d973f6ebd49
+
+interface Windows.Networking.Sockets.ISocketActivityContextFactory
+    guid b99fc3c3-088c-4388-83ae-2525138e049a
+
+interface Windows.Networking.Sockets.ISocketActivityInformation
+    guid 8d8a42e4-a87e-4b74-9968-185b2511defe
+
+interface Windows.Networking.Sockets.ISocketActivityInformationStatics
+    guid 8570b47a-7e7d-4736-8041-1327a6543c56
+
+interface Windows.Networking.Sockets.ISocketActivityTriggerDetails
+    guid 45f406a7-fc9f-4f81-acad-355fef51e67b
+
+interface Windows.Networking.Sockets.ISocketErrorStatics
+    guid 828337f4-7d56-4d8e-b7b4-a07dd7c1bca9
+
+interface Windows.Networking.Sockets.IStreamSocket
+    guid 69a22cf3-fc7b-4857-af38-f6e7de6a5b49
+
+interface Windows.Networking.Sockets.IStreamSocket2
+    guid 29d0e575-f314-4d09-adf0-0fbd967fbd9f
+
+interface Windows.Networking.Sockets.IStreamSocket3
+    guid 3f430b00-9d28-4854-bac3-2301941ec223
+
+interface Windows.Networking.Sockets.IStreamSocketControl
+    guid fe25adf1-92ab-4af3-9992-0f4c85e36cc4
+
+interface Windows.Networking.Sockets.IStreamSocketControl2
+    guid c2d09a56-060f-44c1-b8e2-1fbf60bd62c5
+
+interface Windows.Networking.Sockets.IStreamSocketControl3
+    guid c56a444c-4e74-403e-894c-b31cae5c7342
+
+interface Windows.Networking.Sockets.IStreamSocketControl4
+    guid 964e2b3d-ec27-4888-b3ce-c74b418423ad
+
+interface Windows.Networking.Sockets.IStreamSocketInformation
+    guid 3b80ae30-5e68-4205-88f0-dc85d2e25ded
+
+interface Windows.Networking.Sockets.IStreamSocketInformation2
+    guid 12c28452-4bdc-4ee4-976a-cf130e9d92e3
+
+interface Windows.Networking.Sockets.IStreamSocketListener
+    guid ff513437-df9f-4df0-bf82-0ec5d7b35aae
+
+interface Windows.Networking.Sockets.IStreamSocketListener2
+    guid 658dc13e-bb3e-4458-b232-ed1088694b98
+
+interface Windows.Networking.Sockets.IStreamSocketListener3
+    guid 4798201c-bdf8-4919-8542-28d450e74507
+
+interface Windows.Networking.Sockets.IStreamSocketListenerConnectionReceivedEventArgs
+    guid 0c472ea9-373f-447b-85b1-ddd4548803ba
+
+interface Windows.Networking.Sockets.IStreamSocketListenerControl
+    guid 20d8c576-8d8a-4dba-9722-a16c4d984980
+
+interface Windows.Networking.Sockets.IStreamSocketListenerControl2
+    guid 948bb665-2c3e-404b-b8b0-8eb249a2b0a1
+
+interface Windows.Networking.Sockets.IStreamSocketListenerInformation
+    guid e62ba82f-a63a-430b-bf62-29e93e5633b4
+
+interface Windows.Networking.Sockets.IStreamSocketStatics
+    guid a420bc4a-6e2e-4af5-b556-355ae0cd4f29
+
+interface Windows.Networking.Sockets.IStreamWebSocket
+    guid bd4a49d8-b289-45bb-97eb-c7525205a843
+
+interface Windows.Networking.Sockets.IStreamWebSocket2
+    guid aa4d08cb-93f5-4678-8236-57cce5417ed5
+
+interface Windows.Networking.Sockets.IStreamWebSocketControl
+    guid b4f478b1-a45a-48db-953a-645b7d964c07
+
+interface Windows.Networking.Sockets.IStreamWebSocketControl2
+    guid 215d9f7e-fa58-40da-9f11-a48dafe95037
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete
+    guid d7828cf7-4301-58d3-aab5-06e5eefcf79f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> concrete
+    guid 8780a851-6d48-5006-9288-81f3d7045a96
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d}))
+    argument Windows.Networking.EndpointPair
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete
+    guid 963f7013-77c2-51c5-8038-b5bcef633edb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    argument Windows.Security.Cryptography.Certificates.Certificate
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete
+    guid cb383486-c2bc-5756-912d-6a708a07e5bd
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+
+interface Windows.Networking.Sockets.IWebSocket python_type closeable
+    py _IWebSocket
+    guid f877396f-99b1-4e18-bc08-850c9adf156e
+    signature {f877396f-99b1-4e18-bc08-850c9adf156e}
+    requires Windows.Foundation.IClosable
+    property output_stream
+        get get_OutputStream slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event closed
+        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
+            in event_token name=eventCookie
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
+            in uint16 name=code
+            in string name=reason
+    method connect_async
+        method ConnectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=uri
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_request_header
+        method SetRequestHeader slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=65
+            in string name=headerName
+            in string name=headerValue
+
+interface Windows.Networking.Sockets.IWebSocketClosedEventArgs
+    guid ceb78d07-d0a8-4703-a091-c8c2c0915bc3
+
+interface Windows.Networking.Sockets.IWebSocketControl python_type
+    py _IWebSocketControl
+    guid 2ec4bdc3-d9a5-455a-9811-de24d45337e9
+    signature {2ec4bdc3-d9a5-455a-9811-de24d45337e9}
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=22
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=43
+            in uint32 name=value
+    property proxy_credential
+        get get_ProxyCredential slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=121
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=141
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property server_credential
+        get get_ServerCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property supported_protocols
+        get get_SupportedProtocols slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+interface Windows.Networking.Sockets.IWebSocketControl2 python_type
+    py _IWebSocketControl2
+    guid 79c3be03-f2ca-461e-af4e-9665bc2d0620
+    signature {79c3be03-f2ca-461e-af4e-9665bc2d0620}
+    requires Windows.Networking.Sockets.IWebSocketControl
+    property ignorable_server_certificate_errors
+        get get_IgnorableServerCertificateErrors slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=22
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=43
+            in uint32 name=value
+    property proxy_credential
+        get get_ProxyCredential slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=121
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=141
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property server_credential
+        get get_ServerCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property supported_protocols
+        get get_SupportedProtocols slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+interface Windows.Networking.Sockets.IWebSocketErrorStatics
+    guid 27cdf35b-1f61-4709-8e02-61283ada4e9d
+
+interface Windows.Networking.Sockets.IWebSocketInformation python_type
+    py _IWebSocketInformation
+    guid 5e01e316-c92a-47a5-b25f-07847639d181
+    signature {5e01e316-c92a-47a5-b25f-07847639d181}
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=43
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=62
+            out string return
+
+interface Windows.Networking.Sockets.IWebSocketInformation2 python_type
+    py _IWebSocketInformation2
+    guid ce1d39ce-a1b7-4d43-8269-8d5b981bd47a
+    signature {ce1d39ce-a1b7-4d43-8269-8d5b981bd47a}
+    requires Windows.Networking.Sockets.IWebSocketInformation
+    property server_certificate
+        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=22
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=43
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=43
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=62
+            out string return
+
+interface Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs
+    guid ffeffe48-022a-4ab7-8b36-e10af4640e6b
+
+class Windows.Networking.Sockets.MessageWebSocket activatable python_type closeable
+    py MessageWebSocket
+    signature rc(Windows.Networking.Sockets.MessageWebSocket;{33727d08-34d5-4746-ad7b-8dde5bc2ef88})
+    default Windows.Networking.Sockets.IMessageWebSocket
+    requires Windows.Networking.Sockets.IMessageWebSocket
+    requires Windows.Networking.Sockets.IWebSocket
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IMessageWebSocket2
+    requires Windows.Networking.Sockets.IMessageWebSocket3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property control
+        get get_Control slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.MessageWebSocketControl return
+    property information
+        get get_Information slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.MessageWebSocketInformation return
+    property output_stream
+        get get_OutputStream slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event message_received
+        add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=26 reverse=110
+            in event_token name=eventCookie
+    event closed
+        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
+            in event_token name=eventCookie
+    event server_custom_validation_requested
+        add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocket2 shape=26 reverse=53
+            in event_token name=eventCookie
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
+            in uint16 name=code
+            in string name=reason
+    method connect_async
+        method ConnectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=uri
+            out interface type=Windows.Foundation.IAsyncAction return
+    method send_final_frame_async
+        method SendFinalFrameAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket3 shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+    method send_nonfinal_frame_async
+        method SendNonfinalFrameAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket3 shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+    method set_request_header
+        method SetRequestHeader slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=65
+            in string name=headerName
+            in string name=headerValue
+
+class Windows.Networking.Sockets.MessageWebSocketControl python_type
+    py MessageWebSocketControl
+    signature rc(Windows.Networking.Sockets.MessageWebSocketControl;{8118388a-c629-4f0a-80fb-81fc05538862})
+    default Windows.Networking.Sockets.IMessageWebSocketControl
+    requires Windows.Networking.Sockets.IMessageWebSocketControl
+    requires Windows.Networking.Sockets.IWebSocketControl
+    requires Windows.Networking.Sockets.IWebSocketControl2
+    requires Windows.Networking.Sockets.IMessageWebSocketControl2
+    property message_type
+        get get_MessageType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl shape=4 reverse=62
+            out enum32 type=Windows.Networking.Sockets.SocketMessageType return
+        put put_MessageType slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocketControl shape=4 reverse=99
+            in enum32 type=Windows.Networking.Sockets.SocketMessageType name=value
+    property max_message_size
+        get get_MaxMessageSize slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl shape=4 reverse=22
+            out uint32 return
+        put put_MaxMessageSize slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocketControl shape=4 reverse=43
+            in uint32 name=value
+    property receive_mode
+        get get_ReceiveMode slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=99
+            out enum32 type=Windows.Networking.Sockets.MessageWebSocketReceiveMode return
+        put put_ReceiveMode slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=121
+            in enum32 type=Windows.Networking.Sockets.MessageWebSocketReceiveMode name=value
+    property desired_unsolicited_pong_interval
+        get get_DesiredUnsolicitedPongInterval slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=22
+            out timespan return
+        put put_DesiredUnsolicitedPongInterval slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=26 reverse=53
+            in timespan name=value
+    property client_certificate
+        get get_ClientCertificate slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=141
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+        put put_ClientCertificate slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=162
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+    property actual_unsolicited_pong_interval
+        get get_ActualUnsolicitedPongInterval slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketControl2 shape=4 reverse=62
+            out timespan return
+    property server_credential
+        get get_ServerCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property proxy_credential
+        get get_ProxyCredential slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=121
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=141
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=22
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=43
+            in uint32 name=value
+    property supported_protocols
+        get get_SupportedProtocols slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property ignorable_server_certificate_errors
+        get get_IgnorableServerCertificateErrors slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+
+class Windows.Networking.Sockets.MessageWebSocketInformation python_type
+    py MessageWebSocketInformation
+    signature rc(Windows.Networking.Sockets.MessageWebSocketInformation;{5e01e316-c92a-47a5-b25f-07847639d181})
+    default Windows.Networking.Sockets.IWebSocketInformation
+    requires Windows.Networking.Sockets.IWebSocketInformation
+    requires Windows.Networking.Sockets.IWebSocketInformation2
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=43
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=62
+            out string return
+    property server_certificate
+        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=22
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=43
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+
+class Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs python_type
+    py MessageWebSocketMessageReceivedEventArgs
+    signature rc(Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs;{478c22ac-4c4b-42ed-9ed7-1ef9f94fa3d5})
+    default Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs
+    requires Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs
+    requires Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketMessageType return
+    property is_message_complete
+        get get_IsMessageComplete slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs2 shape=4 reverse=22
+            out boolean return
+    method get_data_reader
+        method GetDataReader slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs shape=4 reverse=43
+            out class type=Windows.Storage.Streams.DataReader return
+    method get_data_stream
+        method GetDataStream slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocketMessageReceivedEventArgs shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IInputStream return
+
+enum Windows.Networking.Sockets.MessageWebSocketReceiveMode python_type
+    py MessageWebSocketReceiveMode
+    signature enum(Windows.Networking.Sockets.MessageWebSocketReceiveMode;i4)
+
+struct Windows.Networking.Sockets.RoundTripTimeStatistics python_type
+    py RoundTripTimeStatistics
+    signature struct(Windows.Networking.Sockets.RoundTripTimeStatistics;u4;u4;u4;u4)
+    field variance Variance uint32
+    field max Max uint32
+    field min Min uint32
+    field sum Sum uint32
+
+class Windows.Networking.Sockets.ServerMessageWebSocket python_type closeable
+    py ServerMessageWebSocket
+    signature rc(Windows.Networking.Sockets.ServerMessageWebSocket;{e3ac9240-813b-5efd-7e11-ae2305fc77f1})
+    default Windows.Networking.Sockets.IServerMessageWebSocket
+    requires Windows.Networking.Sockets.IServerMessageWebSocket
+    requires Windows.Foundation.IClosable
+    property control
+        get get_Control slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=4 reverse=62
+            out class type=Windows.Networking.Sockets.ServerMessageWebSocketControl return
+    property information
+        get get_Information slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=4 reverse=99
+            out class type=Windows.Networking.Sockets.ServerMessageWebSocketInformation return
+    property output_stream
+        get get_OutputStream slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event closed
+        add add_Closed slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=value
+            out event_token return
+        remove remove_Closed slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=26 reverse=167
+            in event_token name=token
+    event message_received
+        add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> name=value
+            out event_token return
+        remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=26 reverse=53
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=13 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=174
+            in uint16 name=code
+            in string name=reason
+
+class Windows.Networking.Sockets.ServerMessageWebSocketControl python_type
+    py ServerMessageWebSocketControl
+    signature rc(Windows.Networking.Sockets.ServerMessageWebSocketControl;{69c2f051-1c1f-587a-4519-2181610192b7})
+    default Windows.Networking.Sockets.IServerMessageWebSocketControl
+    requires Windows.Networking.Sockets.IServerMessageWebSocketControl
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocketControl shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketMessageType return
+        put put_MessageType slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocketControl shape=4 reverse=43
+            in enum32 type=Windows.Networking.Sockets.SocketMessageType name=value
+
+class Windows.Networking.Sockets.ServerMessageWebSocketInformation python_type
+    py ServerMessageWebSocketInformation
+    signature rc(Windows.Networking.Sockets.ServerMessageWebSocketInformation;{fc32b45f-4448-5505-6cc9-09afa8915f5d})
+    default Windows.Networking.Sockets.IServerMessageWebSocketInformation
+    requires Windows.Networking.Sockets.IServerMessageWebSocketInformation
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocketInformation shape=4 reverse=22
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocketInformation shape=4 reverse=62
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocketInformation shape=4 reverse=43
+            out string return
+
+class Windows.Networking.Sockets.ServerStreamWebSocket python_type closeable
+    py ServerStreamWebSocket
+    signature rc(Windows.Networking.Sockets.ServerStreamWebSocket;{2ced5bbf-74f6-55e4-79df-9132680dfee8})
+    default Windows.Networking.Sockets.IServerStreamWebSocket
+    requires Windows.Networking.Sockets.IServerStreamWebSocket
+    requires Windows.Foundation.IClosable
+    property information
+        get get_Information slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.ServerStreamWebSocketInformation return
+    property input_stream
+        get get_InputStream slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property output_stream
+        get get_OutputStream slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event closed
+        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerStreamWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=value
+            out event_token return
+        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=26 reverse=134
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=51 reverse=144
+            in uint16 name=code
+            in string name=reason
+
+class Windows.Networking.Sockets.ServerStreamWebSocketInformation python_type
+    py ServerStreamWebSocketInformation
+    signature rc(Windows.Networking.Sockets.ServerStreamWebSocketInformation;{fc32b45f-4448-5505-6cc9-09aba8915f5d})
+    default Windows.Networking.Sockets.IServerStreamWebSocketInformation
+    requires Windows.Networking.Sockets.IServerStreamWebSocketInformation
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocketInformation shape=4 reverse=22
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocketInformation shape=4 reverse=62
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocketInformation shape=4 reverse=43
+            out string return
+
+enum Windows.Networking.Sockets.SocketActivityConnectedStandbyAction python_type
+    py SocketActivityConnectedStandbyAction
+    signature enum(Windows.Networking.Sockets.SocketActivityConnectedStandbyAction;i4)
+
+class Windows.Networking.Sockets.SocketActivityContext python_type
+    py SocketActivityContext
+    signature rc(Windows.Networking.Sockets.SocketActivityContext;{43b04d64-4c85-4396-a637-1d973f6ebd49})
+    default Windows.Networking.Sockets.ISocketActivityContext
+    requires Windows.Networking.Sockets.ISocketActivityContext
+    factory Windows.Networking.Sockets.ISocketActivityContextFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityContextFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out class type=Windows.Networking.Sockets.SocketActivityContext return
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityContext shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Networking.Sockets.SocketActivityInformation python_type
+    py SocketActivityInformation
+    signature rc(Windows.Networking.Sockets.SocketActivityInformation;{8d8a42e4-a87e-4b74-9968-185b2511defe})
+    default Windows.Networking.Sockets.ISocketActivityInformation
+    requires Windows.Networking.Sockets.ISocketActivityInformation
+    factory Windows.Networking.Sockets.ISocketActivityInformationStatics
+    property context
+        get get_Context slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=99
+            out class type=Windows.Networking.Sockets.SocketActivityContext return
+    property datagram_socket
+        get get_DatagramSocket slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=121
+            out class type=Windows.Networking.Sockets.DatagramSocket return
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=43
+            out string return
+    property socket_kind
+        get get_SocketKind slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=62
+            out enum32 type=Windows.Networking.Sockets.SocketActivityKind return
+    property stream_socket
+        get get_StreamSocket slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=141
+            out class type=Windows.Networking.Sockets.StreamSocket return
+    property stream_socket_listener
+        get get_StreamSocketListener slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=162
+            out class type=Windows.Networking.Sockets.StreamSocketListener return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformation shape=4 reverse=22
+            out guid return
+    property all_sockets static
+        get get_AllSockets slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityInformationStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Networking.Sockets.SocketActivityInformation> return
+
+enum Windows.Networking.Sockets.SocketActivityKind python_type
+    py SocketActivityKind
+    signature enum(Windows.Networking.Sockets.SocketActivityKind;i4)
+
+class Windows.Networking.Sockets.SocketActivityTriggerDetails python_type
+    py SocketActivityTriggerDetails
+    signature rc(Windows.Networking.Sockets.SocketActivityTriggerDetails;{45f406a7-fc9f-4f81-acad-355fef51e67b})
+    default Windows.Networking.Sockets.ISocketActivityTriggerDetails
+    requires Windows.Networking.Sockets.ISocketActivityTriggerDetails
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketActivityTriggerReason return
+    property socket_information
+        get get_SocketInformation slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.ISocketActivityTriggerDetails shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.SocketActivityInformation return
+
+enum Windows.Networking.Sockets.SocketActivityTriggerReason python_type
+    py SocketActivityTriggerReason
+    signature enum(Windows.Networking.Sockets.SocketActivityTriggerReason;i4)
+
+class Windows.Networking.Sockets.SocketError static python_type
+    py SocketError
+    factory Windows.Networking.Sockets.ISocketErrorStatics
+    method get_status static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.ISocketErrorStatics shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Networking.Sockets.SocketErrorStatus return
+
+enum Windows.Networking.Sockets.SocketErrorStatus python_type
+    py SocketErrorStatus
+    signature enum(Windows.Networking.Sockets.SocketErrorStatus;i4)
+
+enum Windows.Networking.Sockets.SocketMessageType python_type
+    py SocketMessageType
+    signature enum(Windows.Networking.Sockets.SocketMessageType;i4)
+
+enum Windows.Networking.Sockets.SocketProtectionLevel python_type
+    py SocketProtectionLevel
+    signature enum(Windows.Networking.Sockets.SocketProtectionLevel;i4)
+
+enum Windows.Networking.Sockets.SocketQualityOfService python_type
+    py SocketQualityOfService
+    signature enum(Windows.Networking.Sockets.SocketQualityOfService;i4)
+
+enum Windows.Networking.Sockets.SocketSslErrorSeverity python_type
+    py SocketSslErrorSeverity
+    signature enum(Windows.Networking.Sockets.SocketSslErrorSeverity;i4)
+
+class Windows.Networking.Sockets.StreamSocket activatable python_type closeable
+    py StreamSocket
+    signature rc(Windows.Networking.Sockets.StreamSocket;{69a22cf3-fc7b-4857-af38-f6e7de6a5b49})
+    default Windows.Networking.Sockets.IStreamSocket
+    requires Windows.Networking.Sockets.IStreamSocket
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IStreamSocket2
+    requires Windows.Networking.Sockets.IStreamSocket3
+    factory Windows.Networking.Sockets.IStreamSocketStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property control
+        get get_Control slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.StreamSocketControl return
+    property information
+        get get_Information slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.StreamSocketInformation return
+    property input_stream
+        get get_InputStream slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property output_stream
+        get get_OutputStream slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method cancel_io_async
+        method CancelIOAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method connect_async
+        method ConnectAsync slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=51 reverse=124
+            in class type=Windows.Networking.EndpointPair name=endpointPair
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ConnectAsync slot=11 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=117 reverse=145 default_overload
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ConnectAsync slot=13 inputs=3 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=195 reverse=176
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ConnectAsync slot=6 inputs=4 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket2 shape=239 reverse=27
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            in class type=Windows.Networking.Connectivity.NetworkAdapter name=adapter
+            out interface type=Windows.Foundation.IAsyncAction return
+    method connect_with_endpoint_pair_and_protection_level_async
+        method ConnectAsync slot=12 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=117 reverse=164
+            in class type=Windows.Networking.EndpointPair name=endpointPair
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            out interface type=Windows.Foundation.IAsyncAction return
+    method enable_transfer_ownership
+        method EnableTransferOwnership slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=33
+            in guid name=taskId
+        method EnableTransferOwnership slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=94 reverse=87
+            in guid name=taskId
+            in enum32 type=Windows.Networking.Sockets.SocketActivityConnectedStandbyAction name=connectedStandbyAction
+    method get_endpoint_pairs_async static
+        method GetEndpointPairsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketStatics shape=117 reverse=25 static
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> return
+        method GetEndpointPairsAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketStatics shape=195 reverse=46 static
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            in enum_u32 type=Windows.Networking.HostNameSortOptions name=sortOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> return
+    method transfer_ownership
+        method TransferOwnership slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=4 reverse=99
+            in string name=socketId
+        method TransferOwnership slot=10 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=51 reverse=124
+            in string name=socketId
+            in class type=Windows.Networking.Sockets.SocketActivityContext name=data
+        method TransferOwnership slot=11 inputs=3 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocket3 shape=125
+            in string name=socketId
+            in class type=Windows.Networking.Sockets.SocketActivityContext name=data
+            in timespan name=keepAliveTime
+    method upgrade_to_ssl_async
+        method UpgradeToSslAsync slot=14 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocket shape=117 reverse=188
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            in class type=Windows.Networking.HostName name=validationHostName
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Networking.Sockets.StreamSocketControl python_type
+    py StreamSocketControl
+    signature rc(Windows.Networking.Sockets.StreamSocketControl;{fe25adf1-92ab-4af3-9992-0f4c85e36cc4})
+    default Windows.Networking.Sockets.IStreamSocketControl
+    requires Windows.Networking.Sockets.IStreamSocketControl
+    requires Windows.Networking.Sockets.IStreamSocketControl2
+    requires Windows.Networking.Sockets.IStreamSocketControl3
+    requires Windows.Networking.Sockets.IStreamSocketControl4
+    property quality_of_service
+        get get_QualityOfService slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=162
+            out enum32 type=Windows.Networking.Sockets.SocketQualityOfService return
+        put put_QualityOfService slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=173
+            in enum32 type=Windows.Networking.Sockets.SocketQualityOfService name=value
+    property outbound_unicast_hop_limit
+        get get_OutboundUnicastHopLimit slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=186
+            out uint8 return
+        put put_OutboundUnicastHopLimit slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=194
+            in uint8 name=value
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=121
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=141
+            in uint32 name=value
+    property no_delay
+        get get_NoDelay slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=22
+            out boolean return
+        put put_NoDelay slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=43
+            in boolean name=value
+    property keep_alive
+        get get_KeepAlive slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=62
+            out boolean return
+        put put_KeepAlive slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl shape=4 reverse=99
+            in boolean name=value
+    property ignorable_server_certificate_errors
+        get get_IgnorableServerCertificateErrors slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property serialize_connection_attempts
+        get get_SerializeConnectionAttempts slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl3 shape=4 reverse=22
+            out boolean return
+        put put_SerializeConnectionAttempts slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl3 shape=4 reverse=43
+            in boolean name=value
+    property client_certificate
+        get get_ClientCertificate slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl3 shape=4 reverse=62
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+        put put_ClientCertificate slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl3 shape=4 reverse=99
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+    property min_protection_level
+        get get_MinProtectionLevel slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketControl4 shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketProtectionLevel return
+        put put_MinProtectionLevel slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketControl4 shape=4 reverse=43
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=value
+
+class Windows.Networking.Sockets.StreamSocketInformation python_type
+    py StreamSocketInformation
+    signature rc(Windows.Networking.Sockets.StreamSocketInformation;{3b80ae30-5e68-4205-88f0-dc85d2e25ded})
+    default Windows.Networking.Sockets.IStreamSocketInformation
+    requires Windows.Networking.Sockets.IStreamSocketInformation
+    requires Windows.Networking.Sockets.IStreamSocketInformation2
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=173
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property local_port
+        get get_LocalPort slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=43
+            out string return
+    property protection_level
+        get get_ProtectionLevel slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=186
+            out enum32 type=Windows.Networking.Sockets.SocketProtectionLevel return
+    property remote_address
+        get get_RemoteAddress slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=99
+            out class type=Windows.Networking.HostName return
+    property remote_host_name
+        get get_RemoteHostName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=62
+            out class type=Windows.Networking.HostName return
+    property remote_port
+        get get_RemotePort slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=141
+            out string return
+    property remote_service_name
+        get get_RemoteServiceName slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=121
+            out string return
+    property round_trip_time_statistics
+        get get_RoundTripTimeStatistics slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=162
+            out struct type=Windows.Networking.Sockets.RoundTripTimeStatistics return
+    property session_key
+        get get_SessionKey slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation shape=4 reverse=194
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property server_certificate
+        get get_ServerCertificate slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation2 shape=4 reverse=62
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation2 shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketInformation2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+
+class Windows.Networking.Sockets.StreamSocketListener activatable python_type closeable
+    py StreamSocketListener
+    signature rc(Windows.Networking.Sockets.StreamSocketListener;{ff513437-df9f-4df0-bf82-0ec5d7b35aae})
+    default Windows.Networking.Sockets.IStreamSocketListener
+    requires Windows.Networking.Sockets.IStreamSocketListener
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IStreamSocketListener2
+    requires Windows.Networking.Sockets.IStreamSocketListener3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property control
+        get get_Control slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.StreamSocketListenerControl return
+    property information
+        get get_Information slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.StreamSocketListenerInformation return
+    event connection_received
+        add add_ConnectionReceived slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamSocketListener,Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_ConnectionReceived slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=26 reverse=156
+            in event_token name=eventCookie
+    method bind_endpoint_async
+        method BindEndpointAsync slot=9 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=117 reverse=101
+            in class type=Windows.Networking.HostName name=localHostName
+            in string name=localServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+    method bind_service_name_async
+        method BindServiceNameAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=51 reverse=65
+            in string name=localServiceName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method BindServiceNameAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener2 shape=117 reverse=25
+            in string name=localServiceName
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            out interface type=Windows.Foundation.IAsyncAction return
+        method BindServiceNameAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener2 shape=195 reverse=46
+            in string name=localServiceName
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=protectionLevel
+            in class type=Windows.Networking.Connectivity.NetworkAdapter name=adapter
+            out interface type=Windows.Foundation.IAsyncAction return
+    method cancel_io_async
+        method CancelIOAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener3 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method enable_transfer_ownership
+        method EnableTransferOwnership slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener3 shape=33
+            in guid name=taskId
+        method EnableTransferOwnership slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener3 shape=94 reverse=87
+            in guid name=taskId
+            in enum32 type=Windows.Networking.Sockets.SocketActivityConnectedStandbyAction name=connectedStandbyAction
+    method transfer_ownership
+        method TransferOwnership slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener3 shape=4 reverse=99
+            in string name=socketId
+        method TransferOwnership slot=10 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener3 shape=51 reverse=124
+            in string name=socketId
+            in class type=Windows.Networking.Sockets.SocketActivityContext name=data
+
+class Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs python_type
+    py StreamSocketListenerConnectionReceivedEventArgs
+    signature rc(Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs;{0c472ea9-373f-447b-85b1-ddd4548803ba})
+    default Windows.Networking.Sockets.IStreamSocketListenerConnectionReceivedEventArgs
+    requires Windows.Networking.Sockets.IStreamSocketListenerConnectionReceivedEventArgs
+    property socket
+        get get_Socket slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerConnectionReceivedEventArgs shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.StreamSocket return
+
+class Windows.Networking.Sockets.StreamSocketListenerControl python_type
+    py StreamSocketListenerControl
+    signature rc(Windows.Networking.Sockets.StreamSocketListenerControl;{20d8c576-8d8a-4dba-9722-a16c4d984980})
+    default Windows.Networking.Sockets.IStreamSocketListenerControl
+    requires Windows.Networking.Sockets.IStreamSocketListenerControl
+    requires Windows.Networking.Sockets.IStreamSocketListenerControl2
+    property quality_of_service
+        get get_QualityOfService slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl shape=4 reverse=22
+            out enum32 type=Windows.Networking.Sockets.SocketQualityOfService return
+        put put_QualityOfService slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl shape=4 reverse=43
+            in enum32 type=Windows.Networking.Sockets.SocketQualityOfService name=value
+    property outbound_unicast_hop_limit
+        get get_OutboundUnicastHopLimit slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=162
+            out uint8 return
+        put put_OutboundUnicastHopLimit slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=173
+            in uint8 name=value
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=121
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=141
+            in uint32 name=value
+    property no_delay
+        get get_NoDelay slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=22
+            out boolean return
+        put put_NoDelay slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=43
+            in boolean name=value
+    property keep_alive
+        get get_KeepAlive slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=62
+            out boolean return
+        put put_KeepAlive slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListenerControl2 shape=4 reverse=99
+            in boolean name=value
+
+class Windows.Networking.Sockets.StreamSocketListenerInformation python_type
+    py StreamSocketListenerInformation
+    signature rc(Windows.Networking.Sockets.StreamSocketListenerInformation;{e62ba82f-a63a-430b-bf62-29e93e5633b4})
+    default Windows.Networking.Sockets.IStreamSocketListenerInformation
+    requires Windows.Networking.Sockets.IStreamSocketListenerInformation
+    property local_port
+        get get_LocalPort slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListenerInformation shape=4 reverse=22
+            out string return
+
+class Windows.Networking.Sockets.StreamWebSocket activatable python_type closeable
+    py StreamWebSocket
+    signature rc(Windows.Networking.Sockets.StreamWebSocket;{bd4a49d8-b289-45bb-97eb-c7525205a843})
+    default Windows.Networking.Sockets.IStreamWebSocket
+    requires Windows.Networking.Sockets.IStreamWebSocket
+    requires Windows.Networking.Sockets.IWebSocket
+    requires Windows.Foundation.IClosable
+    requires Windows.Networking.Sockets.IStreamWebSocket2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property control
+        get get_Control slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocket shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.StreamWebSocketControl return
+    property information
+        get get_Information slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocket shape=4 reverse=43
+            out class type=Windows.Networking.Sockets.StreamWebSocketInformation return
+    property input_stream
+        get get_InputStream slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocket shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property output_stream
+        get get_OutputStream slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    event closed
+        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
+            in event_token name=eventCookie
+    event server_custom_validation_requested
+        add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocket2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamWebSocket2 shape=26 reverse=53
+            in event_token name=eventCookie
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
+            in uint16 name=code
+            in string name=reason
+    method connect_async
+        method ConnectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=uri
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_request_header
+        method SetRequestHeader slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=65
+            in string name=headerName
+            in string name=headerValue
+
+class Windows.Networking.Sockets.StreamWebSocketControl python_type
+    py StreamWebSocketControl
+    signature rc(Windows.Networking.Sockets.StreamWebSocketControl;{b4f478b1-a45a-48db-953a-645b7d964c07})
+    default Windows.Networking.Sockets.IStreamWebSocketControl
+    requires Windows.Networking.Sockets.IStreamWebSocketControl
+    requires Windows.Networking.Sockets.IWebSocketControl
+    requires Windows.Networking.Sockets.IWebSocketControl2
+    requires Windows.Networking.Sockets.IStreamWebSocketControl2
+    property no_delay
+        get get_NoDelay slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocketControl shape=4 reverse=22
+            out boolean return
+        put put_NoDelay slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamWebSocketControl shape=4 reverse=43
+            in boolean name=value
+    property desired_unsolicited_pong_interval
+        get get_DesiredUnsolicitedPongInterval slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocketControl2 shape=4 reverse=22
+            out timespan return
+        put put_DesiredUnsolicitedPongInterval slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamWebSocketControl2 shape=26 reverse=53
+            in timespan name=value
+    property client_certificate
+        get get_ClientCertificate slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocketControl2 shape=4 reverse=99
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+        put put_ClientCertificate slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamWebSocketControl2 shape=4 reverse=121
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+    property actual_unsolicited_pong_interval
+        get get_ActualUnsolicitedPongInterval slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocketControl2 shape=4 reverse=62
+            out timespan return
+    property server_credential
+        get get_ServerCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property proxy_credential
+        get get_ProxyCredential slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=121
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=141
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property outbound_buffer_size_in_bytes
+        get get_OutboundBufferSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=22
+            out uint32 return
+        put put_OutboundBufferSizeInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=43
+            in uint32 name=value
+    property supported_protocols
+        get get_SupportedProtocols slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property ignorable_server_certificate_errors
+        get get_IgnorableServerCertificateErrors slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketControl2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+
+class Windows.Networking.Sockets.StreamWebSocketInformation python_type
+    py StreamWebSocketInformation
+    signature rc(Windows.Networking.Sockets.StreamWebSocketInformation;{5e01e316-c92a-47a5-b25f-07847639d181})
+    default Windows.Networking.Sockets.IWebSocketInformation
+    requires Windows.Networking.Sockets.IWebSocketInformation
+    requires Windows.Networking.Sockets.IWebSocketInformation2
+    property bandwidth_statistics
+        get get_BandwidthStatistics slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=43
+            out struct type=Windows.Networking.Sockets.BandwidthStatistics return
+    property local_address
+        get get_LocalAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+    property protocol
+        get get_Protocol slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation shape=4 reverse=62
+            out string return
+    property server_certificate
+        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=22
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=43
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketInformation2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.DatagramSocket,Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs> concrete
+    guid 4482e19b-2389-5767-9b0b-8d7a8ef55743
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.DatagramSocket;{7fe25bbb-c3bc-4677-8446-ca28a465a3af});rc(Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs;{9e2ddca2-1712-4ce4-b179-8c652c6d107e}))
+    argument Windows.Networking.Sockets.DatagramSocket
+    argument Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> concrete
+    guid 03cf8f90-1669-5f4d-9404-2b784678e6dd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{f877396f-99b1-4e18-bc08-850c9adf156e};rc(Windows.Networking.Sockets.WebSocketClosedEventArgs;{ceb78d07-d0a8-4703-a091-c8c2c0915bc3}))
+    argument Windows.Networking.Sockets.IWebSocket
+    argument Windows.Networking.Sockets.WebSocketClosedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> concrete
+    guid de980538-6dcd-52b0-802f-4b6cf59a01ab
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.MessageWebSocket;{33727d08-34d5-4746-ad7b-8dde5bc2ef88});rc(Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs;{478c22ac-4c4b-42ed-9ed7-1ef9f94fa3d5}))
+    argument Windows.Networking.Sockets.MessageWebSocket
+    argument Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> concrete
+    guid 2c34c585-9cf6-56c7-8dd1-5da26e322078
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.MessageWebSocket;{33727d08-34d5-4746-ad7b-8dde5bc2ef88});rc(Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs;{ffeffe48-022a-4ab7-8b36-e10af4640e6b}))
+    argument Windows.Networking.Sockets.MessageWebSocket
+    argument Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> concrete
+    guid 6e66714b-94d1-5c08-b2b3-10b891d08747
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.ServerMessageWebSocket;{e3ac9240-813b-5efd-7e11-ae2305fc77f1});rc(Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs;{478c22ac-4c4b-42ed-9ed7-1ef9f94fa3d5}))
+    argument Windows.Networking.Sockets.ServerMessageWebSocket
+    argument Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> concrete
+    guid cae65204-b986-5cf3-87ea-b67b00fba78d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.ServerMessageWebSocket;{e3ac9240-813b-5efd-7e11-ae2305fc77f1});rc(Windows.Networking.Sockets.WebSocketClosedEventArgs;{ceb78d07-d0a8-4703-a091-c8c2c0915bc3}))
+    argument Windows.Networking.Sockets.ServerMessageWebSocket
+    argument Windows.Networking.Sockets.WebSocketClosedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerStreamWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> concrete
+    guid b51c5b3b-161b-559e-a553-0059336329cc
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.ServerStreamWebSocket;{2ced5bbf-74f6-55e4-79df-9132680dfee8});rc(Windows.Networking.Sockets.WebSocketClosedEventArgs;{ceb78d07-d0a8-4703-a091-c8c2c0915bc3}))
+    argument Windows.Networking.Sockets.ServerStreamWebSocket
+    argument Windows.Networking.Sockets.WebSocketClosedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamSocketListener,Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs> concrete
+    guid 33d00d41-c94f-5a61-9ab7-280dcefa0b08
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.StreamSocketListener;{ff513437-df9f-4df0-bf82-0ec5d7b35aae});rc(Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs;{0c472ea9-373f-447b-85b1-ddd4548803ba}))
+    argument Windows.Networking.Sockets.StreamSocketListener
+    argument Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> concrete
+    guid 18b143d3-897e-595e-acc1-ef35614b4cec
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Sockets.StreamWebSocket;{bd4a49d8-b289-45bb-97eb-c7525205a843});rc(Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs;{ffeffe48-022a-4ab7-8b36-e10af4640e6b}))
+    argument Windows.Networking.Sockets.StreamWebSocket
+    argument Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs
+
+class Windows.Networking.Sockets.WebSocketClosedEventArgs python_type
+    py WebSocketClosedEventArgs
+    signature rc(Windows.Networking.Sockets.WebSocketClosedEventArgs;{ceb78d07-d0a8-4703-a091-c8c2c0915bc3})
+    default Windows.Networking.Sockets.IWebSocketClosedEventArgs
+    requires Windows.Networking.Sockets.IWebSocketClosedEventArgs
+    property code
+        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketClosedEventArgs shape=4 reverse=22
+            out uint16 return
+    property reason
+        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketClosedEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.Networking.Sockets.WebSocketError static python_type
+    py WebSocketError
+    factory Windows.Networking.Sockets.IWebSocketErrorStatics
+    method get_status static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketErrorStatics shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Web.WebErrorStatus return
+
+class Windows.Networking.Sockets.WebSocketKeepAlive activatable python_type
+    py WebSocketKeepAlive
+    signature rc(Windows.Networking.Sockets.WebSocketKeepAlive;{7d13d534-fd12-43ce-8c22-ea1ff13c06df})
+    default Windows.ApplicationModel.Background.IBackgroundTask
+    requires Windows.ApplicationModel.Background.IBackgroundTask
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method run
+        method Run slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTask shape=4 reverse=22
+            in interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance name=taskInstance
+
+class Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs python_type
+    py WebSocketServerCustomValidationRequestedEventArgs
+    signature rc(Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs;{ffeffe48-022a-4ab7-8b36-e10af4640e6b})
+    default Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs
+    requires Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs
+    property server_certificate
+        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+    method get_deferral
+        method GetDeferral slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=4 reverse=141
+            out class type=Windows.Foundation.Deferral return
+    method reject
+        method Reject slot=10 inputs=0 outputs=0 declaring=Windows.Networking.Sockets.IWebSocketServerCustomValidationRequestedEventArgs shape=0 reverse=117
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.ApplicationModel.Background.IBackgroundTask external
+    py winrt.windows.applicationmodel.background._IBackgroundTask
+    guid 7d13d534-fd12-43ce-8c22-ea1ff13c06df
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance external
+    py winrt.windows.applicationmodel.background._IBackgroundTaskInstance
+    guid 865bda7a-21d8-4573-8f32-928a1b0641f6
+
+interface Windows.ApplicationModel.Background.IBackgroundTrigger external
+    py winrt.windows.applicationmodel.background._IBackgroundTrigger
+    guid 84b3a058-6027-4b87-9790-bdf3f757dbd7
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Networking.EndpointPair external
+    py winrt.windows.networking.EndpointPair
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+enum Windows.Networking.HostNameSortOptions external
+    py winrt.windows.networking.HostNameSortOptions
+
+class Windows.Networking.Connectivity.NetworkAdapter external
+    py winrt.windows.networking.connectivity.NetworkAdapter
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+class Windows.Security.Cryptography.Certificates.Certificate external
+    py winrt.windows.security.cryptography.certificates.Certificate
+
+enum Windows.Security.Cryptography.Certificates.ChainValidationResult external
+    py winrt.windows.security.cryptography.certificates.ChainValidationResult
+
+class Windows.Storage.Streams.DataReader external
+    py winrt.windows.storage.streams.DataReader
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+enum Windows.Web.WebErrorStatus external
+    py winrt.windows.web.WebErrorStatus

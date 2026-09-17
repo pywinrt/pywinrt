@@ -1,0 +1,127 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.PushNotifications
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> concrete
+    guid f9b84a9d-7d59-5445-9cf1-33a6c4518241
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e});struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4))
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus
+
+interface Microsoft.Windows.PushNotifications.IPushNotificationChannel
+    guid da28bbcb-7695-5d38-af82-f30b72fef1f6
+
+interface Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult
+    guid 4df3717f-5d33-56e9-b381-1b350c95722e
+
+interface Microsoft.Windows.PushNotifications.IPushNotificationManager
+    guid 902f4aba-ff63-5dfe-a88f-15cc6bed55ff
+
+interface Microsoft.Windows.PushNotifications.IPushNotificationManagerStatics
+    guid 71329470-1b55-58dc-a00c-68c26f2d8bd9
+
+interface Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs
+    guid fbd4ec53-bb83-5495-8777-d3cf13e4299c
+
+class Microsoft.Windows.PushNotifications.PushNotificationChannel python_type
+    py PushNotificationChannel
+    signature rc(Microsoft.Windows.PushNotifications.PushNotificationChannel;{da28bbcb-7695-5d38-af82-f30b72fef1f6})
+    default Microsoft.Windows.PushNotifications.IPushNotificationChannel
+    requires Microsoft.Windows.PushNotifications.IPushNotificationChannel
+    property expiration_time
+        get get_ExpirationTime slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationChannel shape=4 reverse=43
+            out datetime return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationChannel shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    method close
+        method Close slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationChannel shape=0 reverse=55
+
+enum Microsoft.Windows.PushNotifications.PushNotificationChannelStatus python_type
+    py PushNotificationChannelStatus
+    signature enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4)
+
+class Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult python_type
+    py PushNotificationCreateChannelResult
+    signature rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e})
+    default Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult
+    requires Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult shape=4 reverse=22
+            out class type=Microsoft.Windows.PushNotifications.PushNotificationChannel return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult shape=4 reverse=62
+            out enum32 type=Microsoft.Windows.PushNotifications.PushNotificationChannelStatus return
+
+struct Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus python_type
+    py PushNotificationCreateChannelStatus
+    signature struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4)
+    field status status enum32 type=Microsoft.Windows.PushNotifications.PushNotificationChannelStatus
+    field extended_error extendedError hresult
+    field retry_count retryCount uint32
+
+class Microsoft.Windows.PushNotifications.PushNotificationManager python_type
+    py PushNotificationManager
+    signature rc(Microsoft.Windows.PushNotifications.PushNotificationManager;{902f4aba-ff63-5dfe-a88f-15cc6bed55ff})
+    default Microsoft.Windows.PushNotifications.IPushNotificationManager
+    requires Microsoft.Windows.PushNotifications.IPushNotificationManager
+    factory Microsoft.Windows.PushNotifications.IPushNotificationManagerStatics
+    property default static
+        get get_Default slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManagerStatics shape=4 reverse=43 static
+            out class type=Microsoft.Windows.PushNotifications.PushNotificationManager return
+    event push_received
+        add add_PushReceived slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.PushNotifications.PushNotificationManager,Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PushReceived slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=26 reverse=156
+            in event_token name=token
+    method create_channel_async
+        method CreateChannelAsync slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=94
+            in guid name=remoteId
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManagerStatics shape=4 reverse=22 static
+            out boolean return
+    method register
+        method Register slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=0 reverse=16
+    method unregister
+        method Unregister slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=0 reverse=37
+    method unregister_all
+        method UnregisterAll slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=0 reverse=55
+
+class Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs python_type
+    py PushNotificationReceivedEventArgs
+    signature rc(Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs;{fbd4ec53-bb83-5495-8777-d3cf13e4299c})
+    default Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs
+    requires Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs
+    property payload
+        get get_Payload slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=51 reverse=24
+            receive_array uint8 return
+    event canceled
+        add add_Canceled slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=51 reverse=65
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=handler
+            out event_token return
+        remove remove_Canceled slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=26 reverse=110
+            in event_token name=token
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.PushNotifications.PushNotificationManager,Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs> concrete
+    guid 64f9e503-18cf-56bf-b85a-97fb8261e2d2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.PushNotifications.PushNotificationManager;{902f4aba-ff63-5dfe-a88f-15cc6bed55ff});rc(Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs;{fbd4ec53-bb83-5495-8777-d3cf13e4299c}))
+    argument Microsoft.Windows.PushNotifications.PushNotificationManager
+    argument Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs
+
+delegate Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler external
+    py winrt.windows.applicationmodel.background.BackgroundTaskCanceledEventHandler
+    guid a6c4bac0-51f8-4c57-ac3f-156dd1680c4f
+
+class Windows.ApplicationModel.Background.BackgroundTaskDeferral external
+    py winrt.windows.applicationmodel.background.BackgroundTaskDeferral
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

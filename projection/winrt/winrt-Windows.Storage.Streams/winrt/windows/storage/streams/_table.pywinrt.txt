@@ -1,0 +1,1089 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Storage.Streams
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    argument System.UInt32
+
+class Windows.Storage.Streams.Buffer python_type buffer buffer_length
+    py Buffer
+    signature rc(Windows.Storage.Streams.Buffer;{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IBuffer
+    requires Windows.Storage.Streams.IBuffer
+    factory Windows.Storage.Streams.IBufferStatics
+    factory Windows.Storage.Streams.IBufferFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferFactory shape=51 reverse=24
+            in uint32 name=capacity
+            out class type=Windows.Storage.Streams.Buffer return
+    property length
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=43
+            out uint32 return
+        put put_Length slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=62
+            in uint32 name=value
+    property capacity
+        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=22
+            out uint32 return
+    method create_copy_from_memory_buffer static
+        method CreateCopyFromMemoryBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 reverse=24 static
+            in interface type=Windows.Foundation.IMemoryBuffer name=input
+            out class type=Windows.Storage.Streams.Buffer return
+    method create_memory_buffer_over_ibuffer static
+        method CreateMemoryBufferOverIBuffer slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.Streams.IBuffer name=input
+            out class type=Windows.Foundation.MemoryBuffer return
+
+enum Windows.Storage.Streams.ByteOrder python_type
+    py ByteOrder
+    signature enum(Windows.Storage.Streams.ByteOrder;i4)
+
+class Windows.Storage.Streams.DataReader python_type closeable
+    py DataReader
+    signature rc(Windows.Storage.Streams.DataReader;{e2b50029-b4c1-4314-a4b8-fb813a2f275e})
+    default Windows.Storage.Streams.IDataReader
+    requires Windows.Storage.Streams.IDataReader
+    requires Windows.Foundation.IClosable
+    factory Windows.Storage.Streams.IDataReaderFactory
+    factory Windows.Storage.Streams.IDataReaderStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IInputStream name=inputStream
+            out class type=Windows.Storage.Streams.DataReader return
+    property unicode_encoding
+        get get_UnicodeEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=43
+            out enum32 type=Windows.Storage.Streams.UnicodeEncoding return
+        put put_UnicodeEncoding slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=62
+            in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=value
+    property input_stream_options
+        get get_InputStreamOptions slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=141
+            out enum_u32 type=Windows.Storage.Streams.InputStreamOptions return
+        put put_InputStreamOptions slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=162
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=value
+    property byte_order
+        get get_ByteOrder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=99
+            out enum32 type=Windows.Storage.Streams.ByteOrder return
+        put put_ByteOrder slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=121
+            in enum32 type=Windows.Storage.Streams.ByteOrder name=value
+    property unconsumed_buffer_length
+        get get_UnconsumedBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=22
+            out uint32 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method detach_buffer
+        method DetachBuffer slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=270
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method detach_stream
+        method DetachStream slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=273
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method from_buffer static
+        method FromBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.Storage.Streams.DataReader return
+    method load_async
+        method LoadAsync slot=29 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=267
+            in uint32 name=count
+            out class type=Windows.Storage.Streams.DataReaderLoadOperation return
+    method read_boolean
+        method ReadBoolean slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=202
+            out boolean return
+    method read_buffer
+        method ReadBuffer slot=15 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=196
+            in uint32 name=length
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method read_byte
+        method ReadByte slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=173
+            out uint8 return
+    method read_bytes
+        method ReadBytes slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=187
+            fill_array uint8 name=value
+    method read_date_time
+        method ReadDateTime slot=27 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=259
+            out datetime return
+    method read_double
+        method ReadDouble slot=25 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=252
+            out double return
+    method read_guid
+        method ReadGuid slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=210
+            out guid return
+    method read_int16
+        method ReadInt16 slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=218
+            out int16 return
+    method read_int32
+        method ReadInt32 slot=19 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=223
+            out int32 return
+    method read_int64
+        method ReadInt64 slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=228
+            out int64 return
+    method read_single
+        method ReadSingle slot=24 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=247
+            out single return
+    method read_string
+        method ReadString slot=26 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=256
+            in uint32 name=codeUnitCount
+            out string return
+    method read_time_span
+        method ReadTimeSpan slot=28 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=263
+            out timespan return
+    method read_uint16
+        method ReadUInt16 slot=21 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=232
+            out uint16 return
+    method read_uint32
+        method ReadUInt32 slot=22 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=237
+            out uint32 return
+    method read_uint64
+        method ReadUInt64 slot=23 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=242
+            out uint64 return
+
+class Windows.Storage.Streams.DataReaderLoadOperation python_type awaitable
+    py DataReaderLoadOperation
+    signature rc(Windows.Storage.Streams.DataReaderLoadOperation;pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4))
+    default Windows.Foundation.IAsyncOperation<System.UInt32>
+    requires Windows.Foundation.IAsyncOperation<System.UInt32>
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62
+            out uint32 return
+
+class Windows.Storage.Streams.DataWriter activatable python_type closeable
+    py DataWriter
+    signature rc(Windows.Storage.Streams.DataWriter;{64b89265-d341-4922-b38a-dd4af8808c4e})
+    default Windows.Storage.Streams.IDataWriter
+    requires Windows.Storage.Streams.IDataWriter
+    requires Windows.Foundation.IClosable
+    factory Windows.Storage.Streams.IDataWriterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IOutputStream name=outputStream implicit
+            out class type=Windows.Storage.Streams.DataWriter return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
+            out class type=Windows.Storage.Streams.DataWriter return
+    property unicode_encoding
+        get get_UnicodeEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=43
+            out enum32 type=Windows.Storage.Streams.UnicodeEncoding return
+        put put_UnicodeEncoding slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=62
+            in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=value
+    property byte_order
+        get get_ByteOrder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=99
+            out enum32 type=Windows.Storage.Streams.ByteOrder return
+        put put_ByteOrder slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=121
+            in enum32 type=Windows.Storage.Streams.ByteOrder name=value
+    property unstored_buffer_length
+        get get_UnstoredBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=22
+            out uint32 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method detach_buffer
+        method DetachBuffer slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=273
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method detach_stream
+        method DetachStream slot=32 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=280
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method flush_async
+        method FlushAsync slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=270
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method measure_string
+        method MeasureString slot=28 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=264
+            in string name=value
+            out uint32 return
+    method store_async
+        method StoreAsync slot=29 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=266
+            out class type=Windows.Storage.Streams.DataWriterStoreOperation return
+    method write_boolean
+        method WriteBoolean slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=194
+            in boolean name=value
+    method write_buffer
+        method WriteBuffer slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+        method WriteBuffer slot=14 inputs=3 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=117 reverse=188
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=start
+            in uint32 name=count
+    method write_byte
+        method WriteByte slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=141
+            in uint8 name=value
+    method write_bytes
+        method WriteBytes slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=163
+            pass_array uint8 name=value
+    method write_date_time
+        method WriteDateTime slot=25 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=26 reverse=254
+            in datetime name=value
+    method write_double
+        method WriteDouble slot=24 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=2 reverse=246
+            in double name=value
+    method write_guid
+        method WriteGuid slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=33 reverse=208
+            in guid name=value
+    method write_int16
+        method WriteInt16 slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=210
+            in int16 name=value
+    method write_int32
+        method WriteInt32 slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=218
+            in int32 name=value
+    method write_int64
+        method WriteInt64 slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=3 reverse=222
+            in int64 name=value
+    method write_single
+        method WriteSingle slot=23 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=1 reverse=241
+            in single name=value
+    method write_string
+        method WriteString slot=27 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=260
+            in string name=value
+            out uint32 return
+    method write_time_span
+        method WriteTimeSpan slot=26 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=26 reverse=257
+            in timespan name=value
+    method write_uint16
+        method WriteUInt16 slot=20 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=228
+            in uint16 name=value
+    method write_uint32
+        method WriteUInt32 slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=232
+            in uint32 name=value
+    method write_uint64
+        method WriteUInt64 slot=22 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=3 reverse=236
+            in uint64 name=value
+
+class Windows.Storage.Streams.DataWriterStoreOperation python_type awaitable
+    py DataWriterStoreOperation
+    signature rc(Windows.Storage.Streams.DataWriterStoreOperation;pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4))
+    default Windows.Foundation.IAsyncOperation<System.UInt32>
+    requires Windows.Foundation.IAsyncOperation<System.UInt32>
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62
+            out uint32 return
+
+class Windows.Storage.Streams.FileInputStream python_type closeable
+    py FileInputStream
+    signature rc(Windows.Storage.Streams.FileInputStream;{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+
+enum Windows.Storage.Streams.FileOpenDisposition python_type
+    py FileOpenDisposition
+    signature enum(Windows.Storage.Streams.FileOpenDisposition;i4)
+
+class Windows.Storage.Streams.FileOutputStream python_type closeable
+    py FileOutputStream
+    signature rc(Windows.Storage.Streams.FileOutputStream;{905a0fe6-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IOutputStream
+    requires Windows.Storage.Streams.IOutputStream
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
+    py FileRandomAccessStream
+    signature rc(Windows.Storage.Streams.FileRandomAccessStream;{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    factory Windows.Storage.Streams.IFileRandomAccessStreamStatics
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method open_async static
+        method OpenAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 reverse=25 static
+            in string name=filePath
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+        method OpenAsync slot=7 inputs=4 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=239 static
+            in string name=filePath
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=sharingOptions
+            in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+    method open_for_user_async static
+        method OpenForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 reverse=126 static
+            in class type=Windows.System.User name=user
+            in string name=filePath
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+        method OpenForUserAsync slot=11 inputs=5 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=267 static
+            in class type=Windows.System.User name=user
+            in string name=filePath
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=sharingOptions
+            in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+    method open_transacted_write_async static
+        method OpenTransactedWriteAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=51 reverse=65 static
+            in string name=filePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+        method OpenTransactedWriteAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 reverse=102 static
+            in string name=filePath
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=openOptions
+            in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+    method open_transacted_write_for_user_async static
+        method OpenTransactedWriteForUserAsync slot=12 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 reverse=164 static
+            in class type=Windows.System.User name=user
+            in string name=filePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+        method OpenTransactedWriteForUserAsync slot=13 inputs=4 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=239 static
+            in class type=Windows.System.User name=user
+            in string name=filePath
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=openOptions
+            in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+    guid ef60385f-be78-584b-aaef-7829ada2b0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> concrete
+    guid 0d81405a-9bd3-5e87-82f4-9b4128a887eb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageStreamTransaction;{f67cf363-a53d-4d94-ae2c-67232d93acdd}))
+    argument Windows.Storage.StorageStreamTransaction
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+    guid a8fe0732-556d-5841-b7ee-b3450fb52666
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IInputStream
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete
+    guid 430ecece-1418-5d19-81b2-5ddb381603cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IRandomAccessStream
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+    guid eccb574a-c684-5572-a679-6b0842cfb57f
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    argument System.UInt32
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> concrete
+    guid 8f1db6e3-6556-5516-825c-1021ee27cd0c
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u8;u8)
+    argument System.UInt64
+    argument System.UInt64
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    guid d26b2819-897f-5c7d-84d6-56d796561431
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+
+interface Windows.Storage.Streams.IBuffer python_type buffer buffer_length
+    py _IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+    signature {905a0fe0-bc53-11df-8c49-001e4fc686da}
+    property capacity
+        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=22
+            out uint32 return
+    property length
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=43
+            out uint32 return
+        put put_Length slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=62
+            in uint32 name=value
+
+interface Windows.Storage.Streams.IBufferFactory
+    guid 71af914d-c10f-484b-bc50-14bc623b3a27
+
+interface Windows.Storage.Streams.IBufferStatics
+    guid e901e65b-d716-475a-a90a-af7229b1e741
+
+interface Windows.Storage.Streams.IContentTypeProvider python_type
+    py _IContentTypeProvider
+    guid 97d098a5-3b99-4de9-88a5-e11d2f50c795
+    signature {97d098a5-3b99-4de9-88a5-e11d2f50c795}
+    property content_type
+        get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
+            out string return
+
+interface Windows.Storage.Streams.IDataReader python_type
+    py _IDataReader
+    guid e2b50029-b4c1-4314-a4b8-fb813a2f275e
+    signature {e2b50029-b4c1-4314-a4b8-fb813a2f275e}
+    property byte_order
+        get get_ByteOrder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=99
+            out enum32 type=Windows.Storage.Streams.ByteOrder return
+        put put_ByteOrder slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=121
+            in enum32 type=Windows.Storage.Streams.ByteOrder name=value
+    property input_stream_options
+        get get_InputStreamOptions slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=141
+            out enum_u32 type=Windows.Storage.Streams.InputStreamOptions return
+        put put_InputStreamOptions slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=162
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=value
+    property unconsumed_buffer_length
+        get get_UnconsumedBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=22
+            out uint32 return
+    property unicode_encoding
+        get get_UnicodeEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=43
+            out enum32 type=Windows.Storage.Streams.UnicodeEncoding return
+        put put_UnicodeEncoding slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=62
+            in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=value
+    method detach_buffer
+        method DetachBuffer slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=270
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method detach_stream
+        method DetachStream slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=273
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method load_async
+        method LoadAsync slot=29 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=267
+            in uint32 name=count
+            out class type=Windows.Storage.Streams.DataReaderLoadOperation return
+    method read_boolean
+        method ReadBoolean slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=202
+            out boolean return
+    method read_buffer
+        method ReadBuffer slot=15 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=196
+            in uint32 name=length
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method read_byte
+        method ReadByte slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=173
+            out uint8 return
+    method read_bytes
+        method ReadBytes slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=187
+            fill_array uint8 name=value
+    method read_date_time
+        method ReadDateTime slot=27 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=259
+            out datetime return
+    method read_double
+        method ReadDouble slot=25 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=252
+            out double return
+    method read_guid
+        method ReadGuid slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=210
+            out guid return
+    method read_int16
+        method ReadInt16 slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=218
+            out int16 return
+    method read_int32
+        method ReadInt32 slot=19 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=223
+            out int32 return
+    method read_int64
+        method ReadInt64 slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=228
+            out int64 return
+    method read_single
+        method ReadSingle slot=24 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=247
+            out single return
+    method read_string
+        method ReadString slot=26 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=51 reverse=256
+            in uint32 name=codeUnitCount
+            out string return
+    method read_time_span
+        method ReadTimeSpan slot=28 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=263
+            out timespan return
+    method read_uint16
+        method ReadUInt16 slot=21 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=232
+            out uint16 return
+    method read_uint32
+        method ReadUInt32 slot=22 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=237
+            out uint32 return
+    method read_uint64
+        method ReadUInt64 slot=23 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=242
+            out uint64 return
+
+interface Windows.Storage.Streams.IDataReaderFactory
+    guid d7527847-57da-4e15-914c-06806699a098
+
+interface Windows.Storage.Streams.IDataReaderStatics
+    guid 11fcbfc8-f93a-471b-b121-f379e349313c
+
+interface Windows.Storage.Streams.IDataWriter python_type
+    py _IDataWriter
+    guid 64b89265-d341-4922-b38a-dd4af8808c4e
+    signature {64b89265-d341-4922-b38a-dd4af8808c4e}
+    property byte_order
+        get get_ByteOrder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=99
+            out enum32 type=Windows.Storage.Streams.ByteOrder return
+        put put_ByteOrder slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=121
+            in enum32 type=Windows.Storage.Streams.ByteOrder name=value
+    property unicode_encoding
+        get get_UnicodeEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=43
+            out enum32 type=Windows.Storage.Streams.UnicodeEncoding return
+        put put_UnicodeEncoding slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=62
+            in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=value
+    property unstored_buffer_length
+        get get_UnstoredBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=22
+            out uint32 return
+    method detach_buffer
+        method DetachBuffer slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=273
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method detach_stream
+        method DetachStream slot=32 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=280
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method flush_async
+        method FlushAsync slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=270
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method measure_string
+        method MeasureString slot=28 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=264
+            in string name=value
+            out uint32 return
+    method store_async
+        method StoreAsync slot=29 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=266
+            out class type=Windows.Storage.Streams.DataWriterStoreOperation return
+    method write_boolean
+        method WriteBoolean slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=194
+            in boolean name=value
+    method write_buffer
+        method WriteBuffer slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+        method WriteBuffer slot=14 inputs=3 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=117 reverse=188
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=start
+            in uint32 name=count
+    method write_byte
+        method WriteByte slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=141
+            in uint8 name=value
+    method write_bytes
+        method WriteBytes slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=163
+            pass_array uint8 name=value
+    method write_date_time
+        method WriteDateTime slot=25 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=26 reverse=254
+            in datetime name=value
+    method write_double
+        method WriteDouble slot=24 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=2 reverse=246
+            in double name=value
+    method write_guid
+        method WriteGuid slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=33 reverse=208
+            in guid name=value
+    method write_int16
+        method WriteInt16 slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=210
+            in int16 name=value
+    method write_int32
+        method WriteInt32 slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=218
+            in int32 name=value
+    method write_int64
+        method WriteInt64 slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=3 reverse=222
+            in int64 name=value
+    method write_single
+        method WriteSingle slot=23 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=1 reverse=241
+            in single name=value
+    method write_string
+        method WriteString slot=27 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=51 reverse=260
+            in string name=value
+            out uint32 return
+    method write_time_span
+        method WriteTimeSpan slot=26 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=26 reverse=257
+            in timespan name=value
+    method write_uint16
+        method WriteUInt16 slot=20 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=228
+            in uint16 name=value
+    method write_uint32
+        method WriteUInt32 slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=232
+            in uint32 name=value
+    method write_uint64
+        method WriteUInt64 slot=22 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IDataWriter shape=3 reverse=236
+            in uint64 name=value
+
+interface Windows.Storage.Streams.IDataWriterFactory
+    guid 338c67c2-8b84-4c2b-9c50-7b8767847a1f
+
+interface Windows.Storage.Streams.IFileRandomAccessStreamStatics
+    guid 73550107-3b57-4b5d-8345-554d2fc621f0
+
+interface Windows.Storage.Streams.IInputStream python_type closeable
+    py _IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+    signature {905a0fe2-bc53-11df-8c49-001e4fc686da}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+
+interface Windows.Storage.Streams.IInputStreamReference python_type
+    py _IInputStreamReference
+    guid 43929d18-5ec9-4b5a-919c-4205b0c804b6
+    signature {43929d18-5ec9-4b5a-919c-4205b0c804b6}
+    method open_sequential_read_async
+        method OpenSequentialReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IInputStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> return
+
+interface Windows.Storage.Streams.IOutputStream python_type closeable
+    py _IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+    signature {905a0fe6-bc53-11df-8c49-001e4fc686da}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+interface Windows.Storage.Streams.IPropertySetSerializer python_type
+    py _IPropertySetSerializer
+    guid 6e8ebf1c-ef3d-4376-b20e-5be638aeac77
+    signature {6e8ebf1c-ef3d-4376-b20e-5be638aeac77}
+    method deserialize
+        method Deserialize slot=7 inputs=2 outputs=0 declaring=Windows.Storage.Streams.IPropertySetSerializer shape=51 reverse=44
+            in interface type=Windows.Foundation.Collections.IPropertySet name=propertySet
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+    method serialize
+        method Serialize slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IPropertySetSerializer shape=51 reverse=24
+            in interface type=Windows.Foundation.Collections.IPropertySet name=propertySet
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+interface Windows.Storage.Streams.IRandomAccessStream python_type closeable
+    py _IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+    signature {905a0fe1-bc53-11df-8c49-001e4fc686da}
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference python_type
+    py _IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+    signature {33ee3134-1dd6-4e3a-8067-d1c162e8642b}
+    method open_read_async
+        method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+interface Windows.Storage.Streams.IRandomAccessStreamReferenceStatics
+    guid 857309dc-3fbf-4e7d-986f-ef3b1a07a964
+
+interface Windows.Storage.Streams.IRandomAccessStreamStatics
+    guid 524cedcf-6e29-4ce5-9573-6b753db66c3a
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType python_type closeable
+    py _IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+    signature {cc254827-4b3d-438f-9232-10c76bc7e038}
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    requires Windows.Storage.Streams.IContentTypeProvider
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property content_type
+        get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
+            out string return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Storage.Streams.InMemoryRandomAccessStream activatable python_type closeable
+    py InMemoryRandomAccessStream
+    signature rc(Windows.Storage.Streams.InMemoryRandomAccessStream;{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+enum Windows.Storage.Streams.InputStreamOptions python_type
+    py InputStreamOptions
+    signature enum(Windows.Storage.Streams.InputStreamOptions;u4)
+
+class Windows.Storage.Streams.InputStreamOverStream python_type closeable
+    py InputStreamOverStream
+    signature rc(Windows.Storage.Streams.InputStreamOverStream;{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+
+class Windows.Storage.Streams.OutputStreamOverStream python_type closeable
+    py OutputStreamOverStream
+    signature rc(Windows.Storage.Streams.OutputStreamOverStream;{905a0fe6-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IOutputStream
+    requires Windows.Storage.Streams.IOutputStream
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Storage.Streams.RandomAccessStream static python_type
+    py RandomAccessStream
+    factory Windows.Storage.Streams.IRandomAccessStreamStatics
+    method copy_and_close_async static
+        method CopyAndCloseAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 reverse=66 static
+            in interface type=Windows.Storage.Streams.IInputStream name=source
+            in interface type=Windows.Storage.Streams.IOutputStream name=destination
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
+    method copy_async static
+        method CopyAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 reverse=25 static
+            in interface type=Windows.Storage.Streams.IInputStream name=source
+            in interface type=Windows.Storage.Streams.IOutputStream name=destination
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
+        method CopyAsync slot=7 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=194 static
+            in interface type=Windows.Storage.Streams.IInputStream name=source
+            in interface type=Windows.Storage.Streams.IOutputStream name=destination
+            in uint64 name=bytesToCopy
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
+
+class Windows.Storage.Streams.RandomAccessStreamOverStream python_type closeable
+    py RandomAccessStreamOverStream
+    signature rc(Windows.Storage.Streams.RandomAccessStreamOverStream;{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    default Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Storage.Streams.RandomAccessStreamReference python_type
+    py RandomAccessStreamReference
+    signature rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    default Windows.Storage.Streams.IRandomAccessStreamReference
+    requires Windows.Storage.Streams.IRandomAccessStreamReference
+    factory Windows.Storage.Streams.IRandomAccessStreamReferenceStatics
+    method create_from_file static
+        method CreateFromFile slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    method create_from_stream static
+        method CreateFromStream slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=65 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    method create_from_uri static
+        method CreateFromUri slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=44 static
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    method open_read_async
+        method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+enum Windows.Storage.Streams.UnicodeEncoding python_type
+    py UnicodeEncoding
+    signature enum(Windows.Storage.Streams.UnicodeEncoding;i4)
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class System.UInt64 external
+    py winrt.system.UInt64
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IMemoryBuffer external
+    py winrt.windows.foundation._IMemoryBuffer
+    guid fbc4dd2a-245b-11e4-af98-689423260cf8
+
+class Windows.Foundation.MemoryBuffer external
+    py winrt.windows.foundation.MemoryBuffer
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+enum Windows.Storage.FileAccessMode external
+    py winrt.windows.storage.FileAccessMode
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+enum Windows.Storage.StorageOpenOptions external
+    py winrt.windows.storage.StorageOpenOptions
+
+class Windows.Storage.StorageStreamTransaction external
+    py winrt.windows.storage.StorageStreamTransaction
+
+class Windows.System.User external
+    py winrt.windows.system.User

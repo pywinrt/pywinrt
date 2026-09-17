@@ -1,0 +1,785 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Storage.Search
+
+enum Windows.Storage.Search.CommonFileQuery python_type
+    py CommonFileQuery
+    signature enum(Windows.Storage.Search.CommonFileQuery;i4)
+
+enum Windows.Storage.Search.CommonFolderQuery python_type
+    py CommonFolderQuery
+    signature enum(Windows.Storage.Search.CommonFolderQuery;i4)
+
+class Windows.Storage.Search.ContentIndexer python_type
+    py ContentIndexer
+    signature rc(Windows.Storage.Search.ContentIndexer;{b1767f8d-f698-4982-b05f-3a6e8cab01a2})
+    default Windows.Storage.Search.IContentIndexer
+    requires Windows.Storage.Search.IContentIndexer
+    requires Windows.Storage.Search.IContentIndexerQueryOperations
+    factory Windows.Storage.Search.IContentIndexerStatics
+    property revision
+        get get_Revision slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=4 reverse=162
+            out uint64 return
+    method add_async
+        method AddAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=51 reverse=24
+            in interface type=Windows.Storage.Search.IIndexableContent name=indexableContent
+            out interface type=Windows.Foundation.IAsyncAction return
+    method create_query
+        method CreateQuery slot=8 inputs=2 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQueryOperations shape=117 reverse=66
+            in string name=searchFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
+            out class type=Windows.Storage.Search.ContentIndexerQuery return
+        method CreateQuery slot=7 inputs=3 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQueryOperations shape=195 reverse=46
+            in string name=searchFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> name=sortOrder
+            out class type=Windows.Storage.Search.ContentIndexerQuery return
+        method CreateQuery slot=6 inputs=4 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQueryOperations shape=239 reverse=27
+            in string name=searchFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> name=sortOrder
+            in string name=searchFilterLanguage
+            out class type=Windows.Storage.Search.ContentIndexerQuery return
+    method delete_all_async
+        method DeleteAllAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=4 reverse=121
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_async
+        method DeleteAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=51 reverse=65
+            in string name=contentId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_multiple_async
+        method DeleteMultipleAsync slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=51 reverse=100
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_indexer static
+        method GetIndexer slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerStatics shape=51 reverse=24 static
+            in string name=indexName
+            out class type=Windows.Storage.Search.ContentIndexer return
+        method GetIndexer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexerStatics shape=51 reverse=24 static
+            in string name=indexName
+            out class type=Windows.Storage.Search.ContentIndexer return
+    method retrieve_properties_async
+        method RetrievePropertiesAsync slot=11 inputs=2 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=117 reverse=145
+            in string name=contentId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> return
+    method update_async
+        method UpdateAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexer shape=51 reverse=44
+            in interface type=Windows.Storage.Search.IIndexableContent name=indexableContent
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Storage.Search.ContentIndexerQuery python_type
+    py ContentIndexerQuery
+    signature rc(Windows.Storage.Search.ContentIndexerQuery;{70e3b0f8-4bfc-428a-8889-cc51da9a7b9d})
+    default Windows.Storage.Search.IContentIndexerQuery
+    requires Windows.Storage.Search.IContentIndexerQuery
+    property query_folder
+        get get_QueryFolder slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=4 reverse=141
+            out class type=Windows.Storage.StorageFolder return
+    method get_async
+        method GetAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> return
+        method GetAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=117 reverse=125
+            in uint32 name=startIndex
+            in uint32 name=maxItems
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> return
+    method get_count_async
+        method GetCountAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_properties_async
+        method GetPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> return
+        method GetPropertiesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.Search.IContentIndexerQuery shape=117 reverse=66
+            in uint32 name=startIndex
+            in uint32 name=maxItems
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> return
+
+enum Windows.Storage.Search.DateStackOption python_type
+    py DateStackOption
+    signature enum(Windows.Storage.Search.DateStackOption;i4)
+
+enum Windows.Storage.Search.FolderDepth python_type
+    py FolderDepth
+    signature enum(Windows.Storage.Search.FolderDepth;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+    guid ef60385f-be78-584b-aaef-7829ada2b0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete
+    guid 5dcbee48-9965-51da-a461-177c885be7e5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> concrete
+    guid fc227365-219d-5d59-8b5b-58eb0a91ca0a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete
+    guid 4b1c0fd7-7a01-5e7a-a6fe-be4500283f23
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> concrete
+    guid 919850e1-084b-5f9b-a0a0-50db0cd5da91
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete
+    guid 03362e33-e413-5f29-97d0-48a4780935f9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> concrete
+    guid ca40b21b-aeb1-5a61-9e08-3bd5d9594023
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> concrete
+    guid 88694b1f-f380-574d-8a05-4f67bd52cd11
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Storage.Search.IndexedState;i4))
+    argument Windows.Storage.Search.IndexedState
+
+interface Windows.Storage.Search.IContentIndexer
+    guid b1767f8d-f698-4982-b05f-3a6e8cab01a2
+
+interface Windows.Storage.Search.IContentIndexerQuery
+    guid 70e3b0f8-4bfc-428a-8889-cc51da9a7b9d
+
+interface Windows.Storage.Search.IContentIndexerQueryOperations
+    guid 28823e10-4786-42f1-9730-792b3566b150
+
+interface Windows.Storage.Search.IContentIndexerStatics
+    guid 8c488375-b37e-4c60-9ba8-b760fda3e59d
+
+interface Windows.Storage.Search.IIndexableContent python_type
+    py _IIndexableContent
+    guid ccf1a05f-d4b5-483a-b06e-e0db1ec420e4
+    signature {ccf1a05f-d4b5-483a-b06e-e0db1ec420e4}
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=43
+            in string name=value
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> return
+    property stream
+        get get_Stream slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+        put put_Stream slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=121
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    property stream_content_type
+        get get_StreamContentType slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=141
+            out string return
+        put put_StreamContentType slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=162
+            in string name=value
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> concrete
+    guid 35aff6f9-ef75-5280-bb84-a2bf8317cf35
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Storage.Search.SortEntry;string;b1))
+    argument Windows.Storage.Search.SortEntry
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> concrete
+    guid 520434a2-acf7-58c9-b47a-2741f2fac2c2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Storage.Search.SortEntry;string;b1))
+    argument Windows.Storage.Search.SortEntry
+
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
+    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> concrete
+    guid a31b6540-b2b1-536d-818f-8ade7051c3b3
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4)))
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Storage.Search.IQueryOptions
+    guid 1e5e46ee-0f45-4838-a8e9-d0479d446c30
+
+interface Windows.Storage.Search.IQueryOptionsFactory
+    guid 032e1f8c-a9c1-4e71-8011-0dee9d4811a3
+
+interface Windows.Storage.Search.IQueryOptionsWithProviderFilter
+    guid 5b9d1026-15c4-44dd-b89a-47a59b7d7c4f
+
+interface Windows.Storage.Search.IStorageFileQueryResult
+    guid 52fda447-2baa-412c-b29f-d4b1778efa1e
+
+interface Windows.Storage.Search.IStorageFileQueryResult2
+    guid 4e5db9dd-7141-46c4-8be3-e9dc9e27275c
+
+interface Windows.Storage.Search.IStorageFolderQueryOperations python_type
+    py _IStorageFolderQueryOperations
+    guid cb43ccc9-446b-4a4f-be97-757771be5203
+    signature {cb43ccc9-446b-4a4f-be97-757771be5203}
+    method are_query_options_supported
+        method AreQueryOptionsSupported slot=20 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=229
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out boolean return
+    method create_file_query
+        method CreateFileQuery slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=43
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+        method CreateFileQuery slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=65
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    method create_file_query_with_options
+        method CreateFileQueryWithOptions slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=100
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    method create_folder_query
+        method CreateFolderQuery slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=121
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+        method CreateFolderQuery slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=144
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+    method create_folder_query_with_options
+        method CreateFolderQueryWithOptions slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=163
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+    method create_item_query
+        method CreateItemQuery slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=173
+            out class type=Windows.Storage.Search.StorageItemQueryResult return
+    method create_item_query_with_options
+        method CreateItemQueryWithOptions slot=14 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=187
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageItemQueryResult return
+    method get_files_async
+        method GetFilesAsync slot=16 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=203
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+        method GetFilesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=195 reverse=198
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+    method get_folders_async
+        method GetFoldersAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=219
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+        method GetFoldersAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=195 reverse=212
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+    method get_indexed_state_async
+        method GetIndexedStateAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> return
+    method get_items_async
+        method GetItemsAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=117 reverse=225
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+    method is_common_file_query_supported
+        method IsCommonFileQuerySupported slot=22 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=238
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out boolean return
+    method is_common_folder_query_supported
+        method IsCommonFolderQuerySupported slot=21 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=233
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out boolean return
+
+interface Windows.Storage.Search.IStorageFolderQueryResult
+    guid 6654c911-7d66-46fa-aecf-e4a4baa93ab8
+
+interface Windows.Storage.Search.IStorageItemQueryResult
+    guid e8948079-9d58-47b8-b2b2-41b07f4795f9
+
+interface Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails
+    guid 1dc7a369-b7a3-4df2-9d61-eba85a0343d2
+
+interface Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails
+    guid 2a371977-abbf-4e1d-8aa5-6385d8884799
+
+interface Windows.Storage.Search.IStorageQueryResultBase python_type
+    py _IStorageQueryResultBase
+    guid c297d70d-7353-47ab-ba58-8c61425dc54b
+    signature {c297d70d-7353-47ab-ba58-8c61425dc54b}
+    property folder
+        get get_Folder slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    event contents_changed
+        add add_ContentsChanged slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=handler
+            out event_token return
+        remove remove_ContentsChanged slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=110
+            in event_token name=eventCookie
+    event options_changed
+        add add_OptionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=changedHandler
+            out event_token return
+        remove remove_OptionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=156
+            in event_token name=eventCookie
+    method apply_new_query_options
+        method ApplyNewQueryOptions slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=186
+            in class type=Windows.Storage.Search.QueryOptions name=newQueryOptions
+    method find_start_index_async
+        method FindStartIndexAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=163
+            in object name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_current_query_options
+        method GetCurrentQueryOptions slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=173
+            out class type=Windows.Storage.Search.QueryOptions return
+    method get_item_count_async
+        method GetItemCountAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+
+interface Windows.Storage.Search.IValueAndLanguage
+    guid b9914881-a1ee-4bc4-92a5-466968e30436
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> concrete
+    guid d8ea401b-47b3-5254-84f4-eea10c4cf068
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Storage.Search.SortEntry;string;b1))
+    argument Windows.Storage.Search.SortEntry
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete
+    guid 2f245f9d-eb5f-5641-9dcc-6ab1946cc7e6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))
+    argument Windows.Data.Text.TextSegment
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete
+    guid 172a655b-b3b8-5eae-bc2e-a6a1f1708b4b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete
+    guid 85575a41-06cb-58d0-b98a-7c8f06e6e9d7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> concrete
+    guid f4512416-6bb8-5c6f-b83a-bf8a2788ce9f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4})
+    argument Windows.Storage.Search.IIndexableContent
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> concrete
+    guid 823c7604-b37b-5465-a169-29497893cdb9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Storage.Search.SortEntry;string;b1))
+    argument Windows.Storage.Search.SortEntry
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+    guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> concrete
+    guid e20debc6-dc4e-542e-a2e7-a24d19c8dd62
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+class Windows.Storage.Search.IndexableContent activatable python_type
+    py IndexableContent
+    signature rc(Windows.Storage.Search.IndexableContent;{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4})
+    default Windows.Storage.Search.IIndexableContent
+    requires Windows.Storage.Search.IIndexableContent
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property stream_content_type
+        get get_StreamContentType slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=141
+            out string return
+        put put_StreamContentType slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=162
+            in string name=value
+    property stream
+        get get_Stream slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+        put put_Stream slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=121
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=22
+            out string return
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=43
+            in string name=value
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> return
+
+enum Windows.Storage.Search.IndexedState python_type
+    py IndexedState
+    signature enum(Windows.Storage.Search.IndexedState;i4)
+
+enum Windows.Storage.Search.IndexerOption python_type
+    py IndexerOption
+    signature enum(Windows.Storage.Search.IndexerOption;i4)
+
+class Windows.Storage.Search.QueryOptions activatable python_type
+    py QueryOptions
+    signature rc(Windows.Storage.Search.QueryOptions;{1e5e46ee-0f45-4838-a8e9-d0479d446c30})
+    default Windows.Storage.Search.IQueryOptions
+    requires Windows.Storage.Search.IQueryOptions
+    requires Windows.Storage.Search.IQueryOptionsWithProviderFilter
+    factory Windows.Storage.Search.IQueryOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsFactory shape=117 reverse=25
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query implicit
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=fileTypeFilter implicit
+            out class type=Windows.Storage.Search.QueryOptions return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsFactory shape=51 reverse=44
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out class type=Windows.Storage.Search.QueryOptions return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsFactory shape=117 reverse=25
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=fileTypeFilter
+            out class type=Windows.Storage.Search.QueryOptions return
+    property user_search_filter
+        get get_UserSearchFilter slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=141
+            out string return
+        put put_UserSearchFilter slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=162
+            in string name=value
+    property language
+        get get_Language slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=173
+            out string return
+        put put_Language slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=186
+            in string name=value
+    property indexer_option
+        get get_IndexerOption slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=194
+            out enum32 type=Windows.Storage.Search.IndexerOption return
+        put put_IndexerOption slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=202
+            in enum32 type=Windows.Storage.Search.IndexerOption name=value
+    property folder_depth
+        get get_FolderDepth slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=43
+            out enum32 type=Windows.Storage.Search.FolderDepth return
+        put put_FolderDepth slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=62
+            in enum32 type=Windows.Storage.Search.FolderDepth name=value
+    property application_search_filter
+        get get_ApplicationSearchFilter slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=99
+            out string return
+        put put_ApplicationSearchFilter slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=121
+            in string name=value
+    property date_stack_option
+        get get_DateStackOption slot=19 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=223
+            out enum32 type=Windows.Storage.Search.DateStackOption return
+    property file_type_filter
+        get get_FileTypeFilter slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property group_property_name
+        get get_GroupPropertyName slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=218
+            out string return
+    property sort_order
+        get get_SortOrder slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> return
+    property storage_provider_id_filter
+        get get_StorageProviderIdFilter slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsWithProviderFilter shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method load_from_string
+        method LoadFromString slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=232
+            in string name=value
+    method save_to_string
+        method SaveToString slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=228
+            out string return
+    method set_property_prefetch
+        method SetPropertyPrefetch slot=23 inputs=2 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=51 reverse=243
+            in enum_u32 type=Windows.Storage.FileProperties.PropertyPrefetchOptions name=options
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
+    method set_thumbnail_prefetch
+        method SetThumbnailPrefetch slot=22 inputs=3 outputs=0 declaring=Windows.Storage.Search.IQueryOptions shape=117 reverse=239
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedSize
+            in enum_u32 type=Windows.Storage.FileProperties.ThumbnailOptions name=options
+
+struct Windows.Storage.Search.SortEntry python_type
+    py SortEntry
+    signature struct(Windows.Storage.Search.SortEntry;string;b1)
+    field property_name PropertyName string
+    field ascending_order AscendingOrder boolean
+
+class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutable_sequence
+    py SortEntryVector
+    signature rc(Windows.Storage.Search.SortEntryVector;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Storage.Search.SortEntry;string;b1)))
+    default Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry>
+    requires Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=27 reverse=182
+            in struct type=Windows.Storage.Search.SortEntry name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=24
+            in uint32 name=index
+            out struct type=Windows.Storage.Search.SortEntry return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Storage.Search.SortEntry name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=171 reverse=112
+            in struct type=Windows.Storage.Search.SortEntry name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=151
+            in uint32 name=index
+            in struct type=Windows.Storage.Search.SortEntry name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=211
+            pass_array struct type=Windows.Storage.Search.SortEntry name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=131
+            in uint32 name=index
+            in struct type=Windows.Storage.Search.SortEntry name=value
+
+class Windows.Storage.Search.StorageFileQueryResult python_type
+    py StorageFileQueryResult
+    signature rc(Windows.Storage.Search.StorageFileQueryResult;{52fda447-2baa-412c-b29f-d4b1778efa1e})
+    default Windows.Storage.Search.IStorageFileQueryResult
+    requires Windows.Storage.Search.IStorageFileQueryResult
+    requires Windows.Storage.Search.IStorageQueryResultBase
+    requires Windows.Storage.Search.IStorageFileQueryResult2
+    property folder
+        get get_Folder slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    event contents_changed
+        add add_ContentsChanged slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=handler
+            out event_token return
+        remove remove_ContentsChanged slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=110
+            in event_token name=eventCookie
+    event options_changed
+        add add_OptionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=changedHandler
+            out event_token return
+        remove remove_OptionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=156
+            in event_token name=eventCookie
+    method apply_new_query_options
+        method ApplyNewQueryOptions slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=186
+            in class type=Windows.Storage.Search.QueryOptions name=newQueryOptions
+    method find_start_index_async
+        method FindStartIndexAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=163
+            in object name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_current_query_options
+        method GetCurrentQueryOptions slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=173
+            out class type=Windows.Storage.Search.QueryOptions return
+    method get_files_async
+        method GetFilesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFileQueryResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+        method GetFilesAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Search.IStorageFileQueryResult shape=117 reverse=25
+            in uint32 name=startIndex
+            in uint32 name=maxNumberOfItems
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+    method get_item_count_async
+        method GetItemCountAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_matching_properties_with_ranges
+        method GetMatchingPropertiesWithRanges slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFileQueryResult2 shape=51 reverse=24
+            in class type=Windows.Storage.StorageFile name=file
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> return
+
+class Windows.Storage.Search.StorageFolderQueryResult python_type
+    py StorageFolderQueryResult
+    signature rc(Windows.Storage.Search.StorageFolderQueryResult;{6654c911-7d66-46fa-aecf-e4a4baa93ab8})
+    default Windows.Storage.Search.IStorageFolderQueryResult
+    requires Windows.Storage.Search.IStorageFolderQueryResult
+    requires Windows.Storage.Search.IStorageQueryResultBase
+    property folder
+        get get_Folder slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    event contents_changed
+        add add_ContentsChanged slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=handler
+            out event_token return
+        remove remove_ContentsChanged slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=110
+            in event_token name=eventCookie
+    event options_changed
+        add add_OptionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=changedHandler
+            out event_token return
+        remove remove_OptionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=156
+            in event_token name=eventCookie
+    method apply_new_query_options
+        method ApplyNewQueryOptions slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=186
+            in class type=Windows.Storage.Search.QueryOptions name=newQueryOptions
+    method find_start_index_async
+        method FindStartIndexAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=163
+            in object name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_current_query_options
+        method GetCurrentQueryOptions slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=173
+            out class type=Windows.Storage.Search.QueryOptions return
+    method get_folders_async
+        method GetFoldersAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+        method GetFoldersAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryResult shape=117 reverse=25
+            in uint32 name=startIndex
+            in uint32 name=maxNumberOfItems
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+    method get_item_count_async
+        method GetItemCountAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+
+class Windows.Storage.Search.StorageItemQueryResult python_type
+    py StorageItemQueryResult
+    signature rc(Windows.Storage.Search.StorageItemQueryResult;{e8948079-9d58-47b8-b2b2-41b07f4795f9})
+    default Windows.Storage.Search.IStorageItemQueryResult
+    requires Windows.Storage.Search.IStorageItemQueryResult
+    requires Windows.Storage.Search.IStorageQueryResultBase
+    property folder
+        get get_Folder slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    event contents_changed
+        add add_ContentsChanged slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=handler
+            out event_token return
+        remove remove_ContentsChanged slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=110
+            in event_token name=eventCookie
+    event options_changed
+        add add_OptionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> name=changedHandler
+            out event_token return
+        remove remove_OptionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=26 reverse=156
+            in event_token name=eventCookie
+    method apply_new_query_options
+        method ApplyNewQueryOptions slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=186
+            in class type=Windows.Storage.Search.QueryOptions name=newQueryOptions
+    method find_start_index_async
+        method FindStartIndexAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=51 reverse=163
+            in object name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_current_query_options
+        method GetCurrentQueryOptions slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=173
+            out class type=Windows.Storage.Search.QueryOptions return
+    method get_item_count_async
+        method GetItemCountAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageQueryResultBase shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_items_async
+        method GetItemsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageItemQueryResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+        method GetItemsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Search.IStorageItemQueryResult shape=117 reverse=25
+            in uint32 name=startIndex
+            in uint32 name=maxNumberOfItems
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+
+class Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails python_type
+    py StorageLibraryChangeTrackerTriggerDetails
+    signature rc(Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails;{1dc7a369-b7a3-4df2-9d61-eba85a0343d2})
+    default Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails
+    requires Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails
+    property change_tracker
+        get get_ChangeTracker slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails shape=4 reverse=43
+            out class type=Windows.Storage.StorageLibraryChangeTracker return
+    property folder
+        get get_Folder slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageLibraryChangeTrackerTriggerDetails shape=4 reverse=22
+            out class type=Windows.Storage.StorageFolder return
+
+class Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails python_type
+    py StorageLibraryContentChangedTriggerDetails
+    signature rc(Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails;{2a371977-abbf-4e1d-8aa5-6385d8884799})
+    default Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails
+    requires Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails
+    property folder
+        get get_Folder slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails shape=4 reverse=22
+            out class type=Windows.Storage.StorageFolder return
+    method create_modified_since_query
+        method CreateModifiedSinceQuery slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails shape=89
+            in datetime name=lastQueryTime
+            out class type=Windows.Storage.Search.StorageItemQueryResult return
+
+enum T parameterized
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> concrete
+    guid 4ba22861-00c4-597f-b6bf-3af516f3b870
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{c297d70d-7353-47ab-ba58-8c61425dc54b};cinterface(IInspectable))
+    argument Windows.Storage.Search.IStorageQueryResultBase
+    argument System.Object
+
+class Windows.Storage.Search.ValueAndLanguage activatable python_type
+    py ValueAndLanguage
+    signature rc(Windows.Storage.Search.ValueAndLanguage;{b9914881-a1ee-4bc4-92a5-466968e30436})
+    default Windows.Storage.Search.IValueAndLanguage
+    requires Windows.Storage.Search.IValueAndLanguage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Search.IValueAndLanguage shape=4 reverse=62
+            out object return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IValueAndLanguage shape=4 reverse=99
+            in object name=value
+    property language
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IValueAndLanguage shape=4 reverse=22
+            out string return
+        put put_Language slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Search.IValueAndLanguage shape=4 reverse=43
+            in string name=value
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Data.Text.TextSegment external
+    py winrt.windows.data.text.TextSegment
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+class Windows.Storage.StorageLibraryChangeTracker external
+    py winrt.windows.storage.StorageLibraryChangeTracker
+
+enum Windows.Storage.FileProperties.PropertyPrefetchOptions external
+    py winrt.windows.storage.fileproperties.PropertyPrefetchOptions
+
+enum Windows.Storage.FileProperties.ThumbnailMode external
+    py winrt.windows.storage.fileproperties.ThumbnailMode
+
+enum Windows.Storage.FileProperties.ThumbnailOptions external
+    py winrt.windows.storage.fileproperties.ThumbnailOptions
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da

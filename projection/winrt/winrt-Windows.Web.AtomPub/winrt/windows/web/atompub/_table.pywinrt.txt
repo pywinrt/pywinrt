@@ -1,0 +1,377 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web.AtomPub
+
+class Windows.Web.AtomPub.AtomPubClient activatable python_type
+    py AtomPubClient
+    signature rc(Windows.Web.AtomPub.AtomPubClient;{35392c38-cded-4d4c-9637-05f15c1c9406})
+    default Windows.Web.AtomPub.IAtomPubClient
+    requires Windows.Web.AtomPub.IAtomPubClient
+    requires Windows.Web.Syndication.ISyndicationClient
+    factory Windows.Web.AtomPub.IAtomPubClientFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential implicit
+            out class type=Windows.Web.AtomPub.AtomPubClient return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential
+            out class type=Windows.Web.AtomPub.AtomPubClient return
+    property timeout
+        get get_Timeout slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=162
+            out uint32 return
+        put put_Timeout slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=173
+            in uint32 name=value
+    property server_credential
+        get get_ServerCredential slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=43
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property proxy_credential
+        get get_ProxyCredential slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property max_response_buffer_size
+        get get_MaxResponseBufferSize slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=121
+            out uint32 return
+        put put_MaxResponseBufferSize slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=141
+            in uint32 name=value
+    property bypass_cache_on_retrieve
+        get get_BypassCacheOnRetrieve slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=186
+            out boolean return
+        put put_BypassCacheOnRetrieve slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=194
+            in boolean name=value
+    method cancel_async_operations
+        method CancelAsyncOperations slot=16 inputs=0 outputs=0 declaring=Windows.Web.AtomPub.IAtomPubClient shape=0 reverse=201
+    method create_media_resource_async
+        method CreateMediaResourceAsync slot=10 inputs=4 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=239
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=mediaType
+            in string name=description
+            in interface type=Windows.Storage.Streams.IInputStream name=mediaStream
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> return
+    method create_resource_async
+        method CreateResourceAsync slot=9 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195 reverse=102
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=description
+            in class type=Windows.Web.Syndication.SyndicationItem name=item
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> return
+    method delete_resource_async
+        method DeleteResourceAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=187
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
+    method delete_resource_item_async
+        method DeleteResourceItemAsync slot=15 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=196
+            in class type=Windows.Web.Syndication.SyndicationItem name=item
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
+    method retrieve_feed_async
+        method RetrieveFeedAsync slot=17 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=211
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
+    method retrieve_media_resource_async
+        method RetrieveMediaResourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Syndication.RetrievalProgress> return
+    method retrieve_resource_async
+        method RetrieveResourceAsync slot=8 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=65
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.RetrievalProgress> return
+    method retrieve_service_document_async
+        method RetrieveServiceDocumentAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.AtomPub.ServiceDocument,Windows.Web.Syndication.RetrievalProgress> return
+    method set_request_header
+        method SetRequestHeader slot=16 inputs=2 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=203
+            in string name=name
+            in string name=value
+    method update_media_resource_async
+        method UpdateMediaResourceAsync slot=11 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195 reverse=146
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=mediaType
+            in interface type=Windows.Storage.Streams.IInputStream name=mediaStream
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
+    method update_resource_async
+        method UpdateResourceAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=117 reverse=164
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.Web.Syndication.SyndicationItem name=item
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
+    method update_resource_item_async
+        method UpdateResourceItemAsync slot=13 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=174
+            in class type=Windows.Web.Syndication.SyndicationItem name=item
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
+
+interface Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> concrete
+    guid b7eb83f5-a746-50f2-b91f-31803161ccc7
+    signature pinterface({1f6db258-e803-48a1-9546-eb7353398884};struct(Windows.Web.Syndication.TransferProgress;u4;u4;u4;u4))
+    argument Windows.Web.Syndication.TransferProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Syndication.RetrievalProgress> concrete
+    guid f71cff65-e737-5345-b38f-fd445d2dc7e2
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe2-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    argument Windows.Storage.Streams.IInputStream
+    argument Windows.Web.Syndication.RetrievalProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.AtomPub.ServiceDocument,Windows.Web.Syndication.RetrievalProgress> concrete
+    guid da07abf4-91fa-5c96-84cb-459ea97b934d
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.AtomPub.ServiceDocument;{8b7ec771-2ab3-4dbe-8bcc-778f92b75e51});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    argument Windows.Web.AtomPub.ServiceDocument
+    argument Windows.Web.Syndication.RetrievalProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete
+    guid 92eaf151-415e-5f87-8095-781623c88998
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    argument Windows.Web.Syndication.SyndicationFeed
+    argument Windows.Web.Syndication.RetrievalProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.RetrievalProgress> concrete
+    guid 44fa5a15-1204-521c-85e5-01259301d527
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    argument Windows.Web.Syndication.SyndicationItem
+    argument Windows.Web.Syndication.RetrievalProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> concrete
+    guid e57d0717-27c0-561e-b4b3-72aa2b1e3fc9
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c});struct(Windows.Web.Syndication.TransferProgress;u4;u4;u4;u4))
+    argument Windows.Web.Syndication.SyndicationItem
+    argument Windows.Web.Syndication.TransferProgress
+
+interface Windows.Web.AtomPub.IAtomPubClient
+    guid 35392c38-cded-4d4c-9637-05f15c1c9406
+
+interface Windows.Web.AtomPub.IAtomPubClientFactory
+    guid 49d55012-57cb-4bde-ab9f-2610b172777b
+
+interface Windows.Web.AtomPub.IResourceCollection
+    guid 7f5fd609-bc88-41d4-88fa-3de6704d428e
+
+interface Windows.Web.AtomPub.IServiceDocument
+    guid 8b7ec771-2ab3-4dbe-8bcc-778f92b75e51
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> concrete
+    guid f4508afa-9f02-5eb8-a389-14bbe5193ac0
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    argument Windows.Web.Syndication.ISyndicationNode
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> concrete
+    guid 2fe84e7b-2350-5941-94b5-a64677b585d1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    argument Windows.Web.Syndication.SyndicationAttribute
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.ResourceCollection> concrete
+    guid 32f021c7-368b-5cfa-829c-4acf8a36c810
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.AtomPub.ResourceCollection;{7f5fd609-bc88-41d4-88fa-3de6704d428e}))
+    argument Windows.Web.AtomPub.ResourceCollection
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspace> concrete
+    guid d0d7b58d-d97e-5761-be66-42b85b3d19c8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.AtomPub.Workspace;{b41da63b-a4b8-4036-89c5-83c31266ba49}))
+    argument Windows.Web.AtomPub.Workspace
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> concrete
+    guid a1ac007c-9d94-552e-840e-139f109a9b88
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    argument Windows.Web.Syndication.SyndicationCategory
+
+interface Windows.Web.AtomPub.IWorkspace
+    guid b41da63b-a4b8-4036-89c5-83c31266ba49
+
+class Windows.Web.AtomPub.ResourceCollection python_type
+    py ResourceCollection
+    signature rc(Windows.Web.AtomPub.ResourceCollection;{7f5fd609-bc88-41d4-88fa-3de6704d428e})
+    default Windows.Web.AtomPub.IResourceCollection
+    requires Windows.Web.AtomPub.IResourceCollection
+    requires Windows.Web.Syndication.ISyndicationNode
+    property accepts
+        get get_Accepts slot=9 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property categories
+        get get_Categories slot=8 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=22
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.AtomPub.ServiceDocument python_type
+    py ServiceDocument
+    signature rc(Windows.Web.AtomPub.ServiceDocument;{8b7ec771-2ab3-4dbe-8bcc-778f92b75e51})
+    default Windows.Web.AtomPub.IServiceDocument
+    requires Windows.Web.AtomPub.IServiceDocument
+    requires Windows.Web.Syndication.ISyndicationNode
+    property workspaces
+        get get_Workspaces slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IServiceDocument shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspace> return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.AtomPub.Workspace python_type
+    py Workspace
+    signature rc(Windows.Web.AtomPub.Workspace;{b41da63b-a4b8-4036-89c5-83c31266ba49})
+    default Windows.Web.AtomPub.IWorkspace
+    requires Windows.Web.AtomPub.IWorkspace
+    requires Windows.Web.Syndication.ISyndicationNode
+    property collections
+        get get_Collections slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.ResourceCollection> return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4 reverse=22
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Data.Xml.Dom.XmlDocument external
+    py winrt.windows.data.xml.dom.XmlDocument
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Web.Syndication.ISyndicationClient external
+    py winrt.windows.web.syndication._ISyndicationClient
+    guid 9e18a9b7-7249-4b45-b229-7df895a5a1f5
+
+interface Windows.Web.Syndication.ISyndicationNode external
+    py winrt.windows.web.syndication._ISyndicationNode
+    guid 753cef78-51f8-45c0-a9f5-f1719dec3fb2
+
+interface Windows.Web.Syndication.ISyndicationText external
+    py winrt.windows.web.syndication._ISyndicationText
+    guid b9cc5e80-313a-4091-a2a6-243e0ee923f9
+
+struct Windows.Web.Syndication.RetrievalProgress external
+    py winrt.windows.web.syndication.RetrievalProgress
+
+class Windows.Web.Syndication.SyndicationAttribute external
+    py winrt.windows.web.syndication.SyndicationAttribute
+
+class Windows.Web.Syndication.SyndicationCategory external
+    py winrt.windows.web.syndication.SyndicationCategory
+
+class Windows.Web.Syndication.SyndicationFeed external
+    py winrt.windows.web.syndication.SyndicationFeed
+
+enum Windows.Web.Syndication.SyndicationFormat external
+    py winrt.windows.web.syndication.SyndicationFormat
+
+class Windows.Web.Syndication.SyndicationItem external
+    py winrt.windows.web.syndication.SyndicationItem
+
+struct Windows.Web.Syndication.TransferProgress external
+    py winrt.windows.web.syndication.TransferProgress

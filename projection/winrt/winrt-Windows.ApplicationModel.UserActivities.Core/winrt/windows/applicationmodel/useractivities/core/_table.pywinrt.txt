@@ -1,0 +1,33 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserActivities.Core
+
+class Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager static python_type
+    py CoreUserActivityManager
+    factory Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics
+    method create_user_activity_session_in_background static
+        method CreateUserActivitySessionInBackground slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.UserActivities.UserActivity name=activity
+            out class type=Windows.ApplicationModel.UserActivities.UserActivitySession return
+    method delete_user_activity_sessions_in_time_range_async static
+        method DeleteUserActivitySessionsInTimeRangeAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics shape=214 static
+            in class type=Windows.ApplicationModel.UserActivities.UserActivityChannel name=channel
+            in datetime name=startTime
+            in datetime name=endTime
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics
+    guid ca3adb02-a4be-4d4d-bfa8-6795f4264efb
+
+class Windows.ApplicationModel.UserActivities.UserActivity external
+    py winrt.windows.applicationmodel.useractivities.UserActivity
+
+class Windows.ApplicationModel.UserActivities.UserActivityChannel external
+    py winrt.windows.applicationmodel.useractivities.UserActivityChannel
+
+class Windows.ApplicationModel.UserActivities.UserActivitySession external
+    py winrt.windows.applicationmodel.useractivities.UserActivitySession
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

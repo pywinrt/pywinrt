@@ -1,0 +1,114 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.AI.ContentSafety
+
+class Microsoft.Windows.AI.ContentSafety.ContentFilterOptions activatable python_type
+    py ContentFilterOptions
+    signature rc(Microsoft.Windows.AI.ContentSafety.ContentFilterOptions;{6808be9f-80d2-5136-8a8a-1f5c52c824ad})
+    default Microsoft.Windows.AI.ContentSafety.IContentFilterOptions
+    requires Microsoft.Windows.AI.ContentSafety.IContentFilterOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property response_max_allowed_severity_level
+        get get_ResponseMaxAllowedSeverityLevel slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=62
+            out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return
+        put put_ResponseMaxAllowedSeverityLevel slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=99
+            in class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity name=value
+    property prompt_max_allowed_severity_level
+        get get_PromptMaxAllowedSeverityLevel slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=22
+            out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return
+        put put_PromptMaxAllowedSeverityLevel slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=43
+            in class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity name=value
+    property image_max_allowed_severity_level
+        get get_ImageMaxAllowedSeverityLevel slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=121
+            out class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity return
+        put put_ImageMaxAllowedSeverityLevel slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IContentFilterOptions shape=4 reverse=141
+            in class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity name=value
+
+interface Microsoft.Windows.AI.ContentSafety.IContentFilterOptions
+    guid 6808be9f-80d2-5136-8a8a-1f5c52c824ad
+
+interface Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity
+    guid f1563582-c66a-5861-9995-1440b05191ac
+
+interface Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory
+    guid ead11457-81b1-5b81-9ca3-c5b04b4df043
+
+interface Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity
+    guid 68c1ee47-c35c-5f4c-a647-b0c0f64aa0d5
+
+interface Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory
+    guid e0ca501e-4004-501e-8984-442d091607d4
+
+class Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity activatable python_type
+    py ImageContentFilterSeverity
+    signature rc(Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity;{f1563582-c66a-5861-9995-1440b05191ac})
+    default Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity
+    requires Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity
+    factory Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory shape=51 reverse=24
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForALlCategories implicit
+            out class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory shape=51 reverse=24
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForALlCategories
+            out class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity return
+    property violent_content_level
+        get get_ViolentContentLevel slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=162
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_ViolentContentLevel slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=173
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property racy_content_level
+        get get_RacyContentLevel slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=62
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_RacyContentLevel slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=99
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property gory_content_level
+        get get_GoryContentLevel slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=121
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_GoryContentLevel slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=141
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property adult_content_level
+        get get_AdultContentLevel slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=22
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_AdultContentLevel slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity shape=4 reverse=43
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+
+enum Microsoft.Windows.AI.ContentSafety.SeverityLevel python_type
+    py SeverityLevel
+    signature enum(Microsoft.Windows.AI.ContentSafety.SeverityLevel;i4)
+
+class Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity activatable python_type
+    py TextContentFilterSeverity
+    signature rc(Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity;{68c1ee47-c35c-5f4c-a647-b0c0f64aa0d5})
+    default Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity
+    requires Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity
+    factory Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory shape=51 reverse=24
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForAllCategories implicit
+            out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory shape=51 reverse=24
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForAllCategories
+            out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return
+    property violent
+        get get_Violent slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=121
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_Violent slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=141
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property sexual
+        get get_Sexual slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=62
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_Sexual slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=99
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property self_harm
+        get get_SelfHarm slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=162
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_SelfHarm slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=173
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value
+    property hate
+        get get_Hate slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=22
+            out enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel return
+        put put_Hate slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity shape=4 reverse=43
+            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=value

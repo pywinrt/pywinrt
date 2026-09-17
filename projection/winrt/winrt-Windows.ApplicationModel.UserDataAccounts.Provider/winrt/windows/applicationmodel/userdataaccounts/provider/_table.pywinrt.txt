@@ -1,0 +1,103 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserDataAccounts.Provider
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo
+    guid 5f200037-f6ef-4ec3-8630-012c59c1149f
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation
+    guid b9c72530-3f84-4b5d-8eaa-45e97aa842ed
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation python_type
+    py _IUserDataAccountProviderOperation
+    guid a20aad63-888c-4a62-a3dd-34d07a802b2b
+    signature {a20aad63-888c-4a62-a3dd-34d07a802b2b}
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind return
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation
+    guid 6235dc15-bfcb-41e1-9957-9759a28846cc
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation
+    guid 92034db7-8648-4f30-acfa-3002658ca80d
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> concrete
+    guid b730f093-e2fb-5b20-9d9e-4f9defe647b0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo;{5f200037-f6ef-4ec3-8630-012c59c1149f}))
+    argument Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo
+
+class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo python_type
+    py UserDataAccountPartnerAccountInfo
+    signature rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo;{5f200037-f6ef-4ec3-8630-012c59c1149f})
+    default Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo
+    property account_kind
+        get get_AccountKind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo shape=4 reverse=22
+            out string return
+    property priority
+        get get_Priority slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo shape=4 reverse=43
+            out uint32 return
+
+class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation python_type
+    py UserDataAccountProviderAddAccountOperation
+    signature rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation;{b9c72530-3f84-4b5d-8eaa-45e97aa842ed})
+    default Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation
+    property content_kinds
+        get get_ContentKinds slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds return
+    property partner_account_infos
+        get get_PartnerAccountInfos slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind return
+    method report_completed
+        method ReportCompleted slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation shape=4 reverse=62
+            in string name=userDataAccountId
+
+enum Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind python_type
+    py UserDataAccountProviderOperationKind
+    signature enum(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind;i4)
+
+enum Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind python_type
+    py UserDataAccountProviderPartnerAccountKind
+    signature enum(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind;i4)
+
+class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation python_type
+    py UserDataAccountProviderResolveErrorsOperation
+    signature rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation;{6235dc15-bfcb-41e1-9957-9759a28846cc})
+    default Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind return
+    property user_data_account_id
+        get get_UserDataAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation shape=4 reverse=22
+            out string return
+    method report_completed
+        method ReportCompleted slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation shape=0 reverse=37
+
+class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation python_type
+    py UserDataAccountProviderSettingsOperation
+    signature rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation;{92034db7-8648-4f30-acfa-3002658ca80d})
+    default Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation
+    requires Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind return
+    property user_data_account_id
+        get get_UserDataAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation shape=4 reverse=22
+            out string return
+    method report_completed
+        method ReportCompleted slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation shape=0 reverse=37
+
+enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds external
+    py winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds

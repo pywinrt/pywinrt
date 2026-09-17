@@ -1,0 +1,210 @@
+format 4.0
+generator 0.0.0
+namespace Windows.AI.Actions.Hosting
+
+class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
+    py ActionCatalog
+    signature rc(Windows.AI.Actions.Hosting.ActionCatalog;{dbe7c537-66ea-5394-9085-4fc19d78375c})
+    default Windows.AI.Actions.Hosting.IActionCatalog
+    requires Windows.AI.Actions.Hosting.IActionCatalog
+    requires Windows.AI.Actions.Hosting.IActionCatalog2
+    requires Windows.Foundation.IClosable
+    event changed
+        add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.Hosting.ActionCatalog,System.Object> name=handler
+            out event_token return
+        remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=26 reverse=82
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_actions_for_inputs
+        method GetActionsForInputs slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog2 shape=195 reverse=26
+            pass_array class type=Windows.AI.Actions.ActionEntity name=inputEntities
+            receive_array class type=Windows.AI.Actions.Hosting.ActionInstance return
+        method GetActionsForInputs slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog2 shape=246
+            pass_array class type=Windows.AI.Actions.ActionEntity name=inputEntities
+            in struct type=Windows.UI.WindowId name=invokerWindowId
+            receive_array class type=Windows.AI.Actions.Hosting.ActionInstance return
+    method get_all_actions
+        method GetAllActions slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=51 reverse=24
+            receive_array class type=Windows.AI.Actions.Hosting.ActionDefinition return
+
+class Windows.AI.Actions.Hosting.ActionDefinition python_type closeable
+    py ActionDefinition
+    signature rc(Windows.AI.Actions.Hosting.ActionDefinition;{fe766add-924d-5231-855e-dac9e82c7e6c})
+    default Windows.AI.Actions.Hosting.IActionDefinition
+    requires Windows.AI.Actions.Hosting.IActionDefinition
+    requires Windows.AI.Actions.Hosting.IActionDefinition2
+    requires Windows.AI.Actions.Hosting.IActionDefinition3
+    requires Windows.Foundation.IClosable
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=4 reverse=43
+            out string return
+    property icon_full_path
+        get get_IconFullPath slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=4 reverse=62
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=4 reverse=22
+            out string return
+    property package_family_name
+        get get_PackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=4 reverse=99
+            out string return
+    property displays_ui
+        get get_DisplaysUI slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition2 shape=4 reverse=22
+            out boolean return
+    property schema_version
+        get get_SchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition2 shape=4 reverse=62
+            out uint32 return
+    property uses_generative_a_i
+        get get_UsesGenerativeAI slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition2 shape=4 reverse=43
+            out boolean return
+    property package_relative_application_id
+        get get_PackageRelativeApplicationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition3 shape=4 reverse=22
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_inputs
+        method GetInputs slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=51 reverse=124
+            receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
+    method get_outputs
+        method GetOutputs slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=51 reverse=144
+            receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
+    method get_overloads
+        method GetOverloads slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=51 reverse=163
+            receive_array class type=Windows.AI.Actions.Hosting.ActionOverload return
+
+class Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo python_type closeable
+    py ActionEntityRegistrationInfo
+    signature rc(Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo;{c3b92bdb-03c3-5a9e-b049-002fa0405699})
+    default Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo
+    requires Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo
+    requires Windows.Foundation.IClosable
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo shape=4 reverse=43
+            in string name=value
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo shape=4 reverse=62
+            out enum32 type=Windows.AI.Actions.ActionEntityKind return
+        put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo shape=4 reverse=99
+            in enum32 type=Windows.AI.Actions.ActionEntityKind name=value
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.AI.Actions.Hosting.ActionInstance python_type
+    py ActionInstance
+    signature rc(Windows.AI.Actions.Hosting.ActionInstance;{809bcb6e-e6ef-5f16-b89a-06b8893df20e})
+    default Windows.AI.Actions.Hosting.IActionInstance
+    requires Windows.AI.Actions.Hosting.IActionInstance
+    property context
+        get get_Context slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionInstance shape=4 reverse=62
+            out class type=Windows.AI.Actions.ActionInvocationContext return
+    property definition
+        get get_Definition slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionInstance shape=4 reverse=43
+            out class type=Windows.AI.Actions.Hosting.ActionDefinition return
+    property display_info
+        get get_DisplayInfo slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionInstance shape=4 reverse=22
+            out class type=Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo return
+    method invoke_async
+        method InvokeAsync slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionInstance shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo python_type
+    py ActionInstanceDisplayInfo
+    signature rc(Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo;{fcfdce21-678b-5602-b9dc-2f4533a6f4b2})
+    default Windows.AI.Actions.Hosting.IActionInstanceDisplayInfo
+    requires Windows.AI.Actions.Hosting.IActionInstanceDisplayInfo
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionInstanceDisplayInfo shape=4 reverse=22
+            out string return
+
+class Windows.AI.Actions.Hosting.ActionOverload python_type closeable
+    py ActionOverload
+    signature rc(Windows.AI.Actions.Hosting.ActionOverload;{5d184610-d09d-5375-9849-505c359dca01})
+    default Windows.AI.Actions.Hosting.IActionOverload
+    requires Windows.AI.Actions.Hosting.IActionOverload
+    requires Windows.AI.Actions.Hosting.IActionOverload2
+    requires Windows.Foundation.IClosable
+    property description_template
+        get get_DescriptionTemplate slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload shape=4 reverse=22
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_inputs
+        method GetInputs slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload shape=51 reverse=44
+            receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
+    method get_supports_feedback
+        method GetSupportsFeedback slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload2 shape=4 reverse=43
+            out boolean return
+    method invoke_async
+        method InvokeAsync slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload shape=51 reverse=65
+            in class type=Windows.AI.Actions.ActionInvocationContext name=context
+            out interface type=Windows.Foundation.IAsyncAction return
+    method invoke_feedback_async
+        method InvokeFeedbackAsync slot=6 inputs=2 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload2 shape=117 reverse=25
+            in class type=Windows.AI.Actions.ActionInvocationContext name=context
+            in class type=Windows.AI.Actions.ActionFeedback name=feedback
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.AI.Actions.Hosting.IActionCatalog
+    guid dbe7c537-66ea-5394-9085-4fc19d78375c
+
+interface Windows.AI.Actions.Hosting.IActionCatalog2
+    guid 370360b1-a14b-5ea8-b611-b5f70342ba44
+
+interface Windows.AI.Actions.Hosting.IActionDefinition
+    guid fe766add-924d-5231-855e-dac9e82c7e6c
+
+interface Windows.AI.Actions.Hosting.IActionDefinition2
+    guid c1f44733-f563-54e2-bd2b-dc4c732054cf
+
+interface Windows.AI.Actions.Hosting.IActionDefinition3
+    guid 89c9a7e0-4bfd-55f4-9eed-dce2250114fa
+
+interface Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo
+    guid c3b92bdb-03c3-5a9e-b049-002fa0405699
+
+interface Windows.AI.Actions.Hosting.IActionInstance
+    guid 809bcb6e-e6ef-5f16-b89a-06b8893df20e
+
+interface Windows.AI.Actions.Hosting.IActionInstanceDisplayInfo
+    guid fcfdce21-678b-5602-b9dc-2f4533a6f4b2
+
+interface Windows.AI.Actions.Hosting.IActionOverload
+    guid 5d184610-d09d-5375-9849-505c359dca01
+
+interface Windows.AI.Actions.Hosting.IActionOverload2
+    guid 57ec9906-8231-5a9e-929f-bf39e952eb93
+
+delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.Hosting.ActionCatalog,System.Object> concrete
+    guid 6fc189b6-f223-5959-8676-db86049c04d9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.AI.Actions.Hosting.ActionCatalog;{dbe7c537-66ea-5394-9085-4fc19d78375c});cinterface(IInspectable))
+    argument Windows.AI.Actions.Hosting.ActionCatalog
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.AI.Actions.ActionEntity external
+    py winrt.windows.ai.actions.ActionEntity
+
+enum Windows.AI.Actions.ActionEntityKind external
+    py winrt.windows.ai.actions.ActionEntityKind
+
+class Windows.AI.Actions.ActionFeedback external
+    py winrt.windows.ai.actions.ActionFeedback
+
+class Windows.AI.Actions.ActionInvocationContext external
+    py winrt.windows.ai.actions.ActionInvocationContext
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

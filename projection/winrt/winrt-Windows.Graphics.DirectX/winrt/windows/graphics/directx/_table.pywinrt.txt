@@ -1,0 +1,19 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.DirectX
+
+enum Windows.Graphics.DirectX.DirectXAlphaMode python_type
+    py DirectXAlphaMode
+    signature enum(Windows.Graphics.DirectX.DirectXAlphaMode;i4)
+
+enum Windows.Graphics.DirectX.DirectXColorSpace python_type
+    py DirectXColorSpace
+    signature enum(Windows.Graphics.DirectX.DirectXColorSpace;i4)
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat python_type
+    py DirectXPixelFormat
+    signature enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4)
+
+enum Windows.Graphics.DirectX.DirectXPrimitiveTopology python_type
+    py DirectXPrimitiveTopology
+    signature enum(Windows.Graphics.DirectX.DirectXPrimitiveTopology;i4)

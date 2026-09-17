@@ -1,0 +1,40 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Input.Inking.Preview
+
+interface Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreview
+    guid 62b496cb-539d-5343-a65f-41f5300ec70c
+
+interface Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics
+    guid cdef5ee0-93d0-53a9-8f0e-9a379f8f7530
+
+class Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview python_type closeable
+    py PalmRejectionDelayZonePreview
+    signature rc(Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview;{62b496cb-539d-5343-a65f-41f5300ec70c})
+    default Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreview
+    requires Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreview
+    requires Windows.Foundation.IClosable
+    factory Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_for_visual static
+        method CreateForVisual slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics shape=130 static
+            in class type=Windows.UI.Composition.Visual name=inputPanelVisual
+            in struct type=Windows.Foundation.Rect name=inputPanelRect
+            out class type=Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview return
+        method CreateForVisual slot=7 inputs=4 outputs=1 declaring=Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics shape=249 static
+            in class type=Windows.UI.Composition.Visual name=inputPanelVisual
+            in struct type=Windows.Foundation.Rect name=inputPanelRect
+            in class type=Windows.UI.Composition.Visual name=viewportVisual
+            in struct type=Windows.Foundation.Rect name=viewportRect
+            out class type=Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview return
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.UI.Composition.Visual external
+    py winrt.windows.ui.composition.Visual

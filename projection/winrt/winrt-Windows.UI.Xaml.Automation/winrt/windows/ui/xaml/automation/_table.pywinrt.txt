@@ -1,0 +1,1162 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Automation
+
+class Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers python_type
+    py AnnotationPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.AnnotationPatternIdentifiers;{d475a0c1-48b2-4e40-a6cf-3dc4b638c0de})
+    default Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics
+    property annotation_type_id_property static
+        get get_AnnotationTypeIdProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property annotation_type_name_property static
+        get get_AnnotationTypeNameProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property author_property static
+        get get_AuthorProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property date_time_property static
+        get get_DateTimeProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property target_property static
+        get get_TargetProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.AnnotationType python_type
+    py AnnotationType
+    signature enum(Windows.UI.Xaml.Automation.AnnotationType;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationActiveEnd python_type
+    py AutomationActiveEnd
+    signature enum(Windows.UI.Xaml.Automation.AutomationActiveEnd;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationAnimationStyle python_type
+    py AutomationAnimationStyle
+    signature enum(Windows.UI.Xaml.Automation.AutomationAnimationStyle;i4)
+
+class Windows.UI.Xaml.Automation.AutomationAnnotation activatable python_type
+    py AutomationAnnotation
+    signature rc(Windows.UI.Xaml.Automation.AutomationAnnotation;{fb3c30ca-03d8-4618-91bf-e4d84f4af318})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Automation.IAutomationAnnotation
+    requires Windows.UI.Xaml.Automation.IAutomationAnnotation
+    factory Windows.UI.Xaml.Automation.IAutomationAnnotationFactory
+    factory Windows.UI.Xaml.Automation.IAutomationAnnotationStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotationFactory shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type implicit
+            out class type=Windows.UI.Xaml.Automation.AutomationAnnotation return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotationFactory shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type
+            out class type=Windows.UI.Xaml.Automation.AutomationAnnotation return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotationFactory shape=117 reverse=45
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out class type=Windows.UI.Xaml.Automation.AutomationAnnotation return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotation shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.AnnotationType return
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotation shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=value
+    property element
+        get get_Element slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotation shape=4 reverse=62
+            out class type=Windows.UI.Xaml.UIElement return
+        put put_Element slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotation shape=4 reverse=99
+            in class type=Windows.UI.Xaml.UIElement name=value
+    property element_property static
+        get get_ElementProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotationStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property type_property static
+        get get_TypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationAnnotationStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+enum Windows.UI.Xaml.Automation.AutomationBulletStyle python_type
+    py AutomationBulletStyle
+    signature enum(Windows.UI.Xaml.Automation.AutomationBulletStyle;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationCaretBidiMode python_type
+    py AutomationCaretBidiMode
+    signature enum(Windows.UI.Xaml.Automation.AutomationCaretBidiMode;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationCaretPosition python_type
+    py AutomationCaretPosition
+    signature enum(Windows.UI.Xaml.Automation.AutomationCaretPosition;i4)
+
+class Windows.UI.Xaml.Automation.AutomationElementIdentifiers python_type
+    py AutomationElementIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.AutomationElementIdentifiers;{e68a63cf-4345-4e2d-8a6a-49cce1fa2dcc})
+    default Windows.UI.Xaml.Automation.IAutomationElementIdentifiers
+    requires Windows.UI.Xaml.Automation.IAutomationElementIdentifiers
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6
+    property bounding_rectangle_property static
+        get get_BoundingRectangleProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property has_keyboard_focus_property static
+        get get_HasKeyboardFocusProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=173 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property help_text_property static
+        get get_HelpTextProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=186 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_content_element_property static
+        get get_IsContentElementProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_control_element_property static
+        get get_IsControlElementProperty slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=202 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_enabled_property static
+        get get_IsEnabledProperty slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=210 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_keyboard_focusable_property static
+        get get_IsKeyboardFocusableProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=218 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_offscreen_property static
+        get get_IsOffscreenProperty slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=223 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_password_property static
+        get get_IsPasswordProperty slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=228 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_required_for_form_property static
+        get get_IsRequiredForFormProperty slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=232 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property item_status_property static
+        get get_ItemStatusProperty slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=237 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property item_type_property static
+        get get_ItemTypeProperty slot=23 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=242 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property labeled_by_property static
+        get get_LabeledByProperty slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=247 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property live_setting_property static
+        get get_LiveSettingProperty slot=28 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=263 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property localized_control_type_property static
+        get get_LocalizedControlTypeProperty slot=25 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=252 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property name_property static
+        get get_NameProperty slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=255 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property accelerator_key_property static
+        get get_AcceleratorKeyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property access_key_property static
+        get get_AccessKeyProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property automation_id_property static
+        get get_AutomationIdProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property orientation_property static
+        get get_OrientationProperty slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=259 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property class_name_property static
+        get get_ClassNameProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property clickable_point_property static
+        get get_ClickablePointProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property control_type_property static
+        get get_ControlTypeProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property controlled_peers_property static
+        get get_ControlledPeersProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property annotations_property static
+        get get_AnnotationsProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property level_property static
+        get get_LevelProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property position_in_set_property static
+        get get_PositionInSetProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property size_of_set_property static
+        get get_SizeOfSetProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property landmark_type_property static
+        get get_LandmarkTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property localized_landmark_type_property static
+        get get_LocalizedLandmarkTypeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property described_by_property static
+        get get_DescribedByProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property flows_from_property static
+        get get_FlowsFromProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property flows_to_property static
+        get get_FlowsToProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property full_description_property static
+        get get_FullDescriptionProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_data_valid_for_form_property static
+        get get_IsDataValidForFormProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_peripheral_property static
+        get get_IsPeripheralProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property culture_property static
+        get get_CultureProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property heading_level_property static
+        get get_HeadingLevelProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_dialog_property static
+        get get_IsDialogProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.AutomationFlowDirections python_type
+    py AutomationFlowDirections
+    signature enum(Windows.UI.Xaml.Automation.AutomationFlowDirections;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationOutlineStyles python_type
+    py AutomationOutlineStyles
+    signature enum(Windows.UI.Xaml.Automation.AutomationOutlineStyles;i4)
+
+class Windows.UI.Xaml.Automation.AutomationProperties python_type
+    py AutomationProperties
+    signature rc(Windows.UI.Xaml.Automation.AutomationProperties;{68d7232c-e622-48e9-af0b-1ffa33cc5cba})
+    default Windows.UI.Xaml.Automation.IAutomationProperties
+    requires Windows.UI.Xaml.Automation.IAutomationProperties
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2
+    property accelerator_key_property static
+        get get_AcceleratorKeyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property access_key_property static
+        get get_AccessKeyProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property automation_id_property static
+        get get_AutomationIdProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property help_text_property static
+        get get_HelpTextProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_required_for_form_property static
+        get get_IsRequiredForFormProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=218 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property item_status_property static
+        get get_ItemStatusProperty slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=232 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property item_type_property static
+        get get_ItemTypeProperty slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=247 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property labeled_by_property static
+        get get_LabeledByProperty slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=259 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property live_setting_property static
+        get get_LiveSettingProperty slot=33 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=285 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property name_property static
+        get get_NameProperty slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=270 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property accessibility_view_property static
+        get get_AccessibilityViewProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property controlled_peers_property static
+        get get_ControlledPeersProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property annotations_property static
+        get get_AnnotationsProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property level_property static
+        get get_LevelProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property position_in_set_property static
+        get get_PositionInSetProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property size_of_set_property static
+        get get_SizeOfSetProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property landmark_type_property static
+        get get_LandmarkTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property localized_landmark_type_property static
+        get get_LocalizedLandmarkTypeProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property described_by_property static
+        get get_DescribedByProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=218 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property flows_from_property static
+        get get_FlowsFromProperty slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=237 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property flows_to_property static
+        get get_FlowsToProperty slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=228 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property full_description_property static
+        get get_FullDescriptionProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_data_valid_for_form_property static
+        get get_IsDataValidForFormProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_peripheral_property static
+        get get_IsPeripheralProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property localized_control_type_property static
+        get get_LocalizedControlTypeProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property culture_property static
+        get get_CultureProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property heading_level_property static
+        get get_HeadingLevelProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_dialog_property static
+        get get_IsDialogProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property automation_control_type_property static
+        get get_AutomationControlTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    method get_accelerator_key static
+        method GetAcceleratorKey slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_access_key static
+        method GetAccessKey slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_accessibility_view static
+        method GetAccessibilityView slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AccessibilityView return
+    method get_annotations static
+        method GetAnnotations slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=203 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.AutomationAnnotation> return
+    method get_automation_control_type static
+        method GetAutomationControlType slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType return
+    method get_automation_id static
+        method GetAutomationId slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=174 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_controlled_peers static
+        method GetControlledPeers slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement> return
+    method get_culture static
+        method GetCulture slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_described_by static
+        method GetDescribedBy slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=224 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> return
+    method get_flows_from static
+        method GetFlowsFrom slot=23 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=243 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> return
+    method get_flows_to static
+        method GetFlowsTo slot=21 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=233 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> return
+    method get_full_description static
+        method GetFullDescription slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=174 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_heading_level static
+        method GetHeadingLevel slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel return
+    method get_help_text static
+        method GetHelpText slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=203 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_is_data_valid_for_form static
+        method GetIsDataValidForForm slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_is_dialog static
+        method GetIsDialog slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_is_peripheral static
+        method GetIsPeripheral slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_is_required_for_form static
+        method GetIsRequiredForForm slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=224 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_item_status static
+        method GetItemStatus slot=22 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=238 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_item_type static
+        method GetItemType slot=25 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=253 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_labeled_by static
+        method GetLabeledBy slot=28 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=264 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out class type=Windows.UI.Xaml.UIElement return
+    method get_landmark_type static
+        method GetLandmarkType slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType return
+    method get_level static
+        method GetLevel slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=174 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_live_setting static
+        method GetLiveSetting slot=34 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=289 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting return
+    method get_localized_control_type static
+        method GetLocalizedControlType slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=203 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_localized_landmark_type static
+        method GetLocalizedLandmarkType slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_name static
+        method GetName slot=31 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=274 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out string return
+    method get_position_in_set static
+        method GetPositionInSet slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_size_of_set static
+        method GetSizeOfSet slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method set_accelerator_key static
+        method SetAcceleratorKey slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_access_key static
+        method SetAccessKey slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_accessibility_view static
+        method SetAccessibilityView slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AccessibilityView name=value
+    method set_automation_control_type static
+        method SetAutomationControlType slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType name=value
+    method set_automation_id static
+        method SetAutomationId slot=14 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=187 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_culture static
+        method SetCulture slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_full_description static
+        method SetFullDescription slot=14 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=187 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_heading_level static
+        method SetHeadingLevel slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel name=value
+    method set_help_text static
+        method SetHelpText slot=17 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=211 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_is_data_valid_for_form static
+        method SetIsDataValidForForm slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_is_dialog static
+        method SetIsDialog slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_is_peripheral static
+        method SetIsPeripheral slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_is_required_for_form static
+        method SetIsRequiredForForm slot=20 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=229 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_item_status static
+        method SetItemStatus slot=23 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=243 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_item_type static
+        method SetItemType slot=26 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=256 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_labeled_by static
+        method SetLabeledBy slot=29 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=267 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in class type=Windows.UI.Xaml.UIElement name=value
+    method set_landmark_type static
+        method SetLandmarkType slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType name=value
+    method set_level static
+        method SetLevel slot=14 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=187 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_live_setting static
+        method SetLiveSetting slot=35 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=293 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting name=value
+    method set_localized_control_type static
+        method SetLocalizedControlType slot=17 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5 shape=51 reverse=211 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_localized_landmark_type static
+        method SetLocalizedLandmarkType slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4 shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_name static
+        method SetName slot=32 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=51 reverse=281 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in string name=value
+    method set_position_in_set static
+        method SetPositionInSet slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_size_of_set static
+        method SetSizeOfSet slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3 shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+
+class Windows.UI.Xaml.Automation.AutomationProperty python_type
+    py AutomationProperty
+    signature rc(Windows.UI.Xaml.Automation.AutomationProperty;{b627195b-3227-4e16-9534-ddece30ddb46})
+    default Windows.UI.Xaml.Automation.IAutomationProperty
+    requires Windows.UI.Xaml.Automation.IAutomationProperty
+
+enum Windows.UI.Xaml.Automation.AutomationStyleId python_type
+    py AutomationStyleId
+    signature enum(Windows.UI.Xaml.Automation.AutomationStyleId;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationTextDecorationLineStyle python_type
+    py AutomationTextDecorationLineStyle
+    signature enum(Windows.UI.Xaml.Automation.AutomationTextDecorationLineStyle;i4)
+
+enum Windows.UI.Xaml.Automation.AutomationTextEditChangeType python_type
+    py AutomationTextEditChangeType
+    signature enum(Windows.UI.Xaml.Automation.AutomationTextEditChangeType;i4)
+
+class Windows.UI.Xaml.Automation.DockPatternIdentifiers python_type
+    py DockPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.DockPatternIdentifiers;{ccd7f4e6-e4f9-47ff-bde7-378b11f78e09})
+    default Windows.UI.Xaml.Automation.IDockPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IDockPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics
+    property dock_position_property static
+        get get_DockPositionProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.DockPosition python_type
+    py DockPosition
+    signature enum(Windows.UI.Xaml.Automation.DockPosition;i4)
+
+class Windows.UI.Xaml.Automation.DragPatternIdentifiers python_type
+    py DragPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.DragPatternIdentifiers;{6266e985-4d07-4e80-82eb-8f96690a1a0c})
+    default Windows.UI.Xaml.Automation.IDragPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IDragPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics
+    property drop_effect_property static
+        get get_DropEffectProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property drop_effects_property static
+        get get_DropEffectsProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property grabbed_items_property static
+        get get_GrabbedItemsProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_grabbed_property static
+        get get_IsGrabbedProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers python_type
+    py DropTargetPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.DropTargetPatternIdentifiers;{11865133-a6fe-4634-bd18-0ef612b7b208})
+    default Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics
+    property drop_target_effect_property static
+        get get_DropTargetEffectProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property drop_target_effects_property static
+        get get_DropTargetEffectsProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers python_type
+    py ExpandCollapsePatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers;{b006bac0-751b-4d55-92cb-613ec1bdf5d0})
+    default Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiersStatics
+    property expand_collapse_state_property static
+        get get_ExpandCollapseStateProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.ExpandCollapseState python_type
+    py ExpandCollapseState
+    signature enum(Windows.UI.Xaml.Automation.ExpandCollapseState;i4)
+
+class Windows.UI.Xaml.Automation.GridItemPatternIdentifiers python_type
+    py GridItemPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.GridItemPatternIdentifiers;{757744f1-3285-4fb1-803b-2545bd431599})
+    default Windows.UI.Xaml.Automation.IGridItemPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IGridItemPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics
+    property column_property static
+        get get_ColumnProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property column_span_property static
+        get get_ColumnSpanProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property containing_grid_property static
+        get get_ContainingGridProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_property static
+        get get_RowProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_span_property static
+        get get_RowSpanProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.GridPatternIdentifiers python_type
+    py GridPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.GridPatternIdentifiers;{c902980f-96c5-450c-9044-7e52c24f9e94})
+    default Windows.UI.Xaml.Automation.IGridPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IGridPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics
+    property column_count_property static
+        get get_ColumnCountProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_count_property static
+        get get_RowCountProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+interface Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiers
+    guid d475a0c1-48b2-4e40-a6cf-3dc4b638c0de
+
+interface Windows.UI.Xaml.Automation.IAnnotationPatternIdentifiersStatics
+    guid e0e3a35d-d167-46dc-95ab-330af61aebb5
+
+interface Windows.UI.Xaml.Automation.IAutomationAnnotation
+    guid fb3c30ca-03d8-4618-91bf-e4d84f4af318
+
+interface Windows.UI.Xaml.Automation.IAutomationAnnotationFactory
+    guid 4906fa52-ddc0-4e69-b76b-019d928d822f
+
+interface Windows.UI.Xaml.Automation.IAutomationAnnotationStatics
+    guid e503eab7-4ee5-48cb-b5b8-bbcd46c9d1da
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiers
+    guid e68a63cf-4345-4e2d-8a6a-49cce1fa2dcc
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics
+    guid 4549399f-8340-4d67-b9bf-8c2ac6a0773a
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2
+    guid b5cbb1e2-d55f-46a9-9eda-1a4742515dc3
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3
+    guid 0f5cbebd-b3eb-4083-adc7-0c2f39bb3543
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4
+    guid 5af51f75-5913-4d78-b330-a6f50b73ed9b
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5
+    guid 986a8206-de59-42f9-a1e7-62b8af9e756d
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6
+    guid de52b00d-8328-4eae-8035-f8db99c8bac4
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7
+    guid 00f1abb2-742c-446a-a8f6-1672b10d2874
+
+interface Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8
+    guid 8517b060-806c-5dc5-bc41-891bb5a47adf
+
+interface Windows.UI.Xaml.Automation.IAutomationProperties
+    guid 68d7232c-e622-48e9-af0b-1ffa33cc5cba
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics
+    guid b618fd7b-32d0-4970-9c42-7c039ac7be78
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2
+    guid 3976547f-7089-4801-8f1d-aab78090d1a0
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3
+    guid 7b75d735-5cb1-42ad-9b57-5faba8c1867f
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4
+    guid f7d62655-311a-4b7c-a131-524e89cd3cf9
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5
+    guid 0be35b26-c8f9-41a2-b4db-e6a7a32b0c34
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6
+    guid c61e030f-eb49-4e5d-b012-4c1c96c3901b
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7
+    guid f7e98bf3-8f91-4068-a4ad-b7b402d10a2c
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8
+    guid 432eca20-171a-560d-8524-3e651d3ad6ca
+
+interface Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9
+    guid 2f20b1d1-87b2-5562-8077-da593edafd2d
+
+interface Windows.UI.Xaml.Automation.IAutomationProperty
+    guid b627195b-3227-4e16-9534-ddece30ddb46
+
+interface Windows.UI.Xaml.Automation.IDockPatternIdentifiers
+    guid ccd7f4e6-e4f9-47ff-bde7-378b11f78e09
+
+interface Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics
+    guid 2b87245c-ed80-4fe5-8eb4-708a39c841e5
+
+interface Windows.UI.Xaml.Automation.IDragPatternIdentifiers
+    guid 6266e985-4d07-4e80-82eb-8f96690a1a0c
+
+interface Windows.UI.Xaml.Automation.IDragPatternIdentifiersStatics
+    guid 2a05379d-1755-4082-9d90-46f1411d7986
+
+interface Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiers
+    guid 11865133-a6fe-4634-bd18-0ef612b7b208
+
+interface Windows.UI.Xaml.Automation.IDropTargetPatternIdentifiersStatics
+    guid 1b693304-89fb-4b0a-9452-ca2c66aaf9f3
+
+interface Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiers
+    guid b006bac0-751b-4d55-92cb-613ec1bdf5d0
+
+interface Windows.UI.Xaml.Automation.IExpandCollapsePatternIdentifiersStatics
+    guid d7816fd4-6ee0-4f38-8e14-56ef21adacfd
+
+interface Windows.UI.Xaml.Automation.IGridItemPatternIdentifiers
+    guid 757744f1-3285-4fb1-803b-2545bd431599
+
+interface Windows.UI.Xaml.Automation.IGridItemPatternIdentifiersStatics
+    guid 217d2402-5e46-4d61-8794-b8ee8e774714
+
+interface Windows.UI.Xaml.Automation.IGridPatternIdentifiers
+    guid c902980f-96c5-450c-9044-7e52c24f9e94
+
+interface Windows.UI.Xaml.Automation.IGridPatternIdentifiersStatics
+    guid 7bc452f3-a181-4137-8de9-1f9b1a8320ed
+
+interface Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiers
+    guid 5d5cd3b8-1e12-488b-b0ea-5e6cb89816e1
+
+interface Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics
+    guid a9cfa66f-6b84-4d71-9e48-d764d3bcda8e
+
+interface Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiers
+    guid f8760f45-33c9-467d-bc9e-d1515263ace1
+
+interface Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics
+    guid ce23450f-1c27-457f-b815-7a5e46863dbb
+
+interface Windows.UI.Xaml.Automation.IScrollPatternIdentifiers
+    guid 366b1003-425c-4951-ae83-d521e73bc696
+
+interface Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics
+    guid 4bf8e0a1-fb7f-4fa4-83b3-cfaeb103a685
+
+interface Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiers
+    guid 2dafa41a-3ef8-4bb5-a02b-3ee1b2274740
+
+interface Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics
+    guid a918d163-487e-4e3e-9f86-7b44acbe27ce
+
+interface Windows.UI.Xaml.Automation.ISelectionPatternIdentifiers
+    guid 4aa66fb0-e3f7-475f-b78d-f8a83bb730c4
+
+interface Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics
+    guid 93035b4c-6b50-40a1-b23f-5c78ddbd479a
+
+interface Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiers
+    guid 84347e19-ca4b-46a2-a794-c87928a3b1ab
+
+interface Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiersStatics
+    guid 43658779-5380-4f12-b468-b4f368ad4499
+
+interface Windows.UI.Xaml.Automation.IStylesPatternIdentifiers
+    guid b0e4e201-e89d-436b-8287-4f7903466879
+
+interface Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics
+    guid 528a457a-bc3c-4d48-94af-1f68703ca296
+
+interface Windows.UI.Xaml.Automation.ITableItemPatternIdentifiers
+    guid c326e5ad-8077-4c64-98e4-e83bcf1b4389
+
+interface Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics
+    guid 24c4b923-e9a2-4de9-b2a4-a8b22d0be362
+
+interface Windows.UI.Xaml.Automation.ITablePatternIdentifiers
+    guid 38d104fe-0d0c-412a-bf8d-51ede683baf5
+
+interface Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics
+    guid 75073d25-32c9-4903-aecf-dc3504cbd244
+
+interface Windows.UI.Xaml.Automation.ITogglePatternIdentifiers
+    guid 7e191f6b-34d4-4ae7-83ac-29f88882d985
+
+interface Windows.UI.Xaml.Automation.ITogglePatternIdentifiersStatics
+    guid c7f75544-14a5-4f2f-92fc-760524de06ea
+
+interface Windows.UI.Xaml.Automation.ITransformPattern2Identifiers
+    guid 08aaa03d-dea7-402f-8097-9a2783d60e5d
+
+interface Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics
+    guid 78963644-11f0-467c-a72b-5dac41c1f6fe
+
+interface Windows.UI.Xaml.Automation.ITransformPatternIdentifiers
+    guid e4115b8c-c3c8-4a37-b994-2709a7811665
+
+interface Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics
+    guid 4570edab-d705-40c4-a1dc-e9acfcef85f6
+
+interface Windows.UI.Xaml.Automation.IValuePatternIdentifiers
+    guid 425bf64c-5333-4e41-b470-2bad14ecd085
+
+interface Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics
+    guid c247e8f7-adcc-440f-b123-33788a40525a
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.AutomationAnnotation> concrete
+    guid 73596c82-f6e5-5b57-8dc5-556cb7a8fbe6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Automation.AutomationAnnotation;{fb3c30ca-03d8-4618-91bf-e4d84f4af318}))
+    argument Windows.UI.Xaml.Automation.AutomationAnnotation
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> concrete
+    guid 771b857e-ab5c-5db8-a021-397c92cdc44c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.DependencyObject;{5c526665-f60e-4912-af59-5fe0680f089d}))
+    argument Windows.UI.Xaml.DependencyObject
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement> concrete
+    guid b4c1e3ac-8768-5b9d-a661-f63330b8507b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.UIElement;{676d0be9-b65c-41c6-ba40-58cf87f201c1}))
+    argument Windows.UI.Xaml.UIElement
+
+interface Windows.UI.Xaml.Automation.IWindowPatternIdentifiers
+    guid 39f78bb4-7032-41e2-b79e-27b74a8628de
+
+interface Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics
+    guid 07d0ad06-6302-4d29-878b-19da03fc228d
+
+class Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers python_type
+    py MultipleViewPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.MultipleViewPatternIdentifiers;{5d5cd3b8-1e12-488b-b0ea-5e6cb89816e1})
+    default Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics
+    property current_view_property static
+        get get_CurrentViewProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property supported_views_property static
+        get get_SupportedViewsProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IMultipleViewPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers python_type
+    py RangeValuePatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.RangeValuePatternIdentifiers;{f8760f45-33c9-467d-bc9e-d1515263ace1})
+    default Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics
+    property is_read_only_property static
+        get get_IsReadOnlyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property large_change_property static
+        get get_LargeChangeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property maximum_property static
+        get get_MaximumProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property minimum_property static
+        get get_MinimumProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property small_change_property static
+        get get_SmallChangeProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property value_property static
+        get get_ValueProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IRangeValuePatternIdentifiersStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.RowOrColumnMajor python_type
+    py RowOrColumnMajor
+    signature enum(Windows.UI.Xaml.Automation.RowOrColumnMajor;i4)
+
+enum Windows.UI.Xaml.Automation.ScrollAmount python_type
+    py ScrollAmount
+    signature enum(Windows.UI.Xaml.Automation.ScrollAmount;i4)
+
+class Windows.UI.Xaml.Automation.ScrollPatternIdentifiers python_type
+    py ScrollPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.ScrollPatternIdentifiers;{366b1003-425c-4951-ae83-d521e73bc696})
+    default Windows.UI.Xaml.Automation.IScrollPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IScrollPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics
+    property horizontal_scroll_percent_property static
+        get get_HorizontalScrollPercentProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property horizontal_view_size_property static
+        get get_HorizontalViewSizeProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property horizontally_scrollable_property static
+        get get_HorizontallyScrollableProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property no_scroll static
+        get get_NoScroll slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=99 static
+            out double return
+    property vertical_scroll_percent_property static
+        get get_VerticalScrollPercentProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property vertical_view_size_property static
+        get get_VerticalViewSizeProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property vertically_scrollable_property static
+        get get_VerticallyScrollableProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IScrollPatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers python_type
+    py SelectionItemPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.SelectionItemPatternIdentifiers;{2dafa41a-3ef8-4bb5-a02b-3ee1b2274740})
+    default Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics
+    property is_selected_property static
+        get get_IsSelectedProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property selection_container_property static
+        get get_SelectionContainerProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISelectionItemPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.SelectionPatternIdentifiers python_type
+    py SelectionPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.SelectionPatternIdentifiers;{4aa66fb0-e3f7-475f-b78d-f8a83bb730c4})
+    default Windows.UI.Xaml.Automation.ISelectionPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ISelectionPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics
+    property can_select_multiple_property static
+        get get_CanSelectMultipleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_selection_required_property static
+        get get_IsSelectionRequiredProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property selection_property static
+        get get_SelectionProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISelectionPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers python_type
+    py SpreadsheetItemPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers;{84347e19-ca4b-46a2-a794-c87928a3b1ab})
+    default Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiersStatics
+    property formula_property static
+        get get_FormulaProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ISpreadsheetItemPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.StylesPatternIdentifiers python_type
+    py StylesPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.StylesPatternIdentifiers;{b0e4e201-e89d-436b-8287-4f7903466879})
+    default Windows.UI.Xaml.Automation.IStylesPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IStylesPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics
+    property extended_properties_property static
+        get get_ExtendedPropertiesProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property fill_color_property static
+        get get_FillColorProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property fill_pattern_color_property static
+        get get_FillPatternColorProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property fill_pattern_style_property static
+        get get_FillPatternStyleProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property shape_property static
+        get get_ShapeProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property style_id_property static
+        get get_StyleIdProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property style_name_property static
+        get get_StyleNameProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IStylesPatternIdentifiersStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.SupportedTextSelection python_type
+    py SupportedTextSelection
+    signature enum(Windows.UI.Xaml.Automation.SupportedTextSelection;i4)
+
+enum Windows.UI.Xaml.Automation.SynchronizedInputType python_type
+    py SynchronizedInputType
+    signature enum(Windows.UI.Xaml.Automation.SynchronizedInputType;i4)
+
+class Windows.UI.Xaml.Automation.TableItemPatternIdentifiers python_type
+    py TableItemPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.TableItemPatternIdentifiers;{c326e5ad-8077-4c64-98e4-e83bcf1b4389})
+    default Windows.UI.Xaml.Automation.ITableItemPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ITableItemPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics
+    property column_header_items_property static
+        get get_ColumnHeaderItemsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_header_items_property static
+        get get_RowHeaderItemsProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITableItemPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.TablePatternIdentifiers python_type
+    py TablePatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.TablePatternIdentifiers;{38d104fe-0d0c-412a-bf8d-51ede683baf5})
+    default Windows.UI.Xaml.Automation.ITablePatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ITablePatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics
+    property column_headers_property static
+        get get_ColumnHeadersProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_headers_property static
+        get get_RowHeadersProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property row_or_column_major_property static
+        get get_RowOrColumnMajorProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITablePatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.TogglePatternIdentifiers python_type
+    py TogglePatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.TogglePatternIdentifiers;{7e191f6b-34d4-4ae7-83ac-29f88882d985})
+    default Windows.UI.Xaml.Automation.ITogglePatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ITogglePatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ITogglePatternIdentifiersStatics
+    property toggle_state_property static
+        get get_ToggleStateProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITogglePatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.ToggleState python_type
+    py ToggleState
+    signature enum(Windows.UI.Xaml.Automation.ToggleState;i4)
+
+class Windows.UI.Xaml.Automation.TransformPattern2Identifiers python_type
+    py TransformPattern2Identifiers
+    signature rc(Windows.UI.Xaml.Automation.TransformPattern2Identifiers;{08aaa03d-dea7-402f-8097-9a2783d60e5d})
+    default Windows.UI.Xaml.Automation.ITransformPattern2Identifiers
+    requires Windows.UI.Xaml.Automation.ITransformPattern2Identifiers
+    factory Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics
+    property can_zoom_property static
+        get get_CanZoomProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property max_zoom_property static
+        get get_MaxZoomProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property min_zoom_property static
+        get get_MinZoomProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property zoom_level_property static
+        get get_ZoomLevelProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPattern2IdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.TransformPatternIdentifiers python_type
+    py TransformPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.TransformPatternIdentifiers;{e4115b8c-c3c8-4a37-b994-2709a7811665})
+    default Windows.UI.Xaml.Automation.ITransformPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.ITransformPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics
+    property can_move_property static
+        get get_CanMoveProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property can_resize_property static
+        get get_CanResizeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property can_rotate_property static
+        get get_CanRotateProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.ITransformPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+class Windows.UI.Xaml.Automation.ValuePatternIdentifiers python_type
+    py ValuePatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.ValuePatternIdentifiers;{425bf64c-5333-4e41-b470-2bad14ecd085})
+    default Windows.UI.Xaml.Automation.IValuePatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IValuePatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics
+    property is_read_only_property static
+        get get_IsReadOnlyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property value_property static
+        get get_ValueProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IValuePatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.WindowInteractionState python_type
+    py WindowInteractionState
+    signature enum(Windows.UI.Xaml.Automation.WindowInteractionState;i4)
+
+class Windows.UI.Xaml.Automation.WindowPatternIdentifiers python_type
+    py WindowPatternIdentifiers
+    signature rc(Windows.UI.Xaml.Automation.WindowPatternIdentifiers;{39f78bb4-7032-41e2-b79e-27b74a8628de})
+    default Windows.UI.Xaml.Automation.IWindowPatternIdentifiers
+    requires Windows.UI.Xaml.Automation.IWindowPatternIdentifiers
+    factory Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics
+    property can_maximize_property static
+        get get_CanMaximizeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property can_minimize_property static
+        get get_CanMinimizeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_modal_property static
+        get get_IsModalProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property is_topmost_property static
+        get get_IsTopmostProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property window_interaction_state_property static
+        get get_WindowInteractionStateProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+    property window_visual_state_property static
+        get get_WindowVisualStateProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IWindowPatternIdentifiersStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.Automation.AutomationProperty return
+
+enum Windows.UI.Xaml.Automation.WindowVisualState python_type
+    py WindowVisualState
+    signature enum(Windows.UI.Xaml.Automation.WindowVisualState;i4)
+
+enum Windows.UI.Xaml.Automation.ZoomUnit python_type
+    py ZoomUnit
+    signature enum(Windows.UI.Xaml.Automation.ZoomUnit;i4)
+
+class Windows.UI.Xaml.DependencyObject external
+    py winrt.windows.ui.xaml.DependencyObject
+
+class Windows.UI.Xaml.DependencyProperty external
+    py winrt.windows.ui.xaml.DependencyProperty
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement
+
+enum Windows.UI.Xaml.Automation.Peers.AccessibilityView external
+    py winrt.windows.ui.xaml.automation.peers.AccessibilityView
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationControlType external
+    py winrt.windows.ui.xaml.automation.peers.AutomationControlType
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel external
+    py winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType external
+    py winrt.windows.ui.xaml.automation.peers.AutomationLandmarkType
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting external
+    py winrt.windows.ui.xaml.automation.peers.AutomationLiveSetting

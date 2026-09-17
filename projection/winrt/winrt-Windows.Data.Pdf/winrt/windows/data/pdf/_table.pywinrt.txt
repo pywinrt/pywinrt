@@ -1,0 +1,180 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Pdf
+
+interface Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> concrete
+    guid d6b166ec-099a-5ee2-ad2e-f4c88614aabb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Data.Pdf.PdfDocument;{ac7ebedd-80fa-4089-846e-81b77ff5a86c}))
+    argument Windows.Data.Pdf.PdfDocument
+
+interface Windows.Data.Pdf.IPdfDocument
+    guid ac7ebedd-80fa-4089-846e-81b77ff5a86c
+
+interface Windows.Data.Pdf.IPdfDocumentStatics
+    guid 433a0b5f-c007-4788-90f2-08143d922599
+
+interface Windows.Data.Pdf.IPdfPage
+    guid 9db4b0c8-5320-4cfc-ad76-493fdad0e594
+
+interface Windows.Data.Pdf.IPdfPageDimensions
+    guid 22170471-313e-44e8-835d-63a3e7624a10
+
+interface Windows.Data.Pdf.IPdfPageRenderOptions
+    guid 3c98056f-b7cf-4c29-9a04-52d90267f425
+
+class Windows.Data.Pdf.PdfDocument python_type
+    py PdfDocument
+    signature rc(Windows.Data.Pdf.PdfDocument;{ac7ebedd-80fa-4089-846e-81b77ff5a86c})
+    default Windows.Data.Pdf.IPdfDocument
+    requires Windows.Data.Pdf.IPdfDocument
+    factory Windows.Data.Pdf.IPdfDocumentStatics
+    property is_password_protected
+        get get_IsPasswordProtected slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4 reverse=62
+            out boolean return
+    property page_count
+        get get_PageCount slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4 reverse=43
+            out uint32 return
+    method get_page
+        method GetPage slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=51 reverse=24
+            in uint32 name=pageIndex
+            out class type=Windows.Data.Pdf.PdfPage return
+    method load_from_file_async static
+        method LoadFromFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
+        method LoadFromFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 reverse=45 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            in string name=password
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
+    method load_from_stream_async static
+        method LoadFromStreamAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 reverse=65 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=inputStream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
+        method LoadFromStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 reverse=101 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=inputStream
+            in string name=password
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
+
+class Windows.Data.Pdf.PdfPage python_type closeable
+    py PdfPage
+    signature rc(Windows.Data.Pdf.PdfPage;{9db4b0c8-5320-4cfc-ad76-493fdad0e594})
+    default Windows.Data.Pdf.IPdfPage
+    requires Windows.Data.Pdf.IPdfPage
+    requires Windows.Foundation.IClosable
+    property dimensions
+        get get_Dimensions slot=11 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=141
+            out class type=Windows.Data.Pdf.PdfPageDimensions return
+    property index
+        get get_Index slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=99
+            out uint32 return
+    property preferred_zoom
+        get get_PreferredZoom slot=13 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=173
+            out single return
+    property rotation
+        get get_Rotation slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=162
+            out enum32 type=Windows.Data.Pdf.PdfPageRotation return
+    property size
+        get get_Size slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=121
+            out struct type=Windows.Foundation.Size return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method prepare_page_async
+        method PreparePageAsync slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method render_to_stream_async
+        method RenderToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=outputStream
+            out interface type=Windows.Foundation.IAsyncAction return
+        method RenderToStreamAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=117 reverse=45
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=outputStream
+            in class type=Windows.Data.Pdf.PdfPageRenderOptions name=options
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Data.Pdf.PdfPageDimensions python_type
+    py PdfPageDimensions
+    signature rc(Windows.Data.Pdf.PdfPageDimensions;{22170471-313e-44e8-835d-63a3e7624a10})
+    default Windows.Data.Pdf.IPdfPageDimensions
+    requires Windows.Data.Pdf.IPdfPageDimensions
+    property art_box
+        get get_ArtBox slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=121
+            out struct type=Windows.Foundation.Rect return
+    property bleed_box
+        get get_BleedBox slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=62
+            out struct type=Windows.Foundation.Rect return
+    property crop_box
+        get get_CropBox slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=43
+            out struct type=Windows.Foundation.Rect return
+    property media_box
+        get get_MediaBox slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+    property trim_box
+        get get_TrimBox slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=99
+            out struct type=Windows.Foundation.Rect return
+
+class Windows.Data.Pdf.PdfPageRenderOptions activatable python_type
+    py PdfPageRenderOptions
+    signature rc(Windows.Data.Pdf.PdfPageRenderOptions;{3c98056f-b7cf-4c29-9a04-52d90267f425})
+    default Windows.Data.Pdf.IPdfPageRenderOptions
+    requires Windows.Data.Pdf.IPdfPageRenderOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property source_rect
+        get get_SourceRect slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+        put put_SourceRect slot=7 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property is_ignoring_high_contrast
+        get get_IsIgnoringHighContrast slot=14 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=186
+            out boolean return
+        put put_IsIgnoringHighContrast slot=15 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=194
+            in boolean name=value
+    property destination_width
+        get get_DestinationWidth slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=62
+            out uint32 return
+        put put_DestinationWidth slot=9 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=99
+            in uint32 name=value
+    property destination_height
+        get get_DestinationHeight slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=121
+            out uint32 return
+        put put_DestinationHeight slot=11 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=141
+            in uint32 name=value
+    property bitmap_encoder_id
+        get get_BitmapEncoderId slot=16 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=202
+            out guid return
+        put put_BitmapEncoderId slot=17 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=33
+            in guid name=value
+    property background_color
+        get get_BackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=162
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=13 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=29
+            in struct type=Windows.UI.Color name=value
+
+enum Windows.Data.Pdf.PdfPageRotation python_type
+    py PdfPageRotation
+    signature enum(Windows.Data.Pdf.PdfPageRotation;i4)
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

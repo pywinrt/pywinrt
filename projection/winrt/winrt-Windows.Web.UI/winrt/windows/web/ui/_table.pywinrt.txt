@@ -1,0 +1,590 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web.UI
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> concrete
+    guid a16f2d07-ead3-53e4-9490-75bdbaeb7a5b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe}))
+    argument Windows.ApplicationModel.DataTransfer.DataPackage
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> concrete
+    guid bffd3dcf-1974-53a2-8d88-966d84ba98e0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.UI.WebViewControlDeferredPermissionRequest;{2ce349e0-d759-445c-9926-8995298f152b}))
+    argument Windows.Web.UI.WebViewControlDeferredPermissionRequest
+
+interface Windows.Web.UI.IWebViewControl python_type
+    py _IWebViewControl
+    guid 3f921316-bc70-4bda-9136-c94370899fab
+    signature {3f921316-bc70-4bda-9136-c94370899fab}
+    property can_go_back
+        get get_CanGoBack slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=99
+            out boolean return
+    property can_go_forward
+        get get_CanGoForward slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=121
+            out boolean return
+    property contains_full_screen_element
+        get get_ContainsFullScreenElement slot=13 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=173
+            out boolean return
+    property default_background_color
+        get get_DefaultBackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=162
+            out struct type=Windows.UI.Color return
+        put put_DefaultBackgroundColor slot=11 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=29 reverse=157
+            in struct type=Windows.UI.Color name=value
+    property deferred_permission_requests
+        get get_DeferredPermissionRequests slot=15 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> return
+    property document_title
+        get get_DocumentTitle slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=62
+            out string return
+    property settings
+        get get_Settings slot=14 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=186
+            out class type=Windows.Web.UI.WebViewControlSettings return
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_Source slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=source
+    event contains_full_screen_element_changed
+        add add_ContainsFullScreenElementChanged slot=59 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=379
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> name=handler
+            out event_token return
+        remove remove_ContainsFullScreenElementChanged slot=60 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=380
+            in event_token name=token
+    event content_loading
+        add add_ContentLoading slot=31 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=274
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> name=handler
+            out event_token return
+        remove remove_ContentLoading slot=32 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=283
+            in event_token name=token
+    event dom_content_loaded
+        add add_DOMContentLoaded slot=33 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=286
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> name=handler
+            out event_token return
+        remove remove_DOMContentLoaded slot=34 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=291
+            in event_token name=token
+    event frame_content_loading
+        add add_FrameContentLoading slot=39 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=308
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> name=handler
+            out event_token return
+        remove remove_FrameContentLoading slot=40 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=314
+            in event_token name=token
+    event frame_dom_content_loaded
+        add add_FrameDOMContentLoaded slot=41 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=317
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameDOMContentLoaded slot=42 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=321
+            in event_token name=token
+    event frame_navigation_completed
+        add add_FrameNavigationCompleted slot=43 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=323
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameNavigationCompleted slot=44 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=328
+            in event_token name=token
+    event frame_navigation_starting
+        add add_FrameNavigationStarting slot=37 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=300
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> name=handler
+            out event_token return
+        remove remove_FrameNavigationStarting slot=38 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=305
+            in event_token name=token
+    event long_running_script_detected
+        add add_LongRunningScriptDetected slot=47 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=340
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs> name=handler
+            out event_token return
+        remove remove_LongRunningScriptDetected slot=48 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=346
+            in event_token name=token
+    event navigation_completed
+        add add_NavigationCompleted slot=35 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=293
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_NavigationCompleted slot=36 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=298
+            in event_token name=token
+    event navigation_starting
+        add add_NavigationStarting slot=29 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> name=handler
+            out event_token return
+        remove remove_NavigationStarting slot=30 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=272
+            in event_token name=token
+    event new_window_requested
+        add add_NewWindowRequested slot=57 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=375
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_NewWindowRequested slot=58 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=378
+            in event_token name=token
+    event permission_requested
+        add add_PermissionRequested slot=53 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=365
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlPermissionRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_PermissionRequested slot=54 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=370
+            in event_token name=token
+    event script_notify
+        add add_ScriptNotify slot=45 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=331
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlScriptNotifyEventArgs> name=handler
+            out event_token return
+        remove remove_ScriptNotify slot=46 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=337
+            in event_token name=token
+    event unsafe_content_warning_displaying
+        add add_UnsafeContentWarningDisplaying slot=49 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=348
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> name=handler
+            out event_token return
+        remove remove_UnsafeContentWarningDisplaying slot=50 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=353
+            in event_token name=token
+    event unsupported_uri_scheme_identified
+        add add_UnsupportedUriSchemeIdentified slot=55 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=371
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> name=handler
+            out event_token return
+        remove remove_UnsupportedUriSchemeIdentified slot=56 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=374
+            in event_token name=token
+    event unviewable_content_identified
+        add add_UnviewableContentIdentified slot=51 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=356
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs> name=handler
+            out event_token return
+        remove remove_UnviewableContentIdentified slot=52 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=362
+            in event_token name=token
+    event web_resource_requested
+        add add_WebResourceRequested slot=61 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=381
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_WebResourceRequested slot=62 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=382
+            in event_token name=token
+    method build_local_stream_uri
+        method BuildLocalStreamUri slot=27 inputs=2 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=117 reverse=261
+            in string name=contentIdentifier
+            in string name=relativePath
+            out class type=Windows.Foundation.Uri return
+    method capture_preview_to_stream_async
+        method CapturePreviewToStreamAsync slot=25 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=253
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
+            out interface type=Windows.Foundation.IAsyncAction return
+    method capture_selected_content_to_data_package_async
+        method CaptureSelectedContentToDataPackageAsync slot=26 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=255
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> return
+    method get_deferred_permission_request_by_id
+        method GetDeferredPermissionRequestById slot=28 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=264
+            in uint32 name=id
+            out class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=result
+    method go_back
+        method GoBack slot=17 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=0 reverse=209
+    method go_forward
+        method GoForward slot=16 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=0 reverse=201
+    method invoke_script_async
+        method InvokeScriptAsync slot=24 inputs=2 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=117 reverse=249
+            in string name=scriptName
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method navigate
+        method Navigate slot=20 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=228
+            in class type=Windows.Foundation.Uri name=source
+    method navigate_to_local_stream_uri
+        method NavigateToLocalStreamUri slot=22 inputs=2 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=238
+            in class type=Windows.Foundation.Uri name=source
+            in interface type=Windows.Web.IUriToStreamResolver name=streamResolver
+    method navigate_to_string
+        method NavigateToString slot=21 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=232
+            in string name=text
+    method navigate_with_http_request_message
+        method NavigateWithHttpRequestMessage slot=23 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=242
+            in class type=Windows.Web.Http.HttpRequestMessage name=requestMessage
+    method refresh
+        method Refresh slot=18 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=0 reverse=217
+    method stop
+        method Stop slot=19 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=0 reverse=221
+
+interface Windows.Web.UI.IWebViewControl2 python_type
+    py _IWebViewControl2
+    guid 4d3c06f9-c8df-41cc-8bd5-2a947b204503
+    signature {4d3c06f9-c8df-41cc-8bd5-2a947b204503}
+    method add_initialize_script
+        method AddInitializeScript slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl2 shape=4 reverse=22
+            in string name=script
+
+interface Windows.Web.UI.IWebViewControlContentLoadingEventArgs
+    guid 9a3fccb2-b9bb-404b-a22b-66dccd1250c6
+
+interface Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs
+    guid be8bc008-9541-4545-9ff2-2df585b29f7d
+
+interface Windows.Web.UI.IWebViewControlDeferredPermissionRequest
+    guid 2ce349e0-d759-445c-9926-8995298f152b
+
+interface Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs
+    guid 2a6e5bba-98b4-45bc-bbeb-0f69ce49c599
+
+interface Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs
+    guid 20409918-4a15-4c46-a55d-f79edb0bde8b
+
+interface Windows.Web.UI.IWebViewControlNavigationStartingEventArgs
+    guid 0c9057c5-0a08-41c7-863b-71e3a9549137
+
+interface Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs
+    guid 3df44bbb-a124-46d5-a083-d02cacdff5ad
+
+interface Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2
+    guid b53c5ca6-2aae-4bfc-92b9-c30e92b48098
+
+interface Windows.Web.UI.IWebViewControlPermissionRequest
+    guid e5bc836c-f22f-40e2-95b2-7729f840eb7f
+
+interface Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs
+    guid 27204d51-2488-4cc5-968e-0a771e59c147
+
+interface Windows.Web.UI.IWebViewControlScriptNotifyEventArgs
+    guid 491de57b-6f49-41bb-b591-51b85b817037
+
+interface Windows.Web.UI.IWebViewControlSettings
+    guid c9967fbf-5e98-4cfd-8cce-27b0911e3de8
+
+interface Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+    guid e3b81944-e4fc-43dc-94ca-f980f30bc51d
+
+interface Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs
+    guid 4a9680db-88f2-4e20-b693-b4e2df4aa581
+
+interface Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs
+    guid 44d6524d-55a4-4d8b-891c-931d8e25d42e
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> concrete
+    guid b5089479-abd8-5985-8a93-4c208a85e3a4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};cinterface(IInspectable))
+    argument Windows.Web.UI.IWebViewControl
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> concrete
+    guid 357154fe-ec1a-5fca-b860-62f03dece49d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlContentLoadingEventArgs;{9a3fccb2-b9bb-404b-a22b-66dccd1250c6}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlContentLoadingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> concrete
+    guid d7dc333e-b521-5b76-a7ff-48b454f597e5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs;{be8bc008-9541-4545-9ff2-2df585b29f7d}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs> concrete
+    guid bd29249e-4112-533d-96a2-0a1c01519caf
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs;{2a6e5bba-98b4-45bc-bbeb-0f69ce49c599}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> concrete
+    guid 57a87c53-47a5-5864-9881-fd4c00f230a9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNavigationCompletedEventArgs;{20409918-4a15-4c46-a55d-f79edb0bde8b}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlNavigationCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> concrete
+    guid e92e0bcc-9ae9-5b9b-a684-83dd8ee57775
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNavigationStartingEventArgs;{0c9057c5-0a08-41c7-863b-71e3a9549137}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlNavigationStartingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs> concrete
+    guid 317111df-10c6-559c-85a1-847eb0a1b2d5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs;{3df44bbb-a124-46d5-a083-d02cacdff5ad}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlPermissionRequestedEventArgs> concrete
+    guid e5cacc26-2a68-5e0a-b82b-b3d756e10a56
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlPermissionRequestedEventArgs;{27204d51-2488-4cc5-968e-0a771e59c147}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlPermissionRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlScriptNotifyEventArgs> concrete
+    guid ee8b81d3-bbc2-55b0-877b-6ba86e3ad899
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlScriptNotifyEventArgs;{491de57b-6f49-41bb-b591-51b85b817037}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlScriptNotifyEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> concrete
+    guid 8658050c-5e47-5516-b25b-57fae22c4b88
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs;{e3b81944-e4fc-43dc-94ca-f980f30bc51d}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs> concrete
+    guid 571626e3-9780-5b37-be8a-ab8e4e7898cf
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs;{4a9680db-88f2-4e20-b693-b4e2df4aa581}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs> concrete
+    guid 3a6ed2bc-032b-5ec7-a20a-c1ef49250c3c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs;{44d6524d-55a4-4d8b-891c-931d8e25d42e}))
+    argument Windows.Web.UI.IWebViewControl
+    argument Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs
+
+class Windows.Web.UI.WebViewControlContentLoadingEventArgs python_type
+    py WebViewControlContentLoadingEventArgs
+    signature rc(Windows.Web.UI.WebViewControlContentLoadingEventArgs;{9a3fccb2-b9bb-404b-a22b-66dccd1250c6})
+    default Windows.Web.UI.IWebViewControlContentLoadingEventArgs
+    requires Windows.Web.UI.IWebViewControlContentLoadingEventArgs
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlContentLoadingEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs python_type
+    py WebViewControlDOMContentLoadedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs;{be8bc008-9541-4545-9ff2-2df585b29f7d})
+    default Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs
+    requires Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Windows.Web.UI.WebViewControlDeferredPermissionRequest python_type
+    py WebViewControlDeferredPermissionRequest
+    signature rc(Windows.Web.UI.WebViewControlDeferredPermissionRequest;{2ce349e0-d759-445c-9926-8995298f152b})
+    default Windows.Web.UI.IWebViewControlDeferredPermissionRequest
+    requires Windows.Web.UI.IWebViewControlDeferredPermissionRequest
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=22
+            out uint32 return
+    property permission_type
+        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=62
+            out enum32 type=Windows.Web.UI.WebViewControlPermissionType return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    method allow
+        method Allow slot=9 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0 reverse=93
+    method deny
+        method Deny slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0 reverse=117
+
+class Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs python_type
+    py WebViewControlLongRunningScriptDetectedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs;{2a6e5bba-98b4-45bc-bbeb-0f69ce49c599})
+    default Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs
+    requires Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs
+    property stop_page_script_execution
+        get get_StopPageScriptExecution slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=43
+            out boolean return
+        put put_StopPageScriptExecution slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=62
+            in boolean name=value
+    property execution_time
+        get get_ExecutionTime slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=22
+            out timespan return
+
+class Windows.Web.UI.WebViewControlNavigationCompletedEventArgs python_type
+    py WebViewControlNavigationCompletedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlNavigationCompletedEventArgs;{20409918-4a15-4c46-a55d-f79edb0bde8b})
+    default Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs
+    requires Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs
+    property is_success
+        get get_IsSuccess slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=43
+            out boolean return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property web_error_status
+        get get_WebErrorStatus slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=62
+            out enum32 type=Windows.Web.WebErrorStatus return
+
+class Windows.Web.UI.WebViewControlNavigationStartingEventArgs python_type
+    py WebViewControlNavigationStartingEventArgs
+    signature rc(Windows.Web.UI.WebViewControlNavigationStartingEventArgs;{0c9057c5-0a08-41c7-863b-71e3a9549137})
+    default Windows.Web.UI.IWebViewControlNavigationStartingEventArgs
+    requires Windows.Web.UI.IWebViewControlNavigationStartingEventArgs
+    property cancel
+        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Cancel slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=62
+            in boolean name=value
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs python_type
+    py WebViewControlNewWindowRequestedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs;{3df44bbb-a124-46d5-a083-d02cacdff5ad})
+    default Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs
+    requires Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs
+    requires Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2
+    property handled
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=62
+            out boolean return
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=99
+            in boolean name=value
+    property referrer
+        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property new_window
+        get get_NewWindow slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=22
+            out interface type=Windows.Web.UI.IWebViewControl return
+        put put_NewWindow slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=43
+            in interface type=Windows.Web.UI.IWebViewControl name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Web.UI.WebViewControlPermissionRequest python_type
+    py WebViewControlPermissionRequest
+    signature rc(Windows.Web.UI.WebViewControlPermissionRequest;{e5bc836c-f22f-40e2-95b2-7729f840eb7f})
+    default Windows.Web.UI.IWebViewControlPermissionRequest
+    requires Windows.Web.UI.IWebViewControlPermissionRequest
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=22
+            out uint32 return
+    property permission_type
+        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=62
+            out enum32 type=Windows.Web.UI.WebViewControlPermissionType return
+    property state
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=99
+            out enum32 type=Windows.Web.UI.WebViewControlPermissionState return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    method allow
+        method Allow slot=11 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=137
+    method defer
+        method Defer slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=117
+    method deny
+        method Deny slot=12 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=159
+
+class Windows.Web.UI.WebViewControlPermissionRequestedEventArgs python_type
+    py WebViewControlPermissionRequestedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlPermissionRequestedEventArgs;{27204d51-2488-4cc5-968e-0a771e59c147})
+    default Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs
+    requires Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs
+    property permission_request
+        get get_PermissionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Web.UI.WebViewControlPermissionRequest return
+
+enum Windows.Web.UI.WebViewControlPermissionState python_type
+    py WebViewControlPermissionState
+    signature enum(Windows.Web.UI.WebViewControlPermissionState;i4)
+
+enum Windows.Web.UI.WebViewControlPermissionType python_type
+    py WebViewControlPermissionType
+    signature enum(Windows.Web.UI.WebViewControlPermissionType;i4)
+
+class Windows.Web.UI.WebViewControlScriptNotifyEventArgs python_type
+    py WebViewControlScriptNotifyEventArgs
+    signature rc(Windows.Web.UI.WebViewControlScriptNotifyEventArgs;{491de57b-6f49-41bb-b591-51b85b817037})
+    default Windows.Web.UI.IWebViewControlScriptNotifyEventArgs
+    requires Windows.Web.UI.IWebViewControlScriptNotifyEventArgs
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.Web.UI.WebViewControlSettings python_type
+    py WebViewControlSettings
+    signature rc(Windows.Web.UI.WebViewControlSettings;{c9967fbf-5e98-4cfd-8cce-27b0911e3de8})
+    default Windows.Web.UI.IWebViewControlSettings
+    requires Windows.Web.UI.IWebViewControlSettings
+    property is_script_notify_allowed
+        get get_IsScriptNotifyAllowed slot=11 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=141
+            out boolean return
+        put put_IsScriptNotifyAllowed slot=10 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=121
+            in boolean name=value
+    property is_java_script_enabled
+        get get_IsJavaScriptEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=43
+            out boolean return
+        put put_IsJavaScriptEnabled slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=22
+            in boolean name=value
+    property is_indexed_db_enabled
+        get get_IsIndexedDBEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=99
+            out boolean return
+        put put_IsIndexedDBEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=62
+            in boolean name=value
+
+class Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs python_type
+    py WebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs;{e3b81944-e4fc-43dc-94ca-f980f30bc51d})
+    default Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+    requires Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+    property handled
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=62
+            in boolean name=value
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs python_type
+    py WebViewControlUnviewableContentIdentifiedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs;{4a9680db-88f2-4e20-b693-b4e2df4aa581})
+    default Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs
+    requires Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs
+    property media_type
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=62
+            out string return
+    property referrer
+        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs python_type
+    py WebViewControlWebResourceRequestedEventArgs
+    signature rc(Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs;{44d6524d-55a4-4d8b-891c-931d8e25d42e})
+    default Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs
+    requires Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs
+    property response
+        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=99
+            out class type=Windows.Web.Http.HttpResponseMessage return
+        put put_Response slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=62
+            in class type=Windows.Web.Http.HttpResponseMessage name=value
+    property request
+        get get_Request slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.Web.Http.HttpRequestMessage return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.DataTransfer.DataPackage external
+    py winrt.windows.applicationmodel.datatransfer.DataPackage
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+interface Windows.Web.IUriToStreamResolver external
+    py winrt.windows.web._IUriToStreamResolver
+    guid b0aba86a-9aeb-4d3a-9590-003e3ca7e290
+
+enum Windows.Web.WebErrorStatus external
+    py winrt.windows.web.WebErrorStatus
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

@@ -1,0 +1,1310 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel
+
+enum Windows.ApplicationModel.AddResourcePackageOptions python_type
+    py AddResourcePackageOptions
+    signature enum(Windows.ApplicationModel.AddResourcePackageOptions;u4)
+
+class Windows.ApplicationModel.AppDisplayInfo python_type
+    py AppDisplayInfo
+    signature rc(Windows.ApplicationModel.AppDisplayInfo;{1aeb1103-e4d4-41aa-a4f6-c4a276e79eac})
+    default Windows.ApplicationModel.IAppDisplayInfo
+    requires Windows.ApplicationModel.IAppDisplayInfo
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppDisplayInfo shape=4 reverse=43
+            out string return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppDisplayInfo shape=4 reverse=22
+            out string return
+    method get_logo
+        method GetLogo slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IAppDisplayInfo shape=79
+            in struct type=Windows.Foundation.Size name=size
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+
+enum Windows.ApplicationModel.AppExecutionContext python_type
+    py AppExecutionContext
+    signature enum(Windows.ApplicationModel.AppExecutionContext;i4)
+
+class Windows.ApplicationModel.AppInfo python_type
+    py AppInfo
+    signature rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1})
+    default Windows.ApplicationModel.IAppInfo
+    requires Windows.ApplicationModel.IAppInfo
+    requires Windows.ApplicationModel.IAppInfo2
+    requires Windows.ApplicationModel.IAppInfo3
+    requires Windows.ApplicationModel.IAppInfo4
+    factory Windows.ApplicationModel.IAppInfoStatics
+    property app_user_model_id
+        get get_AppUserModelId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo shape=4 reverse=43
+            out string return
+    property display_info
+        get get_DisplayInfo slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo shape=4 reverse=62
+            out class type=Windows.ApplicationModel.AppDisplayInfo return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo shape=4 reverse=22
+            out string return
+    property package_family_name
+        get get_PackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo shape=4 reverse=99
+            out string return
+    property package
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Package return
+    property execution_context
+        get get_ExecutionContext slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo3 shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.AppExecutionContext return
+    property supported_file_extensions
+        get get_SupportedFileExtensions slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfo4 shape=51 reverse=24
+            receive_array string return
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInfoStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.AppInfo return
+    method get_from_app_user_model_id static
+        method GetFromAppUserModelId slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IAppInfoStatics shape=51 reverse=44 static
+            in string name=appUserModelId
+            out class type=Windows.ApplicationModel.AppInfo return
+    method get_from_app_user_model_id_for_user static
+        method GetFromAppUserModelIdForUser slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.IAppInfoStatics shape=117 reverse=66 static
+            in class type=Windows.System.User name=user
+            in string name=appUserModelId
+            out class type=Windows.ApplicationModel.AppInfo return
+
+class Windows.ApplicationModel.AppInstallerInfo python_type
+    py AppInstallerInfo
+    signature rc(Windows.ApplicationModel.AppInstallerInfo;{29ab2ac0-d4f6-42a3-adcd-d6583c659508})
+    default Windows.ApplicationModel.IAppInstallerInfo
+    requires Windows.ApplicationModel.IAppInstallerInfo
+    requires Windows.ApplicationModel.IAppInstallerInfo2
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property automatic_background_task
+        get get_AutomaticBackgroundTask slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=121
+            out boolean return
+    property dependency_package_uris
+        get get_DependencyPackageUris slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    property force_update_from_any_version
+        get get_ForceUpdateFromAnyVersion slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=141
+            out boolean return
+    property hours_between_update_checks
+        get get_HoursBetweenUpdateChecks slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=43
+            out uint32 return
+    property is_auto_repair_enabled
+        get get_IsAutoRepairEnabled slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=162
+            out boolean return
+    property last_checked
+        get get_LastChecked slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=186
+            out datetime return
+    property on_launch
+        get get_OnLaunch slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=22
+            out boolean return
+    property optional_package_uris
+        get get_OptionalPackageUris slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    property paused_until
+        get get_PausedUntil slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=194
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property policy_source
+        get get_PolicySource slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=228
+            out enum32 type=Windows.ApplicationModel.AppInstallerPolicySource return
+    property repair_uris
+        get get_RepairUris slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    property show_prompt
+        get get_ShowPrompt slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=62
+            out boolean return
+    property update_blocks_activation
+        get get_UpdateBlocksActivation slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=99
+            out boolean return
+    property update_uris
+        get get_UpdateUris slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    property version
+        get get_Version slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstallerInfo2 shape=4 reverse=173
+            out struct type=Windows.ApplicationModel.PackageVersion return
+
+enum Windows.ApplicationModel.AppInstallerPolicySource python_type
+    py AppInstallerPolicySource
+    signature enum(Windows.ApplicationModel.AppInstallerPolicySource;i4)
+
+class Windows.ApplicationModel.AppInstance python_type
+    py AppInstance
+    signature rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01})
+    default Windows.ApplicationModel.IAppInstance
+    requires Windows.ApplicationModel.IAppInstance
+    factory Windows.ApplicationModel.IAppInstanceStatics
+    property is_current_instance
+        get get_IsCurrentInstance slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstance shape=4 reverse=43
+            out boolean return
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstance shape=4 reverse=22
+            out string return
+    property recommended_instance static
+        get get_RecommendedInstance slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.AppInstance return
+    method find_or_register_instance_for_key static
+        method FindOrRegisterInstanceForKey slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=51 reverse=65 static
+            in string name=key
+            out class type=Windows.ApplicationModel.AppInstance return
+    method get_activated_event_args static
+        method GetActivatedEventArgs slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=4 reverse=43 static
+            out interface type=Windows.ApplicationModel.Activation.IActivatedEventArgs return
+    method get_instances static
+        method GetInstances slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=4 reverse=121 static
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> return
+    method redirect_activation_to
+        method RedirectActivationTo slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.IAppInstance shape=0 reverse=55
+    method unregister static
+        method Unregister slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=0 reverse=93 static
+
+class Windows.ApplicationModel.DesignMode static python_type
+    py DesignMode
+    factory Windows.ApplicationModel.IDesignModeStatics2
+    factory Windows.ApplicationModel.IDesignModeStatics
+    property design_mode_enabled static
+        get get_DesignModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IDesignModeStatics shape=4 reverse=22 static
+            out boolean return
+    property design_mode2_enabled static
+        get get_DesignMode2Enabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IDesignModeStatics2 shape=4 reverse=22 static
+            out boolean return
+
+class Windows.ApplicationModel.EnteredBackgroundEventArgs python_type
+    py EnteredBackgroundEventArgs
+    signature rc(Windows.ApplicationModel.EnteredBackgroundEventArgs;{f722dcc2-9827-403d-aaed-ecca9ac17398})
+    default Windows.ApplicationModel.IEnteredBackgroundEventArgs
+    requires Windows.ApplicationModel.IEnteredBackgroundEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IEnteredBackgroundEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.FindRelatedPackagesOptions python_type
+    py FindRelatedPackagesOptions
+    signature rc(Windows.ApplicationModel.FindRelatedPackagesOptions;{41dd7eea-b335-521f-b96c-5ea07f5b7329})
+    default Windows.ApplicationModel.IFindRelatedPackagesOptions
+    requires Windows.ApplicationModel.IFindRelatedPackagesOptions
+    factory Windows.ApplicationModel.IFindRelatedPackagesOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptionsFactory shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.PackageRelationship name=Relationship
+            out class type=Windows.ApplicationModel.FindRelatedPackagesOptions return
+    property relationship
+        get get_Relationship slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.PackageRelationship return
+        put put_Relationship slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.PackageRelationship name=value
+    property include_resources
+        get get_IncludeResources slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=186
+            out boolean return
+        put put_IncludeResources slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=194
+            in boolean name=value
+    property include_optionals
+        get get_IncludeOptionals slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=162
+            out boolean return
+        put put_IncludeOptionals slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=173
+            in boolean name=value
+    property include_host_runtimes
+        get get_IncludeHostRuntimes slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=121
+            out boolean return
+        put put_IncludeHostRuntimes slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=141
+            in boolean name=value
+    property include_frameworks
+        get get_IncludeFrameworks slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=62
+            out boolean return
+        put put_IncludeFrameworks slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IFindRelatedPackagesOptions shape=4 reverse=99
+            in boolean name=value
+
+enum Windows.ApplicationModel.FullTrustLaunchResult python_type
+    py FullTrustLaunchResult
+    signature enum(Windows.ApplicationModel.FullTrustLaunchResult;i4)
+
+class Windows.ApplicationModel.FullTrustProcessLaunchResult python_type
+    py FullTrustProcessLaunchResult
+    signature rc(Windows.ApplicationModel.FullTrustProcessLaunchResult;{8917d888-edfb-515f-8e22-5ebceb69dfd9})
+    default Windows.ApplicationModel.IFullTrustProcessLaunchResult
+    requires Windows.ApplicationModel.IFullTrustProcessLaunchResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLaunchResult shape=4 reverse=43
+            out hresult return
+    property launch_result
+        get get_LaunchResult slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLaunchResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.FullTrustLaunchResult return
+
+class Windows.ApplicationModel.FullTrustProcessLauncher static python_type
+    py FullTrustProcessLauncher
+    factory Windows.ApplicationModel.IFullTrustProcessLauncherStatics2
+    factory Windows.ApplicationModel.IFullTrustProcessLauncherStatics
+    method launch_full_trust_process_for_app_async static
+        method LaunchFullTrustProcessForAppAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics shape=51 reverse=65 static
+            in string name=fullTrustPackageRelativeAppId
+            out interface type=Windows.Foundation.IAsyncAction return
+        method LaunchFullTrustProcessForAppAsync slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics shape=117 reverse=101 static
+            in string name=fullTrustPackageRelativeAppId
+            in string name=parameterGroupId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method launch_full_trust_process_for_app_with_arguments_async static
+        method LaunchFullTrustProcessForAppWithArgumentsAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 shape=117 reverse=45 static
+            in string name=fullTrustPackageRelativeAppId
+            in string name=commandLine
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> return
+    method launch_full_trust_process_for_current_app_async static
+        method LaunchFullTrustProcessForCurrentAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics shape=4 reverse=22 static
+            out interface type=Windows.Foundation.IAsyncAction return
+        method LaunchFullTrustProcessForCurrentAppAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics shape=51 reverse=44 static
+            in string name=parameterGroupId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method launch_full_trust_process_for_current_app_with_arguments_async static
+        method LaunchFullTrustProcessForCurrentAppWithArgumentsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 shape=51 reverse=24 static
+            in string name=commandLine
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> return
+
+interface Windows.ApplicationModel.IAppDisplayInfo
+    guid 1aeb1103-e4d4-41aa-a4f6-c4a276e79eac
+
+interface Windows.ApplicationModel.IAppInfo
+    guid cf7f59b3-6a09-4de8-a6c0-5792d56880d1
+
+interface Windows.ApplicationModel.IAppInfo2
+    guid be4b1f5a-2098-431b-bd25-b30878748d47
+
+interface Windows.ApplicationModel.IAppInfo3
+    guid 09a78e46-93a4-46de-9397-0843b57115ea
+
+interface Windows.ApplicationModel.IAppInfo4
+    guid 2f34bdeb-1609-4554-9f33-12e1e803e0d4
+
+interface Windows.ApplicationModel.IAppInfoStatics
+    guid cf1f782a-e48b-4f0c-9b0b-79c3f8957dd7
+
+interface Windows.ApplicationModel.IAppInstallerInfo
+    guid 29ab2ac0-d4f6-42a3-adcd-d6583c659508
+
+interface Windows.ApplicationModel.IAppInstallerInfo2
+    guid d20f1388-8256-597c-8511-c84ec50d5e2b
+
+interface Windows.ApplicationModel.IAppInstance
+    guid 675f2b47-f25f-4532-9fd6-3633e0634d01
+
+interface Windows.ApplicationModel.IAppInstanceStatics
+    guid 9d11e77f-9ea6-47af-a6ec-46784c5ba254
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> concrete
+    guid e37e376e-965e-5fff-a66f-18309b981ea5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.FullTrustProcessLaunchResult;{8917d888-edfb-515f-8e22-5ebceb69dfd9}))
+    argument Windows.ApplicationModel.FullTrustProcessLaunchResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> concrete
+    guid 59b2497f-86eb-542f-bea6-1be53e93e13d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult;{3bf10cd4-b4df-47b3-a963-e2fa832f7dd3}))
+    argument Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> concrete
+    guid cfc179aa-fb98-54ef-8ea8-64499347b7f7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult;{29d2f97b-d974-4e64-9359-22cadfd79828}))
+    argument Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> concrete
+    guid 342ee07c-8d6e-53a4-b746-c5b74bb61f6d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult;{ae719709-1a52-4321-87b3-e5a1a17981a7}))
+    argument Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> concrete
+    guid bbd292e3-db9f-5802-a488-40f156332c04
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    argument Windows.ApplicationModel.PackageContentGroup
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> concrete
+    guid 010bd015-43ef-576c-be1e-bc38c5b6b66b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageUpdateAvailabilityResult;{114e5009-199a-48a1-a079-313c45634a71}))
+    argument Windows.ApplicationModel.PackageUpdateAvailabilityResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> concrete
+    guid cbec7a4e-a046-5330-873d-0fce228792fa
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    argument Windows.ApplicationModel.StartupTask
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> concrete
+    guid 5239a934-80e2-518f-b819-1f316f379a3f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.StartupTaskState;i4))
+    argument Windows.ApplicationModel.StartupTaskState
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> concrete
+    guid 929e3c29-bf29-5594-bc63-67db43a539ea
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1})))
+    argument Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> concrete
+    guid d3bcf8a0-3538-5dae-98d7-1f2ab88c3f01
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> concrete
+    guid 16543165-5b65-5683-8a02-c385659158bd
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> concrete
+    guid b147e038-cc1f-567f-b1f1-64d5d4003309
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.ApplicationModel.PackageCatalogAddResourcePackageResult;{9636ce0d-3e17-493f-aa08-ccec6fdef699});struct(Windows.ApplicationModel.PackageInstallProgress;u4))
+    argument Windows.ApplicationModel.PackageCatalogAddResourcePackageResult
+    argument Windows.ApplicationModel.PackageInstallProgress
+
+interface Windows.ApplicationModel.IDesignModeStatics
+    guid 2c3893cc-f81a-4e7a-b857-76a80887e185
+
+interface Windows.ApplicationModel.IDesignModeStatics2
+    guid 80cf8137-b064-4858-bec8-3eba22357535
+
+interface Windows.ApplicationModel.IEnteredBackgroundEventArgs python_type
+    py _IEnteredBackgroundEventArgs
+    guid f722dcc2-9827-403d-aaed-ecca9ac17398
+    signature {f722dcc2-9827-403d-aaed-ecca9ac17398}
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IEnteredBackgroundEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+interface Windows.ApplicationModel.IFindRelatedPackagesOptions
+    guid 41dd7eea-b335-521f-b96c-5ea07f5b7329
+
+interface Windows.ApplicationModel.IFindRelatedPackagesOptionsFactory
+    guid d7d17254-a4fd-55c4-98cf-f2710b7d8be2
+
+interface Windows.ApplicationModel.IFullTrustProcessLaunchResult
+    guid 8917d888-edfb-515f-8e22-5ebceb69dfd9
+
+interface Windows.ApplicationModel.IFullTrustProcessLauncherStatics
+    guid d784837f-1100-3c6b-a455-f6262cc331b6
+
+interface Windows.ApplicationModel.IFullTrustProcessLauncherStatics2
+    guid 8b8ed72f-b65c-56cf-a1a7-2bf77cbc6ea8
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> concrete
+    guid 69ad6aa7-0c49-5f27-a5eb-ef4d59467b6d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    argument Windows.ApplicationModel.Package
+
+interface Windows.ApplicationModel.ILeavingBackgroundEventArgs python_type
+    py _ILeavingBackgroundEventArgs
+    guid 39c6ec9a-ae6e-46f9-a07a-cfc23f88733e
+    signature {39c6ec9a-ae6e-46f9-a07a-cfc23f88733e}
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ILeavingBackgroundEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+interface Windows.ApplicationModel.ILimitedAccessFeatureRequestResult
+    guid d45156a6-1e24-5ddd-abb4-6188aba4d5bf
+
+interface Windows.ApplicationModel.ILimitedAccessFeaturesStatics
+    guid 8be612d4-302b-5fbf-a632-1a99e43e8925
+
+interface Windows.ApplicationModel.IPackage
+    guid 163c792f-bd75-413c-bf23-b1fe7b95d825
+
+interface Windows.ApplicationModel.IPackage2
+    guid a6612fb6-7688-4ace-95fb-359538e7aa01
+
+interface Windows.ApplicationModel.IPackage3
+    guid 5f738b61-f86a-4917-93d1-f1ee9d3b35d9
+
+interface Windows.ApplicationModel.IPackage4
+    guid 65aed1ae-b95b-450c-882b-6255187f397e
+
+interface Windows.ApplicationModel.IPackage5
+    guid 0e842dd4-d9ac-45ed-9a1e-74ce056b2635
+
+interface Windows.ApplicationModel.IPackage6
+    guid 8b1ad942-12d7-4754-ae4e-638cbc0e3a2e
+
+interface Windows.ApplicationModel.IPackage7
+    guid 86ff8d31-a2e4-45e0-9732-283a6d88fde1
+
+interface Windows.ApplicationModel.IPackage8
+    guid 2c584f7b-ce2a-4be6-a093-77cfbb2a7ea1
+
+interface Windows.ApplicationModel.IPackage9
+    guid d5ab224f-d7e1-49ec-90ce-720cdbd02e9c
+
+interface Windows.ApplicationModel.IPackageCatalog
+    guid 230a3751-9de3-4445-be74-91fb325abefe
+
+interface Windows.ApplicationModel.IPackageCatalog2
+    guid 96a60c36-8ff7-4344-b6bf-ee64c2207ed2
+
+interface Windows.ApplicationModel.IPackageCatalog3
+    guid 96dd5c88-8837-43f9-9015-033434ba14f3
+
+interface Windows.ApplicationModel.IPackageCatalog4
+    guid c37c399b-44cc-4b7b-8baf-796c04ead3b9
+
+interface Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult
+    guid 3bf10cd4-b4df-47b3-a963-e2fa832f7dd3
+
+interface Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult
+    guid 9636ce0d-3e17-493f-aa08-ccec6fdef699
+
+interface Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult
+    guid 29d2f97b-d974-4e64-9359-22cadfd79828
+
+interface Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult
+    guid ae719709-1a52-4321-87b3-e5a1a17981a7
+
+interface Windows.ApplicationModel.IPackageCatalogStatics
+    guid a18c9696-e65b-4634-ba21-5e63eb7244a7
+
+interface Windows.ApplicationModel.IPackageCatalogStatics2 python_type
+    py _IPackageCatalogStatics2
+    guid 4c11c159-9a28-598c-b185-55e1899b2be4
+    signature {4c11c159-9a28-598c-b185-55e1899b2be4}
+    method open_for_package
+        method OpenForPackage slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogStatics2 shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Package name=package
+            out class type=Windows.ApplicationModel.PackageCatalog return
+
+interface Windows.ApplicationModel.IPackageContentGroup
+    guid 8f62695d-120a-4798-b5e1-5800dda8f2e1
+
+interface Windows.ApplicationModel.IPackageContentGroupStagingEventArgs
+    guid 3d7bc27e-6f27-446c-986e-d4733d4d9113
+
+interface Windows.ApplicationModel.IPackageContentGroupStatics
+    guid 70ee7619-5f12-4b92-b9ea-6ccada13bc75
+
+interface Windows.ApplicationModel.IPackageId
+    guid 1adb665e-37c7-4790-9980-dd7ae74e8bb2
+
+interface Windows.ApplicationModel.IPackageIdWithMetadata
+    guid 40577a7c-0c9e-443d-9074-855f5ce0a08d
+
+interface Windows.ApplicationModel.IPackageInstallingEventArgs
+    guid 97741eb7-ab7a-401a-8b61-eb0e7faff237
+
+interface Windows.ApplicationModel.IPackageStagingEventArgs
+    guid 1041682d-54e2-4f51-b828-9ef7046c210f
+
+interface Windows.ApplicationModel.IPackageStatics
+    guid 4e534bdf-2960-4878-97a4-9624deb72f2d
+
+interface Windows.ApplicationModel.IPackageStatus
+    guid 5fe74f71-a365-4c09-a02d-046d525ea1da
+
+interface Windows.ApplicationModel.IPackageStatus2
+    guid f428fa93-7c56-4862-acfa-abaedcc0694d
+
+interface Windows.ApplicationModel.IPackageStatusChangedEventArgs
+    guid 437d714d-bd80-4a70-bc50-f6e796509575
+
+interface Windows.ApplicationModel.IPackageUninstallingEventArgs
+    guid 4443aa52-ab22-44cd-82bb-4ec9b827367a
+
+interface Windows.ApplicationModel.IPackageUpdateAvailabilityResult
+    guid 114e5009-199a-48a1-a079-313c45634a71
+
+interface Windows.ApplicationModel.IPackageUpdatingEventArgs
+    guid cd7b4228-fd74-443e-b114-23e677b0e86f
+
+interface Windows.ApplicationModel.IPackageWithMetadata
+    guid 95949780-1de9-40f2-b452-0de9f1910012
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.ApplicationModel.IStartupTask
+    guid f75c23c8-b5f2-4f6c-88dd-36cb1d599d17
+
+interface Windows.ApplicationModel.IStartupTaskStatics
+    guid ee5b60bd-a148-41a7-b26e-e8b88a1e62f8
+
+interface Windows.ApplicationModel.ISuspendingDeferral python_type
+    py _ISuspendingDeferral
+    guid 59140509-8bc9-4eb4-b636-dabdc4f46f66
+    signature {59140509-8bc9-4eb4-b636-dabdc4f46f66}
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ISuspendingDeferral shape=0 reverse=16
+
+interface Windows.ApplicationModel.ISuspendingEventArgs python_type
+    py _ISuspendingEventArgs
+    guid 96061c05-2dba-4d08-b0bd-2b30a131c6aa
+    signature {96061c05-2dba-4d08-b0bd-2b30a131c6aa}
+    property suspending_operation
+        get get_SuspendingOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.SuspendingOperation return
+
+interface Windows.ApplicationModel.ISuspendingOperation python_type
+    py _ISuspendingOperation
+    guid 9da4ca41-20e1-4e9b-9f65-a9f435340c3a
+    signature {9da4ca41-20e1-4e9b-9f65-a9f435340c3a}
+    property deadline
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingOperation shape=4 reverse=43
+            out datetime return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingOperation shape=4 reverse=22
+            out class type=Windows.ApplicationModel.SuspendingDeferral return
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> concrete
+    guid 7ff85c5e-7752-5ef0-bf29-020648c199e4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01}))
+    argument Windows.ApplicationModel.AppInstance
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> concrete
+    guid d1bb509e-6989-5c69-b1ff-d1702fe8aca3
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    argument Windows.ApplicationModel.Package
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> concrete
+    guid 29adc699-5848-5a98-a516-23feb0fa2c4b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    argument Windows.ApplicationModel.PackageContentGroup
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> concrete
+    guid 920c8b92-d5ef-5899-8776-2ad97aca6e1d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad}))
+    argument Windows.ApplicationModel.Core.AppListEntry
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> concrete
+    guid 0263c4d4-195c-5dc5-a7ca-6806ceca420b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    argument Windows.ApplicationModel.Package
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> concrete
+    guid ea3b1b7a-5071-5986-88fc-912dbbf845fb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    argument Windows.ApplicationModel.StartupTask
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+    guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+class Windows.ApplicationModel.LeavingBackgroundEventArgs python_type
+    py LeavingBackgroundEventArgs
+    signature rc(Windows.ApplicationModel.LeavingBackgroundEventArgs;{39c6ec9a-ae6e-46f9-a07a-cfc23f88733e})
+    default Windows.ApplicationModel.ILeavingBackgroundEventArgs
+    requires Windows.ApplicationModel.ILeavingBackgroundEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ILeavingBackgroundEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.LimitedAccessFeatureRequestResult python_type
+    py LimitedAccessFeatureRequestResult
+    signature rc(Windows.ApplicationModel.LimitedAccessFeatureRequestResult;{d45156a6-1e24-5ddd-abb4-6188aba4d5bf})
+    default Windows.ApplicationModel.ILimitedAccessFeatureRequestResult
+    requires Windows.ApplicationModel.ILimitedAccessFeatureRequestResult
+    property estimated_removal_date
+        get get_EstimatedRemovalDate slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ILimitedAccessFeatureRequestResult shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property feature_id
+        get get_FeatureId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ILimitedAccessFeatureRequestResult shape=4 reverse=22
+            out string return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ILimitedAccessFeatureRequestResult shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.LimitedAccessFeatureStatus return
+
+enum Windows.ApplicationModel.LimitedAccessFeatureStatus python_type
+    py LimitedAccessFeatureStatus
+    signature enum(Windows.ApplicationModel.LimitedAccessFeatureStatus;i4)
+
+class Windows.ApplicationModel.LimitedAccessFeatures static python_type
+    py LimitedAccessFeatures
+    factory Windows.ApplicationModel.ILimitedAccessFeaturesStatics
+    method try_unlock_feature static
+        method TryUnlockFeature slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ILimitedAccessFeaturesStatics shape=195 reverse=26 static
+            in string name=featureId
+            in string name=token
+            in string name=attestation
+            out class type=Windows.ApplicationModel.LimitedAccessFeatureRequestResult return
+
+class Windows.ApplicationModel.Package python_type
+    py Package
+    signature rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825})
+    default Windows.ApplicationModel.IPackage
+    requires Windows.ApplicationModel.IPackage
+    requires Windows.ApplicationModel.IPackage2
+    requires Windows.ApplicationModel.IPackage3
+    requires Windows.ApplicationModel.IPackageWithMetadata
+    requires Windows.ApplicationModel.IPackage4
+    requires Windows.ApplicationModel.IPackage5
+    requires Windows.ApplicationModel.IPackage6
+    requires Windows.ApplicationModel.IPackage7
+    requires Windows.ApplicationModel.IPackage8
+    requires Windows.ApplicationModel.IPackage9
+    factory Windows.ApplicationModel.IPackageStatics
+    property dependencies
+        get get_Dependencies slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage shape=4 reverse=22
+            out class type=Windows.ApplicationModel.PackageId return
+    property installed_location
+        get get_InstalledLocation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    property is_framework
+        get get_IsFramework slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage shape=4 reverse=62
+            out boolean return
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=62
+            out string return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=22
+            out string return
+    property is_bundle
+        get get_IsBundle slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=141
+            out boolean return
+    property is_development_mode
+        get get_IsDevelopmentMode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=162
+            out boolean return
+    property is_resource_package
+        get get_IsResourcePackage slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=121
+            out boolean return
+    property logo
+        get get_Logo slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+    property publisher_display_name
+        get get_PublisherDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage2 shape=4 reverse=43
+            out string return
+    property installed_date
+        get get_InstalledDate slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage3 shape=4 reverse=43
+            out datetime return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage3 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.PackageStatus return
+    property is_optional
+        get get_IsOptional slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage4 shape=4 reverse=43
+            out boolean return
+    property signature_kind
+        get get_SignatureKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage4 shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.PackageSignatureKind return
+    property effective_location
+        get get_EffectiveLocation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage7 shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    property mutable_location
+        get get_MutableLocation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage7 shape=4 reverse=22
+            out class type=Windows.Storage.StorageFolder return
+    property effective_external_location
+        get get_EffectiveExternalLocation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=22
+            out class type=Windows.Storage.StorageFolder return
+    property effective_external_path
+        get get_EffectiveExternalPath slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=162
+            out string return
+    property effective_path
+        get get_EffectivePath slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=141
+            out string return
+    property installed_path
+        get get_InstalledPath slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=99
+            out string return
+    property is_stub
+        get get_IsStub slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=210
+            out boolean return
+    property machine_external_location
+        get get_MachineExternalLocation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=43
+            out class type=Windows.Storage.StorageFolder return
+    property machine_external_path
+        get get_MachineExternalPath slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=173
+            out string return
+    property mutable_path
+        get get_MutablePath slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=121
+            out string return
+    property user_external_location
+        get get_UserExternalLocation slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=62
+            out class type=Windows.Storage.StorageFolder return
+    property user_external_path
+        get get_UserExternalPath slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=186
+            out string return
+    property source_uri_scheme_name
+        get get_SourceUriSchemeName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage9 shape=4 reverse=43
+            out string return
+    property install_date
+        get get_InstallDate slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageWithMetadata shape=4 reverse=22
+            out datetime return
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Package return
+    method check_update_availability_async
+        method CheckUpdateAvailabilityAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage6 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> return
+    method find_related_packages
+        method FindRelatedPackages slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackage9 shape=51 reverse=24
+            in class type=Windows.ApplicationModel.FindRelatedPackagesOptions name=options
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method get_app_installer_info
+        method GetAppInstallerInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage6 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppInstallerInfo return
+    method get_app_list_entries
+        method GetAppListEntries slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> return
+    method get_app_list_entries_async
+        method GetAppListEntriesAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage3 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> return
+    method get_content_group_async
+        method GetContentGroupAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackage5 shape=51 reverse=44
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> return
+    method get_content_groups_async
+        method GetContentGroupsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage5 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> return
+    method get_logo_as_random_access_stream_reference
+        method GetLogoAsRandomAccessStreamReference slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackage8 shape=79
+            in struct type=Windows.Foundation.Size name=size
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    method get_thumbnail_token
+        method GetThumbnailToken slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageWithMetadata shape=4 reverse=43
+            out string return
+    method launch deprecated
+        method Launch slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageWithMetadata shape=4 reverse=62 deprecated
+            in string name=parameters
+    method set_in_use_async
+        method SetInUseAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackage5 shape=51 reverse=124
+            in boolean name=inUse
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method stage_content_groups_async
+        method StageContentGroupsAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackage5 shape=51 reverse=65
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=names
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> return
+        method StageContentGroupsAsync slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.IPackage5 shape=117 reverse=101
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=names
+            in boolean name=moveToHeadOfQueue
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> return
+    method verify_content_integrity_async
+        method VerifyContentIntegrityAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackage4 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.ApplicationModel.PackageCatalog python_type
+    py PackageCatalog
+    signature rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe})
+    default Windows.ApplicationModel.IPackageCatalog
+    requires Windows.ApplicationModel.IPackageCatalog
+    requires Windows.ApplicationModel.IPackageCatalog2
+    requires Windows.ApplicationModel.IPackageCatalog3
+    requires Windows.ApplicationModel.IPackageCatalog4
+    factory Windows.ApplicationModel.IPackageCatalogStatics2
+    factory Windows.ApplicationModel.IPackageCatalogStatics
+    event package_installing
+        add add_PackageInstalling slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageInstalling slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=110
+            in event_token name=token
+    event package_staging
+        add add_PackageStaging slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStagingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageStaging slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=53
+            in event_token name=token
+    event package_status_changed
+        add add_PackageStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStatusChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PackageStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=200
+            in event_token name=token
+    event package_uninstalling
+        add add_PackageUninstalling slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUninstallingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageUninstalling slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=181
+            in event_token name=token
+    event package_updating
+        add add_PackageUpdating slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUpdatingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageUpdating slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=156
+            in event_token name=token
+    event package_content_group_staging
+        add add_PackageContentGroupStaging slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageContentGroupStagingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageContentGroupStaging slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=26 reverse=53
+            in event_token name=token
+    method add_optional_package_async
+        method AddOptionalPackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=51 reverse=65
+            in string name=optionalPackageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> return
+    method add_resource_package_async
+        method AddResourcePackageAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog4 shape=195 reverse=26
+            in string name=resourcePackageFamilyName
+            in string name=resourceID
+            in enum_u32 type=Windows.ApplicationModel.AddResourcePackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> return
+    method open_for_current_package static
+        method OpenForCurrentPackage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.PackageCatalog return
+    method open_for_current_user static
+        method OpenForCurrentUser slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogStatics shape=4 reverse=43 static
+            out class type=Windows.ApplicationModel.PackageCatalog return
+    method open_for_package static
+        method OpenForPackage slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogStatics2 shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.Package name=package
+            out class type=Windows.ApplicationModel.PackageCatalog return
+    method remove_optional_packages_async
+        method RemoveOptionalPackagesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog3 shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> return
+    method remove_resource_packages_async
+        method RemoveResourcePackagesAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog4 shape=51 reverse=44
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> name=resourcePackages
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> return
+
+class Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult python_type
+    py PackageCatalogAddOptionalPackageResult
+    signature rc(Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult;{3bf10cd4-b4df-47b3-a963-e2fa832f7dd3})
+    default Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult
+    requires Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult shape=4 reverse=43
+            out hresult return
+    property package
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.PackageCatalogAddResourcePackageResult python_type
+    py PackageCatalogAddResourcePackageResult
+    signature rc(Windows.ApplicationModel.PackageCatalogAddResourcePackageResult;{9636ce0d-3e17-493f-aa08-ccec6fdef699})
+    default Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult
+    requires Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult shape=4 reverse=62
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult shape=4 reverse=43
+            out boolean return
+    property package
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult python_type
+    py PackageCatalogRemoveOptionalPackagesResult
+    signature rc(Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult;{29d2f97b-d974-4e64-9359-22cadfd79828})
+    default Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult
+    requires Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult shape=4 reverse=43
+            out hresult return
+    property packages_removed
+        get get_PackagesRemoved slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
+
+class Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult python_type
+    py PackageCatalogRemoveResourcePackagesResult
+    signature rc(Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult;{ae719709-1a52-4321-87b3-e5a1a17981a7})
+    default Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult
+    requires Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult shape=4 reverse=43
+            out hresult return
+    property packages_removed
+        get get_PackagesRemoved slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
+
+class Windows.ApplicationModel.PackageContentGroup python_type
+    py PackageContentGroup
+    signature rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1})
+    default Windows.ApplicationModel.IPackageContentGroup
+    requires Windows.ApplicationModel.IPackageContentGroup
+    factory Windows.ApplicationModel.IPackageContentGroupStatics
+    property is_required
+        get get_IsRequired slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroup shape=4 reverse=99
+            out boolean return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroup shape=4 reverse=43
+            out string return
+    property package
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroup shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Package return
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroup shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.PackageContentGroupState return
+    property required_group_name static
+        get get_RequiredGroupName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStatics shape=4 reverse=22 static
+            out string return
+
+class Windows.ApplicationModel.PackageContentGroupStagingEventArgs python_type
+    py PackageContentGroupStagingEventArgs
+    signature rc(Windows.ApplicationModel.PackageContentGroupStagingEventArgs;{3d7bc27e-6f27-446c-986e-d4733d4d9113})
+    default Windows.ApplicationModel.IPackageContentGroupStagingEventArgs
+    requires Windows.ApplicationModel.IPackageContentGroupStagingEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=22
+            out guid return
+    property content_group_name
+        get get_ContentGroupName slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=141
+            out string return
+    property error_code
+        get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=121
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=99
+            out boolean return
+    property is_content_group_required
+        get get_IsContentGroupRequired slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=162
+            out boolean return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=62
+            out double return
+
+enum Windows.ApplicationModel.PackageContentGroupState python_type
+    py PackageContentGroupState
+    signature enum(Windows.ApplicationModel.PackageContentGroupState;i4)
+
+class Windows.ApplicationModel.PackageId python_type
+    py PackageId
+    signature rc(Windows.ApplicationModel.PackageId;{1adb665e-37c7-4790-9980-dd7ae74e8bb2})
+    default Windows.ApplicationModel.IPackageId
+    requires Windows.ApplicationModel.IPackageId
+    requires Windows.ApplicationModel.IPackageIdWithMetadata
+    property architecture
+        get get_Architecture slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=62
+            out enum32 type=Windows.System.ProcessorArchitecture return
+    property family_name
+        get get_FamilyName slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=173
+            out string return
+    property full_name
+        get get_FullName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=162
+            out string return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=22
+            out string return
+    property publisher
+        get get_Publisher slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=121
+            out string return
+    property publisher_id
+        get get_PublisherId slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=141
+            out string return
+    property resource_id
+        get get_ResourceId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=99
+            out string return
+    property version
+        get get_Version slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageId shape=4 reverse=43
+            out struct type=Windows.ApplicationModel.PackageVersion return
+    property author
+        get get_Author slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageIdWithMetadata shape=4 reverse=43
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageIdWithMetadata shape=4 reverse=22
+            out string return
+
+struct Windows.ApplicationModel.PackageInstallProgress python_type
+    py PackageInstallProgress
+    signature struct(Windows.ApplicationModel.PackageInstallProgress;u4)
+    field percent_complete PercentComplete uint32
+
+class Windows.ApplicationModel.PackageInstallingEventArgs python_type
+    py PackageInstallingEventArgs
+    signature rc(Windows.ApplicationModel.PackageInstallingEventArgs;{97741eb7-ab7a-401a-8b61-eb0e7faff237})
+    default Windows.ApplicationModel.IPackageInstallingEventArgs
+    requires Windows.ApplicationModel.IPackageInstallingEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=22
+            out guid return
+    property error_code
+        get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=121
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=99
+            out boolean return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=62
+            out double return
+
+enum Windows.ApplicationModel.PackageRelationship python_type
+    py PackageRelationship
+    signature enum(Windows.ApplicationModel.PackageRelationship;i4)
+
+enum Windows.ApplicationModel.PackageSignatureKind python_type
+    py PackageSignatureKind
+    signature enum(Windows.ApplicationModel.PackageSignatureKind;i4)
+
+class Windows.ApplicationModel.PackageStagingEventArgs python_type
+    py PackageStagingEventArgs
+    signature rc(Windows.ApplicationModel.PackageStagingEventArgs;{1041682d-54e2-4f51-b828-9ef7046c210f})
+    default Windows.ApplicationModel.IPackageStagingEventArgs
+    requires Windows.ApplicationModel.IPackageStagingEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=22
+            out guid return
+    property error_code
+        get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=121
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=99
+            out boolean return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=62
+            out double return
+
+class Windows.ApplicationModel.PackageStatus python_type
+    py PackageStatus
+    signature rc(Windows.ApplicationModel.PackageStatus;{5fe74f71-a365-4c09-a02d-046d525ea1da})
+    default Windows.ApplicationModel.IPackageStatus
+    requires Windows.ApplicationModel.IPackageStatus
+    requires Windows.ApplicationModel.IPackageStatus2
+    property data_offline
+        get get_DataOffline slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=99
+            out boolean return
+    property dependency_issue
+        get get_DependencyIssue slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=194
+            out boolean return
+    property deployment_in_progress
+        get get_DeploymentInProgress slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=210
+            out boolean return
+    property disabled
+        get get_Disabled slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=121
+            out boolean return
+    property license_issue
+        get get_LicenseIssue slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=162
+            out boolean return
+    property modified
+        get get_Modified slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=173
+            out boolean return
+    property needs_remediation
+        get get_NeedsRemediation slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=141
+            out boolean return
+    property not_available
+        get get_NotAvailable slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=43
+            out boolean return
+    property package_offline
+        get get_PackageOffline slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=62
+            out boolean return
+    property servicing
+        get get_Servicing slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=202
+            out boolean return
+    property tampered
+        get get_Tampered slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=186
+            out boolean return
+    property is_partially_staged
+        get get_IsPartiallyStaged slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus2 shape=4 reverse=22
+            out boolean return
+    method verify_is_ok
+        method VerifyIsOK slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatus shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.PackageStatusChangedEventArgs python_type
+    py PackageStatusChangedEventArgs
+    signature rc(Windows.ApplicationModel.PackageStatusChangedEventArgs;{437d714d-bd80-4a70-bc50-f6e796509575})
+    default Windows.ApplicationModel.IPackageStatusChangedEventArgs
+    requires Windows.ApplicationModel.IPackageStatusChangedEventArgs
+    property package
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStatusChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.PackageUninstallingEventArgs python_type
+    py PackageUninstallingEventArgs
+    signature rc(Windows.ApplicationModel.PackageUninstallingEventArgs;{4443aa52-ab22-44cd-82bb-4ec9b827367a})
+    default Windows.ApplicationModel.IPackageUninstallingEventArgs
+    requires Windows.ApplicationModel.IPackageUninstallingEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=22
+            out guid return
+    property error_code
+        get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=121
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=99
+            out boolean return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=62
+            out double return
+
+enum Windows.ApplicationModel.PackageUpdateAvailability python_type
+    py PackageUpdateAvailability
+    signature enum(Windows.ApplicationModel.PackageUpdateAvailability;i4)
+
+class Windows.ApplicationModel.PackageUpdateAvailabilityResult python_type
+    py PackageUpdateAvailabilityResult
+    signature rc(Windows.ApplicationModel.PackageUpdateAvailabilityResult;{114e5009-199a-48a1-a079-313c45634a71})
+    default Windows.ApplicationModel.IPackageUpdateAvailabilityResult
+    requires Windows.ApplicationModel.IPackageUpdateAvailabilityResult
+    property availability
+        get get_Availability slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdateAvailabilityResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.PackageUpdateAvailability return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdateAvailabilityResult shape=4 reverse=43
+            out hresult return
+
+class Windows.ApplicationModel.PackageUpdatingEventArgs python_type
+    py PackageUpdatingEventArgs
+    signature rc(Windows.ApplicationModel.PackageUpdatingEventArgs;{cd7b4228-fd74-443e-b114-23e677b0e86f})
+    default Windows.ApplicationModel.IPackageUpdatingEventArgs
+    requires Windows.ApplicationModel.IPackageUpdatingEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=22
+            out guid return
+    property error_code
+        get get_ErrorCode slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=141
+            out hresult return
+    property is_complete
+        get get_IsComplete slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=121
+            out boolean return
+    property progress
+        get get_Progress slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=99
+            out double return
+    property source_package
+        get get_SourcePackage slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+    property target_package
+        get get_TargetPackage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Package return
+
+struct Windows.ApplicationModel.PackageVersion python_type
+    py PackageVersion
+    signature struct(Windows.ApplicationModel.PackageVersion;u2;u2;u2;u2)
+    field major Major uint16
+    field minor Minor uint16
+    field build Build uint16
+    field revision Revision uint16
+
+class Windows.ApplicationModel.StartupTask python_type
+    py StartupTask
+    signature rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17})
+    default Windows.ApplicationModel.IStartupTask
+    requires Windows.ApplicationModel.IStartupTask
+    factory Windows.ApplicationModel.IStartupTaskStatics
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IStartupTask shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.StartupTaskState return
+    property task_id
+        get get_TaskId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IStartupTask shape=4 reverse=99
+            out string return
+    method disable
+        method Disable slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.IStartupTask shape=0 reverse=37
+    method get_async static
+        method GetAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IStartupTaskStatics shape=51 reverse=44 static
+            in string name=taskId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> return
+    method get_for_current_package_async static
+        method GetForCurrentPackageAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IStartupTaskStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> return
+    method request_enable_async
+        method RequestEnableAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IStartupTask shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> return
+
+enum Windows.ApplicationModel.StartupTaskState python_type
+    py StartupTaskState
+    signature enum(Windows.ApplicationModel.StartupTaskState;i4)
+
+class Windows.ApplicationModel.SuspendingDeferral python_type
+    py SuspendingDeferral
+    signature rc(Windows.ApplicationModel.SuspendingDeferral;{59140509-8bc9-4eb4-b636-dabdc4f46f66})
+    default Windows.ApplicationModel.ISuspendingDeferral
+    requires Windows.ApplicationModel.ISuspendingDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ISuspendingDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.SuspendingEventArgs python_type
+    py SuspendingEventArgs
+    signature rc(Windows.ApplicationModel.SuspendingEventArgs;{96061c05-2dba-4d08-b0bd-2b30a131c6aa})
+    default Windows.ApplicationModel.ISuspendingEventArgs
+    requires Windows.ApplicationModel.ISuspendingEventArgs
+    property suspending_operation
+        get get_SuspendingOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.SuspendingOperation return
+
+class Windows.ApplicationModel.SuspendingOperation python_type
+    py SuspendingOperation
+    signature rc(Windows.ApplicationModel.SuspendingOperation;{9da4ca41-20e1-4e9b-9f65-a9f435340c3a})
+    default Windows.ApplicationModel.ISuspendingOperation
+    requires Windows.ApplicationModel.ISuspendingOperation
+    property deadline
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingOperation shape=4 reverse=43
+            out datetime return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingOperation shape=4 reverse=22
+            out class type=Windows.ApplicationModel.SuspendingDeferral return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageContentGroupStagingEventArgs> concrete
+    guid df206861-9d30-5739-88b2-97e0717cc5f0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageContentGroupStagingEventArgs;{3d7bc27e-6f27-446c-986e-d4733d4d9113}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageContentGroupStagingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs> concrete
+    guid a8a900c6-da0b-5bcc-a71a-be0b9265d87a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageInstallingEventArgs;{97741eb7-ab7a-401a-8b61-eb0e7faff237}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageInstallingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStagingEventArgs> concrete
+    guid 1726f52d-2b8c-524a-98c6-f2cf0893c0f2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageStagingEventArgs;{1041682d-54e2-4f51-b828-9ef7046c210f}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageStagingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStatusChangedEventArgs> concrete
+    guid b32d7d63-cd0e-5c2e-a251-fb8d290824e4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageStatusChangedEventArgs;{437d714d-bd80-4a70-bc50-f6e796509575}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageStatusChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUninstallingEventArgs> concrete
+    guid bd636cf1-541f-53ea-8efc-e1604a395b1a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageUninstallingEventArgs;{4443aa52-ab22-44cd-82bb-4ec9b827367a}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageUninstallingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUpdatingEventArgs> concrete
+    guid c23e15f6-c618-522a-82ab-4fab36665ce5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageUpdatingEventArgs;{cd7b4228-fd74-443e-b114-23e677b0e86f}))
+    argument Windows.ApplicationModel.PackageCatalog
+    argument Windows.ApplicationModel.PackageUpdatingEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
+    py winrt.windows.applicationmodel.activation._IActivatedEventArgs
+    guid cf651713-cd08-4fd8-b697-a281b6544e2e
+
+class Windows.ApplicationModel.Core.AppListEntry external
+    py winrt.windows.applicationmodel.core.AppListEntry
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+class Windows.Storage.Streams.RandomAccessStreamReference external
+    py winrt.windows.storage.streams.RandomAccessStreamReference
+
+enum Windows.System.ProcessorArchitecture external
+    py winrt.windows.system.ProcessorArchitecture
+
+class Windows.System.User external
+    py winrt.windows.system.User

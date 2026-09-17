@@ -1,0 +1,2105 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Playback
+
+enum Windows.Media.Playback.AutoLoadedDisplayPropertyKind python_type
+    py AutoLoadedDisplayPropertyKind
+    signature enum(Windows.Media.Playback.AutoLoadedDisplayPropertyKind;i4)
+
+class Windows.Media.Playback.BackgroundMediaPlayer static python_type
+    py BackgroundMediaPlayer
+    factory Windows.Media.Playback.IBackgroundMediaPlayerStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.Media.Playback.MediaPlayer return
+    event message_received_from_background static
+        add add_MessageReceivedFromBackground slot=7 inputs=1 outputs=1 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=51 reverse=44 static deprecated
+            in delegate type=Windows.Foundation.EventHandler<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs> name=value
+            out event_token return
+        remove remove_MessageReceivedFromBackground slot=8 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=26 reverse=82 static deprecated
+            in event_token name=token
+    event message_received_from_foreground static
+        add add_MessageReceivedFromForeground slot=9 inputs=1 outputs=1 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=51 reverse=100 static deprecated
+            in delegate type=Windows.Foundation.EventHandler<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs> name=value
+            out event_token return
+        remove remove_MessageReceivedFromForeground slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=26 reverse=134 static deprecated
+            in event_token name=token
+    method is_media_playing static deprecated
+        method IsMediaPlaying slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 reverse=173 static deprecated
+            out boolean return
+    method send_message_to_background static deprecated
+        method SendMessageToBackground slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 reverse=141 static deprecated
+            in class type=Windows.Foundation.Collections.ValueSet name=value
+    method send_message_to_foreground static deprecated
+        method SendMessageToForeground slot=12 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 reverse=162 static deprecated
+            in class type=Windows.Foundation.Collections.ValueSet name=value
+    method shutdown static deprecated
+        method Shutdown slot=14 inputs=0 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=0 reverse=185 static deprecated
+
+class Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs python_type
+    py CurrentMediaPlaybackItemChangedEventArgs
+    signature rc(Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs;{1743a892-5c43-4a15-967a-572d2d0f26c6})
+    default Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs
+    requires Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs
+    requires Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2
+    property new_item
+        get get_NewItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    property old_item
+        get get_OldItem slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs shape=4 reverse=43
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2 shape=4 reverse=22
+            out enum32 type=Windows.Media.Playback.MediaPlaybackItemChangedReason return
+
+delegate Windows.Foundation.EventHandler<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs> concrete
+    guid 078fc818-19f5-5b8a-ac82-25193bea56ee
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayerDataReceivedEventArgs;{c75a9405-c801-412a-835b-83fc0e622a8e}))
+    argument Windows.Media.Playback.MediaPlayerDataReceivedEventArgs
+
+enum Windows.Media.Playback.FailedMediaStreamKind python_type
+    py FailedMediaStreamKind
+    signature enum(Windows.Media.Playback.FailedMediaStreamKind;i4)
+
+interface Windows.Media.Playback.IBackgroundMediaPlayerStatics
+    guid 856ddbc1-55f7-471f-a0f2-68ac4c904592
+
+interface Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs
+    guid 1743a892-5c43-4a15-967a-572d2d0f26c6
+
+interface Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2
+    guid 1d80a51e-996e-40a9-be48-e66ec90b2b7d
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> concrete
+    guid b3be50a8-9856-5656-ab6d-cd58f9de0a4f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.AudioTrack
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> concrete
+    guid 150a4454-03bb-5dd1-8153-6a600e851f71
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    argument Windows.Media.Core.TimedMetadataTrack
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> concrete
+    guid 84413442-a2e3-5e0f-936d-bc40b0fb2dcd
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.VideoTrack
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> concrete
+    guid 8b8ab4a4-0253-56e9-a232-94e335aefa8f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    argument Windows.Media.Playback.MediaPlaybackItem
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> concrete
+    guid deeccfe9-6c01-576f-95f2-93515ae40ebf
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Playback.PlaybackMediaMarker;{c4d22f5c-3c1c-4444-b6b9-778b0422d41a}))
+    argument Windows.Media.Playback.PlaybackMediaMarker
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> concrete
+    guid 138064ef-8693-5303-8a75-eba494d06342
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.AudioTrack
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> concrete
+    guid 859354e5-077b-5d53-b297-1a07b97f09c3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    argument Windows.Media.Core.TimedMetadataTrack
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> concrete
+    guid a7c8d22c-b59d-5d7a-8d70-67f898a0b877
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.VideoTrack
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> concrete
+    guid 28607d6b-daa4-5eef-9f81-cc08a8297182
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Playback.PlaybackMediaMarker;{c4d22f5c-3c1c-4444-b6b9-778b0422d41a}))
+    argument Windows.Media.Playback.PlaybackMediaMarker
+
+interface Windows.Media.Playback.IMediaBreak
+    guid 714be270-0def-4ebc-a489-6b34930e1558
+
+interface Windows.Media.Playback.IMediaBreakEndedEventArgs
+    guid 32b93276-1c5d-4fee-8732-236dc3a88580
+
+interface Windows.Media.Playback.IMediaBreakFactory
+    guid 4516e002-18e0-4079-8b5f-d33495c15d2e
+
+interface Windows.Media.Playback.IMediaBreakManager
+    guid a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39
+
+interface Windows.Media.Playback.IMediaBreakSchedule
+    guid a19a5813-98b6-41d8-83da-f971d22b7bba
+
+interface Windows.Media.Playback.IMediaBreakSeekedOverEventArgs
+    guid e5aa6746-0606-4492-b9d3-c3c8fde0a4ea
+
+interface Windows.Media.Playback.IMediaBreakSkippedEventArgs
+    guid 6ee94c05-2f54-4a3e-a3ab-24c3b270b4a3
+
+interface Windows.Media.Playback.IMediaBreakStartedEventArgs
+    guid a87efe71-dfd4-454a-956e-0a4a648395f8
+
+interface Windows.Media.Playback.IMediaEnginePlaybackSource python_type
+    py _IMediaEnginePlaybackSource
+    guid 5c1d0ba7-3856-48b9-8dc6-244bf107bf8c
+    signature {5c1d0ba7-3856-48b9-8dc6-244bf107bf8c}
+    property current_item
+        get get_CurrentItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaEnginePlaybackSource shape=4 reverse=22 deprecated
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method set_playback_source deprecated
+        method SetPlaybackSource slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaEnginePlaybackSource shape=4 reverse=43 deprecated
+            in interface type=Windows.Media.Playback.IMediaPlaybackSource name=source
+
+interface Windows.Media.Playback.IMediaItemDisplayProperties
+    guid 1e3c1b48-7097-4384-a217-c1291dfa8c16
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManager
+    guid 5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+    guid 3d6f4f23-5230-4411-a0e9-bad94c2a045c
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior
+    guid 786c1e78-ce78-4a10-afd6-843fcbb90c2e
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs
+    guid 30f064d9-b491-4d0a-bc21-3098bd1332e9
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs
+    guid e1504433-a2b0-45d4-b9de-5f42ac14a839
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs
+    guid 5ceccd1c-c25c-4221-b16c-c3c98ce012d6
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs
+    guid 9af0004e-578b-4c56-a006-16159d888a48
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs
+    guid 5591a754-d627-4bdd-a90d-86a015b24902
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs
+    guid 525e3081-4632-4f76-99b1-d771623f6287
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs
+    guid 18ea3939-4a16-4169-8b05-3eb9f5ff78eb
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs
+    guid 9f085947-a3c0-425d-aaef-97ba7898b141
+
+interface Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs
+    guid 50a05cef-63ee-4a96-b7b5-fee08b9ff90c
+
+interface Windows.Media.Playback.IMediaPlaybackItem
+    guid 047097d2-e4af-48ab-b283-6929e674ece2
+
+interface Windows.Media.Playback.IMediaPlaybackItem2
+    guid d859d171-d7ef-4b81-ac1f-f40493cbb091
+
+interface Windows.Media.Playback.IMediaPlaybackItem3
+    guid 0d328220-b80a-4d09-9ff8-f87094a1c831
+
+interface Windows.Media.Playback.IMediaPlaybackItemError
+    guid 69fbef2b-dcd6-4df9-a450-dbf4c6f1c2c2
+
+interface Windows.Media.Playback.IMediaPlaybackItemFactory
+    guid 7133fce1-1769-4ff9-a7c1-38d2c4d42360
+
+interface Windows.Media.Playback.IMediaPlaybackItemFactory2
+    guid d77cdf3a-b947-4972-b35d-adfb931a71e6
+
+interface Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs
+    guid 7703134a-e9a7-47c3-862c-c656d30683d4
+
+interface Windows.Media.Playback.IMediaPlaybackItemOpenedEventArgs
+    guid cbd9bd82-3037-4fbe-ae8f-39fc39edf4ef
+
+interface Windows.Media.Playback.IMediaPlaybackItemStatics
+    guid 4b1be7f4-4345-403c-8a67-f5de91df4c86
+
+interface Windows.Media.Playback.IMediaPlaybackList
+    guid 7f77ee9c-dc42-4e26-a98d-7850df8ec925
+
+interface Windows.Media.Playback.IMediaPlaybackList2
+    guid 0e09b478-600a-4274-a14b-0b6723d0f48b
+
+interface Windows.Media.Playback.IMediaPlaybackList3
+    guid dd24bba9-bc47-4463-aa90-c18b7e5ffde1
+
+interface Windows.Media.Playback.IMediaPlaybackSession
+    guid c32b683d-0407-41ba-8946-8b345a5a5435
+
+interface Windows.Media.Playback.IMediaPlaybackSession2
+    guid f8ba7c79-1fc8-4097-ad70-c0fa18cc0050
+
+interface Windows.Media.Playback.IMediaPlaybackSession3
+    guid 7ba2b41a-a3e2-405f-b77b-a4812c238b66
+
+interface Windows.Media.Playback.IMediaPlaybackSessionBufferingStartedEventArgs
+    guid cd6aafed-74e2-43b5-b115-76236c33791a
+
+interface Windows.Media.Playback.IMediaPlaybackSessionOutputDegradationPolicyState
+    guid 558e727d-f633-49f9-965a-abaa1db709be
+
+interface Windows.Media.Playback.IMediaPlaybackSource python_type
+    py _IMediaPlaybackSource
+    guid ef9dc2bc-9317-4696-b051-2bad643177b5
+    signature {ef9dc2bc-9317-4696-b051-2bad643177b5}
+
+interface Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection
+    guid d405b37c-6f0e-4661-b8ee-d487ba9752d5
+
+interface Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList
+    guid 72b41319-bbfb-46a3-9372-9c9c744b9438
+
+interface Windows.Media.Playback.IMediaPlayer
+    guid 381a83cb-6fff-499b-8d64-2885dfc1249e
+
+interface Windows.Media.Playback.IMediaPlayer2
+    guid 3c841218-2123-4fc5-9082-2f883f77bdf5
+
+interface Windows.Media.Playback.IMediaPlayer3
+    guid ee0660da-031b-4feb-bd9b-92e0a0a8d299
+
+interface Windows.Media.Playback.IMediaPlayer4
+    guid 80035db0-7448-4770-afcf-2a57450914c5
+
+interface Windows.Media.Playback.IMediaPlayer5
+    guid cfe537fd-f86a-4446-bf4d-c8e792b7b4b3
+
+interface Windows.Media.Playback.IMediaPlayer6
+    guid e0caa086-ae65-414c-b010-8bc55f00e692
+
+interface Windows.Media.Playback.IMediaPlayer7
+    guid 5d1dc478-4500-4531-b3f4-777a71491f7f
+
+interface Windows.Media.Playback.IMediaPlayerDataReceivedEventArgs
+    guid c75a9405-c801-412a-835b-83fc0e622a8e
+
+interface Windows.Media.Playback.IMediaPlayerEffects
+    guid 85a1deda-cab6-4cc0-8be3-6035f4de2591
+
+interface Windows.Media.Playback.IMediaPlayerEffects2
+    guid fa419a79-1bbe-46c5-ae1f-8ee69fb3c2c7
+
+interface Windows.Media.Playback.IMediaPlayerFailedEventArgs
+    guid 2744e9b9-a7e3-4f16-bac4-7914ebc08301
+
+interface Windows.Media.Playback.IMediaPlayerRateChangedEventArgs
+    guid 40600d58-3b61-4bb2-989f-fc65608b6cab
+
+interface Windows.Media.Playback.IMediaPlayerSource
+    guid bd4f8897-1423-4c3e-82c5-0fb1af94f715
+
+interface Windows.Media.Playback.IMediaPlayerSource2
+    guid 82449b9f-7322-4c0b-b03b-3e69a48260c5
+
+interface Windows.Media.Playback.IMediaPlayerSurface
+    guid 0ed653bc-b736-49c3-830b-764a3845313a
+
+interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> concrete
+    guid fabf4843-39eb-5c3d-a12b-fca189b46e8e
+    signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    argument Windows.Media.Playback.MediaPlaybackItem
+
+interface Windows.Media.Playback.IPlaybackMediaMarker
+    guid c4d22f5c-3c1c-4444-b6b9-778b0422d41a
+
+interface Windows.Media.Playback.IPlaybackMediaMarkerFactory
+    guid 8c530a78-e0ae-4e1a-a8c8-e23f982a937b
+
+interface Windows.Media.Playback.IPlaybackMediaMarkerReachedEventArgs
+    guid 578cd1b9-90e2-4e60-abc4-8740b01f6196
+
+interface Windows.Media.Playback.IPlaybackMediaMarkerSequence
+    guid f2810cee-638b-46cf-8817-1d111fe9d8c4
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs
+    guid d1636099-65df-45ae-8cef-dc0b53fdc2bb
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> concrete
+    guid e71ffa4a-14a7-5068-891c-6e717af8bf8d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.AudioTrack
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete
+    guid 0313ae7a-2803-5d45-b5a1-a0fc5cd55e7c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    argument Windows.Media.Core.TimedMetadataTrack
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> concrete
+    guid 200c6224-0b43-54fb-995f-fd8688bf24de
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    argument Windows.Media.Core.VideoTrack
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> concrete
+    guid 2628205b-a57a-5179-92e6-9b6e13cb8d0d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Media.MediaTimeRange;struct(Windows.Foundation.TimeSpan;i8);struct(Windows.Foundation.TimeSpan;i8)))
+    argument Windows.Media.MediaTimeRange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> concrete
+    guid c296f3f9-1268-59a2-b7c3-2f588ed4a017
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Playback.MediaBreak;{714be270-0def-4ebc-a489-6b34930e1558}))
+    argument Windows.Media.Playback.MediaBreak
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> concrete
+    guid b6a4c9fe-c73d-5eba-b5ab-6f8deaca30b9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    argument Windows.Media.Playback.MediaPlaybackItem
+
+class Windows.Media.Playback.MediaBreak python_type
+    py MediaBreak
+    signature rc(Windows.Media.Playback.MediaBreak;{714be270-0def-4ebc-a489-6b34930e1558})
+    default Windows.Media.Playback.IMediaBreak
+    requires Windows.Media.Playback.IMediaBreak
+    factory Windows.Media.Playback.IMediaBreakFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakFactory shape=51 reverse=24
+            in enum32 type=Windows.Media.Playback.MediaBreakInsertionMethod name=insertionMethod
+            out class type=Windows.Media.Playback.MediaBreak return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Playback.IMediaBreakFactory shape=135
+            in enum32 type=Windows.Media.Playback.MediaBreakInsertionMethod name=insertionMethod
+            in timespan name=presentationPosition
+            out class type=Windows.Media.Playback.MediaBreak return
+    property can_start
+        get get_CanStart slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=121
+            out boolean return
+        put put_CanStart slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=141
+            in boolean name=value
+    property custom_properties
+        get get_CustomProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=99
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property insertion_method
+        get get_InsertionMethod slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=62
+            out enum32 type=Windows.Media.Playback.MediaBreakInsertionMethod return
+    property playback_list
+        get get_PlaybackList slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaPlaybackList return
+    property presentation_position
+        get get_PresentationPosition slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreak shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+
+class Windows.Media.Playback.MediaBreakEndedEventArgs python_type
+    py MediaBreakEndedEventArgs
+    signature rc(Windows.Media.Playback.MediaBreakEndedEventArgs;{32b93276-1c5d-4fee-8732-236dc3a88580})
+    default Windows.Media.Playback.IMediaBreakEndedEventArgs
+    requires Windows.Media.Playback.IMediaBreakEndedEventArgs
+    property media_break
+        get get_MediaBreak slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakEndedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaBreak return
+
+enum Windows.Media.Playback.MediaBreakInsertionMethod python_type
+    py MediaBreakInsertionMethod
+    signature enum(Windows.Media.Playback.MediaBreakInsertionMethod;i4)
+
+class Windows.Media.Playback.MediaBreakManager python_type
+    py MediaBreakManager
+    signature rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39})
+    default Windows.Media.Playback.IMediaBreakManager
+    requires Windows.Media.Playback.IMediaBreakManager
+    property current_break
+        get get_CurrentBreak slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=4 reverse=186
+            out class type=Windows.Media.Playback.MediaBreak return
+    property playback_session
+        get get_PlaybackSession slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=4 reverse=194
+            out class type=Windows.Media.Playback.MediaPlaybackSession return
+    event break_ended
+        add add_BreakEnded slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakEndedEventArgs> name=handler
+            out event_token return
+        remove remove_BreakEnded slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=26 reverse=156
+            in event_token name=token
+    event break_skipped
+        add add_BreakSkipped slot=12 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSkippedEventArgs> name=handler
+            out event_token return
+        remove remove_BreakSkipped slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=26 reverse=181
+            in event_token name=token
+    event break_started
+        add add_BreakStarted slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakStartedEventArgs> name=handler
+            out event_token return
+        remove remove_BreakStarted slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=26 reverse=110
+            in event_token name=token
+    event breaks_seeked_over
+        add add_BreaksSeekedOver slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSeekedOverEventArgs> name=handler
+            out event_token return
+        remove remove_BreaksSeekedOver slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=26 reverse=53
+            in event_token name=token
+    method play_break
+        method PlayBreak slot=16 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=4 reverse=202
+            in class type=Windows.Media.Playback.MediaBreak name=value
+    method skip_current_break
+        method SkipCurrentBreak slot=17 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaBreakManager shape=0 reverse=209
+
+class Windows.Media.Playback.MediaBreakSchedule python_type
+    py MediaBreakSchedule
+    signature rc(Windows.Media.Playback.MediaBreakSchedule;{a19a5813-98b6-41d8-83da-f971d22b7bba})
+    default Windows.Media.Playback.IMediaBreakSchedule
+    requires Windows.Media.Playback.IMediaBreakSchedule
+    property preroll_break
+        get get_PrerollBreak slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=162
+            out class type=Windows.Media.Playback.MediaBreak return
+        put put_PrerollBreak slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=141
+            in class type=Windows.Media.Playback.MediaBreak name=value
+    property postroll_break
+        get get_PostrollBreak slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=186
+            out class type=Windows.Media.Playback.MediaBreak return
+        put put_PostrollBreak slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=173
+            in class type=Windows.Media.Playback.MediaBreak name=value
+    property midroll_breaks
+        get get_MidrollBreaks slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> return
+    property playback_item
+        get get_PlaybackItem slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=194
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    event schedule_changed
+        add add_ScheduleChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakSchedule,System.Object> name=handler
+            out event_token return
+        remove remove_ScheduleChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=26 reverse=53
+            in event_token name=token
+    method insert_midroll_break
+        method InsertMidrollBreak slot=8 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=62
+            in class type=Windows.Media.Playback.MediaBreak name=mediaBreak
+    method remove_midroll_break
+        method RemoveMidrollBreak slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaBreakSchedule shape=4 reverse=99
+            in class type=Windows.Media.Playback.MediaBreak name=mediaBreak
+
+class Windows.Media.Playback.MediaBreakSeekedOverEventArgs python_type
+    py MediaBreakSeekedOverEventArgs
+    signature rc(Windows.Media.Playback.MediaBreakSeekedOverEventArgs;{e5aa6746-0606-4492-b9d3-c3c8fde0a4ea})
+    default Windows.Media.Playback.IMediaBreakSeekedOverEventArgs
+    requires Windows.Media.Playback.IMediaBreakSeekedOverEventArgs
+    property new_position
+        get get_NewPosition slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSeekedOverEventArgs shape=4 reverse=62
+            out timespan return
+    property old_position
+        get get_OldPosition slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSeekedOverEventArgs shape=4 reverse=43
+            out timespan return
+    property seeked_over_breaks
+        get get_SeekedOverBreaks slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSeekedOverEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> return
+
+class Windows.Media.Playback.MediaBreakSkippedEventArgs python_type
+    py MediaBreakSkippedEventArgs
+    signature rc(Windows.Media.Playback.MediaBreakSkippedEventArgs;{6ee94c05-2f54-4a3e-a3ab-24c3b270b4a3})
+    default Windows.Media.Playback.IMediaBreakSkippedEventArgs
+    requires Windows.Media.Playback.IMediaBreakSkippedEventArgs
+    property media_break
+        get get_MediaBreak slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakSkippedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaBreak return
+
+class Windows.Media.Playback.MediaBreakStartedEventArgs python_type
+    py MediaBreakStartedEventArgs
+    signature rc(Windows.Media.Playback.MediaBreakStartedEventArgs;{a87efe71-dfd4-454a-956e-0a4a648395f8})
+    default Windows.Media.Playback.IMediaBreakStartedEventArgs
+    requires Windows.Media.Playback.IMediaBreakStartedEventArgs
+    property media_break
+        get get_MediaBreak slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaBreakStartedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaBreak return
+
+enum Windows.Media.Playback.MediaCommandEnablingRule python_type
+    py MediaCommandEnablingRule
+    signature enum(Windows.Media.Playback.MediaCommandEnablingRule;i4)
+
+class Windows.Media.Playback.MediaItemDisplayProperties python_type
+    py MediaItemDisplayProperties
+    signature rc(Windows.Media.Playback.MediaItemDisplayProperties;{1e3c1b48-7097-4384-a217-c1291dfa8c16})
+    default Windows.Media.Playback.IMediaItemDisplayProperties
+    requires Windows.Media.Playback.IMediaItemDisplayProperties
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=22
+            out enum32 type=Windows.Media.MediaPlaybackType return
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=43
+            in enum32 type=Windows.Media.MediaPlaybackType name=value
+    property thumbnail
+        get get_Thumbnail slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=121
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+        put put_Thumbnail slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=141
+            in class type=Windows.Storage.Streams.RandomAccessStreamReference name=value
+    property music_properties
+        get get_MusicProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=62
+            out class type=Windows.Media.MusicDisplayProperties return
+    property video_properties
+        get get_VideoProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=4 reverse=99
+            out class type=Windows.Media.VideoDisplayProperties return
+    method clear_all
+        method ClearAll slot=12 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaItemDisplayProperties shape=0 reverse=159
+
+class Windows.Media.Playback.MediaPlaybackAudioTrackList python_type iterable sequence
+    py MediaPlaybackAudioTrackList
+    signature rc(Windows.Media.Playback.MediaPlaybackAudioTrackList;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7})))
+    default Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack>
+    requires Windows.Media.Core.ISingleSelectMediaTrackList
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=4 reverse=43
+            out uint32 return
+    property selected_index
+        get get_SelectedIndex slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=99
+            out int32 return
+        put put_SelectedIndex slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=62
+            in int32 name=value
+    event selected_index_changed
+        add add_SelectedIndexChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object> name=handler
+            out event_token return
+        remove remove_SelectedIndexChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=26 reverse=53
+            in event_token name=token
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Media.Core.AudioTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.AudioTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.AudioTrack name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Media.Playback.MediaPlaybackCommandManager python_type
+    py MediaPlaybackCommandManager
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37})
+    default Windows.Media.Playback.IMediaPlaybackCommandManager
+    requires Windows.Media.Playback.IMediaPlaybackCommandManager
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=43
+            in boolean name=value
+    property auto_repeat_mode_behavior
+        get get_AutoRepeatModeBehavior slot=16 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=202
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property fast_forward_behavior
+        get get_FastForwardBehavior slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=173
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property media_player
+        get get_MediaPlayer slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=62
+            out class type=Windows.Media.Playback.MediaPlayer return
+    property next_behavior
+        get get_NextBehavior slot=11 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=141
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property pause_behavior
+        get get_PauseBehavior slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=121
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property play_behavior
+        get get_PlayBehavior slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=99
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property position_behavior
+        get get_PositionBehavior slot=17 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=210
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property previous_behavior
+        get get_PreviousBehavior slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=162
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property rate_behavior
+        get get_RateBehavior slot=18 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=218
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property rewind_behavior
+        get get_RewindBehavior slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=186
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    property shuffle_behavior
+        get get_ShuffleBehavior slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=4 reverse=194
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior return
+    event auto_repeat_mode_received
+        add add_AutoRepeatModeReceived slot=33 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=286
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_AutoRepeatModeReceived slot=34 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=291
+            in event_token name=token
+    event fast_forward_received
+        add add_FastForwardReceived slot=27 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=260
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_FastForwardReceived slot=28 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26
+            in event_token name=token
+    event next_received
+        add add_NextReceived slot=23 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=243
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_NextReceived slot=24 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26
+            in event_token name=token
+    event pause_received
+        add add_PauseReceived slot=21 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PauseReceived slot=22 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=400
+            in event_token name=token
+    event play_received
+        add add_PlayReceived slot=19 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PlayReceived slot=20 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=399
+            in event_token name=token
+    event position_received
+        add add_PositionReceived slot=35 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=293
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PositionReceived slot=36 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=298
+            in event_token name=token
+    event previous_received
+        add add_PreviousReceived slot=25 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=253
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_PreviousReceived slot=26 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=257
+            in event_token name=token
+    event rate_received
+        add add_RateReceived slot=37 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=300
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_RateReceived slot=38 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=305
+            in event_token name=token
+    event rewind_received
+        add add_RewindReceived slot=29 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_RewindReceived slot=30 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=272
+            in event_token name=token
+    event shuffle_received
+        add add_ShuffleReceived slot=31 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=51 reverse=274
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_ShuffleReceived slot=32 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManager shape=26 reverse=283
+            in event_token name=token
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;{3d6f4f23-5230-4411-a0e9-bad94c2a045c})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    property auto_repeat_mode
+        get get_AutoRepeatMode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs shape=4 reverse=62
+            out enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior python_type
+    py MediaPlaybackCommandManagerCommandBehavior
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior;{786c1e78-ce78-4a10-afd6-843fcbb90c2e})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior
+    property enabling_rule
+        get get_EnablingRule slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=4 reverse=62
+            out enum32 type=Windows.Media.Playback.MediaCommandEnablingRule return
+        put put_EnablingRule slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=4 reverse=99
+            in enum32 type=Windows.Media.Playback.MediaCommandEnablingRule name=value
+    property command_manager
+        get get_CommandManager slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManager return
+    property is_enabled
+        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=4 reverse=43
+            out boolean return
+    event is_enabled_changed
+        add add_IsEnabledChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior,System.Object> name=handler
+            out event_token return
+        remove remove_IsEnabledChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerCommandBehavior shape=26 reverse=156
+            in event_token name=token
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerFastForwardReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs;{30f064d9-b491-4d0a-bc21-3098bd1332e9})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerFastForwardReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerNextReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs;{e1504433-a2b0-45d4-b9de-5f42ac14a839})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerNextReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerPauseReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs;{5ceccd1c-c25c-4221-b16c-c3c98ce012d6})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPauseReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerPlayReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs;{9af0004e-578b-4c56-a006-16159d888a48})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPlayReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerPositionReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs;{5591a754-d627-4bdd-a90d-86a015b24902})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs shape=4 reverse=62
+            out timespan return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPositionReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerPreviousReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs;{525e3081-4632-4f76-99b1-d771623f6287})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerPreviousReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerRateReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs;{18ea3939-4a16-4169-8b05-3eb9f5ff78eb})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    property playback_rate
+        get get_PlaybackRate slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs shape=4 reverse=62
+            out double return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRateReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerRewindReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs;{9f085947-a3c0-425d-aaef-97ba7898b141})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerRewindReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs python_type
+    py MediaPlaybackCommandManagerShuffleReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs;{50a05cef-63ee-4a96-b7b5-fee08b9ff90c})
+    default Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs shape=4 reverse=43
+            in boolean name=value
+    property is_shuffle_requested
+        get get_IsShuffleRequested slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs shape=4 reverse=62
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackCommandManagerShuffleReceivedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Media.Playback.MediaPlaybackItem python_type
+    py MediaPlaybackItem
+    signature rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2})
+    default Windows.Media.Playback.IMediaPlaybackItem
+    requires Windows.Media.Playback.IMediaPlaybackItem
+    requires Windows.Media.Playback.IMediaPlaybackSource
+    requires Windows.Media.Playback.IMediaPlaybackItem2
+    requires Windows.Media.Playback.IMediaPlaybackItem3
+    factory Windows.Media.Playback.IMediaPlaybackItemFactory
+    factory Windows.Media.Playback.IMediaPlaybackItemFactory2
+    factory Windows.Media.Playback.IMediaPlaybackItemStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemFactory shape=51 reverse=24
+            in class type=Windows.Media.Core.MediaSource name=source
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemFactory2 shape=135
+            in class type=Windows.Media.Core.MediaSource name=source
+            in timespan name=startTime
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemFactory2 shape=214
+            in class type=Windows.Media.Core.MediaSource name=source
+            in timespan name=startTime
+            in timespan name=durationLimit
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    property audio_tracks
+        get get_AudioTracks slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=4 reverse=173
+            out class type=Windows.Media.Playback.MediaPlaybackAudioTrackList return
+    property source
+        get get_Source slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=4 reverse=162
+            out class type=Windows.Media.Core.MediaSource return
+    property timed_metadata_tracks
+        get get_TimedMetadataTracks slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=4 reverse=194
+            out class type=Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList return
+    property video_tracks
+        get get_VideoTracks slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=4 reverse=186
+            out class type=Windows.Media.Playback.MediaPlaybackVideoTrackList return
+    property can_skip
+        get get_CanSkip slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=99
+            out boolean return
+        put put_CanSkip slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=121
+            in boolean name=value
+    property break_schedule
+        get get_BreakSchedule slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaBreakSchedule return
+    property duration_limit
+        get get_DurationLimit slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property start_time
+        get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=43
+            out timespan return
+    property is_disabled_in_playback_list
+        get get_IsDisabledInPlaybackList slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem3 shape=4 reverse=22
+            out boolean return
+        put put_IsDisabledInPlaybackList slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem3 shape=4 reverse=43
+            in boolean name=value
+    property auto_loaded_display_properties
+        get get_AutoLoadedDisplayProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem3 shape=4 reverse=99
+            out enum32 type=Windows.Media.Playback.AutoLoadedDisplayPropertyKind return
+        put put_AutoLoadedDisplayProperties slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem3 shape=4 reverse=121
+            in enum32 type=Windows.Media.Playback.AutoLoadedDisplayPropertyKind name=value
+    property total_download_progress
+        get get_TotalDownloadProgress slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem3 shape=4 reverse=62
+            out double return
+    event audio_tracks_changed
+        add add_AudioTracksChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackItem,Windows.Foundation.Collections.IVectorChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AudioTracksChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=26 reverse=53
+            in event_token name=token
+    event timed_metadata_tracks_changed
+        add add_TimedMetadataTracksChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackItem,Windows.Foundation.Collections.IVectorChangedEventArgs> name=handler
+            out event_token return
+        remove remove_TimedMetadataTracksChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=26 reverse=156
+            in event_token name=token
+    event video_tracks_changed
+        add add_VideoTracksChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackItem,Windows.Foundation.Collections.IVectorChangedEventArgs> name=handler
+            out event_token return
+        remove remove_VideoTracksChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem shape=26 reverse=110
+            in event_token name=token
+    method apply_display_properties
+        method ApplyDisplayProperties slot=12 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=162
+            in class type=Windows.Media.Playback.MediaItemDisplayProperties name=value
+    method find_from_media_source static
+        method FindFromMediaSource slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemStatics shape=51 reverse=24 static
+            in class type=Windows.Media.Core.MediaSource name=source
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method get_display_properties
+        method GetDisplayProperties slot=11 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItem2 shape=4 reverse=141
+            out class type=Windows.Media.Playback.MediaItemDisplayProperties return
+
+enum Windows.Media.Playback.MediaPlaybackItemChangedReason python_type
+    py MediaPlaybackItemChangedReason
+    signature enum(Windows.Media.Playback.MediaPlaybackItemChangedReason;i4)
+
+class Windows.Media.Playback.MediaPlaybackItemError python_type
+    py MediaPlaybackItemError
+    signature rc(Windows.Media.Playback.MediaPlaybackItemError;{69fbef2b-dcd6-4df9-a450-dbf4c6f1c2c2})
+    default Windows.Media.Playback.IMediaPlaybackItemError
+    requires Windows.Media.Playback.IMediaPlaybackItemError
+    property error_code
+        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemError shape=4 reverse=22
+            out enum32 type=Windows.Media.Playback.MediaPlaybackItemErrorCode return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemError shape=4 reverse=43
+            out hresult return
+
+enum Windows.Media.Playback.MediaPlaybackItemErrorCode python_type
+    py MediaPlaybackItemErrorCode
+    signature enum(Windows.Media.Playback.MediaPlaybackItemErrorCode;i4)
+
+class Windows.Media.Playback.MediaPlaybackItemFailedEventArgs python_type
+    py MediaPlaybackItemFailedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackItemFailedEventArgs;{7703134a-e9a7-47c3-862c-c656d30683d4})
+    default Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs
+    property error
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs shape=4 reverse=43
+            out class type=Windows.Media.Playback.MediaPlaybackItemError return
+    property item
+        get get_Item slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemFailedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+
+class Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs python_type
+    py MediaPlaybackItemOpenedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs;{cbd9bd82-3037-4fbe-ae8f-39fc39edf4ef})
+    default Windows.Media.Playback.IMediaPlaybackItemOpenedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackItemOpenedEventArgs
+    property item
+        get get_Item slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackItemOpenedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+
+class Windows.Media.Playback.MediaPlaybackList activatable python_type
+    py MediaPlaybackList
+    signature rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925})
+    default Windows.Media.Playback.IMediaPlaybackList
+    requires Windows.Media.Playback.IMediaPlaybackList
+    requires Windows.Media.Playback.IMediaPlaybackSource
+    requires Windows.Media.Playback.IMediaPlaybackList2
+    requires Windows.Media.Playback.IMediaPlaybackList3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property shuffle_enabled
+        get get_ShuffleEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=194
+            out boolean return
+        put put_ShuffleEnabled slot=16 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=202
+            in boolean name=value
+    property auto_repeat_enabled
+        get get_AutoRepeatEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=173
+            out boolean return
+        put put_AutoRepeatEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=186
+            in boolean name=value
+    property current_item
+        get get_CurrentItem slot=17 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=210
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    property current_item_index
+        get get_CurrentItemIndex slot=18 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=218
+            out uint32 return
+    property items
+        get get_Items slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> return
+    property starting_item
+        get get_StartingItem slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=62
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+        put put_StartingItem slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=99
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+    property max_prefetch_time
+        get get_MaxPrefetchTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_MaxPrefetchTime slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property shuffled_items
+        get get_ShuffledItems slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> return
+    property max_played_items_to_keep_open
+        get get_MaxPlayedItemsToKeepOpen slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_MaxPlayedItemsToKeepOpen slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList3 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    event current_item_changed
+        add add_CurrentItemChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs> name=handler
+            out event_token return
+        remove remove_CurrentItemChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList shape=26 reverse=110
+            in event_token name=token
+    event item_failed
+        add add_ItemFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemFailedEventArgs> name=handler
+            out event_token return
+        remove remove_ItemFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList shape=26 reverse=53
+            in event_token name=token
+    event item_opened
+        add add_ItemOpened slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs> name=handler
+            out event_token return
+        remove remove_ItemOpened slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList shape=26 reverse=156
+            in event_token name=token
+    method move_next
+        method MoveNext slot=19 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=223
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method move_previous
+        method MovePrevious slot=20 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=4 reverse=228
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method move_to
+        method MoveTo slot=21 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackList shape=51 reverse=233
+            in uint32 name=itemIndex
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method set_shuffled_items
+        method SetShuffledItems slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackList2 shape=4 reverse=141
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> name=value
+
+class Windows.Media.Playback.MediaPlaybackSession python_type
+    py MediaPlaybackSession
+    signature rc(Windows.Media.Playback.MediaPlaybackSession;{c32b683d-0407-41ba-8946-8b345a5a5435})
+    default Windows.Media.Playback.IMediaPlaybackSession
+    requires Windows.Media.Playback.IMediaPlaybackSession
+    requires Windows.Media.Playback.IMediaPlaybackSession2
+    requires Windows.Media.Playback.IMediaPlaybackSession3
+    property stereoscopic_video_packing_mode
+        get get_StereoscopicVideoPackingMode slot=42 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=319
+            out enum32 type=Windows.Media.MediaProperties.StereoscopicVideoPackingMode return
+        put put_StereoscopicVideoPackingMode slot=43 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=322
+            in enum32 type=Windows.Media.MediaProperties.StereoscopicVideoPackingMode name=value
+    property position
+        get get_Position slot=28 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=263
+            out timespan return
+        put put_Position slot=29 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=268
+            in timespan name=value
+    property playback_rate
+        get get_PlaybackRate slot=34 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=288
+            out double return
+        put put_PlaybackRate slot=35 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=2
+            in double name=value
+    property normalized_source_rect
+        get get_NormalizedSourceRect slot=40 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=312
+            out struct type=Windows.Foundation.Rect return
+        put put_NormalizedSourceRect slot=41 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property buffering_progress
+        get get_BufferingProgress slot=36 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=296
+            out double return
+    property can_pause
+        get get_CanPause slot=32 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=280
+            out boolean return
+    property can_seek
+        get get_CanSeek slot=31 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=273
+            out boolean return
+    property download_progress
+        get get_DownloadProgress slot=37 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=299
+            out double return
+    property is_protected
+        get get_IsProtected slot=33 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=285
+            out boolean return
+    property media_player
+        get get_MediaPlayer slot=26 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=255
+            out class type=Windows.Media.Playback.MediaPlayer return
+    property natural_duration
+        get get_NaturalDuration slot=27 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=259
+            out timespan return
+    property natural_video_height
+        get get_NaturalVideoHeight slot=38 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=302
+            out uint32 return
+    property natural_video_width
+        get get_NaturalVideoWidth slot=39 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=307
+            out uint32 return
+    property playback_state
+        get get_PlaybackState slot=30 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=4 reverse=270
+            out enum32 type=Windows.Media.Playback.MediaPlaybackState return
+    property is_mirroring
+        get get_IsMirroring slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=194
+            out boolean return
+        put put_IsMirroring slot=16 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=202
+            in boolean name=value
+    property spherical_video_projection
+        get get_SphericalVideoProjection slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=186
+            out class type=Windows.Media.Playback.MediaPlaybackSphericalVideoProjection return
+    property playback_rotation
+        get get_PlaybackRotation slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession3 shape=4 reverse=22
+            out enum32 type=Windows.Media.MediaProperties.MediaRotation return
+        put put_PlaybackRotation slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession3 shape=4 reverse=43
+            in enum32 type=Windows.Media.MediaProperties.MediaRotation name=value
+    event buffering_ended
+        add add_BufferingEnded slot=14 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_BufferingEnded slot=15 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=200
+            in event_token name=token
+    event buffering_progress_changed
+        add add_BufferingProgressChanged slot=16 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_BufferingProgressChanged slot=17 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=215
+            in event_token name=token
+    event buffering_started
+        add add_BufferingStarted slot=12 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_BufferingStarted slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=181
+            in event_token name=token
+    event download_progress_changed
+        add add_DownloadProgressChanged slot=18 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=219
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_DownloadProgressChanged slot=19 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=226
+            in event_token name=token
+    event natural_duration_changed
+        add add_NaturalDurationChanged slot=20 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=229
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_NaturalDurationChanged slot=21 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=234
+            in event_token name=token
+    event natural_video_size_changed
+        add add_NaturalVideoSizeChanged slot=24 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=248
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_NaturalVideoSizeChanged slot=25 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=254
+            in event_token name=token
+    event playback_rate_changed
+        add add_PlaybackRateChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_PlaybackRateChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=110
+            in event_token name=token
+    event playback_state_changed
+        add add_PlaybackStateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_PlaybackStateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=53
+            in event_token name=token
+    event position_changed
+        add add_PositionChanged slot=22 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=238
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_PositionChanged slot=23 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=245
+            in event_token name=token
+    event seek_completed
+        add add_SeekCompleted slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_SeekCompleted slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession shape=26 reverse=156
+            in event_token name=token
+    event buffered_ranges_changed
+        add add_BufferedRangesChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_BufferedRangesChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=26 reverse=53
+            in event_token name=token
+    event played_ranges_changed
+        add add_PlayedRangesChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_PlayedRangesChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=26 reverse=110
+            in event_token name=token
+    event seekable_ranges_changed
+        add add_SeekableRangesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_SeekableRangesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=26 reverse=156
+            in event_token name=token
+    event supported_playback_rates_changed
+        add add_SupportedPlaybackRatesChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> name=value
+            out event_token return
+        remove remove_SupportedPlaybackRatesChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=26 reverse=181
+            in event_token name=token
+    method get_buffered_ranges
+        method GetBufferedRanges slot=17 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> return
+    method get_output_degradation_policy_state
+        method GetOutputDegradationPolicyState slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession3 shape=4 reverse=62
+            out class type=Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState return
+    method get_played_ranges
+        method GetPlayedRanges slot=18 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> return
+    method get_seekable_ranges
+        method GetSeekableRanges slot=19 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> return
+    method is_supported_playback_rate_range
+        method IsSupportedPlaybackRateRange slot=20 inputs=2 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSession2 shape=105
+            in double name=rate1
+            in double name=rate2
+            out boolean return
+
+class Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs python_type
+    py MediaPlaybackSessionBufferingStartedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs;{cd6aafed-74e2-43b5-b115-76236c33791a})
+    default Windows.Media.Playback.IMediaPlaybackSessionBufferingStartedEventArgs
+    requires Windows.Media.Playback.IMediaPlaybackSessionBufferingStartedEventArgs
+    property is_playback_interruption
+        get get_IsPlaybackInterruption slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSessionBufferingStartedEventArgs shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState python_type
+    py MediaPlaybackSessionOutputDegradationPolicyState
+    signature rc(Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState;{558e727d-f633-49f9-965a-abaa1db709be})
+    default Windows.Media.Playback.IMediaPlaybackSessionOutputDegradationPolicyState
+    requires Windows.Media.Playback.IMediaPlaybackSessionOutputDegradationPolicyState
+    property video_constriction_reason
+        get get_VideoConstrictionReason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSessionOutputDegradationPolicyState shape=4 reverse=22
+            out enum32 type=Windows.Media.Playback.MediaPlaybackSessionVideoConstrictionReason return
+
+enum Windows.Media.Playback.MediaPlaybackSessionVideoConstrictionReason python_type
+    py MediaPlaybackSessionVideoConstrictionReason
+    signature enum(Windows.Media.Playback.MediaPlaybackSessionVideoConstrictionReason;i4)
+
+class Windows.Media.Playback.MediaPlaybackSphericalVideoProjection python_type
+    py MediaPlaybackSphericalVideoProjection
+    signature rc(Windows.Media.Playback.MediaPlaybackSphericalVideoProjection;{d405b37c-6f0e-4661-b8ee-d487ba9752d5})
+    default Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection
+    requires Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection
+    property view_orientation
+        get get_ViewOrientation slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=162
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+        put put_ViewOrientation slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=8
+            in struct type=Windows.Foundation.Numerics.Quaternion name=value
+    property projection_mode
+        get get_ProjectionMode slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=186
+            out enum32 type=Windows.Media.Playback.SphericalVideoProjectionMode return
+        put put_ProjectionMode slot=15 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=194
+            in enum32 type=Windows.Media.Playback.SphericalVideoProjectionMode name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=43
+            in boolean name=value
+    property horizontal_field_of_view_in_degrees
+        get get_HorizontalFieldOfViewInDegrees slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=121
+            out double return
+        put put_HorizontalFieldOfViewInDegrees slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=2 reverse=138
+            in double name=value
+    property frame_format
+        get get_FrameFormat slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=62
+            out enum32 type=Windows.Media.MediaProperties.SphericalVideoFrameFormat return
+        put put_FrameFormat slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackSphericalVideoProjection shape=4 reverse=99
+            in enum32 type=Windows.Media.MediaProperties.SphericalVideoFrameFormat name=value
+
+enum Windows.Media.Playback.MediaPlaybackState python_type
+    py MediaPlaybackState
+    signature enum(Windows.Media.Playback.MediaPlaybackState;i4)
+
+class Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList python_type iterable sequence
+    py MediaPlaybackTimedMetadataTrackList
+    signature rc(Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07})))
+    default Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>
+    requires Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43
+            out uint32 return
+    event presentation_mode_changed
+        add add_PresentationModeChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList,Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PresentationModeChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=26 reverse=53
+            in event_token name=token
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
+            out uint32 return
+    method get_presentation_mode
+        method GetPresentationMode slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=51 reverse=65
+            in uint32 name=index
+            out enum32 type=Windows.Media.Playback.TimedMetadataTrackPresentationMode return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.TimedMetadataTrack name=value
+            out uint32 name=index
+            out boolean return
+    method set_presentation_mode
+        method SetPresentationMode slot=9 inputs=2 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=51 reverse=100
+            in uint32 name=index
+            in enum32 type=Windows.Media.Playback.TimedMetadataTrackPresentationMode name=value
+
+class Windows.Media.Playback.MediaPlaybackVideoTrackList python_type iterable sequence
+    py MediaPlaybackVideoTrackList
+    signature rc(Windows.Media.Playback.MediaPlaybackVideoTrackList;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7})))
+    default Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack>
+    requires Windows.Media.Core.ISingleSelectMediaTrackList
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=4 reverse=43
+            out uint32 return
+    property selected_index
+        get get_SelectedIndex slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=99
+            out int32 return
+        put put_SelectedIndex slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=62
+            in int32 name=value
+    event selected_index_changed
+        add add_SelectedIndexChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object> name=handler
+            out event_token return
+        remove remove_SelectedIndexChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=26 reverse=53
+            in event_token name=token
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Media.Core.VideoTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.VideoTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.VideoTrack name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Media.Playback.MediaPlayer activatable python_type closeable
+    py MediaPlayer
+    signature rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e})
+    default Windows.Media.Playback.IMediaPlayer
+    requires Windows.Media.Playback.IMediaPlayer
+    requires Windows.Media.Playback.IMediaPlayerSource
+    requires Windows.Media.Playback.IMediaPlayerSource2
+    requires Windows.Media.Playback.IMediaPlayer2
+    requires Windows.Media.Playback.IMediaPlayerEffects
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.Playback.IMediaPlayer3
+    requires Windows.Media.Playback.IMediaPlayer4
+    requires Windows.Media.Playback.IMediaPlayerEffects2
+    requires Windows.Media.Playback.IMediaPlayer5
+    requires Windows.Media.Playback.IMediaPlayer6
+    requires Windows.Media.Playback.IMediaPlayer7
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property volume
+        get get_Volume slot=22 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=237
+            out double return
+        put put_Volume slot=23 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=2
+            in double name=value
+    property position
+        get get_Position slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=99 deprecated
+            out timespan return
+        put put_Position slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=134 deprecated
+            in timespan name=value
+    property playback_rate
+        get get_PlaybackRate slot=20 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=228 deprecated
+            out double return
+        put put_PlaybackRate slot=21 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=2 deprecated
+            in double name=value
+    property is_looping_enabled
+        get get_IsLoopingEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=194
+            out boolean return
+        put put_IsLoopingEnabled slot=16 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=202
+            in boolean name=value
+    property is_muted
+        get get_IsMuted slot=18 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=218
+            out boolean return
+        put put_IsMuted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=223
+            in boolean name=value
+    property auto_play
+        get get_AutoPlay slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=22
+            out boolean return
+        put put_AutoPlay slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=43
+            in boolean name=value
+    property current_state
+        get get_CurrentState slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=162 deprecated
+            out enum32 type=Windows.Media.Playback.MediaPlayerState return
+    property natural_duration
+        get get_NaturalDuration slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=62 deprecated
+            out timespan return
+    property playback_media_markers
+        get get_PlaybackMediaMarkers slot=24 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=247 deprecated
+            out class type=Windows.Media.Playback.PlaybackMediaMarkerSequence return
+    property is_protected
+        get get_IsProtected slot=17 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=210 deprecated
+            out boolean return
+    property buffering_progress
+        get get_BufferingProgress slot=11 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=141 deprecated
+            out double return
+    property can_pause
+        get get_CanPause slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=186 deprecated
+            out boolean return
+    property can_seek
+        get get_CanSeek slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=173 deprecated
+            out boolean return
+    property audio_device_type
+        get get_AudioDeviceType slot=9 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer2 shape=4 reverse=99
+            out enum32 type=Windows.Media.Playback.MediaPlayerAudioDeviceType return
+        put put_AudioDeviceType slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer2 shape=4 reverse=121
+            in enum32 type=Windows.Media.Playback.MediaPlayerAudioDeviceType name=value
+    property audio_category
+        get get_AudioCategory slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer2 shape=4 reverse=43
+            out enum32 type=Windows.Media.Playback.MediaPlayerAudioCategory return
+        put put_AudioCategory slot=8 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer2 shape=4 reverse=62
+            in enum32 type=Windows.Media.Playback.MediaPlayerAudioCategory name=value
+    property system_media_transport_controls
+        get get_SystemMediaTransportControls slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer2 shape=4 reverse=22
+            out class type=Windows.Media.SystemMediaTransportControls return
+    property timeline_controller_position_offset
+        get get_TimelineControllerPositionOffset slot=22 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=237
+            out timespan return
+        put put_TimelineControllerPositionOffset slot=23 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=26 reverse=245
+            in timespan name=value
+    property timeline_controller
+        get get_TimelineController slot=20 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=228
+            out class type=Windows.Media.MediaTimelineController return
+        put put_TimelineController slot=21 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=232
+            in class type=Windows.Media.MediaTimelineController name=value
+    property stereoscopic_video_render_mode
+        get get_StereoscopicVideoRenderMode slot=14 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=186
+            out enum32 type=Windows.Media.Playback.StereoscopicVideoRenderMode return
+        put put_StereoscopicVideoRenderMode slot=15 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=194
+            in enum32 type=Windows.Media.Playback.StereoscopicVideoRenderMode name=value
+    property real_time_playback
+        get get_RealTimePlayback slot=12 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=162
+            out boolean return
+        put put_RealTimePlayback slot=13 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=173
+            in boolean name=value
+    property audio_device
+        get get_AudioDevice slot=18 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=218
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+        put put_AudioDevice slot=19 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=223
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=value
+    property audio_balance
+        get get_AudioBalance slot=10 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=121
+            out double return
+        put put_AudioBalance slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=2 reverse=138
+            in double name=value
+    property command_manager
+        get get_CommandManager slot=17 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=210
+            out class type=Windows.Media.Playback.MediaPlaybackCommandManager return
+    property break_manager
+        get get_BreakManager slot=16 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=202
+            out class type=Windows.Media.Playback.MediaBreakManager return
+    property playback_session
+        get get_PlaybackSession slot=24 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=247
+            out class type=Windows.Media.Playback.MediaPlaybackSession return
+    property is_video_frame_server_enabled
+        get get_IsVideoFrameServerEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer5 shape=4 reverse=62
+            out boolean return
+        put put_IsVideoFrameServerEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=4 reverse=99
+            in boolean name=value
+    property audio_state_monitor
+        get get_AudioStateMonitor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer7 shape=4 reverse=22
+            out class type=Windows.Media.Audio.AudioStateMonitor return
+    property protection_manager
+        get get_ProtectionManager slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 reverse=22
+            out class type=Windows.Media.Protection.MediaProtectionManager return
+        put put_ProtectionManager slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 reverse=43
+            in class type=Windows.Media.Protection.MediaProtectionManager name=value
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSource2 shape=4 reverse=22
+            out interface type=Windows.Media.Playback.IMediaPlaybackSource return
+        put put_Source slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource2 shape=4 reverse=43
+            in interface type=Windows.Media.Playback.IMediaPlaybackSource name=value
+    event buffering_ended
+        add add_BufferingEnded slot=43 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=323 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_BufferingEnded slot=44 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=328 deprecated
+            in event_token name=token
+    event buffering_started
+        add add_BufferingStarted slot=41 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=317 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_BufferingStarted slot=42 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=321 deprecated
+            in event_token name=token
+    event current_state_changed
+        add add_CurrentStateChanged slot=31 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=274 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_CurrentStateChanged slot=32 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=283 deprecated
+            in event_token name=token
+    event media_ended
+        add add_MediaEnded slot=27 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=260
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_MediaEnded slot=28 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26
+            in event_token name=token
+    event media_failed
+        add add_MediaFailed slot=29 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerFailedEventArgs> name=value
+            out event_token return
+        remove remove_MediaFailed slot=30 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=272
+            in event_token name=token
+    event media_opened
+        add add_MediaOpened slot=25 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=253
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_MediaOpened slot=26 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=257
+            in event_token name=token
+    event media_player_rate_changed
+        add add_MediaPlayerRateChanged slot=35 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=293 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerRateChangedEventArgs> name=value
+            out event_token return
+        remove remove_MediaPlayerRateChanged slot=36 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=298 deprecated
+            in event_token name=token
+    event playback_media_marker_reached
+        add add_PlaybackMediaMarkerReached slot=33 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=286 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs> name=value
+            out event_token return
+        remove remove_PlaybackMediaMarkerReached slot=34 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=291 deprecated
+            in event_token name=token
+    event seek_completed
+        add add_SeekCompleted slot=39 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=308 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_SeekCompleted slot=40 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=314 deprecated
+            in event_token name=token
+    event volume_changed
+        add add_VolumeChanged slot=37 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer shape=51 reverse=300
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_VolumeChanged slot=38 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=26 reverse=305
+            in event_token name=token
+    event is_muted_changed
+        add add_IsMutedChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_IsMutedChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=26 reverse=53
+            in event_token name=token
+    event source_changed
+        add add_SourceChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_SourceChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=26 reverse=110
+            in event_token name=token
+    event video_frame_available
+        add add_VideoFrameAvailable slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer5 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=value
+            out event_token return
+        remove remove_VideoFrameAvailable slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=26 reverse=53
+            in event_token name=token
+    event subtitle_frame_changed
+        add add_SubtitleFrameChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer6 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> name=handler
+            out event_token return
+        remove remove_SubtitleFrameChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer6 shape=26 reverse=53
+            in event_token name=token
+    method add_audio_effect
+        method AddAudioEffect slot=6 inputs=3 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerEffects shape=117 reverse=25
+            in string name=activatableClassId
+            in boolean name=effectOptional
+            in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
+    method add_video_effect
+        method AddVideoEffect slot=6 inputs=3 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerEffects2 shape=117 reverse=25
+            in string name=activatableClassId
+            in boolean name=effectOptional
+            in interface type=Windows.Foundation.Collections.IPropertySet name=effectConfiguration
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method copy_frame_to_stereoscopic_video_surfaces
+        method CopyFrameToStereoscopicVideoSurfaces slot=12 inputs=2 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=51 reverse=163
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destinationLeftEye
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destinationRightEye
+    method copy_frame_to_video_surface
+        method CopyFrameToVideoSurface slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=4 reverse=121
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destination
+        method CopyFrameToVideoSurface slot=11 inputs=2 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=55
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destination
+            in struct type=Windows.Foundation.Rect name=targetRectangle
+    method get_as_casting_source
+        method GetAsCastingSource slot=27 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer3 shape=4 reverse=259
+            out class type=Windows.Media.Casting.CastingSource return
+    method get_surface
+        method GetSurface slot=7 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer4 shape=51 reverse=44
+            in class type=Windows.UI.Composition.Compositor name=compositor
+            out class type=Windows.Media.Playback.MediaPlayerSurface return
+    method pause
+        method Pause slot=46 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=0 reverse=333
+    method play
+        method Play slot=45 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=0
+    method remove_all_effects
+        method RemoveAllEffects slot=7 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerEffects shape=0 reverse=37
+    method render_subtitles_to_surface
+        method RenderSubtitlesToSurface slot=8 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer6 shape=51 reverse=65
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destination
+            out boolean return
+        method RenderSubtitlesToSurface slot=9 inputs=2 outputs=1 declaring=Windows.Media.Playback.IMediaPlayer6 shape=130
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destination
+            in struct type=Windows.Foundation.Rect name=targetRectangle
+            out boolean return
+    method set_file_source deprecated
+        method SetFileSource slot=8 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 reverse=62 deprecated
+            in interface type=Windows.Storage.IStorageFile name=file
+    method set_media_source deprecated
+        method SetMediaSource slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 reverse=121 deprecated
+            in interface type=Windows.Media.Core.IMediaSource name=source
+    method set_stream_source deprecated
+        method SetStreamSource slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 reverse=99 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
+    method set_surface_size
+        method SetSurfaceSize slot=6 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer4 shape=10
+            in struct type=Windows.Foundation.Size name=size
+    method set_uri_source deprecated
+        method SetUriSource slot=47 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=4 reverse=339 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    method step_backward_one_frame
+        method StepBackwardOneFrame slot=26 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=0
+    method step_forward_one_frame
+        method StepForwardOneFrame slot=25 inputs=0 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer3 shape=0
+
+enum Windows.Media.Playback.MediaPlayerAudioCategory python_type
+    py MediaPlayerAudioCategory
+    signature enum(Windows.Media.Playback.MediaPlayerAudioCategory;i4)
+
+enum Windows.Media.Playback.MediaPlayerAudioDeviceType python_type
+    py MediaPlayerAudioDeviceType
+    signature enum(Windows.Media.Playback.MediaPlayerAudioDeviceType;i4)
+
+class Windows.Media.Playback.MediaPlayerDataReceivedEventArgs python_type
+    py MediaPlayerDataReceivedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlayerDataReceivedEventArgs;{c75a9405-c801-412a-835b-83fc0e622a8e})
+    default Windows.Media.Playback.IMediaPlayerDataReceivedEventArgs
+    requires Windows.Media.Playback.IMediaPlayerDataReceivedEventArgs
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerDataReceivedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+enum Windows.Media.Playback.MediaPlayerError python_type
+    py MediaPlayerError
+    signature enum(Windows.Media.Playback.MediaPlayerError;i4)
+
+class Windows.Media.Playback.MediaPlayerFailedEventArgs python_type
+    py MediaPlayerFailedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlayerFailedEventArgs;{2744e9b9-a7e3-4f16-bac4-7914ebc08301})
+    default Windows.Media.Playback.IMediaPlayerFailedEventArgs
+    requires Windows.Media.Playback.IMediaPlayerFailedEventArgs
+    property error
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerFailedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Playback.MediaPlayerError return
+    property error_message
+        get get_ErrorMessage slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerFailedEventArgs shape=4 reverse=62
+            out string return
+    property extended_error_code
+        get get_ExtendedErrorCode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerFailedEventArgs shape=4 reverse=43
+            out hresult return
+
+class Windows.Media.Playback.MediaPlayerRateChangedEventArgs python_type
+    py MediaPlayerRateChangedEventArgs
+    signature rc(Windows.Media.Playback.MediaPlayerRateChangedEventArgs;{40600d58-3b61-4bb2-989f-fc65608b6cab})
+    default Windows.Media.Playback.IMediaPlayerRateChangedEventArgs
+    requires Windows.Media.Playback.IMediaPlayerRateChangedEventArgs
+    property new_rate
+        get get_NewRate slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerRateChangedEventArgs shape=4 reverse=22
+            out double return
+
+enum Windows.Media.Playback.MediaPlayerState python_type
+    py MediaPlayerState
+    signature enum(Windows.Media.Playback.MediaPlayerState;i4)
+
+class Windows.Media.Playback.MediaPlayerSurface python_type closeable
+    py MediaPlayerSurface
+    signature rc(Windows.Media.Playback.MediaPlayerSurface;{0ed653bc-b736-49c3-830b-764a3845313a})
+    default Windows.Media.Playback.IMediaPlayerSurface
+    requires Windows.Media.Playback.IMediaPlayerSurface
+    requires Windows.Foundation.IClosable
+    property composition_surface
+        get get_CompositionSurface slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSurface shape=4 reverse=22
+            out interface type=Windows.UI.Composition.ICompositionSurface return
+    property compositor
+        get get_Compositor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSurface shape=4 reverse=43
+            out class type=Windows.UI.Composition.Compositor return
+    property media_player
+        get get_MediaPlayer slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSurface shape=4 reverse=62
+            out class type=Windows.Media.Playback.MediaPlayer return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Media.Playback.PlaybackMediaMarker python_type
+    py PlaybackMediaMarker
+    signature rc(Windows.Media.Playback.PlaybackMediaMarker;{c4d22f5c-3c1c-4444-b6b9-778b0422d41a})
+    default Windows.Media.Playback.IPlaybackMediaMarker
+    requires Windows.Media.Playback.IPlaybackMediaMarker
+    factory Windows.Media.Playback.IPlaybackMediaMarkerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarkerFactory shape=89
+            in timespan name=value
+            out class type=Windows.Media.Playback.PlaybackMediaMarker return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarkerFactory shape=227
+            in timespan name=value
+            in string name=mediaMarketType
+            in string name=text
+            out class type=Windows.Media.Playback.PlaybackMediaMarker return
+    property media_marker_type
+        get get_MediaMarkerType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarker shape=4 reverse=43
+            out string return
+    property text
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarker shape=4 reverse=62
+            out string return
+    property time
+        get get_Time slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarker shape=4 reverse=22
+            out timespan return
+
+class Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs python_type
+    py PlaybackMediaMarkerReachedEventArgs
+    signature rc(Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs;{578cd1b9-90e2-4e60-abc4-8740b01f6196})
+    default Windows.Media.Playback.IPlaybackMediaMarkerReachedEventArgs
+    requires Windows.Media.Playback.IPlaybackMediaMarkerReachedEventArgs
+    property playback_media_marker
+        get get_PlaybackMediaMarker slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarkerReachedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Playback.PlaybackMediaMarker return
+
+class Windows.Media.Playback.PlaybackMediaMarkerSequence python_type iterable
+    py PlaybackMediaMarkerSequence
+    signature rc(Windows.Media.Playback.PlaybackMediaMarkerSequence;{f2810cee-638b-46cf-8817-1d111fe9d8c4})
+    default Windows.Media.Playback.IPlaybackMediaMarkerSequence
+    requires Windows.Media.Playback.IPlaybackMediaMarkerSequence
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker>
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IPlaybackMediaMarkerSequence shape=4 reverse=22
+            out uint32 return
+    method clear
+        method Clear slot=8 inputs=0 outputs=0 declaring=Windows.Media.Playback.IPlaybackMediaMarkerSequence shape=0 reverse=55
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> return
+    method insert
+        method Insert slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IPlaybackMediaMarkerSequence shape=4 reverse=43
+            in class type=Windows.Media.Playback.PlaybackMediaMarker name=value
+
+enum Windows.Media.Playback.SphericalVideoProjectionMode python_type
+    py SphericalVideoProjectionMode
+    signature enum(Windows.Media.Playback.SphericalVideoProjectionMode;i4)
+
+enum Windows.Media.Playback.StereoscopicVideoRenderMode python_type
+    py StereoscopicVideoRenderMode
+    signature enum(Windows.Media.Playback.StereoscopicVideoRenderMode;i4)
+
+enum T parameterized
+
+class Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs python_type
+    py TimedMetadataPresentationModeChangedEventArgs
+    signature rc(Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs;{d1636099-65df-45ae-8cef-dc0b53fdc2bb})
+    default Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs
+    requires Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs
+    property new_presentation_mode
+        get get_NewPresentationMode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs shape=4 reverse=62
+            out enum32 type=Windows.Media.Playback.TimedMetadataTrackPresentationMode return
+    property old_presentation_mode
+        get get_OldPresentationMode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Media.Playback.TimedMetadataTrackPresentationMode return
+    property track
+        get get_Track slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+
+enum Windows.Media.Playback.TimedMetadataTrackPresentationMode python_type
+    py TimedMetadataTrackPresentationMode
+    signature enum(Windows.Media.Playback.TimedMetadataTrackPresentationMode;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object> concrete
+    guid 21eb6e39-728a-56a9-8dce-062ba4c81bf5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{77206f1f-c34f-494f-8077-2bad9ff4ecf1};cinterface(IInspectable))
+    argument Windows.Media.Core.ISingleSelectMediaTrackList
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakEndedEventArgs> concrete
+    guid 04afafa9-d83a-5ccb-8cab-82c9d92a19ab
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakEndedEventArgs;{32b93276-1c5d-4fee-8732-236dc3a88580}))
+    argument Windows.Media.Playback.MediaBreakManager
+    argument Windows.Media.Playback.MediaBreakEndedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSeekedOverEventArgs> concrete
+    guid a6954c30-99dc-5f84-b482-7d0692c0277b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakSeekedOverEventArgs;{e5aa6746-0606-4492-b9d3-c3c8fde0a4ea}))
+    argument Windows.Media.Playback.MediaBreakManager
+    argument Windows.Media.Playback.MediaBreakSeekedOverEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSkippedEventArgs> concrete
+    guid c530fa5d-1a56-582a-a254-1b1ae17b8d2d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakSkippedEventArgs;{6ee94c05-2f54-4a3e-a3ab-24c3b270b4a3}))
+    argument Windows.Media.Playback.MediaBreakManager
+    argument Windows.Media.Playback.MediaBreakSkippedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakStartedEventArgs> concrete
+    guid 4bf2cca1-cd9d-5d88-9e47-1881201bb72d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakStartedEventArgs;{a87efe71-dfd4-454a-956e-0a4a648395f8}))
+    argument Windows.Media.Playback.MediaBreakManager
+    argument Windows.Media.Playback.MediaBreakStartedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakSchedule,System.Object> concrete
+    guid 3c57acbf-ca07-586a-8adb-8047dc9165a6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakSchedule;{a19a5813-98b6-41d8-83da-f971d22b7bba});cinterface(IInspectable))
+    argument Windows.Media.Playback.MediaBreakSchedule
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs> concrete
+    guid 824845b8-c5df-560b-a722-c15b25d4463a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;{3d6f4f23-5230-4411-a0e9-bad94c2a045c}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs> concrete
+    guid d7cd6ce3-516f-5b34-beaf-3ee90b622872
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs;{30f064d9-b491-4d0a-bc21-3098bd1332e9}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs> concrete
+    guid ce41af40-93a6-52bf-9cad-4d5fffd10ee0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs;{e1504433-a2b0-45d4-b9de-5f42ac14a839}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs> concrete
+    guid 79eb2ad3-0781-5f64-b0cd-31e1145d109f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs;{5ceccd1c-c25c-4221-b16c-c3c98ce012d6}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs> concrete
+    guid 76d59f7c-edf3-5dde-9529-6f806bdb1fcb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs;{9af0004e-578b-4c56-a006-16159d888a48}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs> concrete
+    guid d863b1c4-7442-53c4-94d2-20d8973df585
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs;{5591a754-d627-4bdd-a90d-86a015b24902}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs> concrete
+    guid 25726db4-8913-5967-90eb-10f09f30dd33
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs;{525e3081-4632-4f76-99b1-d771623f6287}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs> concrete
+    guid 3f8a8ea1-ff9a-5613-9846-33799f6b8c8a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs;{18ea3939-4a16-4169-8b05-3eb9f5ff78eb}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs> concrete
+    guid 3c37e026-8d0b-5d73-a650-9f18abbc353d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs;{9f085947-a3c0-425d-aaef-97ba7898b141}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs> concrete
+    guid 6c972f91-f626-5799-ba86-5e941f0202c8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs;{50a05cef-63ee-4a96-b7b5-fee08b9ff90c}))
+    argument Windows.Media.Playback.MediaPlaybackCommandManager
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior,System.Object> concrete
+    guid 2675973a-eb2d-56a1-82a0-340b0ff041e6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior;{786c1e78-ce78-4a10-afd6-843fcbb90c2e});cinterface(IInspectable))
+    argument Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackItem,Windows.Foundation.Collections.IVectorChangedEventArgs> concrete
+    guid 2dd51918-4525-5be5-a6c1-409bc72863a6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2});{575933df-34fe-4480-af15-07691f3d5d9b})
+    argument Windows.Media.Playback.MediaPlaybackItem
+    argument Windows.Foundation.Collections.IVectorChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs> concrete
+    guid 404c5f9d-250d-5f8c-9627-6b4105c32d09
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs;{1743a892-5c43-4a15-967a-572d2d0f26c6}))
+    argument Windows.Media.Playback.MediaPlaybackList
+    argument Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemFailedEventArgs> concrete
+    guid 23319e7d-34b1-57b7-97e5-844948ba4719
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.MediaPlaybackItemFailedEventArgs;{7703134a-e9a7-47c3-862c-c656d30683d4}))
+    argument Windows.Media.Playback.MediaPlaybackList
+    argument Windows.Media.Playback.MediaPlaybackItemFailedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs> concrete
+    guid 6732bbef-3311-5f83-9c9d-82a5cf3cd82a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs;{cbd9bd82-3037-4fbe-ae8f-39fc39edf4ef}))
+    argument Windows.Media.Playback.MediaPlaybackList
+    argument Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> concrete
+    guid 7c70f38d-2aa1-5522-a6d6-34b52b988ae7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackSession;{c32b683d-0407-41ba-8946-8b345a5a5435});cinterface(IInspectable))
+    argument Windows.Media.Playback.MediaPlaybackSession
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList,Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs> concrete
+    guid 40213c85-bf23-5f78-b9c4-e03f3be2b41c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07})));rc(Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs;{d1636099-65df-45ae-8cef-dc0b53fdc2bb}))
+    argument Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList
+    argument Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> concrete
+    guid f1a6a51e-d078-5c40-ba3f-348870ba5c87
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});cinterface(IInspectable))
+    argument Windows.Media.Playback.MediaPlayer
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerFailedEventArgs> concrete
+    guid 362c45a7-3a0a-5e27-99ce-cff6d1b770e1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.MediaPlayerFailedEventArgs;{2744e9b9-a7e3-4f16-bac4-7914ebc08301}))
+    argument Windows.Media.Playback.MediaPlayer
+    argument Windows.Media.Playback.MediaPlayerFailedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerRateChangedEventArgs> concrete
+    guid ba51d31a-5688-5d4d-af42-122070b1eefa
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.MediaPlayerRateChangedEventArgs;{40600d58-3b61-4bb2-989f-fc65608b6cab}))
+    argument Windows.Media.Playback.MediaPlayer
+    argument Windows.Media.Playback.MediaPlayerRateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs> concrete
+    guid 67a4f43c-c254-57f0-a39d-a475a342d21d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs;{578cd1b9-90e2-4e60-abc4-8740b01f6196}))
+    argument Windows.Media.Playback.MediaPlayer
+    argument Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVectorChangedEventArgs external
+    py winrt.windows.foundation.collections._IVectorChangedEventArgs
+    guid 575933df-34fe-4480-af15-07691f3d5d9b
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+struct Windows.Foundation.Numerics.Quaternion external
+    py winrt.windows.foundation.numerics.Quaternion
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+enum Windows.Media.MediaPlaybackAutoRepeatMode external
+    py winrt.windows.media.MediaPlaybackAutoRepeatMode
+
+enum Windows.Media.MediaPlaybackType external
+    py winrt.windows.media.MediaPlaybackType
+
+struct Windows.Media.MediaTimeRange external
+    py winrt.windows.media.MediaTimeRange
+
+class Windows.Media.MediaTimelineController external
+    py winrt.windows.media.MediaTimelineController
+
+class Windows.Media.MusicDisplayProperties external
+    py winrt.windows.media.MusicDisplayProperties
+
+class Windows.Media.SystemMediaTransportControls external
+    py winrt.windows.media.SystemMediaTransportControls
+
+class Windows.Media.VideoDisplayProperties external
+    py winrt.windows.media.VideoDisplayProperties
+
+class Windows.Media.Audio.AudioStateMonitor external
+    py winrt.windows.media.audio.AudioStateMonitor
+
+class Windows.Media.Casting.CastingSource external
+    py winrt.windows.media.casting.CastingSource
+
+class Windows.Media.Core.AudioTrack external
+    py winrt.windows.media.core.AudioTrack
+
+interface Windows.Media.Core.IMediaSource external
+    py winrt.windows.media.core._IMediaSource
+    guid e7bfb599-a09d-4c21-bcdf-20af4f86b3d9
+
+interface Windows.Media.Core.ISingleSelectMediaTrackList external
+    py winrt.windows.media.core._ISingleSelectMediaTrackList
+    guid 77206f1f-c34f-494f-8077-2bad9ff4ecf1
+
+class Windows.Media.Core.MediaSource external
+    py winrt.windows.media.core.MediaSource
+
+class Windows.Media.Core.TimedMetadataTrack external
+    py winrt.windows.media.core.TimedMetadataTrack
+
+class Windows.Media.Core.VideoTrack external
+    py winrt.windows.media.core.VideoTrack
+
+enum Windows.Media.MediaProperties.MediaRotation external
+    py winrt.windows.media.mediaproperties.MediaRotation
+
+enum Windows.Media.MediaProperties.SphericalVideoFrameFormat external
+    py winrt.windows.media.mediaproperties.SphericalVideoFrameFormat
+
+enum Windows.Media.MediaProperties.StereoscopicVideoPackingMode external
+    py winrt.windows.media.mediaproperties.StereoscopicVideoPackingMode
+
+class Windows.Media.Protection.MediaProtectionManager external
+    py winrt.windows.media.protection.MediaProtectionManager
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+class Windows.Storage.Streams.RandomAccessStreamReference external
+    py winrt.windows.storage.streams.RandomAccessStreamReference
+
+class Windows.UI.Composition.Compositor external
+    py winrt.windows.ui.composition.Compositor
+
+interface Windows.UI.Composition.ICompositionSurface external
+    py winrt.windows.ui.composition._ICompositionSurface
+    guid 1527540d-42c7-47a6-a408-668f79a90dfb

@@ -1,0 +1,3045 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Automation.Peers
+
+enum Windows.UI.Xaml.Automation.Peers.AccessibilityView python_type
+    py AccessibilityView
+    signature enum(Windows.UI.Xaml.Automation.Peers.AccessibilityView;i4)
+
+class Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer composable python_type
+    py AppBarAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer;{8b4acfeb-89fa-4f13-84be-35ca5b7c9590})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IToggleProvider
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    requires Windows.UI.Xaml.Automation.Provider.IWindowProvider
+    composable Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.AppBar name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.AppBarAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ToggleState return
+    property interaction_state
+        get get_InteractionState slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=121
+            out enum32 type=Windows.UI.Xaml.Automation.WindowInteractionState return
+    property is_modal
+        get get_IsModal slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=22
+            out boolean return
+    property is_topmost
+        get get_IsTopmost slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=43
+            out boolean return
+    property maximizable
+        get get_Maximizable slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=62
+            out boolean return
+    property minimizable
+        get get_Minimizable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=99
+            out boolean return
+    property visual_state
+        get get_VisualState slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=141
+            out enum32 type=Windows.UI.Xaml.Automation.WindowVisualState return
+    method close
+        method Close slot=12 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=0 reverse=159
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+    method set_visual_state
+        method SetVisualState slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=173
+            in enum32 type=Windows.UI.Xaml.Automation.WindowVisualState name=state
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+    method wait_for_input_idle
+        method WaitForInputIdle slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=51 reverse=187
+            in int32 name=milliseconds
+            out boolean return
+
+class Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer composable python_type
+    py AppBarButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer;{443262b2-4f6d-4b76-9d2e-3eff777e8864})
+    base Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    composable Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.AppBarButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+
+class Windows.UI.Xaml.Automation.Peers.AppBarToggleButtonAutomationPeer composable python_type
+    py AppBarToggleButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.AppBarToggleButtonAutomationPeer;{8464efad-9655-4aff-9550-63ae9ec8fe9c})
+    base Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.AppBarToggleButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.AppBarToggleButtonAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer python_type
+    py AutoSuggestBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer;{2f32c302-f99b-491d-9726-a5e181643efa})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    factory Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeerFactory shape=51 reverse=24
+            in class type=Windows.UI.Xaml.Controls.AutoSuggestBox name=owner
+            out class type=Windows.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationControlType python_type
+    py AutomationControlType
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationControlType;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationEvents python_type
+    py AutomationEvents
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationEvents;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel python_type
+    py AutomationHeadingLevel
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType python_type
+    py AutomationLandmarkType
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting python_type
+    py AutomationLiveSetting
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationNavigationDirection python_type
+    py AutomationNavigationDirection
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationNavigationDirection;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationNotificationKind python_type
+    py AutomationNotificationKind
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationNotificationKind;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationNotificationProcessing python_type
+    py AutomationNotificationProcessing
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationNotificationProcessing;i4)
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationOrientation python_type
+    py AutomationOrientation
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationOrientation;i4)
+
+class Windows.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
+    py AutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Automation.Peers.IAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer2
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer3
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer4
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer5
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer6
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer7
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer8
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeer9
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9
+    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3
+    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics
+    composable Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8
+    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9
+    property events_source
+        get get_EventsSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=22
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+        put put_EventsSource slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=43
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+    method generate_raw_element_provider_runtime_id static
+        method GenerateRawElementProviderRuntimeId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3 shape=4 reverse=22 static
+            out struct type=Windows.UI.Xaml.Automation.Peers.RawElementProviderRuntimeId return
+    method get_accelerator_key
+        method GetAcceleratorKey slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=141
+            out string return
+    method _get_accelerator_key_core
+        method GetAcceleratorKeyCore slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=43 overridable
+            out string return
+    method get_access_key
+        method GetAccessKey slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=162
+            out string return
+    method _get_access_key_core
+        method GetAccessKeyCore slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=62 overridable
+            out string return
+    method get_annotations
+        method GetAnnotations slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+    method _get_annotations_core
+        method GetAnnotationsCore slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=4 reverse=99 overridable
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+    method get_automation_control_type
+        method GetAutomationControlType slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=173
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType return
+    method _get_automation_control_type_core
+        method GetAutomationControlTypeCore slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=99 overridable
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType return
+    method get_automation_id
+        method GetAutomationId slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=186
+            out string return
+    method _get_automation_id_core
+        method GetAutomationIdCore slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=121 overridable
+            out string return
+    method get_bounding_rectangle
+        method GetBoundingRectangle slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=194
+            out struct type=Windows.Foundation.Rect return
+    method _get_bounding_rectangle_core
+        method GetBoundingRectangleCore slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=141 overridable
+            out struct type=Windows.Foundation.Rect return
+    method get_children
+        method GetChildren slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method _get_children_core
+        method GetChildrenCore slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=162 overridable
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_class_name
+        method GetClassName slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=210
+            out string return
+    method _get_class_name_core
+        method GetClassNameCore slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=173 overridable
+            out string return
+    method get_clickable_point
+        method GetClickablePoint slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=218
+            out struct type=Windows.Foundation.Point return
+    method _get_clickable_point_core
+        method GetClickablePointCore slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=186 overridable
+            out struct type=Windows.Foundation.Point return
+    method get_controlled_peers
+        method GetControlledPeers slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method _get_controlled_peers_core
+        method GetControlledPeersCore slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2 shape=4 reverse=43 overridable
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_culture
+        method GetCulture slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer6 shape=4 reverse=22
+            out int32 return
+    method _get_culture_core
+        method GetCultureCore slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6 shape=4 reverse=22 overridable
+            out int32 return
+    method _get_described_by_core
+        method GetDescribedByCore slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=99 overridable
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_element_from_point
+        method GetElementFromPoint slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=79 reverse=51
+            in struct type=Windows.Foundation.Point name=pointInWindowCoordinates
+            out object return
+    method _get_element_from_point_core
+        method GetElementFromPointCore slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=79 reverse=51 overridable
+            in struct type=Windows.Foundation.Point name=pointInWindowCoordinates
+            out object return
+    method _get_flows_from_core
+        method GetFlowsFromCore slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=141 overridable
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method _get_flows_to_core
+        method GetFlowsToCore slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=121 overridable
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_focused_element
+        method GetFocusedElement slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=62
+            out object return
+    method _get_focused_element_core
+        method GetFocusedElementCore slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=4 reverse=62 overridable
+            out object return
+    method get_full_description
+        method GetFullDescription slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer5 shape=4 reverse=62
+            out string return
+    method _get_full_description_core
+        method GetFullDescriptionCore slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=62 overridable
+            out string return
+    method get_heading_level
+        method GetHeadingLevel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer8 shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel return
+    method _get_heading_level_core
+        method GetHeadingLevelCore slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8 shape=4 reverse=22 overridable
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationHeadingLevel return
+    method get_help_text
+        method GetHelpText slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=223
+            out string return
+    method _get_help_text_core
+        method GetHelpTextCore slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=194 overridable
+            out string return
+    method get_item_status
+        method GetItemStatus slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=228
+            out string return
+    method _get_item_status_core
+        method GetItemStatusCore slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=202 overridable
+            out string return
+    method get_item_type
+        method GetItemType slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=232
+            out string return
+    method _get_item_type_core
+        method GetItemTypeCore slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=210 overridable
+            out string return
+    method get_labeled_by
+        method GetLabeledBy slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=237
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method _get_labeled_by_core
+        method GetLabeledByCore slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=218 overridable
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method get_landmark_type
+        method GetLandmarkType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer4 shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType return
+    method _get_landmark_type_core
+        method GetLandmarkTypeCore slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4 shape=4 reverse=22 overridable
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType return
+    method get_level
+        method GetLevel slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=202
+            out int32 return
+    method _get_level_core
+        method GetLevelCore slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=4 reverse=162 overridable
+            out int32 return
+    method get_live_setting
+        method GetLiveSetting slot=38 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=302
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting return
+    method _get_live_setting_core
+        method GetLiveSettingCore slot=32 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=280 overridable
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting return
+    method get_localized_control_type
+        method GetLocalizedControlType slot=23 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=242
+            out string return
+    method _get_localized_control_type_core
+        method GetLocalizedControlTypeCore slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=223 overridable
+            out string return
+    method get_localized_landmark_type
+        method GetLocalizedLandmarkType slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer4 shape=4 reverse=43
+            out string return
+    method _get_localized_landmark_type_core
+        method GetLocalizedLandmarkTypeCore slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4 shape=4 reverse=43 overridable
+            out string return
+    method get_name
+        method GetName slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=247
+            out string return
+    method _get_name_core
+        method GetNameCore slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=228 overridable
+            out string return
+    method get_orientation
+        method GetOrientation slot=25 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=252
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationOrientation return
+    method _get_orientation_core
+        method GetOrientationCore slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=232 overridable
+            out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationOrientation return
+    method get_parent deprecated
+        method GetParent slot=35 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=292 deprecated
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method get_pattern
+        method GetPattern slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=51 reverse=65
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.PatternInterface name=patternInterface
+            out object return
+    method _get_pattern_core
+        method GetPatternCore slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=51 reverse=24 overridable
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.PatternInterface name=patternInterface
+            out object return
+    method get_peer_from_point deprecated
+        method GetPeerFromPoint slot=37 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=79 deprecated
+            in struct type=Windows.Foundation.Point name=point
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method _get_peer_from_point_core
+        method GetPeerFromPointCore slot=31 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=79 reverse=276 overridable
+            in struct type=Windows.Foundation.Point name=point
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method get_position_in_set
+        method GetPositionInSet slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=186
+            out int32 return
+    method _get_position_in_set_core
+        method GetPositionInSetCore slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=4 reverse=121 overridable
+            out int32 return
+    method get_size_of_set
+        method GetSizeOfSet slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=194
+            out int32 return
+    method _get_size_of_set_core
+        method GetSizeOfSetCore slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=4 reverse=141 overridable
+            out int32 return
+    method has_keyboard_focus
+        method HasKeyboardFocus slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=255
+            out boolean return
+    method _has_keyboard_focus_core
+        method HasKeyboardFocusCore slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=237 overridable
+            out boolean return
+    method invalidate_peer
+        method InvalidatePeer slot=36 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=0 reverse=405
+    method is_content_element
+        method IsContentElement slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=259
+            out boolean return
+    method _is_content_element_core
+        method IsContentElementCore slot=23 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=242 overridable
+            out boolean return
+    method is_control_element
+        method IsControlElement slot=28 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=263
+            out boolean return
+    method _is_control_element_core
+        method IsControlElementCore slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=247 overridable
+            out boolean return
+    method is_data_valid_for_form
+        method IsDataValidForForm slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer5 shape=4 reverse=43
+            out boolean return
+    method _is_data_valid_for_form_core
+        method IsDataValidForFormCore slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=43 overridable
+            out boolean return
+    method is_dialog
+        method IsDialog slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer9 shape=4 reverse=22
+            out boolean return
+    method _is_dialog_core
+        method IsDialogCore slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9 shape=4 reverse=22 overridable
+            out boolean return
+    method is_enabled
+        method IsEnabled slot=29 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=266
+            out boolean return
+    method _is_enabled_core
+        method IsEnabledCore slot=25 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=252 overridable
+            out boolean return
+    method is_keyboard_focusable
+        method IsKeyboardFocusable slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=270
+            out boolean return
+    method _is_keyboard_focusable_core
+        method IsKeyboardFocusableCore slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=255 overridable
+            out boolean return
+    method is_offscreen
+        method IsOffscreen slot=31 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=273
+            out boolean return
+    method _is_offscreen_core
+        method IsOffscreenCore slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=259 overridable
+            out boolean return
+    method is_password
+        method IsPassword slot=32 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=280
+            out boolean return
+    method _is_password_core
+        method IsPasswordCore slot=28 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=263 overridable
+            out boolean return
+    method is_peripheral
+        method IsPeripheral slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer5 shape=4 reverse=22
+            out boolean return
+    method _is_peripheral_core
+        method IsPeripheralCore slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5 shape=4 reverse=22 overridable
+            out boolean return
+    method is_required_for_form
+        method IsRequiredForForm slot=33 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=285
+            out boolean return
+    method _is_required_for_form_core
+        method IsRequiredForFormCore slot=29 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=266 overridable
+            out boolean return
+    method listener_exists static
+        method ListenerExists slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics shape=51 reverse=24 static
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationEvents name=eventId
+            out boolean return
+    method navigate
+        method Navigate slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationNavigationDirection name=direction
+            out object return
+    method _navigate_core
+        method NavigateCore slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3 shape=51 reverse=24 overridable
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationNavigationDirection name=direction
+            out object return
+    method _peer_from_provider
+        method PeerFromProvider slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected shape=51 reverse=24 protected
+            in class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=provider
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method _provider_from_peer
+        method ProviderFromPeer slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected shape=51 reverse=44 protected
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=peer
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method raise_automation_event
+        method RaiseAutomationEvent slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=99
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationEvents name=eventId
+    method raise_notification_event
+        method RaiseNotificationEvent slot=6 inputs=4 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer7 shape=195 reverse=26
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationNotificationKind name=notificationKind
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationNotificationProcessing name=notificationProcessing
+            in string name=displayString
+            in string name=activityId
+    method raise_property_changed_event
+        method RaisePropertyChangedEvent slot=10 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=117 reverse=125
+            in class type=Windows.UI.Xaml.Automation.AutomationProperty name=automationProperty
+            in object name=oldValue
+            in object name=newValue
+    method raise_structure_changed_event
+        method RaiseStructureChangedEvent slot=17 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=51 reverse=211
+            in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationStructureChangeType name=structureChangeType
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=child
+    method raise_text_edit_text_changed_event
+        method RaiseTextEditTextChangedEvent slot=13 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=51 reverse=174
+            in enum32 type=Windows.UI.Xaml.Automation.AutomationTextEditChangeType name=automationTextEditChangeType
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=changedData
+    method set_focus
+        method SetFocus slot=34 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=0
+    method _set_focus_core
+        method SetFocusCore slot=30 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=0 reverse=269 overridable
+    method set_parent
+        method SetParent slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=4 reverse=162
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=peer
+    method show_context_menu
+        method ShowContextMenu slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer3 shape=0 reverse=93
+    method _show_context_menu_core
+        method ShowContextMenuCore slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2 shape=0 reverse=16 overridable
+
+class Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation activatable python_type
+    py AutomationPeerAnnotation
+    signature rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation
+    requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation
+    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory
+    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory shape=117 reverse=45
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=type
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=peer
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.AnnotationType return
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.Automation.AnnotationType name=value
+    property peer
+        get get_Peer slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation shape=4 reverse=62
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+        put put_Peer slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation shape=4 reverse=99
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+    property peer_property static
+        get get_PeerProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property type_property static
+        get get_TypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+enum Windows.UI.Xaml.Automation.Peers.AutomationStructureChangeType python_type
+    py AutomationStructureChangeType
+    signature enum(Windows.UI.Xaml.Automation.Peers.AutomationStructureChangeType;i4)
+
+class Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer composable python_type
+    py ButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer;{fb77efbe-39ec-4508-8ac3-51a1424027d7})
+    base Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    composable Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Button name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ButtonAutomationPeer return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer composable python_type
+    py ButtonBaseAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer;{a4f3b5b6-7585-4e0b-96d2-08cf6f28befa})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory
+
+class Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer composable python_type
+    py CalendarDatePickerAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer;{40d8938e-db5e-4b03-beba-d10f62419787})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    requires Windows.UI.Xaml.Automation.Provider.IValueProvider
+    composable Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.CalendarDatePicker name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer return
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=43
+            out string return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+    method set_value
+        method SetValue slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=62
+            in string name=value
+
+class Windows.UI.Xaml.Automation.Peers.CaptureElementAutomationPeer composable python_type
+    py CaptureElementAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.CaptureElementAutomationPeer;{dcc44ee0-fa45-45c6-8bb7-320d808f5958})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.CaptureElement name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.CaptureElementAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.CheckBoxAutomationPeer composable python_type
+    py CheckBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.CheckBoxAutomationPeer;{eb15bc42-c0a9-46c6-ac24-b83de429c733})
+    base Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.CheckBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.CheckBoxAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ColorPickerSliderAutomationPeer composable python_type
+    py ColorPickerSliderAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ColorPickerSliderAutomationPeer;{a514215a-7293-4577-924c-47d4e0bf9b90})
+    base Windows.UI.Xaml.Automation.Peers.SliderAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ColorPickerSliderAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ColorSpectrumAutomationPeer composable python_type
+    py ColorSpectrumAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ColorSpectrumAutomationPeer;{15d5ba03-010d-4ff7-9087-f4dd09f831b7})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.ColorSpectrum name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ColorSpectrumAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer composable python_type
+    py ComboBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer;{7eb40d0b-75c5-4263-ba6a-d4a54fb0f239})
+    base Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IValueProvider
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    requires Windows.UI.Xaml.Automation.Provider.IWindowProvider
+    composable Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ComboBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=43
+            out string return
+    property interaction_state
+        get get_InteractionState slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=121
+            out enum32 type=Windows.UI.Xaml.Automation.WindowInteractionState return
+    property is_modal
+        get get_IsModal slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=22
+            out boolean return
+    property is_topmost
+        get get_IsTopmost slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=43
+            out boolean return
+    property maximizable
+        get get_Maximizable slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=62
+            out boolean return
+    property minimizable
+        get get_Minimizable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=99
+            out boolean return
+    property visual_state
+        get get_VisualState slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=141
+            out enum32 type=Windows.UI.Xaml.Automation.WindowVisualState return
+    method close
+        method Close slot=12 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=0 reverse=159
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+    method set_value
+        method SetValue slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=62
+            in string name=value
+    method set_visual_state
+        method SetVisualState slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=173
+            in enum32 type=Windows.UI.Xaml.Automation.WindowVisualState name=state
+    method wait_for_input_idle
+        method WaitForInputIdle slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IWindowProvider shape=51 reverse=187
+            in int32 name=milliseconds
+            out boolean return
+
+class Windows.UI.Xaml.Automation.Peers.ComboBoxItemAutomationPeer composable python_type
+    py ComboBoxItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ComboBoxItemAutomationPeer;{12ddc76e-9552-446a-82ee-938cc371800f})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ComboBoxItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ComboBoxItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer composable python_type
+    py ComboBoxItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer;{4fef6df2-289c-4c04-831b-5a668c6d7104})
+    base Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.ComboBoxAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ComboBoxItemDataAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.DatePickerAutomationPeer composable python_type
+    py DatePickerAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.DatePickerAutomationPeer;{d07d357f-a0b9-45dc-991a-76c505e7d0f5})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.DatePicker name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.DatePickerAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.DatePickerFlyoutPresenterAutomationPeer python_type
+    py DatePickerFlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.DatePickerFlyoutPresenterAutomationPeer;{752aed38-c2bf-4880-82b2-a6c05e90c135})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IDatePickerFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IDatePickerFlyoutPresenterAutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.FlipViewAutomationPeer composable python_type
+    py FlipViewAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.FlipViewAutomationPeer;{8ec0353a-4284-4b00-aef8-a2688ea5e3c4})
+    base Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.FlipView name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.FlipViewAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.FlipViewItemAutomationPeer composable python_type
+    py FlipViewItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.FlipViewItemAutomationPeer;{c83034de-fa08-4bd3-aeb2-d2e5bfa04df9})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.FlipViewItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.FlipViewItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer composable python_type
+    py FlipViewItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer;{b0986175-00bc-4118-8a6f-16ee9c15d968})
+    base Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.FlipViewAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.FlipViewItemDataAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.FlyoutPresenterAutomationPeer composable python_type
+    py FlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.FlyoutPresenterAutomationPeer;{a01840b4-5fca-456f-98ea-300eb40b585e})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.FlyoutPresenter name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.FlyoutPresenterAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer composable python_type
+    py FrameworkElementAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer;{b90ad781-bfeb-4451-bd47-9f3a63ebd24a})
+    base Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer
+    factory Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics
+    composable Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.FrameworkElement name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer return
+    property owner
+        get get_Owner slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer shape=4 reverse=22
+            out class type=Windows.UI.Xaml.UIElement return
+    method create_peer_for_element static
+        method CreatePeerForElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method from_element static
+        method FromElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics shape=51 reverse=24 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.GridViewAutomationPeer composable python_type
+    py GridViewAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.GridViewAutomationPeer;{1c4401a4-d951-49ca-8f82-c7f3c60681b0})
+    base Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.GridView name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.GridViewAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.GridViewHeaderItemAutomationPeer composable python_type
+    py GridViewHeaderItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.GridViewHeaderItemAutomationPeer;{e3dcef3a-e08a-48e7-b23a-2be5b66e474e})
+    base Windows.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.GridViewHeaderItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.GridViewHeaderItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.GridViewItemAutomationPeer composable python_type
+    py GridViewItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.GridViewItemAutomationPeer;{93ef2d07-346c-4166-a4ba-bc6a181e7f33})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.GridViewItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.GridViewItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer composable python_type
+    py GridViewItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer;{f3f4868f-29d4-4094-8c54-ea61a88294a4})
+    base Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.GridViewAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.GridViewItemDataAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.GroupItemAutomationPeer composable python_type
+    py GroupItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.GroupItemAutomationPeer;{1914fe6d-0740-4236-9ee1-38cf19c1c388})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.GroupItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.GroupItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.HubAutomationPeer composable python_type
+    py HubAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.HubAutomationPeer;{4ddee056-4ebc-4620-a05d-903e3c9a4ead})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IHubAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IHubAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IHubAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IHubAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Hub name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.HubAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer composable python_type
+    py HubSectionAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer;{16d91ff7-7431-4d82-83ce-cfa3192b0f18})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.HubSection name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.HubSectionAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer composable python_type
+    py HyperlinkButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer;{aa7afcb1-0edf-46d9-aa9e-0eb21d140097})
+    base Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    composable Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.HyperlinkButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeer
+    guid 8b4acfeb-89fa-4f13-84be-35ca5b7c9590
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarAutomationPeerFactory
+    guid 8360f4e2-e396-4517-af5d-f4cf34c54edf
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeer
+    guid 443262b2-4f6d-4b76-9d2e-3eff777e8864
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarButtonAutomationPeerFactory
+    guid aef0342a-acb7-42dc-97e3-847071865fd6
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeer
+    guid 8464efad-9655-4aff-9550-63ae9ec8fe9c
+
+interface Windows.UI.Xaml.Automation.Peers.IAppBarToggleButtonAutomationPeerFactory
+    guid d6f9139d-02c1-4221-9591-7d4efeb74701
+
+interface Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeer
+    guid 2f32c302-f99b-491d-9726-a5e181643efa
+
+interface Windows.UI.Xaml.Automation.Peers.IAutoSuggestBoxAutomationPeerFactory
+    guid 80046849-18e7-4475-b362-4bbd53d24562
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer
+    guid 35aac87a-62ee-4d3e-a24c-2bc8432d68b7
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer2
+    guid ea1f89c7-ebf5-4ab8-88f7-680d821dac61
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer3
+    guid d3cfb977-0084-41d7-a221-28158d3bc32c
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer4
+    guid 761ce752-73c1-4f44-be75-43c49ec0d4d5
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer5
+    guid f632e1c6-0a3f-4574-9fef-cdc151765674
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer6
+    guid caf8608f-13ff-42fb-866d-22206434cc6b
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer7
+    guid 796b3287-e642-48ab-b223-5208b41da9d6
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer8
+    guid 5c6a1fe6-9a55-4d7f-9498-cfe429e92da8
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeer9
+    guid df2e0265-1d74-57fa-8094-f81c2f626b8c
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation
+    guid 0c456061-52cf-43fa-82f8-07f137351e5a
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory
+    guid f59c439e-c65b-43cd-9009-03fc023363a7
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics
+    guid 8809a87d-09b2-4d45-b78b-1d3b3b09f661
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory
+    guid 20c27545-a88b-43c8-bc24-cea9dafd04a3
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
+    guid bea93e67-dbee-4f7b-af0d-a79aae5333bf
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2
+    guid 2603682a-9da6-4023-b496-496e5ef228d2
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3
+    guid b6f0c4ad-4d39-49e6-bb91-d924eefd8538
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides4
+    guid b186cda2-5d46-4bcd-a811-269ad15b3aee
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides5
+    guid 2c847c85-781e-49f7-9fef-b9e14d014707
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6
+    guid e98babe7-f6ff-444c-9c0d-277eaf0ad9c0
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8
+    guid 0e1ebbd4-a003-4936-8175-f5457c07f0c6
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9
+    guid f3709e8b-091a-5db5-b896-ff78f01990c9
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected
+    guid f4b40e52-642f-4629-a54a-ea5d2349c448
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics
+    guid 562f7fb0-a331-4a9c-9dec-bfb7586fffff
+
+interface Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3
+    guid 572c5714-7f87-4271-819f-6cf4c4d022d0
+
+interface Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeer
+    guid fb77efbe-39ec-4508-8ac3-51a1424027d7
+
+interface Windows.UI.Xaml.Automation.Peers.IButtonAutomationPeerFactory
+    guid 3fdb9f49-f4ab-4780-8644-03376299a175
+
+interface Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeer
+    guid a4f3b5b6-7585-4e0b-96d2-08cf6f28befa
+
+interface Windows.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory
+    guid 8a04091e-e6b2-4c60-a759-c13ca45165ed
+
+interface Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeer
+    guid 40d8938e-db5e-4b03-beba-d10f62419787
+
+interface Windows.UI.Xaml.Automation.Peers.ICalendarDatePickerAutomationPeerFactory
+    guid ab705dd2-d293-45bf-9f19-26f7603a5e9b
+
+interface Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeer
+    guid dcc44ee0-fa45-45c6-8bb7-320d808f5958
+
+interface Windows.UI.Xaml.Automation.Peers.ICaptureElementAutomationPeerFactory
+    guid 9b92ef48-85e9-4869-b175-8f7cf45a6d9f
+
+interface Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeer
+    guid eb15bc42-c0a9-46c6-ac24-b83de429c733
+
+interface Windows.UI.Xaml.Automation.Peers.ICheckBoxAutomationPeerFactory
+    guid b75c775d-eb8f-44ef-a27c-e26ac7de8333
+
+interface Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeer
+    guid a514215a-7293-4577-924c-47d4e0bf9b90
+
+interface Windows.UI.Xaml.Automation.Peers.IColorPickerSliderAutomationPeerFactory
+    guid 1a55c77e-9dd6-45a3-9042-b40200fea1a9
+
+interface Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeer
+    guid 15d5ba03-010d-4ff7-9087-f4dd09f831b7
+
+interface Windows.UI.Xaml.Automation.Peers.IColorSpectrumAutomationPeerFactory
+    guid 0ac400e1-b743-4496-837a-8889e6ac6497
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeer
+    guid 7eb40d0b-75c5-4263-ba6a-d4a54fb0f239
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxAutomationPeerFactory
+    guid 098e5b0d-1b90-40b9-9be3-b23267eb13cf
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeer
+    guid 12ddc76e-9552-446a-82ee-938cc371800f
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxItemAutomationPeerFactory
+    guid 134ac7fc-397a-403f-a6ec-1ce8beda15e5
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeer
+    guid 4fef6df2-289c-4c04-831b-5a668c6d7104
+
+interface Windows.UI.Xaml.Automation.Peers.IComboBoxItemDataAutomationPeerFactory
+    guid 14a8d4f6-469a-41ba-9d93-44a1a55da872
+
+interface Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeer
+    guid d07d357f-a0b9-45dc-991a-76c505e7d0f5
+
+interface Windows.UI.Xaml.Automation.Peers.IDatePickerAutomationPeerFactory
+    guid e5667d19-9157-4436-9f4d-7fb99174b48e
+
+interface Windows.UI.Xaml.Automation.Peers.IDatePickerFlyoutPresenterAutomationPeer
+    guid 752aed38-c2bf-4880-82b2-a6c05e90c135
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeer
+    guid 8ec0353a-4284-4b00-aef8-a2688ea5e3c4
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewAutomationPeerFactory
+    guid 4395ab0d-8d83-483c-88eb-e2617b0d293f
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeer
+    guid c83034de-fa08-4bd3-aeb2-d2e5bfa04df9
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewItemAutomationPeerFactory
+    guid 69109356-d0e5-4c10-a09c-ad0bf1b0cb01
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeer
+    guid b0986175-00bc-4118-8a6f-16ee9c15d968
+
+interface Windows.UI.Xaml.Automation.Peers.IFlipViewItemDataAutomationPeerFactory
+    guid 3c864393-0aea-4e78-bc11-b775cac4114c
+
+interface Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeer
+    guid a01840b4-5fca-456f-98ea-300eb40b585e
+
+interface Windows.UI.Xaml.Automation.Peers.IFlyoutPresenterAutomationPeerFactory
+    guid f350155f-8924-44c0-ba44-653fe79f1efb
+
+interface Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeer
+    guid b90ad781-bfeb-4451-bd47-9f3a63ebd24a
+
+interface Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerFactory
+    guid 0db9b8bc-b812-48e3-af1f-dbc57600c325
+
+interface Windows.UI.Xaml.Automation.Peers.IFrameworkElementAutomationPeerStatics
+    guid b9c0b997-2820-44a1-a5a8-9b801edc269e
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeer
+    guid 1c4401a4-d951-49ca-8f82-c7f3c60681b0
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewAutomationPeerFactory
+    guid 8aca59dd-22a7-4800-894b-c1f485f38953
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeer
+    guid e3dcef3a-e08a-48e7-b23a-2be5b66e474e
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewHeaderItemAutomationPeerFactory
+    guid 2c80b4d2-ffc2-4157-88dd-59cd92e39715
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeer
+    guid 93ef2d07-346c-4166-a4ba-bc6a181e7f33
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewItemAutomationPeerFactory
+    guid fafec376-f22e-466d-913c-ae24ccdb160f
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeer
+    guid f3f4868f-29d4-4094-8c54-ea61a88294a4
+
+interface Windows.UI.Xaml.Automation.Peers.IGridViewItemDataAutomationPeerFactory
+    guid a65e7a88-770d-402c-996f-67506af2a4af
+
+interface Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeer
+    guid 1914fe6d-0740-4236-9ee1-38cf19c1c388
+
+interface Windows.UI.Xaml.Automation.Peers.IGroupItemAutomationPeerFactory
+    guid 56a64567-f21c-4c90-b379-15a27c7f8409
+
+interface Windows.UI.Xaml.Automation.Peers.IHubAutomationPeer
+    guid 4ddee056-4ebc-4620-a05d-903e3c9a4ead
+
+interface Windows.UI.Xaml.Automation.Peers.IHubAutomationPeerFactory
+    guid c762d43f-79dd-43ee-8777-8d08b39aa065
+
+interface Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeer
+    guid 16d91ff7-7431-4d82-83ce-cfa3192b0f18
+
+interface Windows.UI.Xaml.Automation.Peers.IHubSectionAutomationPeerFactory
+    guid c68e27e8-17ec-4329-91ae-2d0b2339d498
+
+interface Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeer
+    guid aa7afcb1-0edf-46d9-aa9e-0eb21d140097
+
+interface Windows.UI.Xaml.Automation.Peers.IHyperlinkButtonAutomationPeerFactory
+    guid 59bc1661-c182-49af-9526-44b88e628455
+
+interface Windows.UI.Xaml.Automation.Peers.IImageAutomationPeer
+    guid 9b0bbf8c-60a2-48bf-ab2c-1a52a451d2d4
+
+interface Windows.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory
+    guid 90304003-687d-47bf-b3a2-4babcad8ef50
+
+interface Windows.UI.Xaml.Automation.Peers.IInkToolbarAutomationPeer
+    guid 123baaa4-f2e8-4bcb-9382-5dfdd11fe45f
+
+interface Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer
+    guid 953c34f6-3b31-47a7-b3bf-25d3ae99c317
+
+interface Windows.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory
+    guid 29065073-de3d-4d3f-97b4-4d6f9d53444d
+
+interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer
+    guid 96e76bf1-37f7-4088-925d-65268e83e34d
+
+interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2
+    guid c48d8917-95a8-47b8-a517-bf891a6c039b
+
+interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory
+    guid 4038a259-2e1a-49ca-a533-c64f181577e6
+
+interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2
+    guid 361dc0e8-b56f-45e9-80fe-10a0fb0fe177
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+    guid 7f67a4e2-96e0-522b-8710-14c42d834f1e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeer
+    guid 8cd0d608-b402-4a6e-bd9a-343f8845eb32
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeerFactory
+    guid e2362185-7df6-49f7-8abc-4c33f1a3d46e
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeer
+    guid 1bc6e1c6-2997-42df-99eb-92bc1dd149fb
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeerFactory
+    guid 509f9dd8-b0aa-443f-a110-41209af44f1c
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeer
+    guid fd7d5fee-fde0-482a-8084-dcebba5b9806
+
+interface Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeerFactory
+    guid d7924e16-bd8d-4662-a995-20ff9a056093
+
+interface Windows.UI.Xaml.Automation.Peers.IListPickerFlyoutPresenterAutomationPeer
+    guid 56dfdc58-2395-4060-8047-8ea463698a24
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeer
+    guid 73cecc87-c0dc-4260-9148-75e9864a7230
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeerFactory
+    guid 65f39174-eaa2-4e44-8be6-4cca28cd0288
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeer
+    guid 87ec7649-b83d-4e55-9afd-bd835e748f5c
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeerFactory
+    guid 70d3c2be-8950-4647-9362-fd002f8ff82e
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeer
+    guid 7cb8b732-c1f0-4a3c-bc14-85dd48dedb85
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory
+    guid 40ec995f-d631-4004-832e-6d8643e51561
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeer
+    guid 67ab1e4b-ad61-4c88-ba45-0f3a8d061f8f
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeerFactory
+    guid 07668694-2ca5-4be4-a8b9-592d48f76087
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeer
+    guid ca114e70-a16d-4d09-a1cf-1856ef98a9ec
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeerFactory
+    guid c47dfbc0-facc-4024-a73b-17ec4e662654
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeer
+    guid 15a8d7fd-d7a5-4a6c-963c-6f7ce464671a
+
+interface Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeerFactory
+    guid d0db12bb-d715-4523-acc0-1e1072d8e32b
+
+interface Windows.UI.Xaml.Automation.Peers.ILoopingSelectorAutomationPeer
+    guid 50b406ca-bae9-4816-8a3a-0cb4f96478a2
+
+interface Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemAutomationPeer
+    guid d3fa68bf-04cf-4f4c-8d3e-4780a19d4788
+
+interface Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemDataAutomationPeer
+    guid ef567e32-7cd2-4d32-9590-1f588d5ef38d
+
+interface Windows.UI.Xaml.Automation.Peers.IMapControlAutomationPeer
+    guid 425beee4-f2e8-4bcb-9382-5dfdd11fe45f
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeer
+    guid ba0b9fc2-a6e2-41a5-b17a-d1594613efba
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeerFactory
+    guid b2ad3b28-7575-4173-9bc7-80367a164ed2
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeer
+    guid 02bed209-3f65-4fdd-b5ca-c4750d4e6ea4
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeerFactory
+    guid 08848077-82af-4d19-b170-282a9e0e7f37
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeer
+    guid a3ad8d93-79f8-4958-a3c8-980defb83d15
+
+interface Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeerFactory
+    guid f41cb003-e103-4ab0-812a-a08fbdb570ce
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeer
+    guid 4b6adcf1-f274-5592-85a8-7b099e99b320
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeerFactory
+    guid 2a094871-4a9b-5a0b-9fda-7bc3ae957c53
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeer
+    guid 0fce49b4-cff5-5c4b-98ee-e75fdddf799a
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeerFactory
+    guid c9c77746-130f-5b19-83a6-61db584613aa
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeer
+    guid 1fc19462-21df-456e-aa11-8fac6b4b2af6
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeerFactory
+    guid d08bfcb8-20d1-45d8-a2c2-2f130df714e0
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeer
+    guid e244a871-fcbb-48fc-8a93-41ea134b53ce
+
+interface Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeerFactory
+    guid 07b5172d-761d-452b-9e6d-fa2a8be0ad26
+
+interface Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeer
+    guid 309847a5-9971-4d8d-a81c-085c7086a1b9
+
+interface Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory
+    guid 0bc2835d-aa38-4f97-9664-e6fc821d81ed
+
+interface Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeer
+    guid 684f065e-3df3-4b9f-82ad-8819db3b218a
+
+interface Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory
+    guid ac3d7ede-dca4-481c-b520-4a9b3f3b179c
+
+interface Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeer
+    guid 27156d4c-a66f-4aaf-8286-4f796d30628c
+
+interface Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeerFactory
+    guid a95f1f6d-2524-44a4-97fd-1181130100ad
+
+interface Windows.UI.Xaml.Automation.Peers.IPickerFlyoutPresenterAutomationPeer
+    guid 28414bf7-8382-4eae-93c1-d6f035aa8155
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeer
+    guid e715a8f8-3b9d-402c-81e2-6e912ef58981
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeerFactory
+    guid 3efe0f94-0c91-4341-b9ac-1b56b4e6b84f
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeer
+    guid 1a4241ad-5d55-4d27-b40f-2d37506fbe78
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeerFactory
+    guid f2810471-183f-416b-b41a-1e5a958a91f4
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeer
+    guid a2a3b788-ea1d-48b7-88ee-f08b6aa07fee
+
+interface Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeerFactory
+    guid 517a2480-d3b6-412e-82b6-94a0a84c13b0
+
+interface Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeer
+    guid 93f48f86-d840-4fb6-ac2f-5f779b854b0d
+
+interface Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeerFactory
+    guid 364679ab-b80f-41b4-8eea-2f5251bc739c
+
+interface Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeer
+    guid bc305eee-39d3-4eeb-ac33-2394de123e2e
+
+interface Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeerFactory
+    guid f3db204b-157e-40bc-9593-55bc5c71a4f6
+
+interface Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeer
+    guid 7e6a5ed8-0b30-4743-b102-dcdf548e3131
+
+interface Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeerFactory
+    guid 4940c4fd-3d88-49ca-8f31-924187af0bfe
+
+interface Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeer
+    guid e454b549-4b2c-42ad-b04b-d35947d1ee50
+
+interface Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeerFactory
+    guid 827c7601-3078-4479-95ea-91374ca06207
+
+interface Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeer
+    guid 3d14349a-9963-4a47-823c-f457cb3209d5
+
+interface Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeerFactory
+    guid f179f272-9846-4632-8b9c-be6fa8d3c9bb
+
+interface Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeer
+    guid 29e41ad5-a8ac-4e8a-83d8-09e37e054257
+
+interface Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeerFactory
+    guid 6a6ff9d4-575e-4e60-bdd6-ec14419b4ff6
+
+interface Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeer
+    guid c69f5c04-16ee-467a-a833-c3da8458ad64
+
+interface Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeerFactory
+    guid 752c8399-d296-4d87-9020-a4750e885b3c
+
+interface Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeer
+    guid 93a01a9c-9609-41fa-82f3-909c09f49a72
+
+interface Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeerFactory
+    guid 2038ae61-1389-467a-aed6-37334da9622b
+
+interface Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeer
+    guid 8c9a409a-2736-437b-ab36-a16a202f105d
+
+interface Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory
+    guid bd5eb663-2c14-4665-adef-f2b033947beb
+
+interface Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeer
+    guid 69e0c369-bbe7-41f2-87ca-aad813fe550e
+
+interface Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory
+    guid e1302110-afeb-4595-8e3d-edc0844a2b21
+
+interface Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeer
+    guid d985f259-1b09-4e88-88fd-421750dc6b45
+
+interface Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory
+    guid 270dff7d-d96d-48f9-a36a-c252aa9c4670
+
+interface Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeer
+    guid 854011a4-18a6-4f30-939b-8871afa3f5e9
+
+interface Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeerFactory
+    guid b3c01430-7faa-41bb-8e91-7c761c5267f1
+
+interface Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeer
+    guid 162ac829-7115-43ec-b383-a7b71644069d
+
+interface Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeerFactory
+    guid 7b525646-829b-4dcc-bd52-5a8d0399387a
+
+interface Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeer
+    guid ae8b3477-860a-45bb-bf7c-e1b27419d1dd
+
+interface Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeerFactory
+    guid 66d7edfb-786d-4362-a964-ebfb21776c30
+
+interface Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeer
+    guid 3c2fac6c-a977-47fc-b44e-2754c0b2bea9
+
+interface Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeerFactory
+    guid f518d44d-a493-4496-b077-9674c7f4c5fa
+
+interface Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeer
+    guid d0de0cdb-30cf-47a6-a5eb-9c77f0b0d6dd
+
+interface Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeerFactory
+    guid f94762bd-8a14-40e4-94a7-3f33c922e945
+
+interface Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeer
+    guid ec30015a-d611-46d0-ae4f-6ecf27dfbaa5
+
+interface Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeerFactory
+    guid 971b8056-9a7a-4df9-95fa-6f5c04c91cac
+
+interface Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeer
+    guid be2057f5-6715-4e69-a050-92bd0ce232a9
+
+interface Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeerFactory
+    guid 76bf924b-7ca0-4b01-bc5c-a8cf4d3691de
+
+interface Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeer
+    guid 3a4f1ca0-5e5d-4d26-9067-e740bf657a9f
+
+interface Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeerFactory
+    guid 01f0c067-966b-4130-b872-469e42bd4a7f
+
+interface Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeer
+    guid dc2949b5-b45e-4d6d-892f-d9422c950efb
+
+interface Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeerFactory
+    guid 970743ff-af41-4600-b55d-26d43df860e1
+
+interface Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeer
+    guid a43d44ef-3285-4df7-b4a4-e4cdf36a3a17
+
+interface Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeerFactory
+    guid 978f6671-47f8-40a7-9e21-68128b16b4fd
+
+interface Windows.UI.Xaml.Automation.Peers.ITimePickerFlyoutPresenterAutomationPeer
+    guid da93ee27-82f1-4701-8706-be297bf06043
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeer
+    guid 62dbe6c5-bc0a-45bb-bf77-ea0f1502891f
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeerFactory
+    guid c9218cc4-ad4b-4d03-a6a4-7d59e6360004
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeer
+    guid 6b57eafe-6af1-4903-8373-3437bf352345
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeerFactory
+    guid 94364b77-8f6c-4837-aae3-94d010d8d162
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeer
+    guid c011f174-e89e-4790-bf9a-78ebb5f59e9f
+
+interface Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeerFactory
+    guid 31f933e3-fef8-4419-9df5-d9ef7196ea34
+
+interface Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeer
+    guid 2331d648-b617-437f-920c-71d450503e65
+
+interface Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeerFactory
+    guid 73d388bf-1d01-4159-82c0-2b2996dbfdce
+
+interface Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeer
+    guid 71c1b5bc-bb29-4479-a8a8-606be6b823ae
+
+interface Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory
+    guid 00f597e2-f811-475a-bfe6-290fe707fa88
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+    guid a8d8a409-9130-5e14-8426-0782aaf01608
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete
+    guid d353f885-4bf0-5dc2-878e-ec7a394ee880
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a}))
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+    guid b56a6076-19e2-50c1-930f-825bfc39635c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.ImageAutomationPeer composable python_type
+    py ImageAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ImageAutomationPeer;{9b0bbf8c-60a2-48bf-ab2c-1a52a451d2d4})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IImageAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IImageAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Image name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ImageAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.InkToolbarAutomationPeer python_type
+    py InkToolbarAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.InkToolbarAutomationPeer;{123baaa4-f2e8-4bcb-9382-5dfdd11fe45f})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IInkToolbarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IInkToolbarAutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer composable python_type
+    py ItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer;{953c34f6-3b31-47a7-b3bf-25d3ae99c317})
+    base Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer return
+    property item
+        get get_Item slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer shape=4 reverse=22
+            out object return
+    property items_control_automation_peer
+        get get_ItemsControlAutomationPeer slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemAutomationPeer shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer return
+    method realize
+        method Realize slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer composable python_type
+    py ItemsControlAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer;{96e76bf1-37f7-4088-925d-65268e83e34d})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2
+    requires Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2
+    requires Windows.UI.Xaml.Automation.Provider.IItemContainerProvider
+    composable Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory
+    overridable Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ItemsControl name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer return
+    method create_item_automation_peer
+        method CreateItemAutomationPeer slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeer2 shape=51 reverse=24
+            in object name=item
+            out class type=Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer return
+    method find_item_by_property
+        method FindItemByProperty slot=6 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IItemContainerProvider shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=startAfter
+            in class type=Windows.UI.Xaml.Automation.AutomationProperty name=automationProperty
+            in object name=value
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method _on_create_item_automation_peer
+        method OnCreateItemAutomationPeer slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2 shape=51 reverse=24 overridable
+            in object name=item
+            out class type=Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListBoxAutomationPeer composable python_type
+    py ListBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListBoxAutomationPeer;{8cd0d608-b402-4a6e-bd9a-343f8845eb32})
+    base Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListBoxAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListBoxItemAutomationPeer composable python_type
+    py ListBoxItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListBoxItemAutomationPeer;{1bc6e1c6-2997-42df-99eb-92bc1dd149fb})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListBoxItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListBoxItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListBoxItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer composable python_type
+    py ListBoxItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer;{fd7d5fee-fde0-482a-8084-dcebba5b9806})
+    base Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListBoxItemDataAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.ListBoxAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListBoxItemDataAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.ListPickerFlyoutPresenterAutomationPeer python_type
+    py ListPickerFlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListPickerFlyoutPresenterAutomationPeer;{56dfdc58-2395-4060-8047-8ea463698a24})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListPickerFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListPickerFlyoutPresenterAutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.ListViewAutomationPeer composable python_type
+    py ListViewAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewAutomationPeer;{73cecc87-c0dc-4260-9148-75e9864a7230})
+    base Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListViewAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListView name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListViewAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer composable python_type
+    py ListViewBaseAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer;{87ec7649-b83d-4e55-9afd-bd835e748f5c})
+    base Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IDropTargetProvider
+    composable Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListViewBaseAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListViewBase name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer return
+    property drop_effect
+        get get_DropEffect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IDropTargetProvider shape=4 reverse=22
+            out string return
+    property drop_effects
+        get get_DropEffects slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IDropTargetProvider shape=51 reverse=44
+            receive_array string return
+
+class Windows.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer composable python_type
+    py ListViewBaseHeaderItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer;{7cb8b732-c1f0-4a3c-bc14-85dd48dedb85})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory
+
+class Windows.UI.Xaml.Automation.Peers.ListViewHeaderItemAutomationPeer composable python_type
+    py ListViewHeaderItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewHeaderItemAutomationPeer;{67ab1e4b-ad61-4c88-ba45-0f3a8d061f8f})
+    base Windows.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListViewHeaderItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListViewHeaderItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListViewHeaderItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListViewItemAutomationPeer composable python_type
+    py ListViewItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewItemAutomationPeer;{ca114e70-a16d-4d09-a1cf-1856ef98a9ec})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListViewItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ListViewItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListViewItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer composable python_type
+    py ListViewItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer;{15a8d7fd-d7a5-4a6c-963c-6f7ce464671a})
+    base Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IListViewItemDataAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.ListViewBaseAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ListViewItemDataAutomationPeer return
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer python_type
+    py LoopingSelectorAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer;{50b406ca-bae9-4816-8a3a-0cb4f96478a2})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ILoopingSelectorAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ILoopingSelectorAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionProvider
+    requires Windows.UI.Xaml.Automation.Provider.IItemContainerProvider
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    requires Windows.UI.Xaml.Automation.Provider.IScrollProvider
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    property horizontal_scroll_percent
+        get get_HorizontalScrollPercent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=43
+            out double return
+    property horizontal_view_size
+        get get_HorizontalViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=62
+            out double return
+    property horizontally_scrollable
+        get get_HorizontallyScrollable slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=22
+            out boolean return
+    property vertical_scroll_percent
+        get get_VerticalScrollPercent slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=121
+            out double return
+    property vertical_view_size
+        get get_VerticalViewSize slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=141
+            out double return
+    property vertically_scrollable
+        get get_VerticallyScrollable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=99
+            out boolean return
+    property can_select_multiple
+        get get_CanSelectMultiple slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=22
+            out boolean return
+    property is_selection_required
+        get get_IsSelectionRequired slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=43
+            out boolean return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+    method find_item_by_property
+        method FindItemByProperty slot=6 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IItemContainerProvider shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=startAfter
+            in class type=Windows.UI.Xaml.Automation.AutomationProperty name=automationProperty
+            in object name=value
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=51 reverse=65
+            receive_array class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method scroll
+        method Scroll slot=12 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=51 reverse=163
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=horizontalAmount
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=verticalAmount
+    method set_scroll_percent
+        method SetScrollPercent slot=13 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=45 reverse=172
+            in double name=horizontalPercent
+            in double name=verticalPercent
+
+class Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer python_type
+    py LoopingSelectorItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer;{d3fa68bf-04cf-4f4c-8d3e-4780a19d4788})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider
+    property is_selected
+        get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=22
+            out boolean return
+    property selection_container
+        get get_SelectionContainer slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method add_to_selection
+        method AddToSelection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=55
+    method remove_from_selection
+        method RemoveFromSelection slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=93
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+    method select
+        method Select slot=10 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=117
+
+class Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer python_type
+    py LoopingSelectorItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer;{ef567e32-7cd2-4d32-9590-1f588d5ef38d})
+    base Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ILoopingSelectorItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider
+    method realize
+        method Realize slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer python_type
+    py MapControlAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MapControlAutomationPeer;{425beee4-f2e8-4bcb-9382-5dfdd11fe45f})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMapControlAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMapControlAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollProvider
+    requires Windows.UI.Xaml.Automation.Provider.ITransformProvider2
+    requires Windows.UI.Xaml.Automation.Provider.ITransformProvider
+    property horizontal_scroll_percent
+        get get_HorizontalScrollPercent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=43
+            out double return
+    property horizontal_view_size
+        get get_HorizontalViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=62
+            out double return
+    property horizontally_scrollable
+        get get_HorizontallyScrollable slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=22
+            out boolean return
+    property vertical_scroll_percent
+        get get_VerticalScrollPercent slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=121
+            out double return
+    property vertical_view_size
+        get get_VerticalViewSize slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=141
+            out double return
+    property vertically_scrollable
+        get get_VerticallyScrollable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=99
+            out boolean return
+    property can_move
+        get get_CanMove slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=22
+            out boolean return
+    property can_resize
+        get get_CanResize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=43
+            out boolean return
+    property can_rotate
+        get get_CanRotate slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=62
+            out boolean return
+    property can_zoom
+        get get_CanZoom slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=22
+            out boolean return
+    property max_zoom
+        get get_MaxZoom slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=62
+            out double return
+    property min_zoom
+        get get_MinZoom slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=99
+            out double return
+    property zoom_level
+        get get_ZoomLevel slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=43
+            out double return
+    method move
+        method Move slot=9 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=96
+            in double name=x
+            in double name=y
+    method resize
+        method Resize slot=10 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=120
+            in double name=width
+            in double name=height
+    method rotate
+        method Rotate slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider shape=2 reverse=138
+            in double name=degrees
+    method scroll
+        method Scroll slot=12 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=51 reverse=163
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=horizontalAmount
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=verticalAmount
+    method set_scroll_percent
+        method SetScrollPercent slot=13 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=45 reverse=172
+            in double name=horizontalPercent
+            in double name=verticalPercent
+    method zoom
+        method Zoom slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=2 reverse=119
+            in double name=zoom
+    method zoom_by_unit
+        method ZoomByUnit slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=141
+            in enum32 type=Windows.UI.Xaml.Automation.ZoomUnit name=zoomUnit
+
+class Windows.UI.Xaml.Automation.Peers.MediaElementAutomationPeer composable python_type
+    py MediaElementAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MediaElementAutomationPeer;{ba0b9fc2-a6e2-41a5-b17a-d1594613efba})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMediaElementAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MediaElement name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MediaElementAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer composable python_type
+    py MediaPlayerElementAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer;{02bed209-3f65-4fdd-b5ca-c4750d4e6ea4})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMediaPlayerElementAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MediaPlayerElement name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.MediaTransportControlsAutomationPeer composable python_type
+    py MediaTransportControlsAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MediaTransportControlsAutomationPeer;{a3ad8d93-79f8-4958-a3c8-980defb83d15})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMediaTransportControlsAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MediaTransportControls name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MediaTransportControlsAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.MenuBarAutomationPeer composable python_type
+    py MenuBarAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MenuBarAutomationPeer;{4b6adcf1-f274-5592-85a8-7b099e99b320})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMenuBarAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MenuBar name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MenuBarAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer composable python_type
+    py MenuBarItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer;{0fce49b4-cff5-5c4b-98ee-e75fdddf799a})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    composable Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMenuBarItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MenuBarItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MenuBarItemAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer composable python_type
+    py MenuFlyoutItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer;{1fc19462-21df-456e-aa11-8fac6b4b2af6})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    composable Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMenuFlyoutItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MenuFlyoutItemAutomationPeer return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.MenuFlyoutPresenterAutomationPeer composable python_type
+    py MenuFlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.MenuFlyoutPresenterAutomationPeer;{e244a871-fcbb-48fc-8a93-41ea134b53ce})
+    base Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IMenuFlyoutPresenterAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutPresenter name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.MenuFlyoutPresenterAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.NavigationViewItemAutomationPeer composable python_type
+    py NavigationViewItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.NavigationViewItemAutomationPeer;{309847a5-9971-4d8d-a81c-085c7086a1b9})
+    base Windows.UI.Xaml.Automation.Peers.ListViewItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.NavigationViewItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.NavigationViewItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.PasswordBoxAutomationPeer composable python_type
+    py PasswordBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PasswordBoxAutomationPeer;{684f065e-3df3-4b9f-82ad-8819db3b218a})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.PasswordBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.PasswordBoxAutomationPeer return
+
+enum Windows.UI.Xaml.Automation.Peers.PatternInterface python_type
+    py PatternInterface
+    signature enum(Windows.UI.Xaml.Automation.Peers.PatternInterface;i4)
+
+class Windows.UI.Xaml.Automation.Peers.PersonPictureAutomationPeer composable python_type
+    py PersonPictureAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PersonPictureAutomationPeer;{27156d4c-a66f-4aaf-8286-4f796d30628c})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.PersonPicture name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.PersonPictureAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.PickerFlyoutPresenterAutomationPeer python_type
+    py PickerFlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PickerFlyoutPresenterAutomationPeer;{28414bf7-8382-4eae-93c1-d6f035aa8155})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPickerFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPickerFlyoutPresenterAutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer python_type
+    py PivotAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer;{e715a8f8-3b9d-402c-81e2-6e912ef58981})
+    base Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionProvider
+    requires Windows.UI.Xaml.Automation.Provider.IScrollProvider
+    factory Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IPivotAutomationPeerFactory shape=51 reverse=24
+            in class type=Windows.UI.Xaml.Controls.Pivot name=owner
+            out class type=Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer return
+    property horizontal_scroll_percent
+        get get_HorizontalScrollPercent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=43
+            out double return
+    property horizontal_view_size
+        get get_HorizontalViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=62
+            out double return
+    property horizontally_scrollable
+        get get_HorizontallyScrollable slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=22
+            out boolean return
+    property vertical_scroll_percent
+        get get_VerticalScrollPercent slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=121
+            out double return
+    property vertical_view_size
+        get get_VerticalViewSize slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=141
+            out double return
+    property vertically_scrollable
+        get get_VerticallyScrollable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=99
+            out boolean return
+    property can_select_multiple
+        get get_CanSelectMultiple slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=22
+            out boolean return
+    property is_selection_required
+        get get_IsSelectionRequired slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=43
+            out boolean return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=51 reverse=65
+            receive_array class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method scroll
+        method Scroll slot=12 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=51 reverse=163
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=horizontalAmount
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=verticalAmount
+    method set_scroll_percent
+        method SetScrollPercent slot=13 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=45 reverse=172
+            in double name=horizontalPercent
+            in double name=verticalPercent
+
+class Windows.UI.Xaml.Automation.Peers.PivotItemAutomationPeer python_type
+    py PivotItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PivotItemAutomationPeer;{1a4241ad-5d55-4d27-b40f-2d37506fbe78})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeer
+    factory Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IPivotItemAutomationPeerFactory shape=51 reverse=24
+            in class type=Windows.UI.Xaml.Controls.PivotItem name=owner
+            out class type=Windows.UI.Xaml.Automation.Peers.PivotItemAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer python_type
+    py PivotItemDataAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer;{a2a3b788-ea1d-48b7-88ee-f08b6aa07fee})
+    base Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollItemProvider
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider
+    requires Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider
+    factory Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IPivotItemDataAutomationPeerFactory shape=117 reverse=25
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.PivotAutomationPeer name=parent
+            out class type=Windows.UI.Xaml.Automation.Peers.PivotItemDataAutomationPeer return
+    property is_selected
+        get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=22
+            out boolean return
+    property selection_container
+        get get_SelectionContainer slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method add_to_selection
+        method AddToSelection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=55
+    method realize
+        method Realize slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider shape=0 reverse=16
+    method remove_from_selection
+        method RemoveFromSelection slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=93
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+    method select
+        method Select slot=10 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=117
+
+class Windows.UI.Xaml.Automation.Peers.ProgressBarAutomationPeer composable python_type
+    py ProgressBarAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ProgressBarAutomationPeer;{93f48f86-d840-4fb6-ac2f-5f779b854b0d})
+    base Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IProgressBarAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ProgressBar name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ProgressBarAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ProgressRingAutomationPeer composable python_type
+    py ProgressRingAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ProgressRingAutomationPeer;{bc305eee-39d3-4eeb-ac33-2394de123e2e})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IProgressRingAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ProgressRing name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ProgressRingAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer composable python_type
+    py RadioButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer;{7e6a5ed8-0b30-4743-b102-dcdf548e3131})
+    base Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRadioButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.RadioButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RadioButtonAutomationPeer return
+    property is_selected
+        get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=22
+            out boolean return
+    property selection_container
+        get get_SelectionContainer slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method add_to_selection
+        method AddToSelection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=55
+    method remove_from_selection
+        method RemoveFromSelection slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=93
+    method select
+        method Select slot=10 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=117
+
+class Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer composable python_type
+    py RangeBaseAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer;{e454b549-4b2c-42ad-b04b-d35947d1ee50})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IRangeValueProvider
+    composable Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRangeBaseAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.RangeBase name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer return
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=22
+            out boolean return
+    property large_change
+        get get_LargeChange slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=43
+            out double return
+    property maximum
+        get get_Maximum slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=62
+            out double return
+    property minimum
+        get get_Minimum slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=99
+            out double return
+    property small_change
+        get get_SmallChange slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=121
+            out double return
+    property value
+        get get_Value slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=141
+            out double return
+    method set_value
+        method SetValue slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IRangeValueProvider shape=2 reverse=160
+            in double name=value
+
+class Windows.UI.Xaml.Automation.Peers.RatingControlAutomationPeer composable python_type
+    py RatingControlAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RatingControlAutomationPeer;{3d14349a-9963-4a47-823c-f457cb3209d5})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRatingControlAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.RatingControl name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RatingControlAutomationPeer return
+
+struct Windows.UI.Xaml.Automation.Peers.RawElementProviderRuntimeId python_type
+    py RawElementProviderRuntimeId
+    signature struct(Windows.UI.Xaml.Automation.Peers.RawElementProviderRuntimeId;u4;u4)
+    field part1 Part1 uint32
+    field part2 Part2 uint32
+
+class Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer composable python_type
+    py RepeatButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer;{29e41ad5-a8ac-4e8a-83d8-09e37e054257})
+    base Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IInvokeProvider
+    composable Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRepeatButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.RepeatButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RepeatButtonAutomationPeer return
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+class Windows.UI.Xaml.Automation.Peers.RichEditBoxAutomationPeer composable python_type
+    py RichEditBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RichEditBoxAutomationPeer;{c69f5c04-16ee-467a-a833-c3da8458ad64})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRichEditBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.RichEditBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RichEditBoxAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.RichTextBlockAutomationPeer composable python_type
+    py RichTextBlockAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RichTextBlockAutomationPeer;{93a01a9c-9609-41fa-82f3-909c09f49a72})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRichTextBlockAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.RichTextBlock name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RichTextBlockAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.RichTextBlockOverflowAutomationPeer composable python_type
+    py RichTextBlockOverflowAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.RichTextBlockOverflowAutomationPeer;{8c9a409a-2736-437b-ab36-a16a202f105d})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.RichTextBlockOverflow name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.RichTextBlockOverflowAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ScrollBarAutomationPeer composable python_type
+    py ScrollBarAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ScrollBarAutomationPeer;{69e0c369-bbe7-41f2-87ca-aad813fe550e})
+    base Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.ScrollBar name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ScrollBarAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer composable python_type
+    py ScrollViewerAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer;{d985f259-1b09-4e88-88fd-421750dc6b45})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IScrollProvider
+    composable Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ScrollViewer name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer return
+    property horizontal_scroll_percent
+        get get_HorizontalScrollPercent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=43
+            out double return
+    property horizontal_view_size
+        get get_HorizontalViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=62
+            out double return
+    property horizontally_scrollable
+        get get_HorizontallyScrollable slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=22
+            out boolean return
+    property vertical_scroll_percent
+        get get_VerticalScrollPercent slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=121
+            out double return
+    property vertical_view_size
+        get get_VerticalViewSize slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=141
+            out double return
+    property vertically_scrollable
+        get get_VerticallyScrollable slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=99
+            out boolean return
+    method scroll
+        method Scroll slot=12 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=51 reverse=163
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=horizontalAmount
+            in enum32 type=Windows.UI.Xaml.Automation.ScrollAmount name=verticalAmount
+    method set_scroll_percent
+        method SetScrollPercent slot=13 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IScrollProvider shape=45 reverse=172
+            in double name=horizontalPercent
+            in double name=verticalPercent
+
+class Windows.UI.Xaml.Automation.Peers.SearchBoxAutomationPeer composable python_type
+    py SearchBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SearchBoxAutomationPeer;{854011a4-18a6-4f30-939b-8871afa3f5e9})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISearchBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.SearchBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SearchBoxAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer composable python_type
+    py SelectorAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer;{162ac829-7115-43ec-b383-a7b71644069d})
+    base Windows.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionProvider
+    composable Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISelectorAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.Selector name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer return
+    property can_select_multiple
+        get get_CanSelectMultiple slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=22
+            out boolean return
+    property is_selection_required
+        get get_IsSelectionRequired slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=43
+            out boolean return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionProvider shape=51 reverse=65
+            receive_array class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+class Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer composable python_type
+    py SelectorItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer;{ae8b3477-860a-45bb-bf7c-e1b27419d1dd})
+    base Windows.UI.Xaml.Automation.Peers.ItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider
+    composable Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISelectorItemAutomationPeerFactory shape=239 reverse=27
+            in object name=item
+            in class type=Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer name=parent
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SelectorItemAutomationPeer return
+    property is_selected
+        get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=22
+            out boolean return
+    property selection_container
+        get get_SelectionContainer slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method add_to_selection
+        method AddToSelection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=55
+    method remove_from_selection
+        method RemoveFromSelection slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=93
+    method select
+        method Select slot=10 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=117
+
+class Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer composable python_type
+    py SemanticZoomAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer;{3c2fac6c-a977-47fc-b44e-2754c0b2bea9})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IToggleProvider
+    composable Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISemanticZoomAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.SemanticZoom name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SemanticZoomAutomationPeer return
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ToggleState return
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+
+class Windows.UI.Xaml.Automation.Peers.SettingsFlyoutAutomationPeer composable python_type
+    py SettingsFlyoutAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SettingsFlyoutAutomationPeer;{d0de0cdb-30cf-47a6-a5eb-9c77f0b0d6dd})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISettingsFlyoutAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.SettingsFlyout name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SettingsFlyoutAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.SliderAutomationPeer composable python_type
+    py SliderAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.SliderAutomationPeer;{ec30015a-d611-46d0-ae4f-6ecf27dfbaa5})
+    base Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ISliderAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Slider name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.SliderAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.TextBlockAutomationPeer composable python_type
+    py TextBlockAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TextBlockAutomationPeer;{be2057f5-6715-4e69-a050-92bd0ce232a9})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ITextBlockAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.TextBlock name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.TextBlockAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer composable python_type
+    py TextBoxAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer;{3a4f1ca0-5e5d-4d26-9067-e740bf657a9f})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ITextBoxAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.TextBox name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.ThumbAutomationPeer composable python_type
+    py ThumbAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ThumbAutomationPeer;{dc2949b5-b45e-4d6d-892f-d9422c950efb})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IThumbAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.Thumb name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ThumbAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.TimePickerAutomationPeer composable python_type
+    py TimePickerAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TimePickerAutomationPeer;{a43d44ef-3285-4df7-b4a4-e4cdf36a3a17})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ITimePickerAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.TimePicker name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.TimePickerAutomationPeer return
+
+class Windows.UI.Xaml.Automation.Peers.TimePickerFlyoutPresenterAutomationPeer python_type
+    py TimePickerFlyoutPresenterAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TimePickerFlyoutPresenterAutomationPeer;{da93ee27-82f1-4701-8706-be297bf06043})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITimePickerFlyoutPresenterAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITimePickerFlyoutPresenterAutomationPeer
+
+class Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer composable python_type
+    py ToggleButtonAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer;{62dbe6c5-bc0a-45bb-bf77-ea0f1502891f})
+    base Windows.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IToggleProvider
+    composable Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IToggleButtonAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.Primitives.ToggleButton name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ToggleButtonAutomationPeer return
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ToggleState return
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+
+class Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer composable python_type
+    py ToggleMenuFlyoutItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer;{6b57eafe-6af1-4903-8373-3437bf352345})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IToggleProvider
+    composable Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IToggleMenuFlyoutItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ToggleMenuFlyoutItemAutomationPeer return
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ToggleState return
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+
+class Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer composable python_type
+    py ToggleSwitchAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer;{c011f174-e89e-4790-bf9a-78ebb5f59e9f})
+    base Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IToggleProvider
+    composable Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IToggleSwitchAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.ToggleSwitch name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.ToggleSwitchAutomationPeer return
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ToggleState return
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+
+class Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer composable python_type
+    py TreeViewItemAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer;{2331d648-b617-437f-920c-71d450503e65})
+    base Windows.UI.Xaml.Automation.Peers.ListViewItemAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeer
+    requires Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    composable Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ITreeViewItemAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.TreeViewItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.TreeViewItemAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Automation.ExpandCollapseState return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+
+class Windows.UI.Xaml.Automation.Peers.TreeViewListAutomationPeer composable python_type
+    py TreeViewListAutomationPeer
+    signature rc(Windows.UI.Xaml.Automation.Peers.TreeViewListAutomationPeer;{71c1b5bc-bb29-4479-a8a8-606be6b823ae})
+    base Windows.UI.Xaml.Automation.Peers.SelectorAutomationPeer
+    default Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeer
+    requires Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeer
+    composable Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory shape=195 reverse=26
+            in class type=Windows.UI.Xaml.Controls.TreeViewList name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Automation.Peers.TreeViewListAutomationPeer return
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.UI.Xaml.DependencyObject external
+    py winrt.windows.ui.xaml.DependencyObject
+
+class Windows.UI.Xaml.DependencyProperty external
+    py winrt.windows.ui.xaml.DependencyProperty
+
+class Windows.UI.Xaml.FrameworkElement external
+    py winrt.windows.ui.xaml.FrameworkElement
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement
+
+enum Windows.UI.Xaml.Automation.AnnotationType external
+    py winrt.windows.ui.xaml.automation.AnnotationType
+
+class Windows.UI.Xaml.Automation.AutomationProperty external
+    py winrt.windows.ui.xaml.automation.AutomationProperty
+
+enum Windows.UI.Xaml.Automation.AutomationTextEditChangeType external
+    py winrt.windows.ui.xaml.automation.AutomationTextEditChangeType
+
+enum Windows.UI.Xaml.Automation.ExpandCollapseState external
+    py winrt.windows.ui.xaml.automation.ExpandCollapseState
+
+enum Windows.UI.Xaml.Automation.ScrollAmount external
+    py winrt.windows.ui.xaml.automation.ScrollAmount
+
+enum Windows.UI.Xaml.Automation.ToggleState external
+    py winrt.windows.ui.xaml.automation.ToggleState
+
+enum Windows.UI.Xaml.Automation.WindowInteractionState external
+    py winrt.windows.ui.xaml.automation.WindowInteractionState
+
+enum Windows.UI.Xaml.Automation.WindowVisualState external
+    py winrt.windows.ui.xaml.automation.WindowVisualState
+
+enum Windows.UI.Xaml.Automation.ZoomUnit external
+    py winrt.windows.ui.xaml.automation.ZoomUnit
+
+interface Windows.UI.Xaml.Automation.Provider.IDropTargetProvider external
+    py winrt.windows.ui.xaml.automation.provider._IDropTargetProvider
+    guid 7a245bdd-b458-4fe0-98c8-aac89df56d61
+
+interface Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider external
+    py winrt.windows.ui.xaml.automation.provider._IExpandCollapseProvider
+    guid 49ac8399-d626-4543-94b9-a6d9a9593af6
+
+interface Windows.UI.Xaml.Automation.Provider.IInvokeProvider external
+    py winrt.windows.ui.xaml.automation.provider._IInvokeProvider
+    guid f7d1a187-b13c-4540-b09e-6778e2dc9ba5
+
+interface Windows.UI.Xaml.Automation.Provider.IItemContainerProvider external
+    py winrt.windows.ui.xaml.automation.provider._IItemContainerProvider
+    guid ef5cd845-e1d4-40f4-bad5-c7fad44a703e
+
+interface Windows.UI.Xaml.Automation.Provider.IRangeValueProvider external
+    py winrt.windows.ui.xaml.automation.provider._IRangeValueProvider
+    guid 838a34a8-7d5f-4079-af03-c3d015e93413
+
+class Windows.UI.Xaml.Automation.Provider.IRawElementProviderSimple external
+    py winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple
+
+interface Windows.UI.Xaml.Automation.Provider.IScrollItemProvider external
+    py winrt.windows.ui.xaml.automation.provider._IScrollItemProvider
+    guid 9a3ec090-5d2c-4e42-9ee6-9d58db100b55
+
+interface Windows.UI.Xaml.Automation.Provider.IScrollProvider external
+    py winrt.windows.ui.xaml.automation.provider._IScrollProvider
+    guid 374bf581-7716-4bbc-82eb-d997006ea999
+
+interface Windows.UI.Xaml.Automation.Provider.ISelectionItemProvider external
+    py winrt.windows.ui.xaml.automation.provider._ISelectionItemProvider
+    guid 6a4977c1-830d-42d2-bf62-042ebddecc19
+
+interface Windows.UI.Xaml.Automation.Provider.ISelectionProvider external
+    py winrt.windows.ui.xaml.automation.provider._ISelectionProvider
+    guid 1f018fca-b944-4395-8de1-88f674af51d3
+
+interface Windows.UI.Xaml.Automation.Provider.IToggleProvider external
+    py winrt.windows.ui.xaml.automation.provider._IToggleProvider
+    guid 93b88290-656f-44f7-aeaf-78b8f944d062
+
+interface Windows.UI.Xaml.Automation.Provider.ITransformProvider external
+    py winrt.windows.ui.xaml.automation.provider._ITransformProvider
+    guid 79670fdd-f6a9-4a65-af17-861db799a2da
+
+interface Windows.UI.Xaml.Automation.Provider.ITransformProvider2 external
+    py winrt.windows.ui.xaml.automation.provider._ITransformProvider2
+    guid a8b11756-a39f-4e97-8c7d-c1ea8dd633c5
+
+interface Windows.UI.Xaml.Automation.Provider.IValueProvider external
+    py winrt.windows.ui.xaml.automation.provider._IValueProvider
+    guid 2086b7a7-ac0e-47d1-ab9b-2a64292afdf8
+
+interface Windows.UI.Xaml.Automation.Provider.IVirtualizedItemProvider external
+    py winrt.windows.ui.xaml.automation.provider._IVirtualizedItemProvider
+    guid 17d4a04b-d658-48e0-a574-5a516c58dfa7
+
+interface Windows.UI.Xaml.Automation.Provider.IWindowProvider external
+    py winrt.windows.ui.xaml.automation.provider._IWindowProvider
+    guid 1baa8b3d-38cf-415a-85d3-20e43a0ec1b1
+
+class Windows.UI.Xaml.Controls.AppBar external
+    py winrt.windows.ui.xaml.controls.AppBar
+
+class Windows.UI.Xaml.Controls.AppBarButton external
+    py winrt.windows.ui.xaml.controls.AppBarButton
+
+class Windows.UI.Xaml.Controls.AppBarToggleButton external
+    py winrt.windows.ui.xaml.controls.AppBarToggleButton
+
+class Windows.UI.Xaml.Controls.AutoSuggestBox external
+    py winrt.windows.ui.xaml.controls.AutoSuggestBox
+
+class Windows.UI.Xaml.Controls.Button external
+    py winrt.windows.ui.xaml.controls.Button
+
+class Windows.UI.Xaml.Controls.CalendarDatePicker external
+    py winrt.windows.ui.xaml.controls.CalendarDatePicker
+
+class Windows.UI.Xaml.Controls.CaptureElement external
+    py winrt.windows.ui.xaml.controls.CaptureElement
+
+class Windows.UI.Xaml.Controls.CheckBox external
+    py winrt.windows.ui.xaml.controls.CheckBox
+
+class Windows.UI.Xaml.Controls.ComboBox external
+    py winrt.windows.ui.xaml.controls.ComboBox
+
+class Windows.UI.Xaml.Controls.ComboBoxItem external
+    py winrt.windows.ui.xaml.controls.ComboBoxItem
+
+class Windows.UI.Xaml.Controls.DatePicker external
+    py winrt.windows.ui.xaml.controls.DatePicker
+
+class Windows.UI.Xaml.Controls.FlipView external
+    py winrt.windows.ui.xaml.controls.FlipView
+
+class Windows.UI.Xaml.Controls.FlipViewItem external
+    py winrt.windows.ui.xaml.controls.FlipViewItem
+
+class Windows.UI.Xaml.Controls.FlyoutPresenter external
+    py winrt.windows.ui.xaml.controls.FlyoutPresenter
+
+class Windows.UI.Xaml.Controls.GridView external
+    py winrt.windows.ui.xaml.controls.GridView
+
+class Windows.UI.Xaml.Controls.GridViewHeaderItem external
+    py winrt.windows.ui.xaml.controls.GridViewHeaderItem
+
+class Windows.UI.Xaml.Controls.GridViewItem external
+    py winrt.windows.ui.xaml.controls.GridViewItem
+
+class Windows.UI.Xaml.Controls.GroupItem external
+    py winrt.windows.ui.xaml.controls.GroupItem
+
+class Windows.UI.Xaml.Controls.Hub external
+    py winrt.windows.ui.xaml.controls.Hub
+
+class Windows.UI.Xaml.Controls.HubSection external
+    py winrt.windows.ui.xaml.controls.HubSection
+
+class Windows.UI.Xaml.Controls.HyperlinkButton external
+    py winrt.windows.ui.xaml.controls.HyperlinkButton
+
+class Windows.UI.Xaml.Controls.Image external
+    py winrt.windows.ui.xaml.controls.Image
+
+class Windows.UI.Xaml.Controls.ItemsControl external
+    py winrt.windows.ui.xaml.controls.ItemsControl
+
+class Windows.UI.Xaml.Controls.ListBox external
+    py winrt.windows.ui.xaml.controls.ListBox
+
+class Windows.UI.Xaml.Controls.ListBoxItem external
+    py winrt.windows.ui.xaml.controls.ListBoxItem
+
+class Windows.UI.Xaml.Controls.ListView external
+    py winrt.windows.ui.xaml.controls.ListView
+
+class Windows.UI.Xaml.Controls.ListViewBase external
+    py winrt.windows.ui.xaml.controls.ListViewBase
+
+class Windows.UI.Xaml.Controls.ListViewHeaderItem external
+    py winrt.windows.ui.xaml.controls.ListViewHeaderItem
+
+class Windows.UI.Xaml.Controls.ListViewItem external
+    py winrt.windows.ui.xaml.controls.ListViewItem
+
+class Windows.UI.Xaml.Controls.MediaElement external
+    py winrt.windows.ui.xaml.controls.MediaElement
+
+class Windows.UI.Xaml.Controls.MediaPlayerElement external
+    py winrt.windows.ui.xaml.controls.MediaPlayerElement
+
+class Windows.UI.Xaml.Controls.MediaTransportControls external
+    py winrt.windows.ui.xaml.controls.MediaTransportControls
+
+class Windows.UI.Xaml.Controls.MenuBar external
+    py winrt.windows.ui.xaml.controls.MenuBar
+
+class Windows.UI.Xaml.Controls.MenuBarItem external
+    py winrt.windows.ui.xaml.controls.MenuBarItem
+
+class Windows.UI.Xaml.Controls.MenuFlyoutItem external
+    py winrt.windows.ui.xaml.controls.MenuFlyoutItem
+
+class Windows.UI.Xaml.Controls.MenuFlyoutPresenter external
+    py winrt.windows.ui.xaml.controls.MenuFlyoutPresenter
+
+class Windows.UI.Xaml.Controls.NavigationViewItem external
+    py winrt.windows.ui.xaml.controls.NavigationViewItem
+
+class Windows.UI.Xaml.Controls.PasswordBox external
+    py winrt.windows.ui.xaml.controls.PasswordBox
+
+class Windows.UI.Xaml.Controls.PersonPicture external
+    py winrt.windows.ui.xaml.controls.PersonPicture
+
+class Windows.UI.Xaml.Controls.Pivot external
+    py winrt.windows.ui.xaml.controls.Pivot
+
+class Windows.UI.Xaml.Controls.PivotItem external
+    py winrt.windows.ui.xaml.controls.PivotItem
+
+class Windows.UI.Xaml.Controls.ProgressBar external
+    py winrt.windows.ui.xaml.controls.ProgressBar
+
+class Windows.UI.Xaml.Controls.ProgressRing external
+    py winrt.windows.ui.xaml.controls.ProgressRing
+
+class Windows.UI.Xaml.Controls.RadioButton external
+    py winrt.windows.ui.xaml.controls.RadioButton
+
+class Windows.UI.Xaml.Controls.RatingControl external
+    py winrt.windows.ui.xaml.controls.RatingControl
+
+class Windows.UI.Xaml.Controls.RichEditBox external
+    py winrt.windows.ui.xaml.controls.RichEditBox
+
+class Windows.UI.Xaml.Controls.RichTextBlock external
+    py winrt.windows.ui.xaml.controls.RichTextBlock
+
+class Windows.UI.Xaml.Controls.RichTextBlockOverflow external
+    py winrt.windows.ui.xaml.controls.RichTextBlockOverflow
+
+class Windows.UI.Xaml.Controls.ScrollViewer external
+    py winrt.windows.ui.xaml.controls.ScrollViewer
+
+class Windows.UI.Xaml.Controls.SearchBox external
+    py winrt.windows.ui.xaml.controls.SearchBox
+
+class Windows.UI.Xaml.Controls.SemanticZoom external
+    py winrt.windows.ui.xaml.controls.SemanticZoom
+
+class Windows.UI.Xaml.Controls.SettingsFlyout external
+    py winrt.windows.ui.xaml.controls.SettingsFlyout
+
+class Windows.UI.Xaml.Controls.Slider external
+    py winrt.windows.ui.xaml.controls.Slider
+
+class Windows.UI.Xaml.Controls.TextBlock external
+    py winrt.windows.ui.xaml.controls.TextBlock
+
+class Windows.UI.Xaml.Controls.TextBox external
+    py winrt.windows.ui.xaml.controls.TextBox
+
+class Windows.UI.Xaml.Controls.TimePicker external
+    py winrt.windows.ui.xaml.controls.TimePicker
+
+class Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem external
+    py winrt.windows.ui.xaml.controls.ToggleMenuFlyoutItem
+
+class Windows.UI.Xaml.Controls.ToggleSwitch external
+    py winrt.windows.ui.xaml.controls.ToggleSwitch
+
+class Windows.UI.Xaml.Controls.TreeViewItem external
+    py winrt.windows.ui.xaml.controls.TreeViewItem
+
+class Windows.UI.Xaml.Controls.TreeViewList external
+    py winrt.windows.ui.xaml.controls.TreeViewList
+
+class Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider external
+    py winrt.windows.ui.xaml.controls.primitives.ColorPickerSlider
+
+class Windows.UI.Xaml.Controls.Primitives.ColorSpectrum external
+    py winrt.windows.ui.xaml.controls.primitives.ColorSpectrum
+
+class Windows.UI.Xaml.Controls.Primitives.RangeBase external
+    py winrt.windows.ui.xaml.controls.primitives.RangeBase
+
+class Windows.UI.Xaml.Controls.Primitives.RepeatButton external
+    py winrt.windows.ui.xaml.controls.primitives.RepeatButton
+
+class Windows.UI.Xaml.Controls.Primitives.ScrollBar external
+    py winrt.windows.ui.xaml.controls.primitives.ScrollBar
+
+class Windows.UI.Xaml.Controls.Primitives.Selector external
+    py winrt.windows.ui.xaml.controls.primitives.Selector
+
+class Windows.UI.Xaml.Controls.Primitives.Thumb external
+    py winrt.windows.ui.xaml.controls.primitives.Thumb
+
+class Windows.UI.Xaml.Controls.Primitives.ToggleButton external
+    py winrt.windows.ui.xaml.controls.primitives.ToggleButton

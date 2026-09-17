@@ -1,0 +1,462 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Wallet
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> concrete
+    guid 8e64ddb0-ea5c-5593-a1f3-0b8209df3905
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74}))
+    argument Windows.ApplicationModel.Wallet.WalletItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItemStore> concrete
+    guid 9664f3ba-0049-5cbf-845f-8f0bcad2b14c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Wallet.WalletItemStore;{7160484b-6d49-48f8-91a9-40a1d0f13ef4}))
+    argument Windows.ApplicationModel.Wallet.WalletItemStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> concrete
+    guid 23540ddd-166f-5b93-8669-e340b5e1820d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> concrete
+    guid 65178d50-e6a2-5d16-b244-65e9725e5a0c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    argument Windows.Storage.Streams.IRandomAccessStreamReference
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> concrete
+    guid 5cc135b0-29f3-5113-a097-25e41a32e473
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.ApplicationModel.Wallet.WalletItemCustomProperty;{b94b40f3-fa00-40fd-98dc-9de46697f1e7}))
+    argument System.String
+    argument Windows.ApplicationModel.Wallet.WalletItemCustomProperty
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> concrete
+    guid 9378c55a-852d-5ddf-b01b-9cc3d47ec52d
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.ApplicationModel.Wallet.WalletRelevantLocation;{9fd8782a-e3f9-4de1-bab3-bb192e46b3f3}))
+    argument System.String
+    argument Windows.ApplicationModel.Wallet.WalletRelevantLocation
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> concrete
+    guid 3ef47bcf-8328-5245-8c91-f0ab4c399027
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.ApplicationModel.Wallet.WalletTransaction;{40e1e940-2606-4519-81cb-bff1c60d1f79}))
+    argument System.String
+    argument Windows.ApplicationModel.Wallet.WalletTransaction
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> concrete
+    guid bda656b0-1139-5fd3-9dfd-d24dbb910509
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.ApplicationModel.Wallet.WalletVerb;{17b826d6-e3c1-4c74-8a94-217aadbc4884}))
+    argument System.String
+    argument Windows.ApplicationModel.Wallet.WalletVerb
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem> concrete
+    guid 2dc89188-2b5b-591a-bb3d-d7d57ff7312c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74}))
+    argument Windows.ApplicationModel.Wallet.WalletItem
+
+interface Windows.ApplicationModel.Wallet.IWalletBarcode
+    guid 4f857b29-de80-4ea4-a1cd-81cd084dac27
+
+interface Windows.ApplicationModel.Wallet.IWalletBarcodeFactory
+    guid 30117161-ed9c-469e-bbfd-306c95ea7108
+
+interface Windows.ApplicationModel.Wallet.IWalletItem
+    guid 20b54be8-118d-4ec4-996c-b963e7bd3e74
+
+interface Windows.ApplicationModel.Wallet.IWalletItemCustomProperty
+    guid b94b40f3-fa00-40fd-98dc-9de46697f1e7
+
+interface Windows.ApplicationModel.Wallet.IWalletItemCustomPropertyFactory
+    guid d0046a44-61a1-41aa-b259-a5610ab5d575
+
+interface Windows.ApplicationModel.Wallet.IWalletItemFactory
+    guid 53e27470-4f0b-4a3e-99e5-0bbb1eab38d4
+
+interface Windows.ApplicationModel.Wallet.IWalletItemStore
+    guid 7160484b-6d49-48f8-91a9-40a1d0f13ef4
+
+interface Windows.ApplicationModel.Wallet.IWalletManagerStatics
+    guid 5111d6b8-c9a4-4c64-b4dd-e1e548001c0d
+
+interface Windows.ApplicationModel.Wallet.IWalletRelevantLocation
+    guid 9fd8782a-e3f9-4de1-bab3-bb192e46b3f3
+
+interface Windows.ApplicationModel.Wallet.IWalletTransaction
+    guid 40e1e940-2606-4519-81cb-bff1c60d1f79
+
+interface Windows.ApplicationModel.Wallet.IWalletVerb
+    guid 17b826d6-e3c1-4c74-8a94-217aadbc4884
+
+interface Windows.ApplicationModel.Wallet.IWalletVerbFactory
+    guid 76012771-be58-4d5e-83ed-58b1669c7ad9
+
+enum Windows.ApplicationModel.Wallet.WalletActionKind python_type
+    py WalletActionKind
+    signature enum(Windows.ApplicationModel.Wallet.WalletActionKind;i4)
+
+class Windows.ApplicationModel.Wallet.WalletBarcode python_type
+    py WalletBarcode
+    signature rc(Windows.ApplicationModel.Wallet.WalletBarcode;{4f857b29-de80-4ea4-a1cd-81cd084dac27})
+    default Windows.ApplicationModel.Wallet.IWalletBarcode
+    requires Windows.ApplicationModel.Wallet.IWalletBarcode
+    factory Windows.ApplicationModel.Wallet.IWalletBarcodeFactory
+    constructor -
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcodeFactory shape=51 reverse=44 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=streamToBarcodeImage
+            out class type=Windows.ApplicationModel.Wallet.WalletBarcode return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcodeFactory shape=117 reverse=25 deprecated
+            in enum32 type=Windows.ApplicationModel.Wallet.WalletBarcodeSymbology name=symbology
+            in string name=value
+            out class type=Windows.ApplicationModel.Wallet.WalletBarcode return
+    property symbology
+        get get_Symbology slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcode shape=4 reverse=22 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletBarcodeSymbology return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcode shape=4 reverse=43 deprecated
+            out string return
+    method get_image_async deprecated
+        method GetImageAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcode shape=4 reverse=62 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
+
+enum Windows.ApplicationModel.Wallet.WalletBarcodeSymbology python_type
+    py WalletBarcodeSymbology
+    signature enum(Windows.ApplicationModel.Wallet.WalletBarcodeSymbology;i4)
+
+enum Windows.ApplicationModel.Wallet.WalletDetailViewPosition python_type
+    py WalletDetailViewPosition
+    signature enum(Windows.ApplicationModel.Wallet.WalletDetailViewPosition;i4)
+
+class Windows.ApplicationModel.Wallet.WalletItem python_type
+    py WalletItem
+    signature rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74})
+    default Windows.ApplicationModel.Wallet.IWalletItem
+    requires Windows.ApplicationModel.Wallet.IWalletItem
+    factory Windows.ApplicationModel.Wallet.IWalletItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemFactory shape=117 reverse=25 deprecated
+            in enum32 type=Windows.ApplicationModel.Wallet.WalletItemKind name=kind
+            in string name=displayName
+            out class type=Windows.ApplicationModel.Wallet.WalletItem return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=22 deprecated
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=43 deprecated
+            in string name=value
+    property display_message
+        get get_DisplayMessage slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=255 deprecated
+            out string return
+        put put_DisplayMessage slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=259 deprecated
+            in string name=value
+    property logo_text
+        get get_LogoText slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=270 deprecated
+            out string return
+        put put_LogoText slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=273 deprecated
+            in string name=value
+    property body_font_color
+        get get_BodyFontColor slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=302 deprecated
+            out struct type=Windows.UI.Color return
+        put put_BodyFontColor slot=39 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=29 deprecated
+            in struct type=Windows.UI.Color name=value
+    property body_color
+        get get_BodyColor slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=288 deprecated
+            out struct type=Windows.UI.Color return
+        put put_BodyColor slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=29 deprecated
+            in struct type=Windows.UI.Color name=value
+    property body_background_image
+        get get_BodyBackgroundImage slot=42 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=319 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_BodyBackgroundImage slot=43 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=322 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property is_display_message_launchable
+        get get_IsDisplayMessageLaunchable slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=263 deprecated
+            out boolean return
+        put put_IsDisplayMessageLaunchable slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=266 deprecated
+            in boolean name=value
+    property is_acknowledged
+        get get_IsAcknowledged slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=99 deprecated
+            out boolean return
+        put put_IsAcknowledged slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=121 deprecated
+            in boolean name=value
+    property is_more_transaction_history_launchable
+        get get_IsMoreTransactionHistoryLaunchable slot=54 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=368 deprecated
+            out boolean return
+        put put_IsMoreTransactionHistoryLaunchable slot=55 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=440 deprecated
+            in boolean name=value
+    property header_font_color
+        get get_HeaderFontColor slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=296 deprecated
+            out struct type=Windows.UI.Color return
+        put put_HeaderFontColor slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=29 deprecated
+            in struct type=Windows.UI.Color name=value
+    property header_color
+        get get_HeaderColor slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=280 deprecated
+            out struct type=Windows.UI.Color return
+        put put_HeaderColor slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=29 deprecated
+            in struct type=Windows.UI.Color name=value
+    property header_background_image
+        get get_HeaderBackgroundImage slot=40 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=312 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_HeaderBackgroundImage slot=41 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=316 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property expiration_date
+        get get_ExpirationDate slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=218 deprecated
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_ExpirationDate slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=223 deprecated
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property logo99x99
+        get get_Logo99x99 slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=247 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Logo99x99 slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=252 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property logo_image
+        get get_LogoImage slot=44 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=326 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_LogoImage slot=45 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=330 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property promotional_image
+        get get_PromotionalImage slot=46 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=334 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_PromotionalImage slot=47 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=339 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property logo159x159
+        get get_Logo159x159 slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=228 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Logo159x159 slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=232 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property last_updated
+        get get_LastUpdated slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=173 deprecated
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_LastUpdated slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=186 deprecated
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property issuer_display_name
+        get get_IssuerDisplayName slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=141 deprecated
+            out string return
+        put put_IssuerDisplayName slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=162 deprecated
+            in string name=value
+    property barcode
+        get get_Barcode slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=202 deprecated
+            out class type=Windows.ApplicationModel.Wallet.WalletBarcode return
+        put put_Barcode slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=210 deprecated
+            in class type=Windows.ApplicationModel.Wallet.WalletBarcode name=value
+    property relevant_date_display_message
+        get get_RelevantDateDisplayMessage slot=50 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=351 deprecated
+            out string return
+        put put_RelevantDateDisplayMessage slot=51 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=355 deprecated
+            in string name=value
+    property relevant_date
+        get get_RelevantDate slot=48 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=343 deprecated
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_RelevantDate slot=49 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=347 deprecated
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property logo336x336
+        get get_Logo336x336 slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=237 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Logo336x336 slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=242 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property kind
+        get get_Kind slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=194 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletItemKind return
+    property display_properties
+        get get_DisplayProperties slot=56 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=441 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> return
+    property id
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=62 deprecated
+            out string return
+    property relevant_locations
+        get get_RelevantLocations slot=53 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=363 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> return
+    property transaction_history
+        get get_TransactionHistory slot=52 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=359 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> return
+    property verbs
+        get get_Verbs slot=57 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItem shape=4 reverse=442 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> return
+
+class Windows.ApplicationModel.Wallet.WalletItemCustomProperty python_type
+    py WalletItemCustomProperty
+    signature rc(Windows.ApplicationModel.Wallet.WalletItemCustomProperty;{b94b40f3-fa00-40fd-98dc-9de46697f1e7})
+    default Windows.ApplicationModel.Wallet.IWalletItemCustomProperty
+    requires Windows.ApplicationModel.Wallet.IWalletItemCustomProperty
+    factory Windows.ApplicationModel.Wallet.IWalletItemCustomPropertyFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomPropertyFactory shape=117 reverse=25 deprecated
+            in string name=name
+            in string name=value
+            out class type=Windows.ApplicationModel.Wallet.WalletItemCustomProperty return
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=62 deprecated
+            out string return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=99 deprecated
+            in string name=value
+    property summary_view_position
+        get get_SummaryViewPosition slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=186 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletSummaryViewPosition return
+        put put_SummaryViewPosition slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=194 deprecated
+            in enum32 type=Windows.ApplicationModel.Wallet.WalletSummaryViewPosition name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=22 deprecated
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=43 deprecated
+            in string name=value
+    property detail_view_position
+        get get_DetailViewPosition slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=162 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletDetailViewPosition return
+        put put_DetailViewPosition slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=173 deprecated
+            in enum32 type=Windows.ApplicationModel.Wallet.WalletDetailViewPosition name=value
+    property auto_detect_links
+        get get_AutoDetectLinks slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=121 deprecated
+            out boolean return
+        put put_AutoDetectLinks slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletItemCustomProperty shape=4 reverse=141 deprecated
+            in boolean name=value
+
+enum Windows.ApplicationModel.Wallet.WalletItemKind python_type
+    py WalletItemKind
+    signature enum(Windows.ApplicationModel.Wallet.WalletItemKind;i4)
+
+class Windows.ApplicationModel.Wallet.WalletItemStore python_type
+    py WalletItemStore
+    signature rc(Windows.ApplicationModel.Wallet.WalletItemStore;{7160484b-6d49-48f8-91a9-40a1d0f13ef4})
+    default Windows.ApplicationModel.Wallet.IWalletItemStore
+    requires Windows.ApplicationModel.Wallet.IWalletItemStore
+    method add_async deprecated
+        method AddAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=117 reverse=25 deprecated
+            in string name=id
+            in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
+            out interface type=Windows.Foundation.IAsyncAction return
+    method clear_async deprecated
+        method ClearAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 reverse=43 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_async deprecated
+        method DeleteAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=163 deprecated
+            in string name=id
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_items_async deprecated
+        method GetItemsAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 reverse=99 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
+        method GetItemsAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=124 deprecated
+            in enum32 type=Windows.ApplicationModel.Wallet.WalletItemKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
+    method get_wallet_item_async deprecated
+        method GetWalletItemAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=65 deprecated
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
+    method import_item_async deprecated
+        method ImportItemAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=144 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
+    method show_async deprecated
+        method ShowAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 reverse=173 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ShowAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=187 deprecated
+            in string name=id
+            out interface type=Windows.Foundation.IAsyncAction return
+    method update_async deprecated
+        method UpdateAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 reverse=196 deprecated
+            in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Wallet.WalletManager static python_type
+    py WalletManager
+    factory Windows.ApplicationModel.Wallet.IWalletManagerStatics
+    method request_store_async static deprecated
+        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletManagerStatics shape=4 reverse=22 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItemStore> return
+
+class Windows.ApplicationModel.Wallet.WalletRelevantLocation activatable python_type
+    py WalletRelevantLocation
+    signature rc(Windows.ApplicationModel.Wallet.WalletRelevantLocation;{9fd8782a-e3f9-4de1-bab3-bb192e46b3f3})
+    default Windows.ApplicationModel.Wallet.IWalletRelevantLocation
+    requires Windows.ApplicationModel.Wallet.IWalletRelevantLocation
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletRelevantLocation shape=4 reverse=22 deprecated
+            out struct type=Windows.Devices.Geolocation.BasicGeoposition return
+        put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletRelevantLocation shape=15 deprecated
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=value
+    property display_message
+        get get_DisplayMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletRelevantLocation shape=4 reverse=62 deprecated
+            out string return
+        put put_DisplayMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletRelevantLocation shape=4 reverse=99 deprecated
+            in string name=value
+
+enum Windows.ApplicationModel.Wallet.WalletSummaryViewPosition python_type
+    py WalletSummaryViewPosition
+    signature enum(Windows.ApplicationModel.Wallet.WalletSummaryViewPosition;i4)
+
+class Windows.ApplicationModel.Wallet.WalletTransaction activatable python_type
+    py WalletTransaction
+    signature rc(Windows.ApplicationModel.Wallet.WalletTransaction;{40e1e940-2606-4519-81cb-bff1c60d1f79})
+    default Windows.ApplicationModel.Wallet.IWalletTransaction
+    requires Windows.ApplicationModel.Wallet.IWalletTransaction
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property transaction_date
+        get get_TransactionDate slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=186 deprecated
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_TransactionDate slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=194 deprecated
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property is_launchable
+        get get_IsLaunchable slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=202 deprecated
+            out boolean return
+        put put_IsLaunchable slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=210 deprecated
+            in boolean name=value
+    property ignore_time_of_day
+        get get_IgnoreTimeOfDay slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=121 deprecated
+            out boolean return
+        put put_IgnoreTimeOfDay slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=141 deprecated
+            in boolean name=value
+    property display_location
+        get get_DisplayLocation slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=162 deprecated
+            out string return
+        put put_DisplayLocation slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=173 deprecated
+            in string name=value
+    property display_amount
+        get get_DisplayAmount slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=62 deprecated
+            out string return
+        put put_DisplayAmount slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=99 deprecated
+            in string name=value
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=22 deprecated
+            out string return
+        put put_Description slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletTransaction shape=4 reverse=43 deprecated
+            in string name=value
+
+class Windows.ApplicationModel.Wallet.WalletVerb python_type
+    py WalletVerb
+    signature rc(Windows.ApplicationModel.Wallet.WalletVerb;{17b826d6-e3c1-4c74-8a94-217aadbc4884})
+    default Windows.ApplicationModel.Wallet.IWalletVerb
+    requires Windows.ApplicationModel.Wallet.IWalletVerb
+    factory Windows.ApplicationModel.Wallet.IWalletVerbFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletVerbFactory shape=51 reverse=24 deprecated
+            in string name=name
+            out class type=Windows.ApplicationModel.Wallet.WalletVerb return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletVerb shape=4 reverse=22 deprecated
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.IWalletVerb shape=4 reverse=43 deprecated
+            in string name=value
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.Devices.Geolocation.BasicGeoposition external
+    py winrt.windows.devices.geolocation.BasicGeoposition
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

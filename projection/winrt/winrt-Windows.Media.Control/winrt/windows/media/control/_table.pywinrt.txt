@@ -1,0 +1,415 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Control
+
+class Windows.Media.Control.CurrentSessionChangedEventArgs python_type
+    py CurrentSessionChangedEventArgs
+    signature rc(Windows.Media.Control.CurrentSessionChangedEventArgs;{6969cb39-0bfa-5fe0-8d73-09cc5e5408e1})
+    default Windows.Media.Control.ICurrentSessionChangedEventArgs
+    requires Windows.Media.Control.ICurrentSessionChangedEventArgs
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSession python_type
+    py GlobalSystemMediaTransportControlsSession
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSession;{7148c835-9b14-5ae2-ab85-dc9b1c14e1a8})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSession
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSession
+    property source_app_user_model_id
+        get get_SourceAppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=22
+            out string return
+    event media_properties_changed
+        add add_MediaPropertiesChanged slot=29 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=267
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.MediaPropertiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_MediaPropertiesChanged slot=30 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=272
+            in event_token name=token
+    event playback_info_changed
+        add add_PlaybackInfoChanged slot=27 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=260
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.PlaybackInfoChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PlaybackInfoChanged slot=28 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26
+            in event_token name=token
+    event timeline_properties_changed
+        add add_TimelinePropertiesChanged slot=25 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=253
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.TimelinePropertiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_TimelinePropertiesChanged slot=26 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=257
+            in event_token name=token
+    method get_playback_info
+        method GetPlaybackInfo slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=99
+            out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo return
+    method get_timeline_properties
+        method GetTimelineProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=62
+            out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties return
+    method try_change_auto_repeat_mode_async
+        method TryChangeAutoRepeatModeAsync slot=21 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=233
+            in enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode name=requestedAutoRepeatMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_change_channel_down_async
+        method TryChangeChannelDownAsync slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=223
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_change_channel_up_async
+        method TryChangeChannelUpAsync slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=218
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_change_playback_position_async
+        method TryChangePlaybackPositionAsync slot=24 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=47
+            in int64 name=requestedPlaybackPosition
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_change_playback_rate_async
+        method TryChangePlaybackRateAsync slot=22 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=46
+            in double name=requestedPlaybackRate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_change_shuffle_active_async
+        method TryChangeShuffleActiveAsync slot=23 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=243
+            in boolean name=requestedShuffleState
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_fast_forward_async
+        method TryFastForwardAsync slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=186
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_get_media_properties_async
+        method TryGetMediaPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties> return
+    method try_pause_async
+        method TryPauseAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_play_async
+        method TryPlayAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_record_async
+        method TryRecordAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_rewind_async
+        method TryRewindAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=194
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_skip_next_async
+        method TrySkipNextAsync slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=202
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_skip_previous_async
+        method TrySkipPreviousAsync slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=210
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_stop_async
+        method TryStopAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_toggle_play_pause_async
+        method TryTogglePlayPauseAsync slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=228
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager python_type
+    py GlobalSystemMediaTransportControlsSessionManager
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager;{cace8eac-e86e-504a-ab31-5ff8ff1bce49})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager
+    factory Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics
+    event current_session_changed
+        add add_CurrentSessionChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.CurrentSessionChangedEventArgs> name=handler
+            out event_token return
+        remove remove_CurrentSessionChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=110
+            in event_token name=token
+    event sessions_changed
+        add add_SessionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.SessionsChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SessionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=156
+            in event_token name=token
+    method get_current_session
+        method GetCurrentSession slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4 reverse=22
+            out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSession return
+    method get_sessions
+        method GetSessions slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Control.GlobalSystemMediaTransportControlsSession> return
+    method request_async static
+        method RequestAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> return
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties python_type
+    py GlobalSystemMediaTransportControlsSessionMediaProperties
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties;{68856cf6-adb4-54b2-ac16-05837907acb6})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties
+    property album_artist
+        get get_AlbumArtist slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=62
+            out string return
+    property album_title
+        get get_AlbumTitle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=121
+            out string return
+    property album_track_count
+        get get_AlbumTrackCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=173
+            out int32 return
+    property artist
+        get get_Artist slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=99
+            out string return
+    property genres
+        get get_Genres slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property playback_type
+        get get_PlaybackType slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackType> return
+    property subtitle
+        get get_Subtitle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=43
+            out string return
+    property thumbnail
+        get get_Thumbnail slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=194
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=22
+            out string return
+    property track_number
+        get get_TrackNumber slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=141
+            out int32 return
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls python_type
+    py GlobalSystemMediaTransportControlsSessionPlaybackControls
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls;{6501a3e6-bc7a-503a-bb1b-68f158f3fb03})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls
+    property is_channel_down_enabled
+        get get_IsChannelDownEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=194
+            out boolean return
+    property is_channel_up_enabled
+        get get_IsChannelUpEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=186
+            out boolean return
+    property is_fast_forward_enabled
+        get get_IsFastForwardEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=121
+            out boolean return
+    property is_next_enabled
+        get get_IsNextEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=162
+            out boolean return
+    property is_pause_enabled
+        get get_IsPauseEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=43
+            out boolean return
+    property is_play_enabled
+        get get_IsPlayEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=22
+            out boolean return
+    property is_play_pause_toggle_enabled
+        get get_IsPlayPauseToggleEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=202
+            out boolean return
+    property is_playback_position_enabled
+        get get_IsPlaybackPositionEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=228
+            out boolean return
+    property is_playback_rate_enabled
+        get get_IsPlaybackRateEnabled slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=223
+            out boolean return
+    property is_previous_enabled
+        get get_IsPreviousEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=173
+            out boolean return
+    property is_record_enabled
+        get get_IsRecordEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=99
+            out boolean return
+    property is_repeat_enabled
+        get get_IsRepeatEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=218
+            out boolean return
+    property is_rewind_enabled
+        get get_IsRewindEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=141
+            out boolean return
+    property is_shuffle_enabled
+        get get_IsShuffleEnabled slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=210
+            out boolean return
+    property is_stop_enabled
+        get get_IsStopEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=62
+            out boolean return
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo python_type
+    py GlobalSystemMediaTransportControlsSessionPlaybackInfo
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo;{94b4b6cf-e8ba-51ad-87a7-c10ade106127})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo
+    property auto_repeat_mode
+        get get_AutoRepeatMode slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackAutoRepeatMode> return
+    property controls
+        get get_Controls slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=22
+            out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls return
+    property is_shuffle_active
+        get get_IsShuffleActive slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+    property playback_rate
+        get get_PlaybackRate slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property playback_status
+        get get_PlaybackStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=43
+            out enum32 type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackStatus return
+    property playback_type
+        get get_PlaybackType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackType> return
+
+enum Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackStatus python_type
+    py GlobalSystemMediaTransportControlsSessionPlaybackStatus
+    signature enum(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackStatus;i4)
+
+class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties python_type
+    py GlobalSystemMediaTransportControlsSessionTimelineProperties
+    signature rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties;{ede34136-6f25-588d-8ecf-ea5b6735aaa5})
+    default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties
+    requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties
+    property end_time
+        get get_EndTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=43
+            out timespan return
+    property last_updated_time
+        get get_LastUpdatedTime slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=141
+            out datetime return
+    property max_seek_time
+        get get_MaxSeekTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=99
+            out timespan return
+    property min_seek_time
+        get get_MinSeekTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=62
+            out timespan return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=121
+            out timespan return
+    property start_time
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=22
+            out timespan return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> concrete
+    guid 3eec115e-7346-5c27-8c5f-da78514a277b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager;{cace8eac-e86e-504a-ab31-5ff8ff1bce49}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties> concrete
+    guid b185e6f3-e0d8-51cb-913f-c98d48c93c46
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties;{68856cf6-adb4-54b2-ac16-05837907acb6}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties
+
+interface Windows.Media.Control.ICurrentSessionChangedEventArgs
+    guid 6969cb39-0bfa-5fe0-8d73-09cc5e5408e1
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSession
+    guid 7148c835-9b14-5ae2-ab85-dc9b1c14e1a8
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager
+    guid cace8eac-e86e-504a-ab31-5ff8ff1bce49
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics
+    guid 2050c4ee-11a0-57de-aed7-c97c70338245
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties
+    guid 68856cf6-adb4-54b2-ac16-05837907acb6
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls
+    guid 6501a3e6-bc7a-503a-bb1b-68f158f3fb03
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo
+    guid 94b4b6cf-e8ba-51ad-87a7-c10ade106127
+
+interface Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties
+    guid ede34136-6f25-588d-8ecf-ea5b6735aaa5
+
+interface Windows.Media.Control.IMediaPropertiesChangedEventArgs
+    guid 7d3741cb-adf0-5cef-91ba-cfabcdd77678
+
+interface Windows.Media.Control.IPlaybackInfoChangedEventArgs
+    guid 786756c2-bc0d-50a5-8807-054291fef139
+
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<Windows.Media.MediaPlaybackAutoRepeatMode> concrete
+    guid 50a7f41f-58d5-5c4d-9475-8dd1acd65836
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Media.MediaPlaybackAutoRepeatMode;i4))
+    argument Windows.Media.MediaPlaybackAutoRepeatMode
+
+interface Windows.Foundation.IReference<Windows.Media.MediaPlaybackType> concrete
+    guid e289f7d8-6ba7-50ab-9f13-6e4e51d15ca4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Media.MediaPlaybackType;i4))
+    argument Windows.Media.MediaPlaybackType
+
+interface Windows.Media.Control.ISessionsChangedEventArgs
+    guid bbf0cd32-42c4-5a58-b317-f34bbfbd26e0
+
+interface Windows.Media.Control.ITimelinePropertiesChangedEventArgs
+    guid 29033a2f-c923-5a77-bcaf-055ff415ad32
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Control.GlobalSystemMediaTransportControlsSession> concrete
+    guid 9b2672da-5088-5a1d-acd9-a3fc5ef1cfa4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSession;{7148c835-9b14-5ae2-ab85-dc9b1c14e1a8}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSession
+
+class Windows.Media.Control.MediaPropertiesChangedEventArgs python_type
+    py MediaPropertiesChangedEventArgs
+    signature rc(Windows.Media.Control.MediaPropertiesChangedEventArgs;{7d3741cb-adf0-5cef-91ba-cfabcdd77678})
+    default Windows.Media.Control.IMediaPropertiesChangedEventArgs
+    requires Windows.Media.Control.IMediaPropertiesChangedEventArgs
+
+class Windows.Media.Control.PlaybackInfoChangedEventArgs python_type
+    py PlaybackInfoChangedEventArgs
+    signature rc(Windows.Media.Control.PlaybackInfoChangedEventArgs;{786756c2-bc0d-50a5-8807-054291fef139})
+    default Windows.Media.Control.IPlaybackInfoChangedEventArgs
+    requires Windows.Media.Control.IPlaybackInfoChangedEventArgs
+
+class Windows.Media.Control.SessionsChangedEventArgs python_type
+    py SessionsChangedEventArgs
+    signature rc(Windows.Media.Control.SessionsChangedEventArgs;{bbf0cd32-42c4-5a58-b317-f34bbfbd26e0})
+    default Windows.Media.Control.ISessionsChangedEventArgs
+    requires Windows.Media.Control.ISessionsChangedEventArgs
+
+class Windows.Media.Control.TimelinePropertiesChangedEventArgs python_type
+    py TimelinePropertiesChangedEventArgs
+    signature rc(Windows.Media.Control.TimelinePropertiesChangedEventArgs;{29033a2f-c923-5a77-bcaf-055ff415ad32})
+    default Windows.Media.Control.ITimelinePropertiesChangedEventArgs
+    requires Windows.Media.Control.ITimelinePropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.MediaPropertiesChangedEventArgs> concrete
+    guid 0f2ce2b7-afa7-5ed0-8cb6-8c40cf9b3a5f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSession;{7148c835-9b14-5ae2-ab85-dc9b1c14e1a8});rc(Windows.Media.Control.MediaPropertiesChangedEventArgs;{7d3741cb-adf0-5cef-91ba-cfabcdd77678}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSession
+    argument Windows.Media.Control.MediaPropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.PlaybackInfoChangedEventArgs> concrete
+    guid 2bdf1426-d41f-5896-897f-efc0b0fa7392
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSession;{7148c835-9b14-5ae2-ab85-dc9b1c14e1a8});rc(Windows.Media.Control.PlaybackInfoChangedEventArgs;{786756c2-bc0d-50a5-8807-054291fef139}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSession
+    argument Windows.Media.Control.PlaybackInfoChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.TimelinePropertiesChangedEventArgs> concrete
+    guid e8bf62af-fac1-5fff-9053-0bf191ae777e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSession;{7148c835-9b14-5ae2-ab85-dc9b1c14e1a8});rc(Windows.Media.Control.TimelinePropertiesChangedEventArgs;{29033a2f-c923-5a77-bcaf-055ff415ad32}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSession
+    argument Windows.Media.Control.TimelinePropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.CurrentSessionChangedEventArgs> concrete
+    guid 228bd0ed-1fa2-5e9b-a6ec-42566173103b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager;{cace8eac-e86e-504a-ab31-5ff8ff1bce49});rc(Windows.Media.Control.CurrentSessionChangedEventArgs;{6969cb39-0bfa-5fe0-8d73-09cc5e5408e1}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager
+    argument Windows.Media.Control.CurrentSessionChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.SessionsChangedEventArgs> concrete
+    guid 2e2a8630-dc8c-530a-9746-bc984d4b029e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager;{cace8eac-e86e-504a-ab31-5ff8ff1bce49});rc(Windows.Media.Control.SessionsChangedEventArgs;{bbf0cd32-42c4-5a58-b317-f34bbfbd26e0}))
+    argument Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager
+    argument Windows.Media.Control.SessionsChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+enum Windows.Media.MediaPlaybackAutoRepeatMode external
+    py winrt.windows.media.MediaPlaybackAutoRepeatMode
+
+enum Windows.Media.MediaPlaybackType external
+    py winrt.windows.media.MediaPlaybackType
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

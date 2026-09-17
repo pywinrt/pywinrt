@@ -1,0 +1,45 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Input.Core
+
+interface Windows.UI.Input.Core.IRadialControllerIndependentInputSource
+    guid 3d577ef6-4cee-11e6-b535-001bdc06ab3b
+
+interface Windows.UI.Input.Core.IRadialControllerIndependentInputSource2
+    guid 7073aad8-35f3-4eeb-8751-be4d0a66faf4
+
+interface Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics
+    guid 3d577ef5-4cee-11e6-b535-001bdc06ab3b
+
+class Windows.UI.Input.Core.RadialControllerIndependentInputSource python_type
+    py RadialControllerIndependentInputSource
+    signature rc(Windows.UI.Input.Core.RadialControllerIndependentInputSource;{3d577ef6-4cee-11e6-b535-001bdc06ab3b})
+    default Windows.UI.Input.Core.IRadialControllerIndependentInputSource
+    requires Windows.UI.Input.Core.IRadialControllerIndependentInputSource
+    requires Windows.UI.Input.Core.IRadialControllerIndependentInputSource2
+    factory Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics
+    property controller
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4 reverse=22
+            out class type=Windows.UI.Input.RadialController return
+    property dispatcher
+        get get_Dispatcher slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4 reverse=43
+            out class type=Windows.UI.Core.CoreDispatcher return
+    property dispatcher_queue
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource2 shape=4 reverse=22
+            out class type=Windows.System.DispatcherQueue return
+    method create_for_view static
+        method CreateForView slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=view
+            out class type=Windows.UI.Input.Core.RadialControllerIndependentInputSource return
+
+class Windows.ApplicationModel.Core.CoreApplicationView external
+    py winrt.windows.applicationmodel.core.CoreApplicationView
+
+class Windows.System.DispatcherQueue external
+    py winrt.windows.system.DispatcherQueue
+
+class Windows.UI.Core.CoreDispatcher external
+    py winrt.windows.ui.core.CoreDispatcher
+
+class Windows.UI.Input.RadialController external
+    py winrt.windows.ui.input.RadialController

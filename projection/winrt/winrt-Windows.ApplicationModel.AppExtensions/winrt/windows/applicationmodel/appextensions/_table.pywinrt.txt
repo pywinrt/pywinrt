@@ -1,0 +1,266 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.AppExtensions
+
+class Windows.ApplicationModel.AppExtensions.AppExtension python_type
+    py AppExtension
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtension;{8450902c-15ed-4faf-93ea-2237bbf8cbd6})
+    default Windows.ApplicationModel.AppExtensions.IAppExtension
+    requires Windows.ApplicationModel.AppExtensions.IAppExtension
+    requires Windows.ApplicationModel.AppExtensions.IAppExtension2
+    requires Windows.ApplicationModel.AppExtensions.IAppExtension3
+    property app_info
+        get get_AppInfo slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=121
+            out class type=Windows.ApplicationModel.AppInfo return
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=62
+            out string return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=43
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=22
+            out string return
+    property package
+        get get_Package slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=99
+            out class type=Windows.ApplicationModel.Package return
+    property app_user_model_id
+        get get_AppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension2 shape=4 reverse=22
+            out string return
+    method get_extension_properties
+        method GetExtensionProperties slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension3 shape=4 reverse=22
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    method get_extension_properties_async
+        method GetExtensionPropertiesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> return
+    method get_public_folder
+        method GetPublicFolder slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension3 shape=4 reverse=62
+            out class type=Windows.Storage.StorageFolder return
+    method get_public_folder_async
+        method GetPublicFolderAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_public_path
+        method GetPublicPath slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtension3 shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionCatalog python_type
+    py AppExtensionCatalog
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2
+    factory Windows.ApplicationModel.AppExtensions.IAppExtensionCatalogStatics
+    event package_installed
+        add add_PackageInstalled slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs> name=handler
+            out event_token return
+        remove remove_PackageInstalled slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=26 reverse=110
+            in event_token name=token
+    event package_status_changed
+        add add_PackageStatusChanged slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PackageStatusChanged slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=26 reverse=215
+            in event_token name=token
+    event package_uninstalling
+        add add_PackageUninstalling slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageUninstalling slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=26 reverse=200
+            in event_token name=token
+    event package_updated
+        add add_PackageUpdated slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs> name=handler
+            out event_token return
+        remove remove_PackageUpdated slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=26 reverse=181
+            in event_token name=token
+    event package_updating
+        add add_PackageUpdating slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs> name=handler
+            out event_token return
+        remove remove_PackageUpdating slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=26 reverse=156
+            in event_token name=token
+    method find_all
+        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension> return
+    method find_all_async
+        method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension>> return
+    method open static
+        method Open slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalogStatics shape=51 reverse=24 static
+            in string name=appExtensionName
+            out class type=Windows.ApplicationModel.AppExtensions.AppExtensionCatalog return
+    method request_remove_package_async
+        method RequestRemovePackageAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog shape=51 reverse=44
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs python_type
+    py AppExtensionPackageInstalledEventArgs
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs;{39e59234-3351-4a8d-9745-e7d3dd45bc48})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs
+    property app_extension_name
+        get get_AppExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs shape=4 reverse=22
+            out string return
+    property extensions
+        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension> return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs python_type
+    py AppExtensionPackageStatusChangedEventArgs
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs;{1ce17433-1153-44fd-87b1-8ae1050303df})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs
+    property app_extension_name
+        get get_AppExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs shape=4 reverse=22
+            out string return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs python_type
+    py AppExtensionPackageUninstallingEventArgs
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs;{60f160c5-171e-40ff-ae98-ab2c20dd4d75})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs
+    property app_extension_name
+        get get_AppExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs shape=4 reverse=22
+            out string return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs python_type
+    py AppExtensionPackageUpdatedEventArgs
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs;{3a83c43f-797e-44b5-ba24-a4c8b5a543d7})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs
+    property app_extension_name
+        get get_AppExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs shape=4 reverse=22
+            out string return
+    property extensions
+        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension> return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+
+class Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs python_type
+    py AppExtensionPackageUpdatingEventArgs
+    signature rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs;{7ed59329-1a65-4800-a700-b321009e306a})
+    default Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs
+    requires Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs
+    property app_extension_name
+        get get_AppExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs shape=4 reverse=22
+            out string return
+    property package
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Package return
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtension
+    guid 8450902c-15ed-4faf-93ea-2237bbf8cbd6
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtension2
+    guid ab3b15f0-14f9-4b9f-9419-a349a242ef38
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtension3
+    guid 5923c101-aa38-4009-84d9-5b54a0df30ae
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog
+    guid 97872032-8426-4ad1-9084-92e88c2da200
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionCatalog2
+    guid 50056eba-58b6-4147-b5a5-8feca6dfb49d
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionCatalogStatics
+    guid 3c36668a-5f18-4f0b-9ce5-cab61d196f11
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionPackageInstalledEventArgs
+    guid 39e59234-3351-4a8d-9745-e7d3dd45bc48
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionPackageStatusChangedEventArgs
+    guid 1ce17433-1153-44fd-87b1-8ae1050303df
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUninstallingEventArgs
+    guid 60f160c5-171e-40ff-ae98-ab2c20dd4d75
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatedEventArgs
+    guid 3a83c43f-797e-44b5-ba24-a4c8b5a543d7
+
+interface Windows.ApplicationModel.AppExtensions.IAppExtensionPackageUpdatingEventArgs
+    guid 7ed59329-1a65-4800-a700-b321009e306a
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> concrete
+    guid 490b0686-afd7-5037-9647-d8fe248f182c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{8a43ed9f-f4e6-4421-acf9-1dab2986820c})
+    argument Windows.Foundation.Collections.IPropertySet
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension>> concrete
+    guid 83295bb9-10df-530f-a0d7-be05ba80cb18
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppExtensions.AppExtension;{8450902c-15ed-4faf-93ea-2237bbf8cbd6})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> concrete
+    guid 6be9e7d7-e83a-5cbc-802c-1768960b52c3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppExtensions.AppExtension> concrete
+    guid 94520810-7e9b-5efd-b74d-e9d4175fd94a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppExtensions.AppExtension;{8450902c-15ed-4faf-93ea-2237bbf8cbd6}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtension
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs> concrete
+    guid 26460556-9f0a-562e-9165-9eb9e1898b1e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200});rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs;{39e59234-3351-4a8d-9745-e7d3dd45bc48}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionCatalog
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs> concrete
+    guid 61a2a9c0-d3bb-5953-8df7-591fdd5bd74a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200});rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs;{1ce17433-1153-44fd-87b1-8ae1050303df}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionCatalog
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs> concrete
+    guid 60e847e8-2eca-54be-8b13-9e62dbd5b95d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200});rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs;{60f160c5-171e-40ff-ae98-ab2c20dd4d75}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionCatalog
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs> concrete
+    guid a7e0dc0b-525e-52b1-b1d9-2d5b4b5294a5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200});rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs;{3a83c43f-797e-44b5-ba24-a4c8b5a543d7}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionCatalog
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppExtensions.AppExtensionCatalog,Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs> concrete
+    guid 91f40910-6acf-510d-8d7b-0bd05b835883
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppExtensions.AppExtensionCatalog;{97872032-8426-4ad1-9084-92e88c2da200});rc(Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs;{7ed59329-1a65-4800-a700-b321009e306a}))
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionCatalog
+    argument Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class Windows.ApplicationModel.AppInfo external
+    py winrt.windows.applicationmodel.AppInfo
+
+class Windows.ApplicationModel.Package external
+    py winrt.windows.applicationmodel.Package
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder

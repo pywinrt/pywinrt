@@ -1,0 +1,832 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.ConversationalAgent
+
+class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration python_type closeable
+    py ActivationSignalDetectionConfiguration
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00})
+    default Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration
+    requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration
+    requires Windows.Foundation.IClosable
+    requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2
+    property availability_info
+        get get_AvailabilityInfo slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=162
+            out class type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo return
+    property display_name
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=62
+            out string return
+    property is_active
+        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=99
+            out boolean return
+    property model_id
+        get get_ModelId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=43
+            out string return
+    property signal_id
+        get get_SignalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=22
+            out string return
+    property training_data_format
+        get get_TrainingDataFormat slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=252
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat return
+    property training_steps_completed
+        get get_TrainingStepsCompleted slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=242
+            out uint32 return
+    property training_steps_remaining
+        get get_TrainingStepsRemaining slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=247
+            out uint32 return
+    property training_step_completion_max_allowed_time
+        get get_TrainingStepCompletionMaxAllowedTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=4 reverse=121
+            out uint32 return
+    event availability_changed
+        add add_AvailabilityChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AvailabilityChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=26 reverse=192
+            in event_token name=token
+    method apply_training_data
+        method ApplyTrainingData slot=26 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=trainingDataFormat
+            in interface type=Windows.Storage.Streams.IInputStream name=trainingData
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus return
+    method apply_training_data_async
+        method ApplyTrainingDataAsync slot=27 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117 reverse=261
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=trainingDataFormat
+            in interface type=Windows.Storage.Streams.IInputStream name=trainingData
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> return
+    method clear_model_data
+        method ClearModelData slot=21 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=0 reverse=231
+    method clear_model_data_async
+        method ClearModelDataAsync slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=237
+            out interface type=Windows.Foundation.IAsyncAction return
+    method clear_training_data
+        method ClearTrainingData slot=28 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=0
+    method clear_training_data_async
+        method ClearTrainingDataAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=266
+            out interface type=Windows.Foundation.IAsyncAction return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_model_data
+        method GetModelData slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=223
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_model_data_async
+        method GetModelDataAsync slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=228
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> return
+    method get_model_data_type
+        method GetModelDataType slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=210
+            out string return
+    method get_model_data_type_async
+        method GetModelDataTypeAsync slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=218
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method set_enabled
+        method SetEnabled slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=121
+            in boolean name=value
+    method set_enabled_async
+        method SetEnabledAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=144
+            in boolean name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_enabled_with_result
+        method SetEnabledWithResult slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51 reverse=100
+            in boolean name=value
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult return
+    method set_enabled_with_result_async
+        method SetEnabledWithResultAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51 reverse=65
+            in boolean name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> return
+    method set_model_data
+        method SetModelData slot=15 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=196
+            in string name=dataType
+            in interface type=Windows.Storage.Streams.IInputStream name=data
+    method set_model_data_async
+        method SetModelDataAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117 reverse=204
+            in string name=dataType
+            in interface type=Windows.Storage.Streams.IInputStream name=data
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_model_data_with_result
+        method SetModelDataWithResult slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117 reverse=25
+            in string name=dataType
+            in interface type=Windows.Storage.Streams.IInputStream name=data
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult return
+    method set_model_data_with_result_async
+        method SetModelDataWithResultAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117 reverse=45
+            in string name=dataType
+            in interface type=Windows.Storage.Streams.IInputStream name=data
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> return
+
+class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult python_type
+    py ActivationSignalDetectionConfigurationCreationResult
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult;{4c89bc1b-8d12-5e48-a71c-7f6bc1cd66e0})
+    default Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult
+    requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult
+    property configuration
+        get get_Configuration slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4 reverse=43
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus return
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus python_type
+    py ActivationSignalDetectionConfigurationCreationStatus
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult python_type
+    py ActivationSignalDetectionConfigurationRemovalResult
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult python_type
+    py ActivationSignalDetectionConfigurationSetModelDataResult
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult python_type
+    py ActivationSignalDetectionConfigurationStateChangeResult
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat python_type
+    py ActivationSignalDetectionTrainingDataFormat
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4)
+
+class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector python_type
+    py ActivationSignalDetector
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff})
+    default Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector
+    requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector
+    requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2
+    property can_create_configurations
+        get get_CanCreateConfigurations slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=62
+            out boolean return
+    property kind
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind return
+    property provider_id
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=22
+            out string return
+    property supported_model_data_types
+        get get_SupportedModelDataTypes slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property supported_power_states
+        get get_SupportedPowerStates slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> return
+    property supported_training_data_formats
+        get get_SupportedTrainingDataFormats slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> return
+    property detector_id
+        get get_DetectorId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=4 reverse=162
+            out string return
+    method create_configuration
+        method CreateConfiguration slot=14 inputs=3 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=188
+            in string name=signalId
+            in string name=modelId
+            in string name=displayName
+    method create_configuration_async
+        method CreateConfigurationAsync slot=15 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=195 reverse=198
+            in string name=signalId
+            in string name=modelId
+            in string name=displayName
+            out interface type=Windows.Foundation.IAsyncAction return
+    method create_configuration_with_result
+        method CreateConfigurationWithResult slot=9 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195 reverse=102
+            in string name=signalId
+            in string name=modelId
+            in string name=displayName
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult return
+    method create_configuration_with_result_async
+        method CreateConfigurationWithResultAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195 reverse=68
+            in string name=signalId
+            in string name=modelId
+            in string name=displayName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> return
+    method get_available_model_ids_for_signal_id
+        method GetAvailableModelIdsForSignalId slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51 reverse=44
+            in string name=signalId
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_available_model_ids_for_signal_id_async
+        method GetAvailableModelIdsForSignalIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51 reverse=24
+            in string name=signalId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
+    method get_configuration
+        method GetConfiguration slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=220
+            in string name=signalId
+            in string name=modelId
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
+    method get_configuration_async
+        method GetConfigurationAsync slot=19 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=225
+            in string name=signalId
+            in string name=modelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
+    method get_configurations
+        method GetConfigurations slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
+    method get_configurations_async
+        method GetConfigurationsAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=210
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> return
+    method get_supported_model_ids_for_signal_id
+        method GetSupportedModelIdsForSignalId slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=163
+            in string name=signalId
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method get_supported_model_ids_for_signal_id_async
+        method GetSupportedModelIdsForSignalIdAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=174
+            in string name=signalId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method remove_configuration
+        method RemoveConfiguration slot=20 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=229
+            in string name=signalId
+            in string name=modelId
+    method remove_configuration_async
+        method RemoveConfigurationAsync slot=21 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117
+            in string name=signalId
+            in string name=modelId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method remove_configuration_with_result
+        method RemoveConfigurationWithResult slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117 reverse=145
+            in string name=signalId
+            in string name=modelId
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult return
+    method remove_configuration_with_result_async
+        method RemoveConfigurationWithResultAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117 reverse=125
+            in string name=signalId
+            in string name=modelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> return
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind python_type
+    py ActivationSignalDetectorKind
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState python_type
+    py ActivationSignalDetectorPowerState
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind python_type
+    py ConversationalAgentActivationKind
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult python_type
+    py ConversationalAgentActivationResult
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult;i4)
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager python_type
+    py ConversationalAgentDetectorManager
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager;{de94fbb0-597a-5df8-8cfb-9dbb583ba3ff})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2
+    factory Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics
+    property default static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager return
+    method get_activation_signal_detector_from_id
+        method GetActivationSignalDetectorFromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51 reverse=24
+            in string name=detectorId
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
+    method get_activation_signal_detector_from_id_async
+        method GetActivationSignalDetectorFromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51 reverse=44
+            in string name=detectorId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+    method get_activation_signal_detectors
+        method GetActivationSignalDetectors slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51 reverse=65
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind name=kind
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+    method get_activation_signal_detectors_async
+        method GetActivationSignalDetectorsAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51 reverse=100
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> return
+    method get_all_activation_signal_detectors
+        method GetAllActivationSignalDetectors slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+    method get_all_activation_signal_detectors_async
+        method GetAllActivationSignalDetectorsAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> return
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession python_type closeable
+    py ConversationalAgentSession
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2
+    requires Windows.Foundation.IClosable
+    factory Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics
+    property agent_state
+        get get_AgentState slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState return
+    property is_indicator_light_available
+        get get_IsIndicatorLightAvailable slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=186
+            out boolean return
+    property is_interrupted
+        get get_IsInterrupted slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=223
+            out boolean return
+    property is_interruptible
+        get get_IsInterruptible slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=218
+            out boolean return
+    property is_screen_available
+        get get_IsScreenAvailable slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=194
+            out boolean return
+    property is_user_authenticated
+        get get_IsUserAuthenticated slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=202
+            out boolean return
+    property is_voice_activation_available
+        get get_IsVoiceActivationAvailable slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=210
+            out boolean return
+    property signal
+        get get_Signal slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=173
+            out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal return
+    event session_interrupted
+        add add_SessionInterrupted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs> name=handler
+            out event_token return
+        remove remove_SessionInterrupted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=53
+            in event_token name=token
+    event signal_detected
+        add add_SignalDetected slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs> name=handler
+            out event_token return
+        remove remove_SignalDetected slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=110
+            in event_token name=token
+    event system_state_changed
+        add add_SystemStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_SystemStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=156
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_audio_device_input_node
+        method CreateAudioDeviceInputNode slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=267
+            in class type=Windows.Media.Audio.AudioGraph name=graph
+            out class type=Windows.Media.Audio.AudioDeviceInputNode return
+    method create_audio_device_input_node_async
+        method CreateAudioDeviceInputNodeAsync slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=264
+            in class type=Windows.Media.Audio.AudioGraph name=graph
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> return
+    method get_audio_capture_device_id
+        method GetAudioCaptureDeviceId slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=273
+            out string return
+    method get_audio_capture_device_id_async
+        method GetAudioCaptureDeviceIdAsync slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=270
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_audio_client
+        method GetAudioClient slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=259
+            out object return
+    method get_audio_client_async
+        method GetAudioClientAsync slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=255
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
+    method get_audio_render_device_id
+        method GetAudioRenderDeviceId slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=285
+            out string return
+    method get_audio_render_device_id_async
+        method GetAudioRenderDeviceIdAsync slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=280
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_current_session_async static
+        method GetCurrentSessionAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> return
+    method get_current_session_sync static
+        method GetCurrentSessionSync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 reverse=43 static
+            out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession return
+    method get_missing_prerequisites
+        method GetMissingPrerequisites slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> return
+    method get_missing_prerequisites_async
+        method GetMissingPrerequisitesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> return
+    method get_signal_model_id
+        method GetSignalModelId slot=35 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=292
+            out uint32 return
+    method get_signal_model_id_async
+        method GetSignalModelIdAsync slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=288
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+    method get_supported_signal_model_ids
+        method GetSupportedSignalModelIds slot=39 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=307
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+    method get_supported_signal_model_ids_async
+        method GetSupportedSignalModelIdsAsync slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=302
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> return
+    method request_activation
+        method RequestActivation slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=44
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind name=activationKind
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult return
+    method request_activation_async
+        method RequestActivationAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind name=activationKind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> return
+    method request_agent_state_change
+        method RequestAgentStateChange slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=243
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState name=state
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
+    method request_agent_state_change_async
+        method RequestAgentStateChangeAsync slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=238
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState name=state
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
+    method request_foreground_activation
+        method RequestForegroundActivation slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=252
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
+    method request_foreground_activation_async
+        method RequestForegroundActivationAsync slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=247
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
+    method request_interruptible
+        method RequestInterruptible slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=233
+            in boolean name=interruptible
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
+    method request_interruptible_async
+        method RequestInterruptibleAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=229
+            in boolean name=interruptible
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
+    method set_signal_model_id
+        method SetSignalModelId slot=37 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=300
+            in uint32 name=signalModelId
+            out boolean return
+    method set_signal_model_id_async
+        method SetSignalModelIdAsync slot=36 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=297
+            in uint32 name=signalModelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_support_lock_screen_activation
+        method SetSupportLockScreenActivation slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=99
+            in boolean name=lockScreenActivationSupported
+    method set_support_lock_screen_activation_async
+        method SetSupportLockScreenActivationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=65
+            in boolean name=lockScreenActivationSupported
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs python_type
+    py ConversationalAgentSessionInterruptedEventArgs
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs;{9766591f-f63d-5d3e-9bf2-bd0760552686})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionInterruptedEventArgs
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionInterruptedEventArgs
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse python_type
+    py ConversationalAgentSessionUpdateResponse
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse;i4)
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal python_type
+    py ConversationalAgentSignal
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal;{20ed25f7-b120-51f2-8603-265d6a47f232})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2
+    property signal_start
+        get get_SignalStart slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=186
+            out timespan return
+        put put_SignalStart slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26 reverse=200
+            in timespan name=value
+    property signal_name
+        get get_SignalName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=121
+            out string return
+        put put_SignalName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=141
+            in string name=value
+    property signal_id
+        get get_SignalId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=62
+            out string return
+        put put_SignalId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=99
+            in string name=value
+    property signal_end
+        get get_SignalEnd slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=202
+            out timespan return
+        put put_SignalEnd slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26 reverse=215
+            in timespan name=value
+    property signal_context
+        get get_SignalContext slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=162
+            out object return
+        put put_SignalContext slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=173
+            in object name=value
+    property is_signal_verification_required
+        get get_IsSignalVerificationRequired slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=22
+            out boolean return
+        put put_IsSignalVerificationRequired slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=43
+            in boolean name=value
+    property detector_id
+        get get_DetectorId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4 reverse=22
+            out string return
+    property detector_kind
+        get get_DetectorKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind return
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs python_type
+    py ConversationalAgentSignalDetectedEventArgs
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs;{4d57eb8f-f88a-599b-91d3-d604876708bc})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignalDetectedEventArgs
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignalDetectedEventArgs
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState python_type
+    py ConversationalAgentState
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType python_type
+    py ConversationalAgentSystemStateChangeType
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType;i4)
+
+class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs python_type
+    py ConversationalAgentSystemStateChangedEventArgs
+    signature rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs;{1c2c6e3e-2785-59a7-8e71-38adeef79928})
+    default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs
+    requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs
+    property system_state_change_type
+        get get_SystemStateChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType return
+
+enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind python_type
+    py ConversationalAgentVoiceActivationPrerequisiteKind
+    signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4)
+
+enum Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind python_type
+    py DetectionConfigurationAvailabilityChangeKind
+    signature enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind;i4)
+
+class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs python_type
+    py DetectionConfigurationAvailabilityChangedEventArgs
+    signature rc(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs;{5129c9fb-4be8-5f14-af2b-88d62b1b4462})
+    default Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs
+    requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind return
+
+class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo python_type
+    py DetectionConfigurationAvailabilityInfo
+    signature rc(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo;{b5affeb0-40f0-5398-b838-91979c2c6208})
+    default Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo
+    requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo
+    requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2
+    property has_lock_screen_permission
+        get get_HasLockScreenPermission slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=99
+            out boolean return
+    property has_permission
+        get get_HasPermission slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=62
+            out boolean return
+    property has_system_resource_access
+        get get_HasSystemResourceAccess slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=43
+            out boolean return
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=22
+            out boolean return
+    property unavailable_system_resources
+        get get_UnavailableSystemResources slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> return
+
+enum Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus python_type
+    py DetectionConfigurationTrainingStatus
+    signature enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus;i4)
+
+interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration
+    guid 40d8be16-5217-581c-9ab2-ce9b2f2e8e00
+
+interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2
+    guid 71d9b022-562c-57ce-a78b-8b4ff0145bab
+
+interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult
+    guid 4c89bc1b-8d12-5e48-a71c-7f6bc1cd66e0
+
+interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector
+    guid b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff
+
+interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2
+    guid c7e2490a-baa5-59d2-85d1-ba42f7cf78c9
+
+interface Windows.Foundation.IAsyncOperation<System.Object> concrete
+    guid abf53c57-ee50-5342-b52a-26e3b8cc024f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+    guid ef60385f-be78-584b-aaef-7829ada2b0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete
+    guid 754c4ad1-97e2-5443-8558-5d9d5305d01b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> concrete
+    guid edd52757-74d4-5837-941f-c37c5d4b4f53
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult;{4c89bc1b-8d12-5e48-a71c-7f6bc1cd66e0}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> concrete
+    guid 312794cb-0e43-5cbf-a148-58a9d7a65c14
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> concrete
+    guid 3738e73c-e4cd-55ad-b760-07af8b4a29d3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> concrete
+    guid be03cc1f-0a8a-5878-a84e-af4646df3cc5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete
+    guid 3566eb2e-4f9c-5261-998d-90296eff00c5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> concrete
+    guid d177b8f3-d984-5c78-a57f-f096e291b374
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> concrete
+    guid 51831e09-6f91-59b0-820d-60b97775c575
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7}))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> concrete
+    guid 4b85887b-8070-5ef9-aac8-92515257061e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> concrete
+    guid 7631a007-93a6-554e-bcdd-3baee7c8c2c6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> concrete
+    guid 92b02cd3-aa6e-573d-bc03-8d2309cba3eb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string))
+    argument Windows.Foundation.Collections.IVector<System.String>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete
+    guid 52c56f3c-713a-5162-9e62-362ce7ed53be
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4))
+    argument Windows.Foundation.Collections.IVectorView<System.UInt32>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> concrete
+    guid ec02c465-2697-5e66-b867-1411dd7d57a7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> concrete
+    guid ecc1a135-a8a5-51b9-8e1a-6340d9f56cae
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> concrete
+    guid c192099d-c28a-550a-8c2b-e31c8fabcb4b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4)))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> concrete
+    guid d009b9cb-e9c1-5d8d-9575-c33ac26ce44a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.AudioDeviceInputNode;{b01b6be1-6f4e-49e2-ac01-559d62beb3a9}))
+    argument Windows.Media.Audio.AudioDeviceInputNode
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+    guid a8fe0732-556d-5841-b7ee-b3450fb52666
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IInputStream
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager
+    guid de94fbb0-597a-5df8-8cfb-9dbb583ba3ff
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2
+    guid 84610f31-d7f3-52fe-9311-c9eb4e3eb30a
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics
+    guid 36a8d283-fa0e-5693-8489-0fb2f0ab40d3
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession
+    guid daaae09a-b7ba-57e5-ad13-df520f9b6fa7
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2
+    guid a7a9fbf9-ac78-57ff-9596-acc7a1c9a607
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionInterruptedEventArgs
+    guid 9766591f-f63d-5d3e-9bf2-bd0760552686
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics
+    guid a005166e-e954-576e-be04-11b8ed10f37b
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal
+    guid 20ed25f7-b120-51f2-8603-265d6a47f232
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2
+    guid d0cc7ba9-9a7b-5c34-880e-b6146c904ecb
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignalDetectedEventArgs
+    guid 4d57eb8f-f88a-599b-91d3-d604876708bc
+
+interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs
+    guid 1c2c6e3e-2785-59a7-8e71-38adeef79928
+
+interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs
+    guid 5129c9fb-4be8-5f14-af2b-88d62b1b4462
+
+interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo
+    guid b5affeb0-40f0-5398-b838-91979c2c6208
+
+interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2
+    guid 30e06433-38b3-5c4b-84c3-62b6e685b2ff
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+    guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete
+    guid 2515803e-4d85-5df7-a88a-88388730d659
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> concrete
+    guid 679189c6-73c4-5295-8b04-6ce05cab4d17
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete
+    guid 6e514658-da3d-5201-9eb2-b2ef1c8dd1ba
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> concrete
+    guid c303fd7f-d073-54c3-8411-c118226323ac
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> concrete
+    guid 82216c11-1e7a-592c-9a3d-15d63e6fdd19
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> concrete
+    guid a847ac9b-a9ae-55c5-811d-920122e361d6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4))
+    argument Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind
+
+enum Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind python_type
+    py SignalDetectorResourceKind
+    signature enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> concrete
+    guid 491146ea-2bc6-5f03-a317-097aae055198
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00});rc(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs;{5129c9fb-4be8-5f14-af2b-88d62b1b4462}))
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    argument Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs> concrete
+    guid e1c093f2-c2f4-58c6-9fd1-3beb13b18ec8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs;{9766591f-f63d-5d3e-9bf2-bd0760552686}))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs> concrete
+    guid d4b78ffb-98b2-5004-9cb4-24dd755734fb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs;{4d57eb8f-f88a-599b-91d3-d604876708bc}))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs> concrete
+    guid ac7da0c7-d0d3-5bac-bbc9-52ad49131f1f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs;{1c2c6e3e-2785-59a7-8e71-38adeef79928}))
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Media.Audio.AudioDeviceInputNode external
+    py winrt.windows.media.audio.AudioDeviceInputNode
+
+class Windows.Media.Audio.AudioGraph external
+    py winrt.windows.media.audio.AudioGraph
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da

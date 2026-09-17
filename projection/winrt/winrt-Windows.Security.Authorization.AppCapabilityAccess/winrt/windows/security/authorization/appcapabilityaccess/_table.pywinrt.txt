@@ -1,0 +1,108 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Authorization.AppCapabilityAccess
+
+class Windows.Security.Authorization.AppCapabilityAccess.AppCapability python_type
+    py AppCapability
+    signature rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapability;{4c49d915-8a2a-4295-9437-2df7c396aff4})
+    default Windows.Security.Authorization.AppCapabilityAccess.IAppCapability
+    requires Windows.Security.Authorization.AppCapabilityAccess.IAppCapability
+    requires Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2
+    factory Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics
+    property capability_name
+        get get_CapabilityName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=22
+            out string return
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=43
+            out class type=Windows.System.User return
+    property display_message
+        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4 reverse=22
+            out string return
+        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4 reverse=43
+            in string name=value
+    event access_changed
+        add add_AccessChanged slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapability,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AccessChanged slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=26 reverse=156
+            in event_token name=token
+    method check_access
+        method CheckAccess slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=99
+            out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
+    method create static
+        method Create slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 reverse=65 static
+            in string name=capabilityName
+            out class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapability return
+    method create_with_process_id_for_user static
+        method CreateWithProcessIdForUser slot=9 inputs=3 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=195 reverse=102 static
+            in class type=Windows.System.User name=user
+            in string name=capabilityName
+            in uint32 name=pid
+            out class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapability return
+    method request_access_async
+        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
+    method request_access_for_capabilities_async static
+        method RequestAccessForCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilityNames
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
+    method request_access_for_capabilities_for_user_async static
+        method RequestAccessForCapabilitiesForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=117 reverse=45 static
+            in class type=Windows.System.User name=user
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilityNames
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
+
+class Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs python_type
+    py AppCapabilityAccessChangedEventArgs
+    signature rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs;{0a578d15-bdd7-457e-8cca-6f53bd2e5944})
+    default Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityAccessChangedEventArgs
+    requires Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityAccessChangedEventArgs
+
+enum Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus python_type
+    py AppCapabilityAccessStatus
+    signature enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)
+
+interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapability
+    guid 4c49d915-8a2a-4295-9437-2df7c396aff4
+
+interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2
+    guid 11c7ccb6-c74f-50a3-b960-88008767d939
+
+interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityAccessChangedEventArgs
+    guid 0a578d15-bdd7-457e-8cca-6f53bd2e5944
+
+interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics
+    guid 7c353e2a-46ee-44e5-af3d-6ad3fc49bd22
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete
+    guid a66001f3-e332-531a-bf49-4edd3af88de7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)))
+    argument Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+    guid 827caf42-5fe6-5b5b-84ce-c44834134d3d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+    guid 20366438-9fab-5c12-87eb-da867e383fe7
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    argument System.String
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapability,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs> concrete
+    guid 6d923c95-7b83-5f59-8883-f44175284898
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapability;{4c49d915-8a2a-4295-9437-2df7c396aff4});rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs;{0a578d15-bdd7-457e-8cca-6f53bd2e5944}))
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapability
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs
+
+class System.String external
+    py winrt.system.String
+
+class Windows.System.User external
+    py winrt.windows.system.User

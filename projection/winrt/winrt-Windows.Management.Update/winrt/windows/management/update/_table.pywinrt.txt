@@ -1,0 +1,624 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Management.Update
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem>> concrete
+    guid 6fe7014f-431a-5203-9574-5246fc49d6bb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsUpdateItem;{b222e44a-49b6-59bf-a033-ef617cd73a98})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem>
+
+interface Windows.Management.Update.IPreviewBuildsManager
+    guid fa07dd61-7e4f-59f7-7c9f-def9051c5f62
+
+interface Windows.Management.Update.IPreviewBuildsManagerStatics
+    guid 3e422887-b112-5a70-7da1-97d78d32aa29
+
+interface Windows.Management.Update.IPreviewBuildsState
+    guid a2f2903e-b223-5f63-7546-3e8eac070a2e
+
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> concrete
+    guid 1eef9339-6038-5751-b5ae-bd89c17a8741
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsUpdate;{c3c88dd7-0ef3-52b2-a9ad-66bfc6bd9582}))
+    argument Windows.Management.Update.WindowsUpdate
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem> concrete
+    guid 8faa5cdf-6b97-5d4f-804d-443b4fbbdc53
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsUpdateItem;{b222e44a-49b6-59bf-a033-ef617cd73a98}))
+    argument Windows.Management.Update.WindowsUpdateItem
+
+interface Windows.Management.Update.IWindowsUpdate
+    guid c3c88dd7-0ef3-52b2-a9ad-66bfc6bd9582
+
+interface Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs
+    guid 2c44b950-a655-5321-aec1-aee762922131
+
+interface Windows.Management.Update.IWindowsUpdateActionProgress
+    guid 83b22d8a-4bb0-549f-ba39-59724882d137
+
+interface Windows.Management.Update.IWindowsUpdateActionResult
+    guid e6692c62-f697-51b7-ab7f-e73e5e688f12
+
+interface Windows.Management.Update.IWindowsUpdateAdministrator
+    guid 7a60181c-ba1e-5cf9-aa65-304120b73d72
+
+interface Windows.Management.Update.IWindowsUpdateAdministratorStatics
+    guid 013e6d36-ef69-53bc-8db8-c403bca550ed
+
+interface Windows.Management.Update.IWindowsUpdateApprovalData
+    guid aadf5bfd-84db-59bc-85e2-ad4fc1f62f7c
+
+interface Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo
+    guid 44df2579-74d3-5ffa-b6ce-09e187e1e0ed
+
+interface Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs
+    guid 0627abca-dbb8-524a-b1d2-d9df004eeb31
+
+interface Windows.Management.Update.IWindowsUpdateGetAdministratorResult
+    guid bb39ffc4-2c42-5b1c-8995-343341c92c50
+
+interface Windows.Management.Update.IWindowsUpdateItem
+    guid b222e44a-49b6-59bf-a033-ef617cd73a98
+
+interface Windows.Management.Update.IWindowsUpdateManager
+    guid 5dd966c0-a71a-5602-bbd0-09a70e4573fa
+
+interface Windows.Management.Update.IWindowsUpdateManagerFactory
+    guid 1b394df8-decb-5f44-b47c-6ccf3bcfdb37
+
+interface Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
+    guid bbfbdeeb-94c8-5aa7-b0fb-66c67c233b0a
+
+interface Windows.Management.Update.IWindowsUpdateRestartRequestOptions
+    guid 38cfb7d3-4188-5222-905c-6c4443c951ee
+
+interface Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory
+    guid 75f41d04-0e17-50d0-8c15-6b9d0539b3a9
+
+interface Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs
+    guid 95b6953e-ba5c-5fe8-b115-12de184a6bb0
+
+class Windows.Management.Update.PreviewBuildsManager python_type
+    py PreviewBuildsManager
+    signature rc(Windows.Management.Update.PreviewBuildsManager;{fa07dd61-7e4f-59f7-7c9f-def9051c5f62})
+    default Windows.Management.Update.IPreviewBuildsManager
+    requires Windows.Management.Update.IPreviewBuildsManager
+    factory Windows.Management.Update.IPreviewBuildsManagerStatics
+    property are_preview_builds_allowed
+        get get_ArePreviewBuildsAllowed slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsManager shape=4 reverse=22
+            out boolean return
+        put put_ArePreviewBuildsAllowed slot=7 inputs=1 outputs=0 declaring=Windows.Management.Update.IPreviewBuildsManager shape=4 reverse=43
+            in boolean name=value
+    method get_current_state
+        method GetCurrentState slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsManager shape=4 reverse=62
+            out class type=Windows.Management.Update.PreviewBuildsState return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsManagerStatics shape=4 reverse=22 static
+            out class type=Windows.Management.Update.PreviewBuildsManager return
+    method is_supported static
+        method IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsManagerStatics shape=4 reverse=43 static
+            out boolean return
+    method sync_async
+        method SyncAsync slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Management.Update.PreviewBuildsState python_type
+    py PreviewBuildsState
+    signature rc(Windows.Management.Update.PreviewBuildsState;{a2f2903e-b223-5f63-7546-3e8eac070a2e})
+    default Windows.Management.Update.IPreviewBuildsState
+    requires Windows.Management.Update.IPreviewBuildsState
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsState shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,System.Object> concrete
+    guid b95a0a5d-28f1-50f5-914a-b55a1a84dcd8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa});cinterface(IInspectable))
+    argument Windows.Management.Update.WindowsUpdateManager
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateActionCompletedEventArgs> concrete
+    guid a4f8bb0a-4633-5c2c-b4a2-5047e201cf07
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa});rc(Windows.Management.Update.WindowsUpdateActionCompletedEventArgs;{2c44b950-a655-5321-aec1-aee762922131}))
+    argument Windows.Management.Update.WindowsUpdateManager
+    argument Windows.Management.Update.WindowsUpdateActionCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs> concrete
+    guid 1b44e3b5-e822-5c75-85a9-4a3983bebdd8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa});rc(Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs;{0627abca-dbb8-524a-b1d2-d9df004eeb31}))
+    argument Windows.Management.Update.WindowsUpdateManager
+    argument Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateProgressChangedEventArgs> concrete
+    guid 61f35a11-50a1-5199-ac17-75206872fc4d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa});rc(Windows.Management.Update.WindowsUpdateProgressChangedEventArgs;{bbfbdeeb-94c8-5aa7-b0fb-66c67c233b0a}))
+    argument Windows.Management.Update.WindowsUpdateManager
+    argument Windows.Management.Update.WindowsUpdateProgressChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateScanCompletedEventArgs> concrete
+    guid 74625656-399b-5686-b24d-349f57880690
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa});rc(Windows.Management.Update.WindowsUpdateScanCompletedEventArgs;{95b6953e-ba5c-5fe8-b115-12de184a6bb0}))
+    argument Windows.Management.Update.WindowsUpdateManager
+    argument Windows.Management.Update.WindowsUpdateScanCompletedEventArgs
+
+class Windows.Management.Update.WindowsUpdate python_type
+    py WindowsUpdate
+    signature rc(Windows.Management.Update.WindowsUpdate;{c3c88dd7-0ef3-52b2-a9ad-66bfc6bd9582})
+    default Windows.Management.Update.IWindowsUpdate
+    requires Windows.Management.Update.IWindowsUpdate
+    property action_progress
+        get get_ActionProgress slot=27 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=259
+            out class type=Windows.Management.Update.WindowsUpdateActionProgress return
+    property action_result
+        get get_ActionResult slot=25 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=252
+            out class type=Windows.Management.Update.WindowsUpdateActionResult return
+    property attention_required_info
+        get get_AttentionRequiredInfo slot=24 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=247
+            out class type=Windows.Management.Update.WindowsUpdateAttentionRequiredInfo return
+    property current_action
+        get get_CurrentAction slot=26 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=255
+            out string return
+    property deadline
+        get get_Deadline slot=23 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=242
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=99
+            out string return
+    property eula_text
+        get get_EulaText slot=22 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=237
+            out string return
+    property is_critical
+        get get_IsCritical slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=173
+            out boolean return
+    property is_driver
+        get get_IsDriver slot=15 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=194
+            out boolean return
+    property is_eula_accepted
+        get get_IsEulaAccepted slot=21 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=232
+            out boolean return
+    property is_feature_update
+        get get_IsFeatureUpdate slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=121
+            out boolean return
+    property is_for_os
+        get get_IsForOS slot=14 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=186
+            out boolean return
+    property is_mandatory
+        get get_IsMandatory slot=16 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=202
+            out boolean return
+    property is_minor_impact
+        get get_IsMinorImpact slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=141
+            out boolean return
+    property is_security
+        get get_IsSecurity slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=162
+            out boolean return
+    property is_seeker
+        get get_IsSeeker slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=218
+            out boolean return
+    property is_urgent
+        get get_IsUrgent slot=17 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=210
+            out boolean return
+    property more_info_url
+        get get_MoreInfoUrl slot=19 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=223
+            out class type=Windows.Foundation.Uri return
+    property provider_id
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=22
+            out string return
+    property support_url
+        get get_SupportUrl slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=228
+            out class type=Windows.Foundation.Uri return
+    property title
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=62
+            out string return
+    property update_id
+        get get_UpdateId slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=4 reverse=43
+            out string return
+    method accept_eula
+        method AcceptEula slot=29 inputs=0 outputs=0 declaring=Windows.Management.Update.IWindowsUpdate shape=0 reverse=265
+    method get_property_value
+        method GetPropertyValue slot=28 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdate shape=51 reverse=264
+            in string name=propertyName
+            out object return
+
+class Windows.Management.Update.WindowsUpdateActionCompletedEventArgs python_type
+    py WindowsUpdateActionCompletedEventArgs
+    signature rc(Windows.Management.Update.WindowsUpdateActionCompletedEventArgs;{2c44b950-a655-5321-aec1-aee762922131})
+    default Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs
+    requires Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs
+    property action
+        get get_Action slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs shape=4 reverse=43
+            out string return
+    property extended_error
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs shape=4 reverse=99
+            out hresult return
+    property succeeded
+        get get_Succeeded slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs shape=4 reverse=62
+            out boolean return
+    property update
+        get get_Update slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionCompletedEventArgs shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsUpdate return
+
+class Windows.Management.Update.WindowsUpdateActionProgress python_type
+    py WindowsUpdateActionProgress
+    signature rc(Windows.Management.Update.WindowsUpdateActionProgress;{83b22d8a-4bb0-549f-ba39-59724882d137})
+    default Windows.Management.Update.IWindowsUpdateActionProgress
+    requires Windows.Management.Update.IWindowsUpdateActionProgress
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionProgress shape=4 reverse=22
+            out string return
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionProgress shape=4 reverse=43
+            out double return
+
+class Windows.Management.Update.WindowsUpdateActionResult python_type
+    py WindowsUpdateActionResult
+    signature rc(Windows.Management.Update.WindowsUpdateActionResult;{e6692c62-f697-51b7-ab7f-e73e5e688f12})
+    default Windows.Management.Update.IWindowsUpdateActionResult
+    requires Windows.Management.Update.IWindowsUpdateActionResult
+    property action
+        get get_Action slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionResult shape=4 reverse=99
+            out string return
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionResult shape=4 reverse=62
+            out hresult return
+    property succeeded
+        get get_Succeeded slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionResult shape=4 reverse=43
+            out boolean return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateActionResult shape=4 reverse=22
+            out datetime return
+
+class Windows.Management.Update.WindowsUpdateAdministrator python_type
+    py WindowsUpdateAdministrator
+    signature rc(Windows.Management.Update.WindowsUpdateAdministrator;{7a60181c-ba1e-5cf9-aa65-304120b73d72})
+    default Windows.Management.Update.IWindowsUpdateAdministrator
+    requires Windows.Management.Update.IWindowsUpdateAdministrator
+    factory Windows.Management.Update.IWindowsUpdateAdministratorStatics
+    method approve_windows_update
+        method ApproveWindowsUpdate slot=9 inputs=2 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=51 reverse=100
+            in string name=updateId
+            in class type=Windows.Management.Update.WindowsUpdateApprovalData name=approvalData
+    method approve_windows_update_action
+        method ApproveWindowsUpdateAction slot=7 inputs=2 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=51 reverse=44
+            in string name=updateId
+            in string name=action
+    method cancel_restart_request static
+        method CancelRestartRequest slot=11 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=4 reverse=141 static
+            in string name=requestRestartToken
+    method get_registered_administrator static
+        method GetRegisteredAdministrator slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=51 reverse=24 static
+            in string name=organizationName
+            out class type=Windows.Management.Update.WindowsUpdateGetAdministratorResult return
+    method get_registered_administrator_name static
+        method GetRegisteredAdministratorName slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=4 reverse=99 static
+            out string return
+    method get_updates
+        method GetUpdates slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> return
+    method register_for_administration static
+        method RegisterForAdministration slot=7 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=117 reverse=45 static
+            in string name=organizationName
+            in enum_u32 type=Windows.Management.Update.WindowsUpdateAdministratorOptions name=options
+            out enum32 type=Windows.Management.Update.WindowsUpdateAdministratorStatus return
+    method request_restart static
+        method RequestRestart slot=10 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=51 reverse=124 static
+            in class type=Windows.Management.Update.WindowsUpdateRestartRequestOptions name=restartOptions
+            out string return
+    method revoke_windows_update_action_approval
+        method RevokeWindowsUpdateActionApproval slot=8 inputs=2 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=51 reverse=65
+            in string name=updateId
+            in string name=action
+    method revoke_windows_update_approval
+        method RevokeWindowsUpdateApproval slot=10 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=4 reverse=121
+            in string name=updateId
+    method start_administrator_scan
+        method StartAdministratorScan slot=6 inputs=0 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateAdministrator shape=0 reverse=16
+    method unregister_for_administration static
+        method UnregisterForAdministration slot=8 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAdministratorStatics shape=51 reverse=65 static
+            in string name=organizationName
+            out enum32 type=Windows.Management.Update.WindowsUpdateAdministratorStatus return
+
+enum Windows.Management.Update.WindowsUpdateAdministratorOptions python_type
+    py WindowsUpdateAdministratorOptions
+    signature enum(Windows.Management.Update.WindowsUpdateAdministratorOptions;u4)
+
+enum Windows.Management.Update.WindowsUpdateAdministratorStatus python_type
+    py WindowsUpdateAdministratorStatus
+    signature enum(Windows.Management.Update.WindowsUpdateAdministratorStatus;i4)
+
+class Windows.Management.Update.WindowsUpdateApprovalData activatable python_type
+    py WindowsUpdateApprovalData
+    signature rc(Windows.Management.Update.WindowsUpdateApprovalData;{aadf5bfd-84db-59bc-85e2-ad4fc1f62f7c})
+    default Windows.Management.Update.IWindowsUpdateApprovalData
+    requires Windows.Management.Update.IWindowsUpdateApprovalData
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property seeker
+        get get_Seeker slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+        put put_Seeker slot=7 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+    property opt_out_of_auto_reboot
+        get get_OptOutOfAutoReboot slot=14 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+        put put_OptOutOfAutoReboot slot=15 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=194
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+    property compliance_grace_period_in_days
+        get get_ComplianceGracePeriodInDays slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_ComplianceGracePeriodInDays slot=13 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property compliance_deadline_in_days
+        get get_ComplianceDeadlineInDays slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_ComplianceDeadlineInDays slot=11 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property allow_download_on_metered
+        get get_AllowDownloadOnMetered slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+        put put_AllowDownloadOnMetered slot=9 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateApprovalData shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+
+class Windows.Management.Update.WindowsUpdateAttentionRequiredInfo python_type
+    py WindowsUpdateAttentionRequiredInfo
+    signature rc(Windows.Management.Update.WindowsUpdateAttentionRequiredInfo;{44df2579-74d3-5ffa-b6ce-09e187e1e0ed})
+    default Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo
+    requires Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo shape=4 reverse=22
+            out enum32 type=Windows.Management.Update.WindowsUpdateAttentionRequiredReason return
+    property timestamp
+        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAttentionRequiredInfo shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+
+enum Windows.Management.Update.WindowsUpdateAttentionRequiredReason python_type
+    py WindowsUpdateAttentionRequiredReason
+    signature enum(Windows.Management.Update.WindowsUpdateAttentionRequiredReason;i4)
+
+class Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs python_type
+    py WindowsUpdateAttentionRequiredReasonChangedEventArgs
+    signature rc(Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs;{0627abca-dbb8-524a-b1d2-d9df004eeb31})
+    default Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs
+    requires Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs
+    property reason
+        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Management.Update.WindowsUpdateAttentionRequiredReason return
+    property update
+        get get_Update slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateAttentionRequiredReasonChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsUpdate return
+
+class Windows.Management.Update.WindowsUpdateGetAdministratorResult python_type
+    py WindowsUpdateGetAdministratorResult
+    signature rc(Windows.Management.Update.WindowsUpdateGetAdministratorResult;{bb39ffc4-2c42-5b1c-8995-343341c92c50})
+    default Windows.Management.Update.IWindowsUpdateGetAdministratorResult
+    requires Windows.Management.Update.IWindowsUpdateGetAdministratorResult
+    property administrator
+        get get_Administrator slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateGetAdministratorResult shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsUpdateAdministrator return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateGetAdministratorResult shape=4 reverse=43
+            out enum32 type=Windows.Management.Update.WindowsUpdateAdministratorStatus return
+
+class Windows.Management.Update.WindowsUpdateItem python_type
+    py WindowsUpdateItem
+    signature rc(Windows.Management.Update.WindowsUpdateItem;{b222e44a-49b6-59bf-a033-ef617cd73a98})
+    default Windows.Management.Update.IWindowsUpdateItem
+    requires Windows.Management.Update.IWindowsUpdateItem
+    property category
+        get get_Category slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=162
+            out string return
+    property description
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=121
+            out string return
+    property more_info_url
+        get get_MoreInfoUrl slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+    property operation
+        get get_Operation slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=173
+            out string return
+    property provider_id
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=22
+            out string return
+    property timestamp
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=62
+            out datetime return
+    property title
+        get get_Title slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=99
+            out string return
+    property update_id
+        get get_UpdateId slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateItem shape=4 reverse=43
+            out string return
+
+class Windows.Management.Update.WindowsUpdateManager python_type
+    py WindowsUpdateManager
+    signature rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa})
+    default Windows.Management.Update.IWindowsUpdateManager
+    requires Windows.Management.Update.IWindowsUpdateManager
+    factory Windows.Management.Update.IWindowsUpdateManagerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManagerFactory shape=51 reverse=24
+            in string name=clientId
+            out class type=Windows.Management.Update.WindowsUpdateManager return
+    property is_scanning
+        get get_IsScanning slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=218
+            out boolean return
+    property is_working
+        get get_IsWorking slot=19 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=223
+            out boolean return
+    property last_successful_scan_timestamp
+        get get_LastSuccessfulScanTimestamp slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=228
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    event action_completed
+        add add_ActionCompleted slot=14 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateActionCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_ActionCompleted slot=15 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=200
+            in event_token name=token
+    event attention_required_reason_changed
+        add add_AttentionRequiredReasonChanged slot=12 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AttentionRequiredReasonChanged slot=13 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=181
+            in event_token name=token
+    event progress_changed
+        add add_ProgressChanged slot=10 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateProgressChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ProgressChanged slot=11 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=156
+            in event_token name=token
+    event scan_completed
+        add add_ScanCompleted slot=16 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateScanCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_ScanCompleted slot=17 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=215
+            in event_token name=token
+    event scanning_state_changed
+        add add_ScanningStateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,System.Object> name=handler
+            out event_token return
+        remove remove_ScanningStateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=53
+            in event_token name=token
+    event working_state_changed
+        add add_WorkingStateChanged slot=8 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,System.Object> name=handler
+            out event_token return
+        remove remove_WorkingStateChanged slot=9 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=110
+            in event_token name=token
+    method get_applicable_updates
+        method GetApplicableUpdates slot=21 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=232
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> return
+    method get_most_recent_completed_updates
+        method GetMostRecentCompletedUpdates slot=22 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=238
+            in int32 name=count
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem> return
+    method get_most_recent_completed_updates_async
+        method GetMostRecentCompletedUpdatesAsync slot=23 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=243
+            in int32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem>> return
+    method start_scan
+        method StartScan slot=24 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=247
+            in boolean name=userInitiated
+
+class Windows.Management.Update.WindowsUpdateProgressChangedEventArgs python_type
+    py WindowsUpdateProgressChangedEventArgs
+    signature rc(Windows.Management.Update.WindowsUpdateProgressChangedEventArgs;{bbfbdeeb-94c8-5aa7-b0fb-66c67c233b0a})
+    default Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
+    requires Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
+    property action_progress
+        get get_ActionProgress slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs shape=4 reverse=43
+            out class type=Windows.Management.Update.WindowsUpdateActionProgress return
+    property update
+        get get_Update slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsUpdate return
+
+class Windows.Management.Update.WindowsUpdateRestartRequestOptions activatable python_type
+    py WindowsUpdateRestartRequestOptions
+    signature rc(Windows.Management.Update.WindowsUpdateRestartRequestOptions;{38cfb7d3-4188-5222-905c-6c4443c951ee})
+    default Windows.Management.Update.IWindowsUpdateRestartRequestOptions
+    requires Windows.Management.Update.IWindowsUpdateRestartRequestOptions
+    factory Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267
+            in string name=title implicit
+            in string name=description implicit
+            in class type=Windows.Foundation.Uri name=moreInfoUrl implicit
+            in int32 name=complianceDeadlineInDays implicit
+            in int32 name=complianceGracePeriodInDays implicit
+            out class type=Windows.Management.Update.WindowsUpdateRestartRequestOptions return
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267
+            in string name=title
+            in string name=description
+            in class type=Windows.Foundation.Uri name=moreInfoUrl
+            in int32 name=complianceDeadlineInDays
+            in int32 name=complianceGracePeriodInDays
+            out class type=Windows.Management.Update.WindowsUpdateRestartRequestOptions return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=22
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=43
+            in string name=value
+    property organization_name
+        get get_OrganizationName slot=16 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=202
+            out string return
+        put put_OrganizationName slot=17 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=210
+            in string name=value
+    property opt_out_of_auto_reboot
+        get get_OptOutOfAutoReboot slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=218
+            out boolean return
+        put put_OptOutOfAutoReboot slot=19 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=223
+            in boolean name=value
+    property more_info_url
+        get get_MoreInfoUrl slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_MoreInfoUrl slot=11 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=99
+            in string name=value
+    property compliance_grace_period_in_days
+        get get_ComplianceGracePeriodInDays slot=14 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=186
+            out int32 return
+        put put_ComplianceGracePeriodInDays slot=15 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=194
+            in int32 name=value
+    property compliance_deadline_in_days
+        get get_ComplianceDeadlineInDays slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=162
+            out int32 return
+        put put_ComplianceDeadlineInDays slot=13 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptions shape=4 reverse=173
+            in int32 name=value
+
+class Windows.Management.Update.WindowsUpdateScanCompletedEventArgs python_type
+    py WindowsUpdateScanCompletedEventArgs
+    signature rc(Windows.Management.Update.WindowsUpdateScanCompletedEventArgs;{95b6953e-ba5c-5fe8-b115-12de184a6bb0})
+    default Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs
+    requires Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs shape=4 reverse=62
+            out hresult return
+    property provider_id
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs shape=4 reverse=22
+            out string return
+    property succeeded
+        get get_Succeeded slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs shape=4 reverse=43
+            out boolean return
+    property updates
+        get get_Updates slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateScanCompletedEventArgs shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet

@@ -1,0 +1,356 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.AI.Imaging
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> concrete
+    guid 1ebb676d-c291-55ef-8d3f-847ff701ef72
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator;{576b989e-9829-5682-91b0-a7110fa7d51e}))
+    argument Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> concrete
+    guid 0f52d3c6-6444-5bc9-a7f2-b8a6006934aa
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.ImageObjectExtractor;{2919fdc0-d772-5fd9-a8b7-ffb56010c99c}))
+    argument Microsoft.Windows.AI.Imaging.ImageObjectExtractor
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageScaler> concrete
+    guid afbdba2c-fa3c-551c-8570-350aae1c53ab
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.ImageScaler;{06eec88e-91c5-5326-8128-2807faafa571}))
+    argument Microsoft.Windows.AI.Imaging.ImageScaler
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.RecognizedText> concrete
+    guid 3103ec71-2340-5b2b-8833-cc4ed639e936
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.RecognizedText;{ae4766d3-2924-57a6-b3d3-b866f59b9972}))
+    argument Microsoft.Windows.AI.Imaging.RecognizedText
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.TextRecognizer> concrete
+    guid 740b5d43-1472-53d9-92ec-8465f678d0c3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.TextRecognizer;{be7bf6c0-30f6-570d-bd92-3ffe5665d933}))
+    argument Microsoft.Windows.AI.Imaging.TextRecognizer
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    guid 39c32af0-c9b4-595f-9e9b-c6c289ad9ea1
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Imaging.ImageDescriptionResult,System.String> concrete
+    guid cb8eead4-f793-58c5-96cc-08b56d595f39
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Imaging.ImageDescriptionResult;{a066dd0c-110b-5275-a635-52bed7519a2f});string)
+    argument Microsoft.Windows.AI.Imaging.ImageDescriptionResult
+    argument System.String
+
+interface Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator
+    guid 576b989e-9829-5682-91b0-a7110fa7d51e
+
+interface Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics
+    guid 5fb50b2a-5700-55a7-b413-6073b4b7f175
+
+interface Microsoft.Windows.AI.Imaging.IImageDescriptionResult
+    guid a066dd0c-110b-5275-a635-52bed7519a2f
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectExtractor
+    guid 2919fdc0-d772-5fd9-a8b7-ffb56010c99c
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint
+    guid 1bd8d67c-8a7a-5fe7-98a5-cbdfeb509452
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory
+    guid 5028f206-145d-5a70-9a51-e17e60cfbad8
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics
+    guid 38fa261e-2c33-54cb-9e10-98d50685743d
+
+interface Microsoft.Windows.AI.Imaging.IImageScaler
+    guid 06eec88e-91c5-5326-8128-2807faafa571
+
+interface Microsoft.Windows.AI.Imaging.IImageScalerStatics
+    guid 75380c81-9c7f-544b-9337-6e638cfb464a
+
+interface Microsoft.Windows.AI.Imaging.IRecognizedLine
+    guid 612a6be6-f6bb-53c9-84ce-f0a5e565faa7
+
+interface Microsoft.Windows.AI.Imaging.IRecognizedText
+    guid ae4766d3-2924-57a6-b3d3-b866f59b9972
+
+interface Microsoft.Windows.AI.Imaging.IRecognizedWord
+    guid 6b53daab-3410-5088-826a-0788a1ee3b52
+
+interface Microsoft.Windows.AI.Imaging.ITextRecognizer
+    guid be7bf6c0-30f6-570d-bd92-3ffe5665d933
+
+interface Microsoft.Windows.AI.Imaging.ITextRecognizerStatics
+    guid 3788c2fd-e496-53ab-85a7-e54a135824e9
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> concrete
+    guid 0a15cbe9-ee02-5823-8a2b-fca63940e84f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Graphics.PointInt32;i4;i4))
+    argument Windows.Graphics.PointInt32
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> concrete
+    guid b4c6b283-6002-5af2-afa2-88a5be7ff16f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    argument Windows.Graphics.RectInt32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> concrete
+    guid 3c3a4b61-a864-5cb4-a996-2bbee4922757
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Graphics.PointInt32;i4;i4))
+    argument Windows.Graphics.PointInt32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> concrete
+    guid 4f5e243f-3812-5200-b70c-30dcfc61717b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    argument Windows.Graphics.RectInt32
+
+class Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator python_type closeable
+    py ImageDescriptionGenerator
+    signature rc(Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator;{576b989e-9829-5682-91b0-a7110fa7d51e})
+    default Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator
+    requires Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> return
+    method describe_async
+        method DescribeAsync slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator shape=195 reverse=26
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=image
+            in enum32 type=Microsoft.Windows.AI.Imaging.ImageDescriptionKind name=kind
+            in class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions name=contentFilterOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Imaging.ImageDescriptionResult,System.String> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+
+enum Microsoft.Windows.AI.Imaging.ImageDescriptionKind python_type
+    py ImageDescriptionKind
+    signature enum(Microsoft.Windows.AI.Imaging.ImageDescriptionKind;i4)
+
+class Microsoft.Windows.AI.Imaging.ImageDescriptionResult python_type
+    py ImageDescriptionResult
+    signature rc(Microsoft.Windows.AI.Imaging.ImageDescriptionResult;{a066dd0c-110b-5275-a635-52bed7519a2f})
+    default Microsoft.Windows.AI.Imaging.IImageDescriptionResult
+    requires Microsoft.Windows.AI.Imaging.IImageDescriptionResult
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4 reverse=22
+            out string return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4 reverse=43
+            out enum32 type=Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus return
+
+enum Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus python_type
+    py ImageDescriptionResultStatus
+    signature enum(Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus;i4)
+
+class Microsoft.Windows.AI.Imaging.ImageObjectExtractor python_type closeable
+    py ImageObjectExtractor
+    signature rc(Microsoft.Windows.AI.Imaging.ImageObjectExtractor;{2919fdc0-d772-5fd9-a8b7-ffb56010c99c})
+    default Microsoft.Windows.AI.Imaging.IImageObjectExtractor
+    requires Microsoft.Windows.AI.Imaging.IImageObjectExtractor
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_with_image_buffer_async static
+        method CreateWithImageBufferAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 reverse=44 static
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> return
+    method create_with_software_bitmap_async static
+        method CreateWithSoftwareBitmapAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 reverse=24 static
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_image_buffer_object_mask
+        method GetImageBufferObjectMask slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51 reverse=44
+            in class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint name=hint
+            out class type=Microsoft.Graphics.Imaging.ImageBuffer return
+    method get_ready_state static
+        method GetReadyState slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 reverse=62 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+    method get_software_bitmap_object_mask
+        method GetSoftwareBitmapObjectMask slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51 reverse=24
+            in class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint name=hint
+            out class type=Windows.Graphics.Imaging.SoftwareBitmap return
+
+class Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint python_type
+    py ImageObjectExtractorHint
+    signature rc(Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint;{1bd8d67c-8a7a-5fe7-98a5-cbdfeb509452})
+    default Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint
+    requires Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint
+    factory Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory shape=195 reverse=26
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> name=includeRects
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> name=includePoints
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> name=excludePoints
+            out class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint return
+    property exclude_points
+        get get_ExcludePoints slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> return
+    property include_points
+        get get_IncludePoints slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> return
+    property include_rects
+        get get_IncludeRects slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
+
+class Microsoft.Windows.AI.Imaging.ImageScaler python_type closeable
+    py ImageScaler
+    signature rc(Microsoft.Windows.AI.Imaging.ImageScaler;{06eec88e-91c5-5326-8128-2807faafa571})
+    default Microsoft.Windows.AI.Imaging.IImageScaler
+    requires Microsoft.Windows.AI.Imaging.IImageScaler
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Imaging.IImageScalerStatics
+    property max_supported_scale_factor
+        get get_MaxSupportedScaleFactor slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=4 reverse=62
+            out int32 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageScaler> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+    method scale_image_buffer
+        method ScaleImageBuffer slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195 reverse=46
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
+            in int32 name=width
+            in int32 name=height
+            out class type=Microsoft.Graphics.Imaging.ImageBuffer return
+    method scale_software_bitmap
+        method ScaleSoftwareBitmap slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195 reverse=26
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            in int32 name=width
+            in int32 name=height
+            out class type=Windows.Graphics.Imaging.SoftwareBitmap return
+
+class Microsoft.Windows.AI.Imaging.RecognizedLine python_type
+    py RecognizedLine
+    signature rc(Microsoft.Windows.AI.Imaging.RecognizedLine;{612a6be6-f6bb-53c9-84ce-f0a5e565faa7})
+    default Microsoft.Windows.AI.Imaging.IRecognizedLine
+    requires Microsoft.Windows.AI.Imaging.IRecognizedLine
+    property bounding_box
+        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=43
+            out struct type=Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox return
+    property line_style_confidence
+        get get_LineStyleConfidence slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=121
+            out single return
+    property style
+        get get_Style slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=99
+            out enum32 type=Microsoft.Windows.AI.Imaging.RecognizedLineStyle return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=22
+            out string return
+    property words
+        get get_Words slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=51 reverse=65
+            receive_array class type=Microsoft.Windows.AI.Imaging.RecognizedWord return
+
+enum Microsoft.Windows.AI.Imaging.RecognizedLineStyle python_type
+    py RecognizedLineStyle
+    signature enum(Microsoft.Windows.AI.Imaging.RecognizedLineStyle;i4)
+
+class Microsoft.Windows.AI.Imaging.RecognizedText python_type
+    py RecognizedText
+    signature rc(Microsoft.Windows.AI.Imaging.RecognizedText;{ae4766d3-2924-57a6-b3d3-b866f59b9972})
+    default Microsoft.Windows.AI.Imaging.IRecognizedText
+    requires Microsoft.Windows.AI.Imaging.IRecognizedText
+    property lines
+        get get_Lines slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=51 reverse=24
+            receive_array class type=Microsoft.Windows.AI.Imaging.RecognizedLine return
+    property text_angle
+        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=4 reverse=43
+            out single return
+
+struct Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox python_type
+    py RecognizedTextBoundingBox
+    signature struct(Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox;struct(Windows.Foundation.Point;f4;f4);struct(Windows.Foundation.Point;f4;f4);struct(Windows.Foundation.Point;f4;f4);struct(Windows.Foundation.Point;f4;f4))
+    field bottom_left BottomLeft struct type=Windows.Foundation.Point
+    field bottom_right BottomRight struct type=Windows.Foundation.Point
+    field top_left TopLeft struct type=Windows.Foundation.Point
+    field top_right TopRight struct type=Windows.Foundation.Point
+
+class Microsoft.Windows.AI.Imaging.RecognizedWord python_type
+    py RecognizedWord
+    signature rc(Microsoft.Windows.AI.Imaging.RecognizedWord;{6b53daab-3410-5088-826a-0788a1ee3b52})
+    default Microsoft.Windows.AI.Imaging.IRecognizedWord
+    requires Microsoft.Windows.AI.Imaging.IRecognizedWord
+    property bounding_box
+        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=43
+            out struct type=Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox return
+    property match_confidence
+        get get_MatchConfidence slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=62
+            out single return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=22
+            out string return
+
+class Microsoft.Windows.AI.Imaging.TextRecognizer python_type closeable
+    py TextRecognizer
+    signature rc(Microsoft.Windows.AI.Imaging.TextRecognizer;{be7bf6c0-30f6-570d-bd92-3ffe5665d933})
+    default Microsoft.Windows.AI.Imaging.ITextRecognizer
+    requires Microsoft.Windows.AI.Imaging.ITextRecognizer
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Imaging.ITextRecognizerStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.TextRecognizer> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+    method recognize_text_from_image
+        method RecognizeTextFromImage slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51 reverse=44
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
+            out class type=Microsoft.Windows.AI.Imaging.RecognizedText return
+    method recognize_text_from_image_async
+        method RecognizeTextFromImageAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51 reverse=24
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.RecognizedText> return
+
+class Microsoft.Graphics.Imaging.ImageBuffer external
+    py winui3.microsoft.graphics.imaging.ImageBuffer
+
+class Microsoft.Windows.AI.AIFeatureReadyResult external
+    py winui3.microsoft.windows.ai.AIFeatureReadyResult
+
+enum Microsoft.Windows.AI.AIFeatureReadyState external
+    py winui3.microsoft.windows.ai.AIFeatureReadyState
+
+class Microsoft.Windows.AI.ContentSafety.ContentFilterOptions external
+    py winui3.microsoft.windows.ai.contentsafety.ContentFilterOptions
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Graphics.PointInt32 external
+    py winrt.windows.graphics.PointInt32
+
+struct Windows.Graphics.RectInt32 external
+    py winrt.windows.graphics.RectInt32
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap

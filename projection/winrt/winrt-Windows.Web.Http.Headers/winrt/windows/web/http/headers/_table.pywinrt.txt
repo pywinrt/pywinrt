@@ -1,0 +1,2355 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web.Http.Headers
+
+class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpCacheDirectiveHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection;{9a586b89-d5d0-4fbe-bd9d-b5b3636811b4})
+    default Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=43
+            out uint32 return
+    property shared_max_age
+        get get_SharedMaxAge slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_SharedMaxAge slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property min_fresh
+        get get_MinFresh slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_MinFresh slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property max_stale
+        get get_MaxStale slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_MaxStale slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property max_age
+        get get_MaxAge slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_MaxAge slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=186
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=15 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=51 reverse=196
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpChallengeHeaderValue python_type stringable
+    py HttpChallengeHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpChallengeHeaderValue;{393361af-0f7d-4820-9fdd-a2b956eeaeab})
+    default Windows.Web.Http.Headers.IHttpChallengeHeaderValue
+    requires Windows.Web.Http.Headers.IHttpChallengeHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=51 reverse=24
+            in string name=scheme
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=117 reverse=45
+            in string name=scheme
+            in string name=token
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
+    property parameters
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    property scheme
+        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=43
+            out string return
+    property token
+        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=62
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=challengeHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpChallengeHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection;{ca9e5f81-aee0-4353-a10b-e625babd64c2})
+    default Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpChallengeHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpChallengeHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue python_type stringable
+    py HttpConnectionOptionHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue;{cb4af27a-4e90-45eb-8dcd-fd1408f4c44f})
+    default Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue
+    requires Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory shape=51 reverse=24
+            in string name=token
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
+    property token
+        get get_Token slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue shape=4 reverse=22
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=connectionOptionHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpConnectionOptionHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection;{e4f56c1d-5142-4e00-8e0f-019509337629})
+    default Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentCodingHeaderValue python_type stringable
+    py HttpContentCodingHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValue;{bcf7f92a-9376-4d85-bccc-9f4f9acab434})
+    default Windows.Web.Http.Headers.IHttpContentCodingHeaderValue
+    requires Windows.Web.Http.Headers.IHttpContentCodingHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory shape=51 reverse=24
+            in string name=contentCoding
+            out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
+    property content_coding
+        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValue shape=4 reverse=22
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=contentCodingHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpContentCodingHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection;{7d221721-a6db-436e-8e83-91596192819c})
+    default Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue python_type stringable
+    py HttpContentCodingWithQualityHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue;{94531cd5-8b13-4d73-8651-f76b38f88495})
+    default Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue
+    requires Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory shape=51 reverse=24
+            in string name=contentCoding
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory shape=111
+            in string name=contentCoding
+            in double name=quality
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
+    property content_coding
+        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4 reverse=22
+            out string return
+    property quality
+        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=contentCodingWithQualityHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpContentCodingWithQualityHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection;{7c0d753e-e899-4378-b5c8-412d820711cc})
+    default Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentDispositionHeaderValue python_type stringable
+    py HttpContentDispositionHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpContentDispositionHeaderValue;{f2a2eedc-2629-4b49-9908-96a168e9365e})
+    default Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue
+    requires Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory shape=51 reverse=24
+            in string name=dispositionType
+            out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
+    property size
+        get get_Size slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=194
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+        put put_Size slot=16 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=202
+            in reference type=Windows.Foundation.IReference<System.UInt64> name=value
+    property name
+        get get_Name slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=162
+            out string return
+        put put_Name slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=173
+            in string name=value
+    property file_name_star
+        get get_FileNameStar slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=121
+            out string return
+        put put_FileNameStar slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=141
+            in string name=value
+    property file_name
+        get get_FileName slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=62
+            out string return
+        put put_FileName slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=99
+            in string name=value
+    property disposition_type
+        get get_DispositionType slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=22
+            out string return
+        put put_DispositionType slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=43
+            in string name=value
+    property parameters
+        get get_Parameters slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue name=contentDispositionHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentHeaderCollection activatable python_type iterable mapping mutable_mapping stringable
+    py HttpContentHeaderCollection
+    signature rc(Windows.Web.Http.Headers.HttpContentHeaderCollection;{40612a44-47ae-4b7e-9124-69628b64aa18})
+    default Windows.Web.Http.Headers.IHttpContentHeaderCollection
+    requires Windows.Web.Http.Headers.IHttpContentHeaderCollection
+    requires Windows.Foundation.Collections.IMap<System.String,System.String>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    requires Windows.Foundation.IStringable
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43
+            out uint32 return
+    property last_modified
+        get get_LastModified slot=22 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=237
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_LastModified slot=23 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=242
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property expires
+        get get_Expires slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=228
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_Expires slot=21 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=232
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property content_type
+        get get_ContentType slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=218
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
+        put put_ContentType slot=19 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=223
+            in class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue name=value
+    property content_range
+        get get_ContentRange slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=202
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
+        put put_ContentRange slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=210
+            in class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue name=value
+    property content_md5
+        get get_ContentMD5 slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=186
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_ContentMD5 slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=194
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property content_location
+        get get_ContentLocation slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=162
+            out class type=Windows.Foundation.Uri return
+        put put_ContentLocation slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=173
+            in class type=Windows.Foundation.Uri name=value
+    property content_length
+        get get_ContentLength slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+        put put_ContentLength slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.UInt64> name=value
+    property content_disposition
+        get get_ContentDisposition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=22
+            out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
+        put put_ContentDisposition slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=43
+            in class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue name=value
+    property content_encoding
+        get get_ContentEncoding slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=62
+            out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection return
+    property content_language
+        get get_ContentLanguage slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=99
+            out class type=Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection return
+    method append
+        method Append slot=24 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=51 reverse=248
+            in string name=name
+            in string name=value
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141
+            in string name=key
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_append_without_validation
+        method TryAppendWithoutValidation slot=25 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=117
+            in string name=name
+            in string name=value
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpContentRangeHeaderValue python_type stringable
+    py HttpContentRangeHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpContentRangeHeaderValue;{04d967d3-a4f6-495c-9530-8579fcba8aa9})
+    default Windows.Web.Http.Headers.IHttpContentRangeHeaderValue
+    requires Windows.Web.Http.Headers.IHttpContentRangeHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=47 reverse=19
+            in uint64 name=length
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=107
+            in uint64 name=from
+            in uint64 name=to
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=186
+            in uint64 name=from
+            in uint64 name=to
+            in uint64 name=length
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
+    property unit
+        get get_Unit slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=99
+            out string return
+        put put_Unit slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=121
+            in string name=value
+    property first_byte_position
+        get get_FirstBytePosition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property last_byte_position
+        get get_LastBytePosition slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue name=contentRangeHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpCookiePairHeaderValue python_type stringable
+    py HttpCookiePairHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValue;{cbd46217-4b29-412b-bd90-b3d814ab8e1b})
+    default Windows.Web.Http.Headers.IHttpCookiePairHeaderValue
+    requires Windows.Web.Http.Headers.IHttpCookiePairHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=117 reverse=45
+            in string name=name
+            in string name=value
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=43
+            out string return
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=62
+            in string name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=22
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=cookiePairHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpCookiePairHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection;{f3f44350-581e-4ecc-9f59-e507d04f06e6})
+    default Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpCredentialsHeaderValue python_type stringable
+    py HttpCredentialsHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpCredentialsHeaderValue;{c34cc3cb-542e-4177-a6c7-b674ce193fbf})
+    default Windows.Web.Http.Headers.IHttpCredentialsHeaderValue
+    requires Windows.Web.Http.Headers.IHttpCredentialsHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=51 reverse=24
+            in string name=scheme
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=117 reverse=45
+            in string name=scheme
+            in string name=token
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+    property parameters
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    property scheme
+        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=43
+            out string return
+    property token
+        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=62
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=credentialsHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue python_type stringable
+    py HttpDateOrDeltaHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue;{eafcaa6a-c4dc-49e2-a27d-043adf5867a3})
+    default Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue
+    requires Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics
+    property date
+        get get_Date slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property delta
+        get get_Delta slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue name=dateOrDeltaHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpExpectationHeaderValue python_type stringable
+    py HttpExpectationHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpExpectationHeaderValue;{4ce585cd-3a99-43af-a2e6-ec232fea9658})
+    default Windows.Web.Http.Headers.IHttpExpectationHeaderValue
+    requires Windows.Web.Http.Headers.IHttpExpectationHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=117 reverse=45
+            in string name=name
+            in string name=value
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=43
+            out string return
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=62
+            in string name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=22
+            out string return
+    property parameters
+        get get_Parameters slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=expectationHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpExpectationHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection;{e78521b3-a0e2-4ac4-9e66-79706cb9fd58})
+    default Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpExpectationHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpExpectationHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpLanguageHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection;{9ebd7ca3-8219-44f6-9902-8c56dfd3340c})
+    default Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Globalization.Language>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Language>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=4 reverse=173
+            in class type=Windows.Globalization.Language name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Language> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Globalization.Language return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Globalization.Language name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=117 reverse=101
+            in class type=Windows.Globalization.Language name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Globalization.Language name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=51 reverse=211
+            pass_array class type=Windows.Globalization.Language name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Globalization.Language name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue python_type stringable
+    py HttpLanguageRangeWithQualityHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue;{7256e102-0080-4db4-a083-7de7b2e5ba4c})
+    default Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue
+    requires Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=51 reverse=24
+            in string name=languageRange
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=111
+            in string name=languageRange
+            in double name=quality
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
+    property language_range
+        get get_LanguageRange slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4 reverse=22
+            out string return
+    property quality
+        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=languageRangeWithQualityHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpLanguageRangeWithQualityHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection;{885d5abd-4b4f-480a-89ce-8aedcee6e3a0})
+    default Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpMediaTypeHeaderValue python_type stringable
+    py HttpMediaTypeHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpMediaTypeHeaderValue;{16b28533-e728-4fcb-bdb0-08a431a14844})
+    default Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue
+    requires Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory shape=51 reverse=24
+            in string name=mediaType
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
+    property media_type
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=62
+            out string return
+        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=99
+            in string name=value
+    property char_set
+        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=22
+            out string return
+        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=43
+            in string name=value
+    property parameters
+        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue name=mediaTypeHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue python_type stringable
+    py HttpMediaTypeWithQualityHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue;{188d5e32-76be-44a0-b1cd-2074bded2dde})
+    default Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue
+    requires Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory shape=51 reverse=24
+            in string name=mediaType
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory shape=111
+            in string name=mediaType
+            in double name=quality
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
+    property quality
+        get get_Quality slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<System.Double> return
+        put put_Quality slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=162
+            in reference type=Windows.Foundation.IReference<System.Double> name=value
+    property media_type
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=62
+            out string return
+        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=99
+            in string name=value
+    property char_set
+        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=22
+            out string return
+        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=43
+            in string name=value
+    property parameters
+        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=mediaTypeWithQualityHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpMediaTypeWithQualityHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection;{3c0c6b73-1342-4587-a056-18d02ff67165})
+    default Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpMethodHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpMethodHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpMethodHeaderValueCollection;{43bc3ff4-6119-4adf-938c-34bfffcf92ed})
+    default Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=4 reverse=173
+            in class type=Windows.Web.Http.HttpMethod name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpMethod> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.HttpMethod return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.HttpMethod name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=117 reverse=101
+            in class type=Windows.Web.Http.HttpMethod name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.HttpMethod name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.HttpMethod name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.HttpMethod name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpNameValueHeaderValue python_type stringable
+    py HttpNameValueHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpNameValueHeaderValue;{d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf})
+    default Windows.Web.Http.Headers.IHttpNameValueHeaderValue
+    requires Windows.Web.Http.Headers.IHttpNameValueHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=117 reverse=45
+            in string name=name
+            in string name=value
+            out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=43
+            out string return
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=62
+            in string name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=22
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=nameValueHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpProductHeaderValue python_type stringable
+    py HttpProductHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpProductHeaderValue;{f4feee03-ebd4-4160-b9ff-807c5183b6e6})
+    default Windows.Web.Http.Headers.IHttpProductHeaderValue
+    requires Windows.Web.Http.Headers.IHttpProductHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpProductHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpProductHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=51 reverse=24
+            in string name=productName
+            out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=117 reverse=45
+            in string name=productName
+            in string name=productVersion
+            out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4 reverse=22
+            out string return
+    property version
+        get get_Version slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4 reverse=43
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpProductHeaderValue name=productHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpProductInfoHeaderValue python_type stringable
+    py HttpProductInfoHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValue;{1b1a8732-4c35-486a-966f-646489198e4d})
+    default Windows.Web.Http.Headers.IHttpProductInfoHeaderValue
+    requires Windows.Web.Http.Headers.IHttpProductInfoHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics
+    factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=51 reverse=24
+            in string name=productComment
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=117 reverse=45
+            in string name=productName
+            in string name=productVersion
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
+    property comment
+        get get_Comment slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4 reverse=43
+            out string return
+    property product
+        get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4 reverse=22
+            out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=productInfoHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpProductInfoHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection;{877df74a-d69b-44f8-ad4f-453af9c42ed0})
+    default Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpRequestHeaderCollection python_type iterable mapping mutable_mapping stringable
+    py HttpRequestHeaderCollection
+    signature rc(Windows.Web.Http.Headers.HttpRequestHeaderCollection;{af40329b-b544-469b-86b9-ac3d466fea36})
+    default Windows.Web.Http.Headers.IHttpRequestHeaderCollection
+    requires Windows.Web.Http.Headers.IHttpRequestHeaderCollection
+    requires Windows.Foundation.Collections.IMap<System.String,System.String>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43
+            out uint32 return
+    property referer
+        get get_Referer slot=29 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=266
+            out class type=Windows.Foundation.Uri return
+        put put_Referer slot=30 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=270
+            in class type=Windows.Foundation.Uri name=value
+    property proxy_authorization
+        get get_ProxyAuthorization slot=27 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=259
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+        put put_ProxyAuthorization slot=28 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=263
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
+    property max_forwards
+        get get_MaxForwards slot=25 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=252
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_MaxForwards slot=26 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=255
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property if_unmodified_since
+        get get_IfUnmodifiedSince slot=23 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=242
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_IfUnmodifiedSince slot=24 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=247
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property if_modified_since
+        get get_IfModifiedSince slot=21 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=232
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_IfModifiedSince slot=22 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=237
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property host
+        get get_Host slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=223
+            out class type=Windows.Networking.HostName return
+        put put_Host slot=20 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=228
+            in class type=Windows.Networking.HostName name=value
+    property from_
+        get get_From slot=17 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=210
+            out string return
+        put put_From slot=18 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=218
+            in string name=value
+    property date
+        get get_Date slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_Date slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=194
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property authorization
+        get get_Authorization slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=99
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+        put put_Authorization slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=121
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
+    property accept
+        get get_Accept slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=22
+            out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection return
+    property accept_encoding
+        get get_AcceptEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=43
+            out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection return
+    property accept_language
+        get get_AcceptLanguage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=62
+            out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection return
+    property cache_control
+        get get_CacheControl slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=141
+            out class type=Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection return
+    property connection
+        get get_Connection slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=162
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection return
+    property cookie
+        get get_Cookie slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=173
+            out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection return
+    property expect
+        get get_Expect slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=202
+            out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection return
+    property transfer_encoding
+        get get_TransferEncoding slot=31 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=273
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection return
+    property user_agent
+        get get_UserAgent slot=32 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=280
+            out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection return
+    method append
+        method Append slot=33 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=51 reverse=286
+            in string name=name
+            in string name=value
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141
+            in string name=key
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_append_without_validation
+        method TryAppendWithoutValidation slot=34 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=117
+            in string name=name
+            in string name=value
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpResponseHeaderCollection python_type iterable mapping mutable_mapping stringable
+    py HttpResponseHeaderCollection
+    signature rc(Windows.Web.Http.Headers.HttpResponseHeaderCollection;{7a990969-fa3f-41ed-aac6-bf957975c16b})
+    default Windows.Web.Http.Headers.IHttpResponseHeaderCollection
+    requires Windows.Web.Http.Headers.IHttpResponseHeaderCollection
+    requires Windows.Foundation.Collections.IMap<System.String,System.String>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43
+            out uint32 return
+    property retry_after
+        get get_RetryAfter slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=202
+            out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue return
+        put put_RetryAfter slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=210
+            in class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue name=value
+    property location
+        get get_Location slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=173
+            out class type=Windows.Foundation.Uri return
+        put put_Location slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=186
+            in class type=Windows.Foundation.Uri name=value
+    property date
+        get get_Date slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_Date slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=162
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property age
+        get get_Age slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_Age slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property allow
+        get get_Allow slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=62
+            out class type=Windows.Web.Http.Headers.HttpMethodHeaderValueCollection return
+    property cache_control
+        get get_CacheControl slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=99
+            out class type=Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection return
+    property connection
+        get get_Connection slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=121
+            out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection return
+    property proxy_authenticate
+        get get_ProxyAuthenticate slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=194
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection return
+    property transfer_encoding
+        get get_TransferEncoding slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=218
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection return
+    property www_authenticate
+        get get_WwwAuthenticate slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=223
+            out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection return
+    method append
+        method Append slot=20 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=51 reverse=229
+            in string name=name
+            in string name=value
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141
+            in string name=key
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_append_without_validation
+        method TryAppendWithoutValidation slot=21 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=117
+            in string name=name
+            in string name=value
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpTransferCodingHeaderValue python_type stringable
+    py HttpTransferCodingHeaderValue
+    signature rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValue;{436f32f9-3ded-42bd-b38a-5496a2511ce6})
+    default Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue
+    requires Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue
+    requires Windows.Foundation.IStringable
+    factory Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory shape=51 reverse=24
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
+    property parameters
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4 reverse=43
+            out string return
+    method parse static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=51 reverse=24 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=117 reverse=45 static
+            in string name=input
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=transferCodingHeaderValue
+            out boolean return
+
+class Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection python_type iterable sequence mutable_sequence stringable
+    py HttpTransferCodingHeaderValueCollection
+    signature rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection;{202c8c34-2c03-49b8-9665-73e27cb2fc79})
+    default Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection
+    requires Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection
+    requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>
+    requires Windows.Foundation.IStringable
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=173
+            in class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=117 reverse=101
+            in class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=value
+    method parse_add
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=4 reverse=22
+            in string name=input
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=51 reverse=211
+            pass_array class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=value
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method try_parse_add
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=51 reverse=44
+            in string name=input
+            out boolean return
+
+interface Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection
+    guid 9a586b89-d5d0-4fbe-bd9d-b5b3636811b4
+
+interface Windows.Web.Http.Headers.IHttpChallengeHeaderValue
+    guid 393361af-0f7d-4820-9fdd-a2b956eeaeab
+
+interface Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection
+    guid ca9e5f81-aee0-4353-a10b-e625babd64c2
+
+interface Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory
+    guid c452c451-d99c-40aa-9399-90eeb98fc613
+
+interface Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics
+    guid f3d38a72-fc01-4d01-a008-fcb7c459d635
+
+interface Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue
+    guid cb4af27a-4e90-45eb-8dcd-fd1408f4c44f
+
+interface Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection
+    guid e4f56c1d-5142-4e00-8e0f-019509337629
+
+interface Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory
+    guid d93ccc1e-0b7d-4c3f-a58d-a2a1bdeabc0a
+
+interface Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics
+    guid aaa75d37-a946-4b1f-85af-48b68b3c50bd
+
+interface Windows.Web.Http.Headers.IHttpContentCodingHeaderValue
+    guid bcf7f92a-9376-4d85-bccc-9f4f9acab434
+
+interface Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection
+    guid 7d221721-a6db-436e-8e83-91596192819c
+
+interface Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory
+    guid c53d2bd7-332b-4350-8510-2e67a2289a5a
+
+interface Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics
+    guid 94d8602e-f9bf-42f7-aa46-ed272a41e212
+
+interface Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue
+    guid 94531cd5-8b13-4d73-8651-f76b38f88495
+
+interface Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection
+    guid 7c0d753e-e899-4378-b5c8-412d820711cc
+
+interface Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory
+    guid c45eee1a-c553-46fc-ade2-d75c1d53df7b
+
+interface Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics
+    guid e8c9357c-8f89-4801-8e75-4c9abfc3de71
+
+interface Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue
+    guid f2a2eedc-2629-4b49-9908-96a168e9365e
+
+interface Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory
+    guid 9915bbc4-456c-4e81-8295-b2ab3cbcf545
+
+interface Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics
+    guid 29c56067-5a37-46e4-b074-c5177d69ca66
+
+interface Windows.Web.Http.Headers.IHttpContentHeaderCollection
+    guid 40612a44-47ae-4b7e-9124-69628b64aa18
+
+interface Windows.Web.Http.Headers.IHttpContentRangeHeaderValue
+    guid 04d967d3-a4f6-495c-9530-8579fcba8aa9
+
+interface Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory
+    guid 3f5bd691-a03c-4456-9a6f-ef27ecd03cae
+
+interface Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics
+    guid 80a346ca-174c-4fae-821c-134cd294aa38
+
+interface Windows.Web.Http.Headers.IHttpCookiePairHeaderValue
+    guid cbd46217-4b29-412b-bd90-b3d814ab8e1b
+
+interface Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection
+    guid f3f44350-581e-4ecc-9f59-e507d04f06e6
+
+interface Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory
+    guid 635e326f-146f-4f56-aa21-2cb7d6d58b1e
+
+interface Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics
+    guid 6e866d48-06af-4462-8158-99388d5dca81
+
+interface Windows.Web.Http.Headers.IHttpCredentialsHeaderValue
+    guid c34cc3cb-542e-4177-a6c7-b674ce193fbf
+
+interface Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory
+    guid f21d9e91-4d1c-4182-bfd1-34470a62f950
+
+interface Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics
+    guid a69b2be6-ce8c-4443-a35a-1b727b131036
+
+interface Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue
+    guid eafcaa6a-c4dc-49e2-a27d-043adf5867a3
+
+interface Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics
+    guid 7c2659a8-6672-4e90-9a9a-f39766f7f576
+
+interface Windows.Web.Http.Headers.IHttpExpectationHeaderValue
+    guid 4ce585cd-3a99-43af-a2e6-ec232fea9658
+
+interface Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection
+    guid e78521b3-a0e2-4ac4-9e66-79706cb9fd58
+
+interface Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory
+    guid 4ea275cb-d53e-4868-8856-1e21a5030dc0
+
+interface Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics
+    guid 3019abe2-cfe5-473b-a57f-fba5b14eb257
+
+interface Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection
+    guid 9ebd7ca3-8219-44f6-9902-8c56dfd3340c
+
+interface Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue
+    guid 7256e102-0080-4db4-a083-7de7b2e5ba4c
+
+interface Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection
+    guid 885d5abd-4b4f-480a-89ce-8aedcee6e3a0
+
+interface Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory
+    guid 7bb83970-780f-4c83-9fe4-dc3087f6bd55
+
+interface Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics
+    guid 2541e146-f308-46f5-b695-42f54024ec68
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue
+    guid 16b28533-e728-4fcb-bdb0-08a431a14844
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory
+    guid bed747a8-cd17-42dd-9367-ab9c5b56dd7d
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics
+    guid e04d83df-1d41-4d8c-a2de-6fd2ed87399b
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue
+    guid 188d5e32-76be-44a0-b1cd-2074bded2dde
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection
+    guid 3c0c6b73-1342-4587-a056-18d02ff67165
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory
+    guid 4c6d20f4-9457-44e6-a323-d122b958780b
+
+interface Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics
+    guid 5b070cd9-b560-4fc8-9835-7e6c0a657b24
+
+interface Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection
+    guid 43bc3ff4-6119-4adf-938c-34bfffcf92ed
+
+interface Windows.Web.Http.Headers.IHttpNameValueHeaderValue
+    guid d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf
+
+interface Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory
+    guid 770e2267-cbf8-4736-a925-93fbe10c7ca8
+
+interface Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics
+    guid ffd4030f-1130-4152-8659-256909a9d115
+
+interface Windows.Web.Http.Headers.IHttpProductHeaderValue
+    guid f4feee03-ebd4-4160-b9ff-807c5183b6e6
+
+interface Windows.Web.Http.Headers.IHttpProductHeaderValueFactory
+    guid 611aa4f5-82bc-42fb-977b-dc00536e5e86
+
+interface Windows.Web.Http.Headers.IHttpProductHeaderValueStatics
+    guid 90c33e29-befc-4337-be62-49f097975f53
+
+interface Windows.Web.Http.Headers.IHttpProductInfoHeaderValue
+    guid 1b1a8732-4c35-486a-966f-646489198e4d
+
+interface Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection
+    guid 877df74a-d69b-44f8-ad4f-453af9c42ed0
+
+interface Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory
+    guid 24220fbe-eabe-4464-b460-ec010b7c41e2
+
+interface Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics
+    guid db7fd857-327a-4e73-81e5-7059a302b042
+
+interface Windows.Web.Http.Headers.IHttpRequestHeaderCollection
+    guid af40329b-b544-469b-86b9-ac3d466fea36
+
+interface Windows.Web.Http.Headers.IHttpResponseHeaderCollection
+    guid 7a990969-fa3f-41ed-aac6-bf957975c16b
+
+interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue
+    guid 436f32f9-3ded-42bd-b38a-5496a2511ce6
+
+interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection
+    guid 202c8c34-2c03-49b8-9665-73e27cb2fc79
+
+interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory
+    guid bb62dffc-e361-4f08-8e4f-c9e723de703b
+
+interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics
+    guid 6ab8892a-1a98-4d32-a906-7470a9875ce5
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Globalization.Language> concrete
+    guid 48409a10-61b6-5db1-a69d-8abc46ac608a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue> concrete
+    guid 17847e58-f0cf-52e7-81c0-9d06a081569f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpChallengeHeaderValue;{393361af-0f7d-4820-9fdd-a2b956eeaeab}))
+    argument Windows.Web.Http.Headers.HttpChallengeHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> concrete
+    guid 1afc512f-dfa2-5528-8aef-6e6a37789b3c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue;{cb4af27a-4e90-45eb-8dcd-fd1408f4c44f}))
+    argument Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> concrete
+    guid 0e8960c2-76e5-56c1-9fe6-8cd9018a6786
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValue;{bcf7f92a-9376-4d85-bccc-9f4f9acab434}))
+    argument Windows.Web.Http.Headers.HttpContentCodingHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> concrete
+    guid 916e6271-cef6-53b8-b93f-dc8dca559e50
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue;{94531cd5-8b13-4d73-8651-f76b38f88495}))
+    argument Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> concrete
+    guid 16773244-5011-5244-bb00-14db4cf71005
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValue;{cbd46217-4b29-412b-bd90-b3d814ab8e1b}))
+    argument Windows.Web.Http.Headers.HttpCookiePairHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue> concrete
+    guid 0a391c2b-13c3-59b8-8662-13affb9d1754
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpExpectationHeaderValue;{4ce585cd-3a99-43af-a2e6-ec232fea9658}))
+    argument Windows.Web.Http.Headers.HttpExpectationHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> concrete
+    guid 0c5a4a0d-dbb7-5abf-a5fd-c3b98d9c1487
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue;{7256e102-0080-4db4-a083-7de7b2e5ba4c}))
+    argument Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> concrete
+    guid ffc7dfde-58b8-51e9-b33b-65a5d6a4e24c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue;{188d5e32-76be-44a0-b1cd-2074bded2dde}))
+    argument Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue> concrete
+    guid 5838a126-b617-5417-b32e-ded2d27d40a3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpNameValueHeaderValue;{d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf}))
+    argument Windows.Web.Http.Headers.HttpNameValueHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> concrete
+    guid bf97cf99-e614-5765-bad7-161ae3a93ae9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValue;{1b1a8732-4c35-486a-966f-646489198e4d}))
+    argument Windows.Web.Http.Headers.HttpProductInfoHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> concrete
+    guid 57402048-38bf-5055-acb6-5c4da765e388
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValue;{436f32f9-3ded-42bd-b38a-5496a2511ce6}))
+    argument Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod> concrete
+    guid c088bb1a-dc61-57e1-b967-78dab3541da5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.HttpMethod;{728d4022-700d-4fe0-afa5-40299c58dbfd}))
+    argument Windows.Web.Http.HttpMethod
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+
+interface Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> concrete
+    guid 30e99ae6-f414-5243-8db2-aab38ea3f1f1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpChallengeHeaderValue> concrete
+    guid 6bc05705-2c6f-57e8-bf96-56a761e90e8f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpChallengeHeaderValue;{393361af-0f7d-4820-9fdd-a2b956eeaeab}))
+    argument Windows.Web.Http.Headers.HttpChallengeHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> concrete
+    guid e95057be-e8bd-53df-a2f6-865a66a07c6b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue;{cb4af27a-4e90-45eb-8dcd-fd1408f4c44f}))
+    argument Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> concrete
+    guid e21ad0b2-c893-5360-a4fe-f083b308a9cd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValue;{bcf7f92a-9376-4d85-bccc-9f4f9acab434}))
+    argument Windows.Web.Http.Headers.HttpContentCodingHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> concrete
+    guid 3780c808-8b98-5327-84c7-055363fe32ad
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue;{94531cd5-8b13-4d73-8651-f76b38f88495}))
+    argument Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> concrete
+    guid ed3b6323-b1c3-558b-9917-0826c4a9e8c0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValue;{cbd46217-4b29-412b-bd90-b3d814ab8e1b}))
+    argument Windows.Web.Http.Headers.HttpCookiePairHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpExpectationHeaderValue> concrete
+    guid 6b72326a-46b1-5d80-a162-c5f45be02e2b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpExpectationHeaderValue;{4ce585cd-3a99-43af-a2e6-ec232fea9658}))
+    argument Windows.Web.Http.Headers.HttpExpectationHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> concrete
+    guid a25503de-4aef-5ef4-9f06-5df4094051be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue;{7256e102-0080-4db4-a083-7de7b2e5ba4c}))
+    argument Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> concrete
+    guid 6a2084a3-941a-5528-a2ec-28cf1ff9b1a9
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue;{188d5e32-76be-44a0-b1cd-2074bded2dde}))
+    argument Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpNameValueHeaderValue> concrete
+    guid 3bb0c8fa-5f1f-5c70-9950-5d1d1a703dd4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpNameValueHeaderValue;{d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf}))
+    argument Windows.Web.Http.Headers.HttpNameValueHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> concrete
+    guid 4f785951-b59c-5108-b0cd-1437578af49c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValue;{1b1a8732-4c35-486a-966f-646489198e4d}))
+    argument Windows.Web.Http.Headers.HttpProductInfoHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> concrete
+    guid 49e58dec-b5cd-5ba4-a603-365d1588ad4c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValue;{436f32f9-3ded-42bd-b38a-5496a2511ce6}))
+    argument Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpMethod> concrete
+    guid d13a880f-d612-50cf-a6f9-dd96f916f491
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.HttpMethod;{728d4022-700d-4fe0-afa5-40299c58dbfd}))
+    argument Windows.Web.Http.HttpMethod
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<System.UInt64> concrete
+    guid 6755e376-53bb-568b-a11d-17239868309e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8)
+    argument System.UInt64
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IVector<Windows.Globalization.Language> concrete
+    guid dcf2525a-42c0-501d-9fcb-471fae060396
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> concrete
+    guid 3737fc5e-0b27-52a3-9e40-cbb9844e6ab7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpChallengeHeaderValue;{393361af-0f7d-4820-9fdd-a2b956eeaeab}))
+    argument Windows.Web.Http.Headers.HttpChallengeHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> concrete
+    guid c312da8d-c82f-51c9-b705-5a26d52fbee6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue;{cb4af27a-4e90-45eb-8dcd-fd1408f4c44f}))
+    argument Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> concrete
+    guid b94e539f-44b6-54c6-9ad4-e2844b3e0be1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValue;{bcf7f92a-9376-4d85-bccc-9f4f9acab434}))
+    argument Windows.Web.Http.Headers.HttpContentCodingHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> concrete
+    guid 33f9653d-0eed-5368-a51e-98385191f86f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue;{94531cd5-8b13-4d73-8651-f76b38f88495}))
+    argument Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> concrete
+    guid bc196ace-8a56-5fd0-9878-c807edd8645a
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValue;{cbd46217-4b29-412b-bd90-b3d814ab8e1b}))
+    argument Windows.Web.Http.Headers.HttpCookiePairHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> concrete
+    guid 18e138ee-fec7-527d-8693-deebca4f3dcd
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpExpectationHeaderValue;{4ce585cd-3a99-43af-a2e6-ec232fea9658}))
+    argument Windows.Web.Http.Headers.HttpExpectationHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> concrete
+    guid b6df6da2-8d92-5270-9584-d6a9a931586d
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue;{7256e102-0080-4db4-a083-7de7b2e5ba4c}))
+    argument Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> concrete
+    guid c18538f7-c256-5666-8868-2225af3574b6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue;{188d5e32-76be-44a0-b1cd-2074bded2dde}))
+    argument Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> concrete
+    guid 2cf800d4-35d0-545c-ab82-f6793be74cba
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpNameValueHeaderValue;{d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf}))
+    argument Windows.Web.Http.Headers.HttpNameValueHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> concrete
+    guid 69392060-6c0f-5de6-8ced-f14fc1b83376
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValue;{1b1a8732-4c35-486a-966f-646489198e4d}))
+    argument Windows.Web.Http.Headers.HttpProductInfoHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> concrete
+    guid 38e72562-e17c-5d68-aad1-8e8a860b8969
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValue;{436f32f9-3ded-42bd-b38a-5496a2511ce6}))
+    argument Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> concrete
+    guid 228a73a2-a509-5a78-bd7f-db94ba0bef21
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Http.HttpMethod;{728d4022-700d-4fe0-afa5-40299c58dbfd}))
+    argument Windows.Web.Http.HttpMethod
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> concrete
+    guid 144b0f3d-2d59-5dd2-b012-908ec3e06435
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpChallengeHeaderValue> concrete
+    guid 8b79423f-b4a3-501d-bac2-b88e78e13a21
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpChallengeHeaderValue;{393361af-0f7d-4820-9fdd-a2b956eeaeab}))
+    argument Windows.Web.Http.Headers.HttpChallengeHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> concrete
+    guid 1beae481-9d30-5ac8-942c-49a5f8737adf
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue;{cb4af27a-4e90-45eb-8dcd-fd1408f4c44f}))
+    argument Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> concrete
+    guid dcdf2620-b6d0-5835-8bec-d3b946a50f55
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpContentCodingHeaderValue;{bcf7f92a-9376-4d85-bccc-9f4f9acab434}))
+    argument Windows.Web.Http.Headers.HttpContentCodingHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> concrete
+    guid eb18569b-a7ab-58bb-8880-dd022f755b51
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue;{94531cd5-8b13-4d73-8651-f76b38f88495}))
+    argument Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> concrete
+    guid ad89192d-6ef8-56b5-a4dc-e48d0e85d569
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpCookiePairHeaderValue;{cbd46217-4b29-412b-bd90-b3d814ab8e1b}))
+    argument Windows.Web.Http.Headers.HttpCookiePairHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpExpectationHeaderValue> concrete
+    guid 71a22f32-a3c0-574b-87b4-127199cc7d5e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpExpectationHeaderValue;{4ce585cd-3a99-43af-a2e6-ec232fea9658}))
+    argument Windows.Web.Http.Headers.HttpExpectationHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> concrete
+    guid 551fb7fb-ce42-5ffd-a2e0-2a6ce1698070
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue;{7256e102-0080-4db4-a083-7de7b2e5ba4c}))
+    argument Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> concrete
+    guid f1c1e9bd-01a6-5bd3-af7b-c14220a645c0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue;{188d5e32-76be-44a0-b1cd-2074bded2dde}))
+    argument Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpNameValueHeaderValue> concrete
+    guid 1ef903c8-8eef-5e9e-b938-b9e428a77672
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpNameValueHeaderValue;{d8ba7463-5b9a-4d1b-93f9-aa5b44ecfddf}))
+    argument Windows.Web.Http.Headers.HttpNameValueHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> concrete
+    guid 82fef9f0-e283-5279-aa50-f0b3e5726a86
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpProductInfoHeaderValue;{1b1a8732-4c35-486a-966f-646489198e4d}))
+    argument Windows.Web.Http.Headers.HttpProductInfoHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> concrete
+    guid 25c1a8d6-229b-5421-b3b3-b7ef078fad7f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Headers.HttpTransferCodingHeaderValue;{436f32f9-3ded-42bd-b38a-5496a2511ce6}))
+    argument Windows.Web.Http.Headers.HttpTransferCodingHeaderValue
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod> concrete
+    guid ef132fb7-d286-5327-b38a-be7d008328fe
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.HttpMethod;{728d4022-700d-4fe0-afa5-40299c58dbfd}))
+    argument Windows.Web.Http.HttpMethod
+
+enum K parameterized
+
+enum T parameterized
+
+enum V parameterized
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class System.UInt64 external
+    py winrt.system.UInt64
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IStringable external
+    py winrt.windows.foundation._IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Globalization.Language external
+    py winrt.windows.globalization.Language
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+class Windows.Web.Http.HttpMethod external
+    py winrt.windows.web.http.HttpMethod

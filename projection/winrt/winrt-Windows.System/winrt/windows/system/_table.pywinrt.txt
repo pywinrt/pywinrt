@@ -1,0 +1,1860 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System
+
+class Windows.System.AppActivationResult python_type
+    py AppActivationResult
+    signature rc(Windows.System.AppActivationResult;{6b528900-f46e-4eb0-aa6c-38af557cf9ed})
+    default Windows.System.IAppActivationResult
+    requires Windows.System.IAppActivationResult
+    property app_resource_group_info
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4 reverse=43
+            out class type=Windows.System.AppResourceGroupInfo return
+    property extended_error
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4 reverse=22
+            out hresult return
+
+class Windows.System.AppDiagnosticInfo python_type
+    py AppDiagnosticInfo
+    signature rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804})
+    default Windows.System.IAppDiagnosticInfo
+    requires Windows.System.IAppDiagnosticInfo
+    requires Windows.System.IAppDiagnosticInfo2
+    requires Windows.System.IAppDiagnosticInfo3
+    factory Windows.System.IAppDiagnosticInfoStatics
+    factory Windows.System.IAppDiagnosticInfoStatics2
+    property app_info
+        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppInfo return
+    method create_resource_group_watcher
+        method CreateResourceGroupWatcher slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4 reverse=43
+            out class type=Windows.System.AppResourceGroupInfoWatcher return
+    method create_watcher static
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=22 static
+            out class type=Windows.System.AppDiagnosticInfoWatcher return
+    method get_resource_groups
+        method GetResourceGroups slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> return
+    method launch_async
+        method LaunchAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo3 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppActivationResult> return
+    method request_access_async static
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.DiagnosticAccessStatus> return
+    method request_info_async static
+        method RequestInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
+    method request_info_for_app_async static
+        method RequestInfoForAppAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=99 static default_overload
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
+        method RequestInfoForAppAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 reverse=124 static
+            in string name=appUserModelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
+    method request_info_for_package_async static
+        method RequestInfoForPackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 reverse=65 static
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
+
+class Windows.System.AppDiagnosticInfoWatcher python_type
+    py AppDiagnosticInfoWatcher
+    signature rc(Windows.System.AppDiagnosticInfoWatcher;{75575070-01d3-489a-9325-52f9cc6ede0a})
+    default Windows.System.IAppDiagnosticInfoWatcher
+    requires Windows.System.IAppDiagnosticInfoWatcher
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=4 reverse=186
+            out enum32 type=Windows.System.AppDiagnosticInfoWatcherStatus return
+    event added
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
+            out event_token return
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=53
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=156
+            in event_token name=token
+    event removed
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
+            out event_token return
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=110
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=181
+            in event_token name=token
+    method start
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0 reverse=193
+    method stop
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0 reverse=201
+
+class Windows.System.AppDiagnosticInfoWatcherEventArgs python_type
+    py AppDiagnosticInfoWatcherEventArgs
+    signature rc(Windows.System.AppDiagnosticInfoWatcherEventArgs;{7017c716-e1da-4c65-99df-046dff5be71a})
+    default Windows.System.IAppDiagnosticInfoWatcherEventArgs
+    requires Windows.System.IAppDiagnosticInfoWatcherEventArgs
+    property app_diagnostic_info
+        get get_AppDiagnosticInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcherEventArgs shape=4 reverse=22
+            out class type=Windows.System.AppDiagnosticInfo return
+
+enum Windows.System.AppDiagnosticInfoWatcherStatus python_type
+    py AppDiagnosticInfoWatcherStatus
+    signature enum(Windows.System.AppDiagnosticInfoWatcherStatus;i4)
+
+class Windows.System.AppExecutionStateChangeResult python_type
+    py AppExecutionStateChangeResult
+    signature rc(Windows.System.AppExecutionStateChangeResult;{6f039bf0-f91b-4df8-ae77-3033ccb69114})
+    default Windows.System.IAppExecutionStateChangeResult
+    requires Windows.System.IAppExecutionStateChangeResult
+    property extended_error
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppExecutionStateChangeResult shape=4 reverse=22
+            out hresult return
+
+class Windows.System.AppMemoryReport python_type
+    py AppMemoryReport
+    signature rc(Windows.System.AppMemoryReport;{6d65339b-4d6f-45bc-9c5e-e49b3ff2758d})
+    default Windows.System.IAppMemoryReport
+    requires Windows.System.IAppMemoryReport
+    requires Windows.System.IAppMemoryReport2
+    property peak_private_commit_usage
+        get get_PeakPrivateCommitUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=43
+            out uint64 return
+    property private_commit_usage
+        get get_PrivateCommitUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=22
+            out uint64 return
+    property total_commit_limit
+        get get_TotalCommitLimit slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=99
+            out uint64 return
+    property total_commit_usage
+        get get_TotalCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=62
+            out uint64 return
+    property expected_total_commit_limit
+        get get_ExpectedTotalCommitLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport2 shape=4 reverse=22
+            out uint64 return
+
+enum Windows.System.AppMemoryUsageLevel python_type
+    py AppMemoryUsageLevel
+    signature enum(Windows.System.AppMemoryUsageLevel;i4)
+
+class Windows.System.AppMemoryUsageLimitChangingEventArgs python_type
+    py AppMemoryUsageLimitChangingEventArgs
+    signature rc(Windows.System.AppMemoryUsageLimitChangingEventArgs;{79f86664-feca-4da5-9e40-2bc63efdc979})
+    default Windows.System.IAppMemoryUsageLimitChangingEventArgs
+    requires Windows.System.IAppMemoryUsageLimitChangingEventArgs
+    property new_limit
+        get get_NewLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4 reverse=43
+            out uint64 return
+    property old_limit
+        get get_OldLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4 reverse=22
+            out uint64 return
+
+class Windows.System.AppResourceGroupBackgroundTaskReport python_type
+    py AppResourceGroupBackgroundTaskReport
+    signature rc(Windows.System.AppResourceGroupBackgroundTaskReport;{2566e74e-b05d-40c2-9dc1-1a4f039ea120})
+    default Windows.System.IAppResourceGroupBackgroundTaskReport
+    requires Windows.System.IAppResourceGroupBackgroundTaskReport
+    property entry_point
+        get get_EntryPoint slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=99
+            out string return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=43
+            out string return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=22
+            out guid return
+    property trigger
+        get get_Trigger slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=62
+            out string return
+
+enum Windows.System.AppResourceGroupEnergyQuotaState python_type
+    py AppResourceGroupEnergyQuotaState
+    signature enum(Windows.System.AppResourceGroupEnergyQuotaState;i4)
+
+enum Windows.System.AppResourceGroupExecutionState python_type
+    py AppResourceGroupExecutionState
+    signature enum(Windows.System.AppResourceGroupExecutionState;i4)
+
+class Windows.System.AppResourceGroupInfo python_type
+    py AppResourceGroupInfo
+    signature rc(Windows.System.AppResourceGroupInfo;{b913f77a-e807-49f4-845e-7b8bdcfe8ee7})
+    default Windows.System.IAppResourceGroupInfo
+    requires Windows.System.IAppResourceGroupInfo
+    requires Windows.System.IAppResourceGroupInfo2
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=22
+            out guid return
+    property is_shared
+        get get_IsShared slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=43
+            out boolean return
+    method get_background_task_reports
+        method GetBackgroundTaskReports slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> return
+    method get_memory_report
+        method GetMemoryReport slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=99
+            out class type=Windows.System.AppResourceGroupMemoryReport return
+    method get_process_diagnostic_infos
+        method GetProcessDiagnosticInfos slot=10 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
+    method get_state_report
+        method GetStateReport slot=11 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=141
+            out class type=Windows.System.AppResourceGroupStateReport return
+    method start_resume_async
+        method StartResumeAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
+    method start_suspend_async
+        method StartSuspendAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
+    method start_terminate_async
+        method StartTerminateAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
+
+class Windows.System.AppResourceGroupInfoWatcher python_type
+    py AppResourceGroupInfoWatcher
+    signature rc(Windows.System.AppResourceGroupInfoWatcher;{d9b0a0fd-6e5a-4c72-8b17-09fec4a212bd})
+    default Windows.System.IAppResourceGroupInfoWatcher
+    requires Windows.System.IAppResourceGroupInfoWatcher
+    property status
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=4 reverse=202
+            out enum32 type=Windows.System.AppResourceGroupInfoWatcherStatus return
+    event added
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
+            out event_token return
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=53
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=156
+            in event_token name=token
+    event execution_state_changed
+        add add_ExecutionStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ExecutionStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=200
+            in event_token name=token
+    event removed
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
+            out event_token return
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=110
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=181
+            in event_token name=token
+    method start
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0 reverse=209
+    method stop
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0 reverse=217
+
+class Windows.System.AppResourceGroupInfoWatcherEventArgs python_type
+    py AppResourceGroupInfoWatcherEventArgs
+    signature rc(Windows.System.AppResourceGroupInfoWatcherEventArgs;{7a787637-6302-4d2f-bf89-1c12d0b2a6b9})
+    default Windows.System.IAppResourceGroupInfoWatcherEventArgs
+    requires Windows.System.IAppResourceGroupInfoWatcherEventArgs
+    property app_diagnostic_infos
+        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
+    property app_resource_group_info
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4 reverse=43
+            out class type=Windows.System.AppResourceGroupInfo return
+
+class Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs python_type
+    py AppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+    signature rc(Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs;{1bdbedd7-fee6-4fd4-98dd-e92a2cc299f3})
+    default Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+    requires Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+    property app_diagnostic_infos
+        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
+    property app_resource_group_info
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4 reverse=43
+            out class type=Windows.System.AppResourceGroupInfo return
+
+enum Windows.System.AppResourceGroupInfoWatcherStatus python_type
+    py AppResourceGroupInfoWatcherStatus
+    signature enum(Windows.System.AppResourceGroupInfoWatcherStatus;i4)
+
+class Windows.System.AppResourceGroupMemoryReport python_type
+    py AppResourceGroupMemoryReport
+    signature rc(Windows.System.AppResourceGroupMemoryReport;{2c8c06b1-7db1-4c51-a225-7fae2d49e431})
+    default Windows.System.IAppResourceGroupMemoryReport
+    requires Windows.System.IAppResourceGroupMemoryReport
+    property commit_usage_level
+        get get_CommitUsageLevel slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=43
+            out enum32 type=Windows.System.AppMemoryUsageLevel return
+    property commit_usage_limit
+        get get_CommitUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=22
+            out uint64 return
+    property private_commit_usage
+        get get_PrivateCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=62
+            out uint64 return
+    property total_commit_usage
+        get get_TotalCommitUsage slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=99
+            out uint64 return
+
+class Windows.System.AppResourceGroupStateReport python_type
+    py AppResourceGroupStateReport
+    signature rc(Windows.System.AppResourceGroupStateReport;{52849f18-2f70-4236-ab40-d04db0c7b931})
+    default Windows.System.IAppResourceGroupStateReport
+    requires Windows.System.IAppResourceGroupStateReport
+    property energy_quota_state
+        get get_EnergyQuotaState slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4 reverse=43
+            out enum32 type=Windows.System.AppResourceGroupEnergyQuotaState return
+    property execution_state
+        get get_ExecutionState slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4 reverse=22
+            out enum32 type=Windows.System.AppResourceGroupExecutionState return
+
+class Windows.System.AppUriHandlerHost activatable python_type
+    py AppUriHandlerHost
+    signature rc(Windows.System.AppUriHandlerHost;{5d50cac5-92d2-5409-b56f-7f73e10ea4c3})
+    default Windows.System.IAppUriHandlerHost
+    requires Windows.System.IAppUriHandlerHost
+    requires Windows.System.IAppUriHandlerHost2
+    factory Windows.System.IAppUriHandlerHostFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51 reverse=24
+            in string name=name implicit
+            out class type=Windows.System.AppUriHandlerHost return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.System.AppUriHandlerHost return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost shape=4 reverse=43
+            in string name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost2 shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost2 shape=4 reverse=43
+            in boolean name=value
+
+class Windows.System.AppUriHandlerRegistration python_type
+    py AppUriHandlerRegistration
+    signature rc(Windows.System.AppUriHandlerRegistration;{6f73aeb1-4569-5c3f-9ba0-99123eea32c3})
+    default Windows.System.IAppUriHandlerRegistration
+    requires Windows.System.IAppUriHandlerRegistration
+    requires Windows.System.IAppUriHandlerRegistration2
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=22
+            out string return
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=43
+            out class type=Windows.System.User return
+    property package_family_name
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=62
+            out string return
+    method get_all_hosts
+        method GetAllHosts slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> return
+    method get_app_added_hosts_async
+        method GetAppAddedHostsAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost>> return
+    method set_app_added_hosts_async
+        method SetAppAddedHostsAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=51 reverse=100
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> name=hosts
+            out interface type=Windows.Foundation.IAsyncAction return
+    method update_hosts
+        method UpdateHosts slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=43
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> name=hosts
+
+class Windows.System.AppUriHandlerRegistrationManager python_type
+    py AppUriHandlerRegistrationManager
+    signature rc(Windows.System.AppUriHandlerRegistrationManager;{e62c9a52-ac94-5750-ac1b-6cfb6f250263})
+    default Windows.System.IAppUriHandlerRegistrationManager
+    requires Windows.System.IAppUriHandlerRegistrationManager
+    requires Windows.System.IAppUriHandlerRegistrationManager2
+    factory Windows.System.IAppUriHandlerRegistrationManagerStatics
+    factory Windows.System.IAppUriHandlerRegistrationManagerStatics2
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=4 reverse=22
+            out class type=Windows.System.User return
+    property package_family_name
+        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager2 shape=4 reverse=22
+            out string return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=4 reverse=22 static
+            out class type=Windows.System.AppUriHandlerRegistrationManager return
+    method get_for_package static
+        method GetForPackage slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=51 reverse=24 static
+            in string name=packageFamilyName
+            out class type=Windows.System.AppUriHandlerRegistrationManager return
+    method get_for_package_for_user static
+        method GetForPackageForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=117 reverse=45 static
+            in string name=packageFamilyName
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.AppUriHandlerRegistrationManager return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.System.AppUriHandlerRegistrationManager return
+    method try_get_registration
+        method TryGetRegistration slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=51 reverse=44
+            in string name=name
+            out class type=Windows.System.AppUriHandlerRegistration return
+
+enum Windows.System.AutoUpdateTimeZoneStatus python_type
+    py AutoUpdateTimeZoneStatus
+    signature enum(Windows.System.AutoUpdateTimeZoneStatus;i4)
+
+class Windows.System.DateTimeSettings static python_type
+    py DateTimeSettings
+    factory Windows.System.IDateTimeSettingsStatics
+    method set_system_date_time static
+        method SetSystemDateTime slot=6 inputs=1 outputs=0 declaring=Windows.System.IDateTimeSettingsStatics shape=26 reverse=33 static
+            in datetime name=utcDateTime
+
+enum Windows.System.DiagnosticAccessStatus python_type
+    py DiagnosticAccessStatus
+    signature enum(Windows.System.DiagnosticAccessStatus;i4)
+
+class Windows.System.DispatcherQueue python_type
+    py DispatcherQueue
+    signature rc(Windows.System.DispatcherQueue;{603e88e4-a338-4ffe-a457-a5cfb9ceb899})
+    default Windows.System.IDispatcherQueue
+    requires Windows.System.IDispatcherQueue
+    requires Windows.System.IDispatcherQueue2
+    factory Windows.System.IDispatcherQueueStatics
+    property has_thread_access
+        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue2 shape=4 reverse=22
+            out boolean return
+    event shutdown_completed
+        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,System.Object> name=handler
+            out event_token return
+        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=167
+            in event_token name=token
+    event shutdown_starting
+        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,Windows.System.DispatcherQueueShutdownStartingEventArgs> name=handler
+            out event_token return
+        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=134
+            in event_token name=token
+    method create_timer
+        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue shape=4 reverse=22
+            out class type=Windows.System.DispatcherQueueTimer return
+    method get_for_current_thread static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueStatics shape=4 reverse=22 static
+            out class type=Windows.System.DispatcherQueue return
+    method try_enqueue
+        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=44
+            in delegate type=Windows.System.DispatcherQueueHandler name=callback
+            out boolean return
+        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Windows.System.IDispatcherQueue shape=117 reverse=66
+            in enum32 type=Windows.System.DispatcherQueuePriority name=priority
+            in delegate type=Windows.System.DispatcherQueueHandler name=callback
+            out boolean return
+
+class Windows.System.DispatcherQueueController python_type
+    py DispatcherQueueController
+    signature rc(Windows.System.DispatcherQueueController;{22f34e66-50db-4e36-a98d-61c01b384d20})
+    default Windows.System.IDispatcherQueueController
+    requires Windows.System.IDispatcherQueueController
+    factory Windows.System.IDispatcherQueueControllerStatics
+    property dispatcher_queue
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4 reverse=22
+            out class type=Windows.System.DispatcherQueue return
+    method create_on_dedicated_thread static
+        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueControllerStatics shape=4 reverse=22 static
+            out class type=Windows.System.DispatcherQueueController return
+    method shutdown_queue_async
+        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+delegate Windows.System.DispatcherQueueHandler python_type
+    py DispatcherQueueHandler
+    guid dfa2dc9c-1a2d-4917-98f2-939af1d6e0c8
+    signature delegate({dfa2dc9c-1a2d-4917-98f2-939af1d6e0c8})
+    method -
+        method Invoke slot=3 inputs=0 outputs=0 shape=0 reverse=0
+
+enum Windows.System.DispatcherQueuePriority python_type
+    py DispatcherQueuePriority
+    signature enum(Windows.System.DispatcherQueuePriority;i4)
+
+class Windows.System.DispatcherQueueShutdownStartingEventArgs python_type
+    py DispatcherQueueShutdownStartingEventArgs
+    signature rc(Windows.System.DispatcherQueueShutdownStartingEventArgs;{c4724c4c-ff97-40c0-a226-cc0aaa545e89})
+    default Windows.System.IDispatcherQueueShutdownStartingEventArgs
+    requires Windows.System.IDispatcherQueueShutdownStartingEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueShutdownStartingEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.System.DispatcherQueueTimer python_type
+    py DispatcherQueueTimer
+    signature rc(Windows.System.DispatcherQueueTimer;{5feabb1d-a31c-4727-b1ac-37454649d56a})
+    default Windows.System.IDispatcherQueueTimer
+    requires Windows.System.IDispatcherQueueTimer
+    property is_repeating
+        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=99
+            out boolean return
+        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=121
+            in boolean name=value
+    property interval
+        get get_Interval slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=22
+            out timespan return
+        put put_Interval slot=7 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26 reverse=53
+            in timespan name=value
+    property is_running
+        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=62
+            out boolean return
+    event tick
+        add add_Tick slot=13 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueueTimer,System.Object> name=handler
+            out event_token return
+        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26 reverse=192
+            in event_token name=token
+    method start
+        method Start slot=11 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0 reverse=137
+    method stop
+        method Stop slot=12 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0 reverse=159
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+delegate Windows.Foundation.EventHandler<Windows.System.AppMemoryUsageLimitChangingEventArgs> concrete
+    guid 6030e7c3-f93f-5e9c-9ba2-9a018d2b09c0
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppMemoryUsageLimitChangingEventArgs;{79f86664-feca-4da5-9e40-2bc63efdc979}))
+    argument Windows.System.AppMemoryUsageLimitChangingEventArgs
+
+delegate Windows.Foundation.EventHandler<Windows.System.UserDeviceAssociationChangedEventArgs> concrete
+    guid d3a3d4c5-d8b6-5a0e-88ed-a5499c377be3
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.UserDeviceAssociationChangedEventArgs;{bd1f6f6c-bb5d-4d7b-a5f0-c8cd11a38d42}))
+    argument Windows.System.UserDeviceAssociationChangedEventArgs
+
+class Windows.System.FolderLauncherOptions activatable python_type
+    py FolderLauncherOptions
+    signature rc(Windows.System.FolderLauncherOptions;{bb91c27d-6b87-432a-bd04-776c6f5fb2ab})
+    default Windows.System.IFolderLauncherOptions
+    requires Windows.System.IFolderLauncherOptions
+    requires Windows.System.ILauncherViewOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property items_to_select
+        get get_ItemsToSelect slot=6 inputs=0 outputs=1 declaring=Windows.System.IFolderLauncherOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> return
+    property desired_remaining_view
+        get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=22
+            out enum32 type=Windows.UI.ViewManagement.ViewSizePreference return
+        put put_DesiredRemainingView slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=43
+            in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=value
+
+interface Windows.System.IAppActivationResult
+    guid 6b528900-f46e-4eb0-aa6c-38af557cf9ed
+
+interface Windows.System.IAppDiagnosticInfo
+    guid e348a69a-8889-4ca3-be07-d5ffff5f0804
+
+interface Windows.System.IAppDiagnosticInfo2
+    guid df46fbd7-191a-446c-9473-8fbc2374a354
+
+interface Windows.System.IAppDiagnosticInfo3
+    guid c895c63d-dd61-4c65-babd-81a10b4f9815
+
+interface Windows.System.IAppDiagnosticInfoStatics
+    guid ce6925bf-10ca-40c8-a9ca-c5c96501866e
+
+interface Windows.System.IAppDiagnosticInfoStatics2
+    guid 05b24b86-1000-4c90-bb9f-7235071c50fe
+
+interface Windows.System.IAppDiagnosticInfoWatcher
+    guid 75575070-01d3-489a-9325-52f9cc6ede0a
+
+interface Windows.System.IAppDiagnosticInfoWatcherEventArgs
+    guid 7017c716-e1da-4c65-99df-046dff5be71a
+
+interface Windows.System.IAppExecutionStateChangeResult
+    guid 6f039bf0-f91b-4df8-ae77-3033ccb69114
+
+interface Windows.System.IAppMemoryReport
+    guid 6d65339b-4d6f-45bc-9c5e-e49b3ff2758d
+
+interface Windows.System.IAppMemoryReport2
+    guid 5f7f3738-51b7-42dc-b7ed-79ba46d28857
+
+interface Windows.System.IAppMemoryUsageLimitChangingEventArgs
+    guid 79f86664-feca-4da5-9e40-2bc63efdc979
+
+interface Windows.System.IAppResourceGroupBackgroundTaskReport
+    guid 2566e74e-b05d-40c2-9dc1-1a4f039ea120
+
+interface Windows.System.IAppResourceGroupInfo
+    guid b913f77a-e807-49f4-845e-7b8bdcfe8ee7
+
+interface Windows.System.IAppResourceGroupInfo2
+    guid ee9b236d-d305-4d6b-92f7-6afdad72dedc
+
+interface Windows.System.IAppResourceGroupInfoWatcher
+    guid d9b0a0fd-6e5a-4c72-8b17-09fec4a212bd
+
+interface Windows.System.IAppResourceGroupInfoWatcherEventArgs
+    guid 7a787637-6302-4d2f-bf89-1c12d0b2a6b9
+
+interface Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+    guid 1bdbedd7-fee6-4fd4-98dd-e92a2cc299f3
+
+interface Windows.System.IAppResourceGroupMemoryReport
+    guid 2c8c06b1-7db1-4c51-a225-7fae2d49e431
+
+interface Windows.System.IAppResourceGroupStateReport
+    guid 52849f18-2f70-4236-ab40-d04db0c7b931
+
+interface Windows.System.IAppUriHandlerHost
+    guid 5d50cac5-92d2-5409-b56f-7f73e10ea4c3
+
+interface Windows.System.IAppUriHandlerHost2
+    guid 3a0bee95-29e4-51bf-8095-a3c068e3c72a
+
+interface Windows.System.IAppUriHandlerHostFactory
+    guid 257c3c96-ce04-5f98-96bb-3ebd3e9275bb
+
+interface Windows.System.IAppUriHandlerRegistration
+    guid 6f73aeb1-4569-5c3f-9ba0-99123eea32c3
+
+interface Windows.System.IAppUriHandlerRegistration2
+    guid d54dac97-cb39-5f1f-883e-01853730bd6d
+
+interface Windows.System.IAppUriHandlerRegistrationManager
+    guid e62c9a52-ac94-5750-ac1b-6cfb6f250263
+
+interface Windows.System.IAppUriHandlerRegistrationManager2
+    guid bddfcaf1-b51a-5e69-aefd-7088d9f2b123
+
+interface Windows.System.IAppUriHandlerRegistrationManagerStatics
+    guid d5cedd9f-5729-5b76-a1d4-0285f295c124
+
+interface Windows.System.IAppUriHandlerRegistrationManagerStatics2
+    guid 14f78379-6890-5080-90a7-98824a7f079e
+
+interface Windows.Foundation.IAsyncOperation<System.Object> concrete
+    guid abf53c57-ee50-5342-b52a-26e3b8cc024f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> concrete
+    guid 490b0686-afd7-5037-9647-d8fe248f182c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{8a43ed9f-f4e6-4421-acf9-1dab2986820c})
+    argument Windows.Foundation.Collections.IPropertySet
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> concrete
+    guid d6a9d3b9-f63c-59be-a096-3e9557c41182
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804})))
+    argument Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost>> concrete
+    guid a87e4877-f690-5883-b2bd-9e3c2ab66413
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppUriHandlerHost;{5d50cac5-92d2-5409-b56f-7f73e10ea4c3})))
+    argument Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> concrete
+    guid 07543d91-8610-5152-b0e4-43d6e4cdd0cb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> concrete
+    guid e44ea1df-bb85-5a8c-bddc-c8e960c355c9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.User;{df9a26c6-e746-4bcd-b5d4-120103c4209b})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.System.User>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> concrete
+    guid 65178d50-e6a2-5d16-b244-65e9725e5a0c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    argument Windows.Storage.Streams.IRandomAccessStreamReference
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.AppActivationResult> concrete
+    guid b6f373b8-bd4d-50bf-82b4-5b1d452a5f83
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.AppActivationResult;{6b528900-f46e-4eb0-aa6c-38af557cf9ed}))
+    argument Windows.System.AppActivationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> concrete
+    guid c251cc22-aba9-59b8-bf87-20677fc4924e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.AppExecutionStateChangeResult;{6f039bf0-f91b-4df8-ae77-3033ccb69114}))
+    argument Windows.System.AppExecutionStateChangeResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.AutoUpdateTimeZoneStatus> concrete
+    guid b69475ac-a5d4-53d7-a53a-bb01b69620fa
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.AutoUpdateTimeZoneStatus;i4))
+    argument Windows.System.AutoUpdateTimeZoneStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.DiagnosticAccessStatus> concrete
+    guid 61c11bbe-2618-588a-a7ca-f60691272324
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.DiagnosticAccessStatus;i4))
+    argument Windows.System.DiagnosticAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> concrete
+    guid e7539992-2220-5d2d-82c4-3d44f8750d91
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.LaunchQuerySupportStatus;i4))
+    argument Windows.System.LaunchQuerySupportStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> concrete
+    guid 7f97fc15-1cd6-54b7-a290-acb60dba81a1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.LaunchUriResult;{ec27a8df-f6d5-45ca-913a-70a40c5c8221}))
+    argument Windows.System.LaunchUriResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> concrete
+    guid ab3d721b-a4f3-5861-b034-030b15233c52
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.LaunchUriStatus;i4))
+    argument Windows.System.LaunchUriStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.ProcessLauncherResult> concrete
+    guid e6827240-7a8d-51be-8d21-e093268ccc15
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.ProcessLauncherResult;{544c8934-86d8-4991-8e75-ece8a43b6b6d}))
+    argument Windows.System.ProcessLauncherResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> concrete
+    guid bb70e5cd-62c2-5f78-ac8d-f4b973981da4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.RemoteLaunchUriStatus;i4))
+    argument Windows.System.RemoteLaunchUriStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.User> concrete
+    guid a895d2f9-2399-5104-a532-5ba44ab4b165
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.User;{df9a26c6-e746-4bcd-b5d4-120103c4209b}))
+    argument Windows.System.User
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult> concrete
+    guid d4df0010-0172-5efa-bd5c-6444de94af74
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.UserAgeConsentResult;i4))
+    argument Windows.System.UserAgeConsentResult
+
+interface Windows.System.IDateTimeSettingsStatics
+    guid 5d2150d1-47ee-48ab-a52b-9f1954278d82
+
+interface Windows.System.IDispatcherQueue
+    guid 603e88e4-a338-4ffe-a457-a5cfb9ceb899
+
+interface Windows.System.IDispatcherQueue2
+    guid c822c647-30ef-506e-bd1e-a647ae6675ff
+
+interface Windows.System.IDispatcherQueueController
+    guid 22f34e66-50db-4e36-a98d-61c01b384d20
+
+interface Windows.System.IDispatcherQueueControllerStatics
+    guid 0a6c98e0-5198-49a2-a313-3f70d1f13c27
+
+interface Windows.System.IDispatcherQueueShutdownStartingEventArgs
+    guid c4724c4c-ff97-40c0-a226-cc0aaa545e89
+
+interface Windows.System.IDispatcherQueueStatics
+    guid a96d83d7-9371-4517-9245-d0824ac12c74
+
+interface Windows.System.IDispatcherQueueTimer
+    guid 5feabb1d-a31c-4727-b1ac-37454649d56a
+
+interface Windows.System.IFolderLauncherOptions
+    guid bb91c27d-6b87-432a-bd04-776c6f5fb2ab
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> concrete
+    guid f6e575bd-eab7-5981-ba01-49ff976ca186
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.AppUriHandlerHost;{5d50cac5-92d2-5409-b56f-7f73e10ea4c3}))
+    argument Windows.System.AppUriHandlerHost
+
+interface Windows.System.IKnownUserPropertiesStatics
+    guid 7755911a-70c5-48e5-b637-5ba3441e4ee4
+
+interface Windows.System.IKnownUserPropertiesStatics2
+    guid 5b450782-f620-577e-b1b3-dd56644d79b1
+
+interface Windows.System.ILaunchUriResult
+    guid ec27a8df-f6d5-45ca-913a-70a40c5c8221
+
+interface Windows.System.ILauncherOptions
+    guid bafa21d8-b071-4cd8-853e-341203e557d3
+
+interface Windows.System.ILauncherOptions2
+    guid 3ba08eb4-6e40-4dce-a1a3-2f53950afb49
+
+interface Windows.System.ILauncherOptions3
+    guid f0770655-4b63-4e3a-9107-4e687841923a
+
+interface Windows.System.ILauncherOptions4
+    guid ef6fd10e-e6fb-4814-a44e-57e8b9d9a01b
+
+interface Windows.System.ILauncherStatics
+    guid 277151c3-9e3e-42f6-91a4-5dfdeb232451
+
+interface Windows.System.ILauncherStatics2
+    guid 59ba2fbb-24cb-4c02-a4c4-8294569d54f1
+
+interface Windows.System.ILauncherStatics3
+    guid 234261a8-9db3-4683-aa42-dc6f51d33847
+
+interface Windows.System.ILauncherStatics4
+    guid b9ec819f-b5a5-41c6-b3b3-dd1b3178bcf2
+
+interface Windows.System.ILauncherStatics5
+    guid 5b24ef84-d895-5fea-9153-1ac49aed9ba9
+
+interface Windows.System.ILauncherUIOptions
+    guid 1b25da6e-8aa6-41e9-8251-4165f5985f49
+
+interface Windows.System.ILauncherViewOptions python_type
+    py _ILauncherViewOptions
+    guid 8a9b29f1-7ca7-49de-9bd3-3c5b7184f616
+    signature {8a9b29f1-7ca7-49de-9bd3-3c5b7184f616}
+    property desired_remaining_view
+        get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=22
+            out enum32 type=Windows.UI.ViewManagement.ViewSizePreference return
+        put put_DesiredRemainingView slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=43
+            in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=value
+
+interface Windows.System.IMemoryManagerStatics
+    guid 5c6c279c-d7ca-4779-9188-4057219ce64c
+
+interface Windows.System.IMemoryManagerStatics2
+    guid 6eee351f-6d62-423f-9479-b01f9c9f7669
+
+interface Windows.System.IMemoryManagerStatics3
+    guid 149b59ce-92ad-4e35-89eb-50dfb4c0d91c
+
+interface Windows.System.IMemoryManagerStatics4
+    guid c5a94828-e84e-4886-8a0d-44b3190e3b72
+
+interface Windows.System.IProcessLauncherOptions
+    guid 3080b9cf-f444-4a83-beaf-a549a0f3229c
+
+interface Windows.System.IProcessLauncherResult
+    guid 544c8934-86d8-4991-8e75-ece8a43b6b6d
+
+interface Windows.System.IProcessLauncherStatics
+    guid 33ab66e7-2d0e-448b-a6a0-c13c3836d09c
+
+interface Windows.System.IProcessMemoryReport
+    guid 087305a8-9b70-4782-8741-3a982b6ce5e4
+
+interface Windows.System.IProtocolForResultsOperation
+    guid d581293a-6de9-4d28-9378-f86782e182bb
+
+interface Windows.Foundation.IReference<Windows.Foundation.Point> concrete
+    guid 84f14c22-a00a-5272-8d3d-82112e66df00
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Point;f4;f4))
+    argument Windows.Foundation.Point
+
+interface Windows.Foundation.IReference<Windows.Foundation.Rect> concrete
+    guid 80423f11-054f-5eac-afd3-63b6ce15e77b
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Rect;f4;f4;f4;f4))
+    argument Windows.Foundation.Rect
+
+interface Windows.System.IRemoteLauncherOptions
+    guid 9e3a2788-2891-4cdf-a2d6-9dff7d02e693
+
+interface Windows.System.IRemoteLauncherStatics
+    guid d7db7a93-a30c-48b7-9f21-051026a4e517
+
+interface Windows.System.IShutdownManagerStatics
+    guid 72e247ed-dd5b-4d6c-b1d0-c57a7bbb5f94
+
+interface Windows.System.IShutdownManagerStatics2
+    guid 0f69a02f-9c34-43c7-a8c3-70b30a7f7504
+
+interface Windows.System.ITimeZoneSettingsStatics
+    guid 9b3b2bea-a101-41ae-9fbd-028728bab73d
+
+interface Windows.System.ITimeZoneSettingsStatics2
+    guid 555c0db8-39a8-49fa-b4f6-a2c7fc2842ec
+
+interface Windows.System.IUser
+    guid df9a26c6-e746-4bcd-b5d4-120103c4209b
+
+interface Windows.System.IUser2
+    guid 98ba5628-a6e3-518e-89d9-d3b2b1991a10
+
+interface Windows.System.IUserAuthenticationStatusChangeDeferral
+    guid 88b59568-bb30-42fb-a270-e9902e40efa7
+
+interface Windows.System.IUserAuthenticationStatusChangingEventArgs
+    guid 8c030f28-a711-4c1e-ab48-04179c15938f
+
+interface Windows.System.IUserChangedEventArgs
+    guid 086459dc-18c6-48db-bc99-724fb9203ccc
+
+interface Windows.System.IUserChangedEventArgs2
+    guid 6b2ccb44-6f01-560c-97ad-fc7f32ec581f
+
+interface Windows.System.IUserDeviceAssociationChangedEventArgs
+    guid bd1f6f6c-bb5d-4d7b-a5f0-c8cd11a38d42
+
+interface Windows.System.IUserDeviceAssociationStatics
+    guid 7e491e14-f85a-4c07-8da9-7fe3d0542343
+
+interface Windows.System.IUserPicker
+    guid 7d548008-f1e3-4a6c-8ddc-a9bb0f488aed
+
+interface Windows.System.IUserPickerStatics
+    guid de3290dc-7e73-4df6-a1ae-4d7eca82b40d
+
+interface Windows.System.IUserStatics
+    guid 155eb23b-242a-45e0-a2e9-3171fc6a7fdd
+
+interface Windows.System.IUserStatics2
+    guid 74a37e11-2eb5-4487-b0d5-2c6790e013e9
+
+interface Windows.System.IUserWatcher
+    guid 155eb23b-242a-45e0-a2e9-3171fc6a7fbb
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> concrete
+    guid 802508e2-9c2c-5b91-89a8-39bcf7223344
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> concrete
+    guid 9cffa2c3-7eeb-599c-b94d-c794b11f807f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    argument Windows.System.AppDiagnosticInfo
+
+interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> concrete
+    guid 80f1820a-db02-5cb2-a128-5172151d1444
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppResourceGroupBackgroundTaskReport;{2566e74e-b05d-40c2-9dc1-1a4f039ea120}))
+    argument Windows.System.AppResourceGroupBackgroundTaskReport
+
+interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> concrete
+    guid bd7d69a0-0d57-5148-8b23-49a08654f0c7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppResourceGroupInfo;{b913f77a-e807-49f4-845e-7b8bdcfe8ee7}))
+    argument Windows.System.AppResourceGroupInfo
+
+interface Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> concrete
+    guid 4a226614-2197-526a-a9ff-03025d18e322
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppUriHandlerHost;{5d50cac5-92d2-5409-b56f-7f73e10ea4c3}))
+    argument Windows.System.AppUriHandlerHost
+
+interface Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete
+    guid f62e2d01-c1dd-5b60-b5da-16518cba0bb0
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434}))
+    argument Windows.System.Diagnostics.ProcessDiagnosticInfo
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> concrete
+    guid 8246ed12-33e8-52b3-a5c5-19779de9999e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1}))
+    argument Windows.ApplicationModel.AppInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> concrete
+    guid b0c2c7a4-78ba-50fd-84fe-00e02a6c1d42
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    argument Windows.System.AppDiagnosticInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.User> concrete
+    guid 8cbd762a-1222-5ee5-b745-489e7a42c6ec
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.User;{df9a26c6-e746-4bcd-b5d4-120103c4209b}))
+    argument Windows.System.User
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> concrete
+    guid 92b358cd-c1ca-5552-9e2e-67e2d6ead4d1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.System.UserWatcherUpdateKind;i4))
+    argument Windows.System.UserWatcherUpdateKind
+
+class Windows.System.KnownUserProperties static python_type
+    py KnownUserProperties
+    factory Windows.System.IKnownUserPropertiesStatics
+    factory Windows.System.IKnownUserPropertiesStatics2
+    property account_name static
+        get get_AccountName slot=10 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=121 static
+            out string return
+    property display_name static
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=22 static
+            out string return
+    property domain_name static
+        get get_DomainName slot=13 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=173 static
+            out string return
+    property first_name static
+        get get_FirstName slot=7 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=43 static
+            out string return
+    property guest_host static
+        get get_GuestHost slot=11 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=141 static
+            out string return
+    property last_name static
+        get get_LastName slot=8 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=62 static
+            out string return
+    property principal_name static
+        get get_PrincipalName slot=12 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=162 static
+            out string return
+    property provider_name static
+        get get_ProviderName slot=9 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=99 static
+            out string return
+    property session_initiation_protocol_uri static
+        get get_SessionInitiationProtocolUri slot=14 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=186 static
+            out string return
+    property age_enforcement_region static
+        get get_AgeEnforcementRegion slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics2 shape=4 reverse=22 static
+            out string return
+
+enum Windows.System.LaunchFileStatus python_type
+    py LaunchFileStatus
+    signature enum(Windows.System.LaunchFileStatus;i4)
+
+enum Windows.System.LaunchQuerySupportStatus python_type
+    py LaunchQuerySupportStatus
+    signature enum(Windows.System.LaunchQuerySupportStatus;i4)
+
+enum Windows.System.LaunchQuerySupportType python_type
+    py LaunchQuerySupportType
+    signature enum(Windows.System.LaunchQuerySupportType;i4)
+
+class Windows.System.LaunchUriResult python_type
+    py LaunchUriResult
+    signature rc(Windows.System.LaunchUriResult;{ec27a8df-f6d5-45ca-913a-70a40c5c8221})
+    default Windows.System.ILaunchUriResult
+    requires Windows.System.ILaunchUriResult
+    property result
+        get get_Result slot=7 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4 reverse=22
+            out enum32 type=Windows.System.LaunchUriStatus return
+
+enum Windows.System.LaunchUriStatus python_type
+    py LaunchUriStatus
+    signature enum(Windows.System.LaunchUriStatus;i4)
+
+class Windows.System.Launcher static python_type
+    py Launcher
+    factory Windows.System.ILauncherStatics2
+    factory Windows.System.ILauncherStatics3
+    factory Windows.System.ILauncherStatics
+    factory Windows.System.ILauncherStatics4
+    factory Windows.System.ILauncherStatics5
+    method find_app_uri_handlers_async static
+        method FindAppUriHandlersAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 reverse=65 static
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+    method find_file_handlers_async static
+        method FindFileHandlersAsync slot=15 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=196 static
+            in string name=extension
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+    method find_uri_scheme_handlers_async static
+        method FindUriSchemeHandlersAsync slot=13 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=174 static
+            in string name=scheme
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+        method FindUriSchemeHandlersAsync slot=14 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=188 static
+            in string name=scheme
+            in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+    method launch_file_async static
+        method LaunchFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 reverse=45 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            in class type=Windows.System.LauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method launch_folder_async static
+        method LaunchFolderAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFolder name=folder
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchFolderAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=117 reverse=45 static
+            in interface type=Windows.Storage.IStorageFolder name=folder
+            in class type=Windows.System.FolderLauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method launch_folder_path_async static
+        method LaunchFolderPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=51 reverse=24 static
+            in string name=path
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchFolderPathAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 reverse=45 static
+            in string name=path
+            in class type=Windows.System.FolderLauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method launch_folder_path_for_user_async static
+        method LaunchFolderPathForUserAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 reverse=66 static
+            in class type=Windows.System.User name=user
+            in string name=path
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchFolderPathForUserAsync slot=9 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=195 reverse=102 static
+            in class type=Windows.System.User name=user
+            in string name=path
+            in class type=Windows.System.FolderLauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method launch_uri_async static
+        method LaunchUriAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchUriAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method LaunchUriAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method launch_uri_for_results_async static
+        method LaunchUriForResultsAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=25 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
+        method LaunchUriForResultsAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=46 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
+    method launch_uri_for_results_for_user_async static
+        method LaunchUriForResultsForUserAsync slot=12 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 reverse=165 static
+            in class type=Windows.System.User name=user
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
+        method LaunchUriForResultsForUserAsync slot=13 inputs=4 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=239 static
+            in class type=Windows.System.User name=user
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
+    method launch_uri_for_user_async static
+        method LaunchUriForUserAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 reverse=101 static
+            in class type=Windows.System.User name=user
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
+        method LaunchUriForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 reverse=126 static
+            in class type=Windows.System.User name=user
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
+        method LaunchUriForUserAsync slot=11 inputs=4 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=239 static
+            in class type=Windows.System.User name=user
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.LauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
+    method query_app_uri_support_async static
+        method QueryAppUriSupportAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 reverse=24 static
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+        method QueryAppUriSupportAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 reverse=45 static
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+    method query_file_support_async static
+        method QueryFileSupportAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=144 static
+            in class type=Windows.Storage.StorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+        method QueryFileSupportAsync slot=12 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=164 static
+            in class type=Windows.Storage.StorageFile name=file
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+    method query_uri_support_async static
+        method QueryUriSupportAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=101 static
+            in class type=Windows.Foundation.Uri name=uri
+            in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+        method QueryUriSupportAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=126 static
+            in class type=Windows.Foundation.Uri name=uri
+            in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
+
+class Windows.System.LauncherOptions activatable python_type
+    py LauncherOptions
+    signature rc(Windows.System.LauncherOptions;{bafa21d8-b071-4cd8-853e-341203e557d3})
+    default Windows.System.ILauncherOptions
+    requires Windows.System.ILauncherOptions2
+    requires Windows.System.ILauncherOptions
+    requires Windows.System.ILauncherOptions3
+    requires Windows.System.ILauncherOptions4
+    requires Windows.System.ILauncherViewOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property treat_as_untrusted
+        get get_TreatAsUntrusted slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=22
+            out boolean return
+        put put_TreatAsUntrusted slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=43
+            in boolean name=value
+    property preferred_application_package_family_name
+        get get_PreferredApplicationPackageFamilyName slot=11 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=141
+            out string return
+        put put_PreferredApplicationPackageFamilyName slot=12 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=162
+            in string name=value
+    property preferred_application_display_name
+        get get_PreferredApplicationDisplayName slot=13 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=173
+            out string return
+        put put_PreferredApplicationDisplayName slot=14 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=186
+            in string name=value
+    property fallback_uri
+        get get_FallbackUri slot=15 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+        put put_FallbackUri slot=16 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=202
+            in class type=Windows.Foundation.Uri name=value
+    property display_application_picker
+        get get_DisplayApplicationPicker slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=62
+            out boolean return
+        put put_DisplayApplicationPicker slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=99
+            in boolean name=value
+    property content_type
+        get get_ContentType slot=17 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=210
+            out string return
+        put put_ContentType slot=18 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=218
+            in string name=value
+    property ui
+        get get_UI slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=121
+            out class type=Windows.System.LauncherUIOptions return
+    property target_application_package_family_name
+        get get_TargetApplicationPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=22
+            out string return
+        put put_TargetApplicationPackageFamilyName slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=43
+            in string name=value
+    property neighboring_files_query
+        get get_NeighboringFilesQuery slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=62
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+        put put_NeighboringFilesQuery slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=99
+            in class type=Windows.Storage.Search.StorageFileQueryResult name=value
+    property ignore_app_uri_handlers
+        get get_IgnoreAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions3 shape=4 reverse=22
+            out boolean return
+        put put_IgnoreAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions3 shape=4 reverse=43
+            in boolean name=value
+    property limit_picker_to_current_app_and_app_uri_handlers
+        get get_LimitPickerToCurrentAppAndAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions4 shape=4 reverse=22
+            out boolean return
+        put put_LimitPickerToCurrentAppAndAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions4 shape=4 reverse=43
+            in boolean name=value
+    property desired_remaining_view
+        get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=22
+            out enum32 type=Windows.UI.ViewManagement.ViewSizePreference return
+        put put_DesiredRemainingView slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=43
+            in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=value
+
+class Windows.System.LauncherUIOptions python_type
+    py LauncherUIOptions
+    signature rc(Windows.System.LauncherUIOptions;{1b25da6e-8aa6-41e9-8251-4165f5985f49})
+    default Windows.System.ILauncherUIOptions
+    requires Windows.System.ILauncherUIOptions
+    property selection_rect
+        get get_SelectionRect slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
+        put put_SelectionRect slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> name=value
+    property preferred_placement
+        get get_PreferredPlacement slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=121
+            out enum32 type=Windows.UI.Popups.Placement return
+        put put_PreferredPlacement slot=11 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=141
+            in enum32 type=Windows.UI.Popups.Placement name=value
+    property invocation_point
+        get get_InvocationPoint slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
+        put put_InvocationPoint slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.Point> name=value
+
+class Windows.System.MemoryManager static python_type
+    py MemoryManager
+    factory Windows.System.IMemoryManagerStatics3
+    factory Windows.System.IMemoryManagerStatics
+    factory Windows.System.IMemoryManagerStatics4
+    factory Windows.System.IMemoryManagerStatics2
+    property app_memory_usage static
+        get get_AppMemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=22 static
+            out uint64 return
+    property app_memory_usage_level static
+        get get_AppMemoryUsageLevel slot=8 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=62 static
+            out enum32 type=Windows.System.AppMemoryUsageLevel return
+    property app_memory_usage_limit static
+        get get_AppMemoryUsageLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=43 static
+            out uint64 return
+    property expected_app_memory_usage_limit static
+        get get_ExpectedAppMemoryUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics4 shape=4 reverse=22 static
+            out uint64 return
+    event app_memory_usage_decreased static
+        add add_AppMemoryUsageDecreased slot=11 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=144 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_AppMemoryUsageDecreased slot=12 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=167 static
+            in event_token name=token
+    event app_memory_usage_increased static
+        add add_AppMemoryUsageIncreased slot=9 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=100 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_AppMemoryUsageIncreased slot=10 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=134 static
+            in event_token name=token
+    event app_memory_usage_limit_changing static
+        add add_AppMemoryUsageLimitChanging slot=13 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=174 static
+            in delegate type=Windows.Foundation.EventHandler<Windows.System.AppMemoryUsageLimitChangingEventArgs> name=handler
+            out event_token return
+        remove remove_AppMemoryUsageLimitChanging slot=14 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=192 static
+            in event_token name=token
+    method get_app_memory_report static
+        method GetAppMemoryReport slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 reverse=22 static
+            out class type=Windows.System.AppMemoryReport return
+    method get_process_memory_report static
+        method GetProcessMemoryReport slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 reverse=43 static
+            out class type=Windows.System.ProcessMemoryReport return
+    method try_set_app_memory_usage_limit static
+        method TrySetAppMemoryUsageLimit slot=6 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics3 shape=47 reverse=19 static
+            in uint64 name=value
+            out boolean return
+
+enum Windows.System.PowerState python_type
+    py PowerState
+    signature enum(Windows.System.PowerState;i4)
+
+class Windows.System.ProcessLauncher static python_type
+    py ProcessLauncher
+    factory Windows.System.IProcessLauncherStatics
+    method run_to_completion_async static
+        method RunToCompletionAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=117 reverse=25 static
+            in string name=fileName
+            in string name=args
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.ProcessLauncherResult> return
+        method RunToCompletionAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=195 reverse=46 static
+            in string name=fileName
+            in string name=args
+            in class type=Windows.System.ProcessLauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.ProcessLauncherResult> return
+
+class Windows.System.ProcessLauncherOptions activatable python_type
+    py ProcessLauncherOptions
+    signature rc(Windows.System.ProcessLauncherOptions;{3080b9cf-f444-4a83-beaf-a549a0f3229c})
+    default Windows.System.IProcessLauncherOptions
+    requires Windows.System.IProcessLauncherOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property working_directory
+        get get_WorkingDirectory slot=12 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=162
+            out string return
+        put put_WorkingDirectory slot=13 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=173
+            in string name=value
+    property standard_output
+        get get_StandardOutput slot=8 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IOutputStream return
+        put put_StandardOutput slot=9 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IOutputStream name=value
+    property standard_input
+        get get_StandardInput slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IInputStream return
+        put put_StandardInput slot=7 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IInputStream name=value
+    property standard_error
+        get get_StandardError slot=10 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IOutputStream return
+        put put_StandardError slot=11 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=141
+            in interface type=Windows.Storage.Streams.IOutputStream name=value
+
+class Windows.System.ProcessLauncherResult python_type
+    py ProcessLauncherResult
+    signature rc(Windows.System.ProcessLauncherResult;{544c8934-86d8-4991-8e75-ece8a43b6b6d})
+    default Windows.System.IProcessLauncherResult
+    requires Windows.System.IProcessLauncherResult
+    property exit_code
+        get get_ExitCode slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherResult shape=4 reverse=22
+            out uint32 return
+
+class Windows.System.ProcessMemoryReport python_type
+    py ProcessMemoryReport
+    signature rc(Windows.System.ProcessMemoryReport;{087305a8-9b70-4782-8741-3a982b6ce5e4})
+    default Windows.System.IProcessMemoryReport
+    requires Windows.System.IProcessMemoryReport
+    property private_working_set_usage
+        get get_PrivateWorkingSetUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4 reverse=22
+            out uint64 return
+    property total_working_set_usage
+        get get_TotalWorkingSetUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4 reverse=43
+            out uint64 return
+
+enum Windows.System.ProcessorArchitecture python_type
+    py ProcessorArchitecture
+    signature enum(Windows.System.ProcessorArchitecture;i4)
+
+class Windows.System.ProtocolForResultsOperation python_type
+    py ProtocolForResultsOperation
+    signature rc(Windows.System.ProtocolForResultsOperation;{d581293a-6de9-4d28-9378-f86782e182bb})
+    default Windows.System.IProtocolForResultsOperation
+    requires Windows.System.IProtocolForResultsOperation
+    method report_completed
+        method ReportCompleted slot=6 inputs=1 outputs=0 declaring=Windows.System.IProtocolForResultsOperation shape=4 reverse=22
+            in class type=Windows.Foundation.Collections.ValueSet name=data
+
+enum Windows.System.RemoteLaunchUriStatus python_type
+    py RemoteLaunchUriStatus
+    signature enum(Windows.System.RemoteLaunchUriStatus;i4)
+
+class Windows.System.RemoteLauncher static python_type
+    py RemoteLauncher
+    factory Windows.System.IRemoteLauncherStatics
+    method launch_uri_async static
+        method LaunchUriAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=117 reverse=25 static
+            in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> return
+        method LaunchUriAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=195 reverse=46 static
+            in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.RemoteLauncherOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> return
+        method LaunchUriAsync slot=8 inputs=4 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=239 reverse=69 static
+            in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.System.RemoteLauncherOptions name=options
+            in class type=Windows.Foundation.Collections.ValueSet name=inputData
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> return
+
+class Windows.System.RemoteLauncherOptions activatable python_type
+    py RemoteLauncherOptions
+    signature rc(Windows.System.RemoteLauncherOptions;{9e3a2788-2891-4cdf-a2d6-9dff7d02e693})
+    default Windows.System.IRemoteLauncherOptions
+    requires Windows.System.IRemoteLauncherOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property fallback_uri
+        get get_FallbackUri slot=6 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_FallbackUri slot=7 inputs=1 outputs=0 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property preferred_app_ids
+        get get_PreferredAppIds slot=8 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+enum Windows.System.ShutdownKind python_type
+    py ShutdownKind
+    signature enum(Windows.System.ShutdownKind;i4)
+
+class Windows.System.ShutdownManager static python_type
+    py ShutdownManager
+    factory Windows.System.IShutdownManagerStatics
+    factory Windows.System.IShutdownManagerStatics2
+    method begin_shutdown static
+        method BeginShutdown slot=6 inputs=2 outputs=0 declaring=Windows.System.IShutdownManagerStatics shape=64 static
+            in enum32 type=Windows.System.ShutdownKind name=shutdownKind
+            in timespan name=timeout
+    method cancel_shutdown static
+        method CancelShutdown slot=7 inputs=0 outputs=0 declaring=Windows.System.IShutdownManagerStatics shape=0 reverse=37 static
+    method enter_power_state static
+        method EnterPowerState slot=7 inputs=1 outputs=0 declaring=Windows.System.IShutdownManagerStatics2 shape=4 reverse=43 static
+            in enum32 type=Windows.System.PowerState name=powerState
+        method EnterPowerState slot=8 inputs=2 outputs=0 declaring=Windows.System.IShutdownManagerStatics2 shape=64 static
+            in enum32 type=Windows.System.PowerState name=powerState
+            in timespan name=wakeUpAfter
+    method is_power_state_supported static
+        method IsPowerStateSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.IShutdownManagerStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.System.PowerState name=powerState
+            out boolean return
+
+class Windows.System.TimeZoneSettings static python_type
+    py TimeZoneSettings
+    factory Windows.System.ITimeZoneSettingsStatics
+    factory Windows.System.ITimeZoneSettingsStatics2
+    property can_change_time_zone static
+        get get_CanChangeTimeZone slot=8 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=62 static
+            out boolean return
+    property current_time_zone_display_name static
+        get get_CurrentTimeZoneDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=22 static
+            out string return
+    property supported_time_zone_display_names static
+        get get_SupportedTimeZoneDisplayNames slot=7 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method auto_update_time_zone_async static
+        method AutoUpdateTimeZoneAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics2 shape=89 static
+            in timespan name=timeout
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AutoUpdateTimeZoneStatus> return
+    method change_time_zone_by_display_name static
+        method ChangeTimeZoneByDisplayName slot=9 inputs=1 outputs=0 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=99 static
+            in string name=timeZoneDisplayName
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> concrete
+    guid 895dee2f-e0f2-5304-a40e-1c67a2c058aa
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppDiagnosticInfoWatcher;{75575070-01d3-489a-9325-52f9cc6ede0a});cinterface(IInspectable))
+    argument Windows.System.AppDiagnosticInfoWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> concrete
+    guid 7c8c6f9f-d6bf-5566-b013-39c141e0ff8c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppDiagnosticInfoWatcher;{75575070-01d3-489a-9325-52f9cc6ede0a});rc(Windows.System.AppDiagnosticInfoWatcherEventArgs;{7017c716-e1da-4c65-99df-046dff5be71a}))
+    argument Windows.System.AppDiagnosticInfoWatcher
+    argument Windows.System.AppDiagnosticInfoWatcherEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> concrete
+    guid e23a2901-197a-5867-8728-9c9db9498d76
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppResourceGroupInfoWatcher;{d9b0a0fd-6e5a-4c72-8b17-09fec4a212bd});cinterface(IInspectable))
+    argument Windows.System.AppResourceGroupInfoWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> concrete
+    guid a7e14bae-c778-5661-a41c-1ac3ac635f79
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppResourceGroupInfoWatcher;{d9b0a0fd-6e5a-4c72-8b17-09fec4a212bd});rc(Windows.System.AppResourceGroupInfoWatcherEventArgs;{7a787637-6302-4d2f-bf89-1c12d0b2a6b9}))
+    argument Windows.System.AppResourceGroupInfoWatcher
+    argument Windows.System.AppResourceGroupInfoWatcherEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> concrete
+    guid 93f9724c-17f8-5df5-a6cf-2f0ab90c0a27
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.AppResourceGroupInfoWatcher;{d9b0a0fd-6e5a-4c72-8b17-09fec4a212bd});rc(Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs;{1bdbedd7-fee6-4fd4-98dd-e92a2cc299f3}))
+    argument Windows.System.AppResourceGroupInfoWatcher
+    argument Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,System.Object> concrete
+    guid fe79f855-2f40-5b88-a0c3-4c042a05dd05
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.DispatcherQueue;{603e88e4-a338-4ffe-a457-a5cfb9ceb899});cinterface(IInspectable))
+    argument Windows.System.DispatcherQueue
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,Windows.System.DispatcherQueueShutdownStartingEventArgs> concrete
+    guid b58b5e24-e1c6-528e-9d99-07ec8829dea5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.DispatcherQueue;{603e88e4-a338-4ffe-a457-a5cfb9ceb899});rc(Windows.System.DispatcherQueueShutdownStartingEventArgs;{c4724c4c-ff97-40c0-a226-cc0aaa545e89}))
+    argument Windows.System.DispatcherQueue
+    argument Windows.System.DispatcherQueueShutdownStartingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueueTimer,System.Object> concrete
+    guid 8b5644c8-8b57-50ce-8933-7ab2cc5a14ef
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.DispatcherQueueTimer;{5feabb1d-a31c-4727-b1ac-37454649d56a});cinterface(IInspectable))
+    argument Windows.System.DispatcherQueueTimer
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> concrete
+    guid f155e0ff-dbb5-5c34-ac0c-7e291e3300ab
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.UserWatcher;{155eb23b-242a-45e0-a2e9-3171fc6a7fbb});cinterface(IInspectable))
+    argument Windows.System.UserWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserAuthenticationStatusChangingEventArgs> concrete
+    guid 9ec3d9d5-b413-51df-8c64-640e3356e351
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.UserWatcher;{155eb23b-242a-45e0-a2e9-3171fc6a7fbb});rc(Windows.System.UserAuthenticationStatusChangingEventArgs;{8c030f28-a711-4c1e-ab48-04179c15938f}))
+    argument Windows.System.UserWatcher
+    argument Windows.System.UserAuthenticationStatusChangingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> concrete
+    guid eb9d0454-25db-5620-98b8-be4c5d0dbc67
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.UserWatcher;{155eb23b-242a-45e0-a2e9-3171fc6a7fbb});rc(Windows.System.UserChangedEventArgs;{086459dc-18c6-48db-bc99-724fb9203ccc}))
+    argument Windows.System.UserWatcher
+    argument Windows.System.UserChangedEventArgs
+
+class Windows.System.User python_type
+    py User
+    signature rc(Windows.System.User;{df9a26c6-e746-4bcd-b5d4-120103c4209b})
+    default Windows.System.IUser
+    requires Windows.System.IUser
+    requires Windows.System.IUser2
+    factory Windows.System.IUserStatics2
+    factory Windows.System.IUserStatics
+    property authentication_status
+        get get_AuthenticationStatus slot=7 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=43
+            out enum32 type=Windows.System.UserAuthenticationStatus return
+    property non_roamable_id
+        get get_NonRoamableId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=22
+            out string return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=62
+            out enum32 type=Windows.System.UserType return
+    method check_user_age_consent_group_async
+        method CheckUserAgeConsentGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.IUser2 shape=51 reverse=24
+            in enum32 type=Windows.System.UserAgeConsentGroup name=consentGroup
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult> return
+    method create_watcher static
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 reverse=22 static
+            out class type=Windows.System.UserWatcher return
+    method find_all_async static
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 reverse=43 static default_overload
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
+        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 reverse=65 static deprecated
+            in enum32 type=Windows.System.UserType name=type
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
+        method FindAllAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.IUserStatics shape=117 reverse=101 static deprecated
+            in enum32 type=Windows.System.UserType name=type
+            in enum32 type=Windows.System.UserAuthenticationStatus name=status
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics2 shape=4 reverse=22 static
+            out class type=Windows.System.User return
+    method get_from_id static
+        method GetFromId slot=10 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 reverse=124 static
+            in string name=nonRoamableId
+            out class type=Windows.System.User return
+    method get_picture_async
+        method GetPictureAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=144
+            in enum32 type=Windows.System.UserPictureSize name=desiredSize
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
+    method get_properties_async
+        method GetPropertiesAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=124
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=values
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> return
+    method get_property_async
+        method GetPropertyAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=100
+            in string name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
+
+enum Windows.System.UserAgeConsentGroup python_type
+    py UserAgeConsentGroup
+    signature enum(Windows.System.UserAgeConsentGroup;i4)
+
+enum Windows.System.UserAgeConsentResult python_type
+    py UserAgeConsentResult
+    signature enum(Windows.System.UserAgeConsentResult;i4)
+
+enum Windows.System.UserAuthenticationStatus python_type
+    py UserAuthenticationStatus
+    signature enum(Windows.System.UserAuthenticationStatus;i4)
+
+class Windows.System.UserAuthenticationStatusChangeDeferral python_type
+    py UserAuthenticationStatusChangeDeferral
+    signature rc(Windows.System.UserAuthenticationStatusChangeDeferral;{88b59568-bb30-42fb-a270-e9902e40efa7})
+    default Windows.System.IUserAuthenticationStatusChangeDeferral
+    requires Windows.System.IUserAuthenticationStatusChangeDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.System.IUserAuthenticationStatusChangeDeferral shape=0 reverse=16
+
+class Windows.System.UserAuthenticationStatusChangingEventArgs python_type
+    py UserAuthenticationStatusChangingEventArgs
+    signature rc(Windows.System.UserAuthenticationStatusChangingEventArgs;{8c030f28-a711-4c1e-ab48-04179c15938f})
+    default Windows.System.IUserAuthenticationStatusChangingEventArgs
+    requires Windows.System.IUserAuthenticationStatusChangingEventArgs
+    property current_status
+        get get_CurrentStatus slot=9 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=99
+            out enum32 type=Windows.System.UserAuthenticationStatus return
+    property new_status
+        get get_NewStatus slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=62
+            out enum32 type=Windows.System.UserAuthenticationStatus return
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=43
+            out class type=Windows.System.User return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=22
+            out class type=Windows.System.UserAuthenticationStatusChangeDeferral return
+
+class Windows.System.UserChangedEventArgs python_type
+    py UserChangedEventArgs
+    signature rc(Windows.System.UserChangedEventArgs;{086459dc-18c6-48db-bc99-724fb9203ccc})
+    default Windows.System.IUserChangedEventArgs
+    requires Windows.System.IUserChangedEventArgs
+    requires Windows.System.IUserChangedEventArgs2
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs shape=4 reverse=22
+            out class type=Windows.System.User return
+    property changed_property_kinds
+        get get_ChangedPropertyKinds slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> return
+
+class Windows.System.UserDeviceAssociation static python_type
+    py UserDeviceAssociation
+    factory Windows.System.IUserDeviceAssociationStatics
+    event user_device_association_changed static
+        add add_UserDeviceAssociationChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<Windows.System.UserDeviceAssociationChangedEventArgs> name=handler
+            out event_token return
+        remove remove_UserDeviceAssociationChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.IUserDeviceAssociationStatics shape=26 reverse=82 static
+            in event_token name=token
+    method find_user_from_device_id static
+        method FindUserFromDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out class type=Windows.System.User return
+
+class Windows.System.UserDeviceAssociationChangedEventArgs python_type
+    py UserDeviceAssociationChangedEventArgs
+    signature rc(Windows.System.UserDeviceAssociationChangedEventArgs;{bd1f6f6c-bb5d-4d7b-a5f0-c8cd11a38d42})
+    default Windows.System.IUserDeviceAssociationChangedEventArgs
+    requires Windows.System.IUserDeviceAssociationChangedEventArgs
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=22
+            out string return
+    property new_user
+        get get_NewUser slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=43
+            out class type=Windows.System.User return
+    property old_user
+        get get_OldUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=62
+            out class type=Windows.System.User return
+
+class Windows.System.UserPicker activatable python_type
+    py UserPicker
+    signature rc(Windows.System.UserPicker;{7d548008-f1e3-4a6c-8ddc-a9bb0f488aed})
+    default Windows.System.IUserPicker
+    requires Windows.System.IUserPicker
+    factory Windows.System.IUserPickerStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property suggested_selected_user
+        get get_SuggestedSelectedUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=62
+            out class type=Windows.System.User return
+        put put_SuggestedSelectedUser slot=9 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4 reverse=99
+            in class type=Windows.System.User name=value
+    property allow_guest_accounts
+        get get_AllowGuestAccounts slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=22
+            out boolean return
+        put put_AllowGuestAccounts slot=7 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4 reverse=43
+            in boolean name=value
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPickerStatics shape=4 reverse=22 static
+            out boolean return
+    method pick_single_user_async
+        method PickSingleUserAsync slot=10 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.User> return
+
+enum Windows.System.UserPictureSize python_type
+    py UserPictureSize
+    signature enum(Windows.System.UserPictureSize;i4)
+
+enum Windows.System.UserType python_type
+    py UserType
+    signature enum(Windows.System.UserType;i4)
+
+class Windows.System.UserWatcher python_type
+    py UserWatcher
+    signature rc(Windows.System.UserWatcher;{155eb23b-242a-45e0-a2e9-3171fc6a7fbb})
+    default Windows.System.IUserWatcher
+    requires Windows.System.IUserWatcher
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserWatcher shape=4 reverse=22
+            out enum32 type=Windows.System.UserWatcherStatus return
+    event added
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
+            out event_token return
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=134
+            in event_token name=token
+    event authentication_status_changed
+        add add_AuthenticationStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AuthenticationStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=397
+            in event_token name=token
+    event authentication_status_changing
+        add add_AuthenticationStatusChanging slot=17 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserAuthenticationStatusChangingEventArgs> name=handler
+            out event_token return
+        remove remove_AuthenticationStatusChanging slot=18 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=398
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=19 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=20 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=399
+            in event_token name=token
+    event removed
+        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
+            out event_token return
+        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=167
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=400
+            in event_token name=token
+    event updated
+        add add_Updated slot=13 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
+            out event_token return
+        remove remove_Updated slot=14 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=192
+            in event_token name=token
+    method start
+        method Start slot=7 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0 reverse=37
+    method stop
+        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0 reverse=55
+
+enum Windows.System.UserWatcherStatus python_type
+    py UserWatcherStatus
+    signature enum(Windows.System.UserWatcherStatus;i4)
+
+enum Windows.System.UserWatcherUpdateKind python_type
+    py UserWatcherUpdateKind
+    signature enum(Windows.System.UserWatcherUpdateKind;i4)
+
+enum Windows.System.VirtualKey python_type
+    py VirtualKey
+    signature enum(Windows.System.VirtualKey;i4)
+
+enum Windows.System.VirtualKeyModifiers python_type
+    py VirtualKeyModifiers
+    signature enum(Windows.System.VirtualKeyModifiers;u4)
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.AppInfo external
+    py winrt.windows.applicationmodel.AppInfo
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.IStorageFolder external
+    py winrt.windows.storage._IStorageFolder
+    guid 72d1cb78-b3ef-4f75-a80b-6fd9dae2944b
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.Search.StorageFileQueryResult external
+    py winrt.windows.storage.search.StorageFileQueryResult
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.System.Diagnostics.ProcessDiagnosticInfo external
+    py winrt.windows.system.diagnostics.ProcessDiagnosticInfo
+
+class Windows.System.RemoteSystems.RemoteSystemConnectionRequest external
+    py winrt.windows.system.remotesystems.RemoteSystemConnectionRequest
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement
+
+enum Windows.UI.ViewManagement.ViewSizePreference external
+    py winrt.windows.ui.viewmanagement.ViewSizePreference

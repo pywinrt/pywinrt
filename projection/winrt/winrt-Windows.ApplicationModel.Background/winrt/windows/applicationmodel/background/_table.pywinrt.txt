@@ -1,0 +1,1912 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Background
+
+class Windows.ApplicationModel.Background.ActivitySensorTrigger python_type
+    py ActivitySensorTrigger
+    signature rc(Windows.ApplicationModel.Background.ActivitySensorTrigger;{d0dd4342-e37b-4823-a5fe-6b31dfefdeb0})
+    default Windows.ApplicationModel.Background.IActivitySensorTrigger
+    requires Windows.ApplicationModel.Background.IActivitySensorTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IActivitySensorTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IActivitySensorTriggerFactory shape=51 reverse=24
+            in uint32 name=reportIntervalInMilliseconds
+            out class type=Windows.ApplicationModel.Background.ActivitySensorTrigger return
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IActivitySensorTrigger shape=4 reverse=99
+            out uint32 return
+    property report_interval
+        get get_ReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IActivitySensorTrigger shape=4 reverse=43
+            out uint32 return
+    property subscribed_activities
+        get get_SubscribedActivities slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IActivitySensorTrigger shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> return
+    property supported_activities
+        get get_SupportedActivities slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IActivitySensorTrigger shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
+
+enum Windows.ApplicationModel.Background.AlarmAccessStatus python_type
+    py AlarmAccessStatus
+    signature enum(Windows.ApplicationModel.Background.AlarmAccessStatus;i4)
+
+class Windows.ApplicationModel.Background.AlarmApplicationManager static python_type
+    py AlarmApplicationManager
+    factory Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics
+    method get_access_status static
+        method GetAccessStatus slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics shape=4 reverse=43 static
+            out enum32 type=Windows.ApplicationModel.Background.AlarmAccessStatus return
+    method request_access_async static
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> return
+
+class Windows.ApplicationModel.Background.AppBroadcastTrigger python_type
+    py AppBroadcastTrigger
+    signature rc(Windows.ApplicationModel.Background.AppBroadcastTrigger;{74d4f496-8d37-44ec-9481-2a0b9854eb48})
+    default Windows.ApplicationModel.Background.IAppBroadcastTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IAppBroadcastTrigger
+    factory Windows.ApplicationModel.Background.IAppBroadcastTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerFactory shape=51 reverse=24
+            in string name=providerKey
+            out class type=Windows.ApplicationModel.Background.AppBroadcastTrigger return
+    property provider_info
+        get get_ProviderInfo slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTrigger shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo return
+        put put_ProviderInfo slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTrigger shape=4 reverse=22
+            in class type=Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo name=value
+
+class Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo python_type
+    py AppBroadcastTriggerProviderInfo
+    signature rc(Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo;{f219352d-9de8-4420-9ce2-5eff8f17376b})
+    default Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo
+    requires Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo
+    property video_key_frame_interval
+        get get_VideoKeyFrameInterval slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=141
+            out timespan return
+        put put_VideoKeyFrameInterval slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=26 reverse=134
+            in timespan name=value
+    property max_video_width
+        get get_MaxVideoWidth slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=194
+            out uint32 return
+        put put_MaxVideoWidth slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=186
+            in uint32 name=value
+    property max_video_height
+        get get_MaxVideoHeight slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=210
+            out uint32 return
+        put put_MaxVideoHeight slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=202
+            in uint32 name=value
+    property max_video_bitrate
+        get get_MaxVideoBitrate slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=173
+            out uint32 return
+        put put_MaxVideoBitrate slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=162
+            in uint32 name=value
+    property logo_resource
+        get get_LogoResource slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=99
+            out string return
+        put put_LogoResource slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=62
+            in string name=value
+    property display_name_resource
+        get get_DisplayNameResource slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=43
+            out string return
+        put put_DisplayNameResource slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo shape=4 reverse=22
+            in string name=value
+
+class Windows.ApplicationModel.Background.ApplicationTrigger activatable python_type
+    py ApplicationTrigger
+    signature rc(Windows.ApplicationModel.Background.ApplicationTrigger;{0b468630-9574-492c-9e93-1a3ae6335fe9})
+    default Windows.ApplicationModel.Background.IApplicationTrigger
+    requires Windows.ApplicationModel.Background.IApplicationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method request_async
+        method RequestAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IApplicationTrigger shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> return
+        method RequestAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IApplicationTrigger shape=51 reverse=44
+            in class type=Windows.Foundation.Collections.ValueSet name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> return
+
+class Windows.ApplicationModel.Background.ApplicationTriggerDetails python_type
+    py ApplicationTriggerDetails
+    signature rc(Windows.ApplicationModel.Background.ApplicationTriggerDetails;{97dc6ab2-2219-4a9e-9c5e-41d047f76e82})
+    default Windows.ApplicationModel.Background.IApplicationTriggerDetails
+    requires Windows.ApplicationModel.Background.IApplicationTriggerDetails
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IApplicationTriggerDetails shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+enum Windows.ApplicationModel.Background.ApplicationTriggerResult python_type
+    py ApplicationTriggerResult
+    signature enum(Windows.ApplicationModel.Background.ApplicationTriggerResult;i4)
+
+class Windows.ApplicationModel.Background.AppointmentStoreNotificationTrigger activatable python_type
+    py AppointmentStoreNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.AppointmentStoreNotificationTrigger;{64d4040c-c201-42ad-aa2a-e21ba3425b6d})
+    default Windows.ApplicationModel.Background.IAppointmentStoreNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IAppointmentStoreNotificationTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+enum Windows.ApplicationModel.Background.BackgroundAccessRequestKind python_type
+    py BackgroundAccessRequestKind
+    signature enum(Windows.ApplicationModel.Background.BackgroundAccessRequestKind;i4)
+
+enum Windows.ApplicationModel.Background.BackgroundAccessStatus python_type
+    py BackgroundAccessStatus
+    signature enum(Windows.ApplicationModel.Background.BackgroundAccessStatus;i4)
+
+class Windows.ApplicationModel.Background.BackgroundExecutionManager static python_type
+    py BackgroundExecutionManager
+    factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2
+    factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics
+    factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3
+    method get_access_status static
+        method GetAccessStatus slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=4 reverse=121 static
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundAccessStatus return
+        method GetAccessStatus slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=51 reverse=144 static
+            in string name=applicationId
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundAccessStatus return
+    method get_access_status_for_modern_standby static
+        method GetAccessStatusForModernStandby slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 shape=4 reverse=43 static
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundAccessStatus return
+        method GetAccessStatusForModernStandby slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 shape=51 reverse=65 static
+            in string name=applicationId
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundAccessStatus return
+    method remove_access static
+        method RemoveAccess slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=0 reverse=55 static
+        method RemoveAccess slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=4 reverse=99 static
+            in string name=applicationId
+    method request_access_async static
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> return
+        method RequestAccessAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=51 reverse=44 static
+            in string name=applicationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> return
+    method request_access_kind_async static
+        method RequestAccessKindAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2 shape=117 reverse=25 static
+            in enum32 type=Windows.ApplicationModel.Background.BackgroundAccessRequestKind name=requestedAccess
+            in string name=reason
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_access_kind_for_modern_standby_async static
+        method RequestAccessKindForModernStandbyAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3 shape=117 reverse=25 static
+            in enum32 type=Windows.ApplicationModel.Background.BackgroundAccessRequestKind name=requestedAccess
+            in string name=reason
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.ApplicationModel.Background.BackgroundTaskBuilder activatable python_type
+    py BackgroundTaskBuilder
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskBuilder;{0351550e-3e64-4572-a93a-84075a37c917})
+    default Windows.ApplicationModel.Background.IBackgroundTaskBuilder
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder2
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder3
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder4
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder5
+    requires Windows.ApplicationModel.Background.IBackgroundTaskBuilder6
+    factory Windows.ApplicationModel.Background.IBackgroundTaskBuilderStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property task_entry_point
+        get get_TaskEntryPoint slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=43
+            out string return
+        put put_TaskEntryPoint slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=22
+            in string name=value
+    property name
+        get get_Name slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=141
+            out string return
+        put put_Name slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=121
+            in string name=value
+    property cancel_on_condition_loss
+        get get_CancelOnConditionLoss slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder2 shape=4 reverse=43
+            out boolean return
+        put put_CancelOnConditionLoss slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder2 shape=4 reverse=22
+            in boolean name=value
+    property is_network_requested
+        get get_IsNetworkRequested slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder3 shape=4 reverse=43
+            out boolean return
+        put put_IsNetworkRequested slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder3 shape=4 reverse=22
+            in boolean name=value
+    property task_group
+        get get_TaskGroup slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder4 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+        put put_TaskGroup slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder4 shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup name=value
+    property allow_running_task_in_standby
+        get get_AllowRunningTaskInStandby slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder6 shape=4 reverse=22
+            out boolean return
+        put put_AllowRunningTaskInStandby slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder6 shape=4 reverse=43
+            in boolean name=value
+    property is_running_task_in_standby_supported static
+        get get_IsRunningTaskInStandbySupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilderStatics shape=4 reverse=22 static
+            out boolean return
+    method add_condition
+        method AddCondition slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=99
+            in interface type=Windows.ApplicationModel.Background.IBackgroundCondition name=condition
+    method register
+        method Register slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=162
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+        method Register slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder6 shape=51 reverse=100
+            in string name=taskName
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+    method set_task_entry_point_clsid
+        method SetTaskEntryPointClsid slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder5 shape=33
+            in guid name=TaskEntryPoint
+    method set_trigger
+        method SetTrigger slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=62
+            in interface type=Windows.ApplicationModel.Background.IBackgroundTrigger name=trigger
+    method validate
+        method Validate slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskBuilder6 shape=4 reverse=62
+            out boolean return
+
+delegate Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler python_type
+    py BackgroundTaskCanceledEventHandler
+    guid a6c4bac0-51f8-4c57-ac3f-156dd1680c4f
+    signature delegate({a6c4bac0-51f8-4c57-ac3f-156dd1680c4f})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance name=sender
+            in enum32 type=Windows.ApplicationModel.Background.BackgroundTaskCancellationReason name=reason
+
+enum Windows.ApplicationModel.Background.BackgroundTaskCancellationReason python_type
+    py BackgroundTaskCancellationReason
+    signature enum(Windows.ApplicationModel.Background.BackgroundTaskCancellationReason;i4)
+
+class Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs python_type
+    py BackgroundTaskCompletedEventArgs
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs;{565d25cf-f209-48f4-9967-2b184f7bfbf0})
+    default Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs
+    requires Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs shape=4 reverse=22
+            out guid return
+    method check_result
+        method CheckResult slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs shape=0 reverse=37
+
+delegate Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler python_type
+    py BackgroundTaskCompletedEventHandler
+    guid 5b38e929-a086-46a7-a678-439135822bcf
+    signature delegate({5b38e929-a086-46a7-a678-439135822bcf})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration name=sender
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs name=args
+
+class Windows.ApplicationModel.Background.BackgroundTaskDeferral python_type
+    py BackgroundTaskDeferral
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskDeferral;{93cc156d-af27-4dd3-846e-24ee40cadd25})
+    default Windows.ApplicationModel.Background.IBackgroundTaskDeferral
+    requires Windows.ApplicationModel.Background.IBackgroundTaskDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs python_type
+    py BackgroundTaskProgressEventArgs
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs;{fb1468ac-8332-4d0a-9532-03eae684da31})
+    default Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs
+    requires Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs shape=4 reverse=22
+            out guid return
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs shape=4 reverse=43
+            out uint32 return
+
+delegate Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler python_type
+    py BackgroundTaskProgressEventHandler
+    guid 46e0683c-8a88-4c99-804c-76897f6277a6
+    signature delegate({46e0683c-8a88-4c99-804c-76897f6277a6})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration name=sender
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs name=args
+
+class Windows.ApplicationModel.Background.BackgroundTaskRegistration python_type
+    py BackgroundTaskRegistration
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})
+    default Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration2
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration3
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration4
+    factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2
+    factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=43
+            out string return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=22
+            out guid return
+    property trigger
+        get get_Trigger slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration2 shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTrigger return
+    property task_group
+        get get_TaskGroup slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration3 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+    property app_energy_use_prediction_contribution
+        get get_AppEnergyUsePredictionContribution slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration4 shape=4 reverse=43
+            out double return
+    property task_last_throttled_in_standby_timestamp
+        get get_TaskLastThrottledInStandbyTimestamp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration4 shape=4 reverse=22
+            out datetime return
+    property all_tasks static
+        get get_AllTasks slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> return
+    property all_task_groups static
+        get get_AllTaskGroups slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> return
+    event completed
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
+            out event_token return
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
+            in event_token name=cookie
+    event progress
+        add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
+            out event_token return
+        remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
+            in event_token name=cookie
+    method get_task_group static
+        method GetTaskGroup slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 shape=51 reverse=44 static
+            in string name=groupId
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+    method unregister
+        method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
+            in boolean name=cancelTask
+
+class Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup python_type
+    py BackgroundTaskRegistrationGroup
+    signature rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23})
+    default Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup
+    factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory shape=51 reverse=24
+            in string name=id
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory shape=117 reverse=45
+            in string name=id
+            in string name=name
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+    property all_tasks
+        get get_AllTasks slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=4 reverse=22
+            out string return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=4 reverse=43
+            out string return
+    event background_activated
+        add add_BackgroundActivated slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup,Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> name=handler
+            out event_token return
+        remove remove_BackgroundActivated slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=26 reverse=110
+            in event_token name=token
+
+enum Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter python_type
+    py BackgroundTaskThrottleCounter
+    signature enum(Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter;i4)
+
+class Windows.ApplicationModel.Background.BackgroundWorkCost static python_type
+    py BackgroundWorkCost
+    factory Windows.ApplicationModel.Background.IBackgroundWorkCostStatics
+    factory Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2
+    property current_background_work_cost static
+        get get_CurrentBackgroundWorkCost slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundWorkCostStatics shape=4 reverse=22 static
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundWorkCostValue return
+    property app_energy_use_level static
+        get get_AppEnergyUseLevel slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2 shape=4 reverse=22 static
+            out enum32 type=Windows.ApplicationModel.Background.EnergyUseLevel return
+    property app_energy_use_prediction static
+        get get_AppEnergyUsePrediction slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2 shape=4 reverse=43 static
+            out enum32 type=Windows.ApplicationModel.Background.EnergyUseLevel return
+    property app_last_throttled_in_standby_timestamp static
+        get get_AppLastThrottledInStandbyTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2 shape=4 reverse=62 static
+            out datetime return
+
+enum Windows.ApplicationModel.Background.BackgroundWorkCostValue python_type
+    py BackgroundWorkCostValue
+    signature enum(Windows.ApplicationModel.Background.BackgroundWorkCostValue;i4)
+
+class Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger activatable python_type
+    py BluetoothLEAdvertisementPublisherTrigger
+    signature rc(Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger;{ab3e2612-25d3-48ae-8724-d81877ae6129})
+    default Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property advertisement
+        get get_Advertisement slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement return
+    property use_extended_format
+        get get_UseExtendedFormat slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=62
+            out boolean return
+        put put_UseExtendedFormat slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=99
+            in boolean name=value
+    property preferred_transmit_power_level_in_dbm
+        get get_PreferredTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Int16> return
+        put put_PreferredTransmitPowerLevelInDBm slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.Int16> name=value
+    property is_anonymous
+        get get_IsAnonymous slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=121
+            out boolean return
+        put put_IsAnonymous slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=141
+            in boolean name=value
+    property include_transmit_power_level
+        get get_IncludeTransmitPowerLevel slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=162
+            out boolean return
+        put put_IncludeTransmitPowerLevel slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2 shape=4 reverse=173
+            in boolean name=value
+    property secondary_phy
+        get get_SecondaryPhy slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3 shape=4 reverse=62
+            out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
+        put put_SecondaryPhy slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3 shape=4 reverse=99
+            in enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType name=value
+    property primary_phy
+        get get_PrimaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
+        put put_PrimaryPhy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3 shape=4 reverse=43
+            in enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType name=value
+
+class Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger activatable python_type
+    py BluetoothLEAdvertisementWatcherTrigger
+    signature rc(Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger;{1aab1819-bce1-48eb-a827-59fb7cee52a6})
+    default Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2
+    requires Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property signal_strength_filter
+        get get_SignalStrengthFilter slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=121
+            out class type=Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter return
+        put put_SignalStrengthFilter slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=141
+            in class type=Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter name=value
+    property advertisement_filter
+        get get_AdvertisementFilter slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=162
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter return
+        put put_AdvertisementFilter slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=173
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter name=value
+    property max_out_of_range_timeout
+        get get_MaxOutOfRangeTimeout slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=99
+            out timespan return
+    property max_sampling_interval
+        get get_MaxSamplingInterval slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=43
+            out timespan return
+    property min_out_of_range_timeout
+        get get_MinOutOfRangeTimeout slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=62
+            out timespan return
+    property min_sampling_interval
+        get get_MinSamplingInterval slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger shape=4 reverse=22
+            out timespan return
+    property allow_extended_advertisements
+        get get_AllowExtendedAdvertisements slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2 shape=4 reverse=22
+            out boolean return
+        put put_AllowExtendedAdvertisements slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2 shape=4 reverse=43
+            in boolean name=value
+    property use_uncoded1_m_phy
+        get get_UseUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=22
+            out boolean return
+        put put_UseUncoded1MPhy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=43
+            in boolean name=value
+    property use_coded_phy
+        get get_UseCodedPhy slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=62
+            out boolean return
+        put put_UseCodedPhy slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=99
+            in boolean name=value
+    property scan_parameters
+        get get_ScanParameters slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=121
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters return
+        put put_ScanParameters slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4 reverse=141
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters name=value
+
+class Windows.ApplicationModel.Background.CachedFileUpdaterTrigger activatable python_type
+    py CachedFileUpdaterTrigger
+    signature rc(Windows.ApplicationModel.Background.CachedFileUpdaterTrigger;{e21caeeb-32f2-4d31-b553-b9e01bde37e0})
+    default Windows.ApplicationModel.Background.ICachedFileUpdaterTrigger
+    requires Windows.ApplicationModel.Background.ICachedFileUpdaterTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails python_type
+    py CachedFileUpdaterTriggerDetails
+    signature rc(Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails;{71838c13-1314-47b4-9597-dc7e248c17cc})
+    default Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails
+    requires Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails
+    property can_request_user_input
+        get get_CanRequestUserInput slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails shape=4 reverse=62
+            out boolean return
+    property update_request
+        get get_UpdateRequest slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails shape=4 reverse=43
+            out class type=Windows.Storage.Provider.FileUpdateRequest return
+    property update_target
+        get get_UpdateTarget slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Storage.Provider.CachedFileTarget return
+
+class Windows.ApplicationModel.Background.ChatMessageNotificationTrigger activatable python_type
+    py ChatMessageNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.ChatMessageNotificationTrigger;{513b43bf-1d40-5c5d-78f5-c923fee3739e})
+    default Windows.ApplicationModel.Background.IChatMessageNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IChatMessageNotificationTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.ChatMessageReceivedNotificationTrigger activatable python_type
+    py ChatMessageReceivedNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.ChatMessageReceivedNotificationTrigger;{3ea3760e-baf5-4077-88e9-060cf6f0c6d5})
+    default Windows.ApplicationModel.Background.IChatMessageReceivedNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IChatMessageReceivedNotificationTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.CommunicationBlockingAppSetAsActiveTrigger activatable python_type
+    py CommunicationBlockingAppSetAsActiveTrigger
+    signature rc(Windows.ApplicationModel.Background.CommunicationBlockingAppSetAsActiveTrigger;{fb91f28a-16a5-486d-974c-7835a8477be2})
+    default Windows.ApplicationModel.Background.ICommunicationBlockingAppSetAsActiveTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.ICommunicationBlockingAppSetAsActiveTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.ContactStoreNotificationTrigger activatable python_type
+    py ContactStoreNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.ContactStoreNotificationTrigger;{c833419b-4705-4571-9a16-06b997bf9c96})
+    default Windows.ApplicationModel.Background.IContactStoreNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IContactStoreNotificationTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.ContentPrefetchTrigger activatable python_type
+    py ContentPrefetchTrigger
+    signature rc(Windows.ApplicationModel.Background.ContentPrefetchTrigger;{710627ee-04fa-440b-80c0-173202199e5d})
+    default Windows.ApplicationModel.Background.IContentPrefetchTrigger
+    requires Windows.ApplicationModel.Background.IContentPrefetchTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory shape=89
+            in timespan name=waitInterval implicit
+            out class type=Windows.ApplicationModel.Background.ContentPrefetchTrigger return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory shape=89
+            in timespan name=waitInterval
+            out class type=Windows.ApplicationModel.Background.ContentPrefetchTrigger return
+    property wait_interval
+        get get_WaitInterval slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IContentPrefetchTrigger shape=4 reverse=22
+            out timespan return
+
+class Windows.ApplicationModel.Background.ConversationalAgentTrigger activatable python_type
+    py ConversationalAgentTrigger
+    signature rc(Windows.ApplicationModel.Background.ConversationalAgentTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.CustomSystemEventTrigger python_type
+    py CustomSystemEventTrigger
+    signature rc(Windows.ApplicationModel.Background.CustomSystemEventTrigger;{f3596798-cf6b-4ef4-a0ca-29cf4a278c87})
+    default Windows.ApplicationModel.Background.ICustomSystemEventTrigger
+    requires Windows.ApplicationModel.Background.ICustomSystemEventTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory shape=117 reverse=25
+            in string name=triggerId
+            in enum32 type=Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence name=recurrence
+            out class type=Windows.ApplicationModel.Background.CustomSystemEventTrigger return
+    property recurrence
+        get get_Recurrence slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ICustomSystemEventTrigger shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence return
+    property trigger_id
+        get get_TriggerId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ICustomSystemEventTrigger shape=4 reverse=22
+            out string return
+
+enum Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence python_type
+    py CustomSystemEventTriggerRecurrence
+    signature enum(Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence;i4)
+
+class Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger python_type
+    py DeviceConnectionChangeTrigger
+    signature rc(Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger;{90875e64-3cdd-4efb-ab1c-5b3b6a60ce34})
+    default Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger
+    requires Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IDeviceConnectionChangeTriggerStatics
+    property maintain_connection
+        get get_MaintainConnection slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger shape=4 reverse=62
+            out boolean return
+        put put_MaintainConnection slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger shape=4 reverse=99
+            in boolean name=value
+    property can_maintain_connection
+        get get_CanMaintainConnection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger shape=4 reverse=43
+            out boolean return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger shape=4 reverse=22
+            out string return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceConnectionChangeTriggerStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> return
+
+class Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger python_type
+    py DeviceManufacturerNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger;{81278ab5-41ab-16da-86c2-7f7bf0912f5b})
+    default Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger
+    requires Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTriggerFactory shape=117 reverse=25 deprecated
+            in string name=triggerQualifier
+            in boolean name=oneShot
+            out class type=Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger return
+    property one_shot
+        get get_OneShot slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger shape=4 reverse=43 deprecated
+            out boolean return
+    property trigger_qualifier
+        get get_TriggerQualifier slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger shape=4 reverse=22 deprecated
+            out string return
+
+class Windows.ApplicationModel.Background.DeviceServicingTrigger activatable python_type
+    py DeviceServicingTrigger
+    signature rc(Windows.ApplicationModel.Background.DeviceServicingTrigger;{1ab217ad-6e34-49d3-9e6f-17f1b6dfa881})
+    default Windows.ApplicationModel.Background.IDeviceServicingTrigger
+    requires Windows.ApplicationModel.Background.IDeviceServicingTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method request_async
+        method RequestAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceServicingTrigger shape=135 default_overload
+            in string name=deviceId
+            in timespan name=expectedDuration
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> return
+        method RequestAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceServicingTrigger shape=213 default_overload
+            in string name=deviceId
+            in timespan name=expectedDuration
+            in string name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> return
+
+enum Windows.ApplicationModel.Background.DeviceTriggerResult python_type
+    py DeviceTriggerResult
+    signature enum(Windows.ApplicationModel.Background.DeviceTriggerResult;i4)
+
+class Windows.ApplicationModel.Background.DeviceUseTrigger activatable python_type
+    py DeviceUseTrigger
+    signature rc(Windows.ApplicationModel.Background.DeviceUseTrigger;{0da68011-334f-4d57-b6ec-6dca64b412e4})
+    default Windows.ApplicationModel.Background.IDeviceUseTrigger
+    requires Windows.ApplicationModel.Background.IDeviceUseTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method request_async
+        method RequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceUseTrigger shape=51 reverse=24 default_overload
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> return
+        method RequestAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IDeviceUseTrigger shape=117 reverse=45 default_overload
+            in string name=deviceId
+            in string name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> return
+
+class Windows.ApplicationModel.Background.DeviceWatcherTrigger python_type
+    py DeviceWatcherTrigger
+    signature rc(Windows.ApplicationModel.Background.DeviceWatcherTrigger;{a4617fdd-8573-4260-befc-5bec89cb693d})
+    default Windows.ApplicationModel.Background.IDeviceWatcherTrigger
+    requires Windows.ApplicationModel.Background.IDeviceWatcherTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+
+class Windows.ApplicationModel.Background.EmailStoreNotificationTrigger activatable python_type
+    py EmailStoreNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.EmailStoreNotificationTrigger;{986d06da-47eb-4268-a4f2-f3f77188388a})
+    default Windows.ApplicationModel.Background.IEmailStoreNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IEmailStoreNotificationTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+enum Windows.ApplicationModel.Background.EnergyUseLevel python_type
+    py EnergyUseLevel
+    signature enum(Windows.ApplicationModel.Background.EnergyUseLevel;i4)
+
+class Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger python_type
+    py GattCharacteristicNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger;{e25f8fc8-0696-474f-a732-f292b0cebc5d})
+    default Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger
+    requires Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2
+    factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2
+    factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2 shape=117 reverse=25
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=characteristic
+            in enum32 type=Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode name=eventTriggeringMode implicit
+            out class type=Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2 shape=117 reverse=25
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=characteristic
+            in enum32 type=Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode name=eventTriggeringMode
+            out class type=Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger return
+    property characteristic
+        get get_Characteristic slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic return
+    property event_triggering_mode
+        get get_EventTriggeringMode slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode return
+
+class Windows.ApplicationModel.Background.GattServiceProviderTrigger python_type
+    py GattServiceProviderTrigger
+    signature rc(Windows.ApplicationModel.Background.GattServiceProviderTrigger;{ddc6a3e9-1557-4bd8-8542-468aa0c696f6})
+    default Windows.ApplicationModel.Background.IGattServiceProviderTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IGattServiceProviderTrigger
+    factory Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics
+    property advertising_parameters
+        get get_AdvertisingParameters slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTrigger shape=4 reverse=99
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters return
+        put put_AdvertisingParameters slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTrigger shape=4 reverse=62
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters name=value
+    property service
+        get get_Service slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTrigger shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService return
+    property trigger_id
+        get get_TriggerId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTrigger shape=4 reverse=22
+            out string return
+    method create_async static
+        method CreateAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics shape=137 static
+            in string name=triggerId
+            in guid name=serviceUuid
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> return
+
+class Windows.ApplicationModel.Background.GattServiceProviderTriggerResult python_type
+    py GattServiceProviderTriggerResult
+    signature rc(Windows.ApplicationModel.Background.GattServiceProviderTriggerResult;{3c4691b1-b198-4e84-bad4-cf4ad299ed3a})
+    default Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult
+    requires Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult
+    property error
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult shape=4 reverse=43
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
+    property trigger
+        get get_Trigger slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Background.GattServiceProviderTrigger return
+
+class Windows.ApplicationModel.Background.GeovisitTrigger activatable python_type
+    py GeovisitTrigger
+    signature rc(Windows.ApplicationModel.Background.GeovisitTrigger;{4818edaa-04e1-4127-9a4c-19351b8a80a4})
+    default Windows.ApplicationModel.Background.IGeovisitTrigger
+    requires Windows.ApplicationModel.Background.IGeovisitTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property monitoring_scope
+        get get_MonitoringScope slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IGeovisitTrigger shape=4 reverse=22
+            out enum32 type=Windows.Devices.Geolocation.VisitMonitoringScope return
+        put put_MonitoringScope slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IGeovisitTrigger shape=4 reverse=43
+            in enum32 type=Windows.Devices.Geolocation.VisitMonitoringScope name=value
+
+interface Windows.ApplicationModel.Background.IActivitySensorTrigger
+    guid d0dd4342-e37b-4823-a5fe-6b31dfefdeb0
+
+interface Windows.ApplicationModel.Background.IActivitySensorTriggerFactory
+    guid a72691c3-3837-44f7-831b-0132cc872bc3
+
+interface Windows.ApplicationModel.Background.IAlarmApplicationManagerStatics
+    guid ca03fa3b-cce6-4de2-b09b-9628bd33bbbe
+
+interface Windows.ApplicationModel.Background.IAppBroadcastTrigger
+    guid 74d4f496-8d37-44ec-9481-2a0b9854eb48
+
+interface Windows.ApplicationModel.Background.IAppBroadcastTriggerFactory
+    guid 280b9f44-22f4-4618-a02e-e7e411eb7238
+
+interface Windows.ApplicationModel.Background.IAppBroadcastTriggerProviderInfo
+    guid f219352d-9de8-4420-9ce2-5eff8f17376b
+
+interface Windows.ApplicationModel.Background.IApplicationTrigger
+    guid 0b468630-9574-492c-9e93-1a3ae6335fe9
+
+interface Windows.ApplicationModel.Background.IApplicationTriggerDetails
+    guid 97dc6ab2-2219-4a9e-9c5e-41d047f76e82
+
+interface Windows.ApplicationModel.Background.IAppointmentStoreNotificationTrigger
+    guid 64d4040c-c201-42ad-aa2a-e21ba3425b6d
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> concrete
+    guid a55a747d-59f6-5cb6-b439-c8aad670905c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.AlarmAccessStatus;i4))
+    argument Windows.ApplicationModel.Background.AlarmAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> concrete
+    guid 47cbd985-0f08-5a3d-92cf-b27960506ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.ApplicationTriggerResult;i4))
+    argument Windows.ApplicationModel.Background.ApplicationTriggerResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> concrete
+    guid 7b44e581-cfa9-5763-bed7-6a65739f0dbf
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.BackgroundAccessStatus;i4))
+    argument Windows.ApplicationModel.Background.BackgroundAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> concrete
+    guid 9d01424d-5653-59f8-ba6b-d0c077346d2d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger;{90875e64-3cdd-4efb-ab1c-5b3b6a60ce34}))
+    argument Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> concrete
+    guid b5136c46-2f2e-511d-9e8e-5ef4decb1da7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.DeviceTriggerResult;i4))
+    argument Windows.ApplicationModel.Background.DeviceTriggerResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> concrete
+    guid f402ec9f-84b2-57c3-9543-01fbda05219b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Background.GattServiceProviderTriggerResult;{3c4691b1-b198-4e84-bad4-cf4ad299ed3a}))
+    argument Windows.ApplicationModel.Background.GattServiceProviderTriggerResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> concrete
+    guid 2595482c-1cbf-5691-a30d-2164909c6712
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.MediaProcessingTriggerResult;i4))
+    argument Windows.ApplicationModel.Background.MediaProcessingTriggerResult
+
+interface Windows.ApplicationModel.Background.IBackgroundCondition python_type
+    py _IBackgroundCondition
+    guid ae48a1ee-8951-400a-8302-9c9c9a2a3a3b
+    signature {ae48a1ee-8951-400a-8302-9c9c9a2a3a3b}
+
+interface Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics
+    guid e826ea58-66a9-4d41-83d4-b4c18c87b846
+
+interface Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2
+    guid 469b24ef-9bbb-4e18-999a-fd6512931be9
+
+interface Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3
+    guid 98a5d3f6-5a25-5b6c-9192-d77a43dfedc4
+
+interface Windows.ApplicationModel.Background.IBackgroundTask python_type
+    py _IBackgroundTask
+    guid 7d13d534-fd12-43ce-8c22-ea1ff13c06df
+    signature {7d13d534-fd12-43ce-8c22-ea1ff13c06df}
+    method run
+        method Run slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTask shape=4 reverse=22
+            in interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance name=taskInstance
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder
+    guid 0351550e-3e64-4572-a93a-84075a37c917
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder2
+    guid 6ae7cfb1-104f-406d-8db6-844a570f42bb
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder3
+    guid 28c74f4a-8ba9-4c09-a24f-19683e2c924c
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder4
+    guid 4755e522-cba2-4e35-bd16-a6da7f1c19aa
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder5
+    guid 077103f6-99f5-4af4-bcad-4731d0330d43
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder6
+    guid 80b47b17-ec8b-5653-850b-7508a01f52e7
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskBuilderStatics
+    guid d1eb5046-06f2-55b4-9bb7-a6457ebf3300
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskCompletedEventArgs
+    guid 565d25cf-f209-48f4-9967-2b184f7bfbf0
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskDeferral
+    guid 93cc156d-af27-4dd3-846e-24ee40cadd25
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance python_type
+    py _IBackgroundTaskInstance
+    guid 865bda7a-21d8-4573-8f32-928a1b0641f6
+    signature {865bda7a-21d8-4573-8f32-928a1b0641f6}
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=22
+            out guid return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=62
+            out uint32 return
+        put put_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=99
+            in uint32 name=value
+    property suspended_count
+        get get_SuspendedCount slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=173
+            out uint32 return
+    property task
+        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+    property trigger_details
+        get get_TriggerDetails slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=121
+            out object return
+    event canceled
+        add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
+            out event_token return
+        remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
+            in event_token name=cookie
+    method get_deferral
+        method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance2 python_type
+    py _IBackgroundTaskInstance2
+    guid 4f7d0176-0c76-4fb4-896d-5de1864122f6
+    signature {4f7d0176-0c76-4fb4-896d-5de1864122f6}
+    requires Windows.ApplicationModel.Background.IBackgroundTaskInstance
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=22
+            out guid return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=62
+            out uint32 return
+        put put_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=99
+            in uint32 name=value
+    property suspended_count
+        get get_SuspendedCount slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=173
+            out uint32 return
+    property task
+        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+    property trigger_details
+        get get_TriggerDetails slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=121
+            out object return
+    event canceled
+        add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
+            out event_token return
+        remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
+            in event_token name=cookie
+    method get_deferral
+        method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
+    method get_throttle_count
+        method GetThrottleCount slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance2 shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter name=counter
+            out uint32 return
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance4 python_type
+    py _IBackgroundTaskInstance4
+    guid 7f29f23c-aa04-4b08-97b0-06d874cdabf5
+    signature {7f29f23c-aa04-4b08-97b0-06d874cdabf5}
+    requires Windows.ApplicationModel.Background.IBackgroundTaskInstance
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance4 shape=4 reverse=22
+            out class type=Windows.System.User return
+    property instance_id
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=22
+            out guid return
+    property progress
+        get get_Progress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=62
+            out uint32 return
+        put put_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=99
+            in uint32 name=value
+    property suspended_count
+        get get_SuspendedCount slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=173
+            out uint32 return
+    property task
+        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+    property trigger_details
+        get get_TriggerDetails slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=121
+            out object return
+    event canceled
+        add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
+            out event_token return
+        remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
+            in event_token name=cookie
+    method get_deferral
+        method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskProgressEventArgs
+    guid fb1468ac-8332-4d0a-9532-03eae684da31
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration python_type
+    py _IBackgroundTaskRegistration
+    guid 10654cc2-a26e-43bf-8c12-1fb40dbfbfa0
+    signature {10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=43
+            out string return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=22
+            out guid return
+    event completed
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
+            out event_token return
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
+            in event_token name=cookie
+    event progress
+        add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
+            out event_token return
+        remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
+            in event_token name=cookie
+    method unregister
+        method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
+            in boolean name=cancelTask
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration2 python_type
+    py _IBackgroundTaskRegistration2
+    guid 6138c703-bb86-4112-afc3-7f939b166e3b
+    signature {6138c703-bb86-4112-afc3-7f939b166e3b}
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    property trigger
+        get get_Trigger slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration2 shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTrigger return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=43
+            out string return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=22
+            out guid return
+    event completed
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
+            out event_token return
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
+            in event_token name=cookie
+    event progress
+        add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
+            out event_token return
+        remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
+            in event_token name=cookie
+    method unregister
+        method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
+            in boolean name=cancelTask
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration3 python_type
+    py _IBackgroundTaskRegistration3
+    guid fe338195-9423-4d8b-830d-b1dd2c7badd5
+    signature {fe338195-9423-4d8b-830d-b1dd2c7badd5}
+    requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    property task_group
+        get get_TaskGroup slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration3 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=43
+            out string return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=22
+            out guid return
+    event completed
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
+            out event_token return
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
+            in event_token name=cookie
+    event progress
+        add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
+            in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
+            out event_token return
+        remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
+            in event_token name=cookie
+    method unregister
+        method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
+            in boolean name=cancelTask
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration4
+    guid 169c09c9-b0de-5576-a05b-a02067989879
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup
+    guid 2ab1919a-871b-4167-8a76-055cd67b5b23
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroupFactory
+    guid 83d92b69-44cf-4631-9740-03c7d8741bc5
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics
+    guid 4c542f69-b000-42ba-a093-6a563c65e3f8
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2
+    guid 174b671e-b20d-4fa9-ad9a-e93ad6c71e01
+
+interface Windows.ApplicationModel.Background.IBackgroundTrigger python_type
+    py _IBackgroundTrigger
+    guid 84b3a058-6027-4b87-9790-bdf3f757dbd7
+    signature {84b3a058-6027-4b87-9790-bdf3f757dbd7}
+
+interface Windows.ApplicationModel.Background.IBackgroundWorkCostStatics
+    guid c740a662-c310-4b82-b3e3-3bcfb9e4c77d
+
+interface Windows.ApplicationModel.Background.IBackgroundWorkCostStatics2
+    guid d868c976-81f6-57c8-ab2b-400b749e21d6
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger
+    guid ab3e2612-25d3-48ae-8724-d81877ae6129
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2
+    guid aa28d064-38f4-597d-b597-4e55588c6503
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger3
+    guid 64419d03-d604-5bdc-b7d2-a7fe25c55460
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger
+    guid 1aab1819-bce1-48eb-a827-59fb7cee52a6
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2
+    guid 39b56799-eb39-5ab6-9932-aa9e4549604d
+
+interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3
+    guid da50011a-8261-56a0-ac7b-a8de1624088b
+
+interface Windows.ApplicationModel.Background.ICachedFileUpdaterTrigger
+    guid e21caeeb-32f2-4d31-b553-b9e01bde37e0
+
+interface Windows.ApplicationModel.Background.ICachedFileUpdaterTriggerDetails
+    guid 71838c13-1314-47b4-9597-dc7e248c17cc
+
+interface Windows.ApplicationModel.Background.IChatMessageNotificationTrigger
+    guid 513b43bf-1d40-5c5d-78f5-c923fee3739e
+
+interface Windows.ApplicationModel.Background.IChatMessageReceivedNotificationTrigger
+    guid 3ea3760e-baf5-4077-88e9-060cf6f0c6d5
+
+interface Windows.ApplicationModel.Background.ICommunicationBlockingAppSetAsActiveTrigger
+    guid fb91f28a-16a5-486d-974c-7835a8477be2
+
+interface Windows.ApplicationModel.Background.IContactStoreNotificationTrigger
+    guid c833419b-4705-4571-9a16-06b997bf9c96
+
+interface Windows.ApplicationModel.Background.IContentPrefetchTrigger
+    guid 710627ee-04fa-440b-80c0-173202199e5d
+
+interface Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory
+    guid c2643eda-8a03-409e-b8c4-88814c28ccb6
+
+interface Windows.ApplicationModel.Background.ICustomSystemEventTrigger
+    guid f3596798-cf6b-4ef4-a0ca-29cf4a278c87
+
+interface Windows.ApplicationModel.Background.ICustomSystemEventTriggerFactory
+    guid 6bcb16c5-f2dc-41b2-9efd-b96bdcd13ced
+
+interface Windows.ApplicationModel.Background.IDeviceConnectionChangeTrigger
+    guid 90875e64-3cdd-4efb-ab1c-5b3b6a60ce34
+
+interface Windows.ApplicationModel.Background.IDeviceConnectionChangeTriggerStatics
+    guid c3ea246a-4efd-4498-aa60-a4e4e3b17ab9
+
+interface Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTrigger
+    guid 81278ab5-41ab-16da-86c2-7f7bf0912f5b
+
+interface Windows.ApplicationModel.Background.IDeviceManufacturerNotificationTriggerFactory
+    guid 7955de75-25bb-4153-a1a2-3029fcabb652
+
+interface Windows.ApplicationModel.Background.IDeviceServicingTrigger
+    guid 1ab217ad-6e34-49d3-9e6f-17f1b6dfa881
+
+interface Windows.ApplicationModel.Background.IDeviceUseTrigger
+    guid 0da68011-334f-4d57-b6ec-6dca64b412e4
+
+interface Windows.ApplicationModel.Background.IDeviceWatcherTrigger
+    guid a4617fdd-8573-4260-befc-5bec89cb693d
+
+interface Windows.ApplicationModel.Background.IEmailStoreNotificationTrigger
+    guid 986d06da-47eb-4268-a4f2-f3f77188388a
+
+interface Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger
+    guid e25f8fc8-0696-474f-a732-f292b0cebc5d
+
+interface Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2
+    guid 9322a2c4-ae0e-42f2-b28c-f51372e69245
+
+interface Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory
+    guid 57ba1995-b143-4575-9f6b-fd59d93ace1a
+
+interface Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2
+    guid 5998e91f-8a53-4e9f-a32c-23cd33664cee
+
+interface Windows.ApplicationModel.Background.IGattServiceProviderTrigger
+    guid ddc6a3e9-1557-4bd8-8542-468aa0c696f6
+
+interface Windows.ApplicationModel.Background.IGattServiceProviderTriggerResult
+    guid 3c4691b1-b198-4e84-bad4-cf4ad299ed3a
+
+interface Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics
+    guid b413a36a-e294-4591-a5a6-64891a828153
+
+interface Windows.ApplicationModel.Background.IGeovisitTrigger
+    guid 4818edaa-04e1-4127-9a4c-19351b8a80a4
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageLibrary> concrete
+    guid 851e3cfd-306b-5c8e-ae3c-a8d83c623604
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageLibrary;{1edd7103-0e5e-4d6c-b5e8-9318983d6a03}))
+    argument Windows.Storage.StorageLibrary
+
+interface Windows.ApplicationModel.Background.ILocationTrigger
+    guid 47666a1c-6877-481e-8026-ff7e14a811a0
+
+interface Windows.ApplicationModel.Background.ILocationTriggerFactory
+    guid 1106bb07-ff69-4e09-aa8b-1384ea475e98
+
+interface Windows.ApplicationModel.Background.IMaintenanceTrigger
+    guid 68184c83-fc22-4ce5-841a-7239a9810047
+
+interface Windows.ApplicationModel.Background.IMaintenanceTriggerFactory
+    guid 4b3ddb2e-97dd-4629-88b0-b06cf9482ae5
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> concrete
+    guid 2c08602f-40b1-5e97-ae21-5c04d7fb829c
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}))
+    argument System.Guid
+    argument Windows.ApplicationModel.Background.BackgroundTaskRegistration
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> concrete
+    guid 78c880f6-a7dc-5172-89da-7749fc82aa82
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})
+    argument System.Guid
+    argument Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> concrete
+    guid f6a9dc12-01f7-54f0-a257-c404815b9c1c
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23}))
+    argument System.String
+    argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
+
+interface Windows.ApplicationModel.Background.IMediaProcessingTrigger
+    guid 9a95be65-8a52-4b30-9011-cf38040ea8b0
+
+interface Windows.ApplicationModel.Background.INetworkOperatorHotspotAuthenticationTrigger
+    guid e756c791-3001-4de5-83c7-de61d88831d0
+
+interface Windows.ApplicationModel.Background.INetworkOperatorNotificationTrigger
+    guid 90089cc6-63cd-480c-95d1-6e6aef801e4a
+
+interface Windows.ApplicationModel.Background.INetworkOperatorNotificationTriggerFactory
+    guid 0a223e00-27d7-4353-adb9-9265aaea579d
+
+interface Windows.ApplicationModel.Background.IPhoneTrigger
+    guid 8dcfe99b-d4c5-49f1-b7d3-82e87a0e9dde
+
+interface Windows.ApplicationModel.Background.IPhoneTriggerFactory
+    guid a0d93cda-5fc1-48fb-a546-32262040157b
+
+interface Windows.ApplicationModel.Background.IPushNotificationTriggerFactory
+    guid 6dd8ed1b-458e-4fc2-bc2e-d5664f77ed19
+
+interface Windows.ApplicationModel.Background.IRcsEndUserMessageAvailableTrigger
+    guid 986d0d6a-b2f6-467f-a978-a44091c11a66
+
+interface Windows.Foundation.IReference<System.Int16> concrete
+    guid 6ec9e41b-6709-5647-9918-a1270110fc4e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i2)
+    argument System.Int16
+
+interface Windows.ApplicationModel.Background.IRfcommConnectionTrigger
+    guid e8c4cae2-0b53-4464-9394-fd875654de64
+
+interface Windows.ApplicationModel.Background.ISecondaryAuthenticationFactorAuthenticationTrigger
+    guid f237f327-5181-4f24-96a7-700a4e5fac62
+
+interface Windows.ApplicationModel.Background.ISensorDataThresholdTrigger
+    guid 5bc0f372-d48b-4b7f-abec-15f9bacc12e2
+
+interface Windows.ApplicationModel.Background.ISensorDataThresholdTriggerFactory
+    guid 921fe675-7df0-4da3-97b3-e544ee857fe6
+
+interface Windows.ApplicationModel.Background.ISmartCardTrigger
+    guid f53bc5ac-84ca-4972-8ce9-e58f97b37a50
+
+interface Windows.ApplicationModel.Background.ISmartCardTriggerFactory
+    guid 63bf54c3-89c1-4e00-a9d3-97c629269dad
+
+interface Windows.ApplicationModel.Background.ISmsMessageReceivedTriggerFactory
+    guid ea3ad8c8-6ba4-4ab2-8d21-bc6b09c77564
+
+interface Windows.ApplicationModel.Background.ISocketActivityTrigger
+    guid a9bbf810-9dde-4f8a-83e3-b0e0e7a50d70
+
+interface Windows.ApplicationModel.Background.IStorageLibraryChangeTrackerTriggerFactory
+    guid 1eb0ffd0-5a85-499e-a888-824607124f50
+
+interface Windows.ApplicationModel.Background.IStorageLibraryContentChangedTrigger
+    guid 1637e0a7-829c-45bc-929b-a1e7ea78d89b
+
+interface Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics
+    guid 7f9f1b39-5f90-4e12-914e-a7d8e0bbfb18
+
+interface Windows.ApplicationModel.Background.ISystemCondition
+    guid c15fb476-89c5-420b-abd3-fb3030472128
+
+interface Windows.ApplicationModel.Background.ISystemConditionFactory
+    guid d269d1f1-05a7-49ae-87d7-16b2b8b9a553
+
+interface Windows.ApplicationModel.Background.ISystemTrigger
+    guid 1d80c776-3748-4463-8d7e-276dc139ac1c
+
+interface Windows.ApplicationModel.Background.ISystemTriggerFactory
+    guid e80423d4-8791-4579-8126-87ec8aaa407a
+
+interface Windows.ApplicationModel.Background.ITimeTrigger
+    guid 656e5556-0b2a-4377-ba70-3b45a935547f
+
+interface Windows.ApplicationModel.Background.ITimeTriggerFactory
+    guid 38c682fe-9b54-45e6-b2f3-269b87a6f734
+
+interface Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory
+    guid b09dfc27-6480-4349-8125-97b3efaa0a3a
+
+interface Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory
+    guid 81c6faad-8797-4785-81b4-b0cccb73d1d9
+
+interface Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory
+    guid cad4436c-69ab-4e18-a48a-5ed2ac435957
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete
+    guid e3e660d6-d041-5ecd-b18b-fa254e4a860f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sensors.ActivityType;i4))
+    argument Windows.Devices.Sensors.ActivityType
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete
+    guid fc7a0488-2803-505c-9e62-9200afe416c6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.Sensors.ActivityType;i4))
+    argument Windows.Devices.Sensors.ActivityType
+
+class Windows.ApplicationModel.Background.LocationTrigger python_type
+    py LocationTrigger
+    signature rc(Windows.ApplicationModel.Background.LocationTrigger;{47666a1c-6877-481e-8026-ff7e14a811a0})
+    default Windows.ApplicationModel.Background.ILocationTrigger
+    requires Windows.ApplicationModel.Background.ILocationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ILocationTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.ILocationTriggerFactory shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.Background.LocationTriggerType name=triggerType
+            out class type=Windows.ApplicationModel.Background.LocationTrigger return
+    property trigger_type
+        get get_TriggerType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ILocationTrigger shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Background.LocationTriggerType return
+
+enum Windows.ApplicationModel.Background.LocationTriggerType python_type
+    py LocationTriggerType
+    signature enum(Windows.ApplicationModel.Background.LocationTriggerType;i4)
+
+class Windows.ApplicationModel.Background.MaintenanceTrigger python_type
+    py MaintenanceTrigger
+    signature rc(Windows.ApplicationModel.Background.MaintenanceTrigger;{68184c83-fc22-4ce5-841a-7239a9810047})
+    default Windows.ApplicationModel.Background.IMaintenanceTrigger
+    requires Windows.ApplicationModel.Background.IMaintenanceTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IMaintenanceTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IMaintenanceTriggerFactory shape=117 reverse=25
+            in uint32 name=freshnessTime
+            in boolean name=oneShot
+            out class type=Windows.ApplicationModel.Background.MaintenanceTrigger return
+    property freshness_time
+        get get_FreshnessTime slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IMaintenanceTrigger shape=4 reverse=22
+            out uint32 return
+    property one_shot
+        get get_OneShot slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IMaintenanceTrigger shape=4 reverse=43
+            out boolean return
+
+class Windows.ApplicationModel.Background.MediaProcessingTrigger activatable python_type
+    py MediaProcessingTrigger
+    signature rc(Windows.ApplicationModel.Background.MediaProcessingTrigger;{9a95be65-8a52-4b30-9011-cf38040ea8b0})
+    default Windows.ApplicationModel.Background.IMediaProcessingTrigger
+    requires Windows.ApplicationModel.Background.IMediaProcessingTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method request_async
+        method RequestAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IMediaProcessingTrigger shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> return
+        method RequestAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IMediaProcessingTrigger shape=51 reverse=44
+            in class type=Windows.Foundation.Collections.ValueSet name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> return
+
+enum Windows.ApplicationModel.Background.MediaProcessingTriggerResult python_type
+    py MediaProcessingTriggerResult
+    signature enum(Windows.ApplicationModel.Background.MediaProcessingTriggerResult;i4)
+
+class Windows.ApplicationModel.Background.MobileBroadbandDeviceServiceNotificationTrigger activatable python_type
+    py MobileBroadbandDeviceServiceNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.MobileBroadbandDeviceServiceNotificationTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.MobileBroadbandPcoDataChangeTrigger activatable python_type
+    py MobileBroadbandPcoDataChangeTrigger
+    signature rc(Windows.ApplicationModel.Background.MobileBroadbandPcoDataChangeTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.MobileBroadbandPinLockStateChangeTrigger activatable python_type
+    py MobileBroadbandPinLockStateChangeTrigger
+    signature rc(Windows.ApplicationModel.Background.MobileBroadbandPinLockStateChangeTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.MobileBroadbandRadioStateChangeTrigger activatable python_type
+    py MobileBroadbandRadioStateChangeTrigger
+    signature rc(Windows.ApplicationModel.Background.MobileBroadbandRadioStateChangeTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.MobileBroadbandRegistrationStateChangeTrigger activatable python_type
+    py MobileBroadbandRegistrationStateChangeTrigger
+    signature rc(Windows.ApplicationModel.Background.MobileBroadbandRegistrationStateChangeTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.NetworkOperatorDataUsageTrigger activatable python_type
+    py NetworkOperatorDataUsageTrigger
+    signature rc(Windows.ApplicationModel.Background.NetworkOperatorDataUsageTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.NetworkOperatorHotspotAuthenticationTrigger activatable python_type
+    py NetworkOperatorHotspotAuthenticationTrigger
+    signature rc(Windows.ApplicationModel.Background.NetworkOperatorHotspotAuthenticationTrigger;{e756c791-3001-4de5-83c7-de61d88831d0})
+    default Windows.ApplicationModel.Background.INetworkOperatorHotspotAuthenticationTrigger
+    requires Windows.ApplicationModel.Background.INetworkOperatorHotspotAuthenticationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger python_type
+    py NetworkOperatorNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger;{90089cc6-63cd-480c-95d1-6e6aef801e4a})
+    default Windows.ApplicationModel.Background.INetworkOperatorNotificationTrigger
+    requires Windows.ApplicationModel.Background.INetworkOperatorNotificationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.INetworkOperatorNotificationTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.INetworkOperatorNotificationTriggerFactory shape=51 reverse=24
+            in string name=networkAccountId
+            out class type=Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger return
+    property network_account_id
+        get get_NetworkAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.INetworkOperatorNotificationTrigger shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Background.PaymentAppCanMakePaymentTrigger activatable python_type
+    py PaymentAppCanMakePaymentTrigger
+    signature rc(Windows.ApplicationModel.Background.PaymentAppCanMakePaymentTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.PhoneTrigger python_type
+    py PhoneTrigger
+    signature rc(Windows.ApplicationModel.Background.PhoneTrigger;{8dcfe99b-d4c5-49f1-b7d3-82e87a0e9dde})
+    default Windows.ApplicationModel.Background.IPhoneTrigger
+    requires Windows.ApplicationModel.Background.IPhoneTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IPhoneTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IPhoneTriggerFactory shape=117 reverse=25
+            in enum32 type=Windows.ApplicationModel.Calls.Background.PhoneTriggerType name=type
+            in boolean name=oneShot
+            out class type=Windows.ApplicationModel.Background.PhoneTrigger return
+    property one_shot
+        get get_OneShot slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IPhoneTrigger shape=4 reverse=22
+            out boolean return
+    property trigger_type
+        get get_TriggerType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IPhoneTrigger shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Calls.Background.PhoneTriggerType return
+
+class Windows.ApplicationModel.Background.PushNotificationTrigger activatable python_type
+    py PushNotificationTrigger
+    signature rc(Windows.ApplicationModel.Background.PushNotificationTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IPushNotificationTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IPushNotificationTriggerFactory shape=51 reverse=24
+            in string name=applicationId implicit
+            out class type=Windows.ApplicationModel.Background.PushNotificationTrigger return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IPushNotificationTriggerFactory shape=51 reverse=24
+            in string name=applicationId
+            out class type=Windows.ApplicationModel.Background.PushNotificationTrigger return
+
+class Windows.ApplicationModel.Background.RcsEndUserMessageAvailableTrigger activatable python_type
+    py RcsEndUserMessageAvailableTrigger
+    signature rc(Windows.ApplicationModel.Background.RcsEndUserMessageAvailableTrigger;{986d0d6a-b2f6-467f-a978-a44091c11a66})
+    default Windows.ApplicationModel.Background.IRcsEndUserMessageAvailableTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IRcsEndUserMessageAvailableTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.RfcommConnectionTrigger activatable python_type
+    py RfcommConnectionTrigger
+    signature rc(Windows.ApplicationModel.Background.RfcommConnectionTrigger;{e8c4cae2-0b53-4464-9394-fd875654de64})
+    default Windows.ApplicationModel.Background.IRfcommConnectionTrigger
+    requires Windows.ApplicationModel.Background.IRfcommConnectionTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property remote_host_name
+        get get_RemoteHostName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=162
+            out class type=Windows.Networking.HostName return
+        put put_RemoteHostName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=173
+            in class type=Windows.Networking.HostName name=value
+    property protection_level
+        get get_ProtectionLevel slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=121
+            out enum32 type=Windows.Networking.Sockets.SocketProtectionLevel return
+        put put_ProtectionLevel slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=141
+            in enum32 type=Windows.Networking.Sockets.SocketProtectionLevel name=value
+    property allow_multiple_connections
+        get get_AllowMultipleConnections slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=62
+            out boolean return
+        put put_AllowMultipleConnections slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=99
+            in boolean name=value
+    property inbound_connection
+        get get_InboundConnection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation return
+    property outbound_connection
+        get get_OutboundConnection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IRfcommConnectionTrigger shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation return
+
+class Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationTrigger activatable python_type
+    py SecondaryAuthenticationFactorAuthenticationTrigger
+    signature rc(Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationTrigger;{f237f327-5181-4f24-96a7-700a4e5fac62})
+    default Windows.ApplicationModel.Background.ISecondaryAuthenticationFactorAuthenticationTrigger
+    requires Windows.ApplicationModel.Background.ISecondaryAuthenticationFactorAuthenticationTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.SensorDataThresholdTrigger python_type
+    py SensorDataThresholdTrigger
+    signature rc(Windows.ApplicationModel.Background.SensorDataThresholdTrigger;{5bc0f372-d48b-4b7f-abec-15f9bacc12e2})
+    default Windows.ApplicationModel.Background.ISensorDataThresholdTrigger
+    requires Windows.ApplicationModel.Background.ISensorDataThresholdTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ISensorDataThresholdTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.ISensorDataThresholdTriggerFactory shape=51 reverse=24
+            in interface type=Windows.Devices.Sensors.ISensorDataThreshold name=threshold
+            out class type=Windows.ApplicationModel.Background.SensorDataThresholdTrigger return
+
+class Windows.ApplicationModel.Background.SmartCardTrigger python_type
+    py SmartCardTrigger
+    signature rc(Windows.ApplicationModel.Background.SmartCardTrigger;{f53bc5ac-84ca-4972-8ce9-e58f97b37a50})
+    default Windows.ApplicationModel.Background.ISmartCardTrigger
+    requires Windows.ApplicationModel.Background.ISmartCardTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ISmartCardTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.ISmartCardTriggerFactory shape=51 reverse=24
+            in enum32 type=Windows.Devices.SmartCards.SmartCardTriggerType name=triggerType
+            out class type=Windows.ApplicationModel.Background.SmartCardTrigger return
+    property trigger_type
+        get get_TriggerType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ISmartCardTrigger shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardTriggerType return
+
+class Windows.ApplicationModel.Background.SmsMessageReceivedTrigger python_type
+    py SmsMessageReceivedTrigger
+    signature rc(Windows.ApplicationModel.Background.SmsMessageReceivedTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ISmsMessageReceivedTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.ISmsMessageReceivedTriggerFactory shape=51 reverse=24
+            in class type=Windows.Devices.Sms.SmsFilterRules name=filterRules
+            out class type=Windows.ApplicationModel.Background.SmsMessageReceivedTrigger return
+
+class Windows.ApplicationModel.Background.SocketActivityTrigger activatable python_type
+    py SocketActivityTrigger
+    signature rc(Windows.ApplicationModel.Background.SocketActivityTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.ISocketActivityTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property is_wake_from_low_power_supported
+        get get_IsWakeFromLowPowerSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ISocketActivityTrigger shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.Background.StorageLibraryChangeTrackerTrigger python_type
+    py StorageLibraryChangeTrackerTrigger
+    signature rc(Windows.ApplicationModel.Background.StorageLibraryChangeTrackerTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IStorageLibraryChangeTrackerTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IStorageLibraryChangeTrackerTriggerFactory shape=51 reverse=24
+            in class type=Windows.Storage.StorageLibraryChangeTracker name=tracker
+            out class type=Windows.ApplicationModel.Background.StorageLibraryChangeTrackerTrigger return
+
+class Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger python_type
+    py StorageLibraryContentChangedTrigger
+    signature rc(Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger;{1637e0a7-829c-45bc-929b-a1e7ea78d89b})
+    default Windows.ApplicationModel.Background.IStorageLibraryContentChangedTrigger
+    requires Windows.ApplicationModel.Background.IStorageLibraryContentChangedTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics shape=51 reverse=24 static
+            in class type=Windows.Storage.StorageLibrary name=storageLibrary
+            out class type=Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger return
+    method create_from_libraries static
+        method CreateFromLibraries slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IStorageLibraryContentChangedTriggerStatics shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageLibrary> name=storageLibraries
+            out class type=Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger return
+
+class Windows.ApplicationModel.Background.SystemCondition python_type
+    py SystemCondition
+    signature rc(Windows.ApplicationModel.Background.SystemCondition;{c15fb476-89c5-420b-abd3-fb3030472128})
+    default Windows.ApplicationModel.Background.ISystemCondition
+    requires Windows.ApplicationModel.Background.ISystemCondition
+    requires Windows.ApplicationModel.Background.IBackgroundCondition
+    factory Windows.ApplicationModel.Background.ISystemConditionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.ISystemConditionFactory shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.Background.SystemConditionType name=conditionType
+            out class type=Windows.ApplicationModel.Background.SystemCondition return
+    property condition_type
+        get get_ConditionType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ISystemCondition shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Background.SystemConditionType return
+
+enum Windows.ApplicationModel.Background.SystemConditionType python_type
+    py SystemConditionType
+    signature enum(Windows.ApplicationModel.Background.SystemConditionType;i4)
+
+class Windows.ApplicationModel.Background.SystemTrigger python_type
+    py SystemTrigger
+    signature rc(Windows.ApplicationModel.Background.SystemTrigger;{1d80c776-3748-4463-8d7e-276dc139ac1c})
+    default Windows.ApplicationModel.Background.ISystemTrigger
+    requires Windows.ApplicationModel.Background.ISystemTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ISystemTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.ISystemTriggerFactory shape=117 reverse=25
+            in enum32 type=Windows.ApplicationModel.Background.SystemTriggerType name=triggerType
+            in boolean name=oneShot
+            out class type=Windows.ApplicationModel.Background.SystemTrigger return
+    property one_shot
+        get get_OneShot slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ISystemTrigger shape=4 reverse=22
+            out boolean return
+    property trigger_type
+        get get_TriggerType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ISystemTrigger shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Background.SystemTriggerType return
+
+enum Windows.ApplicationModel.Background.SystemTriggerType python_type
+    py SystemTriggerType
+    signature enum(Windows.ApplicationModel.Background.SystemTriggerType;i4)
+
+class Windows.ApplicationModel.Background.TetheringEntitlementCheckTrigger activatable python_type
+    py TetheringEntitlementCheckTrigger
+    signature rc(Windows.ApplicationModel.Background.TetheringEntitlementCheckTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.TimeTrigger python_type
+    py TimeTrigger
+    signature rc(Windows.ApplicationModel.Background.TimeTrigger;{656e5556-0b2a-4377-ba70-3b45a935547f})
+    default Windows.ApplicationModel.Background.ITimeTrigger
+    requires Windows.ApplicationModel.Background.ITimeTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.ITimeTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.ITimeTriggerFactory shape=117 reverse=25
+            in uint32 name=freshnessTime
+            in boolean name=oneShot
+            out class type=Windows.ApplicationModel.Background.TimeTrigger return
+    property freshness_time
+        get get_FreshnessTime slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ITimeTrigger shape=4 reverse=22
+            out uint32 return
+    property one_shot
+        get get_OneShot slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.ITimeTrigger shape=4 reverse=43
+            out boolean return
+
+class Windows.ApplicationModel.Background.ToastNotificationActionTrigger activatable python_type
+    py ToastNotificationActionTrigger
+    signature rc(Windows.ApplicationModel.Background.ToastNotificationActionTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory shape=51 reverse=24
+            in string name=applicationId implicit
+            out class type=Windows.ApplicationModel.Background.ToastNotificationActionTrigger return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory shape=51 reverse=24
+            in string name=applicationId
+            out class type=Windows.ApplicationModel.Background.ToastNotificationActionTrigger return
+
+class Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger activatable python_type
+    py ToastNotificationHistoryChangedTrigger
+    signature rc(Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory shape=51 reverse=24
+            in string name=applicationId implicit
+            out class type=Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory shape=51 reverse=24
+            in string name=applicationId
+            out class type=Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup,Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> concrete
+    guid d4f89768-688f-59ec-bf24-c2af6a310fa4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23});rc(Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs;{ab14bee0-e760-440e-a91c-44796de3a92d}))
+    argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
+    argument Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs
+
+class Windows.ApplicationModel.Background.UserNotificationChangedTrigger python_type
+    py UserNotificationChangedTrigger
+    signature rc(Windows.ApplicationModel.Background.UserNotificationChangedTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    factory Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory shape=51 reverse=24
+            in enum_u32 type=Windows.UI.Notifications.NotificationKinds name=notificationKinds
+            out class type=Windows.ApplicationModel.Background.UserNotificationChangedTrigger return
+
+class Windows.ApplicationModel.Background.WiFiOnDemandHotspotConnectTrigger activatable python_type
+    py WiFiOnDemandHotspotConnectTrigger
+    signature rc(Windows.ApplicationModel.Background.WiFiOnDemandHotspotConnectTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.ApplicationModel.Background.WiFiOnDemandHotspotUpdateMetadataTrigger activatable python_type
+    py WiFiOnDemandHotspotUpdateMetadataTrigger
+    signature rc(Windows.ApplicationModel.Background.WiFiOnDemandHotspotUpdateMetadataTrigger;{84b3a058-6027-4b87-9790-bdf3f757dbd7})
+    default Windows.ApplicationModel.Background.IBackgroundTrigger
+    requires Windows.ApplicationModel.Background.IBackgroundTrigger
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.Int16 external
+    py winrt.system.Int16
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs external
+    py winrt.windows.applicationmodel.activation.BackgroundActivatedEventArgs
+
+enum Windows.ApplicationModel.Calls.Background.PhoneTriggerType external
+    py winrt.windows.applicationmodel.calls.background.PhoneTriggerType
+
+enum Windows.Devices.Bluetooth.BluetoothError external
+    py winrt.windows.devices.bluetooth.BluetoothError
+
+class Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter external
+    py winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter
+
+class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisement
+
+class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter
+
+enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPhyType
+
+class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementScanParameters
+
+enum Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode external
+    py winrt.windows.devices.bluetooth.background.BluetoothEventTriggeringMode
+
+class Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation external
+    py winrt.windows.devices.bluetooth.background.RfcommInboundConnectionInformation
+
+class Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation external
+    py winrt.windows.devices.bluetooth.background.RfcommOutboundConnectionInformation
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalService
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattServiceProviderAdvertisingParameters
+
+enum Windows.Devices.Geolocation.VisitMonitoringScope external
+    py winrt.windows.devices.geolocation.VisitMonitoringScope
+
+enum Windows.Devices.Sensors.ActivityType external
+    py winrt.windows.devices.sensors.ActivityType
+
+interface Windows.Devices.Sensors.ISensorDataThreshold external
+    py winrt.windows.devices.sensors._ISensorDataThreshold
+    guid 54daec61-fe4b-4e07-b260-3a4cdfbe396e
+
+enum Windows.Devices.SmartCards.SmartCardTriggerType external
+    py winrt.windows.devices.smartcards.SmartCardTriggerType
+
+class Windows.Devices.Sms.SmsFilterRules external
+    py winrt.windows.devices.sms.SmsFilterRules
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+enum Windows.Networking.Sockets.SocketProtectionLevel external
+    py winrt.windows.networking.sockets.SocketProtectionLevel
+
+class Windows.Storage.StorageLibrary external
+    py winrt.windows.storage.StorageLibrary
+
+class Windows.Storage.StorageLibraryChangeTracker external
+    py winrt.windows.storage.StorageLibraryChangeTracker
+
+enum Windows.Storage.Provider.CachedFileTarget external
+    py winrt.windows.storage.provider.CachedFileTarget
+
+class Windows.Storage.Provider.FileUpdateRequest external
+    py winrt.windows.storage.provider.FileUpdateRequest
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+enum Windows.UI.Notifications.NotificationKinds external
+    py winrt.windows.ui.notifications.NotificationKinds

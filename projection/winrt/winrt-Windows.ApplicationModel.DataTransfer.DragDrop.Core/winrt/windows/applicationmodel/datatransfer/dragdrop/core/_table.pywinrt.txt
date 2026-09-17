@@ -1,0 +1,205 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.DataTransfer.DragDrop.Core
+
+class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager python_type
+    py CoreDragDropManager
+    signature rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager;{7d56d344-8464-4faf-aa49-37ea6e2d7bd1})
+    default Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager
+    factory Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManagerStatics
+    property are_concurrent_operations_enabled
+        get get_AreConcurrentOperationsEnabled slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager shape=4 reverse=62
+            out boolean return
+        put put_AreConcurrentOperationsEnabled slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager shape=4 reverse=99
+            in boolean name=value
+    event target_requested
+        add add_TargetRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs> name=value
+            out event_token return
+        remove remove_TargetRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager shape=26 reverse=53
+            in event_token name=value
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager return
+
+class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo python_type
+    py CoreDragInfo
+    signature rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo;{48353a8b-cb50-464e-9575-cd4e3a7ab028})
+    default Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo2
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    property modifiers
+        get get_Modifiers slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo shape=4 reverse=43
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo shape=4 reverse=62
+            out struct type=Windows.Foundation.Point return
+    property allowed_operations
+        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo2 shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
+
+class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation activatable python_type
+    py CoreDragOperation
+    signature rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation;{cc06de4f-6db0-4e62-ab1b-a74a02dc6d85})
+    default Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property drag_ui_content_mode
+        get get_DragUIContentMode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=121
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode return
+        put put_DragUIContentMode slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=141
+            in enum_u32 type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode name=value
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackage return
+    property allowed_operations
+        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2 shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
+        put put_AllowedOperations slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2 shape=4 reverse=43
+            in enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation name=value
+    method set_drag_ui_content_from_software_bitmap
+        method SetDragUIContentFromSoftwareBitmap slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=62
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+        method SetDragUIContentFromSoftwareBitmap slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=57
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            in struct type=Windows.Foundation.Point name=anchorPoint
+    method set_pointer_id
+        method SetPointerId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=43
+            in uint32 name=pointerId
+    method start_async
+        method StartAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
+
+enum Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode python_type
+    py CoreDragUIContentMode
+    signature enum(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode;u4)
+
+class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride python_type
+    py CoreDragUIOverride
+    signature rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride;{89a85064-3389-4f4f-8897-7e8a3ffb3c93})
+    default Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride
+    property is_glyph_visible
+        get get_IsGlyphVisible slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=186
+            out boolean return
+        put put_IsGlyphVisible slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=194
+            in boolean name=value
+    property is_content_visible
+        get get_IsContentVisible slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=62
+            out boolean return
+        put put_IsContentVisible slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=99
+            in boolean name=value
+    property is_caption_visible
+        get get_IsCaptionVisible slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=162
+            out boolean return
+        put put_IsCaptionVisible slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=173
+            in boolean name=value
+    property caption
+        get get_Caption slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=121
+            out string return
+        put put_Caption slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=141
+            in string name=value
+    method clear
+        method Clear slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=0 reverse=201
+    method set_content_from_software_bitmap
+        method SetContentFromSoftwareBitmap slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=4 reverse=22
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+        method SetContentFromSoftwareBitmap slot=7 inputs=2 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride shape=57
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            in struct type=Windows.Foundation.Point name=anchorPoint
+
+class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs python_type
+    py CoreDropOperationTargetRequestedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs;{2aca929a-5e28-4ea6-829e-29134e665d6d})
+    default Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTargetRequestedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTargetRequestedEventArgs
+    method set_target
+        method SetTarget slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTargetRequestedEventArgs shape=4 reverse=22
+            in interface type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget name=target
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> concrete
+    guid 8b98aea9-64f0-5672-b30e-dfd9c2e4f6fe
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.DataTransfer.DataPackageOperation;u4))
+    argument Windows.ApplicationModel.DataTransfer.DataPackageOperation
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManager
+    guid 7d56d344-8464-4faf-aa49-37ea6e2d7bd1
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragDropManagerStatics
+    guid 9542fdca-da12-4c1c-8d06-041db29733c3
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo
+    guid 48353a8b-cb50-464e-9575-cd4e3a7ab028
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragInfo2
+    guid c54691e5-e6fb-4d74-b4b1-8a3c17f25e9e
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation
+    guid cc06de4f-6db0-4e62-ab1b-a74a02dc6d85
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation2
+    guid 824b1e2c-d99a-4fc3-8507-6c182f33b46a
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragUIOverride
+    guid 89a85064-3389-4f4f-8897-7e8a3ffb3c93
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget python_type
+    py _ICoreDropOperationTarget
+    guid d9126196-4c5b-417d-bb37-76381def8db4
+    signature {d9126196-4c5b-417d-bb37-76381def8db4}
+    method drop_async
+        method DropAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget shape=51 reverse=100
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo name=dragInfo
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
+    method enter_async
+        method EnterAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget shape=117 reverse=25
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo name=dragInfo
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride name=dragUIOverride
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
+    method leave_async
+        method LeaveAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget shape=51 reverse=65
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo name=dragInfo
+            out interface type=Windows.Foundation.IAsyncAction return
+    method over_async
+        method OverAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget shape=117 reverse=45
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo name=dragInfo
+            in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride name=dragUIOverride
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
+
+interface Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTargetRequestedEventArgs
+    guid 2aca929a-5e28-4ea6-829e-29134e665d6d
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs> concrete
+    guid a4c3b1c1-b8ad-58cb-acc0-8ef37eae4ed4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager;{7d56d344-8464-4faf-aa49-37ea6e2d7bd1});rc(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs;{2aca929a-5e28-4ea6-829e-29134e665d6d}))
+    argument Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager
+    argument Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs
+
+class Windows.ApplicationModel.DataTransfer.DataPackage external
+    py winrt.windows.applicationmodel.datatransfer.DataPackage
+
+enum Windows.ApplicationModel.DataTransfer.DataPackageOperation external
+    py winrt.windows.applicationmodel.datatransfer.DataPackageOperation
+
+class Windows.ApplicationModel.DataTransfer.DataPackageView external
+    py winrt.windows.applicationmodel.datatransfer.DataPackageView
+
+enum Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers external
+    py winrt.windows.applicationmodel.datatransfer.dragdrop.DragDropModifiers
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap

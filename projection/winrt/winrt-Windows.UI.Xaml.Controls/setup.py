@@ -35,13 +35,6 @@ setup(
             sources=["py.Windows.UI.Xaml.Controls.cpp"],
             include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
-        ),
-        Extension(
-            "winrt._winrt_windows_ui_xaml_controls_2",
-            sources=["py.Windows.UI.Xaml.Controls_2.cpp"],
-            include_dirs=[get_include()] + get_include_dirs(),
-            libraries=["windowsapp"],
-        ),
-
+        )
     ],
 )

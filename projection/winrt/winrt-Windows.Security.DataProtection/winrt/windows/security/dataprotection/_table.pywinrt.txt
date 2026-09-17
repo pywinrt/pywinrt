@@ -1,0 +1,142 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.DataProtection
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> concrete
+    guid f876652d-ffe1-5c77-a691-2bdb404cfa6f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.DataProtection.UserDataBufferUnprotectResult;{8efd0e90-fa9a-46a4-a377-01cebf1e74d8}))
+    argument Windows.Security.DataProtection.UserDataBufferUnprotectResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> concrete
+    guid 28ff9352-5cb2-5f87-9f08-decacf4f59b3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.DataProtection.UserDataStorageItemProtectionInfo;{5b6680f6-e87f-40a1-b19d-a6187a0c662f}))
+    argument Windows.Security.DataProtection.UserDataStorageItemProtectionInfo
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> concrete
+    guid e5c62dbd-e029-52e1-afd5-73f7a4223de6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4))
+    argument Windows.Security.DataProtection.UserDataStorageItemProtectionStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
+    guid a76582c9-06a2-4273-a803-834c9f87fbeb
+
+interface Windows.Security.DataProtection.IUserDataBufferUnprotectResult
+    guid 8efd0e90-fa9a-46a4-a377-01cebf1e74d8
+
+interface Windows.Security.DataProtection.IUserDataProtectionManager
+    guid 1f13237d-b42e-4a88-9480-0f240924c876
+
+interface Windows.Security.DataProtection.IUserDataProtectionManagerStatics
+    guid 977780e8-6dce-4fae-af85-782ac2cf4572
+
+interface Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
+    guid 5b6680f6-e87f-40a1-b19d-a6187a0c662f
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Security.DataProtection.UserDataProtectionManager,Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs> concrete
+    guid 82965140-a327-568e-878f-663c2ca7c562
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.DataProtection.UserDataProtectionManager;{1f13237d-b42e-4a88-9480-0f240924c876});rc(Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs;{a76582c9-06a2-4273-a803-834c9f87fbeb}))
+    argument Windows.Security.DataProtection.UserDataProtectionManager
+    argument Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs
+
+enum Windows.Security.DataProtection.UserDataAvailability python_type
+    py UserDataAvailability
+    signature enum(Windows.Security.DataProtection.UserDataAvailability;i4)
+
+class Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs python_type
+    py UserDataAvailabilityStateChangedEventArgs
+    signature rc(Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs;{a76582c9-06a2-4273-a803-834c9f87fbeb})
+    default Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
+    requires Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Security.DataProtection.UserDataBufferUnprotectResult python_type
+    py UserDataBufferUnprotectResult
+    signature rc(Windows.Security.DataProtection.UserDataBufferUnprotectResult;{8efd0e90-fa9a-46a4-a377-01cebf1e74d8})
+    default Windows.Security.DataProtection.IUserDataBufferUnprotectResult
+    requires Windows.Security.DataProtection.IUserDataBufferUnprotectResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4 reverse=22
+            out enum32 type=Windows.Security.DataProtection.UserDataBufferUnprotectStatus return
+    property unprotected_buffer
+        get get_UnprotectedBuffer slot=7 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+enum Windows.Security.DataProtection.UserDataBufferUnprotectStatus python_type
+    py UserDataBufferUnprotectStatus
+    signature enum(Windows.Security.DataProtection.UserDataBufferUnprotectStatus;i4)
+
+class Windows.Security.DataProtection.UserDataProtectionManager python_type
+    py UserDataProtectionManager
+    signature rc(Windows.Security.DataProtection.UserDataProtectionManager;{1f13237d-b42e-4a88-9480-0f240924c876})
+    default Windows.Security.DataProtection.IUserDataProtectionManager
+    requires Windows.Security.DataProtection.IUserDataProtectionManager
+    factory Windows.Security.DataProtection.IUserDataProtectionManagerStatics
+    event data_availability_state_changed
+        add add_DataAvailabilityStateChanged slot=11 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.DataProtection.UserDataProtectionManager,Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_DataAvailabilityStateChanged slot=12 inputs=1 outputs=0 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=26 reverse=167
+            in event_token name=token
+    method get_storage_item_protection_info_async
+        method GetStorageItemProtectionInfoAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=44
+            in interface type=Windows.Storage.IStorageItem name=storageItem
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> return
+    method is_continued_data_availability_expected
+        method IsContinuedDataAvailabilityExpected slot=10 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=124
+            in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
+            out boolean return
+    method protect_buffer_async
+        method ProtectBufferAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117 reverse=66
+            in interface type=Windows.Storage.Streams.IBuffer name=unprotectedBuffer
+            in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method protect_storage_item_async
+        method ProtectStorageItemAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117 reverse=25
+            in interface type=Windows.Storage.IStorageItem name=storageItem
+            in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> return
+    method try_get_default static
+        method TryGetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=4 reverse=22 static
+            out class type=Windows.Security.DataProtection.UserDataProtectionManager return
+    method try_get_for_user static
+        method TryGetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Security.DataProtection.UserDataProtectionManager return
+    method unprotect_buffer_async
+        method UnprotectBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=100
+            in interface type=Windows.Storage.Streams.IBuffer name=protectedBuffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> return
+
+class Windows.Security.DataProtection.UserDataStorageItemProtectionInfo python_type
+    py UserDataStorageItemProtectionInfo
+    signature rc(Windows.Security.DataProtection.UserDataStorageItemProtectionInfo;{5b6680f6-e87f-40a1-b19d-a6187a0c662f})
+    default Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
+    requires Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
+    property availability
+        get get_Availability slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo shape=4 reverse=22
+            out enum32 type=Windows.Security.DataProtection.UserDataAvailability return
+
+enum Windows.Security.DataProtection.UserDataStorageItemProtectionStatus python_type
+    py UserDataStorageItemProtectionStatus
+    signature enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4)
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+class Windows.System.User external
+    py winrt.windows.system.User

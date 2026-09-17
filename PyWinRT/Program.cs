@@ -57,24 +57,20 @@ var excludeOption = new Option<string[]>(
     ArgumentHelpName = "prefix",
 };
 
-var headerPathOption = new Option<DirectoryInfo?>("--header-path", "Install headers in custom path")
-{
-    Arity = ArgumentArity.ZeroOrOne,
-    ArgumentHelpName = "path",
-};
-
-var baseHeaderPathOption = new Option<DirectoryInfo?>(
-    "--base-header-path",
-    "Install the version header in custom path"
+var nullabilityJsonPathOption = new Option<FileInfo?>(
+    "--nullability-json",
+    "Nullability information JSON file"
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
     ArgumentHelpName = "path",
 };
 
-var nullabilityJsonPathOption = new Option<FileInfo?>(
-    "--nullability-json",
-    "Nullability information JSON file"
+var emitShapesOption = new Option<DirectoryInfo?>(
+    "--emit-shapes",
+    "Directory holding the ABI call shape census (shapes.json) and the trampoline "
+        + "instantiations (shapes-generated.h) that this run merges into. With --verbose, "
+        + "the merged census is reported."
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
@@ -94,9 +90,8 @@ rootCommand.AddOption(referenceOption);
 rootCommand.AddOption(outputOption);
 rootCommand.AddOption(includeOption);
 rootCommand.AddOption(excludeOption);
-rootCommand.AddOption(headerPathOption);
-rootCommand.AddOption(baseHeaderPathOption);
 rootCommand.AddOption(nullabilityJsonPathOption);
+rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(verboseOption);
 
@@ -112,11 +107,10 @@ rootCommand.SetHandler(
         var output = invocationContext.ParseResult.GetValueForOption(outputOption)!;
         var include = invocationContext.ParseResult.GetValueForOption(includeOption)!;
         var exclude = invocationContext.ParseResult.GetValueForOption(excludeOption)!;
-        var headerPath = invocationContext.ParseResult.GetValueForOption(headerPathOption);
-        var baseHeaderPath = invocationContext.ParseResult.GetValueForOption(baseHeaderPathOption);
         var nullabilityInfoPath = invocationContext.ParseResult.GetValueForOption(
             nullabilityJsonPathOption
         );
+        var emitShapes = invocationContext.ParseResult.GetValueForOption(emitShapesOption);
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
@@ -195,19 +189,42 @@ rootCommand.SetHandler(
         var loadTime = stopwatch.Elapsed;
         stopwatch.Restart();
 
-        var tasks = new List<Task>();
-
-        // if we are building the base projection (not user components),
-        // then emit some extra files
-        if (reference.Length == 0)
+        if (emitShapes is null)
         {
-            tasks.Add(
-                Task.Run(() =>
-                {
-                    FileWriters.WriteBaseFiles(baseHeaderPath ?? headerPath ?? output);
-                })
+            throw new Exception(
+                "--emit-shapes is required: the tables name the ABI call shapes of "
+                    + "their members by id, and the ids live in the census file"
             );
         }
+
+        // The trampolines that call WinRT are compiled into winrt-runtime once
+        // for the whole tree, so the census reads every type of every input,
+        // including the interfaces that are exclusive to a runtime class and are
+        // therefore never projected as a Python type but are still what a call
+        // goes through. No run can see all of the metadata at once - WinUI 2 and
+        // the Windows App SDK both define Microsoft.UI.Xaml.Controls - so each
+        // one merges what it found into the census file, which also holds the
+        // shape ids and is why they are stable.
+        var fragment = new ShapeCensus().Take(
+            inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
+        );
+
+        var census = Census.Load(new FileInfo(Path.Combine(emitShapes.FullName, "shapes.json")));
+
+        census.Merge(inputPackage, fragment);
+        census.Save(emitShapes, "shapes.json");
+        census.WriteShapesHeader(emitShapes, "shapes-generated.h");
+
+        if (verbose)
+        {
+            census.WriteReport(Console.Out);
+            Console.WriteLine();
+        }
+
+        var censusTime = stopwatch.Elapsed;
+        stopwatch.Restart();
+
+        var tasks = new List<Task>();
 
         foreach (var assembly in inputAssemblies)
         {
@@ -239,18 +256,12 @@ rootCommand.SetHandler(
             Console.WriteLine($"Output: {output.FullName}");
             Console.WriteLine($"Include: {string.Join(";", include)}");
             Console.WriteLine($"Exclude: {string.Join(";", exclude)}");
-            Console.WriteLine($"Header Path: {headerPath?.FullName ?? "<default>"}");
-            Console.WriteLine($"Base Header Path: {baseHeaderPath?.FullName ?? "<default>"}");
             Console.WriteLine($"Loaded metadata in {loadTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine($"Took the shape census in {censusTime.TotalMilliseconds:F0} ms");
             Console.WriteLine($"Filtered types in {filterTime.TotalMilliseconds:F0} ms");
         }
 
         var namespaceTimes = new ConcurrentBag<(string Namespace, TimeSpan Elapsed)>();
-
-        // parameterized interface instances per header directory, for the
-        // per-package GUID header written after all namespaces are done
-        var genericInstances =
-            new ConcurrentDictionary<string, ConcurrentDictionary<string, GenericInstanceType>>();
 
         // Generation is pipelined: the metadata for each namespace is
         // preloaded on this thread (see ModulePreloader for why) and then the
@@ -285,13 +296,12 @@ rootCommand.SetHandler(
 
                     FileWriters.WriteNamespaceFiles(
                         output,
-                        headerPath,
                         new QualifiedNamespace(inputPackage, groupNamespace),
                         () => nullabilityFileTask.Result.GetOrAdd(groupNamespace),
                         packageMap,
                         group,
                         componentDlls,
-                        genericInstances
+                        census
                     );
 
                     namespaceTimes.Add((groupNamespace, nsStopwatch.Elapsed));
@@ -303,15 +313,6 @@ rootCommand.SetHandler(
         Thread.CurrentThread.Priority = priority;
 
         await Task.WhenAll(tasks);
-
-        foreach (var (headerDir, instances) in genericInstances)
-        {
-            FileWriters.WritePInterfaceGuidsH(
-                new DirectoryInfo(headerDir),
-                new QualifiedNamespace(inputPackage, "").PyPackageModule,
-                instances.Values
-            );
-        }
 
         var nullabilityFile = await nullabilityFileTask;
 

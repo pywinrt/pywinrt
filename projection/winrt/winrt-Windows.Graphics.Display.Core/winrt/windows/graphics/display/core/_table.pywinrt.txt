@@ -1,0 +1,151 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Display.Core
+
+enum Windows.Graphics.Display.Core.HdmiDisplayColorSpace python_type
+    py HdmiDisplayColorSpace
+    signature enum(Windows.Graphics.Display.Core.HdmiDisplayColorSpace;i4)
+
+struct Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata python_type
+    py HdmiDisplayHdr2086Metadata
+    signature struct(Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata;u2;u2;u2;u2;u2;u2;u2;u2;u2;u2;u2;u2)
+    field red_primary_x RedPrimaryX uint16
+    field red_primary_y RedPrimaryY uint16
+    field green_primary_x GreenPrimaryX uint16
+    field green_primary_y GreenPrimaryY uint16
+    field blue_primary_x BluePrimaryX uint16
+    field blue_primary_y BluePrimaryY uint16
+    field white_point_x WhitePointX uint16
+    field white_point_y WhitePointY uint16
+    field max_mastering_luminance MaxMasteringLuminance uint16
+    field min_mastering_luminance MinMasteringLuminance uint16
+    field max_content_light_level MaxContentLightLevel uint16
+    field max_frame_average_light_level MaxFrameAverageLightLevel uint16
+
+enum Windows.Graphics.Display.Core.HdmiDisplayHdrOption python_type
+    py HdmiDisplayHdrOption
+    signature enum(Windows.Graphics.Display.Core.HdmiDisplayHdrOption;i4)
+
+class Windows.Graphics.Display.Core.HdmiDisplayInformation python_type
+    py HdmiDisplayInformation
+    signature rc(Windows.Graphics.Display.Core.HdmiDisplayInformation;{130b3c0a-f565-476e-abd5-ea05aee74c69})
+    default Windows.Graphics.Display.Core.IHdmiDisplayInformation
+    requires Windows.Graphics.Display.Core.IHdmiDisplayInformation
+    factory Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics
+    event display_modes_changed
+        add add_DisplayModesChanged slot=12 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.Core.HdmiDisplayInformation,System.Object> name=value
+            out event_token return
+        remove remove_DisplayModesChanged slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=26 reverse=181
+            in event_token name=token
+    method get_current_display_mode
+        method GetCurrentDisplayMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=43
+            out class type=Windows.Graphics.Display.Core.HdmiDisplayMode return
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics shape=4 reverse=22 static
+            out class type=Windows.Graphics.Display.Core.HdmiDisplayInformation return
+    method get_supported_display_modes
+        method GetSupportedDisplayModes slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.Core.HdmiDisplayMode> return
+    method request_set_current_display_mode_async
+        method RequestSetCurrentDisplayModeAsync slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51 reverse=100
+            in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestSetCurrentDisplayModeAsync slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=117 reverse=125
+            in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
+            in enum32 type=Windows.Graphics.Display.Core.HdmiDisplayHdrOption name=hdrOption
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestSetCurrentDisplayModeAsync slot=11 inputs=3 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=201
+            in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
+            in enum32 type=Windows.Graphics.Display.Core.HdmiDisplayHdrOption name=hdrOption
+            in struct type=Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata name=hdrMetadata
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_default_display_mode_async
+        method SetDefaultDisplayModeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Graphics.Display.Core.HdmiDisplayMode python_type
+    py HdmiDisplayMode
+    signature rc(Windows.Graphics.Display.Core.HdmiDisplayMode;{0c06d5ad-1b90-4f51-9981-ef5a1c0ddf66})
+    default Windows.Graphics.Display.Core.IHdmiDisplayMode
+    requires Windows.Graphics.Display.Core.IHdmiDisplayMode
+    requires Windows.Graphics.Display.Core.IHdmiDisplayMode2
+    property bits_per_pixel
+        get get_BitsPerPixel slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=121
+            out uint16 return
+    property color_space
+        get get_ColorSpace slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=162
+            out enum32 type=Windows.Graphics.Display.Core.HdmiDisplayColorSpace return
+    property is2086_metadata_supported
+        get get_Is2086MetadataSupported slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=202
+            out boolean return
+    property is_sdr_luminance_supported
+        get get_IsSdrLuminanceSupported slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=186
+            out boolean return
+    property is_smpte2084_supported
+        get get_IsSmpte2084Supported slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=194
+            out boolean return
+    property pixel_encoding
+        get get_PixelEncoding slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=173
+            out enum32 type=Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding return
+    property refresh_rate
+        get get_RefreshRate slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=62
+            out double return
+    property resolution_height_in_raw_pixels
+        get get_ResolutionHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=43
+            out uint32 return
+    property resolution_width_in_raw_pixels
+        get get_ResolutionWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=22
+            out uint32 return
+    property stereo_enabled
+        get get_StereoEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=99
+            out boolean return
+    property is_dolby_vision_low_latency_supported
+        get get_IsDolbyVisionLowLatencySupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode2 shape=4 reverse=22
+            out boolean return
+    method is_equal
+        method IsEqual slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=51 reverse=144
+            in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
+            out boolean return
+
+enum Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding python_type
+    py HdmiDisplayPixelEncoding
+    signature enum(Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Graphics.Display.Core.IHdmiDisplayInformation
+    guid 130b3c0a-f565-476e-abd5-ea05aee74c69
+
+interface Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics
+    guid 6ce6b260-f42a-4a15-914c-7b8e2a5a65df
+
+interface Windows.Graphics.Display.Core.IHdmiDisplayMode
+    guid 0c06d5ad-1b90-4f51-9981-ef5a1c0ddf66
+
+interface Windows.Graphics.Display.Core.IHdmiDisplayMode2
+    guid 07cd4e9f-4b3c-42b8-84e7-895368718af2
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.Core.HdmiDisplayMode> concrete
+    guid 7d0e7c64-df0e-539a-ab5f-3c260026c5ce
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Display.Core.HdmiDisplayMode;{0c06d5ad-1b90-4f51-9981-ef5a1c0ddf66}))
+    argument Windows.Graphics.Display.Core.HdmiDisplayMode
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.Core.HdmiDisplayInformation,System.Object> concrete
+    guid d109932b-9ce1-5cdd-94c7-93c60c833aa3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Display.Core.HdmiDisplayInformation;{130b3c0a-f565-476e-abd5-ea05aee74c69});cinterface(IInspectable))
+    argument Windows.Graphics.Display.Core.HdmiDisplayInformation
+    argument System.Object
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

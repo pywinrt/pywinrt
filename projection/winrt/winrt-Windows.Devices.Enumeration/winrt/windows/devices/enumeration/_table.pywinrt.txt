@@ -1,0 +1,1033 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Enumeration
+
+class Windows.Devices.Enumeration.DeviceAccessChangedEventArgs python_type
+    py DeviceAccessChangedEventArgs
+    signature rc(Windows.Devices.Enumeration.DeviceAccessChangedEventArgs;{deda0bcc-4f9d-4f58-9dba-a9bc800408d5})
+    default Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs
+    requires Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs
+    requires Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs2
+    requires Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs3
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DeviceAccessStatus return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs2 shape=4 reverse=22
+            out string return
+    property user_prompt_required
+        get get_UserPromptRequired slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs3 shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Enumeration.DeviceAccessInformation python_type
+    py DeviceAccessInformation
+    signature rc(Windows.Devices.Enumeration.DeviceAccessInformation;{0baa9a73-6de5-4915-8ddd-9a0554a6f545})
+    default Windows.Devices.Enumeration.IDeviceAccessInformation
+    requires Windows.Devices.Enumeration.IDeviceAccessInformation
+    requires Windows.Devices.Enumeration.IDeviceAccessInformation2
+    factory Windows.Devices.Enumeration.IDeviceAccessInformationStatics
+    property current_status
+        get get_CurrentStatus slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation shape=4 reverse=62
+            out enum32 type=Windows.Devices.Enumeration.DeviceAccessStatus return
+    property user_prompt_required
+        get get_UserPromptRequired slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation2 shape=4 reverse=22
+            out boolean return
+    event access_changed
+        add add_AccessChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceAccessInformation,Windows.Devices.Enumeration.DeviceAccessChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AccessChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation shape=26 reverse=53
+            in event_token name=cookie
+    method create_from_device_class static
+        method CreateFromDeviceClass slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformationStatics shape=51 reverse=65 static
+            in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
+            out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
+    method create_from_device_class_id static
+        method CreateFromDeviceClassId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformationStatics shape=94 reverse=54 static
+            in guid name=deviceClassId
+            out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
+    method create_from_id static
+        method CreateFromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformationStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
+
+enum Windows.Devices.Enumeration.DeviceAccessStatus python_type
+    py DeviceAccessStatus
+    signature enum(Windows.Devices.Enumeration.DeviceAccessStatus;i4)
+
+enum Windows.Devices.Enumeration.DeviceClass python_type
+    py DeviceClass
+    signature enum(Windows.Devices.Enumeration.DeviceClass;i4)
+
+class Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails python_type
+    py DeviceConnectionChangeTriggerDetails
+    signature rc(Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails;{b8578c0c-bbc1-484b-bffa-7b31dcc200b2})
+    default Windows.Devices.Enumeration.IDeviceConnectionChangeTriggerDetails
+    requires Windows.Devices.Enumeration.IDeviceConnectionChangeTriggerDetails
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceConnectionChangeTriggerDetails shape=4 reverse=22
+            out string return
+
+class Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs python_type
+    py DeviceDisconnectButtonClickedEventArgs
+    signature rc(Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs;{8e44b56d-f902-4a00-b536-f37992e6a2a7})
+    default Windows.Devices.Enumeration.IDeviceDisconnectButtonClickedEventArgs
+    requires Windows.Devices.Enumeration.IDeviceDisconnectButtonClickedEventArgs
+    property device
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceDisconnectButtonClickedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+
+class Windows.Devices.Enumeration.DeviceInformation python_type
+    py DeviceInformation
+    signature rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f})
+    default Windows.Devices.Enumeration.IDeviceInformation
+    requires Windows.Devices.Enumeration.IDeviceInformation
+    requires Windows.Devices.Enumeration.IDeviceInformation2
+    factory Windows.Devices.Enumeration.IDeviceInformationStatics2
+    factory Windows.Devices.Enumeration.IDeviceInformationStatics3
+    factory Windows.Devices.Enumeration.IDeviceInformationStatics
+    property enclosure_location
+        get get_EnclosureLocation slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=121
+            out class type=Windows.Devices.Enumeration.EnclosureLocation return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=22
+            out string return
+    property is_default
+        get get_IsDefault slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=99
+            out boolean return
+    property is_enabled
+        get get_IsEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=62
+            out boolean return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=43
+            out string return
+    property properties
+        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DeviceInformationKind return
+    property pairing
+        get get_Pairing slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation2 shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DeviceInformationPairing return
+    method create_from_id_async static
+        method CreateFromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
+            in string name=deviceId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+        method CreateFromIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
+            in string name=deviceId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+        method CreateFromIdAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
+            in string name=deviceId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+        method CreateFromIdAsync slot=6 inputs=4 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics3 shape=239 reverse=27 static
+            in string name=deviceId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+    method create_watcher static
+        method CreateWatcher slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+        method CreateWatcher slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=174 static default_overload
+            in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+        method CreateWatcher slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+        method CreateWatcher slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+        method CreateWatcher slot=8 inputs=4 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics3 shape=239 reverse=69 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+    method create_watcher_aqs_filter static
+        method CreateWatcher slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out class type=Windows.Devices.Enumeration.DeviceWatcher return
+    method find_all_async static
+        method FindAllAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+        method FindAllAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=100 static default_overload
+            in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+        method FindAllAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+        method FindAllAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+        method FindAllAsync slot=7 inputs=4 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics3 shape=239 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+    method find_all_async_aqs_filter static
+        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+            in string name=aqsFilter
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
+            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
+    method get_aqs_filter_from_device_class static
+        method GetAqsFilterFromDeviceClass slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
+            out string return
+    method get_glyph_thumbnail_async
+        method GetGlyphThumbnailAsync slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=186
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceThumbnail> return
+    method get_thumbnail_async
+        method GetThumbnailAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceThumbnail> return
+    method update
+        method Update slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=162
+            in class type=Windows.Devices.Enumeration.DeviceInformationUpdate name=updateInfo
+
+class Windows.Devices.Enumeration.DeviceInformationCollection python_type iterable sequence
+    py DeviceInformationCollection
+    signature rc(Windows.Devices.Enumeration.DeviceInformationCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f})))
+    default Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceInformation>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceInformation> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Enumeration.DeviceInformation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Enumeration.DeviceInformation name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> shape=117 reverse=66
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Devices.Enumeration.DeviceInformationCustomPairing python_type
+    py DeviceInformationCustomPairing
+    signature rc(Windows.Devices.Enumeration.DeviceInformationCustomPairing;{85138c02-4ee6-4914-8370-107a39144c0e})
+    default Windows.Devices.Enumeration.IDeviceInformationCustomPairing
+    requires Windows.Devices.Enumeration.IDeviceInformationCustomPairing
+    requires Windows.Devices.Enumeration.IDeviceInformationCustomPairing2
+    event pairing_requested
+        add add_PairingRequested slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_PairingRequested slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=26 reverse=134
+            in event_token name=token
+    event pairing_set_members_requested
+        add add_PairingSetMembersRequested slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_PairingSetMembersRequested slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=26 reverse=82
+            in event_token name=token
+    method add_pairing_set_member
+        method AddPairingSetMember slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=4 reverse=22
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=device
+    method pair_async
+        method PairAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=51 reverse=24
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds name=pairingKindsSupported
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+        method PairAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=117 reverse=45
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds name=pairingKindsSupported
+            in enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel name=minProtectionLevel
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+        method PairAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=195 reverse=68
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds name=pairingKindsSupported
+            in enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel name=minProtectionLevel
+            in interface type=Windows.Devices.Enumeration.IDevicePairingSettings name=devicePairingSettings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+
+enum Windows.Devices.Enumeration.DeviceInformationKind python_type
+    py DeviceInformationKind
+    signature enum(Windows.Devices.Enumeration.DeviceInformationKind;i4)
+
+class Windows.Devices.Enumeration.DeviceInformationPairing python_type
+    py DeviceInformationPairing
+    signature rc(Windows.Devices.Enumeration.DeviceInformationPairing;{2c4769f5-f684-40d5-8469-e8dbaab70485})
+    default Windows.Devices.Enumeration.IDeviceInformationPairing
+    requires Windows.Devices.Enumeration.IDeviceInformationPairing
+    requires Windows.Devices.Enumeration.IDeviceInformationPairing2
+    factory Windows.Devices.Enumeration.IDeviceInformationPairingStatics2
+    factory Windows.Devices.Enumeration.IDeviceInformationPairingStatics
+    property can_pair
+        get get_CanPair slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing shape=4 reverse=43
+            out boolean return
+    property is_paired
+        get get_IsPaired slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing shape=4 reverse=22
+            out boolean return
+    property custom
+        get get_Custom slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing2 shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DeviceInformationCustomPairing return
+    property protection_level
+        get get_ProtectionLevel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel return
+    method pair_async
+        method PairAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+        method PairAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing shape=51 reverse=100
+            in enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel name=minProtectionLevel
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+        method PairAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing2 shape=117 reverse=66
+            in enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel name=minProtectionLevel
+            in interface type=Windows.Devices.Enumeration.IDevicePairingSettings name=devicePairingSettings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> return
+    method try_register_for_all_inbound_pairing_requests static
+        method TryRegisterForAllInboundPairingRequests slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairingStatics shape=51 reverse=24 static
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds name=pairingKindsSupported
+            out boolean return
+    method try_register_for_all_inbound_pairing_requests_with_protection_level static
+        method TryRegisterForAllInboundPairingRequestsWithProtectionLevel slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairingStatics2 shape=117 reverse=25 static
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds name=pairingKindsSupported
+            in enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel name=minProtectionLevel
+            out boolean return
+    method unpair_async
+        method UnpairAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceUnpairingResult> return
+
+class Windows.Devices.Enumeration.DeviceInformationUpdate python_type
+    py DeviceInformationUpdate
+    signature rc(Windows.Devices.Enumeration.DeviceInformationUpdate;{8f315305-d972-44b7-a37e-9e822c78213b})
+    default Windows.Devices.Enumeration.IDeviceInformationUpdate
+    requires Windows.Devices.Enumeration.IDeviceInformationUpdate
+    requires Windows.Devices.Enumeration.IDeviceInformationUpdate2
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationUpdate shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationUpdate shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationUpdate2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DeviceInformationKind return
+
+enum Windows.Devices.Enumeration.DevicePairingAddPairingSetMemberStatus python_type
+    py DevicePairingAddPairingSetMemberStatus
+    signature enum(Windows.Devices.Enumeration.DevicePairingAddPairingSetMemberStatus;i4)
+
+enum Windows.Devices.Enumeration.DevicePairingKinds python_type
+    py DevicePairingKinds
+    signature enum(Windows.Devices.Enumeration.DevicePairingKinds;u4)
+
+enum Windows.Devices.Enumeration.DevicePairingProtectionLevel python_type
+    py DevicePairingProtectionLevel
+    signature enum(Windows.Devices.Enumeration.DevicePairingProtectionLevel;i4)
+
+class Windows.Devices.Enumeration.DevicePairingRequestedEventArgs python_type
+    py DevicePairingRequestedEventArgs
+    signature rc(Windows.Devices.Enumeration.DevicePairingRequestedEventArgs;{f717fc56-de6b-487f-8376-0180aca69963})
+    default Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs
+    requires Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs
+    requires Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
+    requires Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs3
+    property device_information
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property pairing_kind
+        get get_PairingKind slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=4 reverse=43
+            out enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds return
+    property pin
+        get get_Pin slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=4 reverse=62
+            out string return
+    method accept
+        method Accept slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=0 reverse=93
+        method Accept slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=4 reverse=121
+            in string name=pin
+    method accept_with_address
+        method AcceptWithAddress slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs3 shape=4 reverse=22
+            in string name=address
+    method accept_with_password_credential
+        method AcceptWithPasswordCredential slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2 shape=4 reverse=22
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+    method get_deferral
+        method GetDeferral slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs shape=4 reverse=141
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Devices.Enumeration.DevicePairingResult python_type
+    py DevicePairingResult
+    signature rc(Windows.Devices.Enumeration.DevicePairingResult;{072b02bf-dd95-4025-9b37-de51adba37b7})
+    default Windows.Devices.Enumeration.IDevicePairingResult
+    requires Windows.Devices.Enumeration.IDevicePairingResult
+    property protection_level_used
+        get get_ProtectionLevelUsed slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingResult shape=4 reverse=43
+            out enum32 type=Windows.Devices.Enumeration.DevicePairingProtectionLevel return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DevicePairingResultStatus return
+
+enum Windows.Devices.Enumeration.DevicePairingResultStatus python_type
+    py DevicePairingResultStatus
+    signature enum(Windows.Devices.Enumeration.DevicePairingResultStatus;i4)
+
+class Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs python_type
+    py DevicePairingSetMembersRequestedEventArgs
+    signature rc(Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs;{7fb42cff-ecac-5012-8d7d-a1894680a349})
+    default Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs
+    requires Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs
+    property pairing_set_members
+        get get_PairingSetMembers slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> return
+    property parent_device_information
+        get get_ParentDeviceInformation slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DevicePairingAddPairingSetMemberStatus return
+
+class Windows.Devices.Enumeration.DevicePicker activatable python_type
+    py DevicePicker
+    signature rc(Windows.Devices.Enumeration.DevicePicker;{84997aa2-034a-4440-8813-7d0bd479bf5a})
+    default Windows.Devices.Enumeration.IDevicePicker
+    requires Windows.Devices.Enumeration.IDevicePicker
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property appearance
+        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DevicePickerAppearance return
+    property filter
+        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DevicePickerFilter return
+    property requested_properties
+        get get_RequestedProperties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    event device_picker_dismissed
+        add add_DevicePickerDismissed slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,System.Object> name=handler
+            out event_token return
+        remove remove_DevicePickerDismissed slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=192
+            in event_token name=token
+    event device_selected
+        add add_DeviceSelected slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceSelectedEventArgs> name=handler
+            out event_token return
+        remove remove_DeviceSelected slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=134
+            in event_token name=token
+    event disconnect_button_clicked
+        add add_DisconnectButtonClicked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs> name=handler
+            out event_token return
+        remove remove_DisconnectButtonClicked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=167
+            in event_token name=token
+    method hide
+        method Hide slot=19 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=0 reverse=221
+    method pick_single_device_async
+        method PickSingleDeviceAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+        method PickSingleDeviceAsync slot=18 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=143
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=placement
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
+    method set_display_status
+        method SetDisplayStatus slot=20 inputs=3 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=117 reverse=230
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=device
+            in string name=status
+            in enum_u32 type=Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions name=options
+    method show
+        method Show slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=8
+            in struct type=Windows.Foundation.Rect name=selection
+        method Show slot=16 inputs=2 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=placement
+
+class Windows.Devices.Enumeration.DevicePickerAppearance python_type
+    py DevicePickerAppearance
+    signature rc(Windows.Devices.Enumeration.DevicePickerAppearance;{e69a12c6-e627-4ed8-9b6c-460af445e56d})
+    default Windows.Devices.Enumeration.IDevicePickerAppearance
+    requires Windows.Devices.Enumeration.IDevicePickerAppearance
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=22
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=43
+            in string name=value
+    property selected_foreground_color
+        get get_SelectedForegroundColor slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=186
+            out struct type=Windows.UI.Color return
+        put put_SelectedForegroundColor slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29
+            in struct type=Windows.UI.Color name=value
+    property selected_background_color
+        get get_SelectedBackgroundColor slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=202
+            out struct type=Windows.UI.Color return
+        put put_SelectedBackgroundColor slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29 reverse=216
+            in struct type=Windows.UI.Color name=value
+    property selected_accent_color
+        get get_SelectedAccentColor slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=218
+            out struct type=Windows.UI.Color return
+        put put_SelectedAccentColor slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29
+            in struct type=Windows.UI.Color name=value
+    property foreground_color
+        get get_ForegroundColor slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+        put put_ForegroundColor slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29 reverse=113
+            in struct type=Windows.UI.Color name=value
+    property background_color
+        get get_BackgroundColor slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=121
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29 reverse=157
+            in struct type=Windows.UI.Color name=value
+    property accent_color
+        get get_AccentColor slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=4 reverse=162
+            out struct type=Windows.UI.Color return
+        put put_AccentColor slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29
+            in struct type=Windows.UI.Color name=value
+
+enum Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions python_type
+    py DevicePickerDisplayStatusOptions
+    signature enum(Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions;u4)
+
+class Windows.Devices.Enumeration.DevicePickerFilter python_type
+    py DevicePickerFilter
+    signature rc(Windows.Devices.Enumeration.DevicePickerFilter;{91db92a2-57cb-48f1-9b59-a59b7a1f02a2})
+    default Windows.Devices.Enumeration.IDevicePickerFilter
+    requires Windows.Devices.Enumeration.IDevicePickerFilter
+    property supported_device_classes
+        get get_SupportedDeviceClasses slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerFilter shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Enumeration.DeviceClass> return
+    property supported_device_selectors
+        get get_SupportedDeviceSelectors slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePickerFilter shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Devices.Enumeration.DeviceSelectedEventArgs python_type
+    py DeviceSelectedEventArgs
+    signature rc(Windows.Devices.Enumeration.DeviceSelectedEventArgs;{269edade-1d2f-4940-8402-4156b81d3c77})
+    default Windows.Devices.Enumeration.IDeviceSelectedEventArgs
+    requires Windows.Devices.Enumeration.IDeviceSelectedEventArgs
+    property selected_device
+        get get_SelectedDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceSelectedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+
+class Windows.Devices.Enumeration.DeviceThumbnail python_type closeable
+    py DeviceThumbnail
+    signature rc(Windows.Devices.Enumeration.DeviceThumbnail;{cc254827-4b3d-438f-9232-10c76bc7e038})
+    default Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    requires Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    requires Windows.Storage.Streams.IRandomAccessStream
+    requires Windows.Foundation.IClosable
+    requires Windows.Storage.Streams.IInputStream
+    requires Windows.Storage.Streams.IOutputStream
+    requires Windows.Storage.Streams.IContentTypeProvider
+    property content_type
+        get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
+            out string return
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=22
+            out uint64 return
+        put put_Size slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=40
+            in uint64 name=value
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=186
+            out boolean return
+    property position
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=121
+            out uint64 return
+    method clone_stream
+        method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method flush_async
+        method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_input_stream_at
+        method GetInputStreamAt slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=60
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method get_output_stream_at
+        method GetOutputStreamAt slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=47 reverse=98
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method read_async
+        method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in uint32 name=count
+            in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
+    method seek
+        method Seek slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Streams.IRandomAccessStream shape=3 reverse=140
+            in uint64 name=position
+    method write_async
+        method WriteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
+
+class Windows.Devices.Enumeration.DeviceUnpairingResult python_type
+    py DeviceUnpairingResult
+    signature rc(Windows.Devices.Enumeration.DeviceUnpairingResult;{66f44ad3-79d9-444b-92cf-a92ef72571c7})
+    default Windows.Devices.Enumeration.IDeviceUnpairingResult
+    requires Windows.Devices.Enumeration.IDeviceUnpairingResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceUnpairingResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DeviceUnpairingResultStatus return
+
+enum Windows.Devices.Enumeration.DeviceUnpairingResultStatus python_type
+    py DeviceUnpairingResultStatus
+    signature enum(Windows.Devices.Enumeration.DeviceUnpairingResultStatus;i4)
+
+class Windows.Devices.Enumeration.DeviceWatcher python_type
+    py DeviceWatcher
+    signature rc(Windows.Devices.Enumeration.DeviceWatcher;{c9eab97d-8f6b-4f96-a9f4-abc814e22271})
+    default Windows.Devices.Enumeration.IDeviceWatcher
+    requires Windows.Devices.Enumeration.IDeviceWatcher
+    requires Windows.Devices.Enumeration.IDeviceWatcher2
+    property status
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=4 reverse=202
+            out enum32 type=Windows.Devices.Enumeration.DeviceWatcherStatus return
+    event added
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation> name=handler
+            out event_token return
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=53
+            in event_token name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=181
+            in event_token name=token
+    event removed
+        add add_Removed slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate> name=handler
+            out event_token return
+        remove remove_Removed slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=156
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=200
+            in event_token name=token
+    event updated
+        add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate> name=handler
+            out event_token return
+        remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=110
+            in event_token name=token
+    method get_background_trigger
+        method GetBackgroundTrigger slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher2 shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceWatcherEventKind> name=requestedEventKinds
+            out class type=Windows.ApplicationModel.Background.DeviceWatcherTrigger return
+    method start
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=0 reverse=209
+    method stop
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=0 reverse=217
+
+class Windows.Devices.Enumeration.DeviceWatcherEvent python_type
+    py DeviceWatcherEvent
+    signature rc(Windows.Devices.Enumeration.DeviceWatcherEvent;{74aa9c0b-1dbd-47fd-b635-3cc556d0ff8b})
+    default Windows.Devices.Enumeration.IDeviceWatcherEvent
+    requires Windows.Devices.Enumeration.IDeviceWatcherEvent
+    property device_information
+        get get_DeviceInformation slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcherEvent shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property device_information_update
+        get get_DeviceInformationUpdate slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcherEvent shape=4 reverse=62
+            out class type=Windows.Devices.Enumeration.DeviceInformationUpdate return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcherEvent shape=4 reverse=22
+            out enum32 type=Windows.Devices.Enumeration.DeviceWatcherEventKind return
+
+enum Windows.Devices.Enumeration.DeviceWatcherEventKind python_type
+    py DeviceWatcherEventKind
+    signature enum(Windows.Devices.Enumeration.DeviceWatcherEventKind;i4)
+
+enum Windows.Devices.Enumeration.DeviceWatcherStatus python_type
+    py DeviceWatcherStatus
+    signature enum(Windows.Devices.Enumeration.DeviceWatcherStatus;i4)
+
+class Windows.Devices.Enumeration.DeviceWatcherTriggerDetails python_type
+    py DeviceWatcherTriggerDetails
+    signature rc(Windows.Devices.Enumeration.DeviceWatcherTriggerDetails;{38808119-4cb7-4e57-a56d-776d07cbfef9})
+    default Windows.Devices.Enumeration.IDeviceWatcherTriggerDetails
+    requires Windows.Devices.Enumeration.IDeviceWatcherTriggerDetails
+    property device_watcher_events
+        get get_DeviceWatcherEvents slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcherTriggerDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceWatcherEvent> return
+
+class Windows.Devices.Enumeration.EnclosureLocation python_type
+    py EnclosureLocation
+    signature rc(Windows.Devices.Enumeration.EnclosureLocation;{42340a27-5810-459c-aabb-c65e1f813ecf})
+    default Windows.Devices.Enumeration.IEnclosureLocation
+    requires Windows.Devices.Enumeration.IEnclosureLocation
+    requires Windows.Devices.Enumeration.IEnclosureLocation2
+    property in_dock
+        get get_InDock slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IEnclosureLocation shape=4 reverse=22
+            out boolean return
+    property in_lid
+        get get_InLid slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IEnclosureLocation shape=4 reverse=43
+            out boolean return
+    property panel
+        get get_Panel slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IEnclosureLocation shape=4 reverse=62
+            out enum32 type=Windows.Devices.Enumeration.Panel return
+    property rotation_angle_in_degrees_clockwise
+        get get_RotationAngleInDegreesClockwise slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IEnclosureLocation2 shape=4 reverse=22
+            out uint32 return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> concrete
+    guid 07faa053-eb2f-5cba-b25b-d9d57be6715f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))
+    argument Windows.Devices.Enumeration.DeviceInformation
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> concrete
+    guid 45180254-082e-5274-b2e7-ac0517f44d07
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Enumeration.DeviceInformationCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))))
+    argument Windows.Devices.Enumeration.DeviceInformationCollection
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DevicePairingResult> concrete
+    guid 1002db74-8948-591e-815d-e40b667599a3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Enumeration.DevicePairingResult;{072b02bf-dd95-4025-9b37-de51adba37b7}))
+    argument Windows.Devices.Enumeration.DevicePairingResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceThumbnail> concrete
+    guid bac083a3-3a19-5072-9d90-133323a049ba
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Enumeration.DeviceThumbnail;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    argument Windows.Devices.Enumeration.DeviceThumbnail
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceUnpairingResult> concrete
+    guid 2bb4df3d-bd7e-5fe0-9020-56dc0d30b935
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Enumeration.DeviceUnpairingResult;{66f44ad3-79d9-444b-92cf-a92ef72571c7}))
+    argument Windows.Devices.Enumeration.DeviceUnpairingResult
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+    guid eccb574a-c684-5572-a679-6b0842cfb57f
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    argument System.UInt32
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    guid d26b2819-897f-5c7d-84d6-56d796561431
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+
+interface Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs
+    guid deda0bcc-4f9d-4f58-9dba-a9bc800408d5
+
+interface Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs2
+    guid 82523262-934b-4b30-a178-adc39f2f2be3
+
+interface Windows.Devices.Enumeration.IDeviceAccessChangedEventArgs3
+    guid 7580a878-7fd9-5cd7-8560-3c644b9b10db
+
+interface Windows.Devices.Enumeration.IDeviceAccessInformation
+    guid 0baa9a73-6de5-4915-8ddd-9a0554a6f545
+
+interface Windows.Devices.Enumeration.IDeviceAccessInformation2
+    guid e2b9dff6-e88f-5d0a-9c1e-d788808df47b
+
+interface Windows.Devices.Enumeration.IDeviceAccessInformationStatics
+    guid 574bd3d3-5f30-45cd-8a94-724fe5973084
+
+interface Windows.Devices.Enumeration.IDeviceConnectionChangeTriggerDetails
+    guid b8578c0c-bbc1-484b-bffa-7b31dcc200b2
+
+interface Windows.Devices.Enumeration.IDeviceDisconnectButtonClickedEventArgs
+    guid 8e44b56d-f902-4a00-b536-f37992e6a2a7
+
+interface Windows.Devices.Enumeration.IDeviceEnumerationSettings python_type
+    py _IDeviceEnumerationSettings
+    guid f7710f66-9ff3-41c8-85eb-87f81148a30f
+    signature {f7710f66-9ff3-41c8-85eb-87f81148a30f}
+
+interface Windows.Devices.Enumeration.IDeviceInformation
+    guid aba0fb95-4398-489d-8e44-e6130927011f
+
+interface Windows.Devices.Enumeration.IDeviceInformation2
+    guid f156a638-7997-48d9-a10c-269d46533f48
+
+interface Windows.Devices.Enumeration.IDeviceInformationCustomPairing
+    guid 85138c02-4ee6-4914-8370-107a39144c0e
+
+interface Windows.Devices.Enumeration.IDeviceInformationCustomPairing2
+    guid 0ebda662-e696-5fa9-8f72-80cfebcd851d
+
+interface Windows.Devices.Enumeration.IDeviceInformationPairing
+    guid 2c4769f5-f684-40d5-8469-e8dbaab70485
+
+interface Windows.Devices.Enumeration.IDeviceInformationPairing2
+    guid f68612fd-0aee-4328-85cc-1c742bb1790d
+
+interface Windows.Devices.Enumeration.IDeviceInformationPairingStatics
+    guid e915c408-36d4-49a1-bf13-514173799b6b
+
+interface Windows.Devices.Enumeration.IDeviceInformationPairingStatics2
+    guid 04de5372-b7b7-476b-a74f-c5836a704d98
+
+interface Windows.Devices.Enumeration.IDeviceInformationStatics
+    guid c17f100e-3a46-4a78-8013-769dc9b97390
+
+interface Windows.Devices.Enumeration.IDeviceInformationStatics2
+    guid 493b4f34-a84f-45fd-9167-15d1cb1bd1f9
+
+interface Windows.Devices.Enumeration.IDeviceInformationStatics3
+    guid 25f06279-9364-5a6c-8a54-5d4a6d3d922a
+
+interface Windows.Devices.Enumeration.IDeviceInformationUpdate
+    guid 8f315305-d972-44b7-a37e-9e822c78213b
+
+interface Windows.Devices.Enumeration.IDeviceInformationUpdate2
+    guid 5d9d148c-a873-485e-baa6-aa620788e3cc
+
+interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs
+    guid f717fc56-de6b-487f-8376-0180aca69963
+
+interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs2
+    guid c83752d9-e4d3-4db0-a360-a105e437dbdc
+
+interface Windows.Devices.Enumeration.IDevicePairingRequestedEventArgs3
+    guid 195e5a38-43dc-562f-babe-efc8b110088b
+
+interface Windows.Devices.Enumeration.IDevicePairingResult
+    guid 072b02bf-dd95-4025-9b37-de51adba37b7
+
+interface Windows.Devices.Enumeration.IDevicePairingSetMembersRequestedEventArgs
+    guid 7fb42cff-ecac-5012-8d7d-a1894680a349
+
+interface Windows.Devices.Enumeration.IDevicePairingSettings python_type
+    py _IDevicePairingSettings
+    guid 482cb27c-83bb-420e-be51-6602b222de54
+    signature {482cb27c-83bb-420e-be51-6602b222de54}
+
+interface Windows.Devices.Enumeration.IDevicePicker
+    guid 84997aa2-034a-4440-8813-7d0bd479bf5a
+
+interface Windows.Devices.Enumeration.IDevicePickerAppearance
+    guid e69a12c6-e627-4ed8-9b6c-460af445e56d
+
+interface Windows.Devices.Enumeration.IDevicePickerFilter
+    guid 91db92a2-57cb-48f1-9b59-a59b7a1f02a2
+
+interface Windows.Devices.Enumeration.IDeviceSelectedEventArgs
+    guid 269edade-1d2f-4940-8402-4156b81d3c77
+
+interface Windows.Devices.Enumeration.IDeviceUnpairingResult
+    guid 66f44ad3-79d9-444b-92cf-a92ef72571c7
+
+interface Windows.Devices.Enumeration.IDeviceWatcher
+    guid c9eab97d-8f6b-4f96-a9f4-abc814e22271
+
+interface Windows.Devices.Enumeration.IDeviceWatcher2
+    guid ff08456e-ed14-49e9-9a69-8117c54ae971
+
+interface Windows.Devices.Enumeration.IDeviceWatcherEvent
+    guid 74aa9c0b-1dbd-47fd-b635-3cc556d0ff8b
+
+interface Windows.Devices.Enumeration.IDeviceWatcherTriggerDetails
+    guid 38808119-4cb7-4e57-a56d-776d07cbfef9
+
+interface Windows.Devices.Enumeration.IEnclosureLocation
+    guid 42340a27-5810-459c-aabb-c65e1f813ecf
+
+interface Windows.Devices.Enumeration.IEnclosureLocation2
+    guid 2885995b-e07d-485d-8a9e-bdf29aef4f66
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceInformation> concrete
+    guid dd9f8a5d-ec98-5f4b-a3ea-9c8b5ad53c4b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))
+    argument Windows.Devices.Enumeration.DeviceInformation
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceWatcherEventKind> concrete
+    guid f04365ab-d3f3-5f85-a7da-dc19cff73d86
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.Enumeration.DeviceWatcherEventKind;i4))
+    argument Windows.Devices.Enumeration.DeviceWatcherEventKind
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Enumeration.DeviceInformation> concrete
+    guid 6f85d843-e8ab-5b46-85d7-327c58d18712
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))
+    argument Windows.Devices.Enumeration.DeviceInformation
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Enumeration.DeviceClass> concrete
+    guid ee662d37-b0eb-5729-9832-156fd2889d48
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Enumeration.DeviceClass;i4))
+    argument Windows.Devices.Enumeration.DeviceClass
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> concrete
+    guid e170688f-3495-5bf6-aab5-9cac17e0f10f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))
+    argument Windows.Devices.Enumeration.DeviceInformation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceWatcherEvent> concrete
+    guid 8f994d37-8fab-51c6-a1e0-c93f68a20ef0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.DeviceWatcherEvent;{74aa9c0b-1dbd-47fd-b635-3cc556d0ff8b}))
+    argument Windows.Devices.Enumeration.DeviceWatcherEvent
+
+enum Windows.Devices.Enumeration.Panel python_type
+    py Panel
+    signature enum(Windows.Devices.Enumeration.Panel;i4)
+
+enum T parameterized
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceAccessInformation,Windows.Devices.Enumeration.DeviceAccessChangedEventArgs> concrete
+    guid 4c71d028-b793-5bce-ae59-fa77f45a40d8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceAccessInformation;{0baa9a73-6de5-4915-8ddd-9a0554a6f545});rc(Windows.Devices.Enumeration.DeviceAccessChangedEventArgs;{deda0bcc-4f9d-4f58-9dba-a9bc800408d5}))
+    argument Windows.Devices.Enumeration.DeviceAccessInformation
+    argument Windows.Devices.Enumeration.DeviceAccessChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingRequestedEventArgs> concrete
+    guid fa65231f-4178-5de1-b2cc-03e22d7702b4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceInformationCustomPairing;{85138c02-4ee6-4914-8370-107a39144c0e});rc(Windows.Devices.Enumeration.DevicePairingRequestedEventArgs;{f717fc56-de6b-487f-8376-0180aca69963}))
+    argument Windows.Devices.Enumeration.DeviceInformationCustomPairing
+    argument Windows.Devices.Enumeration.DevicePairingRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs> concrete
+    guid 5cc01096-b025-5d93-8cb2-5c4dfa992e07
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceInformationCustomPairing;{85138c02-4ee6-4914-8370-107a39144c0e});rc(Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs;{7fb42cff-ecac-5012-8d7d-a1894680a349}))
+    argument Windows.Devices.Enumeration.DeviceInformationCustomPairing
+    argument Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,System.Object> concrete
+    guid 62c6d98c-57ee-5bb8-a41c-958d20c3f3e8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DevicePicker;{84997aa2-034a-4440-8813-7d0bd479bf5a});cinterface(IInspectable))
+    argument Windows.Devices.Enumeration.DevicePicker
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs> concrete
+    guid 35dd0319-5723-506c-8896-1a28b82be798
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DevicePicker;{84997aa2-034a-4440-8813-7d0bd479bf5a});rc(Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs;{8e44b56d-f902-4a00-b536-f37992e6a2a7}))
+    argument Windows.Devices.Enumeration.DevicePicker
+    argument Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceSelectedEventArgs> concrete
+    guid 47e48c88-1c56-5b58-96a2-8e813d25077a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DevicePicker;{84997aa2-034a-4440-8813-7d0bd479bf5a});rc(Windows.Devices.Enumeration.DeviceSelectedEventArgs;{269edade-1d2f-4940-8402-4156b81d3c77}))
+    argument Windows.Devices.Enumeration.DevicePicker
+    argument Windows.Devices.Enumeration.DeviceSelectedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,System.Object> concrete
+    guid 9234630f-1ff4-54f6-9e3f-ac20369b7725
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceWatcher;{c9eab97d-8f6b-4f96-a9f4-abc814e22271});cinterface(IInspectable))
+    argument Windows.Devices.Enumeration.DeviceWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation> concrete
+    guid 03c5a07b-990c-5d09-b0b8-5734eaa38222
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceWatcher;{c9eab97d-8f6b-4f96-a9f4-abc814e22271});rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f}))
+    argument Windows.Devices.Enumeration.DeviceWatcher
+    argument Windows.Devices.Enumeration.DeviceInformation
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate> concrete
+    guid 906f1254-79ad-54fc-93c4-cdb99b437899
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Enumeration.DeviceWatcher;{c9eab97d-8f6b-4f96-a9f4-abc814e22271});rc(Windows.Devices.Enumeration.DeviceInformationUpdate;{8f315305-d972-44b7-a37e-9e822c78213b}))
+    argument Windows.Devices.Enumeration.DeviceWatcher
+    argument Windows.Devices.Enumeration.DeviceInformationUpdate
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class Windows.ApplicationModel.Background.DeviceWatcherTrigger external
+    py winrt.windows.applicationmodel.background.DeviceWatcherTrigger
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IContentTypeProvider external
+    py winrt.windows.storage.streams._IContentTypeProvider
+    guid 97d098a5-3b99-4de9-88a5-e11d2f50c795
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+enum Windows.Storage.Streams.InputStreamOptions external
+    py winrt.windows.storage.streams.InputStreamOptions
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement

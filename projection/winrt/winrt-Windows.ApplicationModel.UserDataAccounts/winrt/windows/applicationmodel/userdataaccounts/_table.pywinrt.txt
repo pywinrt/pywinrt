@@ -1,0 +1,348 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserDataAccounts
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> concrete
+    guid f0aeb2af-a69b-5caa-a283-32e697a65d31
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccount;{b9c4367e-b348-4910-be94-4ad4bba6dea7}))
+    argument Windows.ApplicationModel.UserDataAccounts.UserDataAccount
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore> concrete
+    guid 06b68f1e-9937-5296-a55e-d43dd8a7545c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore;{2073b0ad-7d0a-4e76-bf45-2368f978a59a}))
+    argument Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>> concrete
+    guid d26021ac-99b4-5c40-b0d2-d6835d2e9202
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>> concrete
+    guid a549e2bf-9e24-5352-923d-ff184f96acbb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup>> concrete
+    guid f78d6a56-6e40-5f68-99de-b0ec119ccab2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactGroup;{59bdeb01-9e9a-475d-bfe5-a37b806d852c})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>> concrete
+    guid 79fd4783-5cc9-571b-bc42-e2e2f8ddf967
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>> concrete
+    guid 5bed07ec-f5d5-5b25-b067-9b22a4a762ea
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount>> concrete
+    guid 8461a475-5f2f-5a03-b9f8-01e1324def3b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccount;{b9c4367e-b348-4910-be94-4ad4bba6dea7})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList>> concrete
+    guid 2a4e06ee-9030-5ce6-ad7f-cf551795765d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataTasks.UserDataTaskList;{49412e39-7c1d-4df1-bed3-314b7cbf5e4e})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList>
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccount
+    guid b9c4367e-b348-4910-be94-4ad4bba6dea7
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2
+    guid 078cd89f-de82-404b-8195-c8a3ac198f60
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3
+    guid 01533845-6c43-4286-9d69-3e1709a1f266
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4
+    guid c4315210-eae5-4f0a-a8b2-1cca115e008f
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser
+    guid 56a6e8db-db8f-41ab-a65f-8c5971aac982
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics
+    guid 0d9b89ea-1928-4a20-86d5-3c737f7dc3b0
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2
+    guid 6a3ded88-316b-435e-b534-f7d4b4b7dba6
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore
+    guid 2073b0ad-7d0a-4e76-bf45-2368f978a59a
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2
+    guid b1e0aef7-9560-4631-8af0-061d30161469
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore3
+    guid 8142c094-f3c9-478b-b117-6585bebb6789
+
+interface Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStoreChangedEventArgs
+    guid 84e3e2e5-8820-4512-b1f6-2e035be1072c
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar> concrete
+    guid 774512d3-a564-5f8d-b104-3ec8f2a1104f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentCalendar
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> concrete
+    guid 3bf71d9d-2037-5e08-a7e1-b937cf74bbd9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactAnnotationList;{92a486aa-5c88-45b9-aad0-461888e68d8a}))
+    argument Windows.ApplicationModel.Contacts.ContactAnnotationList
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup> concrete
+    guid 124493aa-1617-5d0a-a5b6-4d1156fa95e5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactGroup;{59bdeb01-9e9a-475d-bfe5-a37b806d852c}))
+    argument Windows.ApplicationModel.Contacts.ContactGroup
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> concrete
+    guid a55c7dcf-e3c9-5afa-8667-ca68230d7724
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Contacts.ContactList;{16ddec75-392c-4845-9dfb-51a3e7ef3e42}))
+    argument Windows.ApplicationModel.Contacts.ContactList
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox> concrete
+    guid d4816e16-43c9-5b63-a444-6189acb56f6e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailMailbox;{a8790649-cf5b-411b-80b1-4a6a1484ce25}))
+    argument Windows.ApplicationModel.Email.EmailMailbox
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> concrete
+    guid 65f4f73e-3271-5999-93d8-5a3d78be13a6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccount;{b9c4367e-b348-4910-be94-4ad4bba6dea7}))
+    argument Windows.ApplicationModel.UserDataAccounts.UserDataAccount
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> concrete
+    guid 0910e3ae-2075-5486-866f-f1590ade3616
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataTasks.UserDataTaskList;{49412e39-7c1d-4df1-bed3-314b7cbf5e4e}))
+    argument Windows.ApplicationModel.UserDataTasks.UserDataTaskList
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore,Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs> concrete
+    guid 7b27aec8-0690-5063-beb0-d9e2eb1a1201
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore;{2073b0ad-7d0a-4e76-bf45-2368f978a59a});rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs;{84e3e2e5-8820-4512-b1f6-2e035be1072c}))
+    argument Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore
+    argument Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs
+
+class Windows.ApplicationModel.UserDataAccounts.UserDataAccount python_type
+    py UserDataAccount
+    signature rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccount;{b9c4367e-b348-4910-be94-4ad4bba6dea7})
+    default Windows.ApplicationModel.UserDataAccounts.IUserDataAccount
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccount
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4
+    property user_display_name
+        get get_UserDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=43
+            out string return
+        put put_UserDisplayName slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=62
+            in string name=value
+    property other_app_read_access
+        get get_OtherAppReadAccess slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess return
+        put put_OtherAppReadAccess slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=121
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess name=value
+    property icon
+        get get_Icon slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=141
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Icon slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property device_account_type_id
+        get get_DeviceAccountTypeId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=162
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=22
+            out string return
+    property package_family_name
+        get get_PackageFamilyName slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=173
+            out string return
+    property is_protected_under_lock
+        get get_IsProtectedUnderLock slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2 shape=4 reverse=43
+            out boolean return
+        put put_IsProtectedUnderLock slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=162
+            in boolean name=value
+    property enterprise_id
+        get get_EnterpriseId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount2 shape=4 reverse=22
+            out string return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3 shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3 shape=4 reverse=62
+            in string name=value
+    property explict_read_access_package_family_names
+        get get_ExplictReadAccessPackageFamilyNames slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount3 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property can_show_create_contact_group
+        get get_CanShowCreateContactGroup slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=22
+            out boolean return
+        put put_CanShowCreateContactGroup slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=43
+            in boolean name=value
+    property provider_properties
+        get get_ProviderProperties slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=62
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    method delete_async
+        method DeleteAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=194
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_appointment_calendars_async
+        method FindAppointmentCalendarsAsync slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=202
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>> return
+    method find_contact_annotation_lists_async
+        method FindContactAnnotationListsAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=223
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>> return
+    method find_contact_groups_async
+        method FindContactGroupsAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup>> return
+    method find_contact_lists_async
+        method FindContactListsAsync slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=218
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>> return
+    method find_email_mailboxes_async
+        method FindEmailMailboxesAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=210
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox>> return
+    method find_user_data_task_lists_async
+        method FindUserDataTaskListsAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList>> return
+    method save_async
+        method SaveAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount shape=4 reverse=186
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_show_create_contact_group_async
+        method TryShowCreateContactGroupAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+
+enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds python_type
+    py UserDataAccountContentKinds
+    signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds;u4)
+
+class Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager static python_type
+    py UserDataAccountManager
+    factory Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2
+    factory Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser return
+    method request_store_async static
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics shape=51 reverse=24 static
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType name=storeAccessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore> return
+    method show_account_error_resolver_async static
+        method ShowAccountErrorResolverAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics shape=51 reverse=100 static
+            in string name=id
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_account_settings_async static
+        method ShowAccountSettingsAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics shape=51 reverse=65 static
+            in string name=id
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_add_account_async static
+        method ShowAddAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics shape=51 reverse=44 static
+            in enum_u32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds name=contentKinds
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+
+class Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser python_type
+    py UserDataAccountManagerForUser
+    signature rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser;{56a6e8db-db8f-41ab-a65f-8c5971aac982})
+    default Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser shape=4 reverse=43
+            out class type=Windows.System.User return
+    method request_store_async
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerForUser shape=51 reverse=24
+            in enum32 type=Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType name=storeAccessType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore> return
+
+enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess python_type
+    py UserDataAccountOtherAppReadAccess
+    signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess;i4)
+
+class Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore python_type
+    py UserDataAccountStore
+    signature rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore;{2073b0ad-7d0a-4e76-bf45-2368f978a59a})
+    default Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore3
+    event store_changed
+        add add_StoreChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore,Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StoreChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2 shape=26 reverse=82
+            in event_token name=token
+    method create_account_async
+        method CreateAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore shape=51 reverse=65
+            in string name=userDisplayName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> return
+        method CreateAccountAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore2 shape=117 reverse=25
+            in string name=userDisplayName
+            in string name=packageRelativeAppId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> return
+        method CreateAccountAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore3 shape=195 reverse=26
+            in string name=userDisplayName
+            in string name=packageRelativeAppId
+            in string name=enterpriseId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> return
+    method find_accounts_async
+        method FindAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount>> return
+    method get_account_async
+        method GetAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStore shape=51 reverse=44
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> return
+
+enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType python_type
+    py UserDataAccountStoreAccessType
+    signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType;i4)
+
+class Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs python_type
+    py UserDataAccountStoreChangedEventArgs
+    signature rc(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs;{84e3e2e5-8820-4512-b1f6-2e035be1072c})
+    default Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStoreChangedEventArgs
+    requires Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStoreChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountStoreChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Appointments.AppointmentCalendar external
+    py winrt.windows.applicationmodel.appointments.AppointmentCalendar
+
+class Windows.ApplicationModel.Contacts.ContactAnnotationList external
+    py winrt.windows.applicationmodel.contacts.ContactAnnotationList
+
+class Windows.ApplicationModel.Contacts.ContactGroup external
+    py winrt.windows.applicationmodel.contacts.ContactGroup
+
+class Windows.ApplicationModel.Contacts.ContactList external
+    py winrt.windows.applicationmodel.contacts.ContactList
+
+class Windows.ApplicationModel.Email.EmailMailbox external
+    py winrt.windows.applicationmodel.email.EmailMailbox
+
+class Windows.ApplicationModel.UserDataTasks.UserDataTaskList external
+    py winrt.windows.applicationmodel.userdatatasks.UserDataTaskList
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.System.User external
+    py winrt.windows.system.User

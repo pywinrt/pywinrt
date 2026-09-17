@@ -1,0 +1,762 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Storage.BulkAccess
+
+class Windows.Storage.BulkAccess.FileInformation python_type
+    py FileInformation
+    signature rc(Windows.Storage.BulkAccess.FileInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa})
+    default Windows.Storage.BulkAccess.IStorageItemInformation
+    requires Windows.Storage.BulkAccess.IStorageItemInformation
+    requires Windows.Storage.IStorageFile
+    requires Windows.Storage.IStorageItem
+    requires Windows.Storage.Streams.IRandomAccessStreamReference
+    requires Windows.Storage.Streams.IInputStreamReference
+    requires Windows.Storage.IStorageItemProperties
+    requires Windows.Storage.IStorageItem2
+    requires Windows.Storage.IStorageItemPropertiesWithProvider
+    requires Windows.Storage.IStorageFilePropertiesWithAvailability
+    requires Windows.Storage.IStorageFile2
+    property basic_properties
+        get get_BasicProperties slot=10 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=121
+            out class type=Windows.Storage.FileProperties.BasicProperties return
+    property document_properties
+        get get_DocumentProperties slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=99
+            out class type=Windows.Storage.FileProperties.DocumentProperties return
+    property image_properties
+        get get_ImageProperties slot=8 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=62
+            out class type=Windows.Storage.FileProperties.ImageProperties return
+    property music_properties
+        get get_MusicProperties slot=6 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=22
+            out class type=Windows.Storage.FileProperties.MusicProperties return
+    property thumbnail
+        get get_Thumbnail slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=141
+            out class type=Windows.Storage.FileProperties.StorageItemThumbnail return
+    property video_properties
+        get get_VideoProperties slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=43
+            out class type=Windows.Storage.FileProperties.VideoProperties return
+    property content_type
+        get get_ContentType slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFile shape=4 reverse=43
+            out string return
+    property file_type
+        get get_FileType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFile shape=4 reverse=22
+            out string return
+    property is_available
+        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFilePropertiesWithAvailability shape=4 reverse=22
+            out boolean return
+    property attributes
+        get get_Attributes slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=173
+            out enum_u32 type=Windows.Storage.FileAttributes return
+    property date_created
+        get get_DateCreated slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=186
+            out datetime return
+    property name
+        get get_Name slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=141
+            out string return
+    property path
+        get get_Path slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=162
+            out string return
+    property display_name
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=99
+            out string return
+    property display_type
+        get get_DisplayType slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=121
+            out string return
+    property folder_relative_id
+        get get_FolderRelativeId slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=141
+            out string return
+    property properties
+        get get_Properties slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=162
+            out class type=Windows.Storage.FileProperties.StorageItemContentProperties return
+    property provider
+        get get_Provider slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemPropertiesWithProvider shape=4 reverse=22
+            out class type=Windows.Storage.StorageProvider return
+    event properties_updated
+        add add_PropertiesUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_PropertiesUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=200
+            in event_token name=eventCookie
+    event thumbnail_updated
+        add add_ThumbnailUpdated slot=12 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_ThumbnailUpdated slot=13 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=181
+            in event_token name=eventCookie
+    method copy_and_replace_async
+        method CopyAndReplaceAsync slot=13 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile shape=51 reverse=174
+            in interface type=Windows.Storage.IStorageFile name=fileToReplace
+            out interface type=Windows.Foundation.IAsyncAction return
+    method copy_async
+        method CopyAsync slot=10 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile shape=51 reverse=124
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method CopyAsync slot=11 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFile shape=117 reverse=145
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            in string name=desiredNewName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method CopyAsync slot=12 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFile shape=195 reverse=165
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            in string name=desiredNewName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method delete_async
+        method DeleteAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+        method DeleteAsync slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=100
+            in enum32 type=Windows.Storage.StorageDeleteOption name=option
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_basic_properties_async
+        method GetBasicPropertiesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.BasicProperties> return
+    method get_parent_async
+        method GetParentAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_thumbnail_async
+        method GetThumbnailAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=51 reverse=24
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+        method GetThumbnailAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=117 reverse=45
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedSize
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+        method GetThumbnailAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=195 reverse=68
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedSize
+            in enum_u32 type=Windows.Storage.FileProperties.ThumbnailOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+    method is_equal
+        method IsEqual slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem2 shape=51 reverse=44
+            in interface type=Windows.Storage.IStorageItem name=item
+            out boolean return
+    method is_of_type
+        method IsOfType slot=15 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=196
+            in enum_u32 type=Windows.Storage.StorageItemTypes name=type
+            out boolean return
+    method move_and_replace_async
+        method MoveAndReplaceAsync slot=17 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile shape=51 reverse=211
+            in interface type=Windows.Storage.IStorageFile name=fileToReplace
+            out interface type=Windows.Foundation.IAsyncAction return
+    method move_async
+        method MoveAsync slot=14 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile shape=51 reverse=187
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            out interface type=Windows.Foundation.IAsyncAction return
+        method MoveAsync slot=15 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFile shape=117 reverse=197
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            in string name=desiredNewName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method MoveAsync slot=16 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFile shape=195 reverse=205
+            in interface type=Windows.Storage.IStorageFolder name=destinationFolder
+            in string name=desiredNewName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            out interface type=Windows.Foundation.IAsyncAction return
+    method open_async
+        method OpenAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile shape=51 reverse=65
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+        method OpenAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFile2 shape=117 reverse=25
+            in enum32 type=Windows.Storage.FileAccessMode name=accessMode
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+    method open_read_async
+        method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+    method open_sequential_read_async
+        method OpenSequentialReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IInputStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> return
+    method open_transacted_write_async
+        method OpenTransactedWriteAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFile shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+        method OpenTransactedWriteAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFile2 shape=51 reverse=44
+            in enum_u32 type=Windows.Storage.StorageOpenOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
+    method rename_async
+        method RenameAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=24
+            in string name=desiredName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method RenameAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IStorageItem shape=117 reverse=45
+            in string name=desiredName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Storage.BulkAccess.FileInformationFactory python_type
+    py FileInformationFactory
+    signature rc(Windows.Storage.BulkAccess.FileInformationFactory;{401d88be-960f-4d6d-a7d0-1a3861e76c83})
+    default Windows.Storage.BulkAccess.IFileInformationFactory
+    requires Windows.Storage.BulkAccess.IFileInformationFactory
+    factory Windows.Storage.BulkAccess.IFileInformationFactoryFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=117 reverse=25
+            in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            out class type=Windows.Storage.BulkAccess.FileInformationFactory return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=195 reverse=46
+            in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedThumbnailSize
+            out class type=Windows.Storage.BulkAccess.FileInformationFactory return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=239 reverse=69
+            in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedThumbnailSize
+            in enum_u32 type=Windows.Storage.FileProperties.ThumbnailOptions name=thumbnailOptions
+            out class type=Windows.Storage.BulkAccess.FileInformationFactory return
+        ctor .ctor slot=9 inputs=5 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=267
+            in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedThumbnailSize
+            in enum_u32 type=Windows.Storage.FileProperties.ThumbnailOptions name=thumbnailOptions
+            in boolean name=delayLoad
+            out class type=Windows.Storage.BulkAccess.FileInformationFactory return
+    method get_files_async
+        method GetFilesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>> return
+        method GetFilesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=66
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>> return
+    method get_folders_async
+        method GetFoldersAsync slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>> return
+        method GetFoldersAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=125
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>> return
+    method get_items_async
+        method GetItemsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>> return
+        method GetItemsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=25
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>> return
+    method get_virtualized_files_vector
+        method GetVirtualizedFilesVector slot=13 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=173
+            out object return
+    method get_virtualized_folders_vector
+        method GetVirtualizedFoldersVector slot=14 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=186
+            out object return
+    method get_virtualized_items_vector
+        method GetVirtualizedItemsVector slot=12 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=162
+            out object return
+
+class Windows.Storage.BulkAccess.FolderInformation python_type
+    py FolderInformation
+    signature rc(Windows.Storage.BulkAccess.FolderInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa})
+    default Windows.Storage.BulkAccess.IStorageItemInformation
+    requires Windows.Storage.BulkAccess.IStorageItemInformation
+    requires Windows.Storage.IStorageFolder
+    requires Windows.Storage.IStorageItem
+    requires Windows.Storage.IStorageItemProperties
+    requires Windows.Storage.Search.IStorageFolderQueryOperations
+    requires Windows.Storage.IStorageItem2
+    requires Windows.Storage.IStorageFolder2
+    requires Windows.Storage.IStorageItemPropertiesWithProvider
+    property basic_properties
+        get get_BasicProperties slot=10 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=121
+            out class type=Windows.Storage.FileProperties.BasicProperties return
+    property document_properties
+        get get_DocumentProperties slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=99
+            out class type=Windows.Storage.FileProperties.DocumentProperties return
+    property image_properties
+        get get_ImageProperties slot=8 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=62
+            out class type=Windows.Storage.FileProperties.ImageProperties return
+    property music_properties
+        get get_MusicProperties slot=6 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=22
+            out class type=Windows.Storage.FileProperties.MusicProperties return
+    property thumbnail
+        get get_Thumbnail slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=141
+            out class type=Windows.Storage.FileProperties.StorageItemThumbnail return
+    property video_properties
+        get get_VideoProperties slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=43
+            out class type=Windows.Storage.FileProperties.VideoProperties return
+    property attributes
+        get get_Attributes slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=173
+            out enum_u32 type=Windows.Storage.FileAttributes return
+    property date_created
+        get get_DateCreated slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=186
+            out datetime return
+    property name
+        get get_Name slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=141
+            out string return
+    property path
+        get get_Path slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=162
+            out string return
+    property display_name
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=99
+            out string return
+    property display_type
+        get get_DisplayType slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=121
+            out string return
+    property folder_relative_id
+        get get_FolderRelativeId slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=141
+            out string return
+    property properties
+        get get_Properties slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=4 reverse=162
+            out class type=Windows.Storage.FileProperties.StorageItemContentProperties return
+    property provider
+        get get_Provider slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItemPropertiesWithProvider shape=4 reverse=22
+            out class type=Windows.Storage.StorageProvider return
+    event properties_updated
+        add add_PropertiesUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_PropertiesUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=200
+            in event_token name=eventCookie
+    event thumbnail_updated
+        add add_ThumbnailUpdated slot=12 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_ThumbnailUpdated slot=13 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=181
+            in event_token name=eventCookie
+    method are_query_options_supported
+        method AreQueryOptionsSupported slot=20 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=229
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out boolean return
+    method create_file_async
+        method CreateFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder shape=51 reverse=24
+            in string name=desiredName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method CreateFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFolder shape=117 reverse=45
+            in string name=desiredName
+            in enum32 type=Windows.Storage.CreationCollisionOption name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method create_file_query
+        method CreateFileQuery slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=43
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+        method CreateFileQuery slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=65
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    method create_file_query_with_options
+        method CreateFileQueryWithOptions slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=100
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    method create_folder_async
+        method CreateFolderAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder shape=51 reverse=65
+            in string name=desiredName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+        method CreateFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFolder shape=117 reverse=101
+            in string name=desiredName
+            in enum32 type=Windows.Storage.CreationCollisionOption name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method create_folder_query
+        method CreateFolderQuery slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=121
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+        method CreateFolderQuery slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=144
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+    method create_folder_query_with_options
+        method CreateFolderQueryWithOptions slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=163
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageFolderQueryResult return
+    method create_item_query
+        method CreateItemQuery slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=173
+            out class type=Windows.Storage.Search.StorageItemQueryResult return
+    method create_item_query_with_options
+        method CreateItemQueryWithOptions slot=14 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=187
+            in class type=Windows.Storage.Search.QueryOptions name=queryOptions
+            out class type=Windows.Storage.Search.StorageItemQueryResult return
+    method delete_async
+        method DeleteAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+        method DeleteAsync slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=100
+            in enum32 type=Windows.Storage.StorageDeleteOption name=option
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_basic_properties_async
+        method GetBasicPropertiesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.BasicProperties> return
+    method get_file_async
+        method GetFileAsync slot=10 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder shape=51 reverse=124
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method get_files_async
+        method GetFilesAsync slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFolder shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+        method GetFilesAsync slot=16 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=203
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+        method GetFilesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=195 reverse=198
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+    method get_folder_async
+        method GetFolderAsync slot=11 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder shape=51 reverse=144
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_folders_async
+        method GetFoldersAsync slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFolder shape=4 reverse=186
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+        method GetFoldersAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=219
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+        method GetFoldersAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=195 reverse=212
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+    method get_indexed_state_async
+        method GetIndexedStateAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> return
+    method get_item_async
+        method GetItemAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder shape=51 reverse=163
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+    method get_items_async
+        method GetItemsAsync slot=15 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFolder shape=4 reverse=194
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+        method GetItemsAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=117 reverse=225
+            in uint32 name=startIndex
+            in uint32 name=maxItemsToRetrieve
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+    method get_parent_async
+        method GetParentAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_thumbnail_async
+        method GetThumbnailAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=51 reverse=24
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+        method GetThumbnailAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=117 reverse=45
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedSize
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+        method GetThumbnailAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IStorageItemProperties shape=195 reverse=68
+            in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
+            in uint32 name=requestedSize
+            in enum_u32 type=Windows.Storage.FileProperties.ThumbnailOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> return
+    method is_common_file_query_supported
+        method IsCommonFileQuerySupported slot=22 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=238
+            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query
+            out boolean return
+    method is_common_folder_query_supported
+        method IsCommonFolderQuerySupported slot=21 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageFolderQueryOperations shape=51 reverse=233
+            in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
+            out boolean return
+    method is_equal
+        method IsEqual slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem2 shape=51 reverse=44
+            in interface type=Windows.Storage.IStorageItem name=item
+            out boolean return
+    method is_of_type
+        method IsOfType slot=15 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=196
+            in enum_u32 type=Windows.Storage.StorageItemTypes name=type
+            out boolean return
+    method rename_async
+        method RenameAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageItem shape=51 reverse=24
+            in string name=desiredName
+            out interface type=Windows.Foundation.IAsyncAction return
+        method RenameAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IStorageItem shape=117 reverse=45
+            in string name=desiredName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_get_item_async
+        method TryGetItemAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder2 shape=51 reverse=24
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>> concrete
+    guid 222f6bb6-e71e-55cb-885d-e051e35995dc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.BulkAccess.FileInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>> concrete
+    guid 7f10e569-2bf7-5752-8f75-602809a7d304
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.BulkAccess.FolderInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>> concrete
+    guid 413d160c-3e1a-5603-acba-1e176d6a6082
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{87a5cb8b-8972-4f40-8de0-d86fb179d8fa}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete
+    guid 4b1c0fd7-7a01-5e7a-a6fe-be4500283f23
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete
+    guid 03362e33-e413-5f29-97d0-48a4780935f9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> concrete
+    guid ca40b21b-aeb1-5a61-9e08-3bd5d9594023
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.BasicProperties> concrete
+    guid 5186131a-4467-504b-977a-0785a8230485
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.BasicProperties;{d05d55db-785e-4a66-be02-9beec58aea81}))
+    argument Windows.Storage.FileProperties.BasicProperties
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> concrete
+    guid 11c7cc5e-c04e-50e7-a65e-6f6903690c16
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.StorageItemThumbnail;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    argument Windows.Storage.FileProperties.StorageItemThumbnail
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> concrete
+    guid 5fc9c137-ebb7-5e6c-9cba-686f2ec2b0bb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> concrete
+    guid 88694b1f-f380-574d-8a05-4f67bd52cd11
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Storage.Search.IndexedState;i4))
+    argument Windows.Storage.Search.IndexedState
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+    guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> concrete
+    guid 6be9e7d7-e83a-5cbc-802c-1768960b52c3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> concrete
+    guid 0d81405a-9bd3-5e87-82f4-9b4128a887eb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageStreamTransaction;{f67cf363-a53d-4d94-ae2c-67232d93acdd}))
+    argument Windows.Storage.StorageStreamTransaction
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+    guid a8fe0732-556d-5841-b7ee-b3450fb52666
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IInputStream
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete
+    guid 430ecece-1418-5d19-81b2-5ddb381603cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IRandomAccessStream
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+
+interface Windows.Storage.BulkAccess.IFileInformationFactory
+    guid 401d88be-960f-4d6d-a7d0-1a3861e76c83
+
+interface Windows.Storage.BulkAccess.IFileInformationFactoryFactory
+    guid 84ea0e7d-e4a2-4f00-8afa-af5e0f826bd5
+
+interface Windows.Storage.BulkAccess.IStorageItemInformation python_type
+    py _IStorageItemInformation
+    guid 87a5cb8b-8972-4f40-8de0-d86fb179d8fa
+    signature {87a5cb8b-8972-4f40-8de0-d86fb179d8fa}
+    property basic_properties
+        get get_BasicProperties slot=10 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=121
+            out class type=Windows.Storage.FileProperties.BasicProperties return
+    property document_properties
+        get get_DocumentProperties slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=99
+            out class type=Windows.Storage.FileProperties.DocumentProperties return
+    property image_properties
+        get get_ImageProperties slot=8 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=62
+            out class type=Windows.Storage.FileProperties.ImageProperties return
+    property music_properties
+        get get_MusicProperties slot=6 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=22
+            out class type=Windows.Storage.FileProperties.MusicProperties return
+    property thumbnail
+        get get_Thumbnail slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=141
+            out class type=Windows.Storage.FileProperties.StorageItemThumbnail return
+    property video_properties
+        get get_VideoProperties slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=4 reverse=43
+            out class type=Windows.Storage.FileProperties.VideoProperties return
+    event properties_updated
+        add add_PropertiesUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_PropertiesUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=200
+            in event_token name=eventCookie
+    event thumbnail_updated
+        add add_ThumbnailUpdated slot=12 inputs=1 outputs=1 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> name=changedHandler
+            out event_token return
+        remove remove_ThumbnailUpdated slot=13 inputs=1 outputs=0 declaring=Windows.Storage.BulkAccess.IStorageItemInformation shape=26 reverse=181
+            in event_token name=eventCookie
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation> concrete
+    guid 50bcd975-67ba-53b7-a5a7-1fb59f04bbb3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.BulkAccess.FileInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa}))
+    argument Windows.Storage.BulkAccess.FileInformation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation> concrete
+    guid 506f1329-dbdc-5a37-91d5-b047cb24276d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.BulkAccess.FolderInformation;{87a5cb8b-8972-4f40-8de0-d86fb179d8fa}))
+    argument Windows.Storage.BulkAccess.FolderInformation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation> concrete
+    guid da3a4ef8-d315-529b-a73b-524490573f7e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{87a5cb8b-8972-4f40-8de0-d86fb179d8fa})
+    argument Windows.Storage.BulkAccess.IStorageItemInformation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete
+    guid 85575a41-06cb-58d0-b98a-7c8f06e6e9d7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+    guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> concrete
+    guid e20debc6-dc4e-542e-a2e7-a24d19c8dd62
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object> concrete
+    guid 5b98b352-e0cf-58de-b2ec-4fd786bbb5a7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{87a5cb8b-8972-4f40-8de0-d86fb179d8fa};cinterface(IInspectable))
+    argument Windows.Storage.BulkAccess.IStorageItemInformation
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+enum Windows.Storage.CreationCollisionOption external
+    py winrt.windows.storage.CreationCollisionOption
+
+enum Windows.Storage.FileAccessMode external
+    py winrt.windows.storage.FileAccessMode
+
+enum Windows.Storage.FileAttributes external
+    py winrt.windows.storage.FileAttributes
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.IStorageFile2 external
+    py winrt.windows.storage._IStorageFile2
+    guid 954e4bcf-0a77-42fb-b777-c2ed58a52e44
+
+interface Windows.Storage.IStorageFilePropertiesWithAvailability external
+    py winrt.windows.storage._IStorageFilePropertiesWithAvailability
+    guid afcbbe9b-582b-4133-9648-e44ca46ee491
+
+interface Windows.Storage.IStorageFolder external
+    py winrt.windows.storage._IStorageFolder
+    guid 72d1cb78-b3ef-4f75-a80b-6fd9dae2944b
+
+interface Windows.Storage.IStorageFolder2 external
+    py winrt.windows.storage._IStorageFolder2
+    guid e827e8b9-08d9-4a8e-a0ac-fe5ed3cbbbd3
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+interface Windows.Storage.IStorageItem2 external
+    py winrt.windows.storage._IStorageItem2
+    guid 53f926d2-083c-4283-b45b-81c007237e44
+
+interface Windows.Storage.IStorageItemProperties external
+    py winrt.windows.storage._IStorageItemProperties
+    guid 86664478-8029-46fe-a789-1c2f3e2ffb5c
+
+interface Windows.Storage.IStorageItemPropertiesWithProvider external
+    py winrt.windows.storage._IStorageItemPropertiesWithProvider
+    guid 861bf39b-6368-4dee-b40e-74684a5ce714
+
+enum Windows.Storage.NameCollisionOption external
+    py winrt.windows.storage.NameCollisionOption
+
+enum Windows.Storage.StorageDeleteOption external
+    py winrt.windows.storage.StorageDeleteOption
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+enum Windows.Storage.StorageItemTypes external
+    py winrt.windows.storage.StorageItemTypes
+
+enum Windows.Storage.StorageOpenOptions external
+    py winrt.windows.storage.StorageOpenOptions
+
+class Windows.Storage.StorageProvider external
+    py winrt.windows.storage.StorageProvider
+
+class Windows.Storage.StorageStreamTransaction external
+    py winrt.windows.storage.StorageStreamTransaction
+
+class Windows.Storage.FileProperties.BasicProperties external
+    py winrt.windows.storage.fileproperties.BasicProperties
+
+class Windows.Storage.FileProperties.DocumentProperties external
+    py winrt.windows.storage.fileproperties.DocumentProperties
+
+class Windows.Storage.FileProperties.ImageProperties external
+    py winrt.windows.storage.fileproperties.ImageProperties
+
+class Windows.Storage.FileProperties.MusicProperties external
+    py winrt.windows.storage.fileproperties.MusicProperties
+
+class Windows.Storage.FileProperties.StorageItemContentProperties external
+    py winrt.windows.storage.fileproperties.StorageItemContentProperties
+
+class Windows.Storage.FileProperties.StorageItemThumbnail external
+    py winrt.windows.storage.fileproperties.StorageItemThumbnail
+
+enum Windows.Storage.FileProperties.ThumbnailMode external
+    py winrt.windows.storage.fileproperties.ThumbnailMode
+
+enum Windows.Storage.FileProperties.ThumbnailOptions external
+    py winrt.windows.storage.fileproperties.ThumbnailOptions
+
+class Windows.Storage.FileProperties.VideoProperties external
+    py winrt.windows.storage.fileproperties.VideoProperties
+
+enum Windows.Storage.Search.CommonFileQuery external
+    py winrt.windows.storage.search.CommonFileQuery
+
+enum Windows.Storage.Search.CommonFolderQuery external
+    py winrt.windows.storage.search.CommonFolderQuery
+
+interface Windows.Storage.Search.IStorageFolderQueryOperations external
+    py winrt.windows.storage.search._IStorageFolderQueryOperations
+    guid cb43ccc9-446b-4a4f-be97-757771be5203
+
+interface Windows.Storage.Search.IStorageQueryResultBase external
+    py winrt.windows.storage.search._IStorageQueryResultBase
+    guid c297d70d-7353-47ab-ba58-8c61425dc54b
+
+enum Windows.Storage.Search.IndexedState external
+    py winrt.windows.storage.search.IndexedState
+
+class Windows.Storage.Search.QueryOptions external
+    py winrt.windows.storage.search.QueryOptions
+
+class Windows.Storage.Search.StorageFileQueryResult external
+    py winrt.windows.storage.search.StorageFileQueryResult
+
+class Windows.Storage.Search.StorageFolderQueryResult external
+    py winrt.windows.storage.search.StorageFolderQueryResult
+
+class Windows.Storage.Search.StorageItemQueryResult external
+    py winrt.windows.storage.search.StorageItemQueryResult
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStreamReference external
+    py winrt.windows.storage.streams._IInputStreamReference
+    guid 43929d18-5ec9-4b5a-919c-4205b0c804b6
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038

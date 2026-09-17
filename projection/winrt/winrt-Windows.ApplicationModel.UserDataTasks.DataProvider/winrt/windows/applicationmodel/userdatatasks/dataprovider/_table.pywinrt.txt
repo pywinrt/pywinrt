@@ -1,0 +1,275 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserDataTasks.DataProvider
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection
+    guid 9ff39d1d-a447-428b-afe9-e5402bdeb041
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails
+    guid ae273202-b1c9-453e-afc5-b30af3bd217d
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest
+    guid f65e14a3-1a42-49da-8552-2873e52c55eb
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs
+    guid d77c393d-4cf2-48ad-87fd-963f0eaa7a95
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest
+    guid 2133772c-55c2-4300-8279-04326e07cce4
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs
+    guid 12c55a52-e378-419b-ae38-a5e9e604476e
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest
+    guid 4b863c68-7657-4f3d-b074-d47ec8df07e7
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs
+    guid 6063dad9-f562-4145-8efe-d50078c92b7f
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest
+    guid ab87e34d-1cd3-431c-9f58-089aa4338d85
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs
+    guid 7a3b924a-cc2f-4e7b-aacd-a5b9d29cfa4e
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest
+    guid 40a73807-7590-4149-ae19-b211431a9f48
+
+interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs
+    guid 8ead1c12-768e-43bd-8385-5cdc351ffdea
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs> concrete
+    guid 6035f9f7-d4c5-5394-b0e3-5d606987ba47
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs;{d77c393d-4cf2-48ad-87fd-963f0eaa7a95}))
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs> concrete
+    guid 28adf45c-6807-5590-a7f1-934747937592
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs;{12c55a52-e378-419b-ae38-a5e9e604476e}))
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs> concrete
+    guid 0b18e688-b269-5ca2-a8f3-d6d10f0fb320
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs;{6063dad9-f562-4145-8efe-d50078c92b7f}))
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs> concrete
+    guid 0887b178-c546-5ac8-ae10-3292ab5265bc
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs;{7a3b924a-cc2f-4e7b-aacd-a5b9d29cfa4e}))
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs> concrete
+    guid b164e8ef-167c-5852-a792-0930b4001871
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs;{8ead1c12-768e-43bd-8385-5cdc351ffdea}))
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
+    argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection python_type
+    py UserDataTaskDataProviderConnection
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection
+    event complete_task_requested
+        add add_CompleteTaskRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs> name=handler
+            out event_token return
+        remove remove_CompleteTaskRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=181
+            in event_token name=token
+    event create_or_update_task_requested
+        add add_CreateOrUpdateTaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs> name=handler
+            out event_token return
+        remove remove_CreateOrUpdateTaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=53
+            in event_token name=token
+    event delete_task_requested
+        add add_DeleteTaskRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs> name=handler
+            out event_token return
+        remove remove_DeleteTaskRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=200
+            in event_token name=token
+    event skip_occurrence_requested
+        add add_SkipOccurrenceRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs> name=handler
+            out event_token return
+        remove remove_SkipOccurrenceRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=156
+            in event_token name=token
+    event sync_requested
+        add add_SyncRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs> name=handler
+            out event_token return
+        remove remove_SyncRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=110
+            in event_token name=token
+    method start
+        method Start slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=0 reverse=201
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails python_type
+    py UserDataTaskDataProviderTriggerDetails
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails;{ae273202-b1c9-453e-afc5-b30af3bd217d})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest python_type
+    py UserDataTaskListCompleteTaskRequest
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest;{f65e14a3-1a42-49da-8552-2873e52c55eb})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest
+    property task_id
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=43
+            out string return
+    property task_list_id
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=51 reverse=65
+            in string name=completedTaskId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs python_type
+    py UserDataTaskListCompleteTaskRequestEventArgs
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs;{d77c393d-4cf2-48ad-87fd-963f0eaa7a95})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest python_type
+    py UserDataTaskListCreateOrUpdateTaskRequest
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest;{2133772c-55c2-4300-8279-04326e07cce4})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest
+    property task
+        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=43
+            out class type=Windows.ApplicationModel.UserDataTasks.UserDataTask return
+    property task_list_id
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=51 reverse=65
+            in class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=createdOrUpdatedUserDataTask
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs python_type
+    py UserDataTaskListCreateOrUpdateTaskRequestEventArgs
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs;{12c55a52-e378-419b-ae38-a5e9e604476e})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest python_type
+    py UserDataTaskListDeleteTaskRequest
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest;{4b863c68-7657-4f3d-b074-d47ec8df07e7})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest
+    property task_id
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=43
+            out string return
+    property task_list_id
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs python_type
+    py UserDataTaskListDeleteTaskRequestEventArgs
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs;{6063dad9-f562-4145-8efe-d50078c92b7f})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest python_type
+    py UserDataTaskListSkipOccurrenceRequest
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest;{ab87e34d-1cd3-431c-9f58-089aa4338d85})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest
+    property task_id
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=43
+            out string return
+    property task_list_id
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs python_type
+    py UserDataTaskListSkipOccurrenceRequestEventArgs
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs;{7a3b924a-cc2f-4e7b-aacd-a5b9d29cfa4e})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest python_type
+    py UserDataTaskListSyncManagerSyncRequest
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest;{40a73807-7590-4149-ae19-b211431a9f48})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest
+    property task_list_id
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs python_type
+    py UserDataTaskListSyncManagerSyncRequestEventArgs
+    signature rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs;{8ead1c12-768e-43bd-8385-5cdc351ffdea})
+    default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs
+    requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserDataTasks.UserDataTask external
+    py winrt.windows.applicationmodel.userdatatasks.UserDataTask
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

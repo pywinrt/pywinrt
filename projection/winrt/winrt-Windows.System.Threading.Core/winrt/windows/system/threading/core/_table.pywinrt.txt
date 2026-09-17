@@ -1,0 +1,92 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Threading.Core
+
+interface Windows.System.Threading.Core.IPreallocatedWorkItem
+    guid b6daa9fc-bc5b-401a-a8b2-6e754d14daa6
+
+interface Windows.System.Threading.Core.IPreallocatedWorkItemFactory
+    guid e3d32b45-dfea-469b-82c5-f6e3cefdeafb
+
+interface Windows.System.Threading.Core.ISignalNotifier
+    guid 14285e06-63a7-4713-b6d9-62f64b56fb8b
+
+interface Windows.System.Threading.Core.ISignalNotifierStatics
+    guid 1c4e4566-8400-46d3-a115-7d0c0dfc9f62
+
+class Windows.System.Threading.Core.PreallocatedWorkItem python_type
+    py PreallocatedWorkItem
+    signature rc(Windows.System.Threading.Core.PreallocatedWorkItem;{b6daa9fc-bc5b-401a-a8b2-6e754d14daa6})
+    default Windows.System.Threading.Core.IPreallocatedWorkItem
+    requires Windows.System.Threading.Core.IPreallocatedWorkItem
+    factory Windows.System.Threading.Core.IPreallocatedWorkItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=51 reverse=24
+            in delegate type=Windows.System.Threading.WorkItemHandler name=handler
+            out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=117 reverse=45
+            in delegate type=Windows.System.Threading.WorkItemHandler name=handler
+            in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
+            out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=195 reverse=68
+            in delegate type=Windows.System.Threading.WorkItemHandler name=handler
+            in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
+            in enum_u32 type=Windows.System.Threading.WorkItemOptions name=options
+            out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
+    method run_async
+        method RunAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItem shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+
+delegate Windows.System.Threading.Core.SignalHandler python_type
+    py SignalHandler
+    guid 923c402e-4721-440e-9dda-55b6f2e07710
+    signature delegate({923c402e-4721-440e-9dda-55b6f2e07710})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Threading.Core.SignalNotifier name=signalNotifier
+            in boolean name=timedOut
+
+class Windows.System.Threading.Core.SignalNotifier python_type
+    py SignalNotifier
+    signature rc(Windows.System.Threading.Core.SignalNotifier;{14285e06-63a7-4713-b6d9-62f64b56fb8b})
+    default Windows.System.Threading.Core.ISignalNotifier
+    requires Windows.System.Threading.Core.ISignalNotifier
+    factory Windows.System.Threading.Core.ISignalNotifierStatics
+    method attach_to_event static
+        method AttachToEvent slot=6 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 reverse=25 static
+            in string name=name
+            in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
+            out class type=Windows.System.Threading.Core.SignalNotifier return
+        method AttachToEvent slot=7 inputs=3 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=200 static
+            in string name=name
+            in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
+            in timespan name=timeout
+            out class type=Windows.System.Threading.Core.SignalNotifier return
+    method attach_to_semaphore static
+        method AttachToSemaphore slot=8 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 reverse=66 static
+            in string name=name
+            in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
+            out class type=Windows.System.Threading.Core.SignalNotifier return
+        method AttachToSemaphore slot=9 inputs=3 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=200 static
+            in string name=name
+            in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
+            in timespan name=timeout
+            out class type=Windows.System.Threading.Core.SignalNotifier return
+    method enable
+        method Enable slot=6 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0 reverse=16
+    method terminate
+        method Terminate slot=7 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0 reverse=37
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+delegate Windows.System.Threading.WorkItemHandler external
+    py winrt.windows.system.threading.WorkItemHandler
+    guid 1d1a8b8b-fa66-414f-9cbd-b65fc99d17fa
+
+enum Windows.System.Threading.WorkItemOptions external
+    py winrt.windows.system.threading.WorkItemOptions
+
+enum Windows.System.Threading.WorkItemPriority external
+    py winrt.windows.system.threading.WorkItemPriority

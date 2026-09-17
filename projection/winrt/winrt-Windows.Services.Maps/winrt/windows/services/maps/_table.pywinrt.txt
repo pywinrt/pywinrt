@@ -1,0 +1,710 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Services.Maps
+
+class Windows.Services.Maps.EnhancedWaypoint python_type
+    py EnhancedWaypoint
+    signature rc(Windows.Services.Maps.EnhancedWaypoint;{ed268c74-5913-11e6-8b77-86f30ca893d3})
+    default Windows.Services.Maps.IEnhancedWaypoint
+    requires Windows.Services.Maps.IEnhancedWaypoint
+    factory Windows.Services.Maps.IEnhancedWaypointFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IEnhancedWaypointFactory shape=117 reverse=25
+            in class type=Windows.Devices.Geolocation.Geopoint name=point
+            in enum32 type=Windows.Services.Maps.WaypointKind name=kind
+            out class type=Windows.Services.Maps.EnhancedWaypoint return
+    property kind
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IEnhancedWaypoint shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.WaypointKind return
+    property point
+        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IEnhancedWaypoint shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFinderResult> concrete
+    guid e5e5ee33-abd8-5695-9fe5-ac95850d7198
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Maps.MapLocationFinderResult;{43f1f179-e8cc-45f6-bed2-54ccbf965d9a}))
+    argument Windows.Services.Maps.MapLocationFinderResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> concrete
+    guid ecaa3e7f-c526-5097-b624-cf743d78a9ba
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Maps.MapRouteFinderResult;{a868a31a-9422-46ac-8ca1-b1614d4bfbe2}))
+    argument Windows.Services.Maps.MapRouteFinderResult
+
+interface Windows.Services.Maps.IEnhancedWaypoint
+    guid ed268c74-5913-11e6-8b77-86f30ca893d3
+
+interface Windows.Services.Maps.IEnhancedWaypointFactory
+    guid af868477-a2aa-46dd-b645-23b31b8aa6c7
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> concrete
+    guid e7617fc9-2cc7-5bd1-bc5a-f47260834ed8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef}))
+    argument Windows.Devices.Geolocation.Geopoint
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.EnhancedWaypoint> concrete
+    guid d0545dba-9b05-5e37-bfc0-3da2b51d135b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.EnhancedWaypoint;{ed268c74-5913-11e6-8b77-86f30ca893d3}))
+    argument Windows.Services.Maps.EnhancedWaypoint
+
+interface Windows.Services.Maps.IManeuverWarning
+    guid c1a36d8a-2630-4378-9e4a-6e44253dceba
+
+interface Windows.Services.Maps.IMapAddress
+    guid cfa7a973-a3b4-4494-b3ff-cba94db69699
+
+interface Windows.Services.Maps.IMapAddress2
+    guid 75cd6df1-e5ad-45a9-bf40-6cf256c1dd13
+
+interface Windows.Services.Maps.IMapLocation
+    guid 3c073f57-0da4-42e8-9ee2-a96fcf2371dc
+
+interface Windows.Services.Maps.IMapLocationFinderResult
+    guid 43f1f179-e8cc-45f6-bed2-54ccbf965d9a
+
+interface Windows.Services.Maps.IMapLocationFinderStatics
+    guid 318adb5d-1c5d-4f35-a2df-aaca94959517
+
+interface Windows.Services.Maps.IMapLocationFinderStatics2
+    guid 959a8b96-6485-4dfd-851a-33ac317e3af6
+
+interface Windows.Services.Maps.IMapManagerStatics
+    guid 37e3e515-82b4-4d54-8fd9-af2624b3011c
+
+interface Windows.Services.Maps.IMapRoute
+    guid fb07b732-584d-4583-9c60-641fea274349
+
+interface Windows.Services.Maps.IMapRoute2
+    guid d1c5d40c-2213-4ab0-a260-46b38169beac
+
+interface Windows.Services.Maps.IMapRoute3
+    guid 858d1eae-f2ad-429f-bb37-cd21094ffc92
+
+interface Windows.Services.Maps.IMapRoute4
+    guid 366c8ca5-3053-4fa1-80ff-d475f3ed1e6e
+
+interface Windows.Services.Maps.IMapRouteDrivingOptions
+    guid 6815364d-c6dc-4697-a452-b18f8f0b67a1
+
+interface Windows.Services.Maps.IMapRouteDrivingOptions2
+    guid 35dc8670-c298-48d0-b5ad-825460645603
+
+interface Windows.Services.Maps.IMapRouteFinderResult
+    guid a868a31a-9422-46ac-8ca1-b1614d4bfbe2
+
+interface Windows.Services.Maps.IMapRouteFinderResult2
+    guid 20709c6d-d90c-46c8-91c6-7d4be4efb215
+
+interface Windows.Services.Maps.IMapRouteFinderStatics
+    guid b8a5c50f-1c64-4c3a-81eb-1f7c152afbbb
+
+interface Windows.Services.Maps.IMapRouteFinderStatics2
+    guid afcc2c73-7760-49af-b3bd-baf135b703e1
+
+interface Windows.Services.Maps.IMapRouteFinderStatics3
+    guid f6098134-5913-11e6-8b77-86f30ca893d3
+
+interface Windows.Services.Maps.IMapRouteLeg
+    guid 96f8b2f6-5bba-4d17-9db6-1a263fec7471
+
+interface Windows.Services.Maps.IMapRouteLeg2
+    guid 02e2062d-c9c6-45b8-8e54-1a10b57a17e8
+
+interface Windows.Services.Maps.IMapRouteManeuver
+    guid ed5c17f0-a6ab-4d65-a086-fa8a7e340df2
+
+interface Windows.Services.Maps.IMapRouteManeuver2
+    guid 5d7bcd9c-7c9b-41df-838b-eae21e4b05a9
+
+interface Windows.Services.Maps.IMapRouteManeuver3
+    guid a6a138df-0483-4166-85be-b99336c11875
+
+interface Windows.Services.Maps.IMapServiceStatics
+    guid 0144ad85-c04c-4cdd-871a-a0726d097cd4
+
+interface Windows.Services.Maps.IMapServiceStatics2
+    guid f8193eed-9c85-40a9-8896-0fc3fd2b7c2a
+
+interface Windows.Services.Maps.IMapServiceStatics3
+    guid 0a11ce20-63a7-4854-b355-d6dcda223d1b
+
+interface Windows.Services.Maps.IMapServiceStatics4
+    guid 088a2862-6abc-420e-945f-4cfd89c67356
+
+interface Windows.Services.Maps.IPlaceInfo
+    guid 9a0810b6-31c8-4f6a-9f18-950b4c38951a
+
+interface Windows.Services.Maps.IPlaceInfoCreateOptions
+    guid cd33c125-67f1-4bb3-9907-ecce939b0399
+
+interface Windows.Services.Maps.IPlaceInfoStatics
+    guid 82b9ff71-6cd0-48a4-afd9-5ed82097936b
+
+interface Windows.Services.Maps.IPlaceInfoStatics2
+    guid 730f0249-4047-44a3-8f81-2550a5216370
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.ManeuverWarning> concrete
+    guid 44c11b20-c16d-56e1-a0a3-6eb44f2492ea
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.ManeuverWarning;{c1a36d8a-2630-4378-9e4a-6e44253dceba}))
+    argument Windows.Services.Maps.ManeuverWarning
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapLocation> concrete
+    guid 58d33d10-e2ef-59f1-b85e-a8819ff0d926
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.MapLocation;{3c073f57-0da4-42e8-9ee2-a96fcf2371dc}))
+    argument Windows.Services.Maps.MapLocation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRoute> concrete
+    guid 265676a9-4a33-5d29-971e-8244a021b84e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.MapRoute;{fb07b732-584d-4583-9c60-641fea274349}))
+    argument Windows.Services.Maps.MapRoute
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteLeg> concrete
+    guid f9976360-b3b0-5a88-b1b6-f4339bb85bf0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.MapRouteLeg;{96f8b2f6-5bba-4d17-9db6-1a263fec7471}))
+    argument Windows.Services.Maps.MapRouteLeg
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteManeuver> concrete
+    guid a3f56695-468f-55ef-b184-c98b4cc7e484
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.MapRouteManeuver;{ed5c17f0-a6ab-4d65-a086-fa8a7e340df2}))
+    argument Windows.Services.Maps.MapRouteManeuver
+
+class Windows.Services.Maps.ManeuverWarning python_type
+    py ManeuverWarning
+    signature rc(Windows.Services.Maps.ManeuverWarning;{c1a36d8a-2630-4378-9e4a-6e44253dceba})
+    default Windows.Services.Maps.IManeuverWarning
+    requires Windows.Services.Maps.IManeuverWarning
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IManeuverWarning shape=4 reverse=22
+            out enum32 type=Windows.Services.Maps.ManeuverWarningKind return
+    property severity
+        get get_Severity slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IManeuverWarning shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.ManeuverWarningSeverity return
+
+enum Windows.Services.Maps.ManeuverWarningKind python_type
+    py ManeuverWarningKind
+    signature enum(Windows.Services.Maps.ManeuverWarningKind;i4)
+
+enum Windows.Services.Maps.ManeuverWarningSeverity python_type
+    py ManeuverWarningSeverity
+    signature enum(Windows.Services.Maps.ManeuverWarningSeverity;i4)
+
+class Windows.Services.Maps.MapAddress python_type
+    py MapAddress
+    signature rc(Windows.Services.Maps.MapAddress;{cfa7a973-a3b4-4494-b3ff-cba94db69699})
+    default Windows.Services.Maps.IMapAddress
+    requires Windows.Services.Maps.IMapAddress
+    requires Windows.Services.Maps.IMapAddress2
+    property building_floor
+        get get_BuildingFloor slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=43
+            out string return
+    property building_name
+        get get_BuildingName slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=22
+            out string return
+    property building_room
+        get get_BuildingRoom slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=62
+            out string return
+    property building_wing
+        get get_BuildingWing slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=99
+            out string return
+    property continent
+        get get_Continent slot=20 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=228
+            out string return
+    property country
+        get get_Country slot=17 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=210
+            out string return
+    property country_code
+        get get_CountryCode slot=18 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=218
+            out string return
+    property district
+        get get_District slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=173
+            out string return
+    property neighborhood
+        get get_Neighborhood slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=162
+            out string return
+    property post_code
+        get get_PostCode slot=19 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=223
+            out string return
+    property region
+        get get_Region slot=15 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=194
+            out string return
+    property region_code
+        get get_RegionCode slot=16 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=202
+            out string return
+    property street
+        get get_Street slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=141
+            out string return
+    property street_number
+        get get_StreetNumber slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=121
+            out string return
+    property town
+        get get_Town slot=14 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress shape=4 reverse=186
+            out string return
+    property formatted_address
+        get get_FormattedAddress slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapAddress2 shape=4 reverse=22
+            out string return
+
+class Windows.Services.Maps.MapLocation python_type
+    py MapLocation
+    signature rc(Windows.Services.Maps.MapLocation;{3c073f57-0da4-42e8-9ee2-a96fcf2371dc})
+    default Windows.Services.Maps.IMapLocation
+    requires Windows.Services.Maps.IMapLocation
+    property address
+        get get_Address slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocation shape=4 reverse=99
+            out class type=Windows.Services.Maps.MapAddress return
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocation shape=4 reverse=62
+            out string return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocation shape=4 reverse=43
+            out string return
+    property point
+        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocation shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+
+enum Windows.Services.Maps.MapLocationDesiredAccuracy python_type
+    py MapLocationDesiredAccuracy
+    signature enum(Windows.Services.Maps.MapLocationDesiredAccuracy;i4)
+
+class Windows.Services.Maps.MapLocationFinder static python_type
+    py MapLocationFinder
+    factory Windows.Services.Maps.IMapLocationFinderStatics
+    factory Windows.Services.Maps.IMapLocationFinderStatics2
+    method find_locations_async static
+        method FindLocationsAsync slot=7 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderStatics shape=117 reverse=45 static
+            in string name=searchText
+            in class type=Windows.Devices.Geolocation.Geopoint name=referencePoint
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFinderResult> return
+        method FindLocationsAsync slot=8 inputs=3 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderStatics shape=195 reverse=68 static
+            in string name=searchText
+            in class type=Windows.Devices.Geolocation.Geopoint name=referencePoint
+            in uint32 name=maxCount
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFinderResult> return
+    method find_locations_at_async static
+        method FindLocationsAtAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderStatics shape=51 reverse=24 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=queryPoint
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFinderResult> return
+        method FindLocationsAtAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderStatics2 shape=117 reverse=25 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=queryPoint
+            in enum32 type=Windows.Services.Maps.MapLocationDesiredAccuracy name=accuracy
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFinderResult> return
+
+class Windows.Services.Maps.MapLocationFinderResult python_type
+    py MapLocationFinderResult
+    signature rc(Windows.Services.Maps.MapLocationFinderResult;{43f1f179-e8cc-45f6-bed2-54ccbf965d9a})
+    default Windows.Services.Maps.IMapLocationFinderResult
+    requires Windows.Services.Maps.IMapLocationFinderResult
+    property locations
+        get get_Locations slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapLocation> return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapLocationFinderResult shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.MapLocationFinderStatus return
+
+enum Windows.Services.Maps.MapLocationFinderStatus python_type
+    py MapLocationFinderStatus
+    signature enum(Windows.Services.Maps.MapLocationFinderStatus;i4)
+
+class Windows.Services.Maps.MapManager static python_type
+    py MapManager
+    factory Windows.Services.Maps.IMapManagerStatics
+    method show_downloaded_maps_ui static
+        method ShowDownloadedMapsUI slot=6 inputs=0 outputs=0 declaring=Windows.Services.Maps.IMapManagerStatics shape=0 reverse=16 static
+    method show_maps_update_ui static
+        method ShowMapsUpdateUI slot=7 inputs=0 outputs=0 declaring=Windows.Services.Maps.IMapManagerStatics shape=0 reverse=37 static
+
+enum Windows.Services.Maps.MapManeuverNotices python_type
+    py MapManeuverNotices
+    signature enum(Windows.Services.Maps.MapManeuverNotices;u4)
+
+class Windows.Services.Maps.MapRoute python_type
+    py MapRoute
+    signature rc(Windows.Services.Maps.MapRoute;{fb07b732-584d-4583-9c60-641fea274349})
+    default Windows.Services.Maps.IMapRoute
+    requires Windows.Services.Maps.IMapRoute
+    requires Windows.Services.Maps.IMapRoute2
+    requires Windows.Services.Maps.IMapRoute3
+    requires Windows.Services.Maps.IMapRoute4
+    property bounding_box
+        get get_BoundingBox slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+    property estimated_duration
+        get get_EstimatedDuration slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=62
+            out timespan return
+    property is_traffic_based
+        get get_IsTrafficBased slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=141
+            out boolean return
+    property legs
+        get get_Legs slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteLeg> return
+    property length_in_meters
+        get get_LengthInMeters slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=43
+            out double return
+    property path
+        get get_Path slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute shape=4 reverse=99
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property has_blocked_roads
+        get get_HasBlockedRoads slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute2 shape=4 reverse=43
+            out boolean return
+    property violated_restrictions
+        get get_ViolatedRestrictions slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute2 shape=4 reverse=22
+            out enum_u32 type=Windows.Services.Maps.MapRouteRestrictions return
+    property duration_without_traffic
+        get get_DurationWithoutTraffic slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute3 shape=4 reverse=22
+            out timespan return
+    property traffic_congestion
+        get get_TrafficCongestion slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute3 shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.TrafficCongestion return
+    property is_scenic
+        get get_IsScenic slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRoute4 shape=4 reverse=22
+            out boolean return
+
+class Windows.Services.Maps.MapRouteDrivingOptions activatable python_type
+    py MapRouteDrivingOptions
+    signature rc(Windows.Services.Maps.MapRouteDrivingOptions;{6815364d-c6dc-4697-a452-b18f8f0b67a1})
+    default Windows.Services.Maps.IMapRouteDrivingOptions
+    requires Windows.Services.Maps.IMapRouteDrivingOptions
+    requires Windows.Services.Maps.IMapRouteDrivingOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property route_restrictions
+        get get_RouteRestrictions slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=162
+            out enum_u32 type=Windows.Services.Maps.MapRouteRestrictions return
+        put put_RouteRestrictions slot=13 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=173
+            in enum_u32 type=Windows.Services.Maps.MapRouteRestrictions name=value
+    property route_optimization
+        get get_RouteOptimization slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=121
+            out enum32 type=Windows.Services.Maps.MapRouteOptimization return
+        put put_RouteOptimization slot=11 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=141
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=value
+    property max_alternate_route_count
+        get get_MaxAlternateRouteCount slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=22
+            out uint32 return
+        put put_MaxAlternateRouteCount slot=7 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=43
+            in uint32 name=value
+    property initial_heading
+        get get_InitialHeading slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+        put put_InitialHeading slot=9 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapRouteDrivingOptions shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Double> name=value
+    property departure_time
+        get get_DepartureTime slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteDrivingOptions2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_DepartureTime slot=7 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapRouteDrivingOptions2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+
+class Windows.Services.Maps.MapRouteFinder static python_type
+    py MapRouteFinder
+    factory Windows.Services.Maps.IMapRouteFinderStatics2
+    factory Windows.Services.Maps.IMapRouteFinderStatics3
+    factory Windows.Services.Maps.IMapRouteFinderStatics
+    method get_driving_route_async static
+        method GetDrivingRouteAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics2 shape=195 reverse=26 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            in class type=Windows.Services.Maps.MapRouteDrivingOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteAsync slot=6 inputs=3 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics2 shape=195 reverse=26 static default_overload
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            in class type=Windows.Services.Maps.MapRouteDrivingOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteAsync slot=8 inputs=4 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=239 reverse=69 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            in enum_u32 type=Windows.Services.Maps.MapRouteRestrictions name=restrictions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteAsync slot=9 inputs=5 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=266 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            in enum_u32 type=Windows.Services.Maps.MapRouteRestrictions name=restrictions
+            in double name=headingInDegrees
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+    method get_driving_route_from_enhanced_waypoints_async static
+        method GetDrivingRouteFromEnhancedWaypointsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics3 shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.EnhancedWaypoint> name=waypoints
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteFromEnhancedWaypointsAsync slot=7 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics3 shape=117 reverse=45 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.EnhancedWaypoint> name=waypoints
+            in class type=Windows.Services.Maps.MapRouteDrivingOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+    method get_driving_route_from_waypoints_async static
+        method GetDrivingRouteFromWaypointsAsync slot=10 inputs=1 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=51 reverse=124 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> name=wayPoints
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteFromWaypointsAsync slot=11 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=117 reverse=145 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> name=wayPoints
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteFromWaypointsAsync slot=12 inputs=3 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=195 reverse=165 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> name=wayPoints
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            in enum_u32 type=Windows.Services.Maps.MapRouteRestrictions name=restrictions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+        method GetDrivingRouteFromWaypointsAsync slot=13 inputs=4 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=238 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> name=wayPoints
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            in enum_u32 type=Windows.Services.Maps.MapRouteRestrictions name=restrictions
+            in double name=headingInDegrees
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+    method get_driving_route_with_optimization_async static
+        method GetDrivingRouteAsync slot=7 inputs=3 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=195 reverse=46 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            in enum32 type=Windows.Services.Maps.MapRouteOptimization name=optimization
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+    method get_walking_route_async static
+        method GetWalkingRouteAsync slot=14 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=117 reverse=188 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
+            in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+    method get_walking_route_from_waypoints_async static
+        method GetWalkingRouteFromWaypointsAsync slot=15 inputs=1 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=51 reverse=196 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> name=wayPoints
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
+
+class Windows.Services.Maps.MapRouteFinderResult python_type
+    py MapRouteFinderResult
+    signature rc(Windows.Services.Maps.MapRouteFinderResult;{a868a31a-9422-46ac-8ca1-b1614d4bfbe2})
+    default Windows.Services.Maps.IMapRouteFinderResult
+    requires Windows.Services.Maps.IMapRouteFinderResult
+    requires Windows.Services.Maps.IMapRouteFinderResult2
+    property route
+        get get_Route slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderResult shape=4 reverse=22
+            out class type=Windows.Services.Maps.MapRoute return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderResult shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.MapRouteFinderStatus return
+    property alternate_routes
+        get get_AlternateRoutes slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderResult2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRoute> return
+
+enum Windows.Services.Maps.MapRouteFinderStatus python_type
+    py MapRouteFinderStatus
+    signature enum(Windows.Services.Maps.MapRouteFinderStatus;i4)
+
+class Windows.Services.Maps.MapRouteLeg python_type
+    py MapRouteLeg
+    signature rc(Windows.Services.Maps.MapRouteLeg;{96f8b2f6-5bba-4d17-9db6-1a263fec7471})
+    default Windows.Services.Maps.IMapRouteLeg
+    requires Windows.Services.Maps.IMapRouteLeg
+    requires Windows.Services.Maps.IMapRouteLeg2
+    property bounding_box
+        get get_BoundingBox slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.GeoboundingBox return
+    property estimated_duration
+        get get_EstimatedDuration slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg shape=4 reverse=99
+            out timespan return
+    property length_in_meters
+        get get_LengthInMeters slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg shape=4 reverse=62
+            out double return
+    property maneuvers
+        get get_Maneuvers slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteManeuver> return
+    property path
+        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg shape=4 reverse=43
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property duration_without_traffic
+        get get_DurationWithoutTraffic slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg2 shape=4 reverse=22
+            out timespan return
+    property traffic_congestion
+        get get_TrafficCongestion slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteLeg2 shape=4 reverse=43
+            out enum32 type=Windows.Services.Maps.TrafficCongestion return
+
+class Windows.Services.Maps.MapRouteManeuver python_type
+    py MapRouteManeuver
+    signature rc(Windows.Services.Maps.MapRouteManeuver;{ed5c17f0-a6ab-4d65-a086-fa8a7e340df2})
+    default Windows.Services.Maps.IMapRouteManeuver
+    requires Windows.Services.Maps.IMapRouteManeuver
+    requires Windows.Services.Maps.IMapRouteManeuver2
+    requires Windows.Services.Maps.IMapRouteManeuver3
+    property exit_number
+        get get_ExitNumber slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=121
+            out string return
+    property instruction_text
+        get get_InstructionText slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=62
+            out string return
+    property kind
+        get get_Kind slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=99
+            out enum32 type=Windows.Services.Maps.MapRouteManeuverKind return
+    property length_in_meters
+        get get_LengthInMeters slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=43
+            out double return
+    property maneuver_notices
+        get get_ManeuverNotices slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=141
+            out enum_u32 type=Windows.Services.Maps.MapManeuverNotices return
+    property starting_point
+        get get_StartingPoint slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver shape=4 reverse=22
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property end_heading
+        get get_EndHeading slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver2 shape=4 reverse=43
+            out double return
+    property start_heading
+        get get_StartHeading slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver2 shape=4 reverse=22
+            out double return
+    property street_name
+        get get_StreetName slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver2 shape=4 reverse=62
+            out string return
+    property warnings
+        get get_Warnings slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapRouteManeuver3 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.ManeuverWarning> return
+
+enum Windows.Services.Maps.MapRouteManeuverKind python_type
+    py MapRouteManeuverKind
+    signature enum(Windows.Services.Maps.MapRouteManeuverKind;i4)
+
+enum Windows.Services.Maps.MapRouteOptimization python_type
+    py MapRouteOptimization
+    signature enum(Windows.Services.Maps.MapRouteOptimization;i4)
+
+enum Windows.Services.Maps.MapRouteRestrictions python_type
+    py MapRouteRestrictions
+    signature enum(Windows.Services.Maps.MapRouteRestrictions;u4)
+
+class Windows.Services.Maps.MapService static python_type
+    py MapService
+    factory Windows.Services.Maps.IMapServiceStatics
+    factory Windows.Services.Maps.IMapServiceStatics4
+    factory Windows.Services.Maps.IMapServiceStatics3
+    factory Windows.Services.Maps.IMapServiceStatics2
+    property service_token static
+        get get_ServiceToken slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapServiceStatics shape=4 reverse=43 static
+            out string return
+        put put_ServiceToken slot=6 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapServiceStatics shape=4 reverse=22 static
+            in string name=value
+    property world_view_region_code static
+        get get_WorldViewRegionCode slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapServiceStatics2 shape=4 reverse=22 static
+            out string return
+    property data_attributions static
+        get get_DataAttributions slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapServiceStatics3 shape=4 reverse=22 static
+            out string return
+    property data_usage_preference static
+        get get_DataUsagePreference slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapServiceStatics4 shape=4 reverse=43 static
+            out enum32 type=Windows.Services.Maps.MapServiceDataUsagePreference return
+        put put_DataUsagePreference slot=6 inputs=1 outputs=0 declaring=Windows.Services.Maps.IMapServiceStatics4 shape=4 reverse=22 static
+            in enum32 type=Windows.Services.Maps.MapServiceDataUsagePreference name=value
+
+enum Windows.Services.Maps.MapServiceDataUsagePreference python_type
+    py MapServiceDataUsagePreference
+    signature enum(Windows.Services.Maps.MapServiceDataUsagePreference;i4)
+
+class Windows.Services.Maps.PlaceInfo python_type
+    py PlaceInfo
+    signature rc(Windows.Services.Maps.PlaceInfo;{9a0810b6-31c8-4f6a-9f18-950b4c38951a})
+    default Windows.Services.Maps.IPlaceInfo
+    requires Windows.Services.Maps.IPlaceInfo
+    factory Windows.Services.Maps.IPlaceInfoStatics
+    factory Windows.Services.Maps.IPlaceInfoStatics2
+    property display_address
+        get get_DisplayAddress slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfo shape=4 reverse=121
+            out string return
+    property display_name
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfo shape=4 reverse=99
+            out string return
+    property geoshape
+        get get_Geoshape slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfo shape=4 reverse=141
+            out interface type=Windows.Devices.Geolocation.IGeoshape return
+    property identifier
+        get get_Identifier slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfo shape=4 reverse=62
+            out string return
+    property is_show_supported static
+        get get_IsShowSupported slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=4 reverse=141 static
+            out boolean return
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=51 reverse=24 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=referencePoint
+            out class type=Windows.Services.Maps.PlaceInfo return
+        method Create slot=7 inputs=2 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=117 reverse=45 static
+            in class type=Windows.Devices.Geolocation.Geopoint name=referencePoint
+            in class type=Windows.Services.Maps.PlaceInfoCreateOptions name=options
+            out class type=Windows.Services.Maps.PlaceInfo return
+    method create_from_address static
+        method CreateFromAddress slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics2 shape=51 reverse=24 static
+            in string name=displayAddress
+            out class type=Windows.Services.Maps.PlaceInfo return
+        method CreateFromAddress slot=7 inputs=2 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics2 shape=117 reverse=45 static
+            in string name=displayAddress
+            in string name=displayName
+            out class type=Windows.Services.Maps.PlaceInfo return
+    method create_from_identifier static
+        method CreateFromIdentifier slot=8 inputs=1 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=51 reverse=65 static
+            in string name=identifier
+            out class type=Windows.Services.Maps.PlaceInfo return
+        method CreateFromIdentifier slot=9 inputs=3 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=195 reverse=102 static
+            in string name=identifier
+            in class type=Windows.Devices.Geolocation.Geopoint name=defaultPoint
+            in class type=Windows.Services.Maps.PlaceInfoCreateOptions name=options
+            out class type=Windows.Services.Maps.PlaceInfo return
+    method create_from_map_location static
+        method CreateFromMapLocation slot=10 inputs=1 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoStatics shape=51 reverse=124 static
+            in class type=Windows.Services.Maps.MapLocation name=location
+            out class type=Windows.Services.Maps.PlaceInfo return
+    method show
+        method Show slot=6 inputs=1 outputs=0 declaring=Windows.Services.Maps.IPlaceInfo shape=8
+            in struct type=Windows.Foundation.Rect name=selection
+        method Show slot=7 inputs=2 outputs=0 declaring=Windows.Services.Maps.IPlaceInfo shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+
+class Windows.Services.Maps.PlaceInfoCreateOptions activatable python_type
+    py PlaceInfoCreateOptions
+    signature rc(Windows.Services.Maps.PlaceInfoCreateOptions;{cd33c125-67f1-4bb3-9907-ecce939b0399})
+    default Windows.Services.Maps.IPlaceInfoCreateOptions
+    requires Windows.Services.Maps.IPlaceInfoCreateOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoCreateOptions shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Services.Maps.IPlaceInfoCreateOptions shape=4 reverse=22
+            in string name=value
+    property display_address
+        get get_DisplayAddress slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.IPlaceInfoCreateOptions shape=4 reverse=99
+            out string return
+        put put_DisplayAddress slot=8 inputs=1 outputs=0 declaring=Windows.Services.Maps.IPlaceInfoCreateOptions shape=4 reverse=62
+            in string name=value
+
+enum Windows.Services.Maps.TrafficCongestion python_type
+    py TrafficCongestion
+    signature enum(Windows.Services.Maps.TrafficCongestion;i4)
+
+enum Windows.Services.Maps.WaypointKind python_type
+    py WaypointKind
+    signature enum(Windows.Services.Maps.WaypointKind;i4)
+
+class System.Double external
+    py winrt.system.Double
+
+class Windows.Devices.Geolocation.GeoboundingBox external
+    py winrt.windows.devices.geolocation.GeoboundingBox
+
+class Windows.Devices.Geolocation.Geopath external
+    py winrt.windows.devices.geolocation.Geopath
+
+class Windows.Devices.Geolocation.Geopoint external
+    py winrt.windows.devices.geolocation.Geopoint
+
+interface Windows.Devices.Geolocation.IGeoshape external
+    py winrt.windows.devices.geolocation._IGeoshape
+    guid c99ca2af-c729-43c1-8fab-d6dec914df7e
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement

@@ -1,0 +1,473 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Store
+
+class Windows.ApplicationModel.Store.CurrentApp static python_type
+    py CurrentApp
+    factory Windows.ApplicationModel.Store.ICurrentApp2Statics
+    factory Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering
+    factory Windows.ApplicationModel.Store.ICurrentAppWithConsumables
+    factory Windows.ApplicationModel.Store.ICurrentAppWithCampaignId
+    factory Windows.ApplicationModel.Store.ICurrentApp
+    property app_id static
+        get get_AppId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=62 static
+            out guid return
+    property license_information static
+        get get_LicenseInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Store.LicenseInformation return
+    property link_uri static
+        get get_LinkUri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=43 static
+            out class type=Windows.Foundation.Uri return
+    method get_app_purchase_campaign_id_async static
+        method GetAppPurchaseCampaignIdAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppWithCampaignId shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_app_receipt_async static
+        method GetAppReceiptAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=162 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_customer_collections_id_async static
+        method GetCustomerCollectionsIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp2Statics shape=117 reverse=45 static
+            in string name=serviceTicket
+            in string name=publisherUserId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_customer_purchase_id_async static
+        method GetCustomerPurchaseIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp2Statics shape=117 reverse=25 static
+            in string name=serviceTicket
+            in string name=publisherUserId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_product_receipt_async static
+        method GetProductReceiptAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=51 reverse=174 static
+            in string name=productId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_unfulfilled_consumables_async static
+        method GetUnfulfilledConsumablesAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppWithConsumables shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.UnfulfilledConsumable>> return
+    method load_listing_information_async static
+        method LoadListingInformationAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=141 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method load_listing_information_by_keywords_async static
+        method LoadListingInformationByKeywordsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=keywords
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method load_listing_information_by_product_ids_async static
+        method LoadListingInformationByProductIdsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productIds
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method report_consumable_fulfillment_async static
+        method ReportConsumableFulfillmentAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppWithConsumables shape=137 static
+            in string name=productId
+            in guid name=transactionId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.FulfillmentResult> return
+    method report_product_fulfillment static
+        method ReportProductFulfillment slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering shape=4 reverse=62 static
+            in string name=productId
+    method request_app_purchase_async static
+        method RequestAppPurchaseAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=51 reverse=100 static
+            in boolean name=includeReceipt
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method request_product_purchase_async static
+        method RequestProductPurchaseAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppWithConsumables shape=51 reverse=44 static
+            in string name=productId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.PurchaseResults> return
+        method RequestProductPurchaseAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=117 reverse=125 static deprecated
+            in string name=productId
+            in boolean name=includeReceipt
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method RequestProductPurchaseAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppWithConsumables shape=195 reverse=68 static
+            in string name=productId
+            in string name=offerId
+            in class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties name=displayProperties
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.PurchaseResults> return
+
+class Windows.ApplicationModel.Store.CurrentAppSimulator static python_type
+    py CurrentAppSimulator
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulator
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering
+    property app_id static
+        get get_AppId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=62 static
+            out guid return
+    property license_information static
+        get get_LicenseInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Store.LicenseInformation return
+    property link_uri static
+        get get_LinkUri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=43 static
+            out class type=Windows.Foundation.Uri return
+    method get_app_purchase_campaign_id_async static
+        method GetAppPurchaseCampaignIdAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_app_receipt_async static
+        method GetAppReceiptAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=162 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_product_receipt_async static
+        method GetProductReceiptAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=51 reverse=174 static
+            in string name=productId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_unfulfilled_consumables_async static
+        method GetUnfulfilledConsumablesAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.UnfulfilledConsumable>> return
+    method load_listing_information_async static
+        method LoadListingInformationAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=141 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method load_listing_information_by_keywords_async static
+        method LoadListingInformationByKeywordsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering shape=51 reverse=44 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=keywords
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method load_listing_information_by_product_ids_async static
+        method LoadListingInformationByProductIdsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering shape=51 reverse=24 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productIds
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> return
+    method reload_simulator_async static
+        method ReloadSimulatorAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=51 reverse=187 static
+            in class type=Windows.Storage.StorageFile name=simulatorSettingsFile
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_consumable_fulfillment_async static
+        method ReportConsumableFulfillmentAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables shape=137 static
+            in string name=productId
+            in guid name=transactionId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.FulfillmentResult> return
+    method request_app_purchase_async static
+        method RequestAppPurchaseAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=51 reverse=100 static
+            in boolean name=includeReceipt
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method request_product_purchase_async static
+        method RequestProductPurchaseAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables shape=51 reverse=44 static
+            in string name=productId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.PurchaseResults> return
+        method RequestProductPurchaseAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=117 reverse=125 static deprecated
+            in string name=productId
+            in boolean name=includeReceipt
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method RequestProductPurchaseAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables shape=195 reverse=68 static
+            in string name=productId
+            in string name=offerId
+            in class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties name=displayProperties
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.PurchaseResults> return
+
+enum Windows.ApplicationModel.Store.FulfillmentResult python_type
+    py FulfillmentResult
+    signature enum(Windows.ApplicationModel.Store.FulfillmentResult;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.FulfillmentResult> concrete
+    guid 5c8531ac-5d8d-5e07-b6ee-7cab96930e8a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Store.FulfillmentResult;i4))
+    argument Windows.ApplicationModel.Store.FulfillmentResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.ListingInformation> concrete
+    guid 161600f7-6d4f-500d-93a8-09ad6b5ac4ab
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.ListingInformation;{588b4abf-bc74-4383-b78c-99606323dece}))
+    argument Windows.ApplicationModel.Store.ListingInformation
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.PurchaseResults> concrete
+    guid 241f6b10-6af6-5164-85eb-bae6bdae0be8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.PurchaseResults;{ed50b37e-8656-4f65-b8c8-ac7e0cb1a1c2}))
+    argument Windows.ApplicationModel.Store.PurchaseResults
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.UnfulfilledConsumable>> concrete
+    guid f1cd679a-3a8f-5e1b-82f1-f2fd0916ca3f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.UnfulfilledConsumable;{2df7fbbb-1cdd-4cb8-a014-7b9cf8986927})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.UnfulfilledConsumable>
+
+interface Windows.ApplicationModel.Store.ICurrentApp
+    guid d52dc065-da3f-4685-995e-9b482eb5e603
+
+interface Windows.ApplicationModel.Store.ICurrentApp2Statics
+    guid df4e6e2d-3171-4ad3-8614-2c61244373cb
+
+interface Windows.ApplicationModel.Store.ICurrentAppSimulator
+    guid f17f9db1-74cd-4787-9787-19866e9a5559
+
+interface Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering
+    guid 617e70e2-f86f-4b54-9666-dde285092c68
+
+interface Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId
+    guid 84678a43-df00-4672-a43f-b25b1441cfcf
+
+interface Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables
+    guid 4e51f0ab-20e7-4412-9b85-59bb78388667
+
+interface Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering
+    guid d36d6542-9085-438e-97ba-a25c976be2fd
+
+interface Windows.ApplicationModel.Store.ICurrentAppWithCampaignId
+    guid 312f4cd0-36c1-44a6-b32b-432d608e4dd6
+
+interface Windows.ApplicationModel.Store.ICurrentAppWithConsumables
+    guid 844e0071-9e4f-4f79-995a-5f91172e6cef
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.ApplicationModel.Store.ILicenseInformation
+    guid 8eb7dc30-f170-4ed5-8e21-1516da3fd367
+
+interface Windows.ApplicationModel.Store.IListingInformation
+    guid 588b4abf-bc74-4383-b78c-99606323dece
+
+interface Windows.ApplicationModel.Store.IListingInformation2
+    guid c0fd2c1d-b30e-4384-84ea-72fefa82223e
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.ProductLicense> concrete
+    guid d6434f65-dd84-534c-b579-cc10d69ec30a
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.Store.ProductLicense;{363308c7-2bcf-4c0e-8f2f-e808aaa8f99d}))
+    argument System.String
+    argument Windows.ApplicationModel.Store.ProductLicense
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.ProductListing> concrete
+    guid 3206de83-efbe-5791-a487-2ac974206ec6
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.Store.ProductListing;{45a7d6ad-c750-4d9c-947c-b00dcbf9e9c2}))
+    argument System.String
+    argument Windows.ApplicationModel.Store.ProductListing
+
+interface Windows.ApplicationModel.Store.IProductLicense
+    guid 363308c7-2bcf-4c0e-8f2f-e808aaa8f99d
+
+interface Windows.ApplicationModel.Store.IProductLicenseWithFulfillment
+    guid fc535c8a-f667-40f3-ba3c-045a63abb3ac
+
+interface Windows.ApplicationModel.Store.IProductListing
+    guid 45a7d6ad-c750-4d9c-947c-b00dcbf9e9c2
+
+interface Windows.ApplicationModel.Store.IProductListing2
+    guid f89e290f-73fe-494d-a939-08a9b2495abe
+
+interface Windows.ApplicationModel.Store.IProductListingWithMetadata
+    guid 124da567-23f8-423e-9532-189943c40ace
+
+interface Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties
+    guid d70b7420-bc92-401b-a809-c9b2e5dbbdaf
+
+interface Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory
+    guid 6f491df4-32d6-4b40-b474-b83038a4d9cf
+
+interface Windows.ApplicationModel.Store.IPurchaseResults
+    guid ed50b37e-8656-4f65-b8c8-ac7e0cb1a1c2
+
+interface Windows.ApplicationModel.Store.IUnfulfilledConsumable
+    guid 2df7fbbb-1cdd-4cb8-a014-7b9cf8986927
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.UnfulfilledConsumable> concrete
+    guid f0ae5962-e039-5105-bcc5-9b552f13b102
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.UnfulfilledConsumable;{2df7fbbb-1cdd-4cb8-a014-7b9cf8986927}))
+    argument Windows.ApplicationModel.Store.UnfulfilledConsumable
+
+delegate Windows.ApplicationModel.Store.LicenseChangedEventHandler python_type
+    py LicenseChangedEventHandler
+    guid d4a50255-1369-4c36-832f-6f2d88e3659b
+    signature delegate({d4a50255-1369-4c36-832f-6f2d88e3659b})
+    method -
+        method Invoke slot=3 inputs=0 outputs=0 shape=0 reverse=0
+
+class Windows.ApplicationModel.Store.LicenseInformation python_type
+    py LicenseInformation
+    signature rc(Windows.ApplicationModel.Store.LicenseInformation;{8eb7dc30-f170-4ed5-8e21-1516da3fd367})
+    default Windows.ApplicationModel.Store.ILicenseInformation
+    requires Windows.ApplicationModel.Store.ILicenseInformation
+    property expiration_date
+        get get_ExpirationDate slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=4 reverse=99
+            out datetime return
+    property is_active
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=4 reverse=43
+            out boolean return
+    property is_trial
+        get get_IsTrial slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=4 reverse=62
+            out boolean return
+    property product_licenses
+        get get_ProductLicenses slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.ProductLicense> return
+    event license_changed
+        add add_LicenseChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=51 reverse=124
+            in delegate type=Windows.ApplicationModel.Store.LicenseChangedEventHandler name=handler
+            out event_token return
+        remove remove_LicenseChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.ILicenseInformation shape=26 reverse=156
+            in event_token name=cookie
+
+class Windows.ApplicationModel.Store.ListingInformation python_type
+    py ListingInformation
+    signature rc(Windows.ApplicationModel.Store.ListingInformation;{588b4abf-bc74-4383-b78c-99606323dece})
+    default Windows.ApplicationModel.Store.IListingInformation
+    requires Windows.ApplicationModel.Store.IListingInformation
+    requires Windows.ApplicationModel.Store.IListingInformation2
+    property age_rating
+        get get_AgeRating slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=141
+            out uint32 return
+    property current_market
+        get get_CurrentMarket slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=22
+            out string return
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=43
+            out string return
+    property formatted_price
+        get get_FormattedPrice slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=99
+            out string return
+    property name
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=121
+            out string return
+    property product_listings
+        get get_ProductListings slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.ProductListing> return
+    property currency_code
+        get get_CurrencyCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation2 shape=4 reverse=99
+            out string return
+    property formatted_base_price
+        get get_FormattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation2 shape=4 reverse=22
+            out string return
+    property is_on_sale
+        get get_IsOnSale slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation2 shape=4 reverse=62
+            out boolean return
+    property sale_end_date
+        get get_SaleEndDate slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IListingInformation2 shape=4 reverse=43
+            out datetime return
+
+class Windows.ApplicationModel.Store.ProductLicense python_type
+    py ProductLicense
+    signature rc(Windows.ApplicationModel.Store.ProductLicense;{363308c7-2bcf-4c0e-8f2f-e808aaa8f99d})
+    default Windows.ApplicationModel.Store.IProductLicense
+    requires Windows.ApplicationModel.Store.IProductLicense
+    requires Windows.ApplicationModel.Store.IProductLicenseWithFulfillment
+    property expiration_date
+        get get_ExpirationDate slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductLicense shape=4 reverse=62
+            out datetime return
+    property is_active
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductLicense shape=4 reverse=43
+            out boolean return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductLicense shape=4 reverse=22
+            out string return
+    property is_consumable
+        get get_IsConsumable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductLicenseWithFulfillment shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.Store.ProductListing python_type
+    py ProductListing
+    signature rc(Windows.ApplicationModel.Store.ProductListing;{45a7d6ad-c750-4d9c-947c-b00dcbf9e9c2})
+    default Windows.ApplicationModel.Store.IProductListing
+    requires Windows.ApplicationModel.Store.IProductListing
+    requires Windows.ApplicationModel.Store.IProductListingWithMetadata
+    requires Windows.ApplicationModel.Store.IProductListing2
+    property formatted_price
+        get get_FormattedPrice slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing shape=4 reverse=43
+            out string return
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing shape=4 reverse=62
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing shape=4 reverse=22
+            out string return
+    property formatted_base_price
+        get get_FormattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing2 shape=4 reverse=22
+            out string return
+    property is_on_sale
+        get get_IsOnSale slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing2 shape=4 reverse=62
+            out boolean return
+    property sale_end_date
+        get get_SaleEndDate slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing2 shape=4 reverse=43
+            out datetime return
+    property currency_code
+        get get_CurrencyCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListing2 shape=4 reverse=99
+            out string return
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListingWithMetadata shape=4 reverse=22
+            out string return
+    property image_uri
+        get get_ImageUri slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListingWithMetadata shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+    property keywords
+        get get_Keywords slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListingWithMetadata shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IIterable<System.String> return
+    property tag
+        get get_Tag slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListingWithMetadata shape=4 reverse=99
+            out string return
+    property product_type
+        get get_ProductType slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductListingWithMetadata shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Store.ProductType return
+
+class Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties activatable python_type
+    py ProductPurchaseDisplayProperties
+    signature rc(Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties;{d70b7420-bc92-401b-a809-c9b2e5dbbdaf})
+    default Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties
+    requires Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties
+    factory Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory shape=51 reverse=24
+            in string name=name implicit
+            out class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=43
+            in string name=value
+    property image
+        get get_Image slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_Image slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties shape=4 reverse=99
+            in string name=value
+
+enum Windows.ApplicationModel.Store.ProductPurchaseStatus python_type
+    py ProductPurchaseStatus
+    signature enum(Windows.ApplicationModel.Store.ProductPurchaseStatus;i4)
+
+enum Windows.ApplicationModel.Store.ProductType python_type
+    py ProductType
+    signature enum(Windows.ApplicationModel.Store.ProductType;i4)
+
+class Windows.ApplicationModel.Store.PurchaseResults python_type
+    py PurchaseResults
+    signature rc(Windows.ApplicationModel.Store.PurchaseResults;{ed50b37e-8656-4f65-b8c8-ac7e0cb1a1c2})
+    default Windows.ApplicationModel.Store.IPurchaseResults
+    requires Windows.ApplicationModel.Store.IPurchaseResults
+    property offer_id
+        get get_OfferId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IPurchaseResults shape=4 reverse=99
+            out string return
+    property receipt_xml
+        get get_ReceiptXml slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IPurchaseResults shape=4 reverse=62
+            out string return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IPurchaseResults shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Store.ProductPurchaseStatus return
+    property transaction_id
+        get get_TransactionId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IPurchaseResults shape=4 reverse=43
+            out guid return
+
+class Windows.ApplicationModel.Store.UnfulfilledConsumable python_type
+    py UnfulfilledConsumable
+    signature rc(Windows.ApplicationModel.Store.UnfulfilledConsumable;{2df7fbbb-1cdd-4cb8-a014-7b9cf8986927})
+    default Windows.ApplicationModel.Store.IUnfulfilledConsumable
+    requires Windows.ApplicationModel.Store.IUnfulfilledConsumable
+    property offer_id
+        get get_OfferId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IUnfulfilledConsumable shape=4 reverse=62
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IUnfulfilledConsumable shape=4 reverse=22
+            out string return
+    property transaction_id
+        get get_TransactionId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IUnfulfilledConsumable shape=4 reverse=43
+            out guid return
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

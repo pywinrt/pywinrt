@@ -1,0 +1,103 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Wallet.System
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore> concrete
+    guid 587c5f4f-7c55-5f74-b26a-f80e3bc6d4f2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Wallet.System.WalletItemSystemStore;{522e2bff-96a2-4a17-8d19-fe1d9f837561}))
+    argument Windows.ApplicationModel.Wallet.System.WalletItemSystemStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> concrete
+    guid 8e64ddb0-ea5c-5593-a1f3-0b8209df3905
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74}))
+    argument Windows.ApplicationModel.Wallet.WalletItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> concrete
+    guid 23540ddd-166f-5b93-8669-e340b5e1820d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem> concrete
+    guid 2dc89188-2b5b-591a-bb3d-d7d57ff7312c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Wallet.WalletItem;{20b54be8-118d-4ec4-996c-b963e7bd3e74}))
+    argument Windows.ApplicationModel.Wallet.WalletItem
+
+interface Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore
+    guid 522e2bff-96a2-4a17-8d19-fe1d9f837561
+
+interface Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2
+    guid f98d3a4e-be00-4fdd-9734-6c113c1ac1cb
+
+interface Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics
+    guid bee8eb89-2634-4b9a-8b23-ee8903c91fe0
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore,System.Object> concrete
+    guid 3c619943-a672-57ee-ad32-f6d97a6f4217
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Wallet.System.WalletItemSystemStore;{522e2bff-96a2-4a17-8d19-fe1d9f837561});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Wallet.System.WalletItemSystemStore
+    argument System.Object
+
+enum Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation python_type
+    py WalletItemAppAssociation
+    signature enum(Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation;i4)
+
+class Windows.ApplicationModel.Wallet.System.WalletItemSystemStore python_type
+    py WalletItemSystemStore
+    signature rc(Windows.ApplicationModel.Wallet.System.WalletItemSystemStore;{522e2bff-96a2-4a17-8d19-fe1d9f837561})
+    default Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore
+    requires Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore
+    requires Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2
+    event items_changed
+        add add_ItemsChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore,System.Object> name=handler
+            out event_token return
+        remove remove_ItemsChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=26 reverse=53 deprecated
+            in event_token name=cookie
+    method delete_async deprecated
+        method DeleteAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=44 deprecated
+            in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_app_status_for_item deprecated
+        method GetAppStatusForItem slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=100 deprecated
+            in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
+            out enum32 type=Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation return
+    method get_items_async deprecated
+        method GetItemsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
+    method import_item_async deprecated
+        method ImportItemAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=65 deprecated
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
+    method launch_app_for_item_async deprecated
+        method LaunchAppForItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=124 deprecated
+            in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.ApplicationModel.Wallet.System.WalletManagerSystem static python_type
+    py WalletManagerSystem
+    factory Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics
+    method request_store_async static deprecated
+        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics shape=4 reverse=22 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore> return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.ApplicationModel.Wallet.WalletItem external
+    py winrt.windows.applicationmodel.wallet.WalletItem
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

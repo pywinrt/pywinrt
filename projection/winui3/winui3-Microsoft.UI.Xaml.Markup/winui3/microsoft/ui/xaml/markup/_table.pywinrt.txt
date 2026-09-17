@@ -1,0 +1,465 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Markup
+
+interface Microsoft.UI.Xaml.Markup.IComponentConnector python_type
+    py _IComponentConnector
+    guid ad401812-b091-51d0-b915-2d682cd2af10
+    signature {ad401812-b091-51d0-b915-2d682cd2af10}
+    method connect
+        method Connect slot=6 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IComponentConnector shape=51 reverse=24
+            in int32 name=connectionId
+            in object name=target
+    method get_binding_connector
+        method GetBindingConnector slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IComponentConnector shape=117 reverse=45
+            in int32 name=connectionId
+            in object name=target
+            out interface type=Microsoft.UI.Xaml.Markup.IComponentConnector return
+
+interface Microsoft.UI.Xaml.Markup.IDataTemplateComponent python_type
+    py _IDataTemplateComponent
+    guid 1743ddf7-38ba-58c9-a2a6-b0ae28713bee
+    signature {1743ddf7-38ba-58c9-a2a6-b0ae28713bee}
+    method process_bindings
+        method ProcessBindings slot=7 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IDataTemplateComponent shape=195 reverse=46
+            in object name=item
+            in int32 name=itemIndex
+            in int32 name=phase
+            out int32 name=nextPhase
+    method recycle
+        method Recycle slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IDataTemplateComponent shape=0 reverse=16
+
+interface Microsoft.UI.Xaml.Markup.IMarkupExtension
+    guid c355371e-091d-5136-af4a-baf5e00616bd
+
+interface Microsoft.UI.Xaml.Markup.IMarkupExtensionFactory
+    guid 20651afa-5f3a-5f0c-adb1-b6551f53a6a0
+
+interface Microsoft.UI.Xaml.Markup.IMarkupExtensionOverrides
+    guid a12aa575-5d31-5b68-a30f-8495412a351d
+
+interface Microsoft.UI.Xaml.Markup.IProvideValueTarget python_type
+    py _IProvideValueTarget
+    guid 3f01ff68-3efd-591d-a506-de13fcaabd83
+    signature {3f01ff68-3efd-591d-a506-de13fcaabd83}
+    property target_object
+        get get_TargetObject slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IProvideValueTarget shape=4 reverse=22
+            out object return
+    property target_property
+        get get_TargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IProvideValueTarget shape=4 reverse=43
+            out object return
+
+interface Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty
+    guid ce777b1f-b42e-59d1-870d-12fdf0629133
+
+interface Microsoft.UI.Xaml.Markup.IRootObjectProvider python_type
+    py _IRootObjectProvider
+    guid 13d63599-352f-5eb8-81c1-bc62fb12d6da
+    signature {13d63599-352f-5eb8-81c1-bc62fb12d6da}
+    property root_object
+        get get_RootObject slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IRootObjectProvider shape=4 reverse=22
+            out object return
+
+interface Microsoft.UI.Xaml.Markup.IUriContext python_type
+    py _IUriContext
+    guid fb8605f6-8f05-52ee-a01c-3a9e118a6ea2
+    signature {fb8605f6-8f05-52ee-a01c-3a9e118a6ea2}
+    property base_uri
+        get get_BaseUri slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IUriContext shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> concrete
+    guid 2736b66b-daa3-5e0c-9842-6a0f44b5440b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IRandomAccessStream
+
+interface Microsoft.UI.Xaml.Markup.IXamlBinaryWriter
+    guid 8fb45e3b-e689-55bf-aa11-d83b1c1cdda1
+
+interface Microsoft.UI.Xaml.Markup.IXamlBinaryWriterStatics
+    guid 774907fc-c846-517f-abcc-c3f7e8c3ffc9
+
+interface Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics python_type
+    py _IXamlBindScopeDiagnostics
+    guid 3ea84e4e-fdfe-55a8-a561-edf5697846d7
+    signature {3ea84e4e-fdfe-55a8-a561-edf5697846d7}
+    method disable
+        method Disable slot=6 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics shape=51 reverse=24
+            in int32 name=lineNumber
+            in int32 name=columnNumber
+
+interface Microsoft.UI.Xaml.Markup.IXamlBindingHelper
+    guid 607a9bf2-5a6d-5c89-a756-bb44f24f28f8
+
+interface Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics
+    guid 93c7dad3-f9c2-5372-84dc-9e9c4661d083
+
+interface Microsoft.UI.Xaml.Markup.IXamlMarkupHelper
+    guid cd677310-3b06-5a13-b31a-401849570858
+
+interface Microsoft.UI.Xaml.Markup.IXamlMarkupHelperStatics
+    guid d9a0f6e3-c6cc-5cb6-8999-85788701f339
+
+interface Microsoft.UI.Xaml.Markup.IXamlMember python_type
+    py _IXamlMember
+    guid bf3a2913-5c63-50ec-8660-61809be7b9b9
+    signature {bf3a2913-5c63-50ec-8660-61809be7b9b9}
+    property is_attachable
+        get get_IsAttachable slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=22
+            out boolean return
+    property is_dependency_property
+        get get_IsDependencyProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=43
+            out boolean return
+    property is_read_only
+        get get_IsReadOnly slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=62
+            out boolean return
+    property name
+        get get_Name slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=99
+            out string return
+    property target_type
+        get get_TargetType slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=121
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    property type
+        get get_Type slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=4 reverse=141
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    method get_value
+        method GetValue slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=51 reverse=163
+            in object name=instance
+            out object return
+    method set_value
+        method SetValue slot=13 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlMember shape=51 reverse=174
+            in object name=instance
+            in object name=value
+
+interface Microsoft.UI.Xaml.Markup.IXamlMetadataProvider python_type
+    py _IXamlMetadataProvider
+    guid a96251f0-2214-5d53-8746-ce99a2593cd7
+    signature {a96251f0-2214-5d53-8746-ce99a2593cd7}
+    method get_xaml_type
+        method GetXamlType slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMetadataProvider shape=91 reverse=34 default_overload
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=type
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    method get_xaml_type_by_full_name
+        method GetXamlType slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMetadataProvider shape=51 reverse=44
+            in string name=fullName
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    method get_xmlns_definitions
+        method GetXmlnsDefinitions slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlMetadataProvider shape=51 reverse=65
+            receive_array struct type=Microsoft.UI.Xaml.Markup.XmlnsDefinition return
+
+interface Microsoft.UI.Xaml.Markup.IXamlReader
+    guid 54ce54c8-38c6-50d9-ac98-4b03eddbde9f
+
+interface Microsoft.UI.Xaml.Markup.IXamlReaderStatics
+    guid 82a4cd9e-435e-5aeb-8c4f-300cece45cae
+
+interface Microsoft.UI.Xaml.Markup.IXamlType python_type
+    py _IXamlType
+    guid d24219df-7ec9-57f1-a27b-6af251d9c5bc
+    signature {d24219df-7ec9-57f1-a27b-6af251d9c5bc}
+    property base_type
+        get get_BaseType slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    property boxed_type
+        get get_BoxedType slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=210
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    property content_property
+        get get_ContentProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=43
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlMember return
+    property full_name
+        get get_FullName slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=62
+            out string return
+    property is_array
+        get get_IsArray slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=99
+            out boolean return
+    property is_bindable
+        get get_IsBindable slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=186
+            out boolean return
+    property is_collection
+        get get_IsCollection slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=121
+            out boolean return
+    property is_constructible
+        get get_IsConstructible slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=141
+            out boolean return
+    property is_dictionary
+        get get_IsDictionary slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=162
+            out boolean return
+    property is_markup_extension
+        get get_IsMarkupExtension slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=173
+            out boolean return
+    property item_type
+        get get_ItemType slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=194
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    property key_type
+        get get_KeyType slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=202
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlType return
+    property underlying_type
+        get get_UnderlyingType slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=218
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+    method activate_instance
+        method ActivateInstance slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=4 reverse=223
+            out object return
+    method add_to_map
+        method AddToMap slot=23 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=117 reverse=244
+            in object name=instance
+            in object name=key
+            in object name=value
+    method add_to_vector
+        method AddToVector slot=22 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=51 reverse=238
+            in object name=instance
+            in object name=value
+    method create_from_string
+        method CreateFromString slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=51 reverse=229
+            in string name=value
+            out object return
+    method get_member
+        method GetMember slot=21 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=51 reverse=233
+            in string name=name
+            out interface type=Microsoft.UI.Xaml.Markup.IXamlMember return
+    method run_initializer
+        method RunInitializer slot=24 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlType shape=0 reverse=401
+
+interface Microsoft.UI.Xaml.Markup.IXamlTypeResolver python_type
+    py _IXamlTypeResolver
+    guid 3fa15615-cacf-547f-b1ed-89dae8c67452
+    signature {3fa15615-cacf-547f-b1ed-89dae8c67452}
+    method resolve
+        method Resolve slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlTypeResolver shape=51 reverse=24
+            in string name=qualifiedTypeName
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+
+class Microsoft.UI.Xaml.Markup.MarkupExtension composable python_type
+    py MarkupExtension
+    signature rc(Microsoft.UI.Xaml.Markup.MarkupExtension;{c355371e-091d-5136-af4a-baf5e00616bd})
+    default Microsoft.UI.Xaml.Markup.IMarkupExtension
+    requires Microsoft.UI.Xaml.Markup.IMarkupExtension
+    requires Microsoft.UI.Xaml.Markup.IMarkupExtensionOverrides
+    composable Microsoft.UI.Xaml.Markup.IMarkupExtensionFactory
+    overridable Microsoft.UI.Xaml.Markup.IMarkupExtensionOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IMarkupExtensionFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Markup.MarkupExtension return
+    method _provide_value
+        method ProvideValue slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IMarkupExtensionOverrides shape=4 reverse=22 overridable
+            out object return
+    method _provide_value_with_ixaml_service_provider
+        method ProvideValue slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IMarkupExtensionOverrides shape=51 reverse=44 overridable
+            in interface type=Microsoft.UI.Xaml.IXamlServiceProvider name=serviceProvider
+            out object return
+
+class Microsoft.UI.Xaml.Markup.ProvideValueTargetProperty activatable python_type
+    py ProvideValueTargetProperty
+    signature rc(Microsoft.UI.Xaml.Markup.ProvideValueTargetProperty;{ce777b1f-b42e-59d1-870d-12fdf0629133})
+    default Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty
+    requires Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property declaring_type
+        get get_DeclaringType slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty shape=4 reverse=62
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty shape=4 reverse=22
+            out string return
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IProvideValueTargetProperty shape=4 reverse=43
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+
+class Microsoft.UI.Xaml.Markup.XamlBinaryWriter python_type
+    py XamlBinaryWriter
+    signature rc(Microsoft.UI.Xaml.Markup.XamlBinaryWriter;{8fb45e3b-e689-55bf-aa11-d83b1c1cdda1})
+    default Microsoft.UI.Xaml.Markup.IXamlBinaryWriter
+    requires Microsoft.UI.Xaml.Markup.IXamlBinaryWriter
+    factory Microsoft.UI.Xaml.Markup.IXamlBinaryWriterStatics
+    method write static
+        method Write slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlBinaryWriterStatics shape=195 reverse=26 static
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> name=inputStreams
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> name=outputStreams
+            in interface type=Microsoft.UI.Xaml.Markup.IXamlMetadataProvider name=xamlMetadataProvider
+            out struct type=Microsoft.UI.Xaml.Markup.XamlBinaryWriterErrorInformation return
+
+struct Microsoft.UI.Xaml.Markup.XamlBinaryWriterErrorInformation python_type
+    py XamlBinaryWriterErrorInformation
+    signature struct(Microsoft.UI.Xaml.Markup.XamlBinaryWriterErrorInformation;u4;u4;u4)
+    field input_stream_index InputStreamIndex uint32
+    field line_number LineNumber uint32
+    field line_position LinePosition uint32
+
+class Microsoft.UI.Xaml.Markup.XamlBindingHelper python_type
+    py XamlBindingHelper
+    signature rc(Microsoft.UI.Xaml.Markup.XamlBindingHelper;{607a9bf2-5a6d-5c89-a756-bb44f24f28f8})
+    default Microsoft.UI.Xaml.Markup.IXamlBindingHelper
+    requires Microsoft.UI.Xaml.Markup.IXamlBindingHelper
+    factory Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics
+    property data_template_component_property static
+        get get_DataTemplateComponentProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    method convert_value static
+        method ConvertValue slot=11 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=172 static
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=type
+            in object name=value
+            out object return
+    method get_data_template_component static
+        method GetDataTemplateComponent slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=51 reverse=44 static
+            in class type=Microsoft.UI.Xaml.DependencyObject name=element
+            out interface type=Microsoft.UI.Xaml.Markup.IDataTemplateComponent return
+    method resume_rendering static
+        method ResumeRendering slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=4 reverse=121 static
+            in class type=Microsoft.UI.Xaml.UIElement name=target
+    method set_data_template_component static
+        method SetDataTemplateComponent slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=51 reverse=65 static
+            in class type=Microsoft.UI.Xaml.DependencyObject name=element
+            in interface type=Microsoft.UI.Xaml.Markup.IDataTemplateComponent name=value
+    method set_property_from_boolean static
+        method SetPropertyFromBoolean slot=13 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 reverse=175 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in boolean name=value
+    method set_property_from_byte static
+        method SetPropertyFromByte slot=26 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in uint8 name=value
+    method set_property_from_char16 static
+        method SetPropertyFromChar16 slot=14 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 reverse=188 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in char16 name=value
+    method set_property_from_date_time static
+        method SetPropertyFromDateTime slot=15 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=125 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in datetime name=value
+    method set_property_from_double static
+        method SetPropertyFromDouble slot=16 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=115 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in double name=value
+    method set_property_from_int32 static
+        method SetPropertyFromInt32 slot=17 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in int32 name=value
+    method set_property_from_int64 static
+        method SetPropertyFromInt64 slot=19 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=116 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in int64 name=value
+    method set_property_from_object static
+        method SetPropertyFromObject slot=28 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in object name=value
+    method set_property_from_point static
+        method SetPropertyFromPoint slot=22 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=119 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Windows.Foundation.Point name=value
+    method set_property_from_rect static
+        method SetPropertyFromRect slot=23 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=118 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Windows.Foundation.Rect name=value
+    method set_property_from_single static
+        method SetPropertyFromSingle slot=21 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=114 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in single name=value
+    method set_property_from_size static
+        method SetPropertyFromSize slot=24 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=119 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Windows.Foundation.Size name=value
+    method set_property_from_string static
+        method SetPropertyFromString slot=12 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 reverse=164 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in string name=value
+    method set_property_from_time_span static
+        method SetPropertyFromTimeSpan slot=25 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=125 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in timespan name=value
+    method set_property_from_uint32 static
+        method SetPropertyFromUInt32 slot=18 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 reverse=220 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in uint32 name=value
+    method set_property_from_uint64 static
+        method SetPropertyFromUInt64 slot=20 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=116 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in uint64 name=value
+    method set_property_from_uri static
+        method SetPropertyFromUri slot=27 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=117 reverse=261 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in class type=Windows.Foundation.Uri name=value
+    method suspend_rendering static
+        method SuspendRendering slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=4 reverse=99 static
+            in class type=Microsoft.UI.Xaml.UIElement name=target
+
+class Microsoft.UI.Xaml.Markup.XamlMarkupHelper python_type
+    py XamlMarkupHelper
+    signature rc(Microsoft.UI.Xaml.Markup.XamlMarkupHelper;{cd677310-3b06-5a13-b31a-401849570858})
+    default Microsoft.UI.Xaml.Markup.IXamlMarkupHelper
+    requires Microsoft.UI.Xaml.Markup.IXamlMarkupHelper
+    factory Microsoft.UI.Xaml.Markup.IXamlMarkupHelperStatics
+    method unload_object static
+        method UnloadObject slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlMarkupHelperStatics shape=4 reverse=22 static
+            in class type=Microsoft.UI.Xaml.DependencyObject name=element
+
+class Microsoft.UI.Xaml.Markup.XamlReader python_type
+    py XamlReader
+    signature rc(Microsoft.UI.Xaml.Markup.XamlReader;{54ce54c8-38c6-50d9-ac98-4b03eddbde9f})
+    default Microsoft.UI.Xaml.Markup.IXamlReader
+    requires Microsoft.UI.Xaml.Markup.IXamlReader
+    factory Microsoft.UI.Xaml.Markup.IXamlReaderStatics
+    method load static
+        method Load slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlReaderStatics shape=51 reverse=24 static
+            in string name=xaml
+            out object return
+    method load_with_initial_template_validation static
+        method LoadWithInitialTemplateValidation slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlReaderStatics shape=51 reverse=44 static
+            in string name=xaml
+            out object return
+
+struct Microsoft.UI.Xaml.Markup.XmlnsDefinition python_type
+    py XmlnsDefinition
+    signature struct(Microsoft.UI.Xaml.Markup.XmlnsDefinition;string;string)
+    field xml_namespace XmlNamespace string
+    field namespace Namespace string
+
+class Microsoft.UI.Xaml.DependencyObject external
+    py winui3.microsoft.ui.xaml.DependencyObject
+
+class Microsoft.UI.Xaml.DependencyProperty external
+    py winui3.microsoft.ui.xaml.DependencyProperty
+
+interface Microsoft.UI.Xaml.IXamlServiceProvider external
+    py winui3.microsoft.ui.xaml._IXamlServiceProvider
+    guid 68b3a2df-8173-539f-b524-c8a2348f5afb
+
+class Microsoft.UI.Xaml.UIElement external
+    py winui3.microsoft.ui.xaml.UIElement
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+struct Windows.UI.Xaml.Interop.TypeName external
+    py winrt.windows.ui.xaml.interop.TypeName

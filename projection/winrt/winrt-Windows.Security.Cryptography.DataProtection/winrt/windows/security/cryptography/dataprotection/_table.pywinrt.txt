@@ -1,0 +1,62 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Cryptography.DataProtection
+
+class Windows.Security.Cryptography.DataProtection.DataProtectionProvider activatable python_type
+    py DataProtectionProvider
+    signature rc(Windows.Security.Cryptography.DataProtection.DataProtectionProvider;{09639948-ed22-4270-bd1c-6d72c00f8787})
+    default Windows.Security.Cryptography.DataProtection.IDataProtectionProvider
+    requires Windows.Security.Cryptography.DataProtection.IDataProtectionProvider
+    factory Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51 reverse=24
+            in string name=protectionDescriptor implicit
+            out class type=Windows.Security.Cryptography.DataProtection.DataProtectionProvider return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51 reverse=24
+            in string name=protectionDescriptor
+            out class type=Windows.Security.Cryptography.DataProtection.DataProtectionProvider return
+    method protect_async
+        method ProtectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method protect_stream_async
+        method ProtectStreamAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117 reverse=66
+            in interface type=Windows.Storage.Streams.IInputStream name=src
+            in interface type=Windows.Storage.Streams.IOutputStream name=dest
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unprotect_async
+        method UnprotectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method unprotect_stream_async
+        method UnprotectStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117 reverse=101
+            in interface type=Windows.Storage.Streams.IInputStream name=src
+            in interface type=Windows.Storage.Streams.IOutputStream name=dest
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Security.Cryptography.DataProtection.IDataProtectionProvider
+    guid 09639948-ed22-4270-bd1c-6d72c00f8787
+
+interface Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory
+    guid adf33dac-4932-4cdf-ac41-7214333514ca
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da

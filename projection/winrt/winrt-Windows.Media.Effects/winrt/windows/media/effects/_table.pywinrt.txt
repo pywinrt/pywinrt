@@ -1,0 +1,570 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Effects
+
+class Windows.Media.Effects.AcousticEchoCancellationConfiguration python_type
+    py AcousticEchoCancellationConfiguration
+    signature rc(Windows.Media.Effects.AcousticEchoCancellationConfiguration;{587e735b-175b-5177-a407-2e33bafe33a5})
+    default Windows.Media.Effects.IAcousticEchoCancellationConfiguration
+    requires Windows.Media.Effects.IAcousticEchoCancellationConfiguration
+    method set_echo_cancellation_render_endpoint
+        method SetEchoCancellationRenderEndpoint slot=6 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAcousticEchoCancellationConfiguration shape=4 reverse=22
+            in string name=deviceId
+
+class Windows.Media.Effects.AudioCaptureEffectsManager python_type
+    py AudioCaptureEffectsManager
+    signature rc(Windows.Media.Effects.AudioCaptureEffectsManager;{8f85c271-038d-4393-8298-540110608eef})
+    default Windows.Media.Effects.IAudioCaptureEffectsManager
+    requires Windows.Media.Effects.IAudioCaptureEffectsManager
+    event audio_capture_effects_changed
+        add add_AudioCaptureEffectsChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioCaptureEffectsManager,System.Object> name=handler
+            out event_token return
+        remove remove_AudioCaptureEffectsChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=26 reverse=53
+            in event_token name=token
+    method get_audio_capture_effects
+        method GetAudioCaptureEffects slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> return
+
+class Windows.Media.Effects.AudioEffect python_type
+    py AudioEffect
+    signature rc(Windows.Media.Effects.AudioEffect;{34aafa51-9207-4055-be93-6e5734a86ae4})
+    default Windows.Media.Effects.IAudioEffect
+    requires Windows.Media.Effects.IAudioEffect
+    requires Windows.Media.Effects.IAudioEffect2
+    property audio_effect_type
+        get get_AudioEffectType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffect shape=4 reverse=22
+            out enum32 type=Windows.Media.Effects.AudioEffectType return
+    property acoustic_echo_cancellation_configuration
+        get get_AcousticEchoCancellationConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffect2 shape=4 reverse=22
+            out class type=Windows.Media.Effects.AcousticEchoCancellationConfiguration return
+    property can_set_state
+        get get_CanSetState slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffect2 shape=4 reverse=43
+            out boolean return
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffect2 shape=4 reverse=62
+            out enum32 type=Windows.Media.Effects.AudioEffectState return
+    method set_state
+        method SetState slot=9 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAudioEffect2 shape=4 reverse=99
+            in enum32 type=Windows.Media.Effects.AudioEffectState name=newState
+
+class Windows.Media.Effects.AudioEffectDefinition python_type
+    py AudioEffectDefinition
+    signature rc(Windows.Media.Effects.AudioEffectDefinition;{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    default Windows.Media.Effects.IAudioEffectDefinition
+    requires Windows.Media.Effects.IAudioEffectDefinition
+    factory Windows.Media.Effects.IAudioEffectDefinitionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinitionFactory shape=51 reverse=24
+            in string name=activatableClassId
+            out class type=Windows.Media.Effects.AudioEffectDefinition return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinitionFactory shape=117 reverse=45
+            in string name=activatableClassId
+            in interface type=Windows.Foundation.Collections.IPropertySet name=props
+            out class type=Windows.Media.Effects.AudioEffectDefinition return
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+enum Windows.Media.Effects.AudioEffectState python_type
+    py AudioEffectState
+    signature enum(Windows.Media.Effects.AudioEffectState;i4)
+
+enum Windows.Media.Effects.AudioEffectType python_type
+    py AudioEffectType
+    signature enum(Windows.Media.Effects.AudioEffectType;i4)
+
+class Windows.Media.Effects.AudioEffectsManager static python_type
+    py AudioEffectsManager
+    factory Windows.Media.Effects.IAudioEffectsManagerStatics
+    method create_audio_capture_effects_manager static
+        method CreateAudioCaptureEffectsManager slot=8 inputs=2 outputs=1 declaring=Windows.Media.Effects.IAudioEffectsManagerStatics shape=117 reverse=66 static
+            in string name=deviceId
+            in enum32 type=Windows.Media.Capture.MediaCategory name=category
+            out class type=Windows.Media.Effects.AudioCaptureEffectsManager return
+        method CreateAudioCaptureEffectsManager slot=9 inputs=3 outputs=1 declaring=Windows.Media.Effects.IAudioEffectsManagerStatics shape=195 reverse=102 static
+            in string name=deviceId
+            in enum32 type=Windows.Media.Capture.MediaCategory name=category
+            in enum32 type=Windows.Media.AudioProcessing name=mode
+            out class type=Windows.Media.Effects.AudioCaptureEffectsManager return
+    method create_audio_render_effects_manager static
+        method CreateAudioRenderEffectsManager slot=6 inputs=2 outputs=1 declaring=Windows.Media.Effects.IAudioEffectsManagerStatics shape=117 reverse=25 static
+            in string name=deviceId
+            in enum32 type=Windows.Media.Render.AudioRenderCategory name=category
+            out class type=Windows.Media.Effects.AudioRenderEffectsManager return
+        method CreateAudioRenderEffectsManager slot=7 inputs=3 outputs=1 declaring=Windows.Media.Effects.IAudioEffectsManagerStatics shape=195 reverse=46 static
+            in string name=deviceId
+            in enum32 type=Windows.Media.Render.AudioRenderCategory name=category
+            in enum32 type=Windows.Media.AudioProcessing name=mode
+            out class type=Windows.Media.Effects.AudioRenderEffectsManager return
+
+class Windows.Media.Effects.AudioRenderEffectsManager python_type
+    py AudioRenderEffectsManager
+    signature rc(Windows.Media.Effects.AudioRenderEffectsManager;{4dc98966-8751-42b2-bfcb-39ca7864bd47})
+    default Windows.Media.Effects.IAudioRenderEffectsManager
+    requires Windows.Media.Effects.IAudioRenderEffectsManager
+    requires Windows.Media.Effects.IAudioRenderEffectsManager2
+    property effects_provider_settings_label
+        get get_EffectsProviderSettingsLabel slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager2 shape=4 reverse=43 deprecated
+            out string return
+    property effects_provider_thumbnail
+        get get_EffectsProviderThumbnail slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager2 shape=4 reverse=22 deprecated
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
+    event audio_render_effects_changed
+        add add_AudioRenderEffectsChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioRenderEffectsManager,System.Object> name=handler
+            out event_token return
+        remove remove_AudioRenderEffectsChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=26 reverse=53
+            in event_token name=token
+    method get_audio_render_effects
+        method GetAudioRenderEffects slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> return
+    method show_settings_ui deprecated
+        method ShowSettingsUI slot=8 inputs=0 outputs=0 declaring=Windows.Media.Effects.IAudioRenderEffectsManager2 shape=0 reverse=55 deprecated
+
+class Windows.Media.Effects.CompositeVideoFrameContext python_type
+    py CompositeVideoFrameContext
+    signature rc(Windows.Media.Effects.CompositeVideoFrameContext;{6c30024b-f514-4278-a5f7-b9188049d110})
+    default Windows.Media.Effects.ICompositeVideoFrameContext
+    requires Windows.Media.Effects.ICompositeVideoFrameContext
+    property background_frame
+        get get_BackgroundFrame slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.ICompositeVideoFrameContext shape=4 reverse=43
+            out class type=Windows.Media.VideoFrame return
+    property output_frame
+        get get_OutputFrame slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.ICompositeVideoFrameContext shape=4 reverse=62
+            out class type=Windows.Media.VideoFrame return
+    property surfaces_to_overlay
+        get get_SurfacesToOverlay slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.ICompositeVideoFrameContext shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> return
+    method get_overlay_for_surface
+        method GetOverlayForSurface slot=9 inputs=1 outputs=1 declaring=Windows.Media.Effects.ICompositeVideoFrameContext shape=51 reverse=100
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=surfaceToOverlay
+            out class type=Windows.Media.Editing.MediaOverlay return
+
+interface Windows.Media.Effects.IAcousticEchoCancellationConfiguration
+    guid 587e735b-175b-5177-a407-2e33bafe33a5
+
+interface Windows.Media.Effects.IAudioCaptureEffectsManager
+    guid 8f85c271-038d-4393-8298-540110608eef
+
+interface Windows.Media.Effects.IAudioEffect
+    guid 34aafa51-9207-4055-be93-6e5734a86ae4
+
+interface Windows.Media.Effects.IAudioEffect2
+    guid 06703cb0-757e-5757-8af0-6ba58a8b2990
+
+interface Windows.Media.Effects.IAudioEffectDefinition python_type
+    py _IAudioEffectDefinition
+    guid e4d7f974-7d80-4f73-9089-e31c9db9c294
+    signature {e4d7f974-7d80-4f73-9089-e31c9db9c294}
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+interface Windows.Media.Effects.IAudioEffectDefinitionFactory
+    guid 8e1da646-e705-45ed-8a2b-fc4e4f405a97
+
+interface Windows.Media.Effects.IAudioEffectsManagerStatics
+    guid 66406c04-86fa-47cc-a315-f489d8c3fe10
+
+interface Windows.Media.Effects.IAudioRenderEffectsManager
+    guid 4dc98966-8751-42b2-bfcb-39ca7864bd47
+
+interface Windows.Media.Effects.IAudioRenderEffectsManager2
+    guid a844cd09-5ecc-44b3-bb4e-1db07287139c
+
+interface Windows.Media.Effects.IBasicAudioEffect python_type
+    py _IBasicAudioEffect
+    guid 8c062c53-6bc0-48b8-a99a-4b41550f1359
+    signature {8c062c53-6bc0-48b8-a99a-4b41550f1359}
+    requires Windows.Media.IMediaExtension
+    property supported_encoding_properties
+        get get_SupportedEncodingProperties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicAudioEffect shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> return
+    property use_input_frame_for_output
+        get get_UseInputFrameForOutput slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicAudioEffect shape=4 reverse=22
+            out boolean return
+    method close
+        method Close slot=10 inputs=1 outputs=0 declaring=Windows.Media.Effects.IBasicAudioEffect shape=4 reverse=121
+            in enum32 type=Windows.Media.Effects.MediaEffectClosedReason name=reason
+    method discard_queued_frames
+        method DiscardQueuedFrames slot=11 inputs=0 outputs=0 declaring=Windows.Media.Effects.IBasicAudioEffect shape=0 reverse=137
+    method process_frame
+        method ProcessFrame slot=9 inputs=1 outputs=0 declaring=Windows.Media.Effects.IBasicAudioEffect shape=4 reverse=99
+            in class type=Windows.Media.Effects.ProcessAudioFrameContext name=context
+    method set_encoding_properties
+        method SetEncodingProperties slot=8 inputs=1 outputs=0 declaring=Windows.Media.Effects.IBasicAudioEffect shape=4 reverse=62
+            in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
+    method set_properties
+        method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
+            in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
+
+interface Windows.Media.Effects.IBasicVideoEffect python_type
+    py _IBasicVideoEffect
+    guid 8262c7ef-b360-40be-949b-2ff42ff35693
+    signature {8262c7ef-b360-40be-949b-2ff42ff35693}
+    requires Windows.Media.IMediaExtension
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=22
+            out boolean return
+    property supported_encoding_properties
+        get get_SupportedEncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> return
+    property supported_memory_types
+        get get_SupportedMemoryTypes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=43
+            out enum32 type=Windows.Media.Effects.MediaMemoryTypes return
+    property time_independent
+        get get_TimeIndependent slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=62
+            out boolean return
+    method close
+        method Close slot=12 inputs=1 outputs=0 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=162
+            in enum32 type=Windows.Media.Effects.MediaEffectClosedReason name=reason
+    method discard_queued_frames
+        method DiscardQueuedFrames slot=13 inputs=0 outputs=0 declaring=Windows.Media.Effects.IBasicVideoEffect shape=0 reverse=169
+    method process_frame
+        method ProcessFrame slot=11 inputs=1 outputs=0 declaring=Windows.Media.Effects.IBasicVideoEffect shape=4 reverse=141
+            in class type=Windows.Media.Effects.ProcessVideoFrameContext name=context
+    method set_encoding_properties
+        method SetEncodingProperties slot=10 inputs=2 outputs=0 declaring=Windows.Media.Effects.IBasicVideoEffect shape=51 reverse=124
+            in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=encodingProperties
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+    method set_properties
+        method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
+            in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
+
+interface Windows.Media.Effects.ICompositeVideoFrameContext
+    guid 6c30024b-f514-4278-a5f7-b9188049d110
+
+interface Windows.Media.Effects.IProcessAudioFrameContext
+    guid 4cd92946-1222-4a27-a586-fb3e20273255
+
+interface Windows.Media.Effects.IProcessVideoFrameContext
+    guid 276f0e2b-6461-401e-ba78-0fdad6114eec
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> concrete
+    guid 1a81ec3e-5afb-5e10-92bb-c843fec70887
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{0bf4a146-13c1-4694-bee3-7abf15eaf586})
+    argument Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> concrete
+    guid cdcbc9e7-53d8-5e66-9e45-31d5a23fd01d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Effects.AudioEffect;{34aafa51-9207-4055-be93-6e5734a86ae4}))
+    argument Windows.Media.Effects.AudioEffect
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> concrete
+    guid 64ac506c-ccd0-56cb-b088-b1a36e8755df
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3}))
+    argument Windows.Media.MediaProperties.AudioEncodingProperties
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> concrete
+    guid 04c7baba-04d7-51db-a4e3-5147963ec5ff
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.MediaProperties.VideoEncodingProperties;{76ee6c9a-37c2-4f2a-880a-1282bbb4373d}))
+    argument Windows.Media.MediaProperties.VideoEncodingProperties
+
+interface Windows.Media.Effects.IVideoCompositor python_type
+    py _IVideoCompositor
+    guid 8510b43e-420c-420f-96c7-7c98bba1fc55
+    signature {8510b43e-420c-420f-96c7-7c98bba1fc55}
+    requires Windows.Media.IMediaExtension
+    property time_independent
+        get get_TimeIndependent slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoCompositor shape=4 reverse=22
+            out boolean return
+    method close
+        method Close slot=9 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoCompositor shape=4 reverse=99
+            in enum32 type=Windows.Media.Effects.MediaEffectClosedReason name=reason
+    method composite_frame
+        method CompositeFrame slot=8 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoCompositor shape=4 reverse=62
+            in class type=Windows.Media.Effects.CompositeVideoFrameContext name=context
+    method discard_queued_frames
+        method DiscardQueuedFrames slot=10 inputs=0 outputs=0 declaring=Windows.Media.Effects.IVideoCompositor shape=0 reverse=117
+    method set_encoding_properties
+        method SetEncodingProperties slot=7 inputs=2 outputs=0 declaring=Windows.Media.Effects.IVideoCompositor shape=51 reverse=44
+            in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=backgroundProperties
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+    method set_properties
+        method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
+            in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
+
+interface Windows.Media.Effects.IVideoCompositorDefinition python_type
+    py _IVideoCompositorDefinition
+    guid 7946b8d0-2010-4ae3-9ab2-2cef42edd4d2
+    signature {7946b8d0-2010-4ae3-9ab2-2cef42edd4d2}
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+interface Windows.Media.Effects.IVideoCompositorDefinitionFactory
+    guid 4366fd10-68b8-4d52-89b6-02a968cca899
+
+interface Windows.Media.Effects.IVideoEffectDefinition python_type
+    py _IVideoEffectDefinition
+    guid 39f38cf0-8d0f-4f3e-84fc-2d46a5297943
+    signature {39f38cf0-8d0f-4f3e-84fc-2d46a5297943}
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+interface Windows.Media.Effects.IVideoEffectDefinitionFactory
+    guid 81439b4e-6e33-428f-9d21-b5aafef7617c
+
+interface Windows.Media.Effects.IVideoTransformEffectDefinition
+    guid 9664bb6a-1ea6-4aa6-8074-abe8851ecae2
+
+interface Windows.Media.Effects.IVideoTransformEffectDefinition2
+    guid f0a8089f-66c8-4694-9fd9-1136abf7444a
+
+interface Windows.Media.Effects.IVideoTransformSphericalProjection
+    guid cf4401f0-9bf2-4c39-9f41-e022514a8468
+
+enum Windows.Media.Effects.MediaEffectClosedReason python_type
+    py MediaEffectClosedReason
+    signature enum(Windows.Media.Effects.MediaEffectClosedReason;i4)
+
+enum Windows.Media.Effects.MediaMemoryTypes python_type
+    py MediaMemoryTypes
+    signature enum(Windows.Media.Effects.MediaMemoryTypes;i4)
+
+class Windows.Media.Effects.ProcessAudioFrameContext python_type
+    py ProcessAudioFrameContext
+    signature rc(Windows.Media.Effects.ProcessAudioFrameContext;{4cd92946-1222-4a27-a586-fb3e20273255})
+    default Windows.Media.Effects.IProcessAudioFrameContext
+    requires Windows.Media.Effects.IProcessAudioFrameContext
+    property input_frame
+        get get_InputFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IProcessAudioFrameContext shape=4 reverse=22
+            out class type=Windows.Media.AudioFrame return
+    property output_frame
+        get get_OutputFrame slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IProcessAudioFrameContext shape=4 reverse=43
+            out class type=Windows.Media.AudioFrame return
+
+class Windows.Media.Effects.ProcessVideoFrameContext python_type
+    py ProcessVideoFrameContext
+    signature rc(Windows.Media.Effects.ProcessVideoFrameContext;{276f0e2b-6461-401e-ba78-0fdad6114eec})
+    default Windows.Media.Effects.IProcessVideoFrameContext
+    requires Windows.Media.Effects.IProcessVideoFrameContext
+    property input_frame
+        get get_InputFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IProcessVideoFrameContext shape=4 reverse=22
+            out class type=Windows.Media.VideoFrame return
+    property output_frame
+        get get_OutputFrame slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IProcessVideoFrameContext shape=4 reverse=43
+            out class type=Windows.Media.VideoFrame return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioCaptureEffectsManager,System.Object> concrete
+    guid a1c5e803-a275-5bb1-9d44-2ac8ae9ffb89
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Effects.AudioCaptureEffectsManager;{8f85c271-038d-4393-8298-540110608eef});cinterface(IInspectable))
+    argument Windows.Media.Effects.AudioCaptureEffectsManager
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioRenderEffectsManager,System.Object> concrete
+    guid 4be29c7e-449c-576e-a7b8-3a40f2f01dc8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Effects.AudioRenderEffectsManager;{4dc98966-8751-42b2-bfcb-39ca7864bd47});cinterface(IInspectable))
+    argument Windows.Media.Effects.AudioRenderEffectsManager
+    argument System.Object
+
+class Windows.Media.Effects.VideoCompositorDefinition python_type
+    py VideoCompositorDefinition
+    signature rc(Windows.Media.Effects.VideoCompositorDefinition;{7946b8d0-2010-4ae3-9ab2-2cef42edd4d2})
+    default Windows.Media.Effects.IVideoCompositorDefinition
+    requires Windows.Media.Effects.IVideoCompositorDefinition
+    factory Windows.Media.Effects.IVideoCompositorDefinitionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinitionFactory shape=51 reverse=24
+            in string name=activatableClassId
+            out class type=Windows.Media.Effects.VideoCompositorDefinition return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinitionFactory shape=117 reverse=45
+            in string name=activatableClassId
+            in interface type=Windows.Foundation.Collections.IPropertySet name=props
+            out class type=Windows.Media.Effects.VideoCompositorDefinition return
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoCompositorDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+class Windows.Media.Effects.VideoEffectDefinition python_type
+    py VideoEffectDefinition
+    signature rc(Windows.Media.Effects.VideoEffectDefinition;{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    default Windows.Media.Effects.IVideoEffectDefinition
+    requires Windows.Media.Effects.IVideoEffectDefinition
+    factory Windows.Media.Effects.IVideoEffectDefinitionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinitionFactory shape=51 reverse=24
+            in string name=activatableClassId
+            out class type=Windows.Media.Effects.VideoEffectDefinition return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinitionFactory shape=117 reverse=45
+            in string name=activatableClassId
+            in interface type=Windows.Foundation.Collections.IPropertySet name=props
+            out class type=Windows.Media.Effects.VideoEffectDefinition return
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+
+class Windows.Media.Effects.VideoTransformEffectDefinition activatable python_type
+    py VideoTransformEffectDefinition
+    signature rc(Windows.Media.Effects.VideoTransformEffectDefinition;{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    default Windows.Media.Effects.IVideoEffectDefinition
+    requires Windows.Media.Effects.IVideoEffectDefinition
+    requires Windows.Media.Effects.IVideoTransformEffectDefinition
+    requires Windows.Media.Effects.IVideoTransformEffectDefinition2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property activatable_class_id
+        get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=43
+            out interface type=Windows.Foundation.Collections.IPropertySet return
+    property rotation
+        get get_Rotation slot=12 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=162
+            out enum32 type=Windows.Media.MediaProperties.MediaRotation return
+        put put_Rotation slot=13 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=173
+            in enum32 type=Windows.Media.MediaProperties.MediaRotation name=value
+    property processing_algorithm
+        get get_ProcessingAlgorithm slot=17 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=210
+            out enum32 type=Windows.Media.Transcoding.MediaVideoProcessingAlgorithm return
+        put put_ProcessingAlgorithm slot=16 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=202
+            in enum32 type=Windows.Media.Transcoding.MediaVideoProcessingAlgorithm name=value
+    property padding_color
+        get get_PaddingColor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_PaddingColor slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=29
+            in struct type=Windows.UI.Color name=value
+    property output_size
+        get get_OutputSize slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=62
+            out struct type=Windows.Foundation.Size return
+        put put_OutputSize slot=9 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=10
+            in struct type=Windows.Foundation.Size name=value
+    property mirror
+        get get_Mirror slot=14 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=186
+            out enum_u32 type=Windows.Media.MediaProperties.MediaMirroringOptions return
+        put put_Mirror slot=15 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=194
+            in enum_u32 type=Windows.Media.MediaProperties.MediaMirroringOptions name=value
+    property crop_rectangle
+        get get_CropRectangle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=4 reverse=121
+            out struct type=Windows.Foundation.Rect return
+        put put_CropRectangle slot=11 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property spherical_projection
+        get get_SphericalProjection slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformEffectDefinition2 shape=4 reverse=22
+            out class type=Windows.Media.Effects.VideoTransformSphericalProjection return
+
+class Windows.Media.Effects.VideoTransformSphericalProjection python_type
+    py VideoTransformSphericalProjection
+    signature rc(Windows.Media.Effects.VideoTransformSphericalProjection;{cf4401f0-9bf2-4c39-9f41-e022514a8468})
+    default Windows.Media.Effects.IVideoTransformSphericalProjection
+    requires Windows.Media.Effects.IVideoTransformSphericalProjection
+    property view_orientation
+        get get_ViewOrientation slot=14 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=186
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+        put put_ViewOrientation slot=15 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=8
+            in struct type=Windows.Foundation.Numerics.Quaternion name=value
+    property projection_mode
+        get get_ProjectionMode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=121
+            out enum32 type=Windows.Media.Playback.SphericalVideoProjectionMode return
+        put put_ProjectionMode slot=11 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=141
+            in enum32 type=Windows.Media.Playback.SphericalVideoProjectionMode name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=43
+            in boolean name=value
+    property horizontal_field_of_view_in_degrees
+        get get_HorizontalFieldOfViewInDegrees slot=12 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=162
+            out double return
+        put put_HorizontalFieldOfViewInDegrees slot=13 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=2 reverse=171
+            in double name=value
+    property frame_format
+        get get_FrameFormat slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=62
+            out enum32 type=Windows.Media.MediaProperties.SphericalVideoFrameFormat return
+        put put_FrameFormat slot=9 inputs=1 outputs=0 declaring=Windows.Media.Effects.IVideoTransformSphericalProjection shape=4 reverse=99
+            in enum32 type=Windows.Media.MediaProperties.SphericalVideoFrameFormat name=value
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+interface Windows.Foundation.Collections.IPropertySet external
+    py winrt.windows.foundation.collections._IPropertySet
+    guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+struct Windows.Foundation.Numerics.Quaternion external
+    py winrt.windows.foundation.numerics.Quaternion
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DDevice
+    guid a37624ab-8d5f-4650-9d3e-9eae3d9bc670
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+class Windows.Media.AudioFrame external
+    py winrt.windows.media.AudioFrame
+
+enum Windows.Media.AudioProcessing external
+    py winrt.windows.media.AudioProcessing
+
+interface Windows.Media.IMediaExtension external
+    py winrt.windows.media._IMediaExtension
+    guid 07915118-45df-442b-8a3f-f7826a6370ab
+
+class Windows.Media.VideoFrame external
+    py winrt.windows.media.VideoFrame
+
+enum Windows.Media.Capture.MediaCategory external
+    py winrt.windows.media.capture.MediaCategory
+
+class Windows.Media.Editing.MediaOverlay external
+    py winrt.windows.media.editing.MediaOverlay
+
+class Windows.Media.MediaProperties.AudioEncodingProperties external
+    py winrt.windows.media.mediaproperties.AudioEncodingProperties
+
+enum Windows.Media.MediaProperties.MediaMirroringOptions external
+    py winrt.windows.media.mediaproperties.MediaMirroringOptions
+
+enum Windows.Media.MediaProperties.MediaRotation external
+    py winrt.windows.media.mediaproperties.MediaRotation
+
+enum Windows.Media.MediaProperties.SphericalVideoFrameFormat external
+    py winrt.windows.media.mediaproperties.SphericalVideoFrameFormat
+
+class Windows.Media.MediaProperties.VideoEncodingProperties external
+    py winrt.windows.media.mediaproperties.VideoEncodingProperties
+
+enum Windows.Media.Playback.SphericalVideoProjectionMode external
+    py winrt.windows.media.playback.SphericalVideoProjectionMode
+
+enum Windows.Media.Render.AudioRenderCategory external
+    py winrt.windows.media.render.AudioRenderCategory
+
+enum Windows.Media.Transcoding.MediaVideoProcessingAlgorithm external
+    py winrt.windows.media.transcoding.MediaVideoProcessingAlgorithm
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

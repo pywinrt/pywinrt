@@ -1,0 +1,56 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Adc.Provider
+
+interface Windows.Devices.Adc.Provider.IAdcControllerProvider python_type
+    py _IAdcControllerProvider
+    guid be545828-816d-4de5-a048-aba06958aaa8
+    signature {be545828-816d-4de5-a048-aba06958aaa8}
+    property channel_count
+        get get_ChannelCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=22
+            out int32 return
+    property channel_mode
+        get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=121
+            out enum32 type=Windows.Devices.Adc.Provider.ProviderAdcChannelMode return
+        put put_ChannelMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=141
+            in enum32 type=Windows.Devices.Adc.Provider.ProviderAdcChannelMode name=value
+    property max_value
+        get get_MaxValue slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=99
+            out int32 return
+    property min_value
+        get get_MinValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=62
+            out int32 return
+    property resolution_in_bits
+        get get_ResolutionInBits slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=43
+            out int32 return
+    method acquire_channel
+        method AcquireChannel slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=173
+            in int32 name=channel
+    method is_channel_mode_supported
+        method IsChannelModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=51 reverse=163
+            in enum32 type=Windows.Devices.Adc.Provider.ProviderAdcChannelMode name=channelMode
+            out boolean return
+    method read_value
+        method ReadValue slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=51 reverse=196
+            in int32 name=channelNumber
+            out int32 return
+    method release_channel
+        method ReleaseChannel slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Adc.Provider.IAdcControllerProvider shape=4 reverse=186
+            in int32 name=channel
+
+interface Windows.Devices.Adc.Provider.IAdcProvider python_type
+    py _IAdcProvider
+    guid 28953668-9359-4c57-bc88-e275e81638c9
+    signature {28953668-9359-4c57-bc88-e275e81638c9}
+    method get_controllers
+        method GetControllers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> concrete
+    guid 7c4789c0-8445-5757-aab7-659cbf50aaa7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{be545828-816d-4de5-a048-aba06958aaa8})
+    argument Windows.Devices.Adc.Provider.IAdcControllerProvider
+
+enum Windows.Devices.Adc.Provider.ProviderAdcChannelMode python_type
+    py ProviderAdcChannelMode
+    signature enum(Windows.Devices.Adc.Provider.ProviderAdcChannelMode;i4)

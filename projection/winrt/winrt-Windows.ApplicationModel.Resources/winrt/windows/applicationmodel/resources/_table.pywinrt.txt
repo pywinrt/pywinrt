@@ -1,0 +1,81 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Resources
+
+interface Windows.ApplicationModel.Resources.IResourceLoader
+    guid 08524908-16ef-45ad-a602-293637d7e61a
+
+interface Windows.ApplicationModel.Resources.IResourceLoader2
+    guid 10eb6ec6-8138-48c1-bc65-e1f14207367c
+
+interface Windows.ApplicationModel.Resources.IResourceLoaderFactory
+    guid c33a3603-69dc-4285-a077-d5c0e47ccbe8
+
+interface Windows.ApplicationModel.Resources.IResourceLoaderStatics
+    guid bf777ce1-19c8-49c2-953c-47e9227b334e
+
+interface Windows.ApplicationModel.Resources.IResourceLoaderStatics2
+    guid 0cc04141-6466-4989-9494-0b82dfc53f1f
+
+interface Windows.ApplicationModel.Resources.IResourceLoaderStatics3
+    guid 64609dfb-64ac-491b-8100-0e558d61c1d0
+
+interface Windows.ApplicationModel.Resources.IResourceLoaderStatics4
+    guid 9fb36c32-6c8c-4316-962e-909539b5c259
+
+class Windows.ApplicationModel.Resources.ResourceLoader activatable python_type
+    py ResourceLoader
+    signature rc(Windows.ApplicationModel.Resources.ResourceLoader;{08524908-16ef-45ad-a602-293637d7e61a})
+    default Windows.ApplicationModel.Resources.IResourceLoader
+    requires Windows.ApplicationModel.Resources.IResourceLoader
+    requires Windows.ApplicationModel.Resources.IResourceLoader2
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics2
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics4
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics3
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics
+    factory Windows.ApplicationModel.Resources.IResourceLoaderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
+            in string name=name implicit
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+    method get_default_pri_path static
+        method GetDefaultPriPath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics4 shape=51 reverse=24 static
+            in string name=packageFullName
+            out string return
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+        method GetForCurrentView slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 reverse=44 static
+            in string name=name
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+    method get_for_ui_context static
+        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics3 shape=51 reverse=24 static
+            in class type=Windows.UI.UIContext name=context
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+    method get_for_view_independent_use static
+        method GetForViewIndependentUse slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 reverse=62 static
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+        method GetForViewIndependentUse slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 reverse=100 static
+            in string name=name
+            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+    method get_string
+        method GetString slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader shape=51 reverse=24
+            in string name=resource
+            out string return
+    method get_string_for_reference static
+        method GetStringForReference slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics shape=51 reverse=24 static
+            in class type=Windows.Foundation.Uri name=uri
+            out string return
+    method get_string_for_uri
+        method GetStringForUri slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader2 shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri
+            out string return
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.UI.UIContext external
+    py winrt.windows.ui.UIContext

@@ -1,0 +1,7 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.Widgets
+
+enum Microsoft.Windows.Widgets.WidgetSize python_type
+    py WidgetSize
+    signature enum(Microsoft.Windows.Widgets.WidgetSize;i4)

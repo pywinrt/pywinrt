@@ -1,0 +1,39 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Xml.Xsl
+
+interface Windows.Data.Xml.Xsl.IXsltProcessor
+    guid 7b64703f-550c-48c6-a90f-93a5b964518f
+
+interface Windows.Data.Xml.Xsl.IXsltProcessor2
+    guid 8da45c56-97a5-44cb-a8be-27d86280c70a
+
+interface Windows.Data.Xml.Xsl.IXsltProcessorFactory
+    guid 274146c0-9a51-4663-bf30-0ef742146f20
+
+class Windows.Data.Xml.Xsl.XsltProcessor python_type
+    py XsltProcessor
+    signature rc(Windows.Data.Xml.Xsl.XsltProcessor;{7b64703f-550c-48c6-a90f-93a5b964518f})
+    default Windows.Data.Xml.Xsl.IXsltProcessor
+    requires Windows.Data.Xml.Xsl.IXsltProcessor
+    requires Windows.Data.Xml.Xsl.IXsltProcessor2
+    factory Windows.Data.Xml.Xsl.IXsltProcessorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessorFactory shape=51 reverse=24
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=document
+            out class type=Windows.Data.Xml.Xsl.XsltProcessor return
+    method transform_to_document
+        method TransformToDocument slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor2 shape=51 reverse=24
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=inputNode
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    method transform_to_string
+        method TransformToString slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor shape=51 reverse=24
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=inputNode
+            out string return
+
+interface Windows.Data.Xml.Dom.IXmlNode external
+    py winrt.windows.data.xml.dom._IXmlNode
+    guid 1c741d59-2122-47d5-a856-83f3d4214875
+
+class Windows.Data.Xml.Dom.XmlDocument external
+    py winrt.windows.data.xml.dom.XmlDocument

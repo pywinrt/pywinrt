@@ -1,0 +1,1283 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Appointments
+
+class Windows.ApplicationModel.Appointments.Appointment activatable python_type
+    py Appointment
+    signature rc(Windows.ApplicationModel.Appointments.Appointment;{dd002f2f-2bdd-4076-90a3-22c275312965})
+    default Windows.ApplicationModel.Appointments.IAppointment
+    requires Windows.ApplicationModel.Appointments.IAppointment
+    requires Windows.ApplicationModel.Appointments.IAppointment2
+    requires Windows.ApplicationModel.Appointments.IAppointment3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property location
+        get get_Location slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=121
+            out string return
+        put put_Location slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=141
+            in string name=value
+    property all_day
+        get get_AllDay slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=252
+            out boolean return
+        put put_AllDay slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=255
+            in boolean name=value
+    property organizer
+        get get_Organizer slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=218
+            out class type=Windows.ApplicationModel.Appointments.AppointmentOrganizer return
+        put put_Organizer slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=223
+            in class type=Windows.ApplicationModel.Appointments.AppointmentOrganizer name=value
+    property duration
+        get get_Duration slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=62
+            out timespan return
+        put put_Duration slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=26 reverse=110
+            in timespan name=value
+    property details
+        get get_Details slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=186
+            out string return
+        put put_Details slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=194
+            in string name=value
+    property busy_status
+        get get_BusyStatus slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=242
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentBusyStatus return
+        put put_BusyStatus slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=247
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentBusyStatus name=value
+    property recurrence
+        get get_Recurrence slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=232
+            out class type=Windows.ApplicationModel.Appointments.AppointmentRecurrence return
+        put put_Recurrence slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=237
+            in class type=Windows.ApplicationModel.Appointments.AppointmentRecurrence name=value
+    property subject
+        get get_Subject slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=162
+            out string return
+        put put_Subject slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=173
+            in string name=value
+    property uri
+        get get_Uri slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=266
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=270
+            in class type=Windows.Foundation.Uri name=value
+    property start_time
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=22
+            out datetime return
+        put put_StartTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=26 reverse=53
+            in datetime name=value
+    property sensitivity
+        get get_Sensitivity slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=259
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentSensitivity return
+        put put_Sensitivity slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=263
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentSensitivity name=value
+    property reminder
+        get get_Reminder slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=202
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_Reminder slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=210
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property invitees
+        get get_Invitees slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Appointments.AppointmentInvitee> return
+    property allow_new_time_proposal
+        get get_AllowNewTimeProposal slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=173
+            out boolean return
+        put put_AllowNewTimeProposal slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=186
+            in boolean name=value
+    property user_response
+        get get_UserResponse slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=223
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse return
+        put put_UserResponse slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=228
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse name=value
+    property roaming_id
+        get get_RoamingId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=62
+            out string return
+        put put_RoamingId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=99
+            in string name=value
+    property reply_time
+        get get_ReplyTime slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=210
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_ReplyTime slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=218
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property is_response_requested
+        get get_IsResponseRequested slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=141
+            out boolean return
+        put put_IsResponseRequested slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=162
+            in boolean name=value
+    property is_organized_by_user
+        get get_IsOrganizedByUser slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=247
+            out boolean return
+        put put_IsOrganizedByUser slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=252
+            in boolean name=value
+    property is_canceled_meeting
+        get get_IsCanceledMeeting slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=237
+            out boolean return
+        put put_IsCanceledMeeting slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=242
+            in boolean name=value
+    property online_meeting_link
+        get get_OnlineMeetingLink slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=194
+            out string return
+        put put_OnlineMeetingLink slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=202
+            in string name=value
+    property has_invitees
+        get get_HasInvitees slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=232
+            out boolean return
+    property calendar_id
+        get get_CalendarId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=43
+            out string return
+    property local_id
+        get get_LocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=22
+            out string return
+    property original_start_time
+        get get_OriginalStartTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment2 shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property remote_change_number
+        get get_RemoteChangeNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment3 shape=4 reverse=43
+            out uint64 return
+        put put_RemoteChangeNumber slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment3 shape=3
+            in uint64 name=value
+    property details_kind
+        get get_DetailsKind slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment3 shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentDetailsKind return
+        put put_DetailsKind slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointment3 shape=4 reverse=121
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentDetailsKind name=value
+    property change_number
+        get get_ChangeNumber slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointment3 shape=4 reverse=22
+            out uint64 return
+
+enum Windows.ApplicationModel.Appointments.AppointmentBusyStatus python_type
+    py AppointmentBusyStatus
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentBusyStatus;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentCalendar python_type
+    py AppointmentCalendar
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d})
+    default Windows.ApplicationModel.Appointments.IAppointmentCalendar
+    requires Windows.ApplicationModel.Appointments.IAppointmentCalendar
+    requires Windows.ApplicationModel.Appointments.IAppointmentCalendar2
+    requires Windows.ApplicationModel.Appointments.IAppointmentCalendar3
+    property summary_card_view
+        get get_SummaryCardView slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentSummaryCardView return
+        put put_SummaryCardView slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=210
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentSummaryCardView name=value
+    property other_app_write_access
+        get get_OtherAppWriteAccess slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=173
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess return
+        put put_OtherAppWriteAccess slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=186
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess name=value
+    property display_color
+        get get_DisplayColor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_DisplayColor slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=29 reverse=113
+            in struct type=Windows.UI.Color name=value
+    property is_hidden
+        get get_IsHidden slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=121
+            out boolean return
+        put put_IsHidden slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=121
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=62
+            in string name=value
+    property other_app_read_access
+        get get_OtherAppReadAccess slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=141
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess return
+        put put_OtherAppReadAccess slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=162
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess name=value
+    property local_id
+        get get_LocalId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=99
+            out string return
+    property source_display_name
+        get get_SourceDisplayName slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=194
+            out string return
+    property can_cancel_meetings
+        get get_CanCancelMeetings slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=186
+            out boolean return
+        put put_CanCancelMeetings slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=194
+            in boolean name=value
+    property can_notify_invitees
+        get get_CanNotifyInvitees slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=237
+            out boolean return
+        put put_CanNotifyInvitees slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=242
+            in boolean name=value
+    property remote_id
+        get get_RemoteId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=43
+            out string return
+        put put_RemoteId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=62
+            in string name=value
+    property must_nofity_invitees
+        get get_MustNofityInvitees slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=247
+            out boolean return
+        put put_MustNofityInvitees slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=252
+            in boolean name=value
+    property can_update_meeting_responses
+        get get_CanUpdateMeetingResponses slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=228
+            out boolean return
+        put put_CanUpdateMeetingResponses slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=232
+            in boolean name=value
+    property can_propose_new_time_for_meetings
+        get get_CanProposeNewTimeForMeetings slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=218
+            out boolean return
+        put put_CanProposeNewTimeForMeetings slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=223
+            in boolean name=value
+    property can_create_or_update_appointments
+        get get_CanCreateOrUpdateAppointments slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=162
+            out boolean return
+        put put_CanCreateOrUpdateAppointments slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=173
+            in boolean name=value
+    property can_forward_meetings
+        get get_CanForwardMeetings slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=202
+            out boolean return
+        put put_CanForwardMeetings slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=210
+            in boolean name=value
+    property sync_manager
+        get get_SyncManager slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager return
+    property user_data_account_id
+        get get_UserDataAccountId slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=4 reverse=141
+            out string return
+    method delete_appointment_async
+        method DeleteAppointmentAsync slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=51 reverse=267
+            in string name=localId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_appointment_instance_async
+        method DeleteAppointmentInstanceAsync slot=30 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=135
+            in string name=localId
+            in datetime name=instanceStartTime
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_async
+        method DeleteAsync slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=259
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_all_instances_async
+        method FindAllInstancesAsync slot=21 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=214
+            in string name=masterLocalId
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+        method FindAllInstancesAsync slot=22 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=252
+            in string name=masterLocalId
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            in class type=Windows.ApplicationModel.Appointments.FindAppointmentsOptions name=pOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+    method find_appointments_async
+        method FindAppointmentsAsync slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=170
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+        method FindAppointmentsAsync slot=19 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=228
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            in class type=Windows.ApplicationModel.Appointments.FindAppointmentsOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+    method find_exceptions_from_master_async
+        method FindExceptionsFromMasterAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=51 reverse=229
+            in string name=masterLocalId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentException>> return
+    method find_unexpanded_appointments_async
+        method FindUnexpandedAppointmentsAsync slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=252
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+        method FindUnexpandedAppointmentsAsync slot=26 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=51 reverse=256
+            in class type=Windows.ApplicationModel.Appointments.FindAppointmentsOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+    method get_appointment_async
+        method GetAppointmentAsync slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=51 reverse=243
+            in string name=localId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.Appointment> return
+    method get_appointment_instance_async
+        method GetAppointmentInstanceAsync slot=24 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=135
+            in string name=localId
+            in datetime name=instanceStartTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.Appointment> return
+    method register_sync_manager_async
+        method RegisterSyncManagerAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar3 shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_appointment_async
+        method SaveAppointmentAsync slot=31 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=51 reverse=274
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=pAppointment
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_async
+        method SaveAsync slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar shape=4 reverse=263
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_cancel_meeting_async
+        method TryCancelMeetingAsync slot=27 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=239
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=meeting
+            in string name=subject
+            in string name=comment
+            in boolean name=notifyInvitees
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_create_or_update_appointment_async
+        method TryCreateOrUpdateAppointmentAsync slot=26 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=117
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in boolean name=notifyInvitees
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_forward_meeting_async
+        method TryForwardMeetingAsync slot=28 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=267
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=meeting
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Appointments.AppointmentInvitee> name=invitees
+            in string name=subject
+            in string name=forwardHeader
+            in string name=comment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_propose_new_time_for_meeting_async
+        method TryProposeNewTimeForMeetingAsync slot=29 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=273
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=meeting
+            in datetime name=newStartTime
+            in timespan name=newDuration
+            in string name=subject
+            in string name=comment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_update_meeting_response_async
+        method TryUpdateMeetingResponseAsync slot=30 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendar2 shape=267
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=meeting
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse name=response
+            in string name=subject
+            in string name=comment
+            in boolean name=sendUpdate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess python_type
+    py AppointmentCalendarOtherAppReadAccess
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess;i4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess python_type
+    py AppointmentCalendarOtherAppWriteAccess
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager python_type
+    py AppointmentCalendarSyncManager
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager;{2b21b3a0-4aff-4392-bc5f-5645ffcffb17})
+    default Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager
+    requires Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager
+    requires Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus return
+        put put_Status slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2 shape=4 reverse=22
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus name=value
+    property last_successful_sync_time
+        get get_LastSuccessfulSyncTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=4 reverse=43
+            out datetime return
+        put put_LastSuccessfulSyncTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2 shape=26 reverse=53
+            in datetime name=value
+    property last_attempted_sync_time
+        get get_LastAttemptedSyncTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=4 reverse=62
+            out datetime return
+        put put_LastAttemptedSyncTime slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2 shape=26 reverse=82
+            in datetime name=value
+    event sync_status_changed
+        add add_SyncStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager,System.Object> name=handler
+            out event_token return
+        remove remove_SyncStatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=26 reverse=156
+            in event_token name=token
+    method sync_async
+        method SyncAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus python_type
+    py AppointmentCalendarSyncStatus
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentConflictResult python_type
+    py AppointmentConflictResult
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentConflictResult;{d5cdf0be-2f2f-3b7d-af0a-a7e20f3a46e3})
+    default Windows.ApplicationModel.Appointments.IAppointmentConflictResult
+    requires Windows.ApplicationModel.Appointments.IAppointmentConflictResult
+    property date
+        get get_Date slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentConflictResult shape=4 reverse=43
+            out datetime return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentConflictResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentConflictType return
+
+enum Windows.ApplicationModel.Appointments.AppointmentConflictType python_type
+    py AppointmentConflictType
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentConflictType;i4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek python_type
+    py AppointmentDaysOfWeek
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek;u4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentDetailsKind python_type
+    py AppointmentDetailsKind
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentDetailsKind;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentException python_type
+    py AppointmentException
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentException;{a2076767-16f6-4bce-9f5a-8600b8019fcb})
+    default Windows.ApplicationModel.Appointments.IAppointmentException
+    requires Windows.ApplicationModel.Appointments.IAppointmentException
+    property appointment
+        get get_Appointment slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentException shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.Appointment return
+    property exception_properties
+        get get_ExceptionProperties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentException shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property is_deleted
+        get get_IsDeleted slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentException shape=4 reverse=62
+            out boolean return
+
+class Windows.ApplicationModel.Appointments.AppointmentInvitee activatable python_type
+    py AppointmentInvitee
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentInvitee;{13bf0796-9842-495b-b0e7-ef8f79c0701d})
+    default Windows.ApplicationModel.Appointments.IAppointmentInvitee
+    requires Windows.ApplicationModel.Appointments.IAppointmentInvitee
+    requires Windows.ApplicationModel.Appointments.IAppointmentParticipant
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property role
+        get get_Role slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentInvitee shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantRole return
+        put put_Role slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentInvitee shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantRole name=value
+    property response
+        get get_Response slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentInvitee shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse return
+        put put_Response slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentInvitee shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=22
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=43
+            in string name=value
+    property address
+        get get_Address slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=62
+            out string return
+        put put_Address slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=99
+            in string name=value
+
+class Windows.ApplicationModel.Appointments.AppointmentManager static python_type
+    py AppointmentManager
+    factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics
+    factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3
+    factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.Appointments.AppointmentManagerForUser return
+    method request_store_async static
+        method RequestStoreAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2 shape=51 reverse=100 static
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentStoreAccessType name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentStore> return
+    method show_add_appointment_async static
+        method ShowAddAppointmentAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=130 static
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowAddAppointmentAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=205 static
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_appointment_details_async static
+        method ShowAppointmentDetailsAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2 shape=51 reverse=24 static
+            in string name=appointmentId
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ShowAppointmentDetailsAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2 shape=135 static
+            in string name=appointmentId
+            in datetime name=instanceStartDate
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_edit_new_appointment_async static
+        method ShowEditNewAppointmentAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2 shape=51 reverse=65 static
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_remove_appointment_async static
+        method ShowRemoveAppointmentAsync slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=130 static
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method ShowRemoveAppointmentAsync slot=12 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=205 static
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method ShowRemoveAppointmentAsync slot=13 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=250 static
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method show_replace_appointment_async static
+        method ShowReplaceAppointmentAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=198 static
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowReplaceAppointmentAsync slot=9 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=242 static
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowReplaceAppointmentAsync slot=10 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=269 static
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_time_frame_async static
+        method ShowTimeFrameAsync slot=14 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics shape=170 static
+            in datetime name=timeToShow
+            in timespan name=duration
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.AppointmentManagerForUser python_type
+    py AppointmentManagerForUser
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentManagerForUser;{70261423-73cc-4660-b318-b01365302a03})
+    default Windows.ApplicationModel.Appointments.IAppointmentManagerForUser
+    requires Windows.ApplicationModel.Appointments.IAppointmentManagerForUser
+    property user
+        get get_User slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=4 reverse=223
+            out class type=Windows.System.User return
+    method request_store_async
+        method RequestStoreAsync slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=51 reverse=219
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentStoreAccessType name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentStore> return
+    method show_add_appointment_async
+        method ShowAddAppointmentAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=130
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowAddAppointmentAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=205
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_appointment_details_async
+        method ShowAppointmentDetailsAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=51 reverse=196
+            in string name=appointmentId
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ShowAppointmentDetailsAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=135
+            in string name=appointmentId
+            in datetime name=instanceStartDate
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_edit_new_appointment_async
+        method ShowEditNewAppointmentAsync slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=51 reverse=211
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_remove_appointment_async
+        method ShowRemoveAppointmentAsync slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=130
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method ShowRemoveAppointmentAsync slot=12 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=205
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method ShowRemoveAppointmentAsync slot=13 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=250
+            in string name=appointmentId
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method show_replace_appointment_async
+        method ShowReplaceAppointmentAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=198
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowReplaceAppointmentAsync slot=9 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=242
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowReplaceAppointmentAsync slot=10 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=269
+            in string name=appointmentId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_time_frame_async
+        method ShowTimeFrameAsync slot=14 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerForUser shape=170
+            in datetime name=timeToShow
+            in timespan name=duration
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.AppointmentOrganizer activatable python_type
+    py AppointmentOrganizer
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentOrganizer;{615e2902-9718-467b-83fb-b293a19121de})
+    default Windows.ApplicationModel.Appointments.IAppointmentParticipant
+    requires Windows.ApplicationModel.Appointments.IAppointmentParticipant
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=22
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=43
+            in string name=value
+    property address
+        get get_Address slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=62
+            out string return
+        put put_Address slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=99
+            in string name=value
+
+enum Windows.ApplicationModel.Appointments.AppointmentParticipantResponse python_type
+    py AppointmentParticipantResponse
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentParticipantResponse;i4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentParticipantRole python_type
+    py AppointmentParticipantRole
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentParticipantRole;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentProperties static python_type
+    py AppointmentProperties
+    factory Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2
+    factory Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics
+    property has_invitees static
+        get get_HasInvitees slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=237 static
+            out string return
+    property all_day static
+        get get_AllDay slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=202 static
+            out string return
+    property allow_new_time_proposal static
+        get get_AllowNewTimeProposal slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=194 static
+            out string return
+    property busy_status static
+        get get_BusyStatus slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=141 static
+            out string return
+    property default_properties static
+        get get_DefaultProperties slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=263 static
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property details static
+        get get_Details slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=210 static
+            out string return
+    property duration static
+        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=99 static
+            out string return
+    property recurrence static
+        get get_Recurrence slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=252 static
+            out string return
+    property invitees static
+        get get_Invitees slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=259 static
+            out string return
+    property is_canceled_meeting static
+        get get_IsCanceledMeeting slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=242 static
+            out string return
+    property is_organized_by_user static
+        get get_IsOrganizedByUser slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=247 static
+            out string return
+    property is_response_requested static
+        get get_IsResponseRequested slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=186 static
+            out string return
+    property location static
+        get get_Location slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=43 static
+            out string return
+    property online_meeting_link static
+        get get_OnlineMeetingLink slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=218 static
+            out string return
+    property organizer static
+        get get_Organizer slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=228 static
+            out string return
+    property original_start_time static
+        get get_OriginalStartTime slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=173 static
+            out string return
+    property reminder static
+        get get_Reminder slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=121 static
+            out string return
+    property reply_time static
+        get get_ReplyTime slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=223 static
+            out string return
+    property sensitivity static
+        get get_Sensitivity slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=162 static
+            out string return
+    property start_time static
+        get get_StartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=62 static
+            out string return
+    property subject static
+        get get_Subject slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=22 static
+            out string return
+    property uri static
+        get get_Uri slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=255 static
+            out string return
+    property user_response static
+        get get_UserResponse slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=232 static
+            out string return
+    property details_kind static
+        get get_DetailsKind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2 shape=4 reverse=62 static
+            out string return
+    property remote_change_number static
+        get get_RemoteChangeNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2 shape=4 reverse=43 static
+            out string return
+    property change_number static
+        get get_ChangeNumber slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.ApplicationModel.Appointments.AppointmentRecurrence activatable python_type
+    py AppointmentRecurrence
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentRecurrence;{d87b3e83-15a6-487b-b959-0c361e60e954})
+    default Windows.ApplicationModel.Appointments.IAppointmentRecurrence
+    requires Windows.ApplicationModel.Appointments.IAppointmentRecurrence
+    requires Windows.ApplicationModel.Appointments.IAppointmentRecurrence2
+    requires Windows.ApplicationModel.Appointments.IAppointmentRecurrence3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property unit
+        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit return
+        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit name=value
+    property occurrences
+        get get_Occurrences slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Occurrences slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property month
+        get get_Month slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=218
+            out uint32 return
+        put put_Month slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=223
+            in uint32 name=value
+    property interval
+        get get_Interval slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=162
+            out uint32 return
+        put put_Interval slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=173
+            in uint32 name=value
+    property days_of_week
+        get get_DaysOfWeek slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=186
+            out enum_u32 type=Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek return
+        put put_DaysOfWeek slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=194
+            in enum_u32 type=Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek name=value
+    property day
+        get get_Day slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=228
+            out uint32 return
+        put put_Day slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=232
+            in uint32 name=value
+    property week_of_month
+        get get_WeekOfMonth slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth return
+        put put_WeekOfMonth slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=210
+            in enum32 type=Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth name=value
+    property until
+        get get_Until slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_Until slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property time_zone
+        get get_TimeZone slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence2 shape=4 reverse=43
+            out string return
+        put put_TimeZone slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence2 shape=4 reverse=62
+            in string name=value
+    property recurrence_type
+        get get_RecurrenceType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence2 shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Appointments.RecurrenceType return
+    property calendar_identifier
+        get get_CalendarIdentifier slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentRecurrence3 shape=4 reverse=22
+            out string return
+
+enum Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit python_type
+    py AppointmentRecurrenceUnit
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit;i4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentSensitivity python_type
+    py AppointmentSensitivity
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentSensitivity;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentStore python_type
+    py AppointmentStore
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStore;{a461918c-7a47-4d96-96c9-15cd8a05a735})
+    default Windows.ApplicationModel.Appointments.IAppointmentStore
+    requires Windows.ApplicationModel.Appointments.IAppointmentStore
+    requires Windows.ApplicationModel.Appointments.IAppointmentStore2
+    requires Windows.ApplicationModel.Appointments.IAppointmentStore3
+    property change_tracker
+        get get_ChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker return
+    event store_changed
+        add add_StoreChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.AppointmentStore,Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs> name=pHandler
+            out event_token return
+        remove remove_StoreChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore2 shape=26 reverse=53
+            in event_token name=token
+    method create_appointment_calendar_async
+        method CreateAppointmentCalendarAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=44
+            in string name=name
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentCalendar> return
+        method CreateAppointmentCalendarAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore2 shape=117 reverse=66
+            in string name=name
+            in string name=userDataAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentCalendar> return
+    method find_appointment_calendars_async
+        method FindAppointmentCalendarsAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>> return
+        method FindAppointmentCalendarsAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=163
+            in enum_u32 type=Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>> return
+    method find_appointments_async
+        method FindAppointmentsAsync slot=13 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=170
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+        method FindAppointmentsAsync slot=14 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=228
+            in datetime name=rangeStart
+            in timespan name=rangeLength
+            in class type=Windows.ApplicationModel.Appointments.FindAppointmentsOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> return
+    method find_conflict_async
+        method FindConflictAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=196
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentConflictResult> return
+        method FindConflictAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=135
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in datetime name=instanceStartTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentConflictResult> return
+    method find_local_ids_from_roaming_id_async
+        method FindLocalIdsFromRoamingIdAsync slot=26 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=256
+            in string name=roamingId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
+    method get_appointment_async
+        method GetAppointmentAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=100
+            in string name=localId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.Appointment> return
+    method get_appointment_calendar_async
+        method GetAppointmentCalendarAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=65
+            in string name=calendarId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentCalendar> return
+    method get_appointment_instance_async
+        method GetAppointmentInstanceAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=135
+            in string name=localId
+            in datetime name=instanceStartTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.Appointment> return
+    method get_change_tracker
+        method GetChangeTracker slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore3 shape=51 reverse=24
+            in string name=identity
+            out class type=Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker return
+    method move_appointment_async
+        method MoveAppointmentAsync slot=17 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=117
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in class type=Windows.ApplicationModel.Appointments.AppointmentCalendar name=destinationCalendar
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_add_appointment_async
+        method ShowAddAppointmentAsync slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=130
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_appointment_details_async
+        method ShowAppointmentDetailsAsync slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=243
+            in string name=localId
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ShowAppointmentDetailsAsync slot=24 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=135
+            in string name=localId
+            in datetime name=instanceStartDate
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_edit_new_appointment_async
+        method ShowEditNewAppointmentAsync slot=25 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=51 reverse=253
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method show_remove_appointment_async
+        method ShowRemoveAppointmentAsync slot=21 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=130
+            in string name=localId
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method ShowRemoveAppointmentAsync slot=22 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=250
+            in string name=localId
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method show_replace_appointment_async
+        method ShowReplaceAppointmentAsync slot=19 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=198
+            in string name=localId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method ShowReplaceAppointmentAsync slot=20 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStore shape=269
+            in string name=localId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            in datetime name=instanceStartDate
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+
+enum Windows.ApplicationModel.Appointments.AppointmentStoreAccessType python_type
+    py AppointmentStoreAccessType
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentStoreAccessType;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreChange python_type
+    py AppointmentStoreChange
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreChange;{a5a6e035-0a33-3654-8463-b543e90c3b79})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreChange
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChange
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChange2
+    property appointment
+        get get_Appointment slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChange shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.Appointment return
+    property change_type
+        get get_ChangeType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChange shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentStoreChangeType return
+    property appointment_calendar
+        get get_AppointmentCalendar slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChange2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentCalendar return
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader python_type
+    py AppointmentStoreChangeReader
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader;{8b2409f1-65f3-42a0-961d-4c209bf30370})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader
+    method accept_changes
+        method AcceptChanges slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader shape=0 reverse=37
+    method accept_changes_through
+        method AcceptChangesThrough slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader shape=4 reverse=62
+            in class type=Windows.ApplicationModel.Appointments.AppointmentStoreChange name=lastChangeToAccept
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentStoreChange>> return
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker python_type
+    py AppointmentStoreChangeTracker
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker;{1b25f4b1-8ece-4f17-93c8-e6412458fd5c})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2
+    property is_tracking
+        get get_IsTracking slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2 shape=4 reverse=22
+            out boolean return
+    method enable
+        method Enable slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker shape=0 reverse=37
+    method get_change_reader
+        method GetChangeReader slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader return
+    method reset
+        method Reset slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker shape=0 reverse=55
+
+enum Windows.ApplicationModel.Appointments.AppointmentStoreChangeType python_type
+    py AppointmentStoreChangeType
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentStoreChangeType;i4)
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral python_type
+    py AppointmentStoreChangedDeferral
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral;{4cb82026-fedb-4bc3-9662-95a9befdf4df})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreChangedDeferral
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChangedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangedDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs python_type
+    py AppointmentStoreChangedEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs;{2285f8b9-0791-417e-bfea-cc6d41636c8c})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreChangedEventArgs
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentStoreChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral return
+
+class Windows.ApplicationModel.Appointments.AppointmentStoreNotificationTriggerDetails python_type
+    py AppointmentStoreNotificationTriggerDetails
+    signature rc(Windows.ApplicationModel.Appointments.AppointmentStoreNotificationTriggerDetails;{9b33cb11-c301-421e-afef-047ecfa76adb})
+    default Windows.ApplicationModel.Appointments.IAppointmentStoreNotificationTriggerDetails
+    requires Windows.ApplicationModel.Appointments.IAppointmentStoreNotificationTriggerDetails
+
+enum Windows.ApplicationModel.Appointments.AppointmentSummaryCardView python_type
+    py AppointmentSummaryCardView
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentSummaryCardView;i4)
+
+enum Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth python_type
+    py AppointmentWeekOfMonth
+    signature enum(Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth;i4)
+
+enum Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions python_type
+    py FindAppointmentCalendarsOptions
+    signature enum(Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions;u4)
+
+class Windows.ApplicationModel.Appointments.FindAppointmentsOptions activatable python_type
+    py FindAppointmentsOptions
+    signature rc(Windows.ApplicationModel.Appointments.FindAppointmentsOptions;{55f7dc55-9942-3086-82b5-2cb29f64d5f5})
+    default Windows.ApplicationModel.Appointments.IFindAppointmentsOptions
+    requires Windows.ApplicationModel.Appointments.IFindAppointmentsOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property max_count
+        get get_MaxCount slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=121
+            out uint32 return
+        put put_MaxCount slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=141
+            in uint32 name=value
+    property include_hidden
+        get get_IncludeHidden slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=62
+            out boolean return
+        put put_IncludeHidden slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=99
+            in boolean name=value
+    property calendar_ids
+        get get_CalendarIds slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property fetch_properties
+        get get_FetchProperties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IFindAppointmentsOptions shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+interface Windows.ApplicationModel.Appointments.IAppointment
+    guid dd002f2f-2bdd-4076-90a3-22c275312965
+
+interface Windows.ApplicationModel.Appointments.IAppointment2
+    guid 5e85983c-540f-3452-9b5c-0dd7ad4c65a2
+
+interface Windows.ApplicationModel.Appointments.IAppointment3
+    guid bfcc45a9-8961-4991-934b-c48768e5a96c
+
+interface Windows.ApplicationModel.Appointments.IAppointmentCalendar
+    guid 5273819d-8339-3d4f-a02f-64084452bb5d
+
+interface Windows.ApplicationModel.Appointments.IAppointmentCalendar2
+    guid 18e7e422-2467-4e1c-a459-d8a29303d092
+
+interface Windows.ApplicationModel.Appointments.IAppointmentCalendar3
+    guid eb23d22b-a685-42ae-8495-b3119adb4167
+
+interface Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager
+    guid 2b21b3a0-4aff-4392-bc5f-5645ffcffb17
+
+interface Windows.ApplicationModel.Appointments.IAppointmentCalendarSyncManager2
+    guid 647528ad-0d29-4c7c-aaa7-bf996805537c
+
+interface Windows.ApplicationModel.Appointments.IAppointmentConflictResult
+    guid d5cdf0be-2f2f-3b7d-af0a-a7e20f3a46e3
+
+interface Windows.ApplicationModel.Appointments.IAppointmentException
+    guid a2076767-16f6-4bce-9f5a-8600b8019fcb
+
+interface Windows.ApplicationModel.Appointments.IAppointmentInvitee
+    guid 13bf0796-9842-495b-b0e7-ef8f79c0701d
+
+interface Windows.ApplicationModel.Appointments.IAppointmentManagerForUser
+    guid 70261423-73cc-4660-b318-b01365302a03
+
+interface Windows.ApplicationModel.Appointments.IAppointmentManagerStatics
+    guid 3a30fa01-5c40-499d-b33f-a43050f74fc4
+
+interface Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2
+    guid 0a81f60d-d04f-4034-af72-a36573b45ff0
+
+interface Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3
+    guid 2f9ae09c-b34c-4dc7-a35d-cafd88ae3ec6
+
+interface Windows.ApplicationModel.Appointments.IAppointmentParticipant python_type
+    py _IAppointmentParticipant
+    guid 615e2902-9718-467b-83fb-b293a19121de
+    signature {615e2902-9718-467b-83fb-b293a19121de}
+    property address
+        get get_Address slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=62
+            out string return
+        put put_Address slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=99
+            in string name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=22
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.IAppointmentParticipant shape=4 reverse=43
+            in string name=value
+
+interface Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics
+    guid 25141fe9-68ae-3aae-855f-bc4441caa234
+
+interface Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2
+    guid dffc434b-b017-45dd-8af5-d163d10801bb
+
+interface Windows.ApplicationModel.Appointments.IAppointmentRecurrence
+    guid d87b3e83-15a6-487b-b959-0c361e60e954
+
+interface Windows.ApplicationModel.Appointments.IAppointmentRecurrence2
+    guid 3df3a2e0-05a7-4f50-9f86-b03f9436254d
+
+interface Windows.ApplicationModel.Appointments.IAppointmentRecurrence3
+    guid 89ff96d9-da4d-4a17-8dd2-1cebc2b5ff9d
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStore
+    guid a461918c-7a47-4d96-96c9-15cd8a05a735
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStore2
+    guid 25c48c20-1c41-424f-8084-67c1cfe0a854
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStore3
+    guid 4251940b-b078-470a-9a40-c2e01761f72f
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChange
+    guid a5a6e035-0a33-3654-8463-b543e90c3b79
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChange2
+    guid b37d0dce-5211-4402-a608-a96fe70b8ee2
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChangeReader
+    guid 8b2409f1-65f3-42a0-961d-4c209bf30370
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker
+    guid 1b25f4b1-8ece-4f17-93c8-e6412458fd5c
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChangeTracker2
+    guid b66aaf45-9542-4cf7-8550-eb370e0c08d3
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChangedDeferral
+    guid 4cb82026-fedb-4bc3-9662-95a9befdf4df
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreChangedEventArgs
+    guid 2285f8b9-0791-417e-bfea-cc6d41636c8c
+
+interface Windows.ApplicationModel.Appointments.IAppointmentStoreNotificationTriggerDetails
+    guid 9b33cb11-c301-421e-afef-047ecfa76adb
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.Appointment> concrete
+    guid 0c5732f8-5bb9-5bb3-93e5-b87e43e0cd6a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Appointments.Appointment;{dd002f2f-2bdd-4076-90a3-22c275312965}))
+    argument Windows.ApplicationModel.Appointments.Appointment
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentCalendar> concrete
+    guid 6bb17a95-918e-5ad0-bbc2-bcc5fa1ff936
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentCalendar
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentConflictResult> concrete
+    guid b376080f-e5b2-5ae2-9901-86cf77ba5d00
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Appointments.AppointmentConflictResult;{d5cdf0be-2f2f-3b7d-af0a-a7e20f3a46e3}))
+    argument Windows.ApplicationModel.Appointments.AppointmentConflictResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Appointments.AppointmentStore> concrete
+    guid 63798415-4d1f-5fc7-8729-79a282bceca4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Appointments.AppointmentStore;{a461918c-7a47-4d96-96c9-15cd8a05a735}))
+    argument Windows.ApplicationModel.Appointments.AppointmentStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2f92b529-119b-575a-a419-3904b4e41af2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>> concrete
+    guid a6bb6962-e2c1-5da2-9938-15ef82cbd1cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.Appointment;{dd002f2f-2bdd-4076-90a3-22c275312965})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>> concrete
+    guid d26021ac-99b4-5c40-b0d2-d6835d2e9202
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentException>> concrete
+    guid 87e171ac-53fe-50ea-beb3-0589993ac984
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentException;{a2076767-16f6-4bce-9f5a-8600b8019fcb})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentException>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentStoreChange>> concrete
+    guid d54944b9-b72e-50bc-a64a-19396e0d1bcc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentStoreChange;{a5a6e035-0a33-3654-8463-b543e90c3b79})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentStoreChange>
+
+interface Windows.ApplicationModel.Appointments.IFindAppointmentsOptions
+    guid 55f7dc55-9942-3086-82b5-2cb29f64d5f5
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Appointments.AppointmentInvitee> concrete
+    guid fb9718a9-f059-52b0-a904-1a65e4281e40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Appointments.AppointmentInvitee;{13bf0796-9842-495b-b0e7-ef8f79c0701d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentInvitee
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Appointments.AppointmentInvitee> concrete
+    guid 70f4b32e-f91e-55bb-9a92-0246da734bb0
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Appointments.AppointmentInvitee;{13bf0796-9842-495b-b0e7-ef8f79c0701d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentInvitee
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.Appointment> concrete
+    guid 61021758-9e37-5a86-a832-aab31f32692b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.Appointment;{dd002f2f-2bdd-4076-90a3-22c275312965}))
+    argument Windows.ApplicationModel.Appointments.Appointment
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar> concrete
+    guid 774512d3-a564-5f8d-b104-3ec8f2a1104f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentCalendar;{5273819d-8339-3d4f-a02f-64084452bb5d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentCalendar
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentException> concrete
+    guid e5030866-08d8-56be-a21b-c5bf80d70360
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentException;{a2076767-16f6-4bce-9f5a-8600b8019fcb}))
+    argument Windows.ApplicationModel.Appointments.AppointmentException
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentStoreChange> concrete
+    guid 4f9dd4e5-c3ae-5269-aff5-fe35cd50c3bb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentStoreChange;{a5a6e035-0a33-3654-8463-b543e90c3b79}))
+    argument Windows.ApplicationModel.Appointments.AppointmentStoreChange
+
+enum Windows.ApplicationModel.Appointments.RecurrenceType python_type
+    py RecurrenceType
+    signature enum(Windows.ApplicationModel.Appointments.RecurrenceType;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager,System.Object> concrete
+    guid bd1308de-6d2e-5541-b254-bdb61839bac1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager;{2b21b3a0-4aff-4392-bc5f-5645ffcffb17});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.AppointmentStore,Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs> concrete
+    guid 9e628351-c639-5cef-ab1d-8beae9d75d52
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.AppointmentStore;{a461918c-7a47-4d96-96c9-15cd8a05a735});rc(Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs;{2285f8b9-0791-417e-bfea-cc6d41636c8c}))
+    argument Windows.ApplicationModel.Appointments.AppointmentStore
+    argument Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement

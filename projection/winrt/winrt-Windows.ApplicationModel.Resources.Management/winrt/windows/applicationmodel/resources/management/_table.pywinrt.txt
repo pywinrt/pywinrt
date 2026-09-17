@@ -1,0 +1,110 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Resources.Management
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> concrete
+    guid d2d41b8a-6616-5de8-aaf9-32ae51f67fcb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate;{0e619ef3-faec-4414-a9d7-54acd5953f29})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>
+
+interface Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate
+    guid 0e619ef3-faec-4414-a9d7-54acd5953f29
+
+interface Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier
+    guid dae3bb9b-d304-497f-a168-a340042c8adb
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.ApplicationModel.Resources.Management.IResourceIndexer
+    guid 2d4cf9a5-e32f-4ab2-8748-96350a016da3
+
+interface Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory
+    guid b8de3f09-31cd-4d97-bd30-8d39f742bc61
+
+interface Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2
+    guid 6040f18d-d5e5-4b60-9201-cd279cbcfed9
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate> concrete
+    guid 1da243f1-bb95-543e-95c6-5fd196b34b6f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate;{0e619ef3-faec-4414-a9d7-54acd5953f29}))
+    argument Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier> concrete
+    guid 239ded48-ce04-51f2-b2c9-a5e5ab671b8d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier;{dae3bb9b-d304-497f-a168-a340042c8adb}))
+    argument Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier
+
+class Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate python_type
+    py IndexedResourceCandidate
+    signature rc(Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate;{0e619ef3-faec-4414-a9d7-54acd5953f29})
+    default Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate
+    requires Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate
+    property metadata
+        get get_Metadata slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property qualifiers
+        get get_Qualifiers slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier> return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Resources.Management.IndexedResourceType return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property value_as_string
+        get get_ValueAsString slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=121
+            out string return
+    method get_qualifier_value
+        method GetQualifierValue slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=51 reverse=144
+            in string name=qualifierName
+            out string return
+
+class Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier python_type
+    py IndexedResourceQualifier
+    signature rc(Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier;{dae3bb9b-d304-497f-a168-a340042c8adb})
+    default Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier
+    requires Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier
+    property qualifier_name
+        get get_QualifierName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4 reverse=22
+            out string return
+    property qualifier_value
+        get get_QualifierValue slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4 reverse=43
+            out string return
+
+enum Windows.ApplicationModel.Resources.Management.IndexedResourceType python_type
+    py IndexedResourceType
+    signature enum(Windows.ApplicationModel.Resources.Management.IndexedResourceType;i4)
+
+class Windows.ApplicationModel.Resources.Management.ResourceIndexer python_type
+    py ResourceIndexer
+    signature rc(Windows.ApplicationModel.Resources.Management.ResourceIndexer;{2d4cf9a5-e32f-4ab2-8748-96350a016da3})
+    default Windows.ApplicationModel.Resources.Management.IResourceIndexer
+    requires Windows.ApplicationModel.Resources.Management.IResourceIndexer
+    factory Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory
+    factory Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory shape=51 reverse=24 deprecated
+            in class type=Windows.Foundation.Uri name=projectRoot
+            out class type=Windows.ApplicationModel.Resources.Management.ResourceIndexer return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2 shape=117 reverse=25 deprecated
+            in class type=Windows.Foundation.Uri name=projectRoot
+            in class type=Windows.Foundation.Uri name=extensionDllPath
+            out class type=Windows.ApplicationModel.Resources.Management.ResourceIndexer return
+    method index_file_contents_async deprecated
+        method IndexFileContentsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 reverse=44 deprecated
+            in class type=Windows.Foundation.Uri name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> return
+    method index_file_path deprecated
+        method IndexFilePath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 reverse=24 deprecated
+            in class type=Windows.Foundation.Uri name=filePath
+            out class type=Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate return
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

@@ -1,0 +1,1478 @@
+format 4.0
+generator 0.0.0
+namespace TestComponent
+
+delegate TestComponent.Array10Handler python_type
+    py Array10Handler
+    guid c901dd1b-433d-565e-a8e7-0dbd77761aea
+    signature delegate({c901dd1b-433d-565e-a8e7-0dbd77761aea})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array double name=a
+            fill_array double name=b
+            receive_array double name=c
+            receive_array double return
+
+delegate TestComponent.Array11Handler python_type
+    py Array11Handler
+    guid b4d851cd-5c24-5511-a6ac-f56585002a46
+    signature delegate({b4d851cd-5c24-5511-a6ac-f56585002a46})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array char16 name=a
+            fill_array char16 name=b
+            receive_array char16 name=c
+            receive_array char16 return
+
+delegate TestComponent.Array12Handler python_type
+    py Array12Handler
+    guid ab959ac1-7ef5-5f76-9add-8203bdebb1ce
+    signature delegate({ab959ac1-7ef5-5f76-9add-8203bdebb1ce})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array string name=a
+            fill_array string name=b
+            receive_array string name=c
+            receive_array string return
+
+delegate TestComponent.Array13Handler python_type
+    py Array13Handler
+    guid 55fd07cf-8767-55ff-a188-755a953ed052
+    signature delegate({55fd07cf-8767-55ff-a188-755a953ed052})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array struct type=TestComponent.Blittable name=a
+            fill_array struct type=TestComponent.Blittable name=b
+            receive_array struct type=TestComponent.Blittable name=c
+            receive_array struct type=TestComponent.Blittable return
+
+delegate TestComponent.Array14Handler python_type
+    py Array14Handler
+    guid cdd9a4db-c841-5ce4-a88b-bb17f9d01249
+    signature delegate({cdd9a4db-c841-5ce4-a88b-bb17f9d01249})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array struct type=TestComponent.NonBlittable name=a
+            fill_array struct type=TestComponent.NonBlittable name=b
+            receive_array struct type=TestComponent.NonBlittable name=c
+            receive_array struct type=TestComponent.NonBlittable return
+
+delegate TestComponent.Array15Handler python_type
+    py Array15Handler
+    guid f6c65099-aa85-51a0-81ed-8193de4383e1
+    signature delegate({f6c65099-aa85-51a0-81ed-8193de4383e1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array struct type=TestComponent.Nested name=a
+            fill_array struct type=TestComponent.Nested name=b
+            receive_array struct type=TestComponent.Nested name=c
+            receive_array struct type=TestComponent.Nested return
+
+delegate TestComponent.Array16Handler python_type
+    py Array16Handler
+    guid 50a84ed8-5e2f-55e2-b145-56f1edc9f577
+    signature delegate({50a84ed8-5e2f-55e2-b145-56f1edc9f577})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array interface type=Windows.Foundation.IStringable name=a
+            fill_array interface type=Windows.Foundation.IStringable name=b
+            receive_array interface type=Windows.Foundation.IStringable name=c
+            receive_array interface type=Windows.Foundation.IStringable return
+
+delegate TestComponent.Array1Handler python_type
+    py Array1Handler
+    guid 1e06318f-e65a-5d7b-b52a-ca188d50d431
+    signature delegate({1e06318f-e65a-5d7b-b52a-ca188d50d431})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array boolean name=a
+            fill_array boolean name=b
+            receive_array boolean name=c
+            receive_array boolean return
+
+delegate TestComponent.Array2Handler python_type
+    py Array2Handler
+    guid 9e2f3897-e409-5157-878e-9f27da624f7c
+    signature delegate({9e2f3897-e409-5157-878e-9f27da624f7c})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array uint8 name=a
+            fill_array uint8 name=b
+            receive_array uint8 name=c
+            receive_array uint8 return
+
+delegate TestComponent.Array3Handler python_type
+    py Array3Handler
+    guid 73fad5ab-a41e-54ec-88c1-37b8b9e2b5e1
+    signature delegate({73fad5ab-a41e-54ec-88c1-37b8b9e2b5e1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array uint16 name=a
+            fill_array uint16 name=b
+            receive_array uint16 name=c
+            receive_array uint16 return
+
+delegate TestComponent.Array4Handler python_type
+    py Array4Handler
+    guid 4b806f71-54a2-523a-ae7e-5d3cb15f2ab2
+    signature delegate({4b806f71-54a2-523a-ae7e-5d3cb15f2ab2})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array uint32 name=a
+            fill_array uint32 name=b
+            receive_array uint32 name=c
+            receive_array uint32 return
+
+delegate TestComponent.Array5Handler python_type
+    py Array5Handler
+    guid e7fdd481-c62a-59a7-b57b-d23ecb77bf72
+    signature delegate({e7fdd481-c62a-59a7-b57b-d23ecb77bf72})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array uint64 name=a
+            fill_array uint64 name=b
+            receive_array uint64 name=c
+            receive_array uint64 return
+
+delegate TestComponent.Array6Handler python_type
+    py Array6Handler
+    guid 7c5e0781-0707-5b67-b7df-822c15e8a31b
+    signature delegate({7c5e0781-0707-5b67-b7df-822c15e8a31b})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array int16 name=a
+            fill_array int16 name=b
+            receive_array int16 name=c
+            receive_array int16 return
+
+delegate TestComponent.Array7Handler python_type
+    py Array7Handler
+    guid 418aacfb-c605-58f7-9b41-d586e1bbde8a
+    signature delegate({418aacfb-c605-58f7-9b41-d586e1bbde8a})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array int32 name=a
+            fill_array int32 name=b
+            receive_array int32 name=c
+            receive_array int32 return
+
+delegate TestComponent.Array8Handler python_type
+    py Array8Handler
+    guid 13d30db4-b4e9-5607-8b68-4550f4835a06
+    signature delegate({13d30db4-b4e9-5607-8b68-4550f4835a06})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array int64 name=a
+            fill_array int64 name=b
+            receive_array int64 name=c
+            receive_array int64 return
+
+delegate TestComponent.Array9Handler python_type
+    py Array9Handler
+    guid 3cf48a93-eece-5489-8cc4-3584022a911f
+    signature delegate({3cf48a93-eece-5489-8cc4-3584022a911f})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=286 reverse=411
+            pass_array single name=a
+            fill_array single name=b
+            receive_array single name=c
+            receive_array single return
+
+delegate TestComponent.Async1Handler python_type
+    py Async1Handler
+    guid 7dfec79c-8249-5b15-b0fe-ce00048b39f1
+    signature delegate({7dfec79c-8249-5b15-b0fe-ce00048b39f1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=1 shape=117 reverse=5
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            out interface type=Windows.Foundation.IAsyncAction return
+
+delegate TestComponent.Async2Handler python_type
+    py Async2Handler
+    guid 3bec45a5-43e9-593e-ad73-aa79faf7ae97
+    signature delegate({3bec45a5-43e9-593e-ad73-aa79faf7ae97})
+    method -
+        method Invoke slot=3 inputs=3 outputs=1 shape=195 reverse=409
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=progress
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
+
+delegate TestComponent.Async3Handler python_type
+    py Async3Handler
+    guid 8eff5348-9556-5757-aa68-d384957459b2
+    signature delegate({8eff5348-9556-5757-aa68-d384957459b2})
+    method -
+        method Invoke slot=3 inputs=3 outputs=1 shape=195 reverse=409
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=result
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+
+delegate TestComponent.Async4Handler python_type
+    py Async4Handler
+    guid 508c3203-26cb-5680-af4f-d22ce2fb8f0c
+    signature delegate({508c3203-26cb-5680-af4f-d22ce2fb8f0c})
+    method -
+        method Invoke slot=3 inputs=4 outputs=1 shape=239 reverse=410
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=result
+            in int32 name=progress
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> return
+
+struct TestComponent.Blittable python_type
+    py Blittable
+    signature struct(TestComponent.Blittable;u1;u2;u4;u8;i2;i4;i8;f4;f8;g16)
+    field a A uint8
+    field b B uint16
+    field c C uint32
+    field d D uint64
+    field e E int16
+    field f F int32
+    field g G int64
+    field h H single
+    field i I double
+    field j J guid
+
+class TestComponent.Class activatable python_type
+    py Class
+    signature rc(TestComponent.Class;{3f55ac7d-2d3a-5a63-9ab3-7a301a11c9ca})
+    default TestComponent.IClass
+    requires TestComponent.IClass
+    requires TestComponent.IRequiredOne
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+
+delegate TestComponent.Collection1Handler python_type
+    py Collection1Handler
+    guid 27440614-a595-5b17-8e79-75841886325c
+    signature delegate({27440614-a595-5b17-8e79-75841886325c})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IIterable<System.String> return
+
+delegate TestComponent.Collection2Handler python_type
+    py Collection2Handler
+    guid 4886e659-fb0e-505d-a556-5ab156aa12d7
+    signature delegate({4886e659-fb0e-505d-a556-5ab156aa12d7})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=a
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=b
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+delegate TestComponent.Collection3Handler python_type
+    py Collection3Handler
+    guid 55fa40af-75df-5cab-97ef-28147684112e
+    signature delegate({55fa40af-75df-5cab-97ef-28147684112e})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+
+delegate TestComponent.Collection4Handler python_type
+    py Collection4Handler
+    guid 21b1a617-354d-5245-8f26-446f490fea5f
+    signature delegate({21b1a617-354d-5245-8f26-446f490fea5f})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+
+delegate TestComponent.Collection5Handler python_type
+    py Collection5Handler
+    guid 8568c69e-59e5-54fd-b1e3-054339abc0b8
+    signature delegate({8568c69e-59e5-54fd-b1e3-054339abc0b8})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IVector<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+delegate TestComponent.Collection6Handler python_type
+    py Collection6Handler
+    guid 806a6057-ff30-5333-a745-916a9e673248
+    signature delegate({806a6057-ff30-5333-a745-916a9e673248})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+class TestComponent.Composable composable python_type
+    py Composable
+    signature rc(TestComponent.Composable;{fb59f551-1648-57a8-9f32-1171eda56567})
+    default TestComponent.IComposable
+    requires TestComponent.IComposable
+    requires TestComponent.IRequiredOne
+    requires TestComponent.IRequiredTwo
+    requires TestComponent.IRequiredThree
+    requires TestComponent.IRequiredFour
+    factory TestComponent.IComposableStatics
+    composable TestComponent.IComposableFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposableFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.Composable return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableFactory shape=195 reverse=46
+            in int32 name=init
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.Composable return
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposable shape=4 reverse=22
+            out int32 return
+        put put_Value slot=7 inputs=1 outputs=0 declaring=TestComponent.IComposable shape=4 reverse=43
+            in int32 name=value
+    method expect_composable static
+        method ExpectComposable slot=6 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=24 static
+            in class type=TestComponent.Composable name=t
+            out int32 return
+    method expect_required_four static
+        method ExpectRequiredFour slot=10 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=124 static
+            in interface type=TestComponent.IRequiredFour name=t
+            out int32 return
+    method expect_required_one static
+        method ExpectRequiredOne slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=44 static
+            in interface type=TestComponent.IRequiredOne name=t
+            out int32 return
+    method expect_required_three static
+        method ExpectRequiredThree slot=9 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=100 static
+            in interface type=TestComponent.IRequiredThree name=t
+            out int32 return
+    method expect_required_two static
+        method ExpectRequiredTwo slot=8 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=65 static
+            in interface type=TestComponent.IRequiredTwo name=t
+            out int32 return
+    method four
+        method Four slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredFour shape=4 reverse=22
+            out int32 return
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+    method three
+        method Three slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredThree shape=4 reverse=22
+            out int32 return
+    method two
+        method Two slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredTwo shape=4 reverse=22
+            out int32 return
+
+class TestComponent.Derived composable python_type
+    py Derived
+    signature rc(TestComponent.Derived;{ad36eed2-8c47-56c1-9748-ea1cb2f26440})
+    base TestComponent.Composable
+    default TestComponent.IDerived
+    requires TestComponent.IDerived
+    composable TestComponent.IDerivedFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IDerivedFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.Derived return
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+delegate Windows.Foundation.EventHandler<System.Int32> concrete
+    guid 12ecedac-1aee-5ba5-bd66-959a0fb2b1ff
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IAsyncActionWithProgress<System.Int32> concrete
+    guid 62137500-f56f-5dff-9a74-8575b9170e8e
+    signature pinterface({1f6db258-e803-48a1-9546-eb7353398884};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IAsyncOperation<System.Int32> concrete
+    guid 968b9665-06ed-5774-8f53-8edeabd5f7b5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> concrete
+    guid f53af7e6-ee94-5f7a-9792-317e7fe89a55
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};i4;i4)
+    argument System.Int32
+    argument System.Int32
+
+interface TestComponent.IClass
+    guid 3f55ac7d-2d3a-5a63-9ab3-7a301a11c9ca
+
+interface TestComponent.IComposable
+    guid fb59f551-1648-57a8-9f32-1171eda56567
+
+interface TestComponent.IComposableFactory
+    guid b7c48344-637c-5fbc-a7f7-1a27fe08cf6b
+
+interface TestComponent.IComposableStatics
+    guid 2050a66f-2401-54fc-8c64-d21324a72cba
+
+interface TestComponent.IDerived
+    guid ad36eed2-8c47-56c1-9748-ea1cb2f26440
+
+interface TestComponent.IDerivedFactory
+    guid 4021afb8-c131-5be1-9cb9-be65d135f931
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface TestComponent.IOverloadClass
+    guid ef902013-00f3-4549-9032-49e86d536c07
+
+interface TestComponent.IOverloadClassFactory
+    guid dfdffb61-ea72-4977-b1a7-3f0d2c32bb58
+
+interface TestComponent.IOverloadClassOverrides
+    guid 32510f72-9229-4c69-95bd-de7b8189c85c
+
+interface TestComponent.IOverloadClassOverrides2
+    guid 50205bce-fad3-4c66-801f-17aad007b26c
+
+interface TestComponent.IOverloadClassProtected
+    guid 6edd1a3f-2616-45b7-9731-f84da9cceca1
+
+interface TestComponent.IOverride
+    guid a2931479-0fdd-57df-95be-cc2860c65516
+
+interface TestComponent.IOverrideFactory
+    guid c962d120-9fc3-5af9-b2b7-5c5d9bdfa355
+
+interface TestComponent.IOverrideOverrides
+    guid 151ca069-60b7-5c26-a3f3-0cf4db7c4a10
+
+interface TestComponent.IOverrideProtected
+    guid f28dc77f-e48d-5fc0-bcb2-89627d48a647
+
+interface Windows.Foundation.IReference<System.Int64> concrete
+    guid 4dda9e24-e69f-5c6a-a0a6-93427365af2a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i8)
+    argument System.Int64
+
+interface TestComponent.IRequiredFour python_type
+    py _IRequiredFour
+    guid afbf8d43-f3fa-5093-8d16-05d0e3598a5e
+    signature {afbf8d43-f3fa-5093-8d16-05d0e3598a5e}
+    requires TestComponent.IRequiredOne
+    requires TestComponent.IRequiredTwo
+    requires TestComponent.IRequiredThree
+    method four
+        method Four slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredFour shape=4 reverse=22
+            out int32 return
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+    method three
+        method Three slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredThree shape=4 reverse=22
+            out int32 return
+    method two
+        method Two slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredTwo shape=4 reverse=22
+            out int32 return
+
+interface TestComponent.IRequiredOne python_type
+    py _IRequiredOne
+    guid 9cdefee9-59a9-5329-a7f3-5935d9ca2711
+    signature {9cdefee9-59a9-5329-a7f3-5935d9ca2711}
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+
+interface TestComponent.IRequiredThree python_type
+    py _IRequiredThree
+    guid 541f26d9-3083-50ae-9f32-26f924403688
+    signature {541f26d9-3083-50ae-9f32-26f924403688}
+    requires TestComponent.IRequiredOne
+    requires TestComponent.IRequiredTwo
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+    method three
+        method Three slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredThree shape=4 reverse=22
+            out int32 return
+    method two
+        method Two slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredTwo shape=4 reverse=22
+            out int32 return
+
+interface TestComponent.IRequiredTwo python_type
+    py _IRequiredTwo
+    guid 3a307125-2148-532d-b79b-e8cddf5ca862
+    signature {3a307125-2148-532d-b79b-e8cddf5ca862}
+    requires TestComponent.IRequiredOne
+    method one
+        method One slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredOne shape=4 reverse=22
+            out int32 return
+    method two
+        method Two slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredTwo shape=4 reverse=22
+            out int32 return
+
+interface TestComponent.ITestRunnerStatics
+    guid df1f4d1e-63b5-581c-9eb6-57d3c6ca7793
+
+interface TestComponent.ITests python_type
+    py _ITests
+    guid bb28bca1-a46d-5897-a3e9-f9ec16930875
+    signature {bb28bca1-a46d-5897-a3e9-f9ec16930875}
+    property percentage
+        get get_Percentage slot=6 inputs=0 outputs=1 declaring=TestComponent.ITests shape=4 reverse=22
+            out uint32 return
+    event event1
+        add add_Event1 slot=90 inputs=1 outputs=1 declaring=TestComponent.ITests shape=51 reverse=475
+            in delegate type=Windows.Foundation.EventHandler<System.Int32> name=handler
+            out event_token return
+        remove remove_Event1 slot=91 inputs=1 outputs=0 declaring=TestComponent.ITests shape=26 reverse=476
+            in event_token name=token
+    event event2
+        add add_Event2 slot=92 inputs=1 outputs=1 declaring=TestComponent.ITests shape=51 reverse=477
+            in delegate type=Windows.Foundation.TypedEventHandler<TestComponent.ITests,System.Int32> name=handler
+            out event_token return
+        remove remove_Event2 slot=93 inputs=1 outputs=0 declaring=TestComponent.ITests shape=26 reverse=478
+            in event_token name=token
+    method array1
+        method Array1 slot=38 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=424
+            pass_array boolean name=a
+            fill_array boolean name=b
+            receive_array boolean name=c
+            receive_array boolean return
+    method array10
+        method Array10 slot=47 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=433
+            pass_array double name=a
+            fill_array double name=b
+            receive_array double name=c
+            receive_array double return
+    method array10_call
+        method Array10Call slot=63 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=448
+            in delegate type=TestComponent.Array10Handler name=handler
+    method array11
+        method Array11 slot=48 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=434
+            pass_array char16 name=a
+            fill_array char16 name=b
+            receive_array char16 name=c
+            receive_array char16 return
+    method array11_call
+        method Array11Call slot=64 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=449
+            in delegate type=TestComponent.Array11Handler name=handler
+    method array12
+        method Array12 slot=49 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=435
+            pass_array string name=a
+            fill_array string name=b
+            receive_array string name=c
+            receive_array string return
+    method array12_call
+        method Array12Call slot=65 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=450
+            in delegate type=TestComponent.Array12Handler name=handler
+    method array13
+        method Array13 slot=50 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=436
+            pass_array struct type=TestComponent.Blittable name=a
+            fill_array struct type=TestComponent.Blittable name=b
+            receive_array struct type=TestComponent.Blittable name=c
+            receive_array struct type=TestComponent.Blittable return
+    method array13_call
+        method Array13Call slot=66 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=451
+            in delegate type=TestComponent.Array13Handler name=handler
+    method array14
+        method Array14 slot=51 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=437
+            pass_array struct type=TestComponent.NonBlittable name=a
+            fill_array struct type=TestComponent.NonBlittable name=b
+            receive_array struct type=TestComponent.NonBlittable name=c
+            receive_array struct type=TestComponent.NonBlittable return
+    method array14_call
+        method Array14Call slot=67 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=452
+            in delegate type=TestComponent.Array14Handler name=handler
+    method array15
+        method Array15 slot=52 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=438
+            pass_array struct type=TestComponent.Nested name=a
+            fill_array struct type=TestComponent.Nested name=b
+            receive_array struct type=TestComponent.Nested name=c
+            receive_array struct type=TestComponent.Nested return
+    method array15_call
+        method Array15Call slot=68 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=453
+            in delegate type=TestComponent.Array15Handler name=handler
+    method array16
+        method Array16 slot=53 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=439
+            pass_array interface type=Windows.Foundation.IStringable name=a
+            fill_array interface type=Windows.Foundation.IStringable name=b
+            receive_array interface type=Windows.Foundation.IStringable name=c
+            receive_array interface type=Windows.Foundation.IStringable return
+    method array16_call
+        method Array16Call slot=69 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=454
+            in delegate type=TestComponent.Array16Handler name=handler
+    method array1_call
+        method Array1Call slot=54 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=368
+            in delegate type=TestComponent.Array1Handler name=handler
+    method array2
+        method Array2 slot=39 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=425
+            pass_array uint8 name=a
+            fill_array uint8 name=b
+            receive_array uint8 name=c
+            receive_array uint8 return
+    method array2_call
+        method Array2Call slot=55 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=440
+            in delegate type=TestComponent.Array2Handler name=handler
+    method array3
+        method Array3 slot=40 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=426
+            pass_array uint16 name=a
+            fill_array uint16 name=b
+            receive_array uint16 name=c
+            receive_array uint16 return
+    method array3_call
+        method Array3Call slot=56 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=441
+            in delegate type=TestComponent.Array3Handler name=handler
+    method array4
+        method Array4 slot=41 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=427
+            pass_array uint32 name=a
+            fill_array uint32 name=b
+            receive_array uint32 name=c
+            receive_array uint32 return
+    method array4_call
+        method Array4Call slot=57 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=442
+            in delegate type=TestComponent.Array4Handler name=handler
+    method array5
+        method Array5 slot=42 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=428
+            pass_array uint64 name=a
+            fill_array uint64 name=b
+            receive_array uint64 name=c
+            receive_array uint64 return
+    method array5_call
+        method Array5Call slot=58 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=443
+            in delegate type=TestComponent.Array5Handler name=handler
+    method array6
+        method Array6 slot=43 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=429
+            pass_array int16 name=a
+            fill_array int16 name=b
+            receive_array int16 name=c
+            receive_array int16 return
+    method array6_call
+        method Array6Call slot=59 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=444
+            in delegate type=TestComponent.Array6Handler name=handler
+    method array7
+        method Array7 slot=44 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=430
+            pass_array int32 name=a
+            fill_array int32 name=b
+            receive_array int32 name=c
+            receive_array int32 return
+    method array7_call
+        method Array7Call slot=60 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=445
+            in delegate type=TestComponent.Array7Handler name=handler
+    method array8
+        method Array8 slot=45 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=431
+            pass_array int64 name=a
+            fill_array int64 name=b
+            receive_array int64 name=c
+            receive_array int64 return
+    method array8_call
+        method Array8Call slot=61 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=446
+            in delegate type=TestComponent.Array8Handler name=handler
+    method array9
+        method Array9 slot=46 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=432
+            pass_array single name=a
+            fill_array single name=b
+            receive_array single name=c
+            receive_array single return
+    method array9_call
+        method Array9Call slot=62 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=447
+            in delegate type=TestComponent.Array9Handler name=handler
+    method async1
+        method Async1 slot=82 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=467
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            out interface type=Windows.Foundation.IAsyncAction return
+    method async1_call
+        method Async1Call slot=86 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=471
+            in delegate type=TestComponent.Async1Handler name=handler
+    method async2
+        method Async2 slot=83 inputs=3 outputs=1 declaring=TestComponent.ITests shape=195 reverse=468
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=progress
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
+    method async2_call
+        method Async2Call slot=87 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=472
+            in delegate type=TestComponent.Async2Handler name=handler
+    method async3
+        method Async3 slot=84 inputs=3 outputs=1 declaring=TestComponent.ITests shape=195 reverse=469
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=result
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+    method async3_call
+        method Async3Call slot=88 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=473
+            in delegate type=TestComponent.Async3Handler name=handler
+    method async4
+        method Async4 slot=85 inputs=4 outputs=1 declaring=TestComponent.ITests shape=239 reverse=470
+            in interface type=Windows.Foundation.IAsyncAction name=suspend
+            in boolean name=fail
+            in int32 name=result
+            in int32 name=progress
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> return
+    method async4_call
+        method Async4Call slot=89 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=474
+            in delegate type=TestComponent.Async4Handler name=handler
+    method box1
+        method Box1 slot=104 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=489
+            in uint8 name=param
+            in object name=boxedParam
+            out object return
+    method box10
+        method Box10 slot=113 inputs=2 outputs=1 declaring=TestComponent.ITests shape=106 reverse=498
+            in double name=param
+            in object name=boxedParam
+            out object return
+    method box11
+        method Box11 slot=114 inputs=2 outputs=1 declaring=TestComponent.ITests shape=177 reverse=499
+            in guid name=param
+            in object name=boxedParam
+            out object return
+    method box12
+        method Box12 slot=115 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=500
+            in char16 name=param
+            in object name=boxedParam
+            out object return
+    method box13
+        method Box13 slot=116 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=501
+            in string name=param
+            in object name=boxedParam
+            out object return
+    method box14
+        method Box14 slot=117 inputs=2 outputs=1 declaring=TestComponent.ITests shape=169 reverse=502
+            in timespan name=param
+            in object name=boxedParam
+            out object return
+    method box15
+        method Box15 slot=118 inputs=2 outputs=1 declaring=TestComponent.ITests shape=331 reverse=503
+            in struct type=TestComponent.Blittable name=param
+            in object name=boxedParam
+            out object return
+    method box16
+        method Box16 slot=119 inputs=2 outputs=1 declaring=TestComponent.ITests shape=330 reverse=504
+            in struct type=TestComponent.NonBlittable name=param
+            in object name=boxedParam
+            out object return
+    method box17
+        method Box17 slot=120 inputs=2 outputs=1 declaring=TestComponent.ITests shape=169 reverse=505
+            in datetime name=param
+            in object name=boxedParam
+            out object return
+    method box18
+        method Box18 slot=121 inputs=2 outputs=1 declaring=TestComponent.ITests shape=195 reverse=506
+            pass_array int64 name=param
+            in object name=boxedParam
+            out object return
+    method box19
+        method Box19 slot=122 inputs=2 outputs=1 declaring=TestComponent.ITests shape=195 reverse=507
+            pass_array boolean name=param
+            in object name=boxedParam
+            out object return
+    method box2
+        method Box2 slot=105 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=490
+            in uint16 name=param
+            in object name=boxedParam
+            out object return
+    method box20
+        method Box20 slot=123 inputs=2 outputs=1 declaring=TestComponent.ITests shape=195 reverse=508
+            pass_array string name=param
+            in object name=boxedParam
+            out object return
+    method box21
+        method Box21 slot=124 inputs=2 outputs=1 declaring=TestComponent.ITests shape=195 reverse=509
+            pass_array timespan name=param
+            in object name=boxedParam
+            out object return
+    method box3
+        method Box3 slot=106 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=491
+            in uint32 name=param
+            in object name=boxedParam
+            out object return
+    method box4
+        method Box4 slot=107 inputs=2 outputs=1 declaring=TestComponent.ITests shape=108 reverse=492
+            in uint64 name=param
+            in object name=boxedParam
+            out object return
+    method box5
+        method Box5 slot=108 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=493
+            in int16 name=param
+            in object name=boxedParam
+            out object return
+    method box6
+        method Box6 slot=109 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=494
+            in int32 name=param
+            in object name=boxedParam
+            out object return
+    method box7
+        method Box7 slot=110 inputs=2 outputs=1 declaring=TestComponent.ITests shape=108 reverse=495
+            in int64 name=param
+            in object name=boxedParam
+            out object return
+    method box8
+        method Box8 slot=111 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=496
+            in boolean name=param
+            in object name=boxedParam
+            out object return
+    method box9
+        method Box9 slot=112 inputs=2 outputs=1 declaring=TestComponent.ITests shape=100 reverse=497
+            in single name=param
+            in object name=boxedParam
+            out object return
+    method collection1
+        method Collection1 slot=70 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=455
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IIterable<System.String> return
+    method collection1_call
+        method Collection1Call slot=76 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=461
+            in delegate type=TestComponent.Collection1Handler name=handler
+    method collection2
+        method Collection2 slot=71 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=456
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=a
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=b
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method collection2_call
+        method Collection2Call slot=77 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=462
+            in delegate type=TestComponent.Collection2Handler name=handler
+    method collection3
+        method Collection3 slot=72 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=457
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    method collection3_call
+        method Collection3Call slot=78 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=463
+            in delegate type=TestComponent.Collection3Handler name=handler
+    method collection4
+        method Collection4 slot=73 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=458
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method collection4_call
+        method Collection4Call slot=79 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=464
+            in delegate type=TestComponent.Collection4Handler name=handler
+    method collection5
+        method Collection5 slot=74 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=459
+            in parameterized type=Windows.Foundation.Collections.IVector<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method collection5_call
+        method Collection5Call slot=80 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=465
+            in delegate type=TestComponent.Collection5Handler name=handler
+    method collection6
+        method Collection6 slot=75 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=460
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=a
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=b
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method collection6_call
+        method Collection6Call slot=81 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=466
+            in delegate type=TestComponent.Collection6Handler name=handler
+    method event1_call
+        method Event1Call slot=94 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=479
+            in int32 name=value
+    method event2_call
+        method Event2Call slot=95 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=480
+            in int32 name=value
+    method get_blittable_vector_subset
+        method GetBlittableVectorSubset slot=102 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=487
+            in parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> name=blittableVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> return
+    method get_boolean_vector_subset
+        method GetBooleanVectorSubset slot=100 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=485
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> name=booleanVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> return
+    method get_class_vector_subset
+        method GetClassVectorSubset slot=96 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=481
+            in parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Class> name=classVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Class> return
+    method get_composable_class_vector_subset
+        method GetComposableClassVectorSubset slot=97 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=482
+            in parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Composable> name=classVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.Composable> return
+    method get_interface_vector_subset
+        method GetInterfaceVectorSubset slot=99 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=484
+            in parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne> name=interfaceVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne> return
+    method get_non_blittable_vector_subset
+        method GetNonBlittableVectorSubset slot=103 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=488
+            in parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable> name=nonBlittableVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable> return
+    method get_object_vector_subset
+        method GetObjectVectorSubset slot=98 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=483
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=objectVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    method get_string_vector_subset
+        method GetStringVectorSubset slot=101 inputs=2 outputs=1 declaring=TestComponent.ITests shape=117 reverse=486
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=stringVector
+            in int32 name=startIndex
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method param1
+        method Param1 slot=8 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=66
+            in boolean name=a
+            out boolean name=b
+            out boolean return
+    method param10
+        method Param10 slot=17 inputs=1 outputs=2 declaring=TestComponent.ITests shape=106 reverse=420
+            in double name=a
+            out double name=b
+            out double return
+    method param10_call
+        method Param10Call slot=32 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=280
+            in delegate type=TestComponent.Param10Handler name=handler
+    method param11
+        method Param11 slot=18 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=220
+            in char16 name=a
+            out char16 name=b
+            out char16 return
+    method param11_call
+        method Param11Call slot=33 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=285
+            in delegate type=TestComponent.Param11Handler name=handler
+    method param12
+        method Param12 slot=19 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=225
+            in string name=a
+            out string name=b
+            out string return
+    method param12_call
+        method Param12Call slot=34 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=288
+            in delegate type=TestComponent.Param12Handler name=handler
+    method param13
+        method Param13 slot=20 inputs=2 outputs=2 declaring=TestComponent.ITests shape=337 reverse=513
+            in struct type=TestComponent.Blittable name=a
+            in struct type=TestComponent.Blittable name=b by_reference
+            out struct type=TestComponent.Blittable name=c
+            out struct type=TestComponent.Blittable return
+    method param13_call
+        method Param13Call slot=35 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=292
+            in delegate type=TestComponent.Param13Handler name=handler
+    method param14
+        method Param14 slot=21 inputs=2 outputs=2 declaring=TestComponent.ITests shape=335 reverse=514
+            in struct type=TestComponent.NonBlittable name=a
+            in struct type=TestComponent.NonBlittable name=b by_reference
+            out struct type=TestComponent.NonBlittable name=c
+            out struct type=TestComponent.NonBlittable return
+    method param14_call
+        method Param14Call slot=36 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=296
+            in delegate type=TestComponent.Param14Handler name=handler
+    method param15
+        method Param15 slot=22 inputs=2 outputs=2 declaring=TestComponent.ITests shape=336 reverse=515
+            in struct type=TestComponent.Nested name=a
+            in struct type=TestComponent.Nested name=b by_reference
+            out struct type=TestComponent.Nested name=c
+            out struct type=TestComponent.Nested return
+    method param15_call
+        method Param15Call slot=37 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=299
+            in delegate type=TestComponent.Param15Handler name=handler
+    method param1_call
+        method Param1Call slot=23 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=242
+            in delegate type=TestComponent.Param1Handler name=handler
+    method param2
+        method Param2 slot=9 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=101
+            in uint8 name=a
+            out uint8 name=b
+            out uint8 return
+    method param2_call
+        method Param2Call slot=24 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=247
+            in delegate type=TestComponent.Param2Handler name=handler
+    method param3
+        method Param3 slot=10 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=125
+            in uint16 name=a
+            out uint16 name=b
+            out uint16 return
+    method param3_call
+        method Param3Call slot=25 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=252
+            in delegate type=TestComponent.Param3Handler name=handler
+    method param4
+        method Param4 slot=11 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=145
+            in uint32 name=a
+            out uint32 name=b
+            out uint32 return
+    method param4_call
+        method Param4Call slot=26 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=255
+            in delegate type=TestComponent.Param4Handler name=handler
+    method param5
+        method Param5 slot=12 inputs=1 outputs=2 declaring=TestComponent.ITests shape=108 reverse=417
+            in uint64 name=a
+            out uint64 name=b
+            out uint64 return
+    method param5_call
+        method Param5Call slot=27 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=259
+            in delegate type=TestComponent.Param5Handler name=handler
+    method param6
+        method Param6 slot=13 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=175
+            in int16 name=a
+            out int16 name=b
+            out int16 return
+    method param6_call
+        method Param6Call slot=28 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=263
+            in delegate type=TestComponent.Param6Handler name=handler
+    method param7
+        method Param7 slot=14 inputs=1 outputs=2 declaring=TestComponent.ITests shape=117 reverse=188
+            in int32 name=a
+            out int32 name=b
+            out int32 return
+    method param7_call
+        method Param7Call slot=29 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=266
+            in delegate type=TestComponent.Param7Handler name=handler
+    method param8
+        method Param8 slot=15 inputs=1 outputs=2 declaring=TestComponent.ITests shape=108 reverse=418
+            in int64 name=a
+            out int64 name=b
+            out int64 return
+    method param8_call
+        method Param8Call slot=30 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=270
+            in delegate type=TestComponent.Param8Handler name=handler
+    method param9
+        method Param9 slot=16 inputs=1 outputs=2 declaring=TestComponent.ITests shape=100 reverse=419
+            in single name=a
+            out single name=b
+            out single return
+    method param9_call
+        method Param9Call slot=31 inputs=1 outputs=0 declaring=TestComponent.ITests shape=4 reverse=273
+            in delegate type=TestComponent.Param9Handler name=handler
+    method simple
+        method Simple slot=7 inputs=0 outputs=0 declaring=TestComponent.ITests shape=0 reverse=37
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<System.Int32> concrete
+    guid b939af5b-b45d-5489-9149-61442c1905fe
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable> concrete
+    guid 14b954c2-2914-530e-84a7-9473e2fb24e2
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{96369f54-8eb6-48f0-abce-c1b211e627c3})
+    argument Windows.Foundation.IStringable
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete
+    guid 243a09cb-6f40-56af-a442-fe81431fbef5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+    guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> concrete
+    guid 8e3f1d4f-9f50-5e05-8c6d-efaa68745e34
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(TestComponent.Blittable;u1;u2;u4;u8;i2;i4;i8;f4;f8;g16))
+    argument TestComponent.Blittable
+
+interface Windows.Foundation.Collections.IVectorView<TestComponent.Class> concrete
+    guid 95351c03-6409-5501-8b01-3dc098fbb527
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(TestComponent.Class;{3f55ac7d-2d3a-5a63-9ab3-7a301a11c9ca}))
+    argument TestComponent.Class
+
+interface Windows.Foundation.Collections.IVectorView<TestComponent.Composable> concrete
+    guid 7461558e-7826-5ee0-92fa-e22cdcd44a36
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(TestComponent.Composable;{fb59f551-1648-57a8-9f32-1171eda56567}))
+    argument TestComponent.Composable
+
+interface Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne> concrete
+    guid 8a8637a8-41d8-5c74-a563-e597565822d4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{9cdefee9-59a9-5329-a7f3-5935d9ca2711})
+    argument TestComponent.IRequiredOne
+
+interface Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable> concrete
+    guid 9f553cdc-ad68-569a-9b7b-87dc23ef66fa
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(TestComponent.NonBlittable;b1;c2;string;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i8)))
+    argument TestComponent.NonBlittable
+
+struct TestComponent.Nested python_type
+    py Nested
+    signature struct(TestComponent.Nested;struct(TestComponent.Blittable;u1;u2;u4;u8;i2;i4;i8;f4;f8;g16);struct(TestComponent.NonBlittable;b1;c2;string;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i8)))
+    field blittable Blittable struct type=TestComponent.Blittable
+    field non_blittable NonBlittable struct type=TestComponent.NonBlittable
+
+struct TestComponent.NonBlittable python_type
+    py NonBlittable
+    signature struct(TestComponent.NonBlittable;b1;c2;string;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i8))
+    field a A boolean
+    field b B char16
+    field c C string
+    field d D reference type=Windows.Foundation.IReference<System.Int64>
+
+class TestComponent.OverloadClass composable python_type
+    py OverloadClass
+    signature rc(TestComponent.OverloadClass;{ef902013-00f3-4549-9032-49e86d536c07})
+    default TestComponent.IOverloadClass
+    requires TestComponent.IOverloadClass
+    requires TestComponent.IOverloadClassProtected
+    requires TestComponent.IOverloadClassOverrides
+    requires TestComponent.IOverloadClassOverrides2
+    composable TestComponent.IOverloadClassFactory
+    overridable TestComponent.IOverloadClassProtected
+    overridable TestComponent.IOverloadClassOverrides
+    overridable TestComponent.IOverloadClassOverrides2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverloadClassFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.OverloadClass return
+    method _overload
+        method Overload slot=6 inputs=3 outputs=0 declaring=TestComponent.IOverloadClassProtected shape=117 reverse=25 protected
+            in int32 name=a
+            in int32 name=b
+            in int32 name=c
+    method overload
+        method Overload slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverloadClass shape=0 reverse=16
+    method _overload_with_one
+        method Overload slot=6 inputs=1 outputs=0 declaring=TestComponent.IOverloadClassOverrides shape=4 reverse=22 overridable
+            in int32 name=a
+    method _overload_with_two
+        method Overload slot=6 inputs=2 outputs=0 declaring=TestComponent.IOverloadClassOverrides2 shape=51 reverse=24 overridable
+            in int32 name=a
+            in int32 name=b
+
+class TestComponent.Override composable python_type
+    py Override
+    signature rc(TestComponent.Override;{a2931479-0fdd-57df-95be-cc2860c65516})
+    default TestComponent.IOverride
+    requires TestComponent.IOverride
+    requires TestComponent.IOverrideProtected
+    requires TestComponent.IOverrideOverrides
+    composable TestComponent.IOverrideFactory
+    overridable TestComponent.IOverrideProtected
+    overridable TestComponent.IOverrideOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverrideFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.Override return
+    event overridable_called
+        add add_OverridableCalled slot=10 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=124
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_OverridableCalled slot=11 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=156
+            in event_token name=token
+    event protected_called
+        add add_ProtectedCalled slot=7 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=44
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_ProtectedCalled slot=8 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=82
+            in event_token name=token
+    method call_overridable
+        method CallOverridable slot=9 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0 reverse=93
+    method call_protected
+        method CallProtected slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0 reverse=16
+    method _on_overridable
+        method OnOverridable slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverrideOverrides shape=0 reverse=16 overridable
+    method _on_protected
+        method OnProtected slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverrideProtected shape=0 reverse=16 protected
+
+delegate TestComponent.Param10Handler python_type
+    py Param10Handler
+    guid c082714a-9e96-589c-ac8c-e9a785d2f720
+    signature delegate({c082714a-9e96-589c-ac8c-e9a785d2f720})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=106 reverse=407
+            in double name=a
+            out double name=b
+            out double return
+
+delegate TestComponent.Param11Handler python_type
+    py Param11Handler
+    guid 96f98092-f685-53b6-967f-e7fe692569e6
+    signature delegate({96f98092-f685-53b6-967f-e7fe692569e6})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in char16 name=a
+            out char16 name=b
+            out char16 return
+
+delegate TestComponent.Param12Handler python_type
+    py Param12Handler
+    guid 747a342c-51d1-5704-a7bc-1c469a6fa327
+    signature delegate({747a342c-51d1-5704-a7bc-1c469a6fa327})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in string name=a
+            out string name=b
+            out string return
+
+delegate TestComponent.Param13Handler python_type
+    py Param13Handler
+    guid f5c8589f-fcb0-5d45-9f53-d04042c1478d
+    signature delegate({f5c8589f-fcb0-5d45-9f53-d04042c1478d})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=337 reverse=512
+            in struct type=TestComponent.Blittable name=a
+            in struct type=TestComponent.Blittable name=b by_reference
+            out struct type=TestComponent.Blittable name=c
+            out struct type=TestComponent.Blittable return
+
+delegate TestComponent.Param14Handler python_type
+    py Param14Handler
+    guid 89cf0047-9fc3-5993-9d3d-a37ea86235dd
+    signature delegate({89cf0047-9fc3-5993-9d3d-a37ea86235dd})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=335 reverse=510
+            in struct type=TestComponent.NonBlittable name=a
+            in struct type=TestComponent.NonBlittable name=b by_reference
+            out struct type=TestComponent.NonBlittable name=c
+            out struct type=TestComponent.NonBlittable return
+
+delegate TestComponent.Param15Handler python_type
+    py Param15Handler
+    guid 78f2e0f2-927b-5a01-8b3a-7a853f5a7637
+    signature delegate({78f2e0f2-927b-5a01-8b3a-7a853f5a7637})
+    method -
+        method Invoke slot=3 inputs=2 outputs=2 shape=336 reverse=511
+            in struct type=TestComponent.Nested name=a
+            in struct type=TestComponent.Nested name=b by_reference
+            out struct type=TestComponent.Nested name=c
+            out struct type=TestComponent.Nested return
+
+delegate TestComponent.Param1Handler python_type
+    py Param1Handler
+    guid b68e5d93-6f27-5bc4-a971-538a216f62d5
+    signature delegate({b68e5d93-6f27-5bc4-a971-538a216f62d5})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in boolean name=a
+            out boolean name=b
+            out boolean return
+
+delegate TestComponent.Param2Handler python_type
+    py Param2Handler
+    guid f262e6cb-0a25-594f-b2ad-27c96749cd7f
+    signature delegate({f262e6cb-0a25-594f-b2ad-27c96749cd7f})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in uint8 name=a
+            out uint8 name=b
+            out uint8 return
+
+delegate TestComponent.Param3Handler python_type
+    py Param3Handler
+    guid 8bd8057f-9d25-5f06-8735-4a36ad98a68d
+    signature delegate({8bd8057f-9d25-5f06-8735-4a36ad98a68d})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in uint16 name=a
+            out uint16 name=b
+            out uint16 return
+
+delegate TestComponent.Param4Handler python_type
+    py Param4Handler
+    guid 2153224c-2886-5d5a-afc2-7247cf6ba9e7
+    signature delegate({2153224c-2886-5d5a-afc2-7247cf6ba9e7})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in uint32 name=a
+            out uint32 name=b
+            out uint32 return
+
+delegate TestComponent.Param5Handler python_type
+    py Param5Handler
+    guid b5ae4aaa-7255-5b2c-af1c-c04a2fb3233b
+    signature delegate({b5ae4aaa-7255-5b2c-af1c-c04a2fb3233b})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=108 reverse=408
+            in uint64 name=a
+            out uint64 name=b
+            out uint64 return
+
+delegate TestComponent.Param6Handler python_type
+    py Param6Handler
+    guid e0df3bda-25a7-503a-a54a-fb084e588804
+    signature delegate({e0df3bda-25a7-503a-a54a-fb084e588804})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in int16 name=a
+            out int16 name=b
+            out int16 return
+
+delegate TestComponent.Param7Handler python_type
+    py Param7Handler
+    guid 6bf8c743-f72e-55e8-97e4-cbf4d79f9df0
+    signature delegate({6bf8c743-f72e-55e8-97e4-cbf4d79f9df0})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=117 reverse=5
+            in int32 name=a
+            out int32 name=b
+            out int32 return
+
+delegate TestComponent.Param8Handler python_type
+    py Param8Handler
+    guid 871c3026-1bab-54ca-a471-8f389a22da83
+    signature delegate({871c3026-1bab-54ca-a471-8f389a22da83})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=108 reverse=408
+            in int64 name=a
+            out int64 name=b
+            out int64 return
+
+delegate TestComponent.Param9Handler python_type
+    py Param9Handler
+    guid 557f874c-407b-538e-a7e6-d158ca4e8478
+    signature delegate({557f874c-407b-538e-a7e6-d158ca4e8478})
+    method -
+        method Invoke slot=3 inputs=1 outputs=2 shape=100 reverse=406
+            in single name=a
+            out single name=b
+            out single return
+
+delegate TestComponent.TestHandler python_type
+    py TestHandler
+    guid 256d039d-cedf-5c56-baad-efe67164c956
+    signature delegate({256d039d-cedf-5c56-baad-efe67164c956})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in interface type=TestComponent.ITests name=tests
+
+class TestComponent.TestRunner static python_type
+    py TestRunner
+    factory TestComponent.ITestRunnerStatics
+    method create_async_action static
+        method CreateAsyncAction slot=14 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=187 static
+            in uint32 name=milliseconds
+            out interface type=Windows.Foundation.IAsyncAction return
+    method create_async_action_with_error static
+        method CreateAsyncActionWithError slot=15 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=197 static
+            in uint32 name=milliseconds
+            in int32 name=error
+            out interface type=Windows.Foundation.IAsyncAction return
+    method create_async_action_with_progress static
+        method CreateAsyncActionWithProgress slot=18 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=220 static
+            in uint32 name=milliseconds
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> name=items
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
+    method create_async_action_with_progress_with_error static
+        method CreateAsyncActionWithProgressWithError slot=19 inputs=3 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=195 static
+            in uint32 name=milliseconds
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> name=items
+            in int32 name=error
+            out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
+    method create_async_operation static
+        method CreateAsyncOperation slot=16 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=204 static
+            in uint32 name=milliseconds
+            in int32 name=result
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+    method create_async_operation_with_error static
+        method CreateAsyncOperationWithError slot=17 inputs=3 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=195 reverse=212 static
+            in uint32 name=milliseconds
+            in int32 name=result
+            in int32 name=error
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+    method create_async_operation_with_progress static
+        method CreateAsyncOperationWithProgress slot=20 inputs=3 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=195 static
+            in uint32 name=milliseconds
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> name=items
+            in int32 name=result
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> return
+    method create_async_operation_with_progress_with_error static
+        method CreateAsyncOperationWithProgressWithError slot=21 inputs=4 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=239 static
+            in uint32 name=milliseconds
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> name=items
+            in int32 name=result
+            in int32 name=error
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> return
+    method create_int32_vector static
+        method CreateInt32Vector slot=10 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=121 static
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    method create_string_vector static
+        method CreateStringVector slot=11 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=141 static
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method create_stringable_vector static
+        method CreateStringableVector slot=12 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=162 static
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable> return
+    method create_time_span static
+        method CreateTimeSpan slot=13 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=174 static
+            in uint32 name=milliseconds
+            out timespan return
+    method expect_object static
+        method ExpectObject slot=22 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=238 static
+            in object name=value
+            out string return
+    method make_tests static
+        method MakeTests slot=9 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=99 static
+            out interface type=TestComponent.ITests return
+    method test_consumer static
+        method TestConsumer slot=7 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=44 static
+            in delegate type=TestComponent.TestHandler name=caller
+            out uint32 return
+    method test_producer static
+        method TestProducer slot=6 inputs=1 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=22 static
+            in interface type=TestComponent.ITests name=callee
+    method test_self static
+        method TestSelf slot=8 inputs=0 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=0 reverse=55 static
+
+delegate Windows.Foundation.TypedEventHandler<TestComponent.ITests,System.Int32> concrete
+    guid f62e0c2f-5e55-5283-96a1-6d1e033725e7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{bb28bca1-a46d-5897-a3e9-f9ec16930875};i4)
+    argument TestComponent.ITests
+    argument System.Int32
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Int64 external
+    py winrt.system.Int64
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IStringable external
+    py winrt.windows.foundation._IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3

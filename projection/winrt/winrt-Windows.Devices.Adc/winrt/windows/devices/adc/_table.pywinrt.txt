@@ -1,0 +1,100 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Adc
+
+class Windows.Devices.Adc.AdcChannel python_type closeable
+    py AdcChannel
+    signature rc(Windows.Devices.Adc.AdcChannel;{040bf414-2588-4a56-abef-73a260acc60a})
+    default Windows.Devices.Adc.IAdcChannel
+    requires Windows.Devices.Adc.IAdcChannel
+    requires Windows.Foundation.IClosable
+    property controller
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=22
+            out class type=Windows.Devices.Adc.AdcController return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method read_ratio
+        method ReadRatio slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=62
+            out double return
+    method read_value
+        method ReadValue slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=43
+            out int32 return
+
+enum Windows.Devices.Adc.AdcChannelMode python_type
+    py AdcChannelMode
+    signature enum(Windows.Devices.Adc.AdcChannelMode;i4)
+
+class Windows.Devices.Adc.AdcController python_type
+    py AdcController
+    signature rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})
+    default Windows.Devices.Adc.IAdcController
+    requires Windows.Devices.Adc.IAdcController
+    factory Windows.Devices.Adc.IAdcControllerStatics2
+    factory Windows.Devices.Adc.IAdcControllerStatics
+    property channel_mode
+        get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=121
+            out enum32 type=Windows.Devices.Adc.AdcChannelMode return
+        put put_ChannelMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=141
+            in enum32 type=Windows.Devices.Adc.AdcChannelMode name=value
+    property channel_count
+        get get_ChannelCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=22
+            out int32 return
+    property max_value
+        get get_MaxValue slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=99
+            out int32 return
+    property min_value
+        get get_MinValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=62
+            out int32 return
+    property resolution_in_bits
+        get get_ResolutionInBits slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=43
+            out int32 return
+    method get_controllers_async static
+        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics shape=51 reverse=24 static
+            in interface type=Windows.Devices.Adc.Provider.IAdcProvider name=provider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> return
+    method is_channel_mode_supported
+        method IsChannelModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51 reverse=163
+            in enum32 type=Windows.Devices.Adc.AdcChannelMode name=channelMode
+            out boolean return
+    method open_channel
+        method OpenChannel slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51 reverse=174
+            in int32 name=channelNumber
+            out class type=Windows.Devices.Adc.AdcChannel return
+
+interface Windows.Devices.Adc.IAdcChannel
+    guid 040bf414-2588-4a56-abef-73a260acc60a
+
+interface Windows.Devices.Adc.IAdcController
+    guid 2a76e4b0-a896-4219-86b6-ea8cdce98f56
+
+interface Windows.Devices.Adc.IAdcControllerStatics
+    guid cce98e0c-01f8-4891-bc3b-be53ef279ca4
+
+interface Windows.Devices.Adc.IAdcControllerStatics2
+    guid a2b93b1d-977b-4f5a-a5fe-a6abaffe6484
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> concrete
+    guid 69420262-35c9-583f-a40e-c2694562c9e2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    argument Windows.Devices.Adc.AdcController
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> concrete
+    guid 1b0cddfb-d255-5a93-bcb9-de2047a3e4f3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> concrete
+    guid 27547dc1-376e-5ce4-a246-34f210c8443c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    argument Windows.Devices.Adc.AdcController
+
+interface Windows.Devices.Adc.Provider.IAdcProvider external
+    py winrt.windows.devices.adc.provider._IAdcProvider
+    guid 28953668-9359-4c57-bc88-e275e81638c9
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e

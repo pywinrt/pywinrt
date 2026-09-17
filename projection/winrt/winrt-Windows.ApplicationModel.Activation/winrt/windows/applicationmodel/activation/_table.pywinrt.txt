@@ -1,0 +1,2629 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Activation
+
+enum Windows.ApplicationModel.Activation.ActivationKind python_type
+    py ActivationKind
+    signature enum(Windows.ApplicationModel.Activation.ActivationKind;i4)
+
+enum Windows.ApplicationModel.Activation.ApplicationExecutionState python_type
+    py ApplicationExecutionState
+    signature enum(Windows.ApplicationModel.Activation.ApplicationExecutionState;i4)
+
+class Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs python_type
+    py AppointmentsProviderAddAppointmentActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs;{a2861367-cee5-4e4d-9ed7-41c34ec18b02})
+    default Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property add_appointment_operation
+        get get_AddAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation return
+
+class Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs python_type
+    py AppointmentsProviderRemoveAppointmentActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs;{751f3ab8-0b8e-451c-9f15-966e699bac25})
+    default Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property remove_appointment_operation
+        get get_RemoveAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation return
+
+class Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs python_type
+    py AppointmentsProviderReplaceAppointmentActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs;{1551b7d4-a981-4067-8a62-0524e4ade121})
+    default Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property replace_appointment_operation
+        get get_ReplaceAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation return
+
+class Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs python_type
+    py AppointmentsProviderShowAppointmentDetailsActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs;{3958f065-9841-4ca5-999b-885198b9ef2a})
+    default Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property instance_start_date
+        get get_InstanceStartDate slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property local_id
+        get get_LocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=43
+            out string return
+    property roaming_id
+        get get_RoamingId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=62
+            out string return
+
+class Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs python_type
+    py AppointmentsProviderShowTimeFrameActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs;{9baeaba6-0e0b-49aa-babc-12b1dc774986})
+    default Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property duration
+        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs shape=4 reverse=43
+            out timespan return
+    property time_to_show
+        get get_TimeToShow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs shape=4 reverse=22
+            out datetime return
+
+class Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs python_type
+    py BackgroundActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs;{ab14bee0-e760-440e-a91c-44796de3a92d})
+    default Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs
+    property task_instance
+        get get_TaskInstance slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance return
+
+class Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs python_type
+    py BarcodeScannerPreviewActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs;{6772797c-99bf-4349-af22-e4123560371c})
+    default Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property connection_id
+        get get_ConnectionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs python_type
+    py CachedFileUpdaterActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs;{d06eb1c7-3805-4ecb-b757-6cf15e26fef3})
+    default Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property cached_file_updater_ui
+        get get_CachedFileUpdaterUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Provider.CachedFileUpdaterUI return
+
+class Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs python_type
+    py CameraSettingsActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs;{fb67a508-2dad-490a-9170-dca036eb114b})
+    default Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property video_device_controller
+        get get_VideoDeviceController slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs shape=4 reverse=22
+            out object return
+    property video_device_extension
+        get get_VideoDeviceExtension slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs shape=4 reverse=43
+            out object return
+
+class Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs python_type
+    py CommandLineActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs;{4506472c-006a-48eb-8afb-d07ab25e3366})
+    default Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Activation.CommandLineActivationOperation return
+
+class Windows.ApplicationModel.Activation.CommandLineActivationOperation python_type
+    py CommandLineActivationOperation
+    signature rc(Windows.ApplicationModel.Activation.CommandLineActivationOperation;{994b2841-c59e-4f69-bcfd-b61ed4e622eb})
+    default Windows.ApplicationModel.Activation.ICommandLineActivationOperation
+    requires Windows.ApplicationModel.Activation.ICommandLineActivationOperation
+    property exit_code
+        get get_ExitCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=99
+            out int32 return
+        put put_ExitCode slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=62
+            in int32 name=value
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=22
+            out string return
+    property current_directory_path
+        get get_CurrentDirectoryPath slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=43
+            out string return
+    method get_deferral
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=121
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs python_type
+    py ContactCallActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs;{c2df14c7-30eb-41c6-b3bc-5b1694f9dab3})
+    default Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs python_type
+    py ContactMapActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs;{b32bf870-eee7-4ad2-aaf1-a87effcf00a4})
+    default Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property address
+        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactAddress return
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+
+class Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs python_type
+    py ContactMessageActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs;{de598db2-0e03-43b0-bf56-bcc40b3162df})
+    default Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs python_type
+    py ContactPanelActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs;{52bb63e4-d3d4-4b63-8051-4af2082cab80})
+    default Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property contact_panel
+        get get_ContactPanel slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactPanel return
+
+class Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs python_type
+    py ContactPickerActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs;{ce57aae7-6449-45a7-971f-d113be7a8936})
+    default Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property contact_picker_ui
+        get get_ContactPickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.Provider.ContactPickerUI return
+
+class Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs python_type
+    py ContactPostActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs;{b35a3c67-f1e7-4655-ad6e-4857588f552f})
+    default Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs python_type
+    py ContactVideoCallActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs;{61079db8-e3e7-4b4f-858d-5c63a96ef684})
+    default Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Activation.DeviceActivatedEventArgs python_type
+    py DeviceActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.DeviceActivatedEventArgs;{cd50b9a9-ce10-44d2-8234-c355a073ef33})
+    default Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property device_information_id
+        get get_DeviceInformationId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs shape=4 reverse=22
+            out string return
+    property verb
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs shape=4 reverse=43
+            out string return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs python_type
+    py DevicePairingActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs;{eba0d1e4-ecc6-4148-94ed-f4b37ec05b3e})
+    default Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property device_information
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+
+class Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs python_type
+    py DialReceiverActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs;{fb777ed7-85ee-456e-a44d-85d730e70aed})
+    default Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property app_name
+        get get_AppName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs shape=4 reverse=22
+            out string return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.FileActivatedEventArgs python_type
+    py FileActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FileActivatedEventArgs;{bb2afc33-93b1-42ed-8b26-236dd9c78496})
+    default Windows.ApplicationModel.Activation.IFileActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles
+    requires Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> return
+    property verb
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=43
+            out string return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName shape=4 reverse=22
+            out string return
+    property neighboring_files_query
+        get get_NeighboringFilesQuery slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles shape=4 reverse=22
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs python_type
+    py FileOpenPickerActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs;{72827082-5525-4bf2-bc09-1f5095d4964d})
+    default Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property file_open_picker_ui
+        get get_FileOpenPickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.FileOpenPickerUI return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2 shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs python_type
+    py FileOpenPickerContinuationEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs;{f0fa3f3a-d4e8-4ad3-9c34-2308f32fcec9})
+    default Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> return
+
+class Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs python_type
+    py FileSavePickerActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs;{81c19cf1-74e6-4387-82eb-bb8fd64b4346})
+    default Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property file_save_picker_ui
+        get get_FileSavePickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.FileSavePickerUI return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 shape=4 reverse=22
+            out string return
+    property enterprise_id
+        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs python_type
+    py FileSavePickerContinuationEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs;{2c846fe1-3bad-4f33-8c8b-e46fae824b4b})
+    default Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property file
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Storage.StorageFile return
+
+class Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs python_type
+    py FolderPickerContinuationEventArgs
+    signature rc(Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs;{51882366-9f4b-498f-beb0-42684f6e1c29})
+    default Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property folder
+        get get_Folder slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Storage.StorageFolder return
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgs python_type
+    py _IActivatedEventArgs
+    guid cf651713-cd08-4fd8-b697-a281b6544e2e
+    signature {cf651713-cd08-4fd8-b697-a281b6544e2e}
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser python_type
+    py _IActivatedEventArgsWithUser
+    guid 1cf09b9e-9962-4936-80ff-afc8e8ae5c8c
+    signature {1cf09b9e-9962-4936-80ff-afc8e8ae5c8c}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs python_type
+    py _IApplicationViewActivatedEventArgs
+    guid 930cef4b-b829-40fc-88f4-8513e8a64738
+    signature {930cef4b-b829-40fc-88f4-8513e8a64738}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs python_type
+    py _IAppointmentsProviderActivatedEventArgs
+    guid 3364c405-933c-4e7d-a034-500fb8dcd9f3
+    signature {3364c405-933c-4e7d-a034-500fb8dcd9f3}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs python_type
+    py _IAppointmentsProviderAddAppointmentActivatedEventArgs
+    guid a2861367-cee5-4e4d-9ed7-41c34ec18b02
+    signature {a2861367-cee5-4e4d-9ed7-41c34ec18b02}
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property add_appointment_operation
+        get get_AddAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs python_type
+    py _IAppointmentsProviderRemoveAppointmentActivatedEventArgs
+    guid 751f3ab8-0b8e-451c-9f15-966e699bac25
+    signature {751f3ab8-0b8e-451c-9f15-966e699bac25}
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property remove_appointment_operation
+        get get_RemoveAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs python_type
+    py _IAppointmentsProviderReplaceAppointmentActivatedEventArgs
+    guid 1551b7d4-a981-4067-8a62-0524e4ade121
+    signature {1551b7d4-a981-4067-8a62-0524e4ade121}
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property replace_appointment_operation
+        get get_ReplaceAppointmentOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs python_type
+    py _IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
+    guid 3958f065-9841-4ca5-999b-885198b9ef2a
+    signature {3958f065-9841-4ca5-999b-885198b9ef2a}
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property instance_start_date
+        get get_InstanceStartDate slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property local_id
+        get get_LocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=43
+            out string return
+    property roaming_id
+        get get_RoamingId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs shape=4 reverse=62
+            out string return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs python_type
+    py _IAppointmentsProviderShowTimeFrameActivatedEventArgs
+    guid 9baeaba6-0e0b-49aa-babc-12b1dc774986
+    signature {9baeaba6-0e0b-49aa-babc-12b1dc774986}
+    requires Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property duration
+        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs shape=4 reverse=43
+            out timespan return
+    property time_to_show
+        get get_TimeToShow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs shape=4 reverse=22
+            out datetime return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs python_type
+    py _IBackgroundActivatedEventArgs
+    guid ab14bee0-e760-440e-a91c-44796de3a92d
+    signature {ab14bee0-e760-440e-a91c-44796de3a92d}
+    property task_instance
+        get get_TaskInstance slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance return
+
+interface Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs python_type
+    py _IBarcodeScannerPreviewActivatedEventArgs
+    guid 6772797c-99bf-4349-af22-e4123560371c
+    signature {6772797c-99bf-4349-af22-e4123560371c}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property connection_id
+        get get_ConnectionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs python_type
+    py _ICachedFileUpdaterActivatedEventArgs
+    guid d06eb1c7-3805-4ecb-b757-6cf15e26fef3
+    signature {d06eb1c7-3805-4ecb-b757-6cf15e26fef3}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property cached_file_updater_ui
+        get get_CachedFileUpdaterUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Provider.CachedFileUpdaterUI return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs python_type
+    py _ICameraSettingsActivatedEventArgs
+    guid fb67a508-2dad-490a-9170-dca036eb114b
+    signature {fb67a508-2dad-490a-9170-dca036eb114b}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property video_device_controller
+        get get_VideoDeviceController slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs shape=4 reverse=22
+            out object return
+    property video_device_extension
+        get get_VideoDeviceExtension slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs shape=4 reverse=43
+            out object return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs python_type
+    py _ICommandLineActivatedEventArgs
+    guid 4506472c-006a-48eb-8afb-d07ab25e3366
+    signature {4506472c-006a-48eb-8afb-d07ab25e3366}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Activation.CommandLineActivationOperation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ICommandLineActivationOperation
+    guid 994b2841-c59e-4f69-bcfd-b61ed4e622eb
+
+interface Windows.ApplicationModel.Activation.IContactActivatedEventArgs python_type
+    py _IContactActivatedEventArgs
+    guid d627a1c4-c025-4c41-9def-f1eafad075e7
+    signature {d627a1c4-c025-4c41-9def-f1eafad075e7}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs python_type
+    py _IContactCallActivatedEventArgs
+    guid c2df14c7-30eb-41c6-b3bc-5b1694f9dab3
+    signature {c2df14c7-30eb-41c6-b3bc-5b1694f9dab3}
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs shape=4 reverse=43
+            out string return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs python_type
+    py _IContactMapActivatedEventArgs
+    guid b32bf870-eee7-4ad2-aaf1-a87effcf00a4
+    signature {b32bf870-eee7-4ad2-aaf1-a87effcf00a4}
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property address
+        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactAddress return
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs python_type
+    py _IContactMessageActivatedEventArgs
+    guid de598db2-0e03-43b0-bf56-bcc40b3162df
+    signature {de598db2-0e03-43b0-bf56-bcc40b3162df}
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs shape=4 reverse=43
+            out string return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs python_type
+    py _IContactPanelActivatedEventArgs
+    guid 52bb63e4-d3d4-4b63-8051-4af2082cab80
+    signature {52bb63e4-d3d4-4b63-8051-4af2082cab80}
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property contact_panel
+        get get_ContactPanel slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.ContactPanel return
+
+interface Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs python_type
+    py _IContactPickerActivatedEventArgs
+    guid ce57aae7-6449-45a7-971f-d113be7a8936
+    signature {ce57aae7-6449-45a7-971f-d113be7a8936}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property contact_picker_ui
+        get get_ContactPickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Contacts.Provider.ContactPickerUI return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs python_type
+    py _IContactPostActivatedEventArgs
+    guid b35a3c67-f1e7-4655-ad6e-4857588f552f
+    signature {b35a3c67-f1e7-4655-ad6e-4857588f552f}
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs shape=4 reverse=43
+            out string return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs python_type
+    py _IContactVideoCallActivatedEventArgs
+    guid 61079db8-e3e7-4b4f-858d-5c63a96ef684
+    signature {61079db8-e3e7-4b4f-858d-5c63a96ef684}
+    requires Windows.ApplicationModel.Activation.IContactActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property contact
+        get get_Contact slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+    property service_id
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=22
+            out string return
+    property service_user_id
+        get get_ServiceUserId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs shape=4 reverse=43
+            out string return
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs python_type
+    py _IContactsProviderActivatedEventArgs
+    guid 4580dca8-5750-4916-aa52-c0829521eb94
+    signature {4580dca8-5750-4916-aa52-c0829521eb94}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property verb
+        get get_Verb slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs python_type
+    py _IContinuationActivatedEventArgs
+    guid e58106b5-155f-4a94-a742-c7e08f4e188c
+    signature {e58106b5-155f-4a94-a742-c7e08f4e188c}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs python_type
+    py _IDeviceActivatedEventArgs
+    guid cd50b9a9-ce10-44d2-8234-c355a073ef33
+    signature {cd50b9a9-ce10-44d2-8234-c355a073ef33}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property device_information_id
+        get get_DeviceInformationId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs shape=4 reverse=22
+            out string return
+    property verb
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs python_type
+    py _IDevicePairingActivatedEventArgs
+    guid eba0d1e4-ecc6-4148-94ed-f4b37ec05b3e
+    signature {eba0d1e4-ecc6-4148-94ed-f4b37ec05b3e}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property device_information
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs python_type
+    py _IDialReceiverActivatedEventArgs
+    guid fb777ed7-85ee-456e-a44d-85d730e70aed
+    signature {fb777ed7-85ee-456e-a44d-85d730e70aed}
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property app_name
+        get get_AppName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs shape=4 reverse=22
+            out string return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileActivatedEventArgs python_type
+    py _IFileActivatedEventArgs
+    guid bb2afc33-93b1-42ed-8b26-236dd9c78496
+    signature {bb2afc33-93b1-42ed-8b26-236dd9c78496}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> return
+    property verb
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName python_type
+    py _IFileActivatedEventArgsWithCallerPackageFamilyName
+    guid 2d60f06b-d25f-4d25-8653-e1c5e1108309
+    signature {2d60f06b-d25f-4d25-8653-e1c5e1108309}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles python_type
+    py _IFileActivatedEventArgsWithNeighboringFiles
+    guid 433ba1a4-e1e2-48fd-b7fc-b5d6eee65033
+    signature {433ba1a4-e1e2-48fd-b7fc-b5d6eee65033}
+    requires Windows.ApplicationModel.Activation.IFileActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property neighboring_files_query
+        get get_NeighboringFilesQuery slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles shape=4 reverse=22
+            out class type=Windows.Storage.Search.StorageFileQueryResult return
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> return
+    property verb
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs python_type
+    py _IFileOpenPickerActivatedEventArgs
+    guid 72827082-5525-4bf2-bc09-1f5095d4964d
+    signature {72827082-5525-4bf2-bc09-1f5095d4964d}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property file_open_picker_ui
+        get get_FileOpenPickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.FileOpenPickerUI return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2 python_type
+    py _IFileOpenPickerActivatedEventArgs2
+    guid 5e731f66-8d1f-45fb-af1d-73205c8fc7a1
+    signature {5e731f66-8d1f-45fb-af1d-73205c8fc7a1}
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2 shape=4 reverse=22
+            out string return
+
+interface Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs python_type
+    py _IFileOpenPickerContinuationEventArgs
+    guid f0fa3f3a-d4e8-4ad3-9c34-2308f32fcec9
+    signature {f0fa3f3a-d4e8-4ad3-9c34-2308f32fcec9}
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs python_type
+    py _IFileSavePickerActivatedEventArgs
+    guid 81c19cf1-74e6-4387-82eb-bb8fd64b4346
+    signature {81c19cf1-74e6-4387-82eb-bb8fd64b4346}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property file_save_picker_ui
+        get get_FileSavePickerUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.FileSavePickerUI return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 python_type
+    py _IFileSavePickerActivatedEventArgs2
+    guid 6b73fe13-2cf2-4d48-8cbc-af67d23f1ce7
+    signature {6b73fe13-2cf2-4d48-8cbc-af67d23f1ce7}
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 shape=4 reverse=22
+            out string return
+    property enterprise_id
+        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2 shape=4 reverse=43
+            out string return
+
+interface Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs python_type
+    py _IFileSavePickerContinuationEventArgs
+    guid 2c846fe1-3bad-4f33-8c8b-e46fae824b4b
+    signature {2c846fe1-3bad-4f33-8c8b-e46fae824b4b}
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property file
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Storage.StorageFile return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs python_type
+    py _IFolderPickerContinuationEventArgs
+    guid 51882366-9f4b-498f-beb0-42684f6e1c29
+    signature {51882366-9f4b-498f-beb0-42684f6e1c29}
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property folder
+        get get_Folder slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Storage.StorageFolder return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs python_type
+    py _ILaunchActivatedEventArgs
+    guid fbc93e26-a14a-4b4f-82b0-33bed920af52
+    signature {fbc93e26-a14a-4b4f-82b0-33bed920af52}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2 python_type
+    py _ILaunchActivatedEventArgs2
+    guid 0fd37ebc-9dc9-46b5-9ace-bd95d4565345
+    signature {0fd37ebc-9dc9-46b5-9ace-bd95d4565345}
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property tile_activated_info
+        get get_TileActivatedInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Activation.TileActivatedInfo return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs python_type
+    py _ILockScreenActivatedEventArgs
+    guid 3ca77966-6108-4a41-8220-ee7d133c8532
+    signature {3ca77966-6108-4a41-8220-ee7d133c8532}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property info
+        get get_Info slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs shape=4 reverse=22
+            out object return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs python_type
+    py _ILockScreenCallActivatedEventArgs
+    guid 06f37fbe-b5f2-448b-b13e-e328ac1c516a
+    signature {06f37fbe-b5f2-448b-b13e-e328ac1c516a}
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property call_ui
+        get get_CallUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Calls.LockScreenCallUI return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs python_type
+    py _IPhoneCallActivatedEventArgs
+    guid 54615221-a3c1-4ced-b62f-8c60523619ad
+    signature {54615221-a3c1-4ced-b62f-8c60523619ad}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs shape=4 reverse=22
+            out guid return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs python_type
+    py _IPickerReturnedActivatedEventArgs
+    guid 360defb9-a9d3-4984-a4ed-9ec734604921
+    signature {360defb9-a9d3-4984-a4ed-9ec734604921}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property picker_operation_id
+        get get_PickerOperationId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs python_type
+    py _IPrelaunchActivatedEventArgs
+    guid 0c44717b-19f7-48d6-b046-cf22826eaa74
+    signature {0c44717b-19f7-48d6-b046-cf22826eaa74}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property prelaunch_activated
+        get get_PrelaunchActivated slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs shape=4 reverse=22
+            out boolean return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs python_type
+    py _IPrint3DWorkflowActivatedEventArgs
+    guid 3f57e78b-f2ac-4619-8302-ef855e1c9b90
+    signature {3f57e78b-f2ac-4619-8302-ef855e1c9b90}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property workflow
+        get get_Workflow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.Extensions.Print3DWorkflow return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs python_type
+    py _IPrintTaskSettingsActivatedEventArgs
+    guid ee30a0c9-ce56-4865-ba8e-8954ac271107
+    signature {ee30a0c9-ce56-4865-ba8e-8954ac271107}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property configuration
+        get get_Configuration slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.Extensions.PrintTaskConfiguration return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs python_type
+    py _IProtocolActivatedEventArgs
+    guid 6095f4dd-b7c0-46ab-81fe-d90f36d00d24
+    signature {6095f4dd-b7c0-46ab-81fe-d90f36d00d24}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData python_type
+    py _IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
+    guid d84a0c12-5c8f-438c-83cb-c28fcc0b2fdb
+    signature {d84a0c12-5c8f-438c-83cb-c28fcc0b2fdb}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=22
+            out string return
+    property data
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs python_type
+    py _IProtocolForResultsActivatedEventArgs
+    guid e75132c2-7ae7-4517-80ac-dbe8d7cc5b9c
+    signature {e75132c2-7ae7-4517-80ac-dbe8d7cc5b9c}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property protocol_for_results_operation
+        get get_ProtocolForResultsOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.System.ProtocolForResultsOperation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs python_type
+    py _IRestrictedLaunchActivatedEventArgs
+    guid e0b7ac81-bfc3-4344-a5da-19fd5a27baae
+    signature {e0b7ac81-bfc3-4344-a5da-19fd5a27baae}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property shared_context
+        get get_SharedContext slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs shape=4 reverse=22
+            out object return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ISearchActivatedEventArgs python_type
+    py _ISearchActivatedEventArgs
+    guid 8cb36951-58c8-43e3-94bc-41d33f8b630e
+    signature {8cb36951-58c8-43e3-94bc-41d33f8b630e}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails python_type
+    py _ISearchActivatedEventArgsWithLinguisticDetails
+    guid c09f33da-08ab-4931-9b7c-451025f21f81
+    signature {c09f33da-08ab-4931-9b7c-451025f21f81}
+    property linguistic_details
+        get get_LinguisticDetails slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+
+interface Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs python_type
+    py _IShareTargetActivatedEventArgs
+    guid 4bdaf9c8-cdb2-4acb-bfc3-6648563378ec
+    signature {4bdaf9c8-cdb2-4acb-bfc3-6648563378ec}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property share_operation
+        get get_ShareOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ISplashScreen
+    guid ca4d975c-d4d6-43f0-97c0-0833c6391c24
+
+interface Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs python_type
+    py _IStartupTaskActivatedEventArgs
+    guid 03b11a58-5276-4d91-8621-54611864d5fa
+    signature {03b11a58-5276-4d91-8621-54611864d5fa}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.ITileActivatedInfo
+    guid 80e4a3b1-3980-4f17-b738-89194e0b8f65
+
+interface Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs python_type
+    py _IToastNotificationActivatedEventArgs
+    guid 92a86f82-5290-431d-be85-c4aaeeb8685f
+    signature {92a86f82-5290-431d-be85-c4aaeeb8685f}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property argument
+        get get_Argument slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs shape=4 reverse=22
+            out string return
+    property user_input
+        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs python_type
+    py _IUserDataAccountProviderActivatedEventArgs
+    guid 1bc9f723-8ef1-4a51-a63a-fe711eeab607
+    signature {1bc9f723-8ef1-4a51-a63a-fe711eeab607}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete
+    guid 85575a41-06cb-58d0-b98a-7c8f06e6e9d7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+    guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ShownTileNotification> concrete
+    guid 2b23baa9-1d54-5440-bd32-86ed70f15c9e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Notifications.ShownTileNotification;{342d8988-5af2-481a-a6a3-f2fdc78de88e}))
+    argument Windows.UI.Notifications.ShownTileNotification
+
+interface Windows.ApplicationModel.Activation.IViewSwitcherProvider python_type
+    py _IViewSwitcherProvider
+    guid 33f288a6-5c2c-4d27-bac7-7536088f1219
+    signature {33f288a6-5c2c-4d27-bac7-7536088f1219}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs python_type
+    py _IVoiceCommandActivatedEventArgs
+    guid ab92dcfd-8d43-4de6-9775-20704b581b00
+    signature {ab92dcfd-8d43-4de6-9775-20704b581b00}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property result
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs python_type
+    py _IWalletActionActivatedEventArgs
+    guid fcfc027b-1a1a-4d22-923f-ae6f45fa52d9
+    signature {fcfc027b-1a1a-4d22-923f-ae6f45fa52d9}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property action_id
+        get get_ActionId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=62 deprecated
+            out string return
+    property action_kind
+        get get_ActionKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=43 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletActionKind return
+    property item_id
+        get get_ItemId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=22 deprecated
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs python_type
+    py _IWebAccountProviderActivatedEventArgs
+    guid 72b71774-98ea-4ccf-9752-46d9051004f1
+    signature {72b71774-98ea-4ccf-9752-46d9051004f1}
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+interface Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs python_type
+    py _IWebAuthenticationBrokerContinuationEventArgs
+    guid 75dda3d4-7714-453d-b7ff-b95e3a1709da
+    signature {75dda3d4-7714-453d-b7ff-b95e3a1709da}
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property web_authentication_result
+        get get_WebAuthenticationResult slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs shape=4 reverse=22
+            out class type=Windows.Security.Authentication.Web.WebAuthenticationResult return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+class Windows.ApplicationModel.Activation.LaunchActivatedEventArgs python_type
+    py LaunchActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.LaunchActivatedEventArgs;{fbc93e26-a14a-4b4f-82b0-33bed920af52})
+    default Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property tile_activated_info
+        get get_TileActivatedInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Activation.TileActivatedInfo return
+    property prelaunch_activated
+        get get_PrelaunchActivated slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs shape=4 reverse=22
+            out boolean return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs python_type
+    py LockScreenActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs;{3ca77966-6108-4a41-8220-ee7d133c8532})
+    default Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property info
+        get get_Info slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs shape=4 reverse=22
+            out object return
+
+class Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs python_type
+    py LockScreenCallActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs;{06f37fbe-b5f2-448b-b13e-e328ac1c516a})
+    default Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property call_ui
+        get get_CallUI slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Calls.LockScreenCallUI return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs python_type
+    py LockScreenComponentActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs;{cf651713-cd08-4fd8-b697-a281b6544e2e})
+    default Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+
+class Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs python_type
+    py PhoneCallActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs;{54615221-a3c1-4ced-b62f-8c60523619ad})
+    default Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs shape=4 reverse=22
+            out guid return
+
+class Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs python_type
+    py PickerReturnedActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs;{360defb9-a9d3-4984-a4ed-9ec734604921})
+    default Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property picker_operation_id
+        get get_PickerOperationId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs python_type
+    py Print3DWorkflowActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs;{3f57e78b-f2ac-4619-8302-ef855e1c9b90})
+    default Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property workflow
+        get get_Workflow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.Extensions.Print3DWorkflow return
+
+class Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs python_type
+    py PrintTaskSettingsActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs;{ee30a0c9-ce56-4865-ba8e-8954ac271107})
+    default Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property configuration
+        get get_Configuration slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.Extensions.PrintTaskConfiguration return
+
+class Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs python_type
+    py ProtocolActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs;{6095f4dd-b7c0-46ab-81fe-d90f36d00d24})
+    default Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=22
+            out string return
+    property data
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs python_type
+    py ProtocolForResultsActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs;{e75132c2-7ae7-4517-80ac-dbe8d7cc5b9c})
+    default Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=22
+            out string return
+    property data
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property protocol_for_results_operation
+        get get_ProtocolForResultsOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.System.ProtocolForResultsOperation return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs python_type
+    py RestrictedLaunchActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs;{e0b7ac81-bfc3-4344-a5da-19fd5a27baae})
+    default Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property shared_context
+        get get_SharedContext slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs shape=4 reverse=22
+            out object return
+
+class Windows.ApplicationModel.Activation.SearchActivatedEventArgs python_type
+    py SearchActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.SearchActivatedEventArgs;{8cb36951-58c8-43e3-94bc-41d33f8b630e})
+    default Windows.ApplicationModel.Activation.ISearchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ISearchActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails
+    requires Windows.ApplicationModel.Activation.IViewSwitcherProvider
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgs shape=4 reverse=43
+            out string return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgs shape=4 reverse=22
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+    property view_switcher
+        get get_ViewSwitcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IViewSwitcherProvider shape=4 reverse=22
+            out class type=Windows.UI.ViewManagement.ActivationViewSwitcher return
+
+class Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs python_type
+    py ShareTargetActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs;{4bdaf9c8-cdb2-4acb-bfc3-6648563378ec})
+    default Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property share_operation
+        get get_ShareOperation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation return
+
+class Windows.ApplicationModel.Activation.SplashScreen python_type
+    py SplashScreen
+    signature rc(Windows.ApplicationModel.Activation.SplashScreen;{ca4d975c-d4d6-43f0-97c0-0833c6391c24})
+    default Windows.ApplicationModel.Activation.ISplashScreen
+    requires Windows.ApplicationModel.Activation.ISplashScreen
+    property image_location
+        get get_ImageLocation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+    event dismissed
+        add add_Dismissed slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Activation.SplashScreen,System.Object> name=handler
+            out event_token return
+        remove remove_Dismissed slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=26 reverse=82
+            in event_token name=cookie
+
+class Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs python_type
+    py StartupTaskActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs;{03b11a58-5276-4d91-8621-54611864d5fa})
+    default Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property task_id
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Activation.TileActivatedInfo python_type
+    py TileActivatedInfo
+    signature rc(Windows.ApplicationModel.Activation.TileActivatedInfo;{80e4a3b1-3980-4f17-b738-89194e0b8f65})
+    default Windows.ApplicationModel.Activation.ITileActivatedInfo
+    requires Windows.ApplicationModel.Activation.ITileActivatedInfo
+    property recently_shown_notifications
+        get get_RecentlyShownNotifications slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ITileActivatedInfo shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ShownTileNotification> return
+
+class Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs python_type
+    py ToastNotificationActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs;{92a86f82-5290-431d-be85-c4aaeeb8685f})
+    default Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    requires Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property currently_shown_application_view_id
+        get get_CurrentlyShownApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs shape=4 reverse=22
+            out int32 return
+    property argument
+        get get_Argument slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs shape=4 reverse=22
+            out string return
+    property user_input
+        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Activation.SplashScreen,System.Object> concrete
+    guid 7725b2a5-287d-5ed2-a789-2a6a2673c7fe
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Activation.SplashScreen;{ca4d975c-d4d6-43f0-97c0-0833c6391c24});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Activation.SplashScreen
+    argument System.Object
+
+class Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs python_type
+    py UserDataAccountProviderActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs;{1bc9f723-8ef1-4a51-a63a-fe711eeab607})
+    default Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation return
+
+class Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs python_type
+    py VoiceCommandActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs;{ab92dcfd-8d43-4de6-9775-20704b581b00})
+    default Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property result
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+
+class Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs python_type
+    py WalletActionActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs;{fcfc027b-1a1a-4d22-923f-ae6f45fa52d9})
+    default Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property action_id
+        get get_ActionId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=62 deprecated
+            out string return
+    property action_kind
+        get get_ActionKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=43 deprecated
+            out enum32 type=Windows.ApplicationModel.Wallet.WalletActionKind return
+    property item_id
+        get get_ItemId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs shape=4 reverse=22 deprecated
+            out string return
+
+class Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs python_type
+    py WebAccountProviderActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs;{72b71774-98ea-4ccf-9752-46d9051004f1})
+    default Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs shape=4 reverse=22
+            out interface type=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation return
+
+class Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs python_type
+    py WebAuthenticationBrokerContinuationEventArgs
+    signature rc(Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs;{75dda3d4-7714-453d-b7ff-b95e3a1709da})
+    default Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs
+    requires Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property continuation_data
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property web_authentication_result
+        get get_WebAuthenticationResult slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs shape=4 reverse=22
+            out class type=Windows.Security.Authentication.Web.WebAuthenticationResult return
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation external
+    py winrt.windows.applicationmodel.appointments.appointmentsprovider.AddAppointmentOperation
+
+class Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation external
+    py winrt.windows.applicationmodel.appointments.appointmentsprovider.RemoveAppointmentOperation
+
+class Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation external
+    py winrt.windows.applicationmodel.appointments.appointmentsprovider.ReplaceAppointmentOperation
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance external
+    py winrt.windows.applicationmodel.background._IBackgroundTaskInstance
+    guid 865bda7a-21d8-4573-8f32-928a1b0641f6
+
+class Windows.ApplicationModel.Calls.LockScreenCallUI external
+    py winrt.windows.applicationmodel.calls.LockScreenCallUI
+
+class Windows.ApplicationModel.Contacts.Contact external
+    py winrt.windows.applicationmodel.contacts.Contact
+
+class Windows.ApplicationModel.Contacts.ContactAddress external
+    py winrt.windows.applicationmodel.contacts.ContactAddress
+
+class Windows.ApplicationModel.Contacts.ContactPanel external
+    py winrt.windows.applicationmodel.contacts.ContactPanel
+
+class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI external
+    py winrt.windows.applicationmodel.contacts.provider.ContactPickerUI
+
+class Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation external
+    py winrt.windows.applicationmodel.datatransfer.sharetarget.ShareOperation
+
+class Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails external
+    py winrt.windows.applicationmodel.search.SearchPaneQueryLinguisticDetails
+
+interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation external
+    py winrt.windows.applicationmodel.userdataaccounts.provider._IUserDataAccountProviderOperation
+    guid a20aad63-888c-4a62-a3dd-34d07a802b2b
+
+enum Windows.ApplicationModel.Wallet.WalletActionKind external
+    py winrt.windows.applicationmodel.wallet.WalletActionKind
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+class Windows.Devices.Printers.Extensions.Print3DWorkflow external
+    py winrt.windows.devices.printers.extensions.Print3DWorkflow
+
+class Windows.Devices.Printers.Extensions.PrintTaskConfiguration external
+    py winrt.windows.devices.printers.extensions.PrintTaskConfiguration
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionResult external
+    py winrt.windows.media.speechrecognition.SpeechRecognitionResult
+
+class Windows.Security.Authentication.Web.WebAuthenticationResult external
+    py winrt.windows.security.authentication.web.WebAuthenticationResult
+
+interface Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation external
+    py winrt.windows.security.authentication.web.provider._IWebAccountProviderOperation
+    guid 6d5d2426-10b1-419a-a44e-f9c5161574e6
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+class Windows.Storage.Pickers.Provider.FileOpenPickerUI external
+    py winrt.windows.storage.pickers.provider.FileOpenPickerUI
+
+class Windows.Storage.Pickers.Provider.FileSavePickerUI external
+    py winrt.windows.storage.pickers.provider.FileSavePickerUI
+
+class Windows.Storage.Provider.CachedFileUpdaterUI external
+    py winrt.windows.storage.provider.CachedFileUpdaterUI
+
+class Windows.Storage.Search.StorageFileQueryResult external
+    py winrt.windows.storage.search.StorageFileQueryResult
+
+class Windows.System.ProtocolForResultsOperation external
+    py winrt.windows.system.ProtocolForResultsOperation
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+class Windows.UI.Notifications.ShownTileNotification external
+    py winrt.windows.ui.notifications.ShownTileNotification
+
+class Windows.UI.ViewManagement.ActivationViewSwitcher external
+    py winrt.windows.ui.viewmanagement.ActivationViewSwitcher

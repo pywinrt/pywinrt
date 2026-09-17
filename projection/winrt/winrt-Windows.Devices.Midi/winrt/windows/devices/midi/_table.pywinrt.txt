@@ -1,0 +1,684 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Midi
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.IMidiOutPort> concrete
+    guid 32699a4d-1cc0-5a1c-9da6-875197875086
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{931d6d9f-57a2-4a3a-adb8-4640886f6693})
+    argument Windows.Devices.Midi.IMidiOutPort
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.MidiInPort> concrete
+    guid cc664f0e-edb1-55c8-9ef7-ec9007e4561c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Midi.MidiInPort;{d5c1d9db-971a-4eaf-a23d-ea19fe607ff9}))
+    argument Windows.Devices.Midi.MidiInPort
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.MidiSynthesizer> concrete
+    guid 9388b978-13f1-5e37-8133-94430d90dd50
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Midi.MidiSynthesizer;{f0da155e-db90-405f-b8ae-21d2e17f2e45}))
+    argument Windows.Devices.Midi.MidiSynthesizer
+
+interface Windows.Devices.Midi.IMidiChannelPressureMessage
+    guid be1fa860-62b4-4d52-a37e-92e54d35b909
+
+interface Windows.Devices.Midi.IMidiChannelPressureMessageFactory
+    guid 6218ed2f-2284-412a-94cf-10fb04842c6c
+
+interface Windows.Devices.Midi.IMidiControlChangeMessage
+    guid b7e15f83-780d-405f-b781-3e1598c97f40
+
+interface Windows.Devices.Midi.IMidiControlChangeMessageFactory
+    guid 2ab14321-956c-46ad-9752-f87f55052fe3
+
+interface Windows.Devices.Midi.IMidiInPort
+    guid d5c1d9db-971a-4eaf-a23d-ea19fe607ff9
+
+interface Windows.Devices.Midi.IMidiInPortStatics
+    guid 44c439dc-67ff-4a6e-8bac-fdb6610cf296
+
+interface Windows.Devices.Midi.IMidiMessage python_type
+    py _IMidiMessage
+    guid 79767945-1094-4283-9be0-289fc0ee8334
+    signature {79767945-1094-4283-9be0-289fc0ee8334}
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+interface Windows.Devices.Midi.IMidiMessageReceivedEventArgs
+    guid 76566e56-f328-4b51-907d-b3a8ce96bf80
+
+interface Windows.Devices.Midi.IMidiNoteOffMessage
+    guid 16fd8af4-198e-4d8f-a654-d305a293548f
+
+interface Windows.Devices.Midi.IMidiNoteOffMessageFactory
+    guid a6b240e0-a749-425f-8af4-a4d979cc15b5
+
+interface Windows.Devices.Midi.IMidiNoteOnMessage
+    guid e0224af5-6181-46dd-afa2-410004c057aa
+
+interface Windows.Devices.Midi.IMidiNoteOnMessageFactory
+    guid 9b4280a0-59c1-420e-b517-15a10aa9606b
+
+interface Windows.Devices.Midi.IMidiOutPort python_type closeable
+    py _IMidiOutPort
+    guid 931d6d9f-57a2-4a3a-adb8-4640886f6693
+    signature {931d6d9f-57a2-4a3a-adb8-4640886f6693}
+    requires Windows.Foundation.IClosable
+    property device_id
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=62
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method send_buffer
+        method SendBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=midiData
+    method send_message
+        method SendMessage slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=22
+            in interface type=Windows.Devices.Midi.IMidiMessage name=midiMessage
+
+interface Windows.Devices.Midi.IMidiOutPortStatics
+    guid 065cc3e9-0f88-448b-9b64-a95826c65b8f
+
+interface Windows.Devices.Midi.IMidiPitchBendChangeMessage
+    guid 29df4cb1-2e9f-4faf-8c2b-9cb82a9079ca
+
+interface Windows.Devices.Midi.IMidiPitchBendChangeMessageFactory
+    guid f5eedf55-cfc8-4926-b30e-a3622393306c
+
+interface Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage
+    guid 1f7337fe-ace8-48a0-868e-7cdbf20f04d6
+
+interface Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessageFactory
+    guid e98f483e-c4b3-4dd2-917c-e349815a1b3b
+
+interface Windows.Devices.Midi.IMidiProgramChangeMessage
+    guid 9cbb3c78-7a3e-4327-aa98-20b8e4485af8
+
+interface Windows.Devices.Midi.IMidiProgramChangeMessageFactory
+    guid d6b04387-524b-4104-9c99-6572bfd2e261
+
+interface Windows.Devices.Midi.IMidiSongPositionPointerMessage
+    guid 4ca50c56-ec5e-4ae4-a115-88dc57cc2b79
+
+interface Windows.Devices.Midi.IMidiSongPositionPointerMessageFactory
+    guid 9c00e996-f10b-4fea-b395-f5d6cf80f64e
+
+interface Windows.Devices.Midi.IMidiSongSelectMessage
+    guid 49f0f27f-6d83-4741-a5bf-4629f6be974f
+
+interface Windows.Devices.Midi.IMidiSongSelectMessageFactory
+    guid 848878e4-8748-4129-a66c-a05493f75daa
+
+interface Windows.Devices.Midi.IMidiSynthesizer
+    guid f0da155e-db90-405f-b8ae-21d2e17f2e45
+
+interface Windows.Devices.Midi.IMidiSynthesizerStatics
+    guid 4224eaa8-6629-4d6b-aa8f-d4521a5a31ce
+
+interface Windows.Devices.Midi.IMidiSystemExclusiveMessageFactory
+    guid 083de222-3b74-4320-9b42-0ca8545f8a24
+
+interface Windows.Devices.Midi.IMidiTimeCodeMessage
+    guid 0bf7087d-fa63-4a1c-8deb-c0e87796a6d7
+
+interface Windows.Devices.Midi.IMidiTimeCodeMessageFactory
+    guid eb3099c5-771c-40de-b961-175a7489a85e
+
+class Windows.Devices.Midi.MidiActiveSensingMessage activatable python_type
+    py MidiActiveSensingMessage
+    signature rc(Windows.Devices.Midi.MidiActiveSensingMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiChannelPressureMessage python_type
+    py MidiChannelPressureMessage
+    signature rc(Windows.Devices.Midi.MidiChannelPressureMessage;{be1fa860-62b4-4d52-a37e-92e54d35b909})
+    default Windows.Devices.Midi.IMidiChannelPressureMessage
+    requires Windows.Devices.Midi.IMidiChannelPressureMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiChannelPressureMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Midi.IMidiChannelPressureMessageFactory shape=117 reverse=25
+            in uint8 name=channel
+            in uint8 name=pressure
+            out class type=Windows.Devices.Midi.MidiChannelPressureMessage return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiChannelPressureMessage shape=4 reverse=22
+            out uint8 return
+    property pressure
+        get get_Pressure slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiChannelPressureMessage shape=4 reverse=43
+            out uint8 return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiContinueMessage activatable python_type
+    py MidiContinueMessage
+    signature rc(Windows.Devices.Midi.MidiContinueMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiControlChangeMessage python_type
+    py MidiControlChangeMessage
+    signature rc(Windows.Devices.Midi.MidiControlChangeMessage;{b7e15f83-780d-405f-b781-3e1598c97f40})
+    default Windows.Devices.Midi.IMidiControlChangeMessage
+    requires Windows.Devices.Midi.IMidiControlChangeMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiControlChangeMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Midi.IMidiControlChangeMessageFactory shape=195 reverse=26
+            in uint8 name=channel
+            in uint8 name=controller
+            in uint8 name=controlValue
+            out class type=Windows.Devices.Midi.MidiControlChangeMessage return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiControlChangeMessage shape=4 reverse=22
+            out uint8 return
+    property control_value
+        get get_ControlValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiControlChangeMessage shape=4 reverse=62
+            out uint8 return
+    property controller
+        get get_Controller slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiControlChangeMessage shape=4 reverse=43
+            out uint8 return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiInPort python_type closeable
+    py MidiInPort
+    signature rc(Windows.Devices.Midi.MidiInPort;{d5c1d9db-971a-4eaf-a23d-ea19fe607ff9})
+    default Windows.Devices.Midi.IMidiInPort
+    requires Windows.Devices.Midi.IMidiInPort
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Midi.IMidiInPortStatics
+    property device_id
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiInPort shape=4 reverse=62
+            out string return
+    event message_received
+        add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiInPort shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Midi.MidiInPort,Windows.Devices.Midi.MidiMessageReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiInPort shape=26 reverse=53
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiInPortStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.MidiInPort> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiInPortStatics shape=4 reverse=43 static
+            out string return
+
+class Windows.Devices.Midi.MidiMessageReceivedEventArgs python_type
+    py MidiMessageReceivedEventArgs
+    signature rc(Windows.Devices.Midi.MidiMessageReceivedEventArgs;{76566e56-f328-4b51-907d-b3a8ce96bf80})
+    default Windows.Devices.Midi.IMidiMessageReceivedEventArgs
+    requires Windows.Devices.Midi.IMidiMessageReceivedEventArgs
+    property message
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessageReceivedEventArgs shape=4 reverse=22
+            out interface type=Windows.Devices.Midi.IMidiMessage return
+
+enum Windows.Devices.Midi.MidiMessageType python_type
+    py MidiMessageType
+    signature enum(Windows.Devices.Midi.MidiMessageType;i4)
+
+class Windows.Devices.Midi.MidiNoteOffMessage python_type
+    py MidiNoteOffMessage
+    signature rc(Windows.Devices.Midi.MidiNoteOffMessage;{16fd8af4-198e-4d8f-a654-d305a293548f})
+    default Windows.Devices.Midi.IMidiNoteOffMessage
+    requires Windows.Devices.Midi.IMidiNoteOffMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiNoteOffMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOffMessageFactory shape=195 reverse=26
+            in uint8 name=channel
+            in uint8 name=note
+            in uint8 name=velocity
+            out class type=Windows.Devices.Midi.MidiNoteOffMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOffMessage shape=4 reverse=22
+            out uint8 return
+    property note
+        get get_Note slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOffMessage shape=4 reverse=43
+            out uint8 return
+    property velocity
+        get get_Velocity slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOffMessage shape=4 reverse=62
+            out uint8 return
+
+class Windows.Devices.Midi.MidiNoteOnMessage python_type
+    py MidiNoteOnMessage
+    signature rc(Windows.Devices.Midi.MidiNoteOnMessage;{e0224af5-6181-46dd-afa2-410004c057aa})
+    default Windows.Devices.Midi.IMidiNoteOnMessage
+    requires Windows.Devices.Midi.IMidiNoteOnMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiNoteOnMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOnMessageFactory shape=195 reverse=26
+            in uint8 name=channel
+            in uint8 name=note
+            in uint8 name=velocity
+            out class type=Windows.Devices.Midi.MidiNoteOnMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOnMessage shape=4 reverse=22
+            out uint8 return
+    property note
+        get get_Note slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOnMessage shape=4 reverse=43
+            out uint8 return
+    property velocity
+        get get_Velocity slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiNoteOnMessage shape=4 reverse=62
+            out uint8 return
+
+class Windows.Devices.Midi.MidiOutPort python_type closeable
+    py MidiOutPort
+    signature rc(Windows.Devices.Midi.MidiOutPort;{931d6d9f-57a2-4a3a-adb8-4640886f6693})
+    default Windows.Devices.Midi.IMidiOutPort
+    requires Windows.Devices.Midi.IMidiOutPort
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Midi.IMidiOutPortStatics
+    property device_id
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=62
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiOutPortStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.IMidiOutPort> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiOutPortStatics shape=4 reverse=43 static
+            out string return
+    method send_buffer
+        method SendBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=midiData
+    method send_message
+        method SendMessage slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=22
+            in interface type=Windows.Devices.Midi.IMidiMessage name=midiMessage
+
+class Windows.Devices.Midi.MidiPitchBendChangeMessage python_type
+    py MidiPitchBendChangeMessage
+    signature rc(Windows.Devices.Midi.MidiPitchBendChangeMessage;{29df4cb1-2e9f-4faf-8c2b-9cb82a9079ca})
+    default Windows.Devices.Midi.IMidiPitchBendChangeMessage
+    requires Windows.Devices.Midi.IMidiPitchBendChangeMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiPitchBendChangeMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Midi.IMidiPitchBendChangeMessageFactory shape=117 reverse=25
+            in uint8 name=channel
+            in uint16 name=bend
+            out class type=Windows.Devices.Midi.MidiPitchBendChangeMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property bend
+        get get_Bend slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiPitchBendChangeMessage shape=4 reverse=43
+            out uint16 return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiPitchBendChangeMessage shape=4 reverse=22
+            out uint8 return
+
+class Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage python_type
+    py MidiPolyphonicKeyPressureMessage
+    signature rc(Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage;{1f7337fe-ace8-48a0-868e-7cdbf20f04d6})
+    default Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage
+    requires Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessageFactory shape=195 reverse=26
+            in uint8 name=channel
+            in uint8 name=note
+            in uint8 name=pressure
+            out class type=Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage shape=4 reverse=22
+            out uint8 return
+    property note
+        get get_Note slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage shape=4 reverse=43
+            out uint8 return
+    property pressure
+        get get_Pressure slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiPolyphonicKeyPressureMessage shape=4 reverse=62
+            out uint8 return
+
+class Windows.Devices.Midi.MidiProgramChangeMessage python_type
+    py MidiProgramChangeMessage
+    signature rc(Windows.Devices.Midi.MidiProgramChangeMessage;{9cbb3c78-7a3e-4327-aa98-20b8e4485af8})
+    default Windows.Devices.Midi.IMidiProgramChangeMessage
+    requires Windows.Devices.Midi.IMidiProgramChangeMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiProgramChangeMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Midi.IMidiProgramChangeMessageFactory shape=117 reverse=25
+            in uint8 name=channel
+            in uint8 name=program
+            out class type=Windows.Devices.Midi.MidiProgramChangeMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property channel
+        get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiProgramChangeMessage shape=4 reverse=22
+            out uint8 return
+    property program
+        get get_Program slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiProgramChangeMessage shape=4 reverse=43
+            out uint8 return
+
+class Windows.Devices.Midi.MidiSongPositionPointerMessage python_type
+    py MidiSongPositionPointerMessage
+    signature rc(Windows.Devices.Midi.MidiSongPositionPointerMessage;{4ca50c56-ec5e-4ae4-a115-88dc57cc2b79})
+    default Windows.Devices.Midi.IMidiSongPositionPointerMessage
+    requires Windows.Devices.Midi.IMidiSongPositionPointerMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiSongPositionPointerMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiSongPositionPointerMessageFactory shape=51 reverse=24
+            in uint16 name=beats
+            out class type=Windows.Devices.Midi.MidiSongPositionPointerMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property beats
+        get get_Beats slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiSongPositionPointerMessage shape=4 reverse=22
+            out uint16 return
+
+class Windows.Devices.Midi.MidiSongSelectMessage python_type
+    py MidiSongSelectMessage
+    signature rc(Windows.Devices.Midi.MidiSongSelectMessage;{49f0f27f-6d83-4741-a5bf-4629f6be974f})
+    default Windows.Devices.Midi.IMidiSongSelectMessage
+    requires Windows.Devices.Midi.IMidiSongSelectMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiSongSelectMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiSongSelectMessageFactory shape=51 reverse=24
+            in uint8 name=song
+            out class type=Windows.Devices.Midi.MidiSongSelectMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property song
+        get get_Song slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiSongSelectMessage shape=4 reverse=22
+            out uint8 return
+
+class Windows.Devices.Midi.MidiStartMessage activatable python_type
+    py MidiStartMessage
+    signature rc(Windows.Devices.Midi.MidiStartMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiStopMessage activatable python_type
+    py MidiStopMessage
+    signature rc(Windows.Devices.Midi.MidiStopMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiSynthesizer python_type closeable
+    py MidiSynthesizer
+    signature rc(Windows.Devices.Midi.MidiSynthesizer;{f0da155e-db90-405f-b8ae-21d2e17f2e45})
+    default Windows.Devices.Midi.IMidiSynthesizer
+    requires Windows.Devices.Midi.IMidiSynthesizer
+    requires Windows.Devices.Midi.IMidiOutPort
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Midi.IMidiSynthesizerStatics
+    property device_id
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=62
+            out string return
+    property volume
+        get get_Volume slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiSynthesizer shape=4 reverse=43
+            out double return
+        put put_Volume slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiSynthesizer shape=2
+            in double name=value
+    property audio_device
+        get get_AudioDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiSynthesizer shape=4 reverse=22
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_async static
+        method CreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiSynthesizerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.MidiSynthesizer> return
+        method CreateAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiSynthesizerStatics shape=51 reverse=44 static
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=audioDevice
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Midi.MidiSynthesizer> return
+    method is_synthesizer static
+        method IsSynthesizer slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiSynthesizerStatics shape=51 reverse=65 static
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=midiDevice
+            out boolean return
+    method send_buffer
+        method SendBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=midiData
+    method send_message
+        method SendMessage slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Midi.IMidiOutPort shape=4 reverse=22
+            in interface type=Windows.Devices.Midi.IMidiMessage name=midiMessage
+
+class Windows.Devices.Midi.MidiSystemExclusiveMessage python_type
+    py MidiSystemExclusiveMessage
+    signature rc(Windows.Devices.Midi.MidiSystemExclusiveMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiSystemExclusiveMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Midi.IMidiSystemExclusiveMessageFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=rawData
+            out class type=Windows.Devices.Midi.MidiSystemExclusiveMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiSystemResetMessage activatable python_type
+    py MidiSystemResetMessage
+    signature rc(Windows.Devices.Midi.MidiSystemResetMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiTimeCodeMessage python_type
+    py MidiTimeCodeMessage
+    signature rc(Windows.Devices.Midi.MidiTimeCodeMessage;{0bf7087d-fa63-4a1c-8deb-c0e87796a6d7})
+    default Windows.Devices.Midi.IMidiTimeCodeMessage
+    requires Windows.Devices.Midi.IMidiTimeCodeMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    factory Windows.Devices.Midi.IMidiTimeCodeMessageFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Midi.IMidiTimeCodeMessageFactory shape=117 reverse=25
+            in uint8 name=frameType
+            in uint8 name=values
+            out class type=Windows.Devices.Midi.MidiTimeCodeMessage return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+    property frame_type
+        get get_FrameType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiTimeCodeMessage shape=4 reverse=22
+            out uint8 return
+    property values
+        get get_Values slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiTimeCodeMessage shape=4 reverse=43
+            out uint8 return
+
+class Windows.Devices.Midi.MidiTimingClockMessage activatable python_type
+    py MidiTimingClockMessage
+    signature rc(Windows.Devices.Midi.MidiTimingClockMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+class Windows.Devices.Midi.MidiTuneRequestMessage activatable python_type
+    py MidiTuneRequestMessage
+    signature rc(Windows.Devices.Midi.MidiTuneRequestMessage;{79767945-1094-4283-9be0-289fc0ee8334})
+    default Windows.Devices.Midi.IMidiMessage
+    requires Windows.Devices.Midi.IMidiMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property raw_data
+        get get_RawData slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=22
+            out timespan return
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Midi.IMidiMessage shape=4 reverse=62
+            out enum32 type=Windows.Devices.Midi.MidiMessageType return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Midi.MidiInPort,Windows.Devices.Midi.MidiMessageReceivedEventArgs> concrete
+    guid 50017240-cc39-5775-8a6b-f6f22386bfca
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Midi.MidiInPort;{d5c1d9db-971a-4eaf-a23d-ea19fe607ff9});rc(Windows.Devices.Midi.MidiMessageReceivedEventArgs;{76566e56-f328-4b51-907d-b3a8ce96bf80}))
+    argument Windows.Devices.Midi.MidiInPort
+    argument Windows.Devices.Midi.MidiMessageReceivedEventArgs
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
