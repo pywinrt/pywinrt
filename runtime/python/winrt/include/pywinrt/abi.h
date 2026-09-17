@@ -137,6 +137,22 @@ namespace py
     };
 
     /**
+     * Hands @p handler to @p async as its completed handler.
+     *
+     * The implementation queries @p handler for the closed handler type of its
+     * own async interface and calls @c Completed() with it, which is the only
+     * part of a blocking wait that has to name the type arguments. It is a
+     * captureless lambda in the calling module, so what crosses is an ordinary
+     * function pointer.
+     *
+     * @returns an @c HRESULT, because nothing may throw across the boundary.
+     * Called with the GIL released, like the wait that calls it.
+     */
+    using async_set_completed_fn = int32_t (*)(
+        winrt::Windows::Foundation::IInspectable const& async,
+        winrt::Windows::Foundation::IUnknown const& handler) noexcept;
+
+    /**
      * A call that never reached WinRT at all, because of how it was made.
      */
     enum class call_error
@@ -192,6 +208,10 @@ namespace py
     //  - The C++/WinRT types in the signatures below. They are passed by value,
     //    so their size is contract; the asserts pin the ones that are not
     //    obviously so.
+    //  - py::async_set_completed_fn, the callback a blocking wait hands the
+    //    runtime. It is a captureless lambda in the generated code, so what
+    //    crosses is a plain function pointer, but its signature is contract
+    //    like everything else here.
     //
     // What does not cross, although it looks like it might: py::delegate_callable
     // is held inside a module's own delegate implementations and never handed to
@@ -319,7 +339,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 4;
+    const uint16_t runtime_abi_version_minor = 5;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -345,6 +365,11 @@ namespace py
         call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
     int32_t report_unraisable() noexcept;
     void toggle_python_reference(PyObject* obj, bool is_last_reference) noexcept;
+    int32_t async_wait(
+        winrt::Windows::Foundation::IInspectable const& async,
+        uint32_t timeout_ms,
+        winrt::guid const& handler_iid,
+        async_set_completed_fn set_completed) noexcept;
 
     namespace cpp::_winrt
     {
@@ -377,6 +402,7 @@ namespace py
         decltype(set_call_error)* set_call_error;
         decltype(report_unraisable)* report_unraisable;
         decltype(toggle_python_reference)* toggle_python_reference;
+        decltype(async_wait)* async_wait;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -552,6 +578,17 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_ibuffer);
         return (*PyWinRT_API->convert_to_ibuffer)(obj);
+    }
+
+    inline int32_t async_wait(
+        winrt::Windows::Foundation::IInspectable const& async,
+        uint32_t timeout_ms,
+        winrt::guid const& handler_iid,
+        async_set_completed_fn set_completed) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->async_wait);
+        return (*PyWinRT_API->async_wait)(
+            async, timeout_ms, handler_iid, set_completed);
     }
 
     namespace cpp::_winrt

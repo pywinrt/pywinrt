@@ -32,7 +32,7 @@ setup(
     ext_modules=[
         Extension(
             "winrt._winrt",
-            sources=["src/_winrt.cpp", "src/_winrt_array.cpp", "src/_winrt_box.cpp", "src/_winrt_buffer.cpp", "src/compose.cpp", "src/errors.cpp", "src/runtime.cpp"],
+            sources=["src/_winrt.cpp", "src/_winrt_array.cpp", "src/_winrt_box.cpp", "src/_winrt_buffer.cpp", "src/async.cpp", "src/compose.cpp", "src/errors.cpp", "src/runtime.cpp"],
             include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
         )
