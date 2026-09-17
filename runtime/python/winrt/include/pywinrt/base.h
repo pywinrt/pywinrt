@@ -18,6 +18,7 @@
 #include <pywinrt/abi.h>
 #include <pywinrt/errors.h>
 
+#include <pywinrt/async.h>
 #include <pywinrt/convert.h>
 #include <pywinrt/buffer.h>
 #include <pywinrt/array.h>
