@@ -185,6 +185,7 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_box.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_buffer.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/async.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/collections.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/compose.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/errors.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/runtime.cpp"

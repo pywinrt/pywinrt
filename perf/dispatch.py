@@ -70,6 +70,16 @@ for i in range({ITEMS}):
 """
 )
 
+# a Python list and a Python dict for the cases that hand one to WinRT, which
+# wraps rather than copies it and then calls back into Python per element
+PY_COLLECTIONS = (
+    TESTS
+    + f"""
+items = [f"item{{i}}" for i in range({ITEMS})]
+mapping = {{f"key{{i}}": f"value{{i}}" for i in range({ITEMS})}}
+"""
+)
+
 
 class Case(NamedTuple):
     name: str
@@ -110,6 +120,24 @@ CASES = (
     Case("IVector<String> get", 200_000, 1, FULL_VECTOR, "vector[500]"),
     Case("IVector<String> append", 50_000, 1, VECTOR, 'vector.append("item")'),
     Case("IVector<String> iterate", 200, ITEMS, FULL_VECTOR, "for s in vector: pass"),
+    # the other direction: a Python list and a Python dict passed to WinRT,
+    # which wraps each of them and reads it back an element at a time. The
+    # TestComponent method copies what it is given, so these price Size() plus
+    # GetAt() per item and the mapping iterator per entry.
+    Case(
+        "list as IVector<String>",
+        200,
+        ITEMS,
+        PY_COLLECTIONS,
+        "tests.collection5(items)",
+    ),
+    Case(
+        "dict as IMap<String, String>",
+        200,
+        ITEMS,
+        PY_COLLECTIONS,
+        "tests.collection3(mapping)",
+    ),
     # get() on an operation that completed before the timing started, so this
     # is the wait machinery and the result conversion without any waiting
     Case(
