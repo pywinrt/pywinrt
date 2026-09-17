@@ -1,0 +1,43 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Holographic
+
+class Windows.ApplicationModel.Holographic.HolographicKeyboard python_type
+    py HolographicKeyboard
+    signature rc(Windows.ApplicationModel.Holographic.HolographicKeyboard;{07dd0893-aa21-5e6f-a91b-11b2b3fd7be3})
+    default Windows.ApplicationModel.Holographic.IHolographicKeyboard
+    requires Windows.ApplicationModel.Holographic.IHolographicKeyboard
+    factory Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Holographic.HolographicKeyboard return
+    method reset_placement_override
+        method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=0 reverse=55
+    method set_placement_override
+        method SetPlacementOverride slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=132
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=topCenterPosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
+        method SetPlacementOverride slot=7 inputs=4 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=208
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            in struct type=Windows.Foundation.Numerics.Vector3 name=topCenterPosition
+            in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
+            in struct type=Windows.Foundation.Numerics.Vector2 name=maxSize
+
+interface Windows.ApplicationModel.Holographic.IHolographicKeyboard
+    guid 07dd0893-aa21-5e6f-a91b-11b2b3fd7be3
+
+interface Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics
+    guid b676c624-63d7-58cf-b06b-08baa032a23f
+
+struct Windows.Foundation.Numerics.Quaternion external
+    py winrt.windows.foundation.numerics.Quaternion
+
+struct Windows.Foundation.Numerics.Vector2 external
+    py winrt.windows.foundation.numerics.Vector2
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem external
+    py winrt.windows.perception.spatial.SpatialCoordinateSystem

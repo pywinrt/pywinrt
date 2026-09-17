@@ -1,0 +1,281 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Gaming.Preview.GamesEnumeration
+
+class Windows.Gaming.Preview.GamesEnumeration.GameList static python_type
+    py GameList
+    factory Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2
+    factory Windows.Gaming.Preview.GamesEnumeration.IGameListStatics
+    event game_added static
+        add add_GameAdded slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=65 static
+            in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler name=handler
+            out event_token return
+        remove remove_GameAdded slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=110 static
+            in event_token name=token
+    event game_removed static
+        add add_GameRemoved slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=124 static
+            in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler name=handler
+            out event_token return
+        remove remove_GameRemoved slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=156 static
+            in event_token name=token
+    event game_updated static
+        add add_GameUpdated slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=163 static
+            in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler name=handler
+            out event_token return
+        remove remove_GameUpdated slot=13 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=181 static
+            in event_token name=token
+    method find_all_async static
+        method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> return
+        method FindAllAsync slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=44 static
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> return
+    method merge_entries_async static
+        method MergeEntriesAsync slot=6 inputs=2 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2 shape=117 reverse=25 static
+            in class type=Windows.Gaming.Preview.GamesEnumeration.GameListEntry name=left
+            in class type=Windows.Gaming.Preview.GamesEnumeration.GameListEntry name=right
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.Preview.GamesEnumeration.GameListEntry> return
+    method unmerge_entry_async static
+        method UnmergeEntryAsync slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2 shape=51 reverse=44 static
+            in class type=Windows.Gaming.Preview.GamesEnumeration.GameListEntry name=mergedEntry
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> return
+
+enum Windows.Gaming.Preview.GamesEnumeration.GameListCategory python_type
+    py GameListCategory
+    signature enum(Windows.Gaming.Preview.GamesEnumeration.GameListCategory;i4)
+
+delegate Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler python_type
+    py GameListChangedEventHandler
+    guid 25f6a421-d8f5-4d91-b40e-53d5e86fde64
+    signature delegate({25f6a421-d8f5-4d91-b40e-53d5e86fde64})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Gaming.Preview.GamesEnumeration.GameListEntry name=game
+
+class Windows.Gaming.Preview.GamesEnumeration.GameListEntry python_type
+    py GameListEntry
+    signature rc(Windows.Gaming.Preview.GamesEnumeration.GameListEntry;{735924d3-811f-4494-b69c-c641a0c61543})
+    default Windows.Gaming.Preview.GamesEnumeration.IGameListEntry
+    requires Windows.Gaming.Preview.GamesEnumeration.IGameListEntry
+    requires Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2
+    property category
+        get get_Category slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Preview.GamesEnumeration.GameListCategory return
+    property display_info
+        get get_DisplayInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppDisplayInfo return
+    property properties
+        get get_Properties slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property game_mode_configuration
+        get get_GameModeConfiguration slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=4 reverse=173
+            out class type=Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration return
+    property launch_parameters
+        get get_LaunchParameters slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=4 reverse=62
+            out string return
+    property launchable_state
+        get get_LaunchableState slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=4 reverse=22
+            out enum32 type=Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState return
+    property launcher_executable
+        get get_LauncherExecutable slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=4 reverse=43
+            out interface type=Windows.Storage.IStorageFile return
+    property title_id
+        get get_TitleId slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=4 reverse=141
+            out string return
+    method launch_async
+        method LaunchAsync slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_category_async
+        method SetCategoryAsync slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=51 reverse=124
+            in enum32 type=Windows.Gaming.Preview.GamesEnumeration.GameListCategory name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_launcher_executable_file_async
+        method SetLauncherExecutableFileAsync slot=9 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=51 reverse=100
+            in interface type=Windows.Storage.IStorageFile name=executableFile
+            out interface type=Windows.Foundation.IAsyncAction return
+        method SetLauncherExecutableFileAsync slot=10 inputs=2 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=117 reverse=125
+            in interface type=Windows.Storage.IStorageFile name=executableFile
+            in string name=launchParams
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_title_id_async
+        method SetTitleIdAsync slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2 shape=51 reverse=163
+            in string name=id
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState python_type
+    py GameListEntryLaunchableState
+    signature enum(Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState;i4)
+
+delegate Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler python_type
+    py GameListRemovedEventHandler
+    guid 10c5648f-6c8f-4712-9b38-474bc22e76d8
+    signature delegate({10c5648f-6c8f-4712-9b38-474bc22e76d8})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in string name=identifier
+
+class Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration python_type
+    py GameModeConfiguration
+    signature rc(Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration;{78e591af-b142-4ef0-8830-55bc2be4f5ea})
+    default Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration
+    requires Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration
+    property percent_gpu_time_allocated_to_game
+        get get_PercentGpuTimeAllocatedToGame slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_PercentGpuTimeAllocatedToGame slot=10 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=121
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property percent_gpu_memory_allocated_to_system_compositor
+        get get_PercentGpuMemoryAllocatedToSystemCompositor slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=173
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_PercentGpuMemoryAllocatedToSystemCompositor slot=14 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=186
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property percent_gpu_memory_allocated_to_game
+        get get_PercentGpuMemoryAllocatedToGame slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_PercentGpuMemoryAllocatedToGame slot=12 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=162
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property max_cpu_count
+        get get_MaxCpuCount slot=15 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=194
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_MaxCpuCount slot=16 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=202
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=43
+            in boolean name=value
+    property cpu_exclusivity_mask_low
+        get get_CpuExclusivityMaskLow slot=17 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=210
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_CpuExclusivityMaskLow slot=18 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=218
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property cpu_exclusivity_mask_high
+        get get_CpuExclusivityMaskHigh slot=19 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=223
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_CpuExclusivityMaskHigh slot=20 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=228
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
+    property affinitize_to_exclusive_cpus
+        get get_AffinitizeToExclusiveCpus slot=21 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=232
+            out boolean return
+        put put_AffinitizeToExclusiveCpus slot=22 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=237
+            in boolean name=value
+    property related_process_names
+        get get_RelatedProcessNames slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method save_async
+        method SaveAsync slot=23 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration shape=4 reverse=242
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration python_type
+    py GameModeUserConfiguration
+    signature rc(Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration;{72d34af4-756b-470f-a0c2-ba62a90795db})
+    default Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration
+    requires Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration
+    factory Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfigurationStatics
+    property gaming_related_process_names
+        get get_GamingRelatedProcessNames slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfigurationStatics shape=4 reverse=22 static
+            out class type=Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration return
+    method save_async
+        method SaveAsync slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> concrete
+    guid 721a94fb-a733-5e19-8abf-03249c29870e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Preview.GamesEnumeration.GameListEntry;{735924d3-811f-4494-b69c-c641a0c61543})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Gaming.Preview.GamesEnumeration.GameListEntry> concrete
+    guid 37bcb2e2-9c6f-5658-a43b-ed28fe0c8458
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Gaming.Preview.GamesEnumeration.GameListEntry;{735924d3-811f-4494-b69c-c641a0c61543}))
+    argument Windows.Gaming.Preview.GamesEnumeration.GameListEntry
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameListEntry python_type
+    py _IGameListEntry
+    guid 735924d3-811f-4494-b69c-c641a0c61543
+    signature {735924d3-811f-4494-b69c-c641a0c61543}
+    property category
+        get get_Category slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Preview.GamesEnumeration.GameListCategory return
+    property display_info
+        get get_DisplayInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppDisplayInfo return
+    property properties
+        get get_Properties slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method launch_async
+        method LaunchAsync slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_category_async
+        method SetCategoryAsync slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListEntry shape=51 reverse=124
+            in enum32 type=Windows.Gaming.Preview.GamesEnumeration.GameListCategory name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameListEntry2
+    guid d84a8f8b-8749-4a25-90d3-f6c5a427886d
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameListStatics
+    guid 2ddd0f6f-9c66-4b05-945c-d6ed78491b8c
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2
+    guid 395f2098-ea1a-45aa-9268-a83905686f27
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameModeConfiguration
+    guid 78e591af-b142-4ef0-8830-55bc2be4f5ea
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfiguration
+    guid 72d34af4-756b-470f-a0c2-ba62a90795db
+
+interface Windows.Gaming.Preview.GamesEnumeration.IGameModeUserConfigurationStatics
+    guid 6e50d97c-66ea-478e-a4a1-f57c0e8d00e7
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry> concrete
+    guid 0eea1ad9-03e2-5ba9-ae02-daca432f362a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Preview.GamesEnumeration.GameListEntry;{735924d3-811f-4494-b69c-c641a0c61543}))
+    argument Windows.Gaming.Preview.GamesEnumeration.GameListEntry
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.AppDisplayInfo external
+    py winrt.windows.applicationmodel.AppDisplayInfo
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea

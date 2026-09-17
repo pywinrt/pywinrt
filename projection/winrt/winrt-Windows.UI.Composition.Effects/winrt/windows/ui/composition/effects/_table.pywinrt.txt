@@ -1,0 +1,68 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Composition.Effects
+
+interface Windows.UI.Composition.Effects.ISceneLightingEffect
+    guid 91bb5e52-95d1-4f8b-9a5a-6408b24b8c6a
+
+interface Windows.UI.Composition.Effects.ISceneLightingEffect2
+    guid 9e270e81-72f0-4c5c-95f8-8a6e0024f409
+
+class Windows.UI.Composition.Effects.SceneLightingEffect activatable python_type
+    py SceneLightingEffect
+    signature rc(Windows.UI.Composition.Effects.SceneLightingEffect;{91bb5e52-95d1-4f8b-9a5a-6408b24b8c6a})
+    default Windows.UI.Composition.Effects.ISceneLightingEffect
+    requires Windows.UI.Composition.Effects.ISceneLightingEffect
+    requires Windows.UI.Composition.Effects.ISceneLightingEffect2
+    requires Windows.Graphics.Effects.IGraphicsEffect
+    requires Windows.Graphics.Effects.IGraphicsEffectSource
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Effects.IGraphicsEffect shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Effects.IGraphicsEffect shape=4 reverse=43
+            in string name=name
+    property specular_shine
+        get get_SpecularShine slot=14 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=186
+            out single return
+        put put_SpecularShine slot=15 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=1
+            in single name=value
+    property specular_amount
+        get get_SpecularAmount slot=12 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=162
+            out single return
+        put put_SpecularAmount slot=13 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=1 reverse=170
+            in single name=value
+    property normal_map_source
+        get get_NormalMapSource slot=10 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=121
+            out interface type=Windows.Graphics.Effects.IGraphicsEffectSource return
+        put put_NormalMapSource slot=11 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=141
+            in interface type=Windows.Graphics.Effects.IGraphicsEffectSource name=value
+    property diffuse_amount
+        get get_DiffuseAmount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=62
+            out single return
+        put put_DiffuseAmount slot=9 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=1 reverse=94
+            in single name=value
+    property ambient_amount
+        get get_AmbientAmount slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=22
+            out single return
+        put put_AmbientAmount slot=7 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect shape=1
+            in single name=value
+    property reflectance_model
+        get get_ReflectanceModel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect2 shape=4 reverse=22
+            out enum32 type=Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel return
+        put put_ReflectanceModel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Composition.Effects.ISceneLightingEffect2 shape=4 reverse=43
+            in enum32 type=Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel name=value
+
+enum Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel python_type
+    py SceneLightingEffectReflectanceModel
+    signature enum(Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel;i4)
+
+interface Windows.Graphics.Effects.IGraphicsEffect external
+    py winrt.windows.graphics.effects._IGraphicsEffect
+    guid cb51c0ce-8fe6-4636-b202-861faa07d8f3
+
+interface Windows.Graphics.Effects.IGraphicsEffectSource external
+    py winrt.windows.graphics.effects._IGraphicsEffectSource
+    guid 2d8f9ddc-4339-4eb9-9216-f9deb75658a2

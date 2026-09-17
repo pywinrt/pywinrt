@@ -1,0 +1,467 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.XboxLive
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> concrete
+    guid a4b9d41e-4b2c-5bf9-a19d-ed395b23823c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult;{d9a8bb95-2aab-4d1e-9794-33ecc0dcf0fe}))
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete
+    guid 8aacb2da-c37e-5be0-ab46-ba445910b9cb
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01}))
+    argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete
+    guid 8f3109d5-dc6b-58d1-9f70-60cc47bf1ced
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4))
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> concrete
+    guid c88caa17-ae4a-5e4c-8435-d6db6b120464
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4}))
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPair
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> concrete
+    guid 1128b50b-3ac4-543e-9d7e-d796c6226669
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7}))
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> concrete
+    guid fd58662f-d206-5d57-a6ad-a84567187f30
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult;{aeec53d1-3561-4782-b0cf-d3ae29d9fa87}))
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> concrete
+    guid 821b8135-7801-5cb5-baa4-fd74772fb91c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult;{5a6302ae-6f38-41c0-9fcc-ea6cb978cafc}))
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+
+interface Windows.Networking.XboxLive.IXboxLiveDeviceAddress
+    guid f5bbd279-3c86-4b57-a31a-b9462408fd01
+
+interface Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics
+    guid 5954a819-4a79-4931-827c-7f503e963263
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPair
+    guid 1e9a839b-813e-44e0-b87f-c87a093475e4
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult
+    guid d9a8bb95-2aab-4d1e-9794-33ecc0dcf0fe
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs
+    guid 592e3b55-de08-44e7-ac3b-b9b9a169583a
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics
+    guid 64316b30-217a-4243-8ee1-6729281d27db
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate
+    guid 6b286ecf-3457-40ce-b9a1-c0cfe0213ea7
+
+interface Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics
+    guid 1e13137b-737b-4a23-bc64-0870f75655ba
+
+interface Windows.Networking.XboxLive.IXboxLiveInboundEndpointPairCreatedEventArgs
+    guid dc183b62-22ba-48d2-80de-c23968bd198b
+
+interface Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement
+    guid 4d682bce-a5d6-47e6-a236-cfde5fbdf2ed
+
+interface Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics
+    guid 6e352dca-23cf-440a-b077-5e30857a8234
+
+interface Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult
+    guid aeec53d1-3561-4782-b0cf-d3ae29d9fa87
+
+interface Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult
+    guid 5a6302ae-6f38-41c0-9fcc-ea6cb978cafc
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.Object> concrete
+    guid 7fa76199-d1b8-5494-a042-7002a416adc3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01});cinterface(IInspectable))
+    argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPair,Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs> concrete
+    guid 51037260-4609-58c1-adb3-0618b89b9975
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4});rc(Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs;{592e3b55-de08-44e7-ac3b-b9b9a169583a}))
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPair
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate,Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs> concrete
+    guid 2aef5136-6e7a-51f8-8853-cc0ce466fef9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7});rc(Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs;{dc183b62-22ba-48d2-80de-c23968bd198b}))
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
+    argument Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs
+
+class Windows.Networking.XboxLive.XboxLiveDeviceAddress python_type
+    py XboxLiveDeviceAddress
+    signature rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01})
+    default Windows.Networking.XboxLive.IXboxLiveDeviceAddress
+    requires Windows.Networking.XboxLive.IXboxLiveDeviceAddress
+    factory Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics
+    property is_local
+        get get_IsLocal slot=13 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=4 reverse=173
+            out boolean return
+    property is_valid
+        get get_IsValid slot=12 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=4 reverse=162
+            out boolean return
+    property network_access_kind
+        get get_NetworkAccessKind slot=14 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=4 reverse=186
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveNetworkAccessKind return
+    property max_snapshot_bytes_size static
+        get get_MaxSnapshotBytesSize slot=10 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics shape=4 reverse=121 static
+            out uint32 return
+    event snapshot_changed
+        add add_SnapshotChanged slot=6 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.Object> name=handler
+            out event_token return
+        remove remove_SnapshotChanged slot=7 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=26 reverse=53
+            in event_token name=token
+    method compare
+        method Compare slot=11 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=51 reverse=144
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=otherDeviceAddress
+            out int32 return
+    method create_from_snapshot_base64 static
+        method CreateFromSnapshotBase64 slot=6 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics shape=51 reverse=24 static
+            in string name=base64
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method create_from_snapshot_buffer static
+        method CreateFromSnapshotBuffer slot=7 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method create_from_snapshot_bytes static
+        method CreateFromSnapshotBytes slot=8 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics shape=117 reverse=66 static
+            pass_array uint8 name=buffer
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method get_local static
+        method GetLocal slot=9 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddressStatics shape=4 reverse=99 static
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method get_snapshot_as_base64
+        method GetSnapshotAsBase64 slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=4 reverse=62
+            out string return
+    method get_snapshot_as_buffer
+        method GetSnapshotAsBuffer slot=9 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_snapshot_as_bytes
+        method GetSnapshotAsBytes slot=10 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveDeviceAddress shape=117 reverse=125
+            fill_array uint8 name=buffer
+            out uint32 name=bytesWritten
+
+class Windows.Networking.XboxLive.XboxLiveEndpointPair python_type
+    py XboxLiveEndpointPair
+    signature rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4})
+    default Windows.Networking.XboxLive.IXboxLiveEndpointPair
+    requires Windows.Networking.XboxLive.IXboxLiveEndpointPair
+    factory Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics
+    property local_host_name
+        get get_LocalHostName slot=16 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=202
+            out class type=Windows.Networking.HostName return
+    property local_port
+        get get_LocalPort slot=17 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=210
+            out string return
+    property remote_device_address
+        get get_RemoteDeviceAddress slot=13 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=173
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    property remote_host_name
+        get get_RemoteHostName slot=14 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=186
+            out class type=Windows.Networking.HostName return
+    property remote_port
+        get get_RemotePort slot=15 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=194
+            out string return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=141
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairState return
+    property template
+        get get_Template slot=12 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=162
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate return
+    event state_changed
+        add add_StateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPair,Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=26 reverse=53
+            in event_token name=token
+    method delete_async
+        method DeleteAsync slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method find_endpoint_pair_by_host_names_and_ports static
+        method FindEndpointPairByHostNamesAndPorts slot=7 inputs=4 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics shape=239 static
+            in class type=Windows.Networking.HostName name=localHostName
+            in string name=localPort
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remotePort
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+    method find_endpoint_pair_by_socket_address_bytes static
+        method FindEndpointPairBySocketAddressBytes slot=6 inputs=2 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairStatics shape=239 reverse=27 static
+            pass_array uint8 name=localSocketAddress
+            pass_array uint8 name=remoteSocketAddress
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+    method get_local_socket_address_bytes
+        method GetLocalSocketAddressBytes slot=10 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=51 reverse=124
+            fill_array uint8 name=socketAddress
+    method get_remote_socket_address_bytes
+        method GetRemoteSocketAddressBytes slot=9 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=51 reverse=100
+            fill_array uint8 name=socketAddress
+
+enum Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors python_type
+    py XboxLiveEndpointPairCreationBehaviors
+    signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors;u4)
+
+class Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult python_type
+    py XboxLiveEndpointPairCreationResult
+    signature rc(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult;{d9a8bb95-2aab-4d1e-9794-33ecc0dcf0fe})
+    default Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult
+    requires Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult
+    property device_address
+        get get_DeviceAddress slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult shape=4 reverse=22
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    property endpoint_pair
+        get get_EndpointPair slot=9 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult shape=4 reverse=99
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+    property is_existing_path_evaluation
+        get get_IsExistingPathEvaluation slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult shape=4 reverse=62
+            out boolean return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult shape=4 reverse=43
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus return
+
+enum Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus python_type
+    py XboxLiveEndpointPairCreationStatus
+    signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus;i4)
+
+enum Windows.Networking.XboxLive.XboxLiveEndpointPairState python_type
+    py XboxLiveEndpointPairState
+    signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairState;i4)
+
+class Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs python_type
+    py XboxLiveEndpointPairStateChangedEventArgs
+    signature rc(Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs;{592e3b55-de08-44e7-ac3b-b9b9a169583a})
+    default Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs
+    requires Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs
+    property new_state
+        get get_NewState slot=7 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairState return
+    property old_state
+        get get_OldState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairStateChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairState return
+
+class Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate python_type
+    py XboxLiveEndpointPairTemplate
+    signature rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7})
+    default Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate
+    requires Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate
+    factory Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics
+    property acceptor_bound_port_range_lower
+        get get_AcceptorBoundPortRangeLower slot=16 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=202
+            out uint16 return
+    property acceptor_bound_port_range_upper
+        get get_AcceptorBoundPortRangeUpper slot=17 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=210
+            out uint16 return
+    property endpoint_pairs
+        get get_EndpointPairs slot=18 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> return
+    property initiator_bound_port_range_lower
+        get get_InitiatorBoundPortRangeLower slot=14 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=186
+            out uint16 return
+    property initiator_bound_port_range_upper
+        get get_InitiatorBoundPortRangeUpper slot=15 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=194
+            out uint16 return
+    property name
+        get get_Name slot=12 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=162
+            out string return
+    property socket_kind
+        get get_SocketKind slot=13 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=4 reverse=173
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveSocketKind return
+    property templates static
+        get get_Templates slot=7 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> return
+    event inbound_endpoint_pair_created
+        add add_InboundEndpointPairCreated slot=6 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate,Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs> name=handler
+            out event_token return
+        remove remove_InboundEndpointPairCreated slot=7 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=26 reverse=53
+            in event_token name=token
+    method create_endpoint_pair_async
+        method CreateEndpointPairAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=51 reverse=65 default_overload
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> return
+        method CreateEndpointPairAsync slot=9 inputs=2 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=117 reverse=101 default_overload
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            in enum_u32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors name=behaviors
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> return
+    method create_endpoint_pair_for_ports_async
+        method CreateEndpointPairForPortsAsync slot=10 inputs=3 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=195 reverse=126 default_overload
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            in string name=initiatorPort
+            in string name=acceptorPort
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> return
+        method CreateEndpointPairForPortsAsync slot=11 inputs=4 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate shape=239 default_overload
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            in string name=initiatorPort
+            in string name=acceptorPort
+            in enum_u32 type=Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors name=behaviors
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> return
+    method get_template_by_name static
+        method GetTemplateByName slot=6 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplateStatics shape=51 reverse=24 static
+            in string name=name
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate return
+
+class Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs python_type
+    py XboxLiveInboundEndpointPairCreatedEventArgs
+    signature rc(Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs;{dc183b62-22ba-48d2-80de-c23968bd198b})
+    default Windows.Networking.XboxLive.IXboxLiveInboundEndpointPairCreatedEventArgs
+    requires Windows.Networking.XboxLive.IXboxLiveInboundEndpointPairCreatedEventArgs
+    property endpoint_pair
+        get get_EndpointPair slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveInboundEndpointPairCreatedEventArgs shape=4 reverse=22
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+
+enum Windows.Networking.XboxLive.XboxLiveNetworkAccessKind python_type
+    py XboxLiveNetworkAccessKind
+    signature enum(Windows.Networking.XboxLive.XboxLiveNetworkAccessKind;i4)
+
+class Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement activatable python_type
+    py XboxLiveQualityOfServiceMeasurement
+    signature rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement;{4d682bce-a5d6-47e6-a236-cfde5fbdf2ed})
+    default Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement
+    requires Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement
+    factory Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property timeout_in_milliseconds
+        get get_TimeoutInMilliseconds slot=15 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=194
+            out uint32 return
+        put put_TimeoutInMilliseconds slot=16 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=202
+            in uint32 name=value
+    property should_request_private_payloads
+        get get_ShouldRequestPrivatePayloads slot=13 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=173
+            out boolean return
+        put put_ShouldRequestPrivatePayloads slot=14 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=186
+            in boolean name=value
+    property number_of_probes_to_attempt
+        get get_NumberOfProbesToAttempt slot=17 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=210
+            out uint32 return
+        put put_NumberOfProbesToAttempt slot=18 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=218
+            in uint32 name=value
+    property device_addresses
+        get get_DeviceAddresses slot=12 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> return
+    property metric_results
+        get get_MetricResults slot=20 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> return
+    property metrics
+        get get_Metrics slot=11 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> return
+    property number_of_results_pending
+        get get_NumberOfResultsPending slot=19 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=223
+            out uint32 return
+    property private_payload_results
+        get get_PrivatePayloadResults slot=21 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=232
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> return
+    property published_private_payload static
+        get get_PublishedPrivatePayload slot=14 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=186 static
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_PublishedPrivatePayload slot=15 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=194 static
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property max_simultaneous_probe_connections static
+        get get_MaxSimultaneousProbeConnections slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=62 static
+            out uint32 return
+        put put_MaxSimultaneousProbeConnections slot=9 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=99 static
+            in uint32 name=value
+    property is_system_outbound_bandwidth_constrained static
+        get get_IsSystemOutboundBandwidthConstrained slot=10 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=121 static
+            out boolean return
+        put put_IsSystemOutboundBandwidthConstrained slot=11 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=141 static
+            in boolean name=value
+    property is_system_inbound_bandwidth_constrained static
+        get get_IsSystemInboundBandwidthConstrained slot=12 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=162 static
+            out boolean return
+        put put_IsSystemInboundBandwidthConstrained slot=13 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=173 static
+            in boolean name=value
+    property max_private_payload_size static
+        get get_MaxPrivatePayloadSize slot=16 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=4 reverse=202 static
+            out uint32 return
+    method clear_private_payload static
+        method ClearPrivatePayload slot=7 inputs=0 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=0 reverse=37 static
+    method get_metric_result
+        method GetMetricResult slot=9 inputs=2 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=117 reverse=101
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=metric
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult return
+    method get_metric_results_for_device
+        method GetMetricResultsForDevice slot=7 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=51 reverse=44
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> return
+    method get_metric_results_for_metric
+        method GetMetricResultsForMetric slot=8 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=51 reverse=65
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=metric
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> return
+    method get_private_payload_result
+        method GetPrivatePayloadResult slot=10 inputs=1 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=51 reverse=124
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=deviceAddress
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult return
+    method measure_async
+        method MeasureAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurement shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+    method publish_private_payload_bytes static
+        method PublishPrivatePayloadBytes slot=6 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMeasurementStatics shape=51 reverse=24 static
+            pass_array uint8 name=payload
+
+enum Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus python_type
+    py XboxLiveQualityOfServiceMeasurementStatus
+    signature enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus;i4)
+
+enum Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric python_type
+    py XboxLiveQualityOfServiceMetric
+    signature enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4)
+
+class Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult python_type
+    py XboxLiveQualityOfServiceMetricResult
+    signature rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult;{aeec53d1-3561-4782-b0cf-d3ae29d9fa87})
+    default Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult
+    requires Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult
+    property device_address
+        get get_DeviceAddress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult shape=4 reverse=43
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    property metric
+        get get_Metric slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult shape=4 reverse=62
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult shape=4 reverse=22
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServiceMetricResult shape=4 reverse=99
+            out uint64 return
+
+class Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult python_type
+    py XboxLiveQualityOfServicePrivatePayloadResult
+    signature rc(Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult;{5a6302ae-6f38-41c0-9fcc-ea6cb978cafc})
+    default Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult
+    requires Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult
+    property device_address
+        get get_DeviceAddress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult shape=4 reverse=43
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult shape=4 reverse=22
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus return
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadResult shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+enum Windows.Networking.XboxLive.XboxLiveSocketKind python_type
+    py XboxLiveSocketKind
+    signature enum(Windows.Networking.XboxLive.XboxLiveSocketKind;i4)
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

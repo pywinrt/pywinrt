@@ -1,0 +1,139 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.FaceAnalysis
+
+class Windows.Media.FaceAnalysis.DetectedFace python_type
+    py DetectedFace
+    signature rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414})
+    default Windows.Media.FaceAnalysis.IDetectedFace
+    requires Windows.Media.FaceAnalysis.IDetectedFace
+    property face_box
+        get get_FaceBox slot=6 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IDetectedFace shape=4 reverse=22
+            out struct type=Windows.Graphics.Imaging.BitmapBounds return
+
+class Windows.Media.FaceAnalysis.FaceDetector python_type
+    py FaceDetector
+    signature rc(Windows.Media.FaceAnalysis.FaceDetector;{16b672dc-fe6f-3117-8d95-c3f04d51630c})
+    default Windows.Media.FaceAnalysis.IFaceDetector
+    requires Windows.Media.FaceAnalysis.IFaceDetector
+    factory Windows.Media.FaceAnalysis.IFaceDetectorStatics
+    property min_detectable_face_size
+        get get_MinDetectableFaceSize slot=8 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=4 reverse=62
+            out struct type=Windows.Graphics.Imaging.BitmapSize return
+        put put_MinDetectableFaceSize slot=9 inputs=1 outputs=0 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=36
+            in struct type=Windows.Graphics.Imaging.BitmapSize name=value
+    property max_detectable_face_size
+        get get_MaxDetectableFaceSize slot=10 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=4 reverse=121
+            out struct type=Windows.Graphics.Imaging.BitmapSize return
+        put put_MaxDetectableFaceSize slot=11 inputs=1 outputs=0 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=36
+            in struct type=Windows.Graphics.Imaging.BitmapSize name=value
+    property is_supported static
+        get get_IsSupported slot=9 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetectorStatics shape=4 reverse=99 static
+            out boolean return
+    method create_async static
+        method CreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetectorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> return
+    method detect_faces_async
+        method DetectFacesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=51 reverse=24
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=image
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> return
+        method DetectFacesAsync slot=7 inputs=2 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetector shape=140
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=image
+            in struct type=Windows.Graphics.Imaging.BitmapBounds name=searchArea
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> return
+    method get_supported_bitmap_pixel_formats static
+        method GetSupportedBitmapPixelFormats slot=7 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetectorStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> return
+    method is_bitmap_pixel_format_supported static
+        method IsBitmapPixelFormatSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceDetectorStatics shape=51 reverse=65 static
+            in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=bitmapPixelFormat
+            out boolean return
+
+class Windows.Media.FaceAnalysis.FaceTracker python_type
+    py FaceTracker
+    signature rc(Windows.Media.FaceAnalysis.FaceTracker;{6ba67d8c-a841-4420-93e6-2420a1884fcf})
+    default Windows.Media.FaceAnalysis.IFaceTracker
+    requires Windows.Media.FaceAnalysis.IFaceTracker
+    factory Windows.Media.FaceAnalysis.IFaceTrackerStatics
+    property min_detectable_face_size
+        get get_MinDetectableFaceSize slot=7 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTracker shape=4 reverse=43
+            out struct type=Windows.Graphics.Imaging.BitmapSize return
+        put put_MinDetectableFaceSize slot=8 inputs=1 outputs=0 declaring=Windows.Media.FaceAnalysis.IFaceTracker shape=36
+            in struct type=Windows.Graphics.Imaging.BitmapSize name=value
+    property max_detectable_face_size
+        get get_MaxDetectableFaceSize slot=9 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTracker shape=4 reverse=99
+            out struct type=Windows.Graphics.Imaging.BitmapSize return
+        put put_MaxDetectableFaceSize slot=10 inputs=1 outputs=0 declaring=Windows.Media.FaceAnalysis.IFaceTracker shape=36
+            in struct type=Windows.Graphics.Imaging.BitmapSize name=value
+    property is_supported static
+        get get_IsSupported slot=9 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTrackerStatics shape=4 reverse=99 static
+            out boolean return
+    method create_async static
+        method CreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTrackerStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> return
+    method get_supported_bitmap_pixel_formats static
+        method GetSupportedBitmapPixelFormats slot=7 inputs=0 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTrackerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> return
+    method is_bitmap_pixel_format_supported static
+        method IsBitmapPixelFormatSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTrackerStatics shape=51 reverse=65 static
+            in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=bitmapPixelFormat
+            out boolean return
+    method process_next_frame_async
+        method ProcessNextFrameAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.FaceAnalysis.IFaceTracker shape=51 reverse=24
+            in class type=Windows.Media.VideoFrame name=videoFrame
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> concrete
+    guid 37f1d7dc-a1a4-5a94-b33b-74205a65a1ed
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414})))
+    argument Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> concrete
+    guid c0141cd2-7a65-514c-bfc4-b49e991f03eb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.FaceAnalysis.FaceDetector;{16b672dc-fe6f-3117-8d95-c3f04d51630c}))
+    argument Windows.Media.FaceAnalysis.FaceDetector
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> concrete
+    guid 7f32c680-e37e-539a-8993-2abbea71afda
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.FaceAnalysis.FaceTracker;{6ba67d8c-a841-4420-93e6-2420a1884fcf}))
+    argument Windows.Media.FaceAnalysis.FaceTracker
+
+interface Windows.Media.FaceAnalysis.IDetectedFace
+    guid 8200d454-66bc-34df-9410-e89400195414
+
+interface Windows.Media.FaceAnalysis.IFaceDetector
+    guid 16b672dc-fe6f-3117-8d95-c3f04d51630c
+
+interface Windows.Media.FaceAnalysis.IFaceDetectorStatics
+    guid bc042d67-9047-33f6-881b-6746c1b218b8
+
+interface Windows.Media.FaceAnalysis.IFaceTracker
+    guid 6ba67d8c-a841-4420-93e6-2420a1884fcf
+
+interface Windows.Media.FaceAnalysis.IFaceTrackerStatics
+    guid e9629198-1801-3fa5-932e-31d767af6c4d
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> concrete
+    guid 0dfd8e09-73f2-505c-a796-a8f031b4ede0
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414}))
+    argument Windows.Media.FaceAnalysis.DetectedFace
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> concrete
+    guid 76ac4bc2-c19c-559c-b287-1694c0dc3a0d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.Imaging.BitmapPixelFormat;i4))
+    argument Windows.Graphics.Imaging.BitmapPixelFormat
+
+struct Windows.Graphics.Imaging.BitmapBounds external
+    py winrt.windows.graphics.imaging.BitmapBounds
+
+enum Windows.Graphics.Imaging.BitmapPixelFormat external
+    py winrt.windows.graphics.imaging.BitmapPixelFormat
+
+struct Windows.Graphics.Imaging.BitmapSize external
+    py winrt.windows.graphics.imaging.BitmapSize
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+class Windows.Media.VideoFrame external
+    py winrt.windows.media.VideoFrame

@@ -1,0 +1,169 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.ApplicationModel.DynamicDependency
+
+class Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions activatable python_type
+    py AddPackageDependencyOptions
+    signature rc(Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions;{01b801fd-24e3-5e6b-9f1c-805ab410b604})
+    default Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions
+    requires Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property rank
+        get get_Rank slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions shape=4 reverse=22
+            out int32 return
+        put put_Rank slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions shape=4 reverse=43
+            in int32 name=value
+    property prepend_if_rank_collision
+        get get_PrependIfRankCollision slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions shape=4 reverse=62
+            out boolean return
+        put put_PrependIfRankCollision slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions shape=4 reverse=99
+            in boolean name=value
+
+class Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions activatable python_type
+    py CreatePackageDependencyOptions
+    signature rc(Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions;{cdbb820f-3c69-55dc-a017-b4132574c5d6})
+    default Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions
+    requires Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property verify_dependency_resolution
+        get get_VerifyDependencyResolution slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=62
+            out boolean return
+        put put_VerifyDependencyResolution slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=99
+            in boolean name=value
+    property lifetime_artifact_kind
+        get get_LifetimeArtifactKind slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=121
+            out enum32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind return
+        put put_LifetimeArtifactKind slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=141
+            in enum32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind name=value
+    property lifetime_artifact
+        get get_LifetimeArtifact slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=162
+            out string return
+        put put_LifetimeArtifact slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=173
+            in string name=value
+    property architectures
+        get get_Architectures slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=22
+            out enum_u32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures return
+        put put_Architectures slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions shape=4 reverse=43
+            in enum_u32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures name=value
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IAddPackageDependencyOptions
+    guid 01b801fd-24e3-5e6b-9f1c-805ab410b604
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.ICreatePackageDependencyOptions
+    guid cdbb820f-3c69-55dc-a017-b4132574c5d6
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency
+    guid 32ae7b95-e358-5a48-9669-c97d85ad6556
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext
+    guid 9902c35a-a3f5-5645-af0f-cdf9fca00d5e
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContextFactory
+    guid 9914f24f-bebf-516b-adab-5c3e8bf323f8
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyRankStatics
+    guid 260583bd-a4ab-53fd-a190-c446bfdb5384
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics
+    guid 17b656e1-1a58-5f3c-84a8-4430f6e749c2
+
+interface Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics2
+    guid c7c6e4f3-c0ca-5fdb-bef2-57e6020ffe4e
+
+class Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency python_type
+    py PackageDependency
+    signature rc(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency;{32ae7b95-e358-5a48-9669-c97d85ad6556})
+    default Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency
+    requires Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency
+    factory Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics
+    factory Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics2
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency shape=4 reverse=22
+            out string return
+    property generation_id static
+        get get_GenerationId slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=4 reverse=141 static
+            out uint32 return
+    property package_graph_revision_id static
+        get get_PackageGraphRevisionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics2 shape=4 reverse=22 static
+            out uint32 return
+    method add
+        method Add slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency shape=4 reverse=62
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext return
+        method Add slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency shape=51 reverse=100
+            in class type=Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions name=options
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext return
+    method create static
+        method Create slot=8 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=319 static
+            in string name=packageFamilyName
+            in struct type=Windows.ApplicationModel.PackageVersion name=minVersion
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency return
+        method Create slot=9 inputs=3 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=323 static
+            in string name=packageFamilyName
+            in struct type=Windows.ApplicationModel.PackageVersion name=minVersion
+            in class type=Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions name=options
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency return
+    method create_for_system static
+        method CreateForSystem slot=10 inputs=3 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=323 static
+            in string name=packageFamilyName
+            in struct type=Windows.ApplicationModel.PackageVersion name=minVersion
+            in class type=Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions name=options
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency return
+    method delete
+        method Delete slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependency shape=0 reverse=37
+    method get_from_id static
+        method GetFromId slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=51 reverse=24 static
+            in string name=id
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency return
+    method get_from_id_for_system static
+        method GetFromIdForSystem slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyStatics shape=51 reverse=44 static
+            in string name=id
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency return
+
+class Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext python_type
+    py PackageDependencyContext
+    signature rc(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext;{9902c35a-a3f5-5645-af0f-cdf9fca00d5e})
+    default Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext
+    requires Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext
+    factory Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContextFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContextFactory shape=97
+            in struct type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId name=contextId
+            out class type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext return
+    property context_id
+        get get_ContextId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext shape=4 reverse=22
+            out struct type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId return
+    property package_dependency_id
+        get get_PackageDependencyId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext shape=4 reverse=43
+            out string return
+    property package_full_name
+        get get_PackageFullName slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext shape=4 reverse=62
+            out string return
+    method remove
+        method Remove slot=9 inputs=0 outputs=0 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyContext shape=0 reverse=93
+
+struct Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId python_type
+    py PackageDependencyContextId
+    signature struct(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId;u8)
+    field id Id uint64
+
+enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind python_type
+    py PackageDependencyLifetimeArtifactKind
+    signature enum(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind;i4)
+
+enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures python_type
+    py PackageDependencyProcessorArchitectures
+    signature enum(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures;u4)
+
+class Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank static python_type
+    py PackageDependencyRank
+    factory Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyRankStatics
+    property default static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.DynamicDependency.IPackageDependencyRankStatics shape=4 reverse=22 static
+            out int32 return
+
+struct Windows.ApplicationModel.PackageVersion external
+    py winrt.windows.applicationmodel.PackageVersion

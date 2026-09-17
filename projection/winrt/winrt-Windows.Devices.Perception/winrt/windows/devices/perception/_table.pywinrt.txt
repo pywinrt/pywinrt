@@ -1,0 +1,1291 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Perception
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> concrete
+    guid 9647fec8-2c56-5348-86c8-a9c3a97fb944
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> concrete
+    guid 702b0f49-a742-5c3a-abd6-77f9999b8a09
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics;{6548ca01-86de-5be1-6582-807fcf4c95cf}))
+    argument Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> concrete
+    guid f04b9d99-c0d5-5b48-9ae5-9802093cb45e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper;{5b4d9d1d-b5f6-469c-b8c2-b97a45e6863b}))
+    argument Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete
+    guid 4382b038-d4b1-540b-859a-7016626bb99d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> concrete
+    guid 2c2f22a8-f383-5802-ba2c-0cbbcd989c9a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Perception.PerceptionFrameSourceAccessStatus;i4))
+    argument Windows.Devices.Perception.PerceptionFrameSourceAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> concrete
+    guid 4a7bcb69-2b09-55d1-af68-b5aa5c2c6471
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult;{1e33390a-3c90-4d22-b898-f42bba6418ff}))
+    argument Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete
+    guid 55122e42-cc65-5ccd-8f6c-84ced09db24e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> concrete
+    guid 33845b5f-d59e-5271-bb68-f74e9d6a538d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> concrete
+    guid e20a534d-d406-5964-8465-e6dc75c5821d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> concrete
+    guid b11eecaa-6f8c-5040-8d46-c3204c562582
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>
+
+interface Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics
+    guid 08c03978-437a-4d97-a663-fd3195600249
+
+interface Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics
+    guid 5df1cca2-01f8-4a87-b859-d5e5b7e1de4b
+
+interface Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics
+    guid 5df1cca2-01f8-4a87-b859-d5e5b7e1de4a
+
+interface Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics
+    guid 5df1cca2-01f8-4a87-b859-d5e5b7e1de47
+
+interface Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2
+    guid a9c86871-05dc-4a4d-8a5c-a4ecf26bbc46
+
+interface Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics
+    guid 5df1cca2-01f8-4a87-b859-d5e5b7e1de49
+
+interface Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics
+    guid 5df1cca2-01f8-4a87-b859-d5e5b7e1de48
+
+interface Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics
+    guid 8f08e2e7-5a76-43e3-a13a-da3d91a9ef98
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Devices.Perception.IPerceptionColorFrame
+    guid fe621549-2cbf-4f94-9861-f817ea317747
+
+interface Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs
+    guid 8fad02d5-86f7-4d8d-b966-5a3761ba9f59
+
+interface Windows.Devices.Perception.IPerceptionColorFrameReader
+    guid 7650f56e-b9f5-461b-83ad-f222af2aaadc
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSource
+    guid dc6dba7c-0b58-468d-9ca1-6db04cc0477c
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSource2
+    guid f88008e5-5631-45ed-ad98-8c6aa04cfb91
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSourceAddedEventArgs
+    guid d16bf4e6-da24-442c-bbd5-55549b5b94f3
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSourceRemovedEventArgs
+    guid d277fa69-eb4c-42ef-ba4f-288f615c93c1
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSourceStatics
+    guid 5df3cca2-01f8-4a87-b859-d5e5b7e1de49
+
+interface Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher
+    guid 96bd1392-e667-40c4-89f9-1462dea6a9cc
+
+interface Windows.Devices.Perception.IPerceptionControlSession
+    guid 99998653-5a3d-417f-9239-f1889e548b48
+
+interface Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics
+    guid 6548ca01-86de-5be1-6582-807fcf4c95cf
+
+interface Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper
+    guid 5b4d9d1d-b5f6-469c-b8c2-b97a45e6863b
+
+interface Windows.Devices.Perception.IPerceptionDepthFrame
+    guid a37b81fc-9906-4ffd-9161-0024b360b657
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs
+    guid 443d25b2-b282-4637-9173-ac978435c985
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameReader
+    guid b1a3c09f-299b-4612-a4f7-270f25a096ec
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSource
+    guid 79d433d6-47fb-4df1-bfc9-f01d40bd9942
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSource2
+    guid e3d23d2e-6e2c-4e6d-91d9-704cd8dff79d
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSourceAddedEventArgs
+    guid 93a48168-8bf8-45d2-a2f8-4ac0931cc7a6
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSourceRemovedEventArgs
+    guid a0c0cc4d-e96c-4d81-86dd-38b95e49c6df
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics
+    guid 5df3cca2-01f8-4a87-b859-d5e5b7e1de48
+
+interface Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher
+    guid 780e96d1-8d02-4d2b-ada4-5ba624a0eb10
+
+interface Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs
+    guid 6c68e068-bcf1-4ecc-b891-7625d1244b6b
+
+interface Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult
+    guid 1e33390a-3c90-4d22-b898-f42bba6418ff
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrame
+    guid b0886276-849e-4c7a-8ae6-b56064532153
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs
+    guid 9f77fac7-b4bd-4857-9d50-be8ef075daef
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameReader
+    guid 7960ce18-d39b-4fc8-a04a-929734c6756c
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSource
+    guid 55b08742-1808-494e-9e30-9d2a7be8f700
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSource2
+    guid dcd4d798-4b0b-4300-8d85-410817faa032
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSourceAddedEventArgs
+    guid 6d334120-95ce-4660-907a-d98035aa2b7c
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSourceRemovedEventArgs
+    guid ea1a8071-7a70-4a61-af94-07303853f695
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics
+    guid 5df3cca2-01f8-4a87-b859-d5e5b7e1de47
+
+interface Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher
+    guid 383cff99-d70c-444d-a8b0-720c2e66fe3b
+
+interface Windows.Devices.Perception.IPerceptionVideoProfile
+    guid 75763ea3-011a-470e-8225-6f05ade25648
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> concrete
+    guid cbf2f698-31a0-53c7-927b-8e1675f743bc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete
+    guid 574d3642-9f78-5125-851f-8b67e0313e2f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete
+    guid f272ae7a-c5c4-5712-8552-01deb8b70e07
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> concrete
+    guid 8dcb30e8-4ec1-51b7-9997-10f325f03d47
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionVideoProfile;{75763ea3-011a-470e-8225-6f05ade25648}))
+    argument Windows.Devices.Perception.PerceptionVideoProfile
+
+class Windows.Devices.Perception.KnownCameraIntrinsicsProperties static python_type
+    py KnownCameraIntrinsicsProperties
+    factory Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics
+    property focal_length static
+        get get_FocalLength slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+    property principal_point static
+        get get_PrincipalPoint slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property radial_distortion static
+        get get_RadialDistortion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+    property tangential_distortion static
+        get get_TangentialDistortion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics shape=4 reverse=99 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties static python_type
+    py KnownPerceptionColorFrameSourceProperties
+    factory Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics
+    property auto_exposure_enabled static
+        get get_AutoExposureEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property exposure static
+        get get_Exposure slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+    property exposure_compensation static
+        get get_ExposureCompensation slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionColorFrameSourcePropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties static python_type
+    py KnownPerceptionDepthFrameSourceProperties
+    factory Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics
+    property max_depth static
+        get get_MaxDepth slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property min_depth static
+        get get_MinDepth slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionDepthFrameSourcePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionFrameSourceProperties static python_type
+    py KnownPerceptionFrameSourceProperties
+    factory Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2
+    factory Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics
+    property device_model_version static
+        get get_DeviceModelVersion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=99 static deprecated
+            out string return
+    property enclosure_location static
+        get get_EnclosureLocation slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=121 static deprecated
+            out string return
+    property frame_kind static
+        get get_FrameKind slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+    property id static
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+    property physical_device_ids static
+        get get_PhysicalDeviceIds slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property device_id static
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2 shape=4 reverse=22 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties static python_type
+    py KnownPerceptionInfraredFrameSourceProperties
+    factory Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics
+    property active_illumination_enabled static
+        get get_ActiveIlluminationEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=99 static deprecated
+            out string return
+    property ambient_subtraction_enabled static
+        get get_AmbientSubtractionEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=121 static deprecated
+            out string return
+    property auto_exposure_enabled static
+        get get_AutoExposureEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property exposure static
+        get get_Exposure slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+    property exposure_compensation static
+        get get_ExposureCompensation slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+    property interleaved_illumination_enabled static
+        get get_InterleavedIlluminationEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=162 static deprecated
+            out string return
+    property structure_light_pattern_enabled static
+        get get_StructureLightPatternEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionInfraredFrameSourcePropertiesStatics shape=4 reverse=141 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties static python_type
+    py KnownPerceptionVideoFrameSourceProperties
+    factory Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics
+    property available_video_profiles static
+        get get_AvailableVideoProfiles slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+    property camera_intrinsics static
+        get get_CameraIntrinsics slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics shape=4 reverse=121 static deprecated
+            out string return
+    property is_mirrored static
+        get get_IsMirrored slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics shape=4 reverse=99 static deprecated
+            out string return
+    property supported_video_profiles static
+        get get_SupportedVideoProfiles slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property video_profile static
+        get get_VideoProfile slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+
+class Windows.Devices.Perception.KnownPerceptionVideoProfileProperties static python_type
+    py KnownPerceptionVideoProfileProperties
+    factory Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics
+    property bitmap_alpha_mode static
+        get get_BitmapAlphaMode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics shape=4 reverse=43 static deprecated
+            out string return
+    property bitmap_pixel_format static
+        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics shape=4 reverse=22 static deprecated
+            out string return
+    property frame_duration static
+        get get_FrameDuration slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics shape=4 reverse=121 static deprecated
+            out string return
+    property height static
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics shape=4 reverse=99 static deprecated
+            out string return
+    property width static
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics shape=4 reverse=62 static deprecated
+            out string return
+
+class Windows.Devices.Perception.PerceptionColorFrame python_type closeable
+    py PerceptionColorFrame
+    signature rc(Windows.Devices.Perception.PerceptionColorFrame;{fe621549-2cbf-4f94-9861-f817ea317747})
+    default Windows.Devices.Perception.IPerceptionColorFrame
+    requires Windows.Devices.Perception.IPerceptionColorFrame
+    requires Windows.Foundation.IClosable
+    property video_frame
+        get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrame shape=4 reverse=22 deprecated
+            out class type=Windows.Media.VideoFrame return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs python_type
+    py PerceptionColorFrameArrivedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs;{8fad02d5-86f7-4d8d-b966-5a3761ba9f59})
+    default Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs
+    requires Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs
+    property relative_time
+        get get_RelativeTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs shape=4 reverse=22 deprecated
+            out timespan return
+    method try_open_frame deprecated
+        method TryOpenFrame slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameArrivedEventArgs shape=4 reverse=43 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrame return
+
+class Windows.Devices.Perception.PerceptionColorFrameReader python_type closeable
+    py PerceptionColorFrameReader
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameReader;{7650f56e-b9f5-461b-83ad-f222af2aaadc})
+    default Windows.Devices.Perception.IPerceptionColorFrameReader
+    requires Windows.Devices.Perception.IPerceptionColorFrameReader
+    requires Windows.Foundation.IClosable
+    property is_paused
+        get get_IsPaused slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=4 reverse=99 deprecated
+            out boolean return
+        put put_IsPaused slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=4 reverse=121 deprecated
+            in boolean name=value
+    property source
+        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=4 reverse=62 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
+    event frame_arrived
+        add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameReader,Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=26 reverse=53 deprecated
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method try_read_latest_frame deprecated
+        method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=4 reverse=141 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrame return
+
+class Windows.Devices.Perception.PerceptionColorFrameSource python_type
+    py PerceptionColorFrameSource
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c})
+    default Windows.Devices.Perception.IPerceptionColorFrameSource
+    requires Windows.Devices.Perception.IPerceptionColorFrameSource
+    requires Windows.Devices.Perception.IPerceptionColorFrameSource2
+    factory Windows.Devices.Perception.IPerceptionColorFrameSourceStatics
+    property active
+        get get_Active slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=228 deprecated
+            out boolean return
+    property available
+        get get_Available slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=223 deprecated
+            out boolean return
+    property available_video_profiles
+        get get_AvailableVideoProfiles slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=247 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property camera_intrinsics
+        get get_CameraIntrinsics slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=255 deprecated
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+    property device_kind
+        get get_DeviceKind slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=218 deprecated
+            out string return
+    property display_name
+        get get_DisplayName slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=210 deprecated
+            out string return
+    property id
+        get get_Id slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=202 deprecated
+            out string return
+    property is_controlled
+        get get_IsControlled slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=232 deprecated
+            out boolean return
+    property properties
+        get get_Properties slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=237 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property supported_video_profiles
+        get get_SupportedVideoProfiles slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=242 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property video_profile
+        get get_VideoProfile slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=252 deprecated
+            out class type=Windows.Devices.Perception.PerceptionVideoProfile return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource2 shape=4 reverse=22 deprecated
+            out string return
+    event active_changed
+        add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=110 deprecated
+            in event_token name=token
+    event available_changed
+        add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=53 deprecated
+            in event_token name=token
+    event camera_intrinsics_changed
+        add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=187 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=200 deprecated
+            in event_token name=token
+    event properties_changed
+        add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=156 deprecated
+            in event_token name=token
+    event video_profile_changed
+        add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=181 deprecated
+            in event_token name=token
+    method acquire_control_session deprecated
+        method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=259 deprecated
+            out class type=Windows.Devices.Perception.PerceptionControlSession return
+    method can_control_independently_from deprecated
+        method CanControlIndependentlyFrom slot=28 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=264 deprecated
+            in string name=targetId
+            out boolean return
+    method create_watcher static deprecated
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSourceWatcher return
+    method find_all_async static deprecated
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceStatics shape=4 reverse=43 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> return
+    method from_id_async static deprecated
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceStatics shape=51 reverse=65 static deprecated
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> return
+    method is_correlated_with deprecated
+        method IsCorrelatedWith slot=29 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=267 deprecated
+            in string name=targetId
+            out boolean return
+    method open_reader deprecated
+        method OpenReader slot=34 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=288 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrameReader return
+    method request_access_async static deprecated
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceStatics shape=4 reverse=99 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> return
+    method try_get_depth_correlated_camera_intrinsics_async deprecated
+        method TryGetDepthCorrelatedCameraIntrinsicsAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=274 deprecated
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=correlatedDepthFrameSource
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> return
+    method try_get_depth_correlated_coordinate_mapper_async deprecated
+        method TryGetDepthCorrelatedCoordinateMapperAsync slot=32 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=117 reverse=282 deprecated
+            in string name=targetSourceId
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=correlatedDepthFrameSource
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> return
+    method try_get_transform_to deprecated
+        method TryGetTransformTo slot=30 inputs=1 outputs=2 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=117 deprecated
+            in string name=targetId
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 name=result
+            out boolean return
+    method try_set_video_profile_async deprecated
+        method TrySetVideoProfileAsync slot=33 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=117 deprecated
+            in class type=Windows.Devices.Perception.PerceptionControlSession name=controlSession
+            in class type=Windows.Devices.Perception.PerceptionVideoProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> return
+
+class Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs python_type
+    py PerceptionColorFrameSourceAddedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs;{d16bf4e6-da24-442c-bbd5-55549b5b94f3})
+    default Windows.Devices.Perception.IPerceptionColorFrameSourceAddedEventArgs
+    requires Windows.Devices.Perception.IPerceptionColorFrameSourceAddedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceAddedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
+
+class Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs python_type
+    py PerceptionColorFrameSourceRemovedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs;{d277fa69-eb4c-42ef-ba4f-288f615c93c1})
+    default Windows.Devices.Perception.IPerceptionColorFrameSourceRemovedEventArgs
+    requires Windows.Devices.Perception.IPerceptionColorFrameSourceRemovedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceRemovedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
+
+class Windows.Devices.Perception.PerceptionColorFrameSourceWatcher python_type
+    py PerceptionColorFrameSourceWatcher
+    signature rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc})
+    default Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher
+    requires Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=4 reverse=186 deprecated
+            out enum32 type=Windows.Devices.Enumeration.DeviceWatcherStatus return
+    event enumeration_completed
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=181 deprecated
+            in event_token name=token
+    event source_added
+        add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=53 deprecated
+            in event_token name=token
+    event source_removed
+        add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=110 deprecated
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=156 deprecated
+            in event_token name=token
+    method start deprecated
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=0 reverse=193 deprecated
+    method stop deprecated
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=0 reverse=201 deprecated
+
+class Windows.Devices.Perception.PerceptionControlSession python_type closeable
+    py PerceptionControlSession
+    signature rc(Windows.Devices.Perception.PerceptionControlSession;{99998653-5a3d-417f-9239-f1889e548b48})
+    default Windows.Devices.Perception.IPerceptionControlSession
+    requires Windows.Devices.Perception.IPerceptionControlSession
+    requires Windows.Foundation.IClosable
+    event control_lost
+        add add_ControlLost slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionControlSession,System.Object> name=handler
+            out event_token return
+        remove remove_ControlLost slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=26 reverse=53 deprecated
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method try_set_property_async deprecated
+        method TrySetPropertyAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=117 reverse=66 deprecated
+            in string name=name
+            in object name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> return
+
+class Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics python_type
+    py PerceptionDepthCorrelatedCameraIntrinsics
+    signature rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics;{6548ca01-86de-5be1-6582-807fcf4c95cf})
+    default Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics
+    requires Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics
+    method unproject_all_pixels_at_correlated_depth_async deprecated
+        method UnprojectAllPixelsAtCorrelatedDepthAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics shape=195 reverse=102 deprecated
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Numerics.Vector3 name=results
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unproject_pixel_at_correlated_depth deprecated
+        method UnprojectPixelAtCorrelatedDepth slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics shape=151 reverse=32 deprecated
+            in struct type=Windows.Foundation.Point name=pixelCoordinate
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    method unproject_pixels_at_correlated_depth deprecated
+        method UnprojectPixelsAtCorrelatedDepth slot=7 inputs=3 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics shape=239 deprecated
+            pass_array struct type=Windows.Foundation.Point name=sourceCoordinates
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Numerics.Vector3 name=results
+    method unproject_region_pixels_at_correlated_depth_async deprecated
+        method UnprojectRegionPixelsAtCorrelatedDepthAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCameraIntrinsics shape=256 deprecated
+            in struct type=Windows.Foundation.Rect name=region
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Numerics.Vector3 name=results
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper python_type
+    py PerceptionDepthCorrelatedCoordinateMapper
+    signature rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper;{5b4d9d1d-b5f6-469c-b8c2-b97a45e6863b})
+    default Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper
+    requires Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper
+    method map_all_pixels_to_target_async deprecated
+        method MapAllPixelsToTargetAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper shape=195 reverse=102 deprecated
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Point name=targetCoordinates
+            out interface type=Windows.Foundation.IAsyncAction return
+    method map_pixel_to_target deprecated
+        method MapPixelToTarget slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper shape=151 reverse=32 deprecated
+            in struct type=Windows.Foundation.Point name=sourcePixelCoordinate
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            out struct type=Windows.Foundation.Point return
+    method map_pixels_to_target deprecated
+        method MapPixelsToTarget slot=7 inputs=3 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper shape=239 deprecated
+            pass_array struct type=Windows.Foundation.Point name=sourceCoordinates
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Point name=results
+    method map_region_of_pixels_to_target_async deprecated
+        method MapRegionOfPixelsToTargetAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthCorrelatedCoordinateMapper shape=256 deprecated
+            in struct type=Windows.Foundation.Rect name=region
+            in class type=Windows.Devices.Perception.PerceptionDepthFrame name=depthFrame
+            fill_array struct type=Windows.Foundation.Point name=targetCoordinates
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Perception.PerceptionDepthFrame python_type closeable
+    py PerceptionDepthFrame
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrame;{a37b81fc-9906-4ffd-9161-0024b360b657})
+    default Windows.Devices.Perception.IPerceptionDepthFrame
+    requires Windows.Devices.Perception.IPerceptionDepthFrame
+    requires Windows.Foundation.IClosable
+    property video_frame
+        get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrame shape=4 reverse=22 deprecated
+            out class type=Windows.Media.VideoFrame return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs python_type
+    py PerceptionDepthFrameArrivedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs;{443d25b2-b282-4637-9173-ac978435c985})
+    default Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs
+    requires Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs
+    property relative_time
+        get get_RelativeTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs shape=4 reverse=22 deprecated
+            out timespan return
+    method try_open_frame deprecated
+        method TryOpenFrame slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameArrivedEventArgs shape=4 reverse=43 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrame return
+
+class Windows.Devices.Perception.PerceptionDepthFrameReader python_type closeable
+    py PerceptionDepthFrameReader
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameReader;{b1a3c09f-299b-4612-a4f7-270f25a096ec})
+    default Windows.Devices.Perception.IPerceptionDepthFrameReader
+    requires Windows.Devices.Perception.IPerceptionDepthFrameReader
+    requires Windows.Foundation.IClosable
+    property is_paused
+        get get_IsPaused slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=4 reverse=99 deprecated
+            out boolean return
+        put put_IsPaused slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=4 reverse=121 deprecated
+            in boolean name=value
+    property source
+        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=4 reverse=62 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
+    event frame_arrived
+        add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameReader,Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=26 reverse=53 deprecated
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method try_read_latest_frame deprecated
+        method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=4 reverse=141 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrame return
+
+class Windows.Devices.Perception.PerceptionDepthFrameSource python_type
+    py PerceptionDepthFrameSource
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942})
+    default Windows.Devices.Perception.IPerceptionDepthFrameSource
+    requires Windows.Devices.Perception.IPerceptionDepthFrameSource
+    requires Windows.Devices.Perception.IPerceptionDepthFrameSource2
+    factory Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics
+    property active
+        get get_Active slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=228 deprecated
+            out boolean return
+    property available
+        get get_Available slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=223 deprecated
+            out boolean return
+    property available_video_profiles
+        get get_AvailableVideoProfiles slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=247 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property camera_intrinsics
+        get get_CameraIntrinsics slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=255 deprecated
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+    property device_kind
+        get get_DeviceKind slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=218 deprecated
+            out string return
+    property display_name
+        get get_DisplayName slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=210 deprecated
+            out string return
+    property id
+        get get_Id slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=202 deprecated
+            out string return
+    property is_controlled
+        get get_IsControlled slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=232 deprecated
+            out boolean return
+    property properties
+        get get_Properties slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=237 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property supported_video_profiles
+        get get_SupportedVideoProfiles slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=242 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property video_profile
+        get get_VideoProfile slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=252 deprecated
+            out class type=Windows.Devices.Perception.PerceptionVideoProfile return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource2 shape=4 reverse=22 deprecated
+            out string return
+    event active_changed
+        add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=110 deprecated
+            in event_token name=token
+    event available_changed
+        add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=53 deprecated
+            in event_token name=token
+    event camera_intrinsics_changed
+        add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=187 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=200 deprecated
+            in event_token name=token
+    event properties_changed
+        add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=156 deprecated
+            in event_token name=token
+    event video_profile_changed
+        add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=181 deprecated
+            in event_token name=token
+    method acquire_control_session deprecated
+        method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=259 deprecated
+            out class type=Windows.Devices.Perception.PerceptionControlSession return
+    method can_control_independently_from deprecated
+        method CanControlIndependentlyFrom slot=28 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=264 deprecated
+            in string name=targetId
+            out boolean return
+    method create_watcher static deprecated
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher return
+    method find_all_async static deprecated
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics shape=4 reverse=43 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> return
+    method from_id_async static deprecated
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics shape=51 reverse=65 static deprecated
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> return
+    method is_correlated_with deprecated
+        method IsCorrelatedWith slot=29 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=267 deprecated
+            in string name=targetId
+            out boolean return
+    method open_reader deprecated
+        method OpenReader slot=34 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=288 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameReader return
+    method request_access_async static deprecated
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceStatics shape=4 reverse=99 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> return
+    method try_get_depth_correlated_camera_intrinsics_async deprecated
+        method TryGetDepthCorrelatedCameraIntrinsicsAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=274 deprecated
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=target
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> return
+    method try_get_depth_correlated_coordinate_mapper_async deprecated
+        method TryGetDepthCorrelatedCoordinateMapperAsync slot=32 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=117 reverse=282 deprecated
+            in string name=targetId
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=depthFrameSourceToMapWith
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> return
+    method try_get_transform_to deprecated
+        method TryGetTransformTo slot=30 inputs=1 outputs=2 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=117 deprecated
+            in string name=targetId
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 name=result
+            out boolean return
+    method try_set_video_profile_async deprecated
+        method TrySetVideoProfileAsync slot=33 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=117 deprecated
+            in class type=Windows.Devices.Perception.PerceptionControlSession name=controlSession
+            in class type=Windows.Devices.Perception.PerceptionVideoProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> return
+
+class Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs python_type
+    py PerceptionDepthFrameSourceAddedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs;{93a48168-8bf8-45d2-a2f8-4ac0931cc7a6})
+    default Windows.Devices.Perception.IPerceptionDepthFrameSourceAddedEventArgs
+    requires Windows.Devices.Perception.IPerceptionDepthFrameSourceAddedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceAddedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
+
+class Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs python_type
+    py PerceptionDepthFrameSourceRemovedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs;{a0c0cc4d-e96c-4d81-86dd-38b95e49c6df})
+    default Windows.Devices.Perception.IPerceptionDepthFrameSourceRemovedEventArgs
+    requires Windows.Devices.Perception.IPerceptionDepthFrameSourceRemovedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceRemovedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
+
+class Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher python_type
+    py PerceptionDepthFrameSourceWatcher
+    signature rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10})
+    default Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher
+    requires Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=4 reverse=186 deprecated
+            out enum32 type=Windows.Devices.Enumeration.DeviceWatcherStatus return
+    event enumeration_completed
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=181 deprecated
+            in event_token name=token
+    event source_added
+        add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=53 deprecated
+            in event_token name=token
+    event source_removed
+        add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=110 deprecated
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=156 deprecated
+            in event_token name=token
+    method start deprecated
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=0 reverse=193 deprecated
+    method stop deprecated
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=0 reverse=201 deprecated
+
+enum Windows.Devices.Perception.PerceptionFrameSourceAccessStatus python_type
+    py PerceptionFrameSourceAccessStatus
+    signature enum(Windows.Devices.Perception.PerceptionFrameSourceAccessStatus;i4)
+
+class Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs python_type
+    py PerceptionFrameSourcePropertiesChangedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b})
+    default Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs
+    requires Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs
+    property collection_change
+        get get_CollectionChange slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Foundation.Collections.CollectionChange return
+    property key
+        get get_Key slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionFrameSourcePropertiesChangedEventArgs shape=4 reverse=43 deprecated
+            out string return
+
+class Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult python_type
+    py PerceptionFrameSourcePropertyChangeResult
+    signature rc(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult;{1e33390a-3c90-4d22-b898-f42bba6418ff})
+    default Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult
+    requires Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult
+    property new_value
+        get get_NewValue slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult shape=4 reverse=43 deprecated
+            out object return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionFrameSourcePropertyChangeResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus return
+
+enum Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus python_type
+    py PerceptionFrameSourcePropertyChangeStatus
+    signature enum(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus;i4)
+
+class Windows.Devices.Perception.PerceptionInfraredFrame python_type closeable
+    py PerceptionInfraredFrame
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrame;{b0886276-849e-4c7a-8ae6-b56064532153})
+    default Windows.Devices.Perception.IPerceptionInfraredFrame
+    requires Windows.Devices.Perception.IPerceptionInfraredFrame
+    requires Windows.Foundation.IClosable
+    property video_frame
+        get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrame shape=4 reverse=22 deprecated
+            out class type=Windows.Media.VideoFrame return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs python_type
+    py PerceptionInfraredFrameArrivedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs;{9f77fac7-b4bd-4857-9d50-be8ef075daef})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs
+    property relative_time
+        get get_RelativeTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs shape=4 reverse=22 deprecated
+            out timespan return
+    method try_open_frame deprecated
+        method TryOpenFrame slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameArrivedEventArgs shape=4 reverse=43 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrame return
+
+class Windows.Devices.Perception.PerceptionInfraredFrameReader python_type closeable
+    py PerceptionInfraredFrameReader
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameReader;{7960ce18-d39b-4fc8-a04a-929734c6756c})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameReader
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameReader
+    requires Windows.Foundation.IClosable
+    property is_paused
+        get get_IsPaused slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=4 reverse=99 deprecated
+            out boolean return
+        put put_IsPaused slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=4 reverse=121 deprecated
+            in boolean name=value
+    property source
+        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=4 reverse=62 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
+    event frame_arrived
+        add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameReader,Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=26 reverse=53 deprecated
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method try_read_latest_frame deprecated
+        method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=4 reverse=141 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrame return
+
+class Windows.Devices.Perception.PerceptionInfraredFrameSource python_type
+    py PerceptionInfraredFrameSource
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameSource
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameSource
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameSource2
+    factory Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics
+    property active
+        get get_Active slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=228 deprecated
+            out boolean return
+    property available
+        get get_Available slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=223 deprecated
+            out boolean return
+    property available_video_profiles
+        get get_AvailableVideoProfiles slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=247 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property camera_intrinsics
+        get get_CameraIntrinsics slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=255 deprecated
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+    property device_kind
+        get get_DeviceKind slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=218 deprecated
+            out string return
+    property display_name
+        get get_DisplayName slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=210 deprecated
+            out string return
+    property id
+        get get_Id slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=202 deprecated
+            out string return
+    property is_controlled
+        get get_IsControlled slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=232 deprecated
+            out boolean return
+    property properties
+        get get_Properties slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=237 deprecated
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property supported_video_profiles
+        get get_SupportedVideoProfiles slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=242 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> return
+    property video_profile
+        get get_VideoProfile slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=252 deprecated
+            out class type=Windows.Devices.Perception.PerceptionVideoProfile return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource2 shape=4 reverse=22 deprecated
+            out string return
+    event active_changed
+        add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=110 deprecated
+            in event_token name=token
+    event available_changed
+        add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=53 deprecated
+            in event_token name=token
+    event camera_intrinsics_changed
+        add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=187 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=200 deprecated
+            in event_token name=token
+    event properties_changed
+        add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=156 deprecated
+            in event_token name=token
+    event video_profile_changed
+        add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=181 deprecated
+            in event_token name=token
+    method acquire_control_session deprecated
+        method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=259 deprecated
+            out class type=Windows.Devices.Perception.PerceptionControlSession return
+    method can_control_independently_from deprecated
+        method CanControlIndependentlyFrom slot=28 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=264 deprecated
+            in string name=targetId
+            out boolean return
+    method create_watcher static deprecated
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher return
+    method find_all_async static deprecated
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics shape=4 reverse=43 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> return
+    method from_id_async static deprecated
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics shape=51 reverse=65 static deprecated
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> return
+    method is_correlated_with deprecated
+        method IsCorrelatedWith slot=29 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=267 deprecated
+            in string name=targetId
+            out boolean return
+    method open_reader deprecated
+        method OpenReader slot=34 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=288 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameReader return
+    method request_access_async static deprecated
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceStatics shape=4 reverse=99 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> return
+    method try_get_depth_correlated_camera_intrinsics_async deprecated
+        method TryGetDepthCorrelatedCameraIntrinsicsAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=274 deprecated
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=target
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> return
+    method try_get_depth_correlated_coordinate_mapper_async deprecated
+        method TryGetDepthCorrelatedCoordinateMapperAsync slot=32 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=117 reverse=282 deprecated
+            in string name=targetId
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=depthFrameSourceToMapWith
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> return
+    method try_get_transform_to deprecated
+        method TryGetTransformTo slot=30 inputs=1 outputs=2 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=117 deprecated
+            in string name=targetId
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 name=result
+            out boolean return
+    method try_set_video_profile_async deprecated
+        method TrySetVideoProfileAsync slot=33 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=117 deprecated
+            in class type=Windows.Devices.Perception.PerceptionControlSession name=controlSession
+            in class type=Windows.Devices.Perception.PerceptionVideoProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> return
+
+class Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs python_type
+    py PerceptionInfraredFrameSourceAddedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs;{6d334120-95ce-4660-907a-d98035aa2b7c})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameSourceAddedEventArgs
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameSourceAddedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceAddedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
+
+class Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs python_type
+    py PerceptionInfraredFrameSourceRemovedEventArgs
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs;{ea1a8071-7a70-4a61-af94-07303853f695})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameSourceRemovedEventArgs
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameSourceRemovedEventArgs
+    property frame_source
+        get get_FrameSource slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceRemovedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
+
+class Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher python_type
+    py PerceptionInfraredFrameSourceWatcher
+    signature rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b})
+    default Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher
+    requires Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=4 reverse=186 deprecated
+            out enum32 type=Windows.Devices.Enumeration.DeviceWatcherStatus return
+    event enumeration_completed
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=163 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=181 deprecated
+            in event_token name=token
+    event source_added
+        add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=53 deprecated
+            in event_token name=token
+    event source_removed
+        add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=65 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=110 deprecated
+            in event_token name=token
+    event stopped
+        add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=124 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> name=handler
+            out event_token return
+        remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=156 deprecated
+            in event_token name=token
+    method start deprecated
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=0 reverse=193 deprecated
+    method stop deprecated
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=0 reverse=201 deprecated
+
+class Windows.Devices.Perception.PerceptionVideoProfile python_type
+    py PerceptionVideoProfile
+    signature rc(Windows.Devices.Perception.PerceptionVideoProfile;{75763ea3-011a-470e-8225-6f05ade25648})
+    default Windows.Devices.Perception.IPerceptionVideoProfile
+    requires Windows.Devices.Perception.IPerceptionVideoProfile
+    property bitmap_alpha_mode
+        get get_BitmapAlphaMode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=4 reverse=43 deprecated
+            out enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode return
+    property bitmap_pixel_format
+        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
+    property frame_duration
+        get get_FrameDuration slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=4 reverse=121 deprecated
+            out timespan return
+    property height
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=4 reverse=99 deprecated
+            out int32 return
+    property width
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=4 reverse=62 deprecated
+            out int32 return
+    method is_equal deprecated
+        method IsEqual slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionVideoProfile shape=51 reverse=144 deprecated
+            in class type=Windows.Devices.Perception.PerceptionVideoProfile name=other
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameReader,Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs> concrete
+    guid a4a50ea5-778d-5056-a1cf-546a1be2c010
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameReader;{7650f56e-b9f5-461b-83ad-f222af2aaadc});rc(Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs;{8fad02d5-86f7-4d8d-b966-5a3761ba9f59}))
+    argument Windows.Devices.Perception.PerceptionColorFrameReader
+    argument Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> concrete
+    guid 023444d9-7b47-5497-9569-4399faf96717
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    guid b2c3a488-7ed9-5110-804a-9792ef7f26be
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+    argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> concrete
+    guid b3f5bf64-7fc0-5d8c-978c-a38d5b18a51d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs> concrete
+    guid 7202e817-22b8-5e7b-86b5-c4a90ccc23aa
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});rc(Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs;{d16bf4e6-da24-442c-bbd5-55549b5b94f3}))
+    argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs> concrete
+    guid c7131ddd-ff22-5fb7-ada0-961e3b28917b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});rc(Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs;{d277fa69-eb4c-42ef-ba4f-288f615c93c1}))
+    argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionControlSession,System.Object> concrete
+    guid abc21152-2495-5e8c-aed3-7dc55309ac08
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionControlSession;{99998653-5a3d-417f-9239-f1889e548b48});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionControlSession
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameReader,Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs> concrete
+    guid 4d529b7e-eea0-511b-8285-47e8c85d0295
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameReader;{b1a3c09f-299b-4612-a4f7-270f25a096ec});rc(Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs;{443d25b2-b282-4637-9173-ac978435c985}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameReader
+    argument Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> concrete
+    guid 135ba76a-ab44-5f69-b208-e732cce9403b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    guid 188fdef2-d829-548b-a89d-38a34c5cb641
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> concrete
+    guid c5efa976-d948-50c7-8555-664190f9a968
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs> concrete
+    guid a3c1e25f-3574-5a27-a791-16e1bcc424f4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});rc(Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs;{93a48168-8bf8-45d2-a2f8-4ac0931cc7a6}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs> concrete
+    guid 5cf5faf7-0785-5589-a621-089d900412c8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});rc(Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs;{a0c0cc4d-e96c-4d81-86dd-38b95e49c6df}))
+    argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameReader,Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs> concrete
+    guid 687fef67-8871-56fe-8e7e-1d2929cc6f42
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameReader;{7960ce18-d39b-4fc8-a04a-929734c6756c});rc(Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs;{9f77fac7-b4bd-4857-9d50-be8ef075daef}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameReader
+    argument Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> concrete
+    guid 31edabbd-d123-5e88-89d8-c80ee8f0f2ca
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    guid b6c1b828-a157-54ed-9c18-6919b9f91be9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> concrete
+    guid 1555a628-3dff-5fd0-b10a-ca6adb2440c6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});cinterface(IInspectable))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs> concrete
+    guid a8180cd1-c25b-5c7f-94dd-198423bb56d5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs;{6d334120-95ce-4660-907a-d98035aa2b7c}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs> concrete
+    guid 2ca3a9b7-3348-5953-8d0d-ef8d78640b23
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs;{ea1a8071-7a70-4a61-af94-07303853f695}))
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+enum Windows.Devices.Enumeration.DeviceWatcherStatus external
+    py winrt.windows.devices.enumeration.DeviceWatcherStatus
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+enum Windows.Foundation.Collections.CollectionChange external
+    py winrt.windows.foundation.collections.CollectionChange
+
+struct Windows.Foundation.Numerics.Matrix4x4 external
+    py winrt.windows.foundation.numerics.Matrix4x4
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+enum Windows.Graphics.Imaging.BitmapAlphaMode external
+    py winrt.windows.graphics.imaging.BitmapAlphaMode
+
+enum Windows.Graphics.Imaging.BitmapPixelFormat external
+    py winrt.windows.graphics.imaging.BitmapPixelFormat
+
+class Windows.Media.VideoFrame external
+    py winrt.windows.media.VideoFrame
+
+class Windows.Media.Devices.Core.CameraIntrinsics external
+    py winrt.windows.media.devices.core.CameraIntrinsics

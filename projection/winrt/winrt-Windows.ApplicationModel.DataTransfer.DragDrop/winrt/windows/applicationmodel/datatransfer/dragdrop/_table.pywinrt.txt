@@ -1,0 +1,7 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.DataTransfer.DragDrop
+
+enum Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers python_type
+    py DragDropModifiers
+    signature enum(Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers;u4)

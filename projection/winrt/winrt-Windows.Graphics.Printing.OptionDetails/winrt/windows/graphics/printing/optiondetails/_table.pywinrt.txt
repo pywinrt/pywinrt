@@ -1,0 +1,1100 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Printing.OptionDetails
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> concrete
+    guid 79e5168f-702a-5030-bd44-ef23d8887aed
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{390686cf-d682-495f-adfe-d7333f5c1808})
+    argument System.String
+    argument Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails
+    guid c3f4cc98-9564-4f16-a055-a98b9a49e9d3
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails
+    guid 4d73bc8f-fb53-4eb2-985f-1d91de0b7639
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails
+    guid d6abb166-a5a6-40dc-acc3-739f28f1e5d3
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails
+    guid dba97704-f1d6-4843-a484-9b447cdcf3b6
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails
+    guid 42053099-4339-4343-898d-2c47b5e0c341
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails
+    guid 5704b637-5c3a-449a-aa36-b3291b1192fd
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails
+    guid a5fafd88-58f2-4ebd-b90f-51e4f2944c5d
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2
+    guid c9d6353d-651c-4a39-906e-1091a1801bf1
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3
+    guid 4fa1b53f-3c34-4868-a407-fc5eab259b21
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails python_type
+    py _IPrintCustomOptionDetails
+    guid e32bde1c-28af-4b90-95da-a3acf320b929
+    signature {e32bde1c-28af-4b90-95da-a3acf320b929}
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
+            in string name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails
+    guid 2ad171f8-c8bd-4905-9192-0d75136e8b31
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2
+    guid cea70b54-b977-4718-8338-7ed2b0d86fe3
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails
+    guid 9db4d514-e461-4608-8ee9-db6f5ed073c6
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails
+    guid fcd94591-d4a4-44fa-b3fe-42e0ba28d5ad
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails
+    guid a6de1f18-482c-4657-9d71-8ddddbea1e1e
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails python_type
+    py _IPrintItemListOptionDetails
+    guid 9a2257bf-fe61-43d8-a24f-a3f6ab7320e7
+    signature {9a2257bf-fe61-43d8-a24f-a3f6ab7320e7}
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails
+    guid 6c8d5bcf-c0bf-47c8-b84a-628e7d0d1a1d
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails
+    guid f8c7000b-abf3-4abc-8e86-22abc5744a43
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails python_type
+    py _IPrintNumberOptionDetails
+    guid 4d01bbaf-645c-4de9-965f-6fc6bbc47cab
+    signature {4d01bbaf-645c-4de9-965f-6fc6bbc47cab}
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property max_value
+        get get_MaxValue slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails shape=4 reverse=43
+            out uint32 return
+    property min_value
+        get get_MinValue slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails shape=4 reverse=22
+            out uint32 return
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails python_type
+    py _IPrintOptionDetails
+    guid 390686cf-d682-495f-adfe-d7333f5c1808
+    signature {390686cf-d682-495f-adfe-d7333f5c1808}
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails
+    guid 46c38879-66e0-4da0-87b4-d25457824eb7
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails
+    guid 5a19e4b7-2be8-4aa7-9ea5-defbe8713b4e
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails
+    guid 2dd06ba1-ce1a-44e6-84f9-3a92ea1e3044
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails
+    guid d43175bd-9c0b-44e0-84f6-ceebce653800
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs
+    guid 65197d05-a5ee-4307-9407-9acad147679c
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails
+    guid f5720af1-a89e-42a6-81af-f8e010b38a68
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails2
+    guid 53730a09-f968-4692-a177-c074597186db
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetailsStatic
+    guid 135da193-0961-4b6e-8766-f13b7fbccd58
+
+interface Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails python_type
+    py _IPrintTextOptionDetails
+    guid ad75e563-5ce4-46bc-9918-ab9fad144c5b
+    signature {ad75e563-5ce4-46bc-9918-ab9fad144c5b}
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property max_characters
+        get get_MaxCharacters slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails shape=4 reverse=22
+            out uint32 return
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    argument System.Object
+
+class Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails python_type
+    py PrintBindingOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails python_type
+    py PrintBorderingOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails python_type
+    py PrintCollationOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails python_type
+    py PrintColorModeOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails python_type
+    py PrintCopiesOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=62
+            in string name=value
+    property max_value
+        get get_MaxValue slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails shape=4 reverse=43
+            out uint32 return
+    property min_value
+        get get_MinValue slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails shape=4 reverse=22
+            out uint32 return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCustomItemDetails python_type
+    py PrintCustomItemDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCustomItemDetails;{5704b637-5c3a-449a-aa36-b3291b1192fd})
+    default Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails
+    property item_display_name
+        get get_ItemDisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=62
+            out string return
+        put put_ItemDisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=43
+            in string name=value
+    property item_id
+        get get_ItemId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=22
+            out string return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails python_type
+    py PrintCustomItemListOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=62
+            in string name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method add_item
+        method AddItem slot=6 inputs=2 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails shape=51 reverse=24
+            in string name=itemId
+            in string name=displayName
+        method AddItem slot=6 inputs=4 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2 shape=195 reverse=26
+            in string name=itemId
+            in string name=displayName
+            in string name=description
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType name=icon
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails python_type
+    py PrintCustomTextOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
+            in string name=value
+    property max_characters
+        get get_MaxCharacters slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4 reverse=43
+            out uint32 return
+        put put_MaxCharacters slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4 reverse=22
+            in uint32 name=value
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=62
+            in string name=value
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails python_type
+    py PrintCustomToggleOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
+            in string name=value
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=62
+            in string name=value
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails python_type
+    py PrintDuplexOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails python_type
+    py PrintHolePunchOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=62
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails python_type
+    py PrintMediaSizeOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=62
+            in string name=value
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails python_type
+    py PrintMediaTypeOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=62
+            in string name=value
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+enum Windows.Graphics.Printing.OptionDetails.PrintOptionStates python_type
+    py PrintOptionStates
+    signature enum(Windows.Graphics.Printing.OptionDetails.PrintOptionStates;u4)
+
+enum Windows.Graphics.Printing.OptionDetails.PrintOptionType python_type
+    py PrintOptionType
+    signature enum(Windows.Graphics.Printing.OptionDetails.PrintOptionType;i4)
+
+class Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails python_type
+    py PrintOrientationOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=62
+            in string name=value
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails python_type
+    py PrintPageRangeOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=62
+            in string name=value
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails python_type
+    py PrintQualityOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=62
+            in string name=value
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails python_type
+    py PrintStapleOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails;{390686cf-d682-495f-adfe-d7333f5c1808})
+    default Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    property state
+        get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
+            out enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates return
+        put put_State slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=121
+            in enum_u32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionStates name=value
+    property error_text
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=99
+            out string return
+        put put_ErrorText slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=62
+            in string name=value
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=22
+            out string return
+    property option_type
+        get get_OptionType slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Printing.OptionDetails.PrintOptionType return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
+            out object return
+    property warning_text
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=43
+            out string return
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=22
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=99
+            out string return
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=62
+            in string name=value
+    method try_set_value
+        method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
+            in object name=value
+            out boolean return
+
+class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs python_type
+    py PrintTaskOptionChangedEventArgs
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs;{65197d05-a5ee-4307-9407-9acad147679c})
+    default Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs
+    requires Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs
+    property option_id
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs shape=4 reverse=22
+            out object return
+
+class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails python_type
+    py PrintTaskOptionDetails
+    signature rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails;{f5720af1-a89e-42a6-81af-f8e010b38a68})
+    default Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails
+    requires Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails
+    requires Windows.Graphics.Printing.IPrintTaskOptionsCore
+    requires Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration
+    requires Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails2
+    factory Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetailsStatic
+    property displayed_options
+        get get_DisplayedOptions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property options
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> return
+    event begin_validation
+        add add_BeginValidation slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,System.Object> name=eventHandler
+            out event_token return
+        remove remove_BeginValidation slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=167
+            in event_token name=eventCookie
+    event option_changed
+        add add_OptionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_OptionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=134
+            in event_token name=eventCookie
+    method create_item_list_option
+        method CreateItemListOption slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117 reverse=45
+            in string name=optionId
+            in string name=displayName
+            out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails return
+    method create_text_option
+        method CreateTextOption slot=8 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117 reverse=66
+            in string name=optionId
+            in string name=displayName
+            out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails return
+    method create_toggle_option
+        method CreateToggleOption slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails2 shape=117 reverse=25
+            in string name=optionId
+            in string name=displayName
+            out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails return
+    method get_from_print_task_options static
+        method GetFromPrintTaskOptions slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetailsStatic shape=51 reverse=24 static
+            in class type=Windows.Graphics.Printing.PrintTaskOptions name=printTaskOptions
+            out class type=Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails return
+    method get_page_description
+        method GetPageDescription slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCore shape=51 reverse=24
+            in uint32 name=jobPageNumber
+            out struct type=Windows.Graphics.Printing.PrintPageDescription return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,System.Object> concrete
+    guid 5c88455c-5b59-557c-8064-5e4f3d59a8ec
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails;{f5720af1-a89e-42a6-81af-f8e010b38a68});cinterface(IInspectable))
+    argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs> concrete
+    guid 1b1f456b-8821-592e-b4a7-9b4c3712518e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails;{f5720af1-a89e-42a6-81af-f8e010b38a68});rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs;{65197d05-a5ee-4307-9407-9acad147679c}))
+    argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails
+    argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Graphics.Printing.IPrintTaskOptionsCore external
+    py winrt.windows.graphics.printing._IPrintTaskOptionsCore
+    guid 1bdbb474-4ed1-41eb-be3c-72d18ed67337
+
+interface Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration external
+    py winrt.windows.graphics.printing._IPrintTaskOptionsCoreUIConfiguration
+    guid 62e69e23-9a1e-4336-b74f-3cc7f4cff709
+
+struct Windows.Graphics.Printing.PrintPageDescription external
+    py winrt.windows.graphics.printing.PrintPageDescription
+
+class Windows.Graphics.Printing.PrintTaskOptions external
+    py winrt.windows.graphics.printing.PrintTaskOptions
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038

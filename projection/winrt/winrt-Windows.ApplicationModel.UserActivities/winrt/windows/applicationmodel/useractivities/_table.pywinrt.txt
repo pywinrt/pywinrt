@@ -1,0 +1,405 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.UserActivities
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserActivities.UserActivity> concrete
+    guid 35095983-7790-5974-a660-1c2dbdd2efa7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.UserActivities.UserActivity;{fc103e9e-2cab-4d36-aea2-b4bb556cef0f}))
+    argument Windows.ApplicationModel.UserActivities.UserActivity
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>> concrete
+    guid d0d0c30a-255c-5238-a7a2-aa905d383919
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem;{e8d59bd3-3e5d-49fd-98d7-6da97521e255})))
+    argument Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserActivities.UserActivity> concrete
+    guid 37e6ab55-1f30-5622-9778-1bdc07ac799f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.UserActivities.UserActivity;{fc103e9e-2cab-4d36-aea2-b4bb556cef0f}))
+    argument Windows.ApplicationModel.UserActivities.UserActivity
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.ApplicationModel.UserActivities.IUserActivity
+    guid fc103e9e-2cab-4d36-aea2-b4bb556cef0f
+
+interface Windows.ApplicationModel.UserActivities.IUserActivity2
+    guid 9dc40c62-08c4-47ac-aa9c-2bb2221c55fd
+
+interface Windows.ApplicationModel.UserActivities.IUserActivity3
+    guid e7697744-e1a2-5147-8e06-55f1eeef271c
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityAttribution
+    guid 34a5c8b5-86dd-4aec-a491-6a4faea5d22e
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory
+    guid e62bd252-c566-4f42-9974-916c4d76377e
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityChannel
+    guid bac0f8b8-a0e4-483b-b948-9cbabd06070c
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityChannel2
+    guid 1698e35b-eb7e-4ea0-bf17-a459e8be706c
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics
+    guid c8c005ab-198d-4d80-abb2-c9775ec4a729
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2
+    guid 8e87de30-aa4f-4624-9ad0-d40f3ba0317c
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3
+    guid 53bc4ddb-bbdf-5984-802a-5305874e205c
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityContentInfo python_type
+    py _IUserActivityContentInfo
+    guid b399e5ad-137f-409d-822d-e1af27ce08dc
+    signature {b399e5ad-137f-409d-822d-e1af27ce08dc}
+    method to_json
+        method ToJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo shape=4 reverse=22
+            out string return
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics
+    guid 9988c34b-0386-4bc9-968a-8200b004144f
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityFactory
+    guid 7c385758-361d-4a67-8a3b-34ca2978f9a3
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityRequest
+    guid a0ef6355-cf35-4ff0-8833-50cb4b72e06d
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityRequestManager
+    guid 0c30be4e-903d-48d6-82d4-4043ed57791b
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics
+    guid c0392df1-224a-432c-81e5-0c76b4c4cefa
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs
+    guid a4cc7a4c-8229-4cfd-a3bc-c61d318575a4
+
+interface Windows.ApplicationModel.UserActivities.IUserActivitySession
+    guid ae434d78-24fa-44a3-ad48-6eda61aa1924
+
+interface Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem
+    guid e8d59bd3-3e5d-49fd-98d7-6da97521e255
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityStatics
+    guid 8c8fd333-0e09-47f6-9ac7-95cf5c39367b
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityVisualElements
+    guid 94757513-262f-49ef-bbbf-9b75d2e85250
+
+interface Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2
+    guid caae7fc7-3eef-4359-825c-9d51b9220de3
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivity> concrete
+    guid e3004e95-0b05-55dc-bf3b-be06fae03152
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.UserActivities.UserActivity;{fc103e9e-2cab-4d36-aea2-b4bb556cef0f}))
+    argument Windows.ApplicationModel.UserActivities.UserActivity
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem> concrete
+    guid 8765461c-2f90-586e-83ec-58b3e4309480
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem;{e8d59bd3-3e5d-49fd-98d7-6da97521e255}))
+    argument Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserActivities.UserActivityRequestManager,Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs> concrete
+    guid b71f6fda-21f5-5bcd-b83b-6c9eadff2410
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserActivities.UserActivityRequestManager;{0c30be4e-903d-48d6-82d4-4043ed57791b});rc(Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs;{a4cc7a4c-8229-4cfd-a3bc-c61d318575a4}))
+    argument Windows.ApplicationModel.UserActivities.UserActivityRequestManager
+    argument Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs
+
+class Windows.ApplicationModel.UserActivities.UserActivity python_type
+    py UserActivity
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivity;{fc103e9e-2cab-4d36-aea2-b4bb556cef0f})
+    default Windows.ApplicationModel.UserActivities.IUserActivity
+    requires Windows.ApplicationModel.UserActivities.IUserActivity
+    requires Windows.ApplicationModel.UserActivities.IUserActivity2
+    requires Windows.ApplicationModel.UserActivities.IUserActivity3
+    factory Windows.ApplicationModel.UserActivities.IUserActivityStatics
+    factory Windows.ApplicationModel.UserActivities.IUserActivityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityFactory shape=51 reverse=24
+            in string name=activityId
+            out class type=Windows.ApplicationModel.UserActivities.UserActivity return
+    property fallback_uri
+        get get_FallbackUri slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=173
+            out class type=Windows.Foundation.Uri return
+        put put_FallbackUri slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=186
+            in class type=Windows.Foundation.Uri name=value
+    property content_uri
+        get get_ContentUri slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+        put put_ContentUri slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=121
+            in class type=Windows.Foundation.Uri name=value
+    property content_type
+        get get_ContentType slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=141
+            out string return
+        put put_ContentType slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=162
+            in string name=value
+    property content_info
+        get get_ContentInfo slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=210
+            out interface type=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo return
+        put put_ContentInfo slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=218
+            in interface type=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo name=value
+    property activation_uri
+        get get_ActivationUri slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+        put put_ActivationUri slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=202
+            in class type=Windows.Foundation.Uri name=value
+    property activity_id
+        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=43
+            out string return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.UserActivities.UserActivityState return
+    property visual_elements
+        get get_VisualElements slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=62
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityVisualElements return
+    property is_roamable
+        get get_IsRoamable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4 reverse=22
+            out boolean return
+        put put_IsRoamable slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4 reverse=43
+            in boolean name=value
+    method create_session
+        method CreateSession slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=228
+            out class type=Windows.ApplicationModel.UserActivities.UserActivitySession return
+    method save_async
+        method SaveAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=223
+            out interface type=Windows.Foundation.IAsyncAction return
+    method to_json
+        method ToJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity2 shape=4 reverse=22
+            out string return
+    method to_json_array static
+        method ToJsonArray slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=65 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserActivities.UserActivity> name=activities
+            out string return
+    method try_parse_from_json static
+        method TryParseFromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=24 static
+            in string name=json
+            out class type=Windows.ApplicationModel.UserActivities.UserActivity return
+    method try_parse_from_json_array static
+        method TryParseFromJsonArray slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=44 static
+            in string name=json
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivity> return
+
+class Windows.ApplicationModel.UserActivities.UserActivityAttribution activatable python_type
+    py UserActivityAttribution
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityAttribution;{34a5c8b5-86dd-4aec-a491-6a4faea5d22e})
+    default Windows.ApplicationModel.UserActivities.IUserActivityAttribution
+    requires Windows.ApplicationModel.UserActivities.IUserActivityAttribution
+    factory Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=iconUri implicit
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=iconUri
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
+    property icon_uri
+        get get_IconUri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_IconUri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property alternate_text
+        get get_AlternateText slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=62
+            out string return
+        put put_AlternateText slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=99
+            in string name=value
+    property add_image_query
+        get get_AddImageQuery slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=121
+            out boolean return
+        put put_AddImageQuery slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=141
+            in boolean name=value
+
+class Windows.ApplicationModel.UserActivities.UserActivityChannel python_type
+    py UserActivityChannel
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityChannel;{bac0f8b8-a0e4-483b-b948-9cbabd06070c})
+    default Windows.ApplicationModel.UserActivities.IUserActivityChannel
+    requires Windows.ApplicationModel.UserActivities.IUserActivityChannel
+    requires Windows.ApplicationModel.UserActivities.IUserActivityChannel2
+    factory Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics
+    factory Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2
+    factory Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3
+    method delete_activity_async
+        method DeleteActivityAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51 reverse=44
+            in string name=activityId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_all_activities_async
+        method DeleteAllActivitiesAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method disable_auto_session_creation static
+        method DisableAutoSessionCreation slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=0 reverse=16 static
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
+    method get_for_user static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
+    method get_or_create_user_activity_async
+        method GetOrCreateUserActivityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51 reverse=24
+            in string name=activityId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserActivities.UserActivity> return
+    method get_recent_user_activities_async
+        method GetRecentUserActivitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel2 shape=51 reverse=24
+            in int32 name=maxUniqueActivities
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>> return
+    method get_session_history_items_for_user_activity_async
+        method GetSessionHistoryItemsForUserActivityAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel2 shape=135
+            in string name=activityId
+            in datetime name=startTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>> return
+    method try_get_for_web_account static
+        method TryGetForWebAccount slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=51 reverse=44 static
+            in class type=Windows.Security.Credentials.WebAccount name=account
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
+
+class Windows.ApplicationModel.UserActivities.UserActivityContentInfo python_type
+    py UserActivityContentInfo
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityContentInfo;{b399e5ad-137f-409d-822d-e1af27ce08dc})
+    default Windows.ApplicationModel.UserActivities.IUserActivityContentInfo
+    requires Windows.ApplicationModel.UserActivities.IUserActivityContentInfo
+    factory Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics
+    method from_json static
+        method FromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics shape=51 reverse=24 static
+            in string name=value
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityContentInfo return
+    method to_json
+        method ToJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.UserActivities.UserActivityRequest python_type
+    py UserActivityRequest
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityRequest;{a0ef6355-cf35-4ff0-8833-50cb4b72e06d})
+    default Windows.ApplicationModel.UserActivities.IUserActivityRequest
+    requires Windows.ApplicationModel.UserActivities.IUserActivityRequest
+    method set_user_activity
+        method SetUserActivity slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequest shape=4 reverse=22
+            in class type=Windows.ApplicationModel.UserActivities.UserActivity name=activity
+
+class Windows.ApplicationModel.UserActivities.UserActivityRequestManager python_type
+    py UserActivityRequestManager
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityRequestManager;{0c30be4e-903d-48d6-82d4-4043ed57791b})
+    default Windows.ApplicationModel.UserActivities.IUserActivityRequestManager
+    requires Windows.ApplicationModel.UserActivities.IUserActivityRequestManager
+    factory Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics
+    event user_activity_requested
+        add add_UserActivityRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserActivities.UserActivityRequestManager,Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_UserActivityRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=26 reverse=53
+            in event_token name=token
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityRequestManager return
+
+class Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs python_type
+    py UserActivityRequestedEventArgs
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs;{a4cc7a4c-8229-4cfd-a3bc-c61d318575a4})
+    default Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs
+    requires Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.UserActivities.UserActivitySession python_type closeable
+    py UserActivitySession
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivitySession;{ae434d78-24fa-44a3-ad48-6eda61aa1924})
+    default Windows.ApplicationModel.UserActivities.IUserActivitySession
+    requires Windows.ApplicationModel.UserActivities.IUserActivitySession
+    requires Windows.Foundation.IClosable
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySession shape=4 reverse=22
+            out string return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem python_type
+    py UserActivitySessionHistoryItem
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem;{e8d59bd3-3e5d-49fd-98d7-6da97521e255})
+    default Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem
+    requires Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem
+    property end_time
+        get get_EndTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property start_time
+        get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=43
+            out datetime return
+    property user_activity
+        get get_UserActivity slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=22
+            out class type=Windows.ApplicationModel.UserActivities.UserActivity return
+
+enum Windows.ApplicationModel.UserActivities.UserActivityState python_type
+    py UserActivityState
+    signature enum(Windows.ApplicationModel.UserActivities.UserActivityState;i4)
+
+class Windows.ApplicationModel.UserActivities.UserActivityVisualElements python_type
+    py UserActivityVisualElements
+    signature rc(Windows.ApplicationModel.UserActivities.UserActivityVisualElements;{94757513-262f-49ef-bbbf-9b75d2e85250})
+    default Windows.ApplicationModel.UserActivities.IUserActivityVisualElements
+    requires Windows.ApplicationModel.UserActivities.IUserActivityVisualElements
+    requires Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2
+    property display_text
+        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=22
+            out string return
+        put put_DisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=43
+            in string name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=99
+            in string name=value
+    property content
+        get get_Content slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=194
+            out interface type=Windows.UI.Shell.IAdaptiveCard return
+        put put_Content slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=186
+            in interface type=Windows.UI.Shell.IAdaptiveCard name=value
+    property background_color
+        get get_BackgroundColor slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=121
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=29 reverse=157
+            in struct type=Windows.UI.Color name=value
+    property attribution
+        get get_Attribution slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=162
+            out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
+        put put_Attribution slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=173
+            in class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution name=value
+    property attribution_display_text
+        get get_AttributionDisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4 reverse=22
+            out string return
+        put put_AttributionDisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4 reverse=43
+            in string name=value
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Security.Credentials.WebAccount external
+    py winrt.windows.security.credentials.WebAccount
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+interface Windows.UI.Shell.IAdaptiveCard external
+    py winrt.windows.ui.shell._IAdaptiveCard
+    guid 72d0568c-a274-41cd-82a8-989d40b9b05e

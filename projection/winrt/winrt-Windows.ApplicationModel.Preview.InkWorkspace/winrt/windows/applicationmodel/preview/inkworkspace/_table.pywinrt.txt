@@ -1,0 +1,30 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Preview.InkWorkspace
+
+interface Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager
+    guid fe0a7990-5e59-4bb7-8a63-7d218cd96300
+
+interface Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics
+    guid cbfd8cc5-a162-4bc4-84ee-e8716d5233c5
+
+class Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager python_type
+    py InkWorkspaceHostedAppManager
+    signature rc(Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager;{fe0a7990-5e59-4bb7-8a63-7d218cd96300})
+    default Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager
+    requires Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager
+    factory Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics
+    method get_for_current_app static
+        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager return
+    method set_thumbnail_async
+        method SetThumbnailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager shape=51 reverse=24
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap

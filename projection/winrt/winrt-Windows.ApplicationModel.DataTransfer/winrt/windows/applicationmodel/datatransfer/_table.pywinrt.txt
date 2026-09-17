@@ -1,0 +1,1129 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.DataTransfer
+
+class Windows.ApplicationModel.DataTransfer.Clipboard static python_type
+    py Clipboard
+    factory Windows.ApplicationModel.DataTransfer.IClipboardStatics2
+    factory Windows.ApplicationModel.DataTransfer.IClipboardStatics
+    event history_changed static
+        add add_HistoryChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=174 static
+            in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs> name=handler
+            out event_token return
+        remove remove_HistoryChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=192 static
+            in event_token name=token
+    event history_enabled_changed static
+        add add_HistoryEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=211 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_HistoryEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=398 static
+            in event_token name=token
+    event roaming_enabled_changed static
+        add add_RoamingEnabledChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=196 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_RoamingEnabledChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=397 static
+            in event_token name=token
+    event content_changed static
+        add add_ContentChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=51 reverse=124 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_ContentChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=26 reverse=156 static
+            in event_token name=token
+    method clear static
+        method Clear slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=0 reverse=93 static
+    method clear_history static
+        method ClearHistory slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=4 reverse=43 static
+            out boolean return
+    method delete_item_from_history static
+        method DeleteItemFromHistory slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=65 static
+            in class type=Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem name=item
+            out boolean return
+    method flush static
+        method Flush slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=0 reverse=55 static
+    method get_content static
+        method GetContent slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    method get_history_items_async static
+        method GetHistoryItemsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult> return
+    method is_history_enabled static
+        method IsHistoryEnabled slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=4 reverse=121 static
+            out boolean return
+    method is_roaming_enabled static
+        method IsRoamingEnabled slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=4 reverse=141 static
+            out boolean return
+    method set_content static
+        method SetContent slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=4 reverse=43 static
+            in class type=Windows.ApplicationModel.DataTransfer.DataPackage name=content
+    method set_content_with_options static
+        method SetContentWithOptions slot=12 inputs=2 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=117 reverse=164 static
+            in class type=Windows.ApplicationModel.DataTransfer.DataPackage name=content
+            in class type=Windows.ApplicationModel.DataTransfer.ClipboardContentOptions name=options
+            out boolean return
+    method set_history_item_as_content static
+        method SetHistoryItemAsContent slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=100 static
+            in class type=Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem name=item
+            out enum32 type=Windows.ApplicationModel.DataTransfer.SetHistoryItemAsContentStatus return
+
+class Windows.ApplicationModel.DataTransfer.ClipboardContentOptions activatable python_type
+    py ClipboardContentOptions
+    signature rc(Windows.ApplicationModel.DataTransfer.ClipboardContentOptions;{e888a98c-ad4b-5447-a056-ab3556276d2b})
+    default Windows.ApplicationModel.DataTransfer.IClipboardContentOptions
+    requires Windows.ApplicationModel.DataTransfer.IClipboardContentOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property is_roamable
+        get get_IsRoamable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=22
+            out boolean return
+        put put_IsRoamable slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=43
+            in boolean name=value
+    property is_allowed_in_history
+        get get_IsAllowedInHistory slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=62
+            out boolean return
+        put put_IsAllowedInHistory slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=99
+            in boolean name=value
+    property history_formats
+        get get_HistoryFormats slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property roaming_formats
+        get get_RoamingFormats slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardContentOptions shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs python_type
+    py ClipboardHistoryChangedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs;{c0be453f-8ea2-53ce-9aba-8d2212573452})
+    default Windows.ApplicationModel.DataTransfer.IClipboardHistoryChangedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IClipboardHistoryChangedEventArgs
+
+class Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem python_type
+    py ClipboardHistoryItem
+    signature rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem;{0173bd8a-afff-5c50-ab92-3d19f481ec58})
+    default Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem
+    requires Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem
+    property content
+        get get_Content slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem shape=4 reverse=62
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem shape=4 reverse=22
+            out string return
+    property timestamp
+        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem shape=4 reverse=43
+            out datetime return
+
+class Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult python_type
+    py ClipboardHistoryItemsResult
+    signature rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult;{e6dfdee6-0ee2-52e3-852b-f295db65939a})
+    default Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult
+    requires Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult
+    property items
+        get get_Items slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem> return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResultStatus return
+
+enum Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResultStatus python_type
+    py ClipboardHistoryItemsResultStatus
+    signature enum(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResultStatus;i4)
+
+class Windows.ApplicationModel.DataTransfer.DataPackage activatable python_type
+    py DataPackage
+    signature rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe})
+    default Windows.ApplicationModel.DataTransfer.IDataPackage
+    requires Windows.ApplicationModel.DataTransfer.IDataPackage
+    requires Windows.ApplicationModel.DataTransfer.IDataPackage2
+    requires Windows.ApplicationModel.DataTransfer.IDataPackage3
+    requires Windows.ApplicationModel.DataTransfer.IDataPackage4
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property requested_operation
+        get get_RequestedOperation slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=62
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
+        put put_RequestedOperation slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=99
+            in enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation name=value
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=43
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackagePropertySet return
+    property resource_map
+        get get_ResourceMap slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Storage.Streams.RandomAccessStreamReference> return
+    event destroyed
+        add add_Destroyed slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> name=handler
+            out event_token return
+        remove remove_Destroyed slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=26 reverse=181
+            in event_token name=token
+    event operation_completed
+        add add_OperationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_OperationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=26 reverse=156
+            in event_token name=token
+    event share_completed
+        add add_ShareCompleted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage3 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_ShareCompleted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage3 shape=26 reverse=53
+            in event_token name=token
+    event share_canceled
+        add add_ShareCanceled slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage4 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> name=handler
+            out event_token return
+        remove remove_ShareCanceled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage4 shape=26 reverse=53
+            in event_token name=token
+    method get_view
+        method GetView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    method set_application_link
+        method SetApplicationLink slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage2 shape=4 reverse=22
+            in class type=Windows.Foundation.Uri name=value
+    method set_bitmap
+        method SetBitmap slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=232
+            in class type=Windows.Storage.Streams.RandomAccessStreamReference name=value
+    method set_data
+        method SetData slot=14 inputs=2 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=187
+            in string name=formatId
+            in object name=value
+    method set_data_provider
+        method SetDataProvider slot=15 inputs=2 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=196
+            in string name=formatId
+            in delegate type=Windows.ApplicationModel.DataTransfer.DataProviderHandler name=delayRenderer
+    method set_html_format
+        method SetHtmlFormat slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=218
+            in string name=value
+    method set_rtf
+        method SetRtf slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=228
+            in string name=value
+    method set_storage_items
+        method SetStorageItems slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=237
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> name=value
+        method SetStorageItems slot=23 inputs=2 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=243
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> name=value
+            in boolean name=readOnly
+    method set_text
+        method SetText slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=202
+            in string name=value
+    method set_uri deprecated
+        method SetUri slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=210 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    method set_web_link
+        method SetWebLink slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage2 shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+
+enum Windows.ApplicationModel.DataTransfer.DataPackageOperation python_type
+    py DataPackageOperation
+    signature enum(Windows.ApplicationModel.DataTransfer.DataPackageOperation;u4)
+
+class Windows.ApplicationModel.DataTransfer.DataPackagePropertySet python_type iterable mapping mutable_mapping
+    py DataPackagePropertySet
+    signature rc(Windows.ApplicationModel.DataTransfer.DataPackagePropertySet;{cd1c93eb-4c4c-443a-a8d3-f5c241e91689})
+    default Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet
+    requires Windows.Foundation.Collections.IMap<System.String,System.Object>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=22
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=43
+            in string name=value
+    property thumbnail
+        get get_Thumbnail slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Thumbnail slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=141
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=99
+            in string name=value
+    property application_name
+        get get_ApplicationName slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=173
+            out string return
+        put put_ApplicationName slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=186
+            in string name=value
+    property application_listing_uri
+        get get_ApplicationListingUri slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+        put put_ApplicationListingUri slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=202
+            in class type=Windows.Foundation.Uri name=value
+    property file_types
+        get get_FileTypes slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property square30x30_logo
+        get get_Square30x30Logo slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Square30x30Logo slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property package_family_name
+        get get_PackageFamilyName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=121
+            out string return
+        put put_PackageFamilyName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=141
+            in string name=value
+    property logo_background_color
+        get get_LogoBackgroundColor slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=186
+            out struct type=Windows.UI.Color return
+        put put_LogoBackgroundColor slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=29
+            in struct type=Windows.UI.Color name=value
+    property content_source_web_link
+        get get_ContentSourceWebLink slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_ContentSourceWebLink slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property content_source_application_link
+        get get_ContentSourceApplicationLink slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+        put put_ContentSourceApplicationLink slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2 shape=4 reverse=99
+            in class type=Windows.Foundation.Uri name=value
+    property enterprise_id
+        get get_EnterpriseId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3 shape=4 reverse=22
+            out string return
+        put put_EnterpriseId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3 shape=4 reverse=43
+            in string name=value
+    property content_source_user_activity_json
+        get get_ContentSourceUserActivityJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4 shape=4 reverse=22
+            out string return
+        put put_ContentSourceUserActivityJson slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4 shape=4 reverse=43
+            in string name=value
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=117 reverse=125
+            in string name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=24
+            in string name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=141
+            in string name=key
+
+class Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView python_type iterable mapping
+    py DataPackagePropertySetView
+    signature rc(Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView;{b94cec01-0c1a-4c57-be55-75d01289735d})
+    default Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4
+    requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5
+    requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    property application_listing_uri
+        get get_ApplicationListingUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+    property application_name
+        get get_ApplicationName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=121
+            out string return
+    property description
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=43
+            out string return
+    property file_types
+        get get_FileTypes slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property thumbnail
+        get get_Thumbnail slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=62
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4 reverse=22
+            out string return
+    property content_source_application_link
+        get get_ContentSourceApplicationLink slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+    property content_source_web_link
+        get get_ContentSourceWebLink slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property logo_background_color
+        get get_LogoBackgroundColor slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 shape=4 reverse=121
+            out struct type=Windows.UI.Color return
+    property package_family_name
+        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 shape=4 reverse=22
+            out string return
+    property square30x30_logo
+        get get_Square30x30Logo slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2 shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property enterprise_id
+        get get_EnterpriseId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3 shape=4 reverse=22
+            out string return
+    property content_source_user_activity_json
+        get get_ContentSourceUserActivityJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4 shape=4 reverse=22
+            out string return
+    property is_from_roaming_clipboard
+        get get_IsFromRoamingClipboard slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5 shape=4 reverse=22
+            out boolean return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
+class Windows.ApplicationModel.DataTransfer.DataPackageView python_type
+    py DataPackageView
+    signature rc(Windows.ApplicationModel.DataTransfer.DataPackageView;{7b840471-5900-4d85-a90b-10cb85fe3552})
+    default Windows.ApplicationModel.DataTransfer.IDataPackageView
+    requires Windows.ApplicationModel.DataTransfer.IDataPackageView
+    requires Windows.ApplicationModel.DataTransfer.IDataPackageView2
+    requires Windows.ApplicationModel.DataTransfer.IDataPackageView3
+    requires Windows.ApplicationModel.DataTransfer.IDataPackageView4
+    property available_formats
+        get get_AvailableFormats slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView return
+    property requested_operation
+        get get_RequestedOperation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=43
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
+    method contains
+        method Contains slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=51 reverse=124
+            in string name=formatId
+            out boolean return
+    method get_application_link_async
+        method GetApplicationLinkAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
+    method get_bitmap_async
+        method GetBitmapAsync slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=218
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> return
+    method get_data_async
+        method GetDataAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=51 reverse=144
+            in string name=formatId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
+    method get_html_format_async
+        method GetHtmlFormatAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=194
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_resource_map_async
+        method GetResourceMapAsync slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=202
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.RandomAccessStreamReference>> return
+    method get_rtf_async
+        method GetRtfAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=210
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_storage_items_async
+        method GetStorageItemsAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=223
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+    method get_text_async
+        method GetTextAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+        method GetTextAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=51 reverse=174
+            in string name=formatId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_uri_async deprecated
+        method GetUriAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=186 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
+    method get_web_link_async
+        method GetWebLinkAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
+    method report_operation_completed
+        method ReportOperationCompleted slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 reverse=62
+            in enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation name=value
+    method request_access_async
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView3 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
+        method RequestAccessAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView3 shape=51 reverse=44
+            in string name=enterpriseId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
+    method set_accepted_format_id
+        method SetAcceptedFormatId slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView4 shape=4 reverse=22
+            in string name=formatId
+    method unlock_and_assume_enterprise_identity
+        method UnlockAndAssumeEnterpriseIdentity slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView3 shape=4 reverse=62
+            out enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult return
+
+class Windows.ApplicationModel.DataTransfer.DataProviderDeferral python_type
+    py DataProviderDeferral
+    signature rc(Windows.ApplicationModel.DataTransfer.DataProviderDeferral;{c2cf2373-2d26-43d9-b69d-dcb86d03f6da})
+    default Windows.ApplicationModel.DataTransfer.IDataProviderDeferral
+    requires Windows.ApplicationModel.DataTransfer.IDataProviderDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataProviderDeferral shape=0 reverse=16
+
+delegate Windows.ApplicationModel.DataTransfer.DataProviderHandler python_type
+    py DataProviderHandler
+    guid e7ecd720-f2f4-4a2d-920e-170a2f482a27
+    signature delegate({e7ecd720-f2f4-4a2d-920e-170a2f482a27})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.ApplicationModel.DataTransfer.DataProviderRequest name=request
+
+class Windows.ApplicationModel.DataTransfer.DataProviderRequest python_type
+    py DataProviderRequest
+    signature rc(Windows.ApplicationModel.DataTransfer.DataProviderRequest;{ebbc7157-d3c8-47da-acde-f82388d5f716})
+    default Windows.ApplicationModel.DataTransfer.IDataProviderRequest
+    requires Windows.ApplicationModel.DataTransfer.IDataProviderRequest
+    property deadline
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataProviderRequest shape=4 reverse=43
+            out datetime return
+    property format_id
+        get get_FormatId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataProviderRequest shape=4 reverse=22
+            out string return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataProviderRequest shape=4 reverse=62
+            out class type=Windows.ApplicationModel.DataTransfer.DataProviderDeferral return
+    method set_data
+        method SetData slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataProviderRequest shape=4 reverse=99
+            in object name=value
+
+class Windows.ApplicationModel.DataTransfer.DataRequest python_type
+    py DataRequest
+    signature rc(Windows.ApplicationModel.DataTransfer.DataRequest;{4341ae3b-fc12-4e53-8c02-ac714c415a27})
+    default Windows.ApplicationModel.DataTransfer.IDataRequest
+    requires Windows.ApplicationModel.DataTransfer.IDataRequest
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataRequest shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackage return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataRequest shape=4 reverse=43
+            in class type=Windows.ApplicationModel.DataTransfer.DataPackage name=value
+    property deadline
+        get get_Deadline slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataRequest shape=4 reverse=62
+            out datetime return
+    method fail_with_display_text
+        method FailWithDisplayText slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataRequest shape=4 reverse=99
+            in string name=value
+    method get_deferral
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataRequest shape=4 reverse=121
+            out class type=Windows.ApplicationModel.DataTransfer.DataRequestDeferral return
+
+class Windows.ApplicationModel.DataTransfer.DataRequestDeferral python_type
+    py DataRequestDeferral
+    signature rc(Windows.ApplicationModel.DataTransfer.DataRequestDeferral;{6dc4b89f-0386-4263-87c1-ed7dce30890e})
+    default Windows.ApplicationModel.DataTransfer.IDataRequestDeferral
+    requires Windows.ApplicationModel.DataTransfer.IDataRequestDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataRequestDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs python_type
+    py DataRequestedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs;{cb8ba807-6ac5-43c9-8ac5-9ba232163182})
+    default Windows.ApplicationModel.DataTransfer.IDataRequestedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IDataRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataRequest return
+
+class Windows.ApplicationModel.DataTransfer.DataTransferManager python_type
+    py DataTransferManager
+    signature rc(Windows.ApplicationModel.DataTransfer.DataTransferManager;{a5caee9b-8708-49d1-8d36-67d25a8da00c})
+    default Windows.ApplicationModel.DataTransfer.IDataTransferManager
+    requires Windows.ApplicationModel.DataTransfer.IDataTransferManager
+    requires Windows.ApplicationModel.DataTransfer.IDataTransferManager2
+    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3
+    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2
+    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics
+    event data_requested
+        add add_DataRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_DataRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=26 reverse=53
+            in event_token name=token
+    event target_application_chosen
+        add add_TargetApplicationChosen slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs> name=handler
+            out event_token return
+        remove remove_TargetApplicationChosen slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=26 reverse=110
+            in event_token name=token
+    event share_providers_requested
+        add add_ShareProvidersRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_ShareProvidersRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager2 shape=26 reverse=53
+            in event_token name=token
+    method get_for_current_view static
+        method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics shape=4 reverse=43 static
+            out class type=Windows.ApplicationModel.DataTransfer.DataTransferManager return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2 shape=4 reverse=22 static
+            out boolean return
+    method show_share_ui static
+        method ShowShareUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3 shape=4 reverse=22 static
+            in class type=Windows.ApplicationModel.DataTransfer.ShareUIOptions name=options
+        method ShowShareUI slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3 shape=4 reverse=22 static
+            in class type=Windows.ApplicationModel.DataTransfer.ShareUIOptions name=options
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs> concrete
+    guid df4aac23-4002-5d4c-a237-2526e344978d
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs;{c0be453f-8ea2-53ce-9aba-8d2212573452}))
+    argument Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs
+
+class Windows.ApplicationModel.DataTransfer.HtmlFormatHelper static python_type
+    py HtmlFormatHelper
+    factory Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics
+    method create_html_format static
+        method CreateHtmlFormat slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics shape=51 reverse=44 static
+            in string name=htmlFragment
+            out string return
+    method get_static_fragment static
+        method GetStaticFragment slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics shape=51 reverse=24 static
+            in string name=htmlFormat
+            out string return
+
+interface Windows.Foundation.IAsyncOperation<System.Object> concrete
+    guid abf53c57-ee50-5342-b52a-26e3b8cc024f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult> concrete
+    guid 677b06b8-0134-5692-b487-4c8e2408ca01
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult;{e6dfdee6-0ee2-52e3-852b-f295db65939a}))
+    argument Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.RandomAccessStreamReference>> concrete
+    guid fc012d44-2dcf-5162-be9a-7668675aa590
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b})))
+    argument Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.RandomAccessStreamReference>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete
+    guid 4b1c0fd7-7a01-5e7a-a6fe-be4500283f23
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> concrete
+    guid 641cb9dd-a28d-59e2-b8db-a227eda6cf2e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> concrete
+    guid e8d81715-c56c-5a6b-b738-5df6c2775b7b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult;i4))
+    argument Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+    guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> concrete
+    guid d90442ca-543c-504b-9eb9-294bcad8a283
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    argument Windows.Storage.Streams.RandomAccessStreamReference
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardContentOptions
+    guid e888a98c-ad4b-5447-a056-ab3556276d2b
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardHistoryChangedEventArgs
+    guid c0be453f-8ea2-53ce-9aba-8d2212573452
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardHistoryItem
+    guid 0173bd8a-afff-5c50-ab92-3d19f481ec58
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardHistoryItemsResult
+    guid e6dfdee6-0ee2-52e3-852b-f295db65939a
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardStatics
+    guid c627e291-34e2-4963-8eed-93cbb0ea3d70
+
+interface Windows.ApplicationModel.DataTransfer.IClipboardStatics2
+    guid d2ac1b6a-d29f-554b-b303-f0452345fe02
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackage
+    guid 61ebf5c7-efea-4346-9554-981d7e198ffe
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackage2
+    guid 041c1fe9-2409-45e1-a538-4c53eeee04a7
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackage3
+    guid 88f31f5d-787b-4d32-965a-a9838105a056
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackage4
+    guid 13a24ec8-9382-536f-852a-3045e1b29a3b
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet
+    guid cd1c93eb-4c4c-443a-a8d3-f5c241e91689
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2
+    guid eb505d4a-9800-46aa-b181-7b6f0f2b919a
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3
+    guid 9e87fd9b-5205-401b-874a-455653bd39e8
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet4
+    guid 6390ebf5-1739-4c74-b22f-865fab5e8545
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView
+    guid b94cec01-0c1a-4c57-be55-75d01289735d
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView2
+    guid 6054509b-8ebe-4feb-9c1e-75e69de54b84
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView3
+    guid db764ce5-d174-495c-84fc-1a51f6ab45d7
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4
+    guid 4474c80d-d16f-40ae-9580-6f8562b94235
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5
+    guid 6f0a9445-3760-50bb-8523-c4202ded7d78
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackageView
+    guid 7b840471-5900-4d85-a90b-10cb85fe3552
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackageView2
+    guid 40ecba95-2450-4c1d-b6b4-ed45463dee9c
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackageView3
+    guid d37771a8-ddad-4288-8428-d1cae394128b
+
+interface Windows.ApplicationModel.DataTransfer.IDataPackageView4
+    guid dfe96f1f-e042-4433-a09f-26d6ffda8b85
+
+interface Windows.ApplicationModel.DataTransfer.IDataProviderDeferral
+    guid c2cf2373-2d26-43d9-b69d-dcb86d03f6da
+
+interface Windows.ApplicationModel.DataTransfer.IDataProviderRequest
+    guid ebbc7157-d3c8-47da-acde-f82388d5f716
+
+interface Windows.ApplicationModel.DataTransfer.IDataRequest
+    guid 4341ae3b-fc12-4e53-8c02-ac714c415a27
+
+interface Windows.ApplicationModel.DataTransfer.IDataRequestDeferral
+    guid 6dc4b89f-0386-4263-87c1-ed7dce30890e
+
+interface Windows.ApplicationModel.DataTransfer.IDataRequestedEventArgs
+    guid cb8ba807-6ac5-43c9-8ac5-9ba232163182
+
+interface Windows.ApplicationModel.DataTransfer.IDataTransferManager
+    guid a5caee9b-8708-49d1-8d36-67d25a8da00c
+
+interface Windows.ApplicationModel.DataTransfer.IDataTransferManager2
+    guid 30ae7d71-8ba8-4c02-8e3f-ddb23b388715
+
+interface Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics
+    guid a9da01aa-e00e-4cfe-aa44-2dd932dca3d8
+
+interface Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2
+    guid c54ec2ec-9f97-4d63-9868-395e271ad8f5
+
+interface Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3
+    guid 05845473-6c82-4f5c-ac23-62e458361fac
+
+interface Windows.ApplicationModel.DataTransfer.IHtmlFormatHelperStatics
+    guid e22e7749-dd70-446f-aefc-61cee59f655e
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> concrete
+    guid bb8b8418-65d1-544b-b083-6d172f568c73
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
+    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Storage.Streams.RandomAccessStreamReference> concrete
+    guid e5d2ccfc-825a-5a8e-82aa-095ed5dbd5d1
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    argument System.String
+    argument Windows.Storage.Streams.RandomAccessStreamReference
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.RandomAccessStreamReference> concrete
+    guid 0a4ce7a5-dfe0-5796-a438-effdfaa31f1b
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Storage.Streams.RandomAccessStreamReference;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    argument System.String
+    argument Windows.Storage.Streams.RandomAccessStreamReference
+
+interface Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs
+    guid e7af329d-051d-4fab-b1a9-47fd77f70a41
+
+interface Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2
+    guid 858fa073-1e19-4105-b2f7-c8478808d562
+
+interface Windows.Foundation.IReference<Windows.Foundation.Rect> concrete
+    guid 80423f11-054f-5eac-afd3-63b6ce15e77b
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Rect;f4;f4;f4;f4))
+    argument Windows.Foundation.Rect
+
+interface Windows.ApplicationModel.DataTransfer.IShareCompletedEventArgs
+    guid 4574c442-f913-4f60-9df7-cc4060ab1916
+
+interface Windows.ApplicationModel.DataTransfer.IShareProvider
+    guid 2fabe026-443e-4cda-af25-8d81070efd80
+
+interface Windows.ApplicationModel.DataTransfer.IShareProviderFactory
+    guid 172a174c-e79e-4f6d-b07d-128f469e0296
+
+interface Windows.ApplicationModel.DataTransfer.IShareProviderOperation
+    guid 19cef937-d435-4179-b6af-14e0492b69f6
+
+interface Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs
+    guid f888f356-a3f8-4fce-85e4-8826e63be799
+
+interface Windows.ApplicationModel.DataTransfer.IShareTargetInfo
+    guid 385be607-c6e8-4114-b294-28f3bb6f9904
+
+interface Windows.ApplicationModel.DataTransfer.IShareUIOptions
+    guid 72fa8a80-342f-4d90-9551-2ae04e37680c
+
+interface Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics
+    guid c6132ada-34b1-4849-bd5f-d09fee3158c5
+
+interface Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics
+    guid 7ed681a1-a880-40c9-b4ed-0bee1e15f549
+
+interface Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2
+    guid 42a254f4-9d76-42e8-861b-47c25dd0cf71
+
+interface Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3
+    guid 3b57b069-01d4-474c-8b5f-bc8e27f38b21
+
+interface Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs
+    guid ca6fb8ac-2987-4ee3-9c54-d8afbcb86c1d
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.DataTransfer.ShareProvider> concrete
+    guid a1687865-31e2-5536-97ec-292269a78046
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.DataTransfer.ShareProvider;{2fabe026-443e-4cda-af25-8d81070efd80}))
+    argument Windows.ApplicationModel.DataTransfer.ShareProvider
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem> concrete
+    guid c91de16d-13ff-55b0-897d-18a131d57ac9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem;{0173bd8a-afff-5c50-ab92-3d19f481ec58}))
+    argument Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete
+    guid 85575a41-06cb-58d0-b98a-7c8f06e6e9d7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+enum K parameterized
+
+class Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs python_type
+    py OperationCompletedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs;{e7af329d-051d-4fab-b1a9-47fd77f70a41})
+    default Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs shape=4 reverse=22
+            out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
+    property accepted_format_id
+        get get_AcceptedFormatId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IOperationCompletedEventArgs2 shape=4 reverse=22
+            out string return
+
+enum Windows.ApplicationModel.DataTransfer.SetHistoryItemAsContentStatus python_type
+    py SetHistoryItemAsContentStatus
+    signature enum(Windows.ApplicationModel.DataTransfer.SetHistoryItemAsContentStatus;i4)
+
+class Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs python_type
+    py ShareCompletedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs;{4574c442-f913-4f60-9df7-cc4060ab1916})
+    default Windows.ApplicationModel.DataTransfer.IShareCompletedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IShareCompletedEventArgs
+    property share_target
+        get get_ShareTarget slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareCompletedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.ShareTargetInfo return
+
+class Windows.ApplicationModel.DataTransfer.ShareProvider python_type
+    py ShareProvider
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareProvider;{2fabe026-443e-4cda-af25-8d81070efd80})
+    default Windows.ApplicationModel.DataTransfer.IShareProvider
+    requires Windows.ApplicationModel.DataTransfer.IShareProvider
+    factory Windows.ApplicationModel.DataTransfer.IShareProviderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProviderFactory shape=244
+            in string name=title
+            in class type=Windows.Storage.Streams.RandomAccessStreamReference name=displayIcon
+            in struct type=Windows.UI.Color name=backgroundColor
+            in delegate type=Windows.ApplicationModel.DataTransfer.ShareProviderHandler name=handler
+            out class type=Windows.ApplicationModel.DataTransfer.ShareProvider return
+    property tag
+        get get_Tag slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvider shape=4 reverse=99
+            out object return
+        put put_Tag slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IShareProvider shape=4 reverse=121
+            in object name=value
+    property background_color
+        get get_BackgroundColor slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvider shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+    property display_icon
+        get get_DisplayIcon slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvider shape=4 reverse=43
+            out class type=Windows.Storage.Streams.RandomAccessStreamReference return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvider shape=4 reverse=22
+            out string return
+
+delegate Windows.ApplicationModel.DataTransfer.ShareProviderHandler python_type
+    py ShareProviderHandler
+    guid e7f9d9ba-e1ba-4e4d-bd65-d43845d3212f
+    signature delegate({e7f9d9ba-e1ba-4e4d-bd65-d43845d3212f})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.ApplicationModel.DataTransfer.ShareProviderOperation name=operation
+
+class Windows.ApplicationModel.DataTransfer.ShareProviderOperation python_type
+    py ShareProviderOperation
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareProviderOperation;{19cef937-d435-4179-b6af-14e0492b69f6})
+    default Windows.ApplicationModel.DataTransfer.IShareProviderOperation
+    requires Windows.ApplicationModel.DataTransfer.IShareProviderOperation
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProviderOperation shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    property provider
+        get get_Provider slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProviderOperation shape=4 reverse=43
+            out class type=Windows.ApplicationModel.DataTransfer.ShareProvider return
+    method report_completed
+        method ReportCompleted slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IShareProviderOperation shape=0 reverse=55
+
+class Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs python_type
+    py ShareProvidersRequestedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs;{f888f356-a3f8-4fce-85e4-8826e63be799})
+    default Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs
+    property data
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+    property providers
+        get get_Providers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.DataTransfer.ShareProvider> return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareProvidersRequestedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.DataTransfer.ShareTargetInfo python_type
+    py ShareTargetInfo
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareTargetInfo;{385be607-c6e8-4114-b294-28f3bb6f9904})
+    default Windows.ApplicationModel.DataTransfer.IShareTargetInfo
+    requires Windows.ApplicationModel.DataTransfer.IShareTargetInfo
+    property app_user_model_id
+        get get_AppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareTargetInfo shape=4 reverse=22
+            out string return
+    property share_provider
+        get get_ShareProvider slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareTargetInfo shape=4 reverse=43
+            out class type=Windows.ApplicationModel.DataTransfer.ShareProvider return
+
+class Windows.ApplicationModel.DataTransfer.ShareUIOptions activatable python_type
+    py ShareUIOptions
+    signature rc(Windows.ApplicationModel.DataTransfer.ShareUIOptions;{72fa8a80-342f-4d90-9551-2ae04e37680c})
+    default Windows.ApplicationModel.DataTransfer.IShareUIOptions
+    requires Windows.ApplicationModel.DataTransfer.IShareUIOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property theme
+        get get_Theme slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareUIOptions shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.DataTransfer.ShareUITheme return
+        put put_Theme slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IShareUIOptions shape=4 reverse=43
+            in enum32 type=Windows.ApplicationModel.DataTransfer.ShareUITheme name=value
+    property selection_rect
+        get get_SelectionRect slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IShareUIOptions shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
+        put put_SelectionRect slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IShareUIOptions shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> name=value
+
+enum Windows.ApplicationModel.DataTransfer.ShareUITheme python_type
+    py ShareUITheme
+    signature enum(Windows.ApplicationModel.DataTransfer.ShareUITheme;i4)
+
+class Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager static python_type
+    py SharedStorageAccessManager
+    factory Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics
+    method add_file static
+        method AddFile slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out string return
+    method redeem_token_for_file_async static
+        method RedeemTokenForFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics shape=51 reverse=44 static
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method remove_file static
+        method RemoveFile slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ISharedStorageAccessManagerStatics shape=4 reverse=62 static
+            in string name=token
+
+class Windows.ApplicationModel.DataTransfer.StandardDataFormats static python_type
+    py StandardDataFormats
+    factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3
+    factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics
+    factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2
+    property bitmap static
+        get get_Bitmap slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=121 static
+            out string return
+    property html static
+        get get_Html slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=62 static
+            out string return
+    property rtf static
+        get get_Rtf slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=99 static
+            out string return
+    property storage_items static
+        get get_StorageItems slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=141 static
+            out string return
+    property text static
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=22 static
+            out string return
+    property uri static
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=43 static deprecated
+            out string return
+    property application_link static
+        get get_ApplicationLink slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2 shape=4 reverse=43 static
+            out string return
+    property web_link static
+        get get_WebLink slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2 shape=4 reverse=22 static
+            out string return
+    property user_activity_json_array static
+        get get_UserActivityJsonArray slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3 shape=4 reverse=22 static
+            out string return
+
+class Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs python_type
+    py TargetApplicationChosenEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs;{ca6fb8ac-2987-4ee3-9c54-d8afbcb86c1d})
+    default Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs
+    requires Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs
+    property application_name
+        get get_ApplicationName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs shape=4 reverse=22
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> concrete
+    guid c156b0c3-1cbc-5ca4-901c-62c5a8ca5cb5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe});cinterface(IInspectable))
+    argument Windows.ApplicationModel.DataTransfer.DataPackage
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs> concrete
+    guid dd48af6c-ef9a-59cb-b326-57d9e2411f21
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe});rc(Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs;{e7af329d-051d-4fab-b1a9-47fd77f70a41}))
+    argument Windows.ApplicationModel.DataTransfer.DataPackage
+    argument Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs> concrete
+    guid f8f7e24a-56fe-58df-bc15-2365aec03966
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe});rc(Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs;{4574c442-f913-4f60-9df7-cc4060ab1916}))
+    argument Windows.ApplicationModel.DataTransfer.DataPackage
+    argument Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs> concrete
+    guid ec6f9cc8-46d0-5e0e-b4d2-7d7773ae37a0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataTransferManager;{a5caee9b-8708-49d1-8d36-67d25a8da00c});rc(Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs;{cb8ba807-6ac5-43c9-8ac5-9ba232163182}))
+    argument Windows.ApplicationModel.DataTransfer.DataTransferManager
+    argument Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs> concrete
+    guid 147e2860-7397-582f-80db-b8685383a937
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataTransferManager;{a5caee9b-8708-49d1-8d36-67d25a8da00c});rc(Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs;{f888f356-a3f8-4fce-85e4-8826e63be799}))
+    argument Windows.ApplicationModel.DataTransfer.DataTransferManager
+    argument Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs> concrete
+    guid c4ac1ba2-7851-5a44-bc8d-3d7c713f1f41
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.DataTransferManager;{a5caee9b-8708-49d1-8d36-67d25a8da00c});rc(Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs;{ca6fb8ac-2987-4ee3-9c54-d8afbcb86c1d}))
+    argument Windows.ApplicationModel.DataTransfer.DataTransferManager
+    argument Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs
+
+enum V parameterized
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+enum Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult external
+    py winrt.windows.security.enterprisedata.ProtectionPolicyEvaluationResult
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.Storage.Streams.RandomAccessStreamReference external
+    py winrt.windows.storage.streams.RandomAccessStreamReference
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

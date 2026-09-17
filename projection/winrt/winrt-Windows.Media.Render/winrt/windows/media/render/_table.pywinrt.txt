@@ -1,0 +1,7 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Render
+
+enum Windows.Media.Render.AudioRenderCategory python_type
+    py AudioRenderCategory
+    signature enum(Windows.Media.Render.AudioRenderCategory;i4)

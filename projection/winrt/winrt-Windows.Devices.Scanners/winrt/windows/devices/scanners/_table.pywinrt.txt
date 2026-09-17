@@ -1,0 +1,542 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Scanners
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> concrete
+    guid 75d78736-6c52-551e-ab5f-50674f323431
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScanner;{53a88f78-5298-48a0-8da3-8087519665e0}))
+    argument Windows.Devices.Scanners.ImageScanner
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> concrete
+    guid 2f74576f-0498-5348-bc3b-a70d1a771718
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScannerPreviewResult;{08b7fe8e-8891-441d-be9c-176fa109c8bb}))
+    argument Windows.Devices.Scanners.ImageScannerPreviewResult
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> concrete
+    guid 6e6e228a-f618-5d33-8523-02d16672665b
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5});u4)
+    argument Windows.Devices.Scanners.ImageScannerScanResult
+    argument System.UInt32
+
+interface Windows.Devices.Scanners.IImageScanner
+    guid 53a88f78-5298-48a0-8da3-8087519665e0
+
+interface Windows.Devices.Scanners.IImageScannerFeederConfiguration
+    guid 74bdacee-fa97-4c17-8280-40e39c6dcc67
+
+interface Windows.Devices.Scanners.IImageScannerFormatConfiguration python_type
+    py _IImageScannerFormatConfiguration
+    guid ae275d11-dadf-4010-bf10-cca5c83dcbb0
+    signature {ae275d11-dadf-4010-bf10-cca5c83dcbb0}
+    property default_format
+        get get_DefaultFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+        put put_Format slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=62
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+    method is_format_supported
+        method IsFormatSupported slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=51 reverse=100
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+            out boolean return
+
+interface Windows.Devices.Scanners.IImageScannerPreviewResult
+    guid 08b7fe8e-8891-441d-be9c-176fa109c8bb
+
+interface Windows.Devices.Scanners.IImageScannerScanResult
+    guid c91624cd-9037-4e48-84c1-ac0975076bc5
+
+interface Windows.Devices.Scanners.IImageScannerSourceConfiguration python_type
+    py _IImageScannerSourceConfiguration
+    guid bfb50055-0b44-4c82-9e89-205f9c234e59
+    signature {bfb50055-0b44-4c82-9e89-205f9c234e59}
+    requires Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    property actual_resolution
+        get get_ActualResolution slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=218
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property auto_cropping_mode
+        get get_AutoCroppingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=121
+            out enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode return
+        put put_AutoCroppingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=141
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+    property brightness
+        get get_Brightness slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=259
+            out int32 return
+        put put_Brightness slot=28 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=263
+            in int32 name=value
+    property brightness_step
+        get get_BrightnessStep slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=252
+            out uint32 return
+    property color_mode
+        get get_ColorMode slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=228
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+        put put_ColorMode slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=232
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+    property contrast
+        get get_Contrast slot=33 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=285
+            out int32 return
+        put put_Contrast slot=34 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=288
+            in int32 name=value
+    property contrast_step
+        get get_ContrastStep slot=31 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=273
+            out uint32 return
+    property default_brightness
+        get get_DefaultBrightness slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=255
+            out int32 return
+    property default_color_mode
+        get get_DefaultColorMode slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=223
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+    property default_contrast
+        get get_DefaultContrast slot=32 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=280
+            out int32 return
+    property desired_resolution
+        get get_DesiredResolution slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=202
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+        put put_DesiredResolution slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=10 reverse=214
+            in struct type=Windows.Devices.Scanners.ImageScannerResolution name=value
+    property max_brightness
+        get get_MaxBrightness slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=247
+            out int32 return
+    property max_contrast
+        get get_MaxContrast slot=30 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=270
+            out int32 return
+    property max_resolution
+        get get_MaxResolution slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=186
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property max_scan_area
+        get get_MaxScanArea slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    property min_brightness
+        get get_MinBrightness slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=242
+            out int32 return
+    property min_contrast
+        get get_MinContrast slot=29 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=266
+            out int32 return
+    property min_resolution
+        get get_MinResolution slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=173
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property min_scan_area
+        get get_MinScanArea slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=22
+            out struct type=Windows.Foundation.Size return
+    property optical_resolution
+        get get_OpticalResolution slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=194
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property selected_scan_region
+        get get_SelectedScanRegion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=62
+            out struct type=Windows.Foundation.Rect return
+        put put_SelectedScanRegion slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=8 reverse=105
+            in struct type=Windows.Foundation.Rect name=value
+    property default_format
+        get get_DefaultFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+        put put_Format slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=62
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+    method is_auto_cropping_mode_supported
+        method IsAutoCroppingModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=163
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+            out boolean return
+    method is_color_mode_supported
+        method IsColorModeSupported slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=238
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+            out boolean return
+    method is_format_supported
+        method IsFormatSupported slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=51 reverse=100
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+            out boolean return
+
+interface Windows.Devices.Scanners.IImageScannerStatics
+    guid bc57e70e-d804-4477-9fb5-b911b5473897
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+    guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+class Windows.Devices.Scanners.ImageScanner python_type
+    py ImageScanner
+    signature rc(Windows.Devices.Scanners.ImageScanner;{53a88f78-5298-48a0-8da3-8087519665e0})
+    default Windows.Devices.Scanners.IImageScanner
+    requires Windows.Devices.Scanners.IImageScanner
+    factory Windows.Devices.Scanners.IImageScannerStatics
+    property auto_configuration
+        get get_AutoConfiguration slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=4 reverse=141
+            out class type=Windows.Devices.Scanners.ImageScannerAutoConfiguration return
+    property default_scan_source
+        get get_DefaultScanSource slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerScanSource return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=4 reverse=22
+            out string return
+    property feeder_configuration
+        get get_FeederConfiguration slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=4 reverse=121
+            out class type=Windows.Devices.Scanners.ImageScannerFeederConfiguration return
+    property flatbed_configuration
+        get get_FlatbedConfiguration slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=4 reverse=99
+            out class type=Windows.Devices.Scanners.ImageScannerFlatbedConfiguration return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerStatics shape=4 reverse=43 static
+            out string return
+    method is_preview_supported
+        method IsPreviewSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=51 reverse=163
+            in enum32 type=Windows.Devices.Scanners.ImageScannerScanSource name=scanSource
+            out boolean return
+    method is_scan_source_supported
+        method IsScanSourceSupported slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=51 reverse=65
+            in enum32 type=Windows.Devices.Scanners.ImageScannerScanSource name=value
+            out boolean return
+    method scan_files_to_folder_async
+        method ScanFilesToFolderAsync slot=14 inputs=2 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=117 reverse=188
+            in enum32 type=Windows.Devices.Scanners.ImageScannerScanSource name=scanSource
+            in class type=Windows.Storage.StorageFolder name=storageFolder
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> return
+    method scan_preview_to_stream_async
+        method ScanPreviewToStreamAsync slot=13 inputs=2 outputs=1 declaring=Windows.Devices.Scanners.IImageScanner shape=117 reverse=175
+            in enum32 type=Windows.Devices.Scanners.ImageScannerScanSource name=scanSource
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=targetStream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> return
+
+class Windows.Devices.Scanners.ImageScannerAutoConfiguration python_type
+    py ImageScannerAutoConfiguration
+    signature rc(Windows.Devices.Scanners.ImageScannerAutoConfiguration;{ae275d11-dadf-4010-bf10-cca5c83dcbb0})
+    default Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    requires Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+        put put_Format slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=62
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+    property default_format
+        get get_DefaultFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    method is_format_supported
+        method IsFormatSupported slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=51 reverse=100
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+            out boolean return
+
+enum Windows.Devices.Scanners.ImageScannerAutoCroppingMode python_type
+    py ImageScannerAutoCroppingMode
+    signature enum(Windows.Devices.Scanners.ImageScannerAutoCroppingMode;i4)
+
+enum Windows.Devices.Scanners.ImageScannerColorMode python_type
+    py ImageScannerColorMode
+    signature enum(Windows.Devices.Scanners.ImageScannerColorMode;i4)
+
+class Windows.Devices.Scanners.ImageScannerFeederConfiguration python_type
+    py ImageScannerFeederConfiguration
+    signature rc(Windows.Devices.Scanners.ImageScannerFeederConfiguration;{ae275d11-dadf-4010-bf10-cca5c83dcbb0})
+    default Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    requires Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    requires Windows.Devices.Scanners.IImageScannerSourceConfiguration
+    requires Windows.Devices.Scanners.IImageScannerFeederConfiguration
+    property scan_ahead
+        get get_ScanAhead slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=232
+            out boolean return
+        put put_ScanAhead slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=237
+            in boolean name=value
+    property auto_detect_page_size
+        get get_AutoDetectPageSize slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=43
+            out boolean return
+        put put_AutoDetectPageSize slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=62
+            in boolean name=value
+    property duplex
+        get get_Duplex slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=218
+            out boolean return
+        put put_Duplex slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=223
+            in boolean name=value
+    property max_number_of_pages
+        get get_MaxNumberOfPages slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=194
+            out uint32 return
+        put put_MaxNumberOfPages slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=202
+            in uint32 name=value
+    property page_orientation
+        get get_PageOrientation slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=141
+            out enum32 type=Windows.Graphics.Printing.PrintOrientation return
+        put put_PageOrientation slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=162
+            in enum32 type=Windows.Graphics.Printing.PrintOrientation name=value
+    property page_size
+        get get_PageSize slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=99
+            out enum32 type=Windows.Graphics.Printing.PrintMediaSize return
+        put put_PageSize slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=121
+            in enum32 type=Windows.Graphics.Printing.PrintMediaSize name=value
+    property page_size_dimensions
+        get get_PageSizeDimensions slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=173
+            out struct type=Windows.Foundation.Size return
+    property can_scan_duplex
+        get get_CanScanDuplex slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=210
+            out boolean return
+    property can_scan_ahead
+        get get_CanScanAhead slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=228
+            out boolean return
+    property can_auto_detect_page_size
+        get get_CanAutoDetectPageSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=4 reverse=22
+            out boolean return
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+        put put_Format slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=62
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+    property default_format
+        get get_DefaultFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    property desired_resolution
+        get get_DesiredResolution slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=202
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+        put put_DesiredResolution slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=10 reverse=214
+            in struct type=Windows.Devices.Scanners.ImageScannerResolution name=value
+    property contrast
+        get get_Contrast slot=33 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=285
+            out int32 return
+        put put_Contrast slot=34 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=288
+            in int32 name=value
+    property color_mode
+        get get_ColorMode slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=228
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+        put put_ColorMode slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=232
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+    property auto_cropping_mode
+        get get_AutoCroppingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=121
+            out enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode return
+        put put_AutoCroppingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=141
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+    property brightness
+        get get_Brightness slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=259
+            out int32 return
+        put put_Brightness slot=28 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=263
+            in int32 name=value
+    property selected_scan_region
+        get get_SelectedScanRegion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=62
+            out struct type=Windows.Foundation.Rect return
+        put put_SelectedScanRegion slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=8 reverse=105
+            in struct type=Windows.Foundation.Rect name=value
+    property min_brightness
+        get get_MinBrightness slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=242
+            out int32 return
+    property min_contrast
+        get get_MinContrast slot=29 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=266
+            out int32 return
+    property min_resolution
+        get get_MinResolution slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=173
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property min_scan_area
+        get get_MinScanArea slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=22
+            out struct type=Windows.Foundation.Size return
+    property optical_resolution
+        get get_OpticalResolution slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=194
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property max_scan_area
+        get get_MaxScanArea slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    property max_resolution
+        get get_MaxResolution slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=186
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property max_contrast
+        get get_MaxContrast slot=30 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=270
+            out int32 return
+    property max_brightness
+        get get_MaxBrightness slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=247
+            out int32 return
+    property default_contrast
+        get get_DefaultContrast slot=32 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=280
+            out int32 return
+    property default_color_mode
+        get get_DefaultColorMode slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=223
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+    property default_brightness
+        get get_DefaultBrightness slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=255
+            out int32 return
+    property contrast_step
+        get get_ContrastStep slot=31 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=273
+            out uint32 return
+    property brightness_step
+        get get_BrightnessStep slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=252
+            out uint32 return
+    property actual_resolution
+        get get_ActualResolution slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=218
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    method is_auto_cropping_mode_supported
+        method IsAutoCroppingModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=163
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+            out boolean return
+    method is_color_mode_supported
+        method IsColorModeSupported slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=238
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+            out boolean return
+    method is_format_supported
+        method IsFormatSupported slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=51 reverse=100
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+            out boolean return
+    method is_page_size_supported
+        method IsPageSizeSupported slot=14 inputs=2 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFeederConfiguration shape=117 reverse=188
+            in enum32 type=Windows.Graphics.Printing.PrintMediaSize name=pageSize
+            in enum32 type=Windows.Graphics.Printing.PrintOrientation name=pageOrientation
+            out boolean return
+
+class Windows.Devices.Scanners.ImageScannerFlatbedConfiguration python_type
+    py ImageScannerFlatbedConfiguration
+    signature rc(Windows.Devices.Scanners.ImageScannerFlatbedConfiguration;{ae275d11-dadf-4010-bf10-cca5c83dcbb0})
+    default Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    requires Windows.Devices.Scanners.IImageScannerFormatConfiguration
+    requires Windows.Devices.Scanners.IImageScannerSourceConfiguration
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+        put put_Format slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=62
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+    property default_format
+        get get_DefaultFormat slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    property selected_scan_region
+        get get_SelectedScanRegion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=62
+            out struct type=Windows.Foundation.Rect return
+        put put_SelectedScanRegion slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=8 reverse=105
+            in struct type=Windows.Foundation.Rect name=value
+    property desired_resolution
+        get get_DesiredResolution slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=202
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+        put put_DesiredResolution slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=10 reverse=214
+            in struct type=Windows.Devices.Scanners.ImageScannerResolution name=value
+    property contrast
+        get get_Contrast slot=33 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=285
+            out int32 return
+        put put_Contrast slot=34 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=288
+            in int32 name=value
+    property brightness
+        get get_Brightness slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=259
+            out int32 return
+        put put_Brightness slot=28 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=263
+            in int32 name=value
+    property auto_cropping_mode
+        get get_AutoCroppingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=121
+            out enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode return
+        put put_AutoCroppingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=141
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+    property color_mode
+        get get_ColorMode slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=228
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+        put put_ColorMode slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=232
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+    property contrast_step
+        get get_ContrastStep slot=31 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=273
+            out uint32 return
+    property default_brightness
+        get get_DefaultBrightness slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=255
+            out int32 return
+    property default_color_mode
+        get get_DefaultColorMode slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=223
+            out enum32 type=Windows.Devices.Scanners.ImageScannerColorMode return
+    property default_contrast
+        get get_DefaultContrast slot=32 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=280
+            out int32 return
+    property actual_resolution
+        get get_ActualResolution slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=218
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property max_brightness
+        get get_MaxBrightness slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=247
+            out int32 return
+    property max_contrast
+        get get_MaxContrast slot=30 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=270
+            out int32 return
+    property max_resolution
+        get get_MaxResolution slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=186
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property max_scan_area
+        get get_MaxScanArea slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=43
+            out struct type=Windows.Foundation.Size return
+    property min_brightness
+        get get_MinBrightness slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=242
+            out int32 return
+    property brightness_step
+        get get_BrightnessStep slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=252
+            out uint32 return
+    property min_contrast
+        get get_MinContrast slot=29 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=266
+            out int32 return
+    property min_resolution
+        get get_MinResolution slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=173
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property optical_resolution
+        get get_OpticalResolution slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=194
+            out struct type=Windows.Devices.Scanners.ImageScannerResolution return
+    property min_scan_area
+        get get_MinScanArea slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=4 reverse=22
+            out struct type=Windows.Foundation.Size return
+    method is_auto_cropping_mode_supported
+        method IsAutoCroppingModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=163
+            in enum32 type=Windows.Devices.Scanners.ImageScannerAutoCroppingMode name=value
+            out boolean return
+    method is_color_mode_supported
+        method IsColorModeSupported slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerSourceConfiguration shape=51 reverse=238
+            in enum32 type=Windows.Devices.Scanners.ImageScannerColorMode name=value
+            out boolean return
+    method is_format_supported
+        method IsFormatSupported slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerFormatConfiguration shape=51 reverse=100
+            in enum32 type=Windows.Devices.Scanners.ImageScannerFormat name=value
+            out boolean return
+
+enum Windows.Devices.Scanners.ImageScannerFormat python_type
+    py ImageScannerFormat
+    signature enum(Windows.Devices.Scanners.ImageScannerFormat;i4)
+
+class Windows.Devices.Scanners.ImageScannerPreviewResult python_type
+    py ImageScannerPreviewResult
+    signature rc(Windows.Devices.Scanners.ImageScannerPreviewResult;{08b7fe8e-8891-441d-be9c-176fa109c8bb})
+    default Windows.Devices.Scanners.IImageScannerPreviewResult
+    requires Windows.Devices.Scanners.IImageScannerPreviewResult
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerPreviewResult shape=4 reverse=43
+            out enum32 type=Windows.Devices.Scanners.ImageScannerFormat return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerPreviewResult shape=4 reverse=22
+            out boolean return
+
+struct Windows.Devices.Scanners.ImageScannerResolution python_type
+    py ImageScannerResolution
+    signature struct(Windows.Devices.Scanners.ImageScannerResolution;f4;f4)
+    field dpi_x DpiX single
+    field dpi_y DpiY single
+
+class Windows.Devices.Scanners.ImageScannerScanResult python_type
+    py ImageScannerScanResult
+    signature rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5})
+    default Windows.Devices.Scanners.IImageScannerScanResult
+    requires Windows.Devices.Scanners.IImageScannerScanResult
+    property scanned_files
+        get get_ScannedFiles slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Scanners.IImageScannerScanResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> return
+
+enum Windows.Devices.Scanners.ImageScannerScanSource python_type
+    py ImageScannerScanSource
+    signature enum(Windows.Devices.Scanners.ImageScannerScanSource;i4)
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+enum Windows.Graphics.Printing.PrintMediaSize external
+    py winrt.windows.graphics.printing.PrintMediaSize
+
+enum Windows.Graphics.Printing.PrintOrientation external
+    py winrt.windows.graphics.printing.PrintOrientation
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da

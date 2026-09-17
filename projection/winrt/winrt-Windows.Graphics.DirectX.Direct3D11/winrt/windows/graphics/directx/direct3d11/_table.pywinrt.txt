@@ -1,0 +1,53 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.DirectX.Direct3D11
+
+enum Windows.Graphics.DirectX.Direct3D11.Direct3DBindings python_type
+    py Direct3DBindings
+    signature enum(Windows.Graphics.DirectX.Direct3D11.Direct3DBindings;u4)
+
+struct Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription python_type
+    py Direct3DMultisampleDescription
+    signature struct(Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription;i4;i4)
+    field count Count int32
+    field quality Quality int32
+
+struct Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription python_type
+    py Direct3DSurfaceDescription
+    signature struct(Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription;i4;i4;enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4);struct(Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription;i4;i4))
+    field width Width int32
+    field height Height int32
+    field format Format enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat
+    field multisample_description MultisampleDescription struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription
+
+enum Windows.Graphics.DirectX.Direct3D11.Direct3DUsage python_type
+    py Direct3DUsage
+    signature enum(Windows.Graphics.DirectX.Direct3D11.Direct3DUsage;i4)
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice python_type closeable
+    py _IDirect3DDevice
+    guid a37624ab-8d5f-4650-9d3e-9eae3d9bc670
+    signature {a37624ab-8d5f-4650-9d3e-9eae3d9bc670}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method trim
+        method Trim slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice shape=0 reverse=16
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface python_type closeable
+    py _IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+    signature {0bf4a146-13c1-4694-bee3-7abf15eaf586}
+    requires Windows.Foundation.IClosable
+    property description
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface shape=4 reverse=22
+            out struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat external
+    py winrt.windows.graphics.directx.DirectXPixelFormat

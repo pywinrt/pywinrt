@@ -1,0 +1,354 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Storage.AccessCache
+
+enum Windows.Storage.AccessCache.AccessCacheOptions python_type
+    py AccessCacheOptions
+    signature enum(Windows.Storage.AccessCache.AccessCacheOptions;u4)
+
+struct Windows.Storage.AccessCache.AccessListEntry python_type
+    py AccessListEntry
+    signature struct(Windows.Storage.AccessCache.AccessListEntry;string;string)
+    field token Token string
+    field metadata Metadata string
+
+class Windows.Storage.AccessCache.AccessListEntryView python_type iterable sequence
+    py AccessListEntryView
+    signature rc(Windows.Storage.AccessCache.AccessListEntryView;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Storage.AccessCache.AccessListEntry;string;string)))
+    default Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.AccessCache.AccessListEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> shape=51 reverse=24
+            in uint32 name=index
+            out struct type=Windows.Storage.AccessCache.AccessListEntry return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Storage.AccessCache.AccessListEntry name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> shape=173 reverse=85
+            in struct type=Windows.Storage.AccessCache.AccessListEntry name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> concrete
+    guid 5fc9c137-ebb7-5e6c-9cba-686f2ec2b0bb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    argument Windows.Storage.IStorageItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+    guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> concrete
+    guid 6be9e7d7-e83a-5cbc-802c-1768960b52c3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+interface Windows.Storage.AccessCache.IItemRemovedEventArgs
+    guid 59677e5c-55be-4c66-ba66-5eaea79d2631
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry> concrete
+    guid 4995c2b0-736b-588d-ae42-6f69b025b388
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Storage.AccessCache.AccessListEntry;string;string))
+    argument Windows.Storage.AccessCache.AccessListEntry
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.AccessCache.AccessListEntry> concrete
+    guid d1a0a6c4-889d-519b-8508-26241b329b7e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Storage.AccessCache.AccessListEntry;string;string))
+    argument Windows.Storage.AccessCache.AccessListEntry
+
+interface Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics
+    guid 4391dfaa-d033-48f9-8060-3ec847d2e3f1
+
+interface Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
+    guid 072716ec-aa05-4294-9a11-1a3d04519ad0
+
+interface Windows.Storage.AccessCache.IStorageItemAccessList python_type
+    py _IStorageItemAccessList
+    guid 2caff6ad-de90-47f5-b2c3-dd36c9fdd453
+    signature {2caff6ad-de90-47f5-b2c3-dd36c9fdd453}
+    property entries
+        get get_Entries slot=20 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=228
+            out class type=Windows.Storage.AccessCache.AccessListEntryView return
+    property maximum_items_allowed
+        get get_MaximumItemsAllowed slot=21 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=232
+            out uint32 return
+    method add
+        method Add slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=24
+            in interface type=Windows.Storage.IStorageItem name=file
+            out string return
+        method Add slot=7 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=45
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+            out string return
+    method add_or_replace
+        method AddOrReplace slot=8 inputs=2 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=65
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+        method AddOrReplace slot=9 inputs=3 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=101
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+    method check_access
+        method CheckAccess slot=19 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=224
+            in interface type=Windows.Storage.IStorageItem name=file
+            out boolean return
+    method clear
+        method Clear slot=18 inputs=0 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=0 reverse=217
+    method contains_item
+        method ContainsItem slot=17 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=211
+            in string name=token
+            out boolean return
+    method get_file_async
+        method GetFileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=144
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method GetFileAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=188
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method get_folder_async
+        method GetFolderAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=163
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+        method GetFolderAsync slot=15 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=197
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_item_async
+        method GetItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=124
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+        method GetItemAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=175
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+    method remove
+        method Remove slot=16 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=202
+            in string name=token
+
+interface Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList
+    guid 016239d5-510d-411e-8cf1-c3d1effa4c33
+
+interface Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2
+    guid da481ea0-ed8d-4731-a1db-e44ee2204093
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> concrete
+    guid 42b49b8a-3014-5d27-8f2c-1ef5ee89ec00
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Storage.AccessCache.AccessListEntry;string;string))
+    argument Windows.Storage.AccessCache.AccessListEntry
+
+class Windows.Storage.AccessCache.ItemRemovedEventArgs python_type
+    py ItemRemovedEventArgs
+    signature rc(Windows.Storage.AccessCache.ItemRemovedEventArgs;{59677e5c-55be-4c66-ba66-5eaea79d2631})
+    default Windows.Storage.AccessCache.IItemRemovedEventArgs
+    requires Windows.Storage.AccessCache.IItemRemovedEventArgs
+    property removed_entry
+        get get_RemovedEntry slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IItemRemovedEventArgs shape=4 reverse=22
+            out struct type=Windows.Storage.AccessCache.AccessListEntry return
+
+enum Windows.Storage.AccessCache.RecentStorageItemVisibility python_type
+    py RecentStorageItemVisibility
+    signature enum(Windows.Storage.AccessCache.RecentStorageItemVisibility;i4)
+
+class Windows.Storage.AccessCache.StorageApplicationPermissions static python_type
+    py StorageApplicationPermissions
+    factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
+    factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics
+    property future_access_list static
+        get get_FutureAccessList slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 reverse=22 static
+            out class type=Windows.Storage.AccessCache.StorageItemAccessList return
+    property most_recently_used_list static
+        get get_MostRecentlyUsedList slot=7 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 reverse=43 static
+            out class type=Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList return
+    method get_future_access_list_for_user static
+        method GetFutureAccessListForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Storage.AccessCache.StorageItemAccessList return
+    method get_most_recently_used_list_for_user static
+        method GetMostRecentlyUsedListForUser slot=7 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList return
+
+class Windows.Storage.AccessCache.StorageItemAccessList python_type
+    py StorageItemAccessList
+    signature rc(Windows.Storage.AccessCache.StorageItemAccessList;{2caff6ad-de90-47f5-b2c3-dd36c9fdd453})
+    default Windows.Storage.AccessCache.IStorageItemAccessList
+    requires Windows.Storage.AccessCache.IStorageItemAccessList
+    property entries
+        get get_Entries slot=20 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=228
+            out class type=Windows.Storage.AccessCache.AccessListEntryView return
+    property maximum_items_allowed
+        get get_MaximumItemsAllowed slot=21 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=232
+            out uint32 return
+    method add
+        method Add slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=24
+            in interface type=Windows.Storage.IStorageItem name=file
+            out string return
+        method Add slot=7 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=45
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+            out string return
+    method add_or_replace
+        method AddOrReplace slot=8 inputs=2 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=65
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+        method AddOrReplace slot=9 inputs=3 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=101
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+    method check_access
+        method CheckAccess slot=19 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=224
+            in interface type=Windows.Storage.IStorageItem name=file
+            out boolean return
+    method clear
+        method Clear slot=18 inputs=0 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=0 reverse=217
+    method contains_item
+        method ContainsItem slot=17 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=211
+            in string name=token
+            out boolean return
+    method get_file_async
+        method GetFileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=144
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method GetFileAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=188
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method get_folder_async
+        method GetFolderAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=163
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+        method GetFolderAsync slot=15 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=197
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_item_async
+        method GetItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=124
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+        method GetItemAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=175
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+    method remove
+        method Remove slot=16 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=202
+            in string name=token
+
+class Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList python_type
+    py StorageItemMostRecentlyUsedList
+    signature rc(Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList;{016239d5-510d-411e-8cf1-c3d1effa4c33})
+    default Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList
+    requires Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList
+    requires Windows.Storage.AccessCache.IStorageItemAccessList
+    requires Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2
+    property entries
+        get get_Entries slot=20 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=228
+            out class type=Windows.Storage.AccessCache.AccessListEntryView return
+    property maximum_items_allowed
+        get get_MaximumItemsAllowed slot=21 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=232
+            out uint32 return
+    event item_removed
+        add add_ItemRemoved slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList,Windows.Storage.AccessCache.ItemRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_ItemRemoved slot=7 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=26 reverse=53
+            in event_token name=eventCookie
+    method add
+        method Add slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=24
+            in interface type=Windows.Storage.IStorageItem name=file
+            out string return
+        method Add slot=7 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=45
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+            out string return
+        method Add slot=6 inputs=3 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195 reverse=26
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+            in enum32 type=Windows.Storage.AccessCache.RecentStorageItemVisibility name=visibility
+            out string return
+    method add_or_replace
+        method AddOrReplace slot=8 inputs=2 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=65
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+        method AddOrReplace slot=9 inputs=3 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=101
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+        method AddOrReplace slot=7 inputs=4 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195 reverse=46
+            in string name=token
+            in interface type=Windows.Storage.IStorageItem name=file
+            in string name=metadata
+            in enum32 type=Windows.Storage.AccessCache.RecentStorageItemVisibility name=visibility
+    method check_access
+        method CheckAccess slot=19 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=224
+            in interface type=Windows.Storage.IStorageItem name=file
+            out boolean return
+    method clear
+        method Clear slot=18 inputs=0 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=0 reverse=217
+    method contains_item
+        method ContainsItem slot=17 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=211
+            in string name=token
+            out boolean return
+    method get_file_async
+        method GetFileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=144
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method GetFileAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=188
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method get_folder_async
+        method GetFolderAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=163
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+        method GetFolderAsync slot=15 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=197
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
+    method get_item_async
+        method GetItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=124
+            in string name=token
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+        method GetItemAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=117 reverse=175
+            in string name=token
+            in enum_u32 type=Windows.Storage.AccessCache.AccessCacheOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
+    method remove
+        method Remove slot=16 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=202
+            in string name=token
+
+enum T parameterized
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList,Windows.Storage.AccessCache.ItemRemovedEventArgs> concrete
+    guid 029dace8-98d1-5bf7-b780-9717e95027ff
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList;{016239d5-510d-411e-8cf1-c3d1effa4c33});rc(Windows.Storage.AccessCache.ItemRemovedEventArgs;{59677e5c-55be-4c66-ba66-5eaea79d2631}))
+    argument Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList
+    argument Windows.Storage.AccessCache.ItemRemovedEventArgs
+
+interface Windows.Storage.IStorageItem external
+    py winrt.windows.storage._IStorageItem
+    guid 4207a996-ca2f-42f7-bde8-8b10457a7f30
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+class Windows.System.User external
+    py winrt.windows.system.User

@@ -1,0 +1,1402 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Chat
+
+class Windows.ApplicationModel.Chat.ChatCapabilities python_type
+    py ChatCapabilities
+    signature rc(Windows.ApplicationModel.Chat.ChatCapabilities;{3aff77bc-39c9-4dd1-ad2d-3964dd9d403f})
+    default Windows.ApplicationModel.Chat.IChatCapabilities
+    requires Windows.ApplicationModel.Chat.IChatCapabilities
+    property is_chat_capable
+        get get_IsChatCapable slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilities shape=4 reverse=43
+            out boolean return
+    property is_file_transfer_capable
+        get get_IsFileTransferCapable slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilities shape=4 reverse=62
+            out boolean return
+    property is_geo_location_push_capable
+        get get_IsGeoLocationPushCapable slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilities shape=4 reverse=99
+            out boolean return
+    property is_integrated_messaging_capable
+        get get_IsIntegratedMessagingCapable slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilities shape=4 reverse=121
+            out boolean return
+    property is_online
+        get get_IsOnline slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilities shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.Chat.ChatCapabilitiesManager static python_type
+    py ChatCapabilitiesManager
+    factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2
+    factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics
+    method get_cached_capabilities_async static
+        method GetCachedCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=25 static
+            in string name=address
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
+        method GetCachedCapabilitiesAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=25 static
+            in string name=address
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
+    method get_capabilities_from_network_async static
+        method GetCapabilitiesFromNetworkAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=45 static
+            in string name=address
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
+        method GetCapabilitiesFromNetworkAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=45 static
+            in string name=address
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
+
+class Windows.ApplicationModel.Chat.ChatConversation python_type
+    py ChatConversation
+    signature rc(Windows.ApplicationModel.Chat.ChatConversation;{a58c080d-1a6f-46dc-8f3d-f5028660b6ee})
+    default Windows.ApplicationModel.Chat.IChatConversation
+    requires Windows.ApplicationModel.Chat.IChatConversation
+    requires Windows.ApplicationModel.Chat.IChatConversation2
+    requires Windows.ApplicationModel.Chat.IChatItem
+    property subject
+        get get_Subject slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=62
+            out string return
+        put put_Subject slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=99
+            in string name=value
+    property is_conversation_muted
+        get get_IsConversationMuted slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=121
+            out boolean return
+        put put_IsConversationMuted slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=141
+            in boolean name=value
+    property has_unread_messages
+        get get_HasUnreadMessages slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=22
+            out boolean return
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=43
+            out string return
+    property most_recent_message_id
+        get get_MostRecentMessageId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=162
+            out string return
+    property participants
+        get get_Participants slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property threading_info
+        get get_ThreadingInfo slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=186
+            out class type=Windows.ApplicationModel.Chat.ChatConversationThreadingInfo return
+    property can_modify_participants
+        get get_CanModifyParticipants slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation2 shape=4 reverse=22
+            out boolean return
+        put put_CanModifyParticipants slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation2 shape=4 reverse=43
+            in boolean name=value
+    property item_kind
+        get get_ItemKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatItem shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Chat.ChatItemKind return
+    event remote_participant_composing_changed
+        add add_RemoteParticipantComposingChanged slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=51 reverse=238
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatConversation,Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_RemoteParticipantComposingChanged slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=26 reverse=245
+            in event_token name=token
+    method delete_async
+        method DeleteAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=194
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_message_reader
+        method GetMessageReader slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=202
+            out class type=Windows.ApplicationModel.Chat.ChatMessageReader return
+    method mark_messages_as_read_async
+        method MarkMessagesAsReadAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=210
+            out interface type=Windows.Foundation.IAsyncAction return
+        method MarkMessagesAsReadAsync slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=89
+            in datetime name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method notify_local_participant_composing
+        method NotifyLocalParticipantComposing slot=20 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=117 reverse=230
+            in string name=transportId
+            in string name=participantAddress
+            in boolean name=isComposing
+    method notify_remote_participant_composing
+        method NotifyRemoteParticipantComposing slot=21 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=117
+            in string name=transportId
+            in string name=participantAddress
+            in boolean name=isComposing
+    method save_async
+        method SaveAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversation shape=4 reverse=223
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Chat.ChatConversationReader python_type
+    py ChatConversationReader
+    signature rc(Windows.ApplicationModel.Chat.ChatConversationReader;{055136d2-de32-4a47-a93a-b3dc0833852b})
+    default Windows.ApplicationModel.Chat.IChatConversationReader
+    requires Windows.ApplicationModel.Chat.IChatConversationReader
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatConversation>> return
+        method ReadBatchAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationReader shape=51 reverse=44
+            in int32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatConversation>> return
+
+class Windows.ApplicationModel.Chat.ChatConversationThreadingInfo activatable python_type
+    py ChatConversationThreadingInfo
+    signature rc(Windows.ApplicationModel.Chat.ChatConversationThreadingInfo;{331c21dc-7a07-4422-a32c-24be7c6dab24})
+    default Windows.ApplicationModel.Chat.IChatConversationThreadingInfo
+    requires Windows.ApplicationModel.Chat.IChatConversationThreadingInfo
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property kind
+        get get_Kind slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=173
+            out enum32 type=Windows.ApplicationModel.Chat.ChatConversationThreadingKind return
+        put put_Kind slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=186
+            in enum32 type=Windows.ApplicationModel.Chat.ChatConversationThreadingKind name=value
+    property custom
+        get get_Custom slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=62
+            out string return
+        put put_Custom slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=99
+            in string name=value
+    property conversation_id
+        get get_ConversationId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=121
+            out string return
+        put put_ConversationId slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=141
+            in string name=value
+    property contact_id
+        get get_ContactId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=22
+            out string return
+        put put_ContactId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=43
+            in string name=value
+    property participants
+        get get_Participants slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatConversationThreadingInfo shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+enum Windows.ApplicationModel.Chat.ChatConversationThreadingKind python_type
+    py ChatConversationThreadingKind
+    signature enum(Windows.ApplicationModel.Chat.ChatConversationThreadingKind;i4)
+
+enum Windows.ApplicationModel.Chat.ChatItemKind python_type
+    py ChatItemKind
+    signature enum(Windows.ApplicationModel.Chat.ChatItemKind;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessage activatable python_type
+    py ChatMessage
+    signature rc(Windows.ApplicationModel.Chat.ChatMessage;{4b39052a-1142-5089-76da-f2db3d17cd05})
+    default Windows.ApplicationModel.Chat.IChatMessage
+    requires Windows.ApplicationModel.Chat.IChatMessage
+    requires Windows.ApplicationModel.Chat.IChatMessage2
+    requires Windows.ApplicationModel.Chat.IChatMessage3
+    requires Windows.ApplicationModel.Chat.IChatMessage4
+    requires Windows.ApplicationModel.Chat.IChatItem
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property item_kind
+        get get_ItemKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatItem shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Chat.ChatItemKind return
+    property is_incoming
+        get get_IsIncoming slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=162
+            out boolean return
+        put put_IsIncoming slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=173
+            in boolean name=value
+    property is_forwarding_disabled
+        get get_IsForwardingDisabled slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=141
+            out boolean return
+        put put_IsForwardingDisabled slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=141
+            in boolean name=value
+    property transport_id
+        get get_TransportId slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=232
+            out string return
+        put put_TransportId slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=237
+            in string name=value
+    property status
+        get get_Status slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=218
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageStatus return
+        put put_Status slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=259
+            in enum32 type=Windows.ApplicationModel.Chat.ChatMessageStatus name=value
+    property from_
+        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=99
+            out string return
+        put put_From slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=62
+            in string name=value
+    property body
+        get get_Body slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=43
+            out string return
+        put put_Body slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=62
+            in string name=value
+    property subject
+        get get_Subject slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=223
+            out string return
+        put put_Subject slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=263
+            in string name=value
+    property is_read
+        get get_IsRead slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=173
+            out boolean return
+        put put_IsRead slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=186
+            in boolean name=value
+    property network_timestamp
+        get get_NetworkTimestamp slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=194
+            out datetime return
+        put put_NetworkTimestamp slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=26 reverse=245
+            in datetime name=value
+    property local_timestamp
+        get get_LocalTimestamp slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=186
+            out datetime return
+        put put_LocalTimestamp slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=26 reverse=398
+            in datetime name=value
+    property recipient_send_statuses
+        get get_RecipientSendStatuses slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Chat.ChatMessageStatus> return
+    property recipients
+        get get_Recipients slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property transport_friendly_name
+        get get_TransportFriendlyName slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=228
+            out string return
+    property attachments
+        get get_Attachments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Chat.ChatMessageAttachment> return
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage shape=4 reverse=121
+            out string return
+    property is_seen
+        get get_IsSeen slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=194
+            out boolean return
+        put put_IsSeen slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=202
+            in boolean name=value
+    property message_kind
+        get get_MessageKind slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=223
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageKind return
+        put put_MessageKind slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=228
+            in enum32 type=Windows.ApplicationModel.Chat.ChatMessageKind name=value
+    property is_received_during_quiet_hours
+        get get_IsReceivedDuringQuietHours slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=247
+            out boolean return
+        put put_IsReceivedDuringQuietHours slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=252
+            in boolean name=value
+    property is_auto_reply
+        get get_IsAutoReply slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=99
+            out boolean return
+        put put_IsAutoReply slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=121
+            in boolean name=value
+    property estimated_download_size
+        get get_EstimatedDownloadSize slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=22
+            out uint64 return
+        put put_EstimatedDownloadSize slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=3 reverse=40
+            in uint64 name=value
+    property threading_info
+        get get_ThreadingInfo slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=273
+            out class type=Windows.ApplicationModel.Chat.ChatConversationThreadingInfo return
+        put put_ThreadingInfo slot=32 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=280
+            in class type=Windows.ApplicationModel.Chat.ChatConversationThreadingInfo name=value
+    property should_suppress_notification
+        get get_ShouldSuppressNotification slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=266
+            out boolean return
+        put put_ShouldSuppressNotification slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=270
+            in boolean name=value
+    property remote_id
+        get get_RemoteId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage3 shape=4 reverse=22
+            out string return
+        put put_RemoteId slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=255
+            in string name=value
+    property message_operator_kind
+        get get_MessageOperatorKind slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=232
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageOperatorKind return
+        put put_MessageOperatorKind slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=237
+            in enum32 type=Windows.ApplicationModel.Chat.ChatMessageOperatorKind name=value
+    property is_reply_disabled
+        get get_IsReplyDisabled slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=162
+            out boolean return
+    property is_sim_message
+        get get_IsSimMessage slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=210
+            out boolean return
+    property recipients_delivery_infos
+        get get_RecipientsDeliveryInfos slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage2 shape=4 reverse=285
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo> return
+    property sync_id
+        get get_SyncId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessage4 shape=4 reverse=22
+            out string return
+        put put_SyncId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessage4 shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Chat.ChatMessageAttachment python_type
+    py ChatMessageAttachment
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageAttachment;{c7c4fd74-bf63-58eb-508c-8b863ff16b67})
+    default Windows.ApplicationModel.Chat.IChatMessageAttachment
+    requires Windows.ApplicationModel.Chat.IChatMessageAttachment
+    requires Windows.ApplicationModel.Chat.IChatMessageAttachment2
+    factory Windows.ApplicationModel.Chat.IChatMessageAttachmentFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachmentFactory shape=117 reverse=25
+            in string name=mimeType
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=dataStreamReference
+            out class type=Windows.ApplicationModel.Chat.ChatMessageAttachment return
+    property text
+        get get_Text slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=162
+            out string return
+        put put_Text slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=173
+            in string name=value
+    property mime_type
+        get get_MimeType slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=121
+            out string return
+        put put_MimeType slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=141
+            in string name=value
+    property group_id
+        get get_GroupId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=62
+            out uint32 return
+        put put_GroupId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=99
+            in uint32 name=value
+    property data_stream_reference
+        get get_DataStreamReference slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_DataStreamReference slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property transfer_progress
+        get get_TransferProgress slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=4 reverse=62
+            out double return
+        put put_TransferProgress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=2
+            in double name=value
+    property thumbnail
+        get get_Thumbnail slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Thumbnail slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property original_file_name
+        get get_OriginalFileName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=4 reverse=121
+            out string return
+        put put_OriginalFileName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageAttachment2 shape=4 reverse=141
+            in string name=value
+
+class Windows.ApplicationModel.Chat.ChatMessageBlocking static python_type
+    py ChatMessageBlocking
+    factory Windows.ApplicationModel.Chat.IChatMessageBlockingStatic
+    method mark_message_as_blocked_async static
+        method MarkMessageAsBlockedAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageBlockingStatic shape=117 reverse=25 static
+            in string name=localChatMessageId
+            in boolean name=blocked
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Chat.ChatMessageChange python_type
+    py ChatMessageChange
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageChange;{1c18c355-421e-54b8-6d38-6b3a6c82fccc})
+    default Windows.ApplicationModel.Chat.IChatMessageChange
+    requires Windows.ApplicationModel.Chat.IChatMessageChange
+    property change_type
+        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageChange shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageChangeType return
+    property message
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageChange shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Chat.ChatMessage return
+
+class Windows.ApplicationModel.Chat.ChatMessageChangeReader python_type
+    py ChatMessageChangeReader
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageChangeReader;{14267020-28ce-5f26-7b05-9a5c7cce87ca})
+    default Windows.ApplicationModel.Chat.IChatMessageChangeReader
+    requires Windows.ApplicationModel.Chat.IChatMessageChangeReader
+    method accept_changes
+        method AcceptChanges slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeReader shape=0 reverse=16
+    method accept_changes_through
+        method AcceptChangesThrough slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeReader shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Chat.ChatMessageChange name=lastChangeToAcknowledge
+    method read_batch_async
+        method ReadBatchAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeReader shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageChange>> return
+
+class Windows.ApplicationModel.Chat.ChatMessageChangeTracker python_type
+    py ChatMessageChangeTracker
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageChangeTracker;{60b7f066-70a0-5224-508c-242ef7c1d06f})
+    default Windows.ApplicationModel.Chat.IChatMessageChangeTracker
+    requires Windows.ApplicationModel.Chat.IChatMessageChangeTracker
+    method enable
+        method Enable slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeTracker shape=0 reverse=16
+    method get_change_reader
+        method GetChangeReader slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeTracker shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Chat.ChatMessageChangeReader return
+    method reset
+        method Reset slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageChangeTracker shape=0 reverse=55
+
+enum Windows.ApplicationModel.Chat.ChatMessageChangeType python_type
+    py ChatMessageChangeType
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageChangeType;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessageChangedDeferral python_type
+    py ChatMessageChangedDeferral
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageChangedDeferral;{fbc6b30c-788c-4dcc-ace7-6282382968cf})
+    default Windows.ApplicationModel.Chat.IChatMessageChangedDeferral
+    requires Windows.ApplicationModel.Chat.IChatMessageChangedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageChangedDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs python_type
+    py ChatMessageChangedEventArgs
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs;{b6b73e2d-691c-4edf-8660-6eb9896892e3})
+    default Windows.ApplicationModel.Chat.IChatMessageChangedEventArgs
+    requires Windows.ApplicationModel.Chat.IChatMessageChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Chat.ChatMessageChangedDeferral return
+
+enum Windows.ApplicationModel.Chat.ChatMessageKind python_type
+    py ChatMessageKind
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageKind;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessageManager static python_type
+    py ChatMessageManager
+    factory Windows.ApplicationModel.Chat.IChatMessageManager2Statics
+    factory Windows.ApplicationModel.Chat.IChatMessageManagerStatic
+    factory Windows.ApplicationModel.Chat.IChatMessageManagerStatics3
+    method get_transport_async static
+        method GetTransportAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManager2Statics shape=51 reverse=44 static
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessageTransport> return
+    method get_transports_async static
+        method GetTransportsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManagerStatic shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageTransport>> return
+    method register_transport_async static
+        method RegisterTransportAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManager2Statics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method request_store_async static
+        method RequestStoreAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManagerStatic shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessageStore> return
+    method request_sync_manager_async static
+        method RequestSyncManagerAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManagerStatics3 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatSyncManager> return
+    method show_compose_sms_message_async static
+        method ShowComposeSmsMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageManagerStatic shape=51 reverse=65 static
+            in class type=Windows.ApplicationModel.Chat.ChatMessage name=message
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_sms_settings static
+        method ShowSmsSettings slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageManagerStatic shape=0 reverse=93 static
+
+class Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails python_type
+    py ChatMessageNotificationTriggerDetails
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails;{fd344dfb-3063-4e17-8586-c6c08262e6c0})
+    default Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails
+    requires Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails
+    requires Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2
+    property chat_message
+        get get_ChatMessage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Chat.ChatMessage return
+    property should_display_toast
+        get get_ShouldDisplayToast slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2 shape=4 reverse=22
+            out boolean return
+    property should_update_action_center
+        get get_ShouldUpdateActionCenter slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2 shape=4 reverse=99
+            out boolean return
+    property should_update_badge
+        get get_ShouldUpdateBadge slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2 shape=4 reverse=62
+            out boolean return
+    property should_update_detail_text
+        get get_ShouldUpdateDetailText slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2 shape=4 reverse=43
+            out boolean return
+
+enum Windows.ApplicationModel.Chat.ChatMessageOperatorKind python_type
+    py ChatMessageOperatorKind
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageOperatorKind;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessageReader python_type
+    py ChatMessageReader
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageReader;{b6ea78ce-4489-56f9-76aa-e204682514cf})
+    default Windows.ApplicationModel.Chat.IChatMessageReader
+    requires Windows.ApplicationModel.Chat.IChatMessageReader
+    requires Windows.ApplicationModel.Chat.IChatMessageReader2
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessage>> return
+        method ReadBatchAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageReader2 shape=51 reverse=24
+            in int32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessage>> return
+
+enum Windows.ApplicationModel.Chat.ChatMessageStatus python_type
+    py ChatMessageStatus
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageStatus;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessageStore python_type
+    py ChatMessageStore
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageStore;{31f2fd01-ccf6-580b-4976-0a07dd5d3b47})
+    default Windows.ApplicationModel.Chat.IChatMessageStore
+    requires Windows.ApplicationModel.Chat.IChatMessageStore
+    requires Windows.ApplicationModel.Chat.IChatMessageStore2
+    requires Windows.ApplicationModel.Chat.IChatMessageStore3
+    property change_tracker
+        get get_ChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Chat.ChatMessageChangeTracker return
+    event message_changed
+        add add_MessageChanged slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatMessageStore,Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs> name=value
+            out event_token return
+        remove remove_MessageChanged slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=26 reverse=215
+            in event_token name=value
+    event store_changed
+        add add_StoreChanged slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatMessageStore,Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StoreChanged slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=26 reverse=400
+            in event_token name=token
+    method delete_message_async
+        method DeleteMessageAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=44
+            in string name=localMessageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method download_message_async
+        method DownloadMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=65
+            in string name=localChatMessageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method forward_message_async
+        method ForwardMessageAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=117 reverse=25
+            in string name=localChatMessageId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=addresses
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessage> return
+    method get_conversation_async
+        method GetConversationAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=44
+            in string name=conversationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatConversation> return
+        method GetConversationAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=117 reverse=66
+            in string name=conversationId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=transportIds
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatConversation> return
+    method get_conversation_from_threading_info_async
+        method GetConversationFromThreadingInfoAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=100
+            in class type=Windows.ApplicationModel.Chat.ChatConversationThreadingInfo name=threadingInfo
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatConversation> return
+    method get_conversation_reader
+        method GetConversationReader slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=4 reverse=121
+            out class type=Windows.ApplicationModel.Chat.ChatConversationReader return
+        method GetConversationReader slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=144
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=transportIds
+            out class type=Windows.ApplicationModel.Chat.ChatConversationReader return
+    method get_message_async
+        method GetMessageAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=100
+            in string name=localChatMessageId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessage> return
+    method get_message_by_remote_id_async
+        method GetMessageByRemoteIdAsync slot=12 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=117 reverse=164
+            in string name=transportId
+            in string name=remoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessage> return
+    method get_message_by_sync_id_async
+        method GetMessageBySyncIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore3 shape=51 reverse=24
+            in string name=syncId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessage> return
+    method get_message_reader
+        method GetMessageReader slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=4 reverse=121
+            out class type=Windows.ApplicationModel.Chat.ChatMessageReader return
+        method GetMessageReader slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=89
+            in timespan name=recentTimeLimit
+            out class type=Windows.ApplicationModel.Chat.ChatMessageReader return
+    method get_search_reader
+        method GetSearchReader slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=211
+            in class type=Windows.ApplicationModel.Chat.ChatQueryOptions name=value
+            out class type=Windows.ApplicationModel.Chat.ChatSearchReader return
+    method get_unseen_count_async
+        method GetUnseenCountAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=4 reverse=173
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+        method GetUnseenCountAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=187
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=transportIds
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+    method mark_as_seen_async
+        method MarkAsSeenAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=4 reverse=194
+            out interface type=Windows.Foundation.IAsyncAction return
+        method MarkAsSeenAsync slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=203
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=transportIds
+            out interface type=Windows.Foundation.IAsyncAction return
+    method mark_message_read_async
+        method MarkMessageReadAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=163
+            in string name=localChatMessageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method retry_send_message_async
+        method RetrySendMessageAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=174
+            in string name=localChatMessageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method save_message_async
+        method SaveMessageAsync slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=219
+            in class type=Windows.ApplicationModel.Chat.ChatMessage name=chatMessage
+            out interface type=Windows.Foundation.IAsyncAction return
+    method send_message_async
+        method SendMessageAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=187
+            in class type=Windows.ApplicationModel.Chat.ChatMessage name=chatMessage
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_cancel_download_message_async
+        method TryCancelDownloadMessageAsync slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=224
+            in string name=localChatMessageId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_cancel_send_message_async
+        method TryCancelSendMessageAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore2 shape=51 reverse=229
+            in string name=localChatMessageId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method validate_message
+        method ValidateMessage slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStore shape=51 reverse=196
+            in class type=Windows.ApplicationModel.Chat.ChatMessage name=chatMessage
+            out class type=Windows.ApplicationModel.Chat.ChatMessageValidationResult return
+
+class Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs python_type
+    py ChatMessageStoreChangedEventArgs
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs;{65c66fac-fe8c-46d4-9119-57b8410311d5})
+    default Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs
+    requires Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Chat.ChatStoreChangedEventKind return
+
+class Windows.ApplicationModel.Chat.ChatMessageTransport python_type
+    py ChatMessageTransport
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageTransport;{63a9dbf8-e6b3-5c9a-5f85-d47925b9bd18})
+    default Windows.ApplicationModel.Chat.IChatMessageTransport
+    requires Windows.ApplicationModel.Chat.IChatMessageTransport
+    requires Windows.ApplicationModel.Chat.IChatMessageTransport2
+    property is_active
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport shape=4 reverse=43
+            out boolean return
+    property is_app_set_as_notification_provider
+        get get_IsAppSetAsNotificationProvider slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport shape=4 reverse=22
+            out boolean return
+    property transport_friendly_name
+        get get_TransportFriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport shape=4 reverse=62
+            out string return
+    property transport_id
+        get get_TransportId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport shape=4 reverse=99
+            out string return
+    property configuration
+        get get_Configuration slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport2 shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration return
+    property transport_kind
+        get get_TransportKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport2 shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageTransportKind return
+    method request_set_as_notification_provider_async
+        method RequestSetAsNotificationProviderAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransport shape=4 reverse=121
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration python_type
+    py ChatMessageTransportConfiguration
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration;{879ff725-1a08-4aca-a075-3355126312e6})
+    default Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration
+    requires Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration
+    property extended_properties
+        get get_ExtendedProperties slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property max_attachment_count
+        get get_MaxAttachmentCount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration shape=4 reverse=22
+            out int32 return
+    property max_message_size_in_kilobytes
+        get get_MaxMessageSizeInKilobytes slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration shape=4 reverse=43
+            out int32 return
+    property max_recipient_count
+        get get_MaxRecipientCount slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration shape=4 reverse=62
+            out int32 return
+    property supported_video_format
+        get get_SupportedVideoFormat slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration shape=4 reverse=99
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+
+enum Windows.ApplicationModel.Chat.ChatMessageTransportKind python_type
+    py ChatMessageTransportKind
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageTransportKind;i4)
+
+class Windows.ApplicationModel.Chat.ChatMessageValidationResult python_type
+    py ChatMessageValidationResult
+    signature rc(Windows.ApplicationModel.Chat.ChatMessageValidationResult;{25e93a03-28ec-5889-569b-7e486b126f18})
+    default Windows.ApplicationModel.Chat.IChatMessageValidationResult
+    requires Windows.ApplicationModel.Chat.IChatMessageValidationResult
+    property max_part_count
+        get get_MaxPartCount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageValidationResult shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property part_count
+        get get_PartCount slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageValidationResult shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property remaining_character_count_in_part
+        get get_RemainingCharacterCountInPart slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageValidationResult shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property status
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatMessageValidationResult shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageValidationStatus return
+
+enum Windows.ApplicationModel.Chat.ChatMessageValidationStatus python_type
+    py ChatMessageValidationStatus
+    signature enum(Windows.ApplicationModel.Chat.ChatMessageValidationStatus;i4)
+
+class Windows.ApplicationModel.Chat.ChatQueryOptions activatable python_type
+    py ChatQueryOptions
+    signature rc(Windows.ApplicationModel.Chat.ChatQueryOptions;{2fd364a6-bf36-42f7-b7e7-923c0aabfe16})
+    default Windows.ApplicationModel.Chat.IChatQueryOptions
+    requires Windows.ApplicationModel.Chat.IChatQueryOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property search_string
+        get get_SearchString slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatQueryOptions shape=4 reverse=22
+            out string return
+        put put_SearchString slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatQueryOptions shape=4 reverse=43
+            in string name=value
+
+class Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo activatable python_type
+    py ChatRecipientDeliveryInfo
+    signature rc(Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo;{ffc7b2a2-283c-4c0a-8a0e-8c33bdbf0545})
+    default Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo
+    requires Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property transport_address
+        get get_TransportAddress slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=22
+            out string return
+        put put_TransportAddress slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=43
+            in string name=value
+    property read_time
+        get get_ReadTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_ReadTime slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property delivery_time
+        get get_DeliveryTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_DeliveryTime slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property is_error_permanent
+        get get_IsErrorPermanent slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=194
+            out boolean return
+    property status
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=202
+            out enum32 type=Windows.ApplicationModel.Chat.ChatMessageStatus return
+    property transport_error_code
+        get get_TransportErrorCode slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=186
+            out int32 return
+    property transport_error_code_category
+        get get_TransportErrorCodeCategory slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory return
+    property transport_interpreted_error_code
+        get get_TransportInterpretedErrorCode slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo shape=4 reverse=173
+            out enum32 type=Windows.ApplicationModel.Chat.ChatTransportInterpretedErrorCode return
+
+enum Windows.ApplicationModel.Chat.ChatRestoreHistorySpan python_type
+    py ChatRestoreHistorySpan
+    signature enum(Windows.ApplicationModel.Chat.ChatRestoreHistorySpan;i4)
+
+class Windows.ApplicationModel.Chat.ChatSearchReader python_type
+    py ChatSearchReader
+    signature rc(Windows.ApplicationModel.Chat.ChatSearchReader;{4665fe49-9020-4752-980d-39612325f589})
+    default Windows.ApplicationModel.Chat.IChatSearchReader
+    requires Windows.ApplicationModel.Chat.IChatSearchReader
+    method read_batch_async
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSearchReader shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.IChatItem>> return
+        method ReadBatchAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSearchReader shape=51 reverse=44
+            in int32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.IChatItem>> return
+
+enum Windows.ApplicationModel.Chat.ChatStoreChangedEventKind python_type
+    py ChatStoreChangedEventKind
+    signature enum(Windows.ApplicationModel.Chat.ChatStoreChangedEventKind;i4)
+
+class Windows.ApplicationModel.Chat.ChatSyncConfiguration python_type
+    py ChatSyncConfiguration
+    signature rc(Windows.ApplicationModel.Chat.ChatSyncConfiguration;{09f869b2-69f4-4aff-82b6-06992ff402d2})
+    default Windows.ApplicationModel.Chat.IChatSyncConfiguration
+    requires Windows.ApplicationModel.Chat.IChatSyncConfiguration
+    property restore_history_span
+        get get_RestoreHistorySpan slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncConfiguration shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Chat.ChatRestoreHistorySpan return
+        put put_RestoreHistorySpan slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatSyncConfiguration shape=4 reverse=99
+            in enum32 type=Windows.ApplicationModel.Chat.ChatRestoreHistorySpan name=value
+    property is_sync_enabled
+        get get_IsSyncEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncConfiguration shape=4 reverse=22
+            out boolean return
+        put put_IsSyncEnabled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatSyncConfiguration shape=4 reverse=43
+            in boolean name=value
+
+class Windows.ApplicationModel.Chat.ChatSyncManager python_type
+    py ChatSyncManager
+    signature rc(Windows.ApplicationModel.Chat.ChatSyncManager;{7ba52c63-2650-486f-b4b4-6bd9d3d63c84})
+    default Windows.ApplicationModel.Chat.IChatSyncManager
+    requires Windows.ApplicationModel.Chat.IChatSyncManager
+    property configuration
+        get get_Configuration slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Chat.ChatSyncConfiguration return
+    method associate_account_async
+        method AssociateAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=51 reverse=44
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out interface type=Windows.Foundation.IAsyncAction return
+    method is_account_associated
+        method IsAccountAssociated slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=51 reverse=100
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            out boolean return
+    method set_configuration_async
+        method SetConfigurationAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=51 reverse=144
+            in class type=Windows.ApplicationModel.Chat.ChatSyncConfiguration name=configuration
+            out interface type=Windows.Foundation.IAsyncAction return
+    method start_sync
+        method StartSync slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=0 reverse=117
+    method unassociate_account_async
+        method UnassociateAccountAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatSyncManager shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory python_type
+    py ChatTransportErrorCodeCategory
+    signature enum(Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory;i4)
+
+enum Windows.ApplicationModel.Chat.ChatTransportInterpretedErrorCode python_type
+    py ChatTransportInterpretedErrorCode
+    signature enum(Windows.ApplicationModel.Chat.ChatTransportInterpretedErrorCode;i4)
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<System.Int32> concrete
+    guid 968b9665-06ed-5774-8f53-8edeabd5f7b5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> concrete
+    guid 30889035-c687-573b-86e4-024e38f2aa6d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatCapabilities;{3aff77bc-39c9-4dd1-ad2d-3964dd9d403f}))
+    argument Windows.ApplicationModel.Chat.ChatCapabilities
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatConversation> concrete
+    guid c4d8e414-0e54-5adf-88c3-e56d4e88b5d4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatConversation;{a58c080d-1a6f-46dc-8f3d-f5028660b6ee}))
+    argument Windows.ApplicationModel.Chat.ChatConversation
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessage> concrete
+    guid ee129c22-da8f-5c55-90b6-a73bacc9d735
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatMessage;{4b39052a-1142-5089-76da-f2db3d17cd05}))
+    argument Windows.ApplicationModel.Chat.ChatMessage
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessageStore> concrete
+    guid 19642405-0e06-5119-9ac5-16cfd106b337
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatMessageStore;{31f2fd01-ccf6-580b-4976-0a07dd5d3b47}))
+    argument Windows.ApplicationModel.Chat.ChatMessageStore
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatMessageTransport> concrete
+    guid 275e7895-3a8e-5175-b76f-21d2e045bd2f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatMessageTransport;{63a9dbf8-e6b3-5c9a-5f85-d47925b9bd18}))
+    argument Windows.ApplicationModel.Chat.ChatMessageTransport
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatSyncManager> concrete
+    guid a4667a6a-1c64-51f6-972e-a1050719f8ea
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.ChatSyncManager;{7ba52c63-2650-486f-b4b4-6bd9d3d63c84}))
+    argument Windows.ApplicationModel.Chat.ChatSyncManager
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.RcsTransport> concrete
+    guid f88774e8-9664-5df5-abbd-c64556d25062
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Chat.RcsTransport;{fea34759-f37c-4319-8546-ec84d21d30ff}))
+    argument Windows.ApplicationModel.Chat.RcsTransport
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatConversation>> concrete
+    guid d531f714-d3c7-589b-875c-bfaa27522478
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatConversation;{a58c080d-1a6f-46dc-8f3d-f5028660b6ee})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatConversation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessage>> concrete
+    guid d9f6a9dd-7fcf-5e9e-86c7-151663db67cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessage;{4b39052a-1142-5089-76da-f2db3d17cd05})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessage>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageChange>> concrete
+    guid 831968b7-aa61-58cc-8713-98f65cad4ed9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessageChange;{1c18c355-421e-54b8-6d38-6b3a6c82fccc})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageChange>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageTransport>> concrete
+    guid d558786d-95ce-5f23-9e90-539902ac92a6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessageTransport;{63a9dbf8-e6b3-5c9a-5f85-d47925b9bd18})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageTransport>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.IChatItem>> concrete
+    guid 65b3eea1-7b6f-51a0-a2eb-7fb1dc473022
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{8751d000-ceb1-4243-b803-15d45a1dd428}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.IChatItem>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsTransport>> concrete
+    guid 17e1f428-6e60-5153-b0a6-5faf186561c1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.RcsTransport;{fea34759-f37c-4319-8546-ec84d21d30ff})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsTransport>
+
+interface Windows.ApplicationModel.Chat.IChatCapabilities
+    guid 3aff77bc-39c9-4dd1-ad2d-3964dd9d403f
+
+interface Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics
+    guid b57a2f30-7041-458e-b0cf-7c0d9fea333a
+
+interface Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2
+    guid e30d4274-d5c1-4ac9-9ffc-40e69184fec8
+
+interface Windows.ApplicationModel.Chat.IChatConversation
+    guid a58c080d-1a6f-46dc-8f3d-f5028660b6ee
+
+interface Windows.ApplicationModel.Chat.IChatConversation2
+    guid 0a030cd1-983a-47aa-9a90-ee48ee997b59
+
+interface Windows.ApplicationModel.Chat.IChatConversationReader
+    guid 055136d2-de32-4a47-a93a-b3dc0833852b
+
+interface Windows.ApplicationModel.Chat.IChatConversationThreadingInfo
+    guid 331c21dc-7a07-4422-a32c-24be7c6dab24
+
+interface Windows.ApplicationModel.Chat.IChatItem python_type
+    py _IChatItem
+    guid 8751d000-ceb1-4243-b803-15d45a1dd428
+    signature {8751d000-ceb1-4243-b803-15d45a1dd428}
+    property item_kind
+        get get_ItemKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatItem shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Chat.ChatItemKind return
+
+interface Windows.ApplicationModel.Chat.IChatMessage
+    guid 4b39052a-1142-5089-76da-f2db3d17cd05
+
+interface Windows.ApplicationModel.Chat.IChatMessage2
+    guid 86668332-543f-49f5-ac71-6c2afc6565fd
+
+interface Windows.ApplicationModel.Chat.IChatMessage3
+    guid 74eb2fb0-3ba7-459f-8e0b-e8af0febd9ad
+
+interface Windows.ApplicationModel.Chat.IChatMessage4
+    guid 2d144b0f-d2bf-460c-aa68-6d3f8483c9bf
+
+interface Windows.ApplicationModel.Chat.IChatMessageAttachment
+    guid c7c4fd74-bf63-58eb-508c-8b863ff16b67
+
+interface Windows.ApplicationModel.Chat.IChatMessageAttachment2
+    guid 5ed99270-7dd1-4a87-a8ce-acdd87d80dc8
+
+interface Windows.ApplicationModel.Chat.IChatMessageAttachmentFactory
+    guid 205852a2-a356-5b71-6ca9-66c985b7d0d5
+
+interface Windows.ApplicationModel.Chat.IChatMessageBlockingStatic
+    guid f6b9a380-cdea-11e4-8830-0800200c9a66
+
+interface Windows.ApplicationModel.Chat.IChatMessageChange
+    guid 1c18c355-421e-54b8-6d38-6b3a6c82fccc
+
+interface Windows.ApplicationModel.Chat.IChatMessageChangeReader
+    guid 14267020-28ce-5f26-7b05-9a5c7cce87ca
+
+interface Windows.ApplicationModel.Chat.IChatMessageChangeTracker
+    guid 60b7f066-70a0-5224-508c-242ef7c1d06f
+
+interface Windows.ApplicationModel.Chat.IChatMessageChangedDeferral
+    guid fbc6b30c-788c-4dcc-ace7-6282382968cf
+
+interface Windows.ApplicationModel.Chat.IChatMessageChangedEventArgs
+    guid b6b73e2d-691c-4edf-8660-6eb9896892e3
+
+interface Windows.ApplicationModel.Chat.IChatMessageManager2Statics
+    guid 1d45390f-9f4f-4e35-964e-1b9ca61ac044
+
+interface Windows.ApplicationModel.Chat.IChatMessageManagerStatic
+    guid f15c60f7-d5e8-5e92-556d-e03b60253104
+
+interface Windows.ApplicationModel.Chat.IChatMessageManagerStatics3
+    guid 208b830d-6755-48cc-9ab3-fd03c463fc92
+
+interface Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails
+    guid fd344dfb-3063-4e17-8586-c6c08262e6c0
+
+interface Windows.ApplicationModel.Chat.IChatMessageNotificationTriggerDetails2
+    guid 6bb522e0-aa07-4fd1-9471-77934fb75ee6
+
+interface Windows.ApplicationModel.Chat.IChatMessageReader
+    guid b6ea78ce-4489-56f9-76aa-e204682514cf
+
+interface Windows.ApplicationModel.Chat.IChatMessageReader2
+    guid 89643683-64bb-470d-9df4-0de8be1a05bf
+
+interface Windows.ApplicationModel.Chat.IChatMessageStore
+    guid 31f2fd01-ccf6-580b-4976-0a07dd5d3b47
+
+interface Windows.ApplicationModel.Chat.IChatMessageStore2
+    guid ad4dc4ee-3ad4-491b-b311-abdf9bb22768
+
+interface Windows.ApplicationModel.Chat.IChatMessageStore3
+    guid 9adbbb09-4345-4ec1-8b74-b7338243719c
+
+interface Windows.ApplicationModel.Chat.IChatMessageStoreChangedEventArgs
+    guid 65c66fac-fe8c-46d4-9119-57b8410311d5
+
+interface Windows.ApplicationModel.Chat.IChatMessageTransport
+    guid 63a9dbf8-e6b3-5c9a-5f85-d47925b9bd18
+
+interface Windows.ApplicationModel.Chat.IChatMessageTransport2
+    guid 90a75622-d84a-4c22-a94d-544444edc8a1
+
+interface Windows.ApplicationModel.Chat.IChatMessageTransportConfiguration
+    guid 879ff725-1a08-4aca-a075-3355126312e6
+
+interface Windows.ApplicationModel.Chat.IChatMessageValidationResult
+    guid 25e93a03-28ec-5889-569b-7e486b126f18
+
+interface Windows.ApplicationModel.Chat.IChatQueryOptions
+    guid 2fd364a6-bf36-42f7-b7e7-923c0aabfe16
+
+interface Windows.ApplicationModel.Chat.IChatRecipientDeliveryInfo
+    guid ffc7b2a2-283c-4c0a-8a0e-8c33bdbf0545
+
+interface Windows.ApplicationModel.Chat.IChatSearchReader
+    guid 4665fe49-9020-4752-980d-39612325f589
+
+interface Windows.ApplicationModel.Chat.IChatSyncConfiguration
+    guid 09f869b2-69f4-4aff-82b6-06992ff402d2
+
+interface Windows.ApplicationModel.Chat.IChatSyncManager
+    guid 7ba52c63-2650-486f-b4b4-6bd9d3d63c84
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Chat.ChatMessageStatus> concrete
+    guid 6a44ff0f-a172-5285-9ba5-b9fdd699a0fe
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.ApplicationModel.Chat.ChatMessageStatus;i4))
+    argument System.String
+    argument Windows.ApplicationModel.Chat.ChatMessageStatus
+
+interface Windows.ApplicationModel.Chat.IRcsEndUserMessage
+    guid d7cda5eb-cbd7-4f3b-8526-b506dec35c53
+
+interface Windows.ApplicationModel.Chat.IRcsEndUserMessageAction
+    guid 92378737-9b42-46d3-9d5e-3c1b2dae7cb8
+
+interface Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs
+    guid 2d45ae01-3f89-41ea-9702-9e9ed411aa98
+
+interface Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails
+    guid 5b97742d-351f-4692-b41e-1b035dc18986
+
+interface Windows.ApplicationModel.Chat.IRcsEndUserMessageManager
+    guid 3054ae5a-4d1f-4b59-9433-126c734e86a6
+
+interface Windows.ApplicationModel.Chat.IRcsManagerStatics
+    guid 7d270ac5-0abd-4f31-9b99-a59e71a7b731
+
+interface Windows.ApplicationModel.Chat.IRcsManagerStatics2
+    guid cd49ad18-ad8a-42aa-8eeb-a798a8808959
+
+interface Windows.ApplicationModel.Chat.IRcsServiceKindSupportedChangedEventArgs
+    guid f47ea244-e783-4866-b3a7-4e5ccf023070
+
+interface Windows.ApplicationModel.Chat.IRcsTransport
+    guid fea34759-f37c-4319-8546-ec84d21d30ff
+
+interface Windows.ApplicationModel.Chat.IRcsTransportConfiguration
+    guid 1fccb102-2472-4bb9-9988-c1211c83e8a9
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs
+    guid 1ec045a7-cfc9-45c9-9876-449f2bc180f5
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Chat.ChatMessageAttachment> concrete
+    guid ad2127f1-3216-58fb-8154-b241a60b4252
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Chat.ChatMessageAttachment;{c7c4fd74-bf63-58eb-508c-8b863ff16b67}))
+    argument Windows.ApplicationModel.Chat.ChatMessageAttachment
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo> concrete
+    guid 14640361-3f8d-5606-8fcb-973208b76d72
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo;{ffc7b2a2-283c-4c0a-8a0e-8c33bdbf0545}))
+    argument Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatConversation> concrete
+    guid 8d4e5cf4-610b-5a29-b66a-2649700f5245
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatConversation;{a58c080d-1a6f-46dc-8f3d-f5028660b6ee}))
+    argument Windows.ApplicationModel.Chat.ChatConversation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessage> concrete
+    guid ac612e87-63fd-5c05-999a-0dae0d8ec7a3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessage;{4b39052a-1142-5089-76da-f2db3d17cd05}))
+    argument Windows.ApplicationModel.Chat.ChatMessage
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageChange> concrete
+    guid 447a59fc-e729-5846-91da-b650fdeca785
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessageChange;{1c18c355-421e-54b8-6d38-6b3a6c82fccc}))
+    argument Windows.ApplicationModel.Chat.ChatMessageChange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.ChatMessageTransport> concrete
+    guid c7b1733f-6e87-5a65-8542-cf36a4521695
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.ChatMessageTransport;{63a9dbf8-e6b3-5c9a-5f85-d47925b9bd18}))
+    argument Windows.ApplicationModel.Chat.ChatMessageTransport
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.IChatItem> concrete
+    guid 4e46b3db-f003-5bfc-9eeb-f702f0801949
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{8751d000-ceb1-4243-b803-15d45a1dd428})
+    argument Windows.ApplicationModel.Chat.IChatItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsEndUserMessageAction> concrete
+    guid 9607e377-e873-5091-9e32-8695e8f50e7a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.RcsEndUserMessageAction;{92378737-9b42-46d3-9d5e-3c1b2dae7cb8}))
+    argument Windows.ApplicationModel.Chat.RcsEndUserMessageAction
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsTransport> concrete
+    guid 0627ce33-6cf1-5bc9-9508-938d67a494ed
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Chat.RcsTransport;{fea34759-f37c-4319-8546-ec84d21d30ff}))
+    argument Windows.ApplicationModel.Chat.RcsTransport
+
+class Windows.ApplicationModel.Chat.RcsEndUserMessage python_type
+    py RcsEndUserMessage
+    signature rc(Windows.ApplicationModel.Chat.RcsEndUserMessage;{d7cda5eb-cbd7-4f3b-8526-b506dec35c53})
+    default Windows.ApplicationModel.Chat.IRcsEndUserMessage
+    requires Windows.ApplicationModel.Chat.IRcsEndUserMessage
+    property actions
+        get get_Actions slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsEndUserMessageAction> return
+    property is_pin_required
+        get get_IsPinRequired slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=4 reverse=99
+            out boolean return
+    property text
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=4 reverse=62
+            out string return
+    property title
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=4 reverse=43
+            out string return
+    property transport_id
+        get get_TransportId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=4 reverse=22
+            out string return
+    method send_response_async
+        method SendResponseAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=51 reverse=144
+            in class type=Windows.ApplicationModel.Chat.RcsEndUserMessageAction name=action
+            out interface type=Windows.Foundation.IAsyncAction return
+    method send_response_with_pin_async
+        method SendResponseWithPinAsync slot=12 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessage shape=117 reverse=164
+            in class type=Windows.ApplicationModel.Chat.RcsEndUserMessageAction name=action
+            in string name=pin
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Chat.RcsEndUserMessageAction python_type
+    py RcsEndUserMessageAction
+    signature rc(Windows.ApplicationModel.Chat.RcsEndUserMessageAction;{92378737-9b42-46d3-9d5e-3c1b2dae7cb8})
+    default Windows.ApplicationModel.Chat.IRcsEndUserMessageAction
+    requires Windows.ApplicationModel.Chat.IRcsEndUserMessageAction
+    property label
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageAction shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs python_type
+    py RcsEndUserMessageAvailableEventArgs
+    signature rc(Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs;{2d45ae01-3f89-41ea-9702-9e9ed411aa98})
+    default Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs
+    requires Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs
+    property is_message_available
+        get get_IsMessageAvailable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs shape=4 reverse=22
+            out boolean return
+    property message
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Chat.RcsEndUserMessage return
+
+class Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails python_type
+    py RcsEndUserMessageAvailableTriggerDetails
+    signature rc(Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails;{5b97742d-351f-4692-b41e-1b035dc18986})
+    default Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails
+    requires Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails shape=4 reverse=43
+            out string return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageAvailableTriggerDetails shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Chat.RcsEndUserMessageManager python_type
+    py RcsEndUserMessageManager
+    signature rc(Windows.ApplicationModel.Chat.RcsEndUserMessageManager;{3054ae5a-4d1f-4b59-9433-126c734e86a6})
+    default Windows.ApplicationModel.Chat.IRcsEndUserMessageManager
+    requires Windows.ApplicationModel.Chat.IRcsEndUserMessageManager
+    event message_available_changed
+        add add_MessageAvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.RcsEndUserMessageManager,Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs> name=handler
+            out event_token return
+        remove remove_MessageAvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IRcsEndUserMessageManager shape=26 reverse=53
+            in event_token name=token
+
+class Windows.ApplicationModel.Chat.RcsManager static python_type
+    py RcsManager
+    factory Windows.ApplicationModel.Chat.IRcsManagerStatics2
+    factory Windows.ApplicationModel.Chat.IRcsManagerStatics
+    event transport_list_changed static
+        add add_TransportListChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics2 shape=51 reverse=24 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_TransportListChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics2 shape=26 reverse=53 static
+            in event_token name=token
+    method get_end_user_message_manager static
+        method GetEndUserMessageManager slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Chat.RcsEndUserMessageManager return
+    method get_transport_async static
+        method GetTransportAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics shape=51 reverse=65 static
+            in string name=transportId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.RcsTransport> return
+    method get_transports_async static
+        method GetTransportsAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Chat.RcsTransport>> return
+    method leave_conversation_async static
+        method LeaveConversationAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics shape=51 reverse=100 static
+            in class type=Windows.ApplicationModel.Chat.ChatConversation name=conversation
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.ApplicationModel.Chat.RcsServiceKind python_type
+    py RcsServiceKind
+    signature enum(Windows.ApplicationModel.Chat.RcsServiceKind;i4)
+
+class Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs python_type
+    py RcsServiceKindSupportedChangedEventArgs
+    signature rc(Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs;{f47ea244-e783-4866-b3a7-4e5ccf023070})
+    default Windows.ApplicationModel.Chat.IRcsServiceKindSupportedChangedEventArgs
+    requires Windows.ApplicationModel.Chat.IRcsServiceKindSupportedChangedEventArgs
+    property service_kind
+        get get_ServiceKind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsServiceKindSupportedChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Chat.RcsServiceKind return
+
+class Windows.ApplicationModel.Chat.RcsTransport python_type
+    py RcsTransport
+    signature rc(Windows.ApplicationModel.Chat.RcsTransport;{fea34759-f37c-4319-8546-ec84d21d30ff})
+    default Windows.ApplicationModel.Chat.IRcsTransport
+    requires Windows.ApplicationModel.Chat.IRcsTransport
+    property configuration
+        get get_Configuration slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=4 reverse=121
+            out class type=Windows.ApplicationModel.Chat.RcsTransportConfiguration return
+    property extended_properties
+        get get_ExtendedProperties slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property is_active
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=4 reverse=43
+            out boolean return
+    property transport_friendly_name
+        get get_TransportFriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=4 reverse=62
+            out string return
+    property transport_id
+        get get_TransportId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=4 reverse=99
+            out string return
+    event service_kind_supported_changed
+        add add_ServiceKindSupportedChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.RcsTransport,Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ServiceKindSupportedChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=26 reverse=192
+            in event_token name=token
+    method is_service_kind_supported
+        method IsServiceKindSupported slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=51 reverse=163
+            in enum32 type=Windows.ApplicationModel.Chat.RcsServiceKind name=serviceKind
+            out boolean return
+    method is_store_and_forward_enabled
+        method IsStoreAndForwardEnabled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransport shape=51 reverse=144
+            in enum32 type=Windows.ApplicationModel.Chat.RcsServiceKind name=serviceKind
+            out boolean return
+
+class Windows.ApplicationModel.Chat.RcsTransportConfiguration python_type
+    py RcsTransportConfiguration
+    signature rc(Windows.ApplicationModel.Chat.RcsTransportConfiguration;{1fccb102-2472-4bb9-9988-c1211c83e8a9})
+    default Windows.ApplicationModel.Chat.IRcsTransportConfiguration
+    requires Windows.ApplicationModel.Chat.IRcsTransportConfiguration
+    property max_attachment_count
+        get get_MaxAttachmentCount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=22
+            out int32 return
+    property max_file_size_in_kilobytes
+        get get_MaxFileSizeInKilobytes slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=121
+            out int32 return
+    property max_group_message_size_in_kilobytes
+        get get_MaxGroupMessageSizeInKilobytes slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=62
+            out int32 return
+    property max_message_size_in_kilobytes
+        get get_MaxMessageSizeInKilobytes slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=43
+            out int32 return
+    property max_recipient_count
+        get get_MaxRecipientCount slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=99
+            out int32 return
+    property warning_file_size_in_kilobytes
+        get get_WarningFileSizeInKilobytes slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsTransportConfiguration shape=4 reverse=141
+            out int32 return
+
+class Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs python_type
+    py RemoteParticipantComposingChangedEventArgs
+    signature rc(Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs;{1ec045a7-cfc9-45c9-9876-449f2bc180f5})
+    default Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs
+    requires Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs
+    property is_composing
+        get get_IsComposing slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs shape=4 reverse=62
+            out boolean return
+    property participant_address
+        get get_ParticipantAddress slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs shape=4 reverse=43
+            out string return
+    property transport_id
+        get get_TransportId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Chat.IRemoteParticipantComposingChangedEventArgs shape=4 reverse=22
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatConversation,Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs> concrete
+    guid 09e43bb2-692d-5330-b9e7-adf69ad5c1a9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Chat.ChatConversation;{a58c080d-1a6f-46dc-8f3d-f5028660b6ee});rc(Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs;{1ec045a7-cfc9-45c9-9876-449f2bc180f5}))
+    argument Windows.ApplicationModel.Chat.ChatConversation
+    argument Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatMessageStore,Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs> concrete
+    guid 2a4ed3d1-0d01-5133-b9e4-ddf68f099485
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Chat.ChatMessageStore;{31f2fd01-ccf6-580b-4976-0a07dd5d3b47});rc(Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs;{b6b73e2d-691c-4edf-8660-6eb9896892e3}))
+    argument Windows.ApplicationModel.Chat.ChatMessageStore
+    argument Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.ChatMessageStore,Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs> concrete
+    guid 3b5903d7-a037-5c7c-8336-88423d81e408
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Chat.ChatMessageStore;{31f2fd01-ccf6-580b-4976-0a07dd5d3b47});rc(Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs;{65c66fac-fe8c-46d4-9119-57b8410311d5}))
+    argument Windows.ApplicationModel.Chat.ChatMessageStore
+    argument Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.RcsEndUserMessageManager,Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs> concrete
+    guid 8d6beb36-f6ce-5769-96c2-25326eb463f6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Chat.RcsEndUserMessageManager;{3054ae5a-4d1f-4b59-9433-126c734e86a6});rc(Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs;{2d45ae01-3f89-41ea-9702-9e9ed411aa98}))
+    argument Windows.ApplicationModel.Chat.RcsEndUserMessageManager
+    argument Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Chat.RcsTransport,Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs> concrete
+    guid e5f1c3a4-e498-50b0-91fe-94ebb01de0ab
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Chat.RcsTransport;{fea34759-f37c-4319-8546-ec84d21d30ff});rc(Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs;{f47ea244-e783-4866-b3a7-4e5ccf023070}))
+    argument Windows.ApplicationModel.Chat.RcsTransport
+    argument Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Media.MediaProperties.MediaEncodingProfile external
+    py winrt.windows.media.mediaproperties.MediaEncodingProfile
+
+class Windows.Security.Credentials.WebAccount external
+    py winrt.windows.security.credentials.WebAccount
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

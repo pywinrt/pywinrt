@@ -1,0 +1,55 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Composition.Diagnostics
+
+class Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps python_type
+    py CompositionDebugHeatMaps
+    signature rc(Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps;{e49c90ac-2ff3-5805-718c-b725ee07650f})
+    default Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps
+    requires Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps
+    method hide
+        method Hide slot=6 inputs=1 outputs=0 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=22
+            in class type=Windows.UI.Composition.Visual name=subtree
+    method show_memory_usage
+        method ShowMemoryUsage slot=7 inputs=1 outputs=0 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=43
+            in class type=Windows.UI.Composition.Visual name=subtree
+    method show_overdraw
+        method ShowOverdraw slot=8 inputs=2 outputs=0 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=51 reverse=65
+            in class type=Windows.UI.Composition.Visual name=subtree
+            in enum_u32 type=Windows.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds name=contentKinds
+    method show_redraw
+        method ShowRedraw slot=9 inputs=1 outputs=0 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=99
+            in class type=Windows.UI.Composition.Visual name=subtree
+
+enum Windows.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds python_type
+    py CompositionDebugOverdrawContentKinds
+    signature enum(Windows.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds;u4)
+
+class Windows.UI.Composition.Diagnostics.CompositionDebugSettings python_type
+    py CompositionDebugSettings
+    signature rc(Windows.UI.Composition.Diagnostics.CompositionDebugSettings;{2831987e-1d82-4d38-b7b7-efd11c7bc3d1})
+    default Windows.UI.Composition.Diagnostics.ICompositionDebugSettings
+    requires Windows.UI.Composition.Diagnostics.ICompositionDebugSettings
+    factory Windows.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics
+    property heat_maps
+        get get_HeatMaps slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugSettings shape=4 reverse=22
+            out class type=Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps return
+    method try_get_settings static
+        method TryGetSettings slot=6 inputs=1 outputs=1 declaring=Windows.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics shape=51 reverse=24 static
+            in class type=Windows.UI.Composition.Compositor name=compositor
+            out class type=Windows.UI.Composition.Diagnostics.CompositionDebugSettings return
+
+interface Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps
+    guid e49c90ac-2ff3-5805-718c-b725ee07650f
+
+interface Windows.UI.Composition.Diagnostics.ICompositionDebugSettings
+    guid 2831987e-1d82-4d38-b7b7-efd11c7bc3d1
+
+interface Windows.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics
+    guid 64ec1f1e-6af8-4af8-b814-c870fd5a9505
+
+class Windows.UI.Composition.Compositor external
+    py winrt.windows.ui.composition.Compositor
+
+class Windows.UI.Composition.Visual external
+    py winrt.windows.ui.composition.Visual

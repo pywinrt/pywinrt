@@ -1,0 +1,52 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Composition.Core
+
+class Windows.UI.Composition.Core.CompositorController activatable python_type closeable
+    py CompositorController
+    signature rc(Windows.UI.Composition.Core.CompositorController;{2d75f35a-70a7-4395-ba2d-cef0b18399f9})
+    default Windows.UI.Composition.Core.ICompositorController
+    requires Windows.UI.Composition.Core.ICompositorController
+    requires Windows.Foundation.IClosable
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property compositor
+        get get_Compositor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4 reverse=22
+            out class type=Windows.UI.Composition.Compositor return
+    event commit_needed
+        add add_CommitNeeded slot=9 inputs=1 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Composition.Core.CompositorController,System.Object> name=handler
+            out event_token return
+        remove remove_CommitNeeded slot=10 inputs=1 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=26 reverse=134
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method commit
+        method Commit slot=7 inputs=0 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=0 reverse=37
+    method ensure_previous_commit_completed_async
+        method EnsurePreviousCommitCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.UI.Composition.Core.ICompositorController
+    guid 2d75f35a-70a7-4395-ba2d-cef0b18399f9
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Composition.Core.CompositorController,System.Object> concrete
+    guid e60c8424-3154-566e-9aa2-eec49fce004a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Composition.Core.CompositorController;{2d75f35a-70a7-4395-ba2d-cef0b18399f9});cinterface(IInspectable))
+    argument Windows.UI.Composition.Core.CompositorController
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.UI.Composition.Compositor external
+    py winrt.windows.ui.composition.Compositor

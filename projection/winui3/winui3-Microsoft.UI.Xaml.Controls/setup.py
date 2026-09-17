@@ -36,13 +36,6 @@ setup(
             sources=["py.Microsoft.UI.Xaml.Controls.cpp"],
             include_dirs=[get_include()] + get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],
-        ),
-        Extension(
-            "winui3._winui3_microsoft_ui_xaml_controls_2",
-            sources=["py.Microsoft.UI.Xaml.Controls_2.cpp"],
-            include_dirs=[get_include()] + get_include_dirs() + get_app_sdk_include_dirs(),
-            libraries=["windowsapp"],
-        ),
-
+        )
     ],
 )

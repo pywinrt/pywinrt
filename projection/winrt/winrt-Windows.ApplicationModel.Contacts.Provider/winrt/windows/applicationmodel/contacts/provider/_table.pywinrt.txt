@@ -1,0 +1,90 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Contacts.Provider
+
+enum Windows.ApplicationModel.Contacts.Provider.AddContactResult python_type
+    py AddContactResult
+    signature enum(Windows.ApplicationModel.Contacts.Provider.AddContactResult;i4)
+
+class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
+    py ContactPickerUI
+    signature rc(Windows.ApplicationModel.Contacts.Provider.ContactPickerUI;{e2cc1366-cf66-43c4-a96a-a5a112db4746})
+    default Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
+    property desired_fields
+        get get_DesiredFields slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=99 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property selection_mode
+        get get_SelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=121
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactSelectionMode return
+    property desired_fields_with_contact_field_type
+        get get_DesiredFieldsWithContactFieldType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    event contact_removed
+        add add_ContactRemoved slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_ContactRemoved slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=26 reverse=167
+            in event_token name=token
+    method add_contact
+        method AddContact slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=51 reverse=24
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
+        method AddContact slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=117 reverse=25 deprecated
+            in string name=id
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
+    method contains_contact
+        method ContainsContact slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51 reverse=65
+            in string name=id
+            out boolean return
+    method remove_contact
+        method RemoveContact slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=43
+            in string name=id
+
+class Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs python_type
+    py ContactRemovedEventArgs
+    signature rc(Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs;{6f354338-3302-4d13-ad8d-adcc0ff9e47c})
+    default Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    requires Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs shape=4 reverse=22
+            out string return
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    guid e2cc1366-cf66-43c4-a96a-a5a112db4746
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
+    guid 6e449e28-7b25-4999-9b0b-875400a1e8c8
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    guid 6f354338-3302-4d13-ad8d-adcc0ff9e47c
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> concrete
+    guid 6fdc2115-1649-54a4-8faa-3049cefb05a4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> concrete
+    guid a39aeb7e-765c-5e83-b231-84bead98e9a0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.Provider.ContactPickerUI;{e2cc1366-cf66-43c4-a96a-a5a112db4746});rc(Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs;{6f354338-3302-4d13-ad8d-adcc0ff9e47c}))
+    argument Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
+    argument Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Contacts.Contact external
+    py winrt.windows.applicationmodel.contacts.Contact
+
+enum Windows.ApplicationModel.Contacts.ContactFieldType external
+    py winrt.windows.applicationmodel.contacts.ContactFieldType
+
+enum Windows.ApplicationModel.Contacts.ContactSelectionMode external
+    py winrt.windows.applicationmodel.contacts.ContactSelectionMode

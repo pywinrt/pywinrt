@@ -1,0 +1,74 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Foundation.Numerics
+
+struct Windows.Foundation.Numerics.Matrix3x2 python_type
+    py Matrix3x2
+    signature struct(Windows.Foundation.Numerics.Matrix3x2;f4;f4;f4;f4;f4;f4)
+    field m11 M11 single
+    field m12 M12 single
+    field m21 M21 single
+    field m22 M22 single
+    field m31 M31 single
+    field m32 M32 single
+
+struct Windows.Foundation.Numerics.Matrix4x4 python_type
+    py Matrix4x4
+    signature struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4)
+    field m11 M11 single
+    field m12 M12 single
+    field m13 M13 single
+    field m14 M14 single
+    field m21 M21 single
+    field m22 M22 single
+    field m23 M23 single
+    field m24 M24 single
+    field m31 M31 single
+    field m32 M32 single
+    field m33 M33 single
+    field m34 M34 single
+    field m41 M41 single
+    field m42 M42 single
+    field m43 M43 single
+    field m44 M44 single
+
+struct Windows.Foundation.Numerics.Plane python_type
+    py Plane
+    signature struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4)
+    field normal Normal struct type=Windows.Foundation.Numerics.Vector3
+    field d D single
+
+struct Windows.Foundation.Numerics.Quaternion python_type
+    py Quaternion
+    signature struct(Windows.Foundation.Numerics.Quaternion;f4;f4;f4;f4)
+    field x X single
+    field y Y single
+    field z Z single
+    field w W single
+
+struct Windows.Foundation.Numerics.Rational python_type
+    py Rational
+    signature struct(Windows.Foundation.Numerics.Rational;u4;u4)
+    field numerator Numerator uint32
+    field denominator Denominator uint32
+
+struct Windows.Foundation.Numerics.Vector2 python_type
+    py Vector2
+    signature struct(Windows.Foundation.Numerics.Vector2;f4;f4)
+    field x X single
+    field y Y single
+
+struct Windows.Foundation.Numerics.Vector3 python_type
+    py Vector3
+    signature struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4)
+    field x X single
+    field y Y single
+    field z Z single
+
+struct Windows.Foundation.Numerics.Vector4 python_type
+    py Vector4
+    signature struct(Windows.Foundation.Numerics.Vector4;f4;f4;f4;f4)
+    field x X single
+    field y Y single
+    field z Z single
+    field w W single

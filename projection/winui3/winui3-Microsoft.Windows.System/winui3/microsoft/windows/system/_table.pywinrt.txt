@@ -1,0 +1,67 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.System
+
+class Microsoft.Windows.System.EnvironmentManager python_type
+    py EnvironmentManager
+    signature rc(Microsoft.Windows.System.EnvironmentManager;{d1b239bb-7013-5176-b02a-63477410d986})
+    default Microsoft.Windows.System.IEnvironmentManager
+    requires Microsoft.Windows.System.IEnvironmentManager
+    requires Microsoft.Windows.System.IEnvironmentManager2
+    factory Microsoft.Windows.System.IEnvironmentManagerStatics
+    property are_changes_tracked
+        get get_AreChangesTracked slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager2 shape=4 reverse=22
+            out boolean return
+    property is_supported static
+        get get_IsSupported slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=99 static
+            out boolean return
+    method add_executable_file_extension
+        method AddExecutableFileExtension slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=141
+            in string name=pathExt
+    method append_to_path
+        method AppendToPath slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=99
+            in string name=path
+    method get_environment_variable
+        method GetEnvironmentVariable slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51 reverse=44
+            in string name=name
+            out string return
+    method get_environment_variables
+        method GetEnvironmentVariables slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method get_for_machine static
+        method GetForMachine slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=62 static
+            out class type=Microsoft.Windows.System.EnvironmentManager return
+    method get_for_process static
+        method GetForProcess slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=22 static
+            out class type=Microsoft.Windows.System.EnvironmentManager return
+    method get_for_user static
+        method GetForUser slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=43 static
+            out class type=Microsoft.Windows.System.EnvironmentManager return
+    method remove_executable_file_extension
+        method RemoveExecutableFileExtension slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=162
+            in string name=pathExt
+    method remove_from_path
+        method RemoveFromPath slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=121
+            in string name=path
+    method set_environment_variable
+        method SetEnvironmentVariable slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51 reverse=65
+            in string name=name
+            in string name=value
+
+interface Microsoft.Windows.System.IEnvironmentManager
+    guid d1b239bb-7013-5176-b02a-63477410d986
+
+interface Microsoft.Windows.System.IEnvironmentManager2
+    guid cfc0ad51-02b7-57ff-8ca7-e015251737cb
+
+interface Microsoft.Windows.System.IEnvironmentManagerStatics
+    guid 407b1522-6156-5398-93fd-d6411c35e7b1
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+class System.String external
+    py winrt.system.String

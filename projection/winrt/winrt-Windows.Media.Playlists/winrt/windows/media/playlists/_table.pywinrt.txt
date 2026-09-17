@@ -1,0 +1,78 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Playlists
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> concrete
+    guid 8ffb74ab-912f-5bc1-87fa-2865f673cbfc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Playlists.Playlist;{803736f5-cf44-4d97-83b3-7a089e9ab663}))
+    argument Windows.Media.Playlists.Playlist
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+    guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+interface Windows.Media.Playlists.IPlaylist
+    guid 803736f5-cf44-4d97-83b3-7a089e9ab663
+
+interface Windows.Media.Playlists.IPlaylistStatics
+    guid c5c331cd-81f9-4ff3-95b9-70b6ff046b68
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> concrete
+    guid fcbc8b8b-6103-5b4e-ba00-4bc2cedb6a35
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    argument Windows.Storage.StorageFile
+
+class Windows.Media.Playlists.Playlist activatable python_type
+    py Playlist
+    signature rc(Windows.Media.Playlists.Playlist;{803736f5-cf44-4d97-83b3-7a089e9ab663})
+    default Windows.Media.Playlists.IPlaylist
+    requires Windows.Media.Playlists.IPlaylist
+    factory Windows.Media.Playlists.IPlaylistStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property files
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> return
+    method load_async static
+        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playlists.IPlaylistStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> return
+    method save_as_async
+        method SaveAsAsync slot=8 inputs=3 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=195 reverse=68
+            in interface type=Windows.Storage.IStorageFolder name=saveLocation
+            in string name=desiredName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+        method SaveAsAsync slot=9 inputs=4 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=239 reverse=103
+            in interface type=Windows.Storage.IStorageFolder name=saveLocation
+            in string name=desiredName
+            in enum32 type=Windows.Storage.NameCollisionOption name=option
+            in enum32 type=Windows.Media.Playlists.PlaylistFormat name=playlistFormat
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
+    method save_async
+        method SaveAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Media.Playlists.PlaylistFormat python_type
+    py PlaylistFormat
+    signature enum(Windows.Media.Playlists.PlaylistFormat;i4)
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.IStorageFolder external
+    py winrt.windows.storage._IStorageFolder
+    guid 72d1cb78-b3ef-4f75-a80b-6fd9dae2944b
+
+enum Windows.Storage.NameCollisionOption external
+    py winrt.windows.storage.NameCollisionOption
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

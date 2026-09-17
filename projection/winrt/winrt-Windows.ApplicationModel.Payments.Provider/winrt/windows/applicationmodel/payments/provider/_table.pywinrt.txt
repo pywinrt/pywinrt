@@ -1,0 +1,150 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Payments.Provider
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> concrete
+    guid 0cc32025-ac67-57e2-a0f6-3a8e116cef4c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.PaymentRequestChangedResult;{df699e5c-16c4-47ad-9401-8440ec0757db}))
+    argument Windows.ApplicationModel.Payments.PaymentRequestChangedResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransaction> concrete
+    guid e09a3f7d-6ad0-58cf-ab4c-2e4c9c791873
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.Provider.PaymentTransaction;{62581da0-26a5-4e9b-a6eb-66606cf001d3}))
+    argument Windows.ApplicationModel.Payments.Provider.PaymentTransaction
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult> concrete
+    guid c645e8ef-0863-55b4-8aed-42bd152d8004
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult;{060e3276-d30c-4817-95a2-df7ae9273b56}))
+    argument Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails
+    guid 0ce201f0-8b93-4eb6-8c46-2e4a6c6a26f6
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentAppManager
+    guid 0e47aa53-8521-4969-a957-df2538a3a98f
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics
+    guid a341ac28-fc89-4406-b4d9-34e7fe79dfb6
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentTransaction
+    guid 62581da0-26a5-4e9b-a6eb-66606cf001d3
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult
+    guid 060e3276-d30c-4817-95a2-df7ae9273b56
+
+interface Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics
+    guid 8d639750-ee0a-4df5-9b1e-1c0f9ec59881
+
+class Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails python_type
+    py PaymentAppCanMakePaymentTriggerDetails
+    signature rc(Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails;{0ce201f0-8b93-4eb6-8c46-2e4a6c6a26f6})
+    default Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails
+    requires Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+    method report_can_make_payment_result
+        method ReportCanMakePaymentResult slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4 reverse=43
+            in class type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult name=value
+
+class Windows.ApplicationModel.Payments.Provider.PaymentAppManager python_type
+    py PaymentAppManager
+    signature rc(Windows.ApplicationModel.Payments.Provider.PaymentAppManager;{0e47aa53-8521-4969-a957-df2538a3a98f})
+    default Windows.ApplicationModel.Payments.Provider.IPaymentAppManager
+    requires Windows.ApplicationModel.Payments.Provider.IPaymentAppManager
+    factory Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Payments.Provider.PaymentAppManager return
+    method register_async
+        method RegisterAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedPaymentMethodIds
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unregister_async
+        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Payments.Provider.PaymentTransaction python_type
+    py PaymentTransaction
+    signature rc(Windows.ApplicationModel.Payments.Provider.PaymentTransaction;{62581da0-26a5-4e9b-a6eb-66606cf001d3})
+    default Windows.ApplicationModel.Payments.Provider.IPaymentTransaction
+    requires Windows.ApplicationModel.Payments.Provider.IPaymentTransaction
+    factory Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics
+    property payer_phone_number
+        get get_PayerPhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=141
+            out string return
+        put put_PayerPhoneNumber slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=162
+            in string name=value
+    property payer_name
+        get get_PayerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=99
+            out string return
+        put put_PayerName slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=121
+            in string name=value
+    property payer_email
+        get get_PayerEmail slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=43
+            out string return
+        put put_PayerEmail slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=62
+            in string name=value
+    property payment_request
+        get get_PaymentRequest slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Payments.PaymentRequest return
+    method accept_async
+        method AcceptAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=196
+            in class type=Windows.ApplicationModel.Payments.PaymentToken name=paymentToken
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult> return
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics shape=51 reverse=24 static
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransaction> return
+    method reject
+        method Reject slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=0 reverse=201
+    method update_selected_shipping_option_async
+        method UpdateSelectedShippingOptionAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=187
+            in class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=selectedShippingOption
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> return
+    method update_shipping_address_async
+        method UpdateShippingAddressAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=174
+            in class type=Windows.ApplicationModel.Payments.PaymentAddress name=shippingAddress
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> return
+
+class Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult python_type
+    py PaymentTransactionAcceptResult
+    signature rc(Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult;{060e3276-d30c-4817-95a2-df7ae9273b56})
+    default Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult
+    requires Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus return
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Payments.PaymentAddress external
+    py winrt.windows.applicationmodel.payments.PaymentAddress
+
+class Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult external
+    py winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult
+
+class Windows.ApplicationModel.Payments.PaymentRequest external
+    py winrt.windows.applicationmodel.payments.PaymentRequest
+
+class Windows.ApplicationModel.Payments.PaymentRequestChangedResult external
+    py winrt.windows.applicationmodel.payments.PaymentRequestChangedResult
+
+enum Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus external
+    py winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus
+
+class Windows.ApplicationModel.Payments.PaymentShippingOption external
+    py winrt.windows.applicationmodel.payments.PaymentShippingOption
+
+class Windows.ApplicationModel.Payments.PaymentToken external
+    py winrt.windows.applicationmodel.payments.PaymentToken
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

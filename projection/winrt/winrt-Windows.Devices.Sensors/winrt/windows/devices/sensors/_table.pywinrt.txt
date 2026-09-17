@@ -1,0 +1,2673 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Sensors
+
+class Windows.Devices.Sensors.Accelerometer python_type
+    py Accelerometer
+    signature rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d})
+    default Windows.Devices.Sensors.IAccelerometer
+    requires Windows.Devices.Sensors.IAccelerometer
+    requires Windows.Devices.Sensors.IAccelerometerDeviceId
+    requires Windows.Devices.Sensors.IAccelerometer2
+    requires Windows.Devices.Sensors.IAccelerometer3
+    requires Windows.Devices.Sensors.IAccelerometer4
+    requires Windows.Devices.Sensors.IAccelerometer5
+    factory Windows.Devices.Sensors.IAccelerometerStatics
+    factory Windows.Devices.Sensors.IAccelerometerStatics3
+    factory Windows.Devices.Sensors.IAccelerometerStatics2
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer3 shape=4 reverse=62
+            out uint32 return
+    property reading_type
+        get get_ReadingType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer4 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.AccelerometerReadingType return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer5 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.AccelerometerDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer shape=26 reverse=156
+            in event_token name=token
+    event shaken
+        add add_Shaken slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerShakenEventArgs> name=handler
+            out event_token return
+        remove remove_Shaken slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer shape=26 reverse=181
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerStatics3 shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.AccelerometerReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Accelerometer return
+        method GetDefault slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.AccelerometerReadingType name=readingType
+            out class type=Windows.Devices.Sensors.Accelerometer return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerStatics3 shape=51 reverse=44 static
+            in enum32 type=Windows.Devices.Sensors.AccelerometerReadingType name=readingType
+            out string return
+
+class Windows.Devices.Sensors.AccelerometerDataThreshold python_type
+    py AccelerometerDataThreshold
+    signature rc(Windows.Devices.Sensors.AccelerometerDataThreshold;{f92c1b68-6320-5577-879e-9942621c3dd9})
+    default Windows.Devices.Sensors.IAccelerometerDataThreshold
+    requires Windows.Devices.Sensors.IAccelerometerDataThreshold
+    property z_axis_in_g_force
+        get get_ZAxisInGForce slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=4 reverse=121
+            out double return
+        put put_ZAxisInGForce slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=2 reverse=138
+            in double name=value
+    property y_axis_in_g_force
+        get get_YAxisInGForce slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=4 reverse=62
+            out double return
+        put put_YAxisInGForce slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=2
+            in double name=value
+    property x_axis_in_g_force
+        get get_XAxisInGForce slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=4 reverse=22
+            out double return
+        put put_XAxisInGForce slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometerDataThreshold shape=2 reverse=38
+            in double name=value
+
+class Windows.Devices.Sensors.AccelerometerReading python_type
+    py AccelerometerReading
+    signature rc(Windows.Devices.Sensors.AccelerometerReading;{b9fe7acb-d351-40af-8bb6-7aa9ae641fb7})
+    default Windows.Devices.Sensors.IAccelerometerReading
+    requires Windows.Devices.Sensors.IAccelerometerReading
+    requires Windows.Devices.Sensors.IAccelerometerReading2
+    property acceleration_x
+        get get_AccelerationX slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading shape=4 reverse=43
+            out double return
+    property acceleration_y
+        get get_AccelerationY slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading shape=4 reverse=62
+            out double return
+    property acceleration_z
+        get get_AccelerationZ slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading shape=4 reverse=99
+            out double return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs python_type
+    py AccelerometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs;{0095c65b-b6ac-475a-9f44-8b32d35a3f25})
+    default Windows.Devices.Sensors.IAccelerometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IAccelerometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.AccelerometerReading return
+
+enum Windows.Devices.Sensors.AccelerometerReadingType python_type
+    py AccelerometerReadingType
+    signature enum(Windows.Devices.Sensors.AccelerometerReadingType;i4)
+
+class Windows.Devices.Sensors.AccelerometerShakenEventArgs python_type
+    py AccelerometerShakenEventArgs
+    signature rc(Windows.Devices.Sensors.AccelerometerShakenEventArgs;{95ff01d1-4a28-4f35-98e8-8178aae4084a})
+    default Windows.Devices.Sensors.IAccelerometerShakenEventArgs
+    requires Windows.Devices.Sensors.IAccelerometerShakenEventArgs
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerShakenEventArgs shape=4 reverse=22
+            out datetime return
+
+class Windows.Devices.Sensors.ActivitySensor python_type
+    py ActivitySensor
+    signature rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef})
+    default Windows.Devices.Sensors.IActivitySensor
+    requires Windows.Devices.Sensors.IActivitySensor
+    factory Windows.Devices.Sensors.IActivitySensorStatics
+    property device_id
+        get get_DeviceId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=99
+            out string return
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=141
+            out uint32 return
+    property power_in_milliwatts
+        get get_PowerInMilliwatts slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=62
+            out double return
+    property subscribed_activities
+        get get_SubscribedActivities slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> return
+    property supported_activities
+        get get_SupportedActivities slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
+    event reading_changed
+        add add_ReadingChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ActivitySensor,Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IActivitySensor shape=26 reverse=181
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> return
+    method get_current_reading_async
+        method GetCurrentReadingAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=4 reverse=43 static
+            out string return
+    method get_system_history_async static
+        method GetSystemHistoryAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=89 static
+            in datetime name=fromTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> return
+        method GetSystemHistoryAsync slot=10 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=170 static
+            in datetime name=fromTime
+            in timespan name=duration
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> return
+
+class Windows.Devices.Sensors.ActivitySensorReading python_type
+    py ActivitySensorReading
+    signature rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78})
+    default Windows.Devices.Sensors.IActivitySensorReading
+    requires Windows.Devices.Sensors.IActivitySensorReading
+    property activity
+        get get_Activity slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorReading shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    property confidence
+        get get_Confidence slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorReading shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sensors.ActivitySensorReadingConfidence return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorReading shape=4 reverse=22
+            out datetime return
+
+class Windows.Devices.Sensors.ActivitySensorReadingChangeReport python_type
+    py ActivitySensorReadingChangeReport
+    signature rc(Windows.Devices.Sensors.ActivitySensorReadingChangeReport;{4f3c2915-d93b-47bd-960a-f20fb2f322b9})
+    default Windows.Devices.Sensors.IActivitySensorReadingChangeReport
+    requires Windows.Devices.Sensors.IActivitySensorReadingChangeReport
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorReadingChangeReport shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.ActivitySensorReading return
+
+class Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs python_type
+    py ActivitySensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs;{de386717-aeb6-4ec7-946a-d9cc19b951ec})
+    default Windows.Devices.Sensors.IActivitySensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IActivitySensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.ActivitySensorReading return
+
+enum Windows.Devices.Sensors.ActivitySensorReadingConfidence python_type
+    py ActivitySensorReadingConfidence
+    signature enum(Windows.Devices.Sensors.ActivitySensorReadingConfidence;i4)
+
+class Windows.Devices.Sensors.ActivitySensorTriggerDetails python_type
+    py ActivitySensorTriggerDetails
+    signature rc(Windows.Devices.Sensors.ActivitySensorTriggerDetails;{2c9e6612-b9ca-4677-b263-243297f79d3a})
+    default Windows.Devices.Sensors.IActivitySensorTriggerDetails
+    requires Windows.Devices.Sensors.IActivitySensorTriggerDetails
+    method read_reports
+        method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorTriggerDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> return
+
+enum Windows.Devices.Sensors.ActivityType python_type
+    py ActivityType
+    signature enum(Windows.Devices.Sensors.ActivityType;i4)
+
+class Windows.Devices.Sensors.AdaptiveDimmingOptions python_type
+    py AdaptiveDimmingOptions
+    signature rc(Windows.Devices.Sensors.AdaptiveDimmingOptions;{d3213cf7-89b5-5732-b2a0-aefe324f54e6})
+    default Windows.Devices.Sensors.IAdaptiveDimmingOptions
+    requires Windows.Devices.Sensors.IAdaptiveDimmingOptions
+    property allow_when_external_display_connected
+        get get_AllowWhenExternalDisplayConnected slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAdaptiveDimmingOptions shape=4 reverse=22
+            out boolean return
+        put put_AllowWhenExternalDisplayConnected slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAdaptiveDimmingOptions shape=4 reverse=43
+            in boolean name=value
+
+class Windows.Devices.Sensors.Altimeter python_type
+    py Altimeter
+    signature rc(Windows.Devices.Sensors.Altimeter;{72f057fd-8f04-49f1-b4a7-f4e363b701a2})
+    default Windows.Devices.Sensors.IAltimeter
+    requires Windows.Devices.Sensors.IAltimeter
+    requires Windows.Devices.Sensors.IAltimeter2
+    factory Windows.Devices.Sensors.IAltimeterStatics
+    property report_interval
+        get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=121
+            out uint32 return
+        put put_ReportInterval slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=99
+            in uint32 name=value
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=43
+            out string return
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=62
+            out uint32 return
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter2 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAltimeter2 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter2 shape=4 reverse=62
+            out uint32 return
+    event reading_changed
+        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Altimeter,Windows.Devices.Sensors.AltimeterReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAltimeter shape=26 reverse=167
+            in event_token name=token
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.AltimeterReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Altimeter return
+
+class Windows.Devices.Sensors.AltimeterReading python_type
+    py AltimeterReading
+    signature rc(Windows.Devices.Sensors.AltimeterReading;{fbe8ef73-7f5e-48c8-aa1a-f1f3befc1144})
+    default Windows.Devices.Sensors.IAltimeterReading
+    requires Windows.Devices.Sensors.IAltimeterReading
+    requires Windows.Devices.Sensors.IAltimeterReading2
+    property altitude_change_in_meters
+        get get_AltitudeChangeInMeters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReading shape=4 reverse=43
+            out double return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.Devices.Sensors.AltimeterReadingChangedEventArgs python_type
+    py AltimeterReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.AltimeterReadingChangedEventArgs;{7069d077-446d-47f7-998c-ebc23b45e4a2})
+    default Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.AltimeterReading return
+
+class Windows.Devices.Sensors.Barometer python_type
+    py Barometer
+    signature rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4})
+    default Windows.Devices.Sensors.IBarometer
+    requires Windows.Devices.Sensors.IBarometer
+    requires Windows.Devices.Sensors.IBarometer2
+    requires Windows.Devices.Sensors.IBarometer3
+    factory Windows.Devices.Sensors.IBarometerStatics2
+    factory Windows.Devices.Sensors.IBarometerStatics
+    property report_interval
+        get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=121
+            out uint32 return
+        put put_ReportInterval slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=99
+            in uint32 name=value
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=43
+            out string return
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=62
+            out uint32 return
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer2 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IBarometer2 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer2 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer3 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.BarometerDataThreshold return
+    event reading_changed
+        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Barometer,Windows.Devices.Sensors.BarometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IBarometer shape=26 reverse=167
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IBarometerStatics2 shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.BarometerReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Barometer return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerStatics2 shape=4 reverse=43 static
+            out string return
+
+class Windows.Devices.Sensors.BarometerDataThreshold python_type
+    py BarometerDataThreshold
+    signature rc(Windows.Devices.Sensors.BarometerDataThreshold;{076b952c-cb62-5a90-a0d1-f85e4a936394})
+    default Windows.Devices.Sensors.IBarometerDataThreshold
+    requires Windows.Devices.Sensors.IBarometerDataThreshold
+    property hectopascals
+        get get_Hectopascals slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerDataThreshold shape=4 reverse=22
+            out double return
+        put put_Hectopascals slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IBarometerDataThreshold shape=2 reverse=38
+            in double name=value
+
+class Windows.Devices.Sensors.BarometerReading python_type
+    py BarometerReading
+    signature rc(Windows.Devices.Sensors.BarometerReading;{f5b9d2e6-1df6-4a1a-a7ad-321d4f5db247})
+    default Windows.Devices.Sensors.IBarometerReading
+    requires Windows.Devices.Sensors.IBarometerReading
+    requires Windows.Devices.Sensors.IBarometerReading2
+    property station_pressure_in_hectopascals
+        get get_StationPressureInHectopascals slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerReading shape=4 reverse=43
+            out double return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.Devices.Sensors.BarometerReadingChangedEventArgs python_type
+    py BarometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.BarometerReadingChangedEventArgs;{3d84945f-037b-404f-9bbb-6232d69543c3})
+    default Windows.Devices.Sensors.IBarometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IBarometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.BarometerReading return
+
+class Windows.Devices.Sensors.Compass python_type
+    py Compass
+    signature rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64})
+    default Windows.Devices.Sensors.ICompass
+    requires Windows.Devices.Sensors.ICompass
+    requires Windows.Devices.Sensors.ICompassDeviceId
+    requires Windows.Devices.Sensors.ICompass2
+    requires Windows.Devices.Sensors.ICompass3
+    requires Windows.Devices.Sensors.ICompass4
+    factory Windows.Devices.Sensors.ICompassStatics
+    factory Windows.Devices.Sensors.ICompassStatics2
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompass shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompass2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompass3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass3 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass4 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.CompassDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ICompass shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Compass,Windows.Devices.Sensors.CompassReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompass shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ICompassStatics2 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompass shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.CompassReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Compass return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.Devices.Sensors.CompassDataThreshold python_type
+    py CompassDataThreshold
+    signature rc(Windows.Devices.Sensors.CompassDataThreshold;{d15b52b3-d39d-5ec8-b2e4-f193e6ab34ed})
+    default Windows.Devices.Sensors.ICompassDataThreshold
+    requires Windows.Devices.Sensors.ICompassDataThreshold
+    property degrees
+        get get_Degrees slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassDataThreshold shape=4 reverse=22
+            out double return
+        put put_Degrees slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompassDataThreshold shape=2 reverse=38
+            in double name=value
+
+class Windows.Devices.Sensors.CompassReading python_type
+    py CompassReading
+    signature rc(Windows.Devices.Sensors.CompassReading;{82911128-513d-4dc9-b781-5eedfbf02d0c})
+    default Windows.Devices.Sensors.ICompassReading
+    requires Windows.Devices.Sensors.ICompassReading
+    requires Windows.Devices.Sensors.ICompassReadingHeadingAccuracy
+    requires Windows.Devices.Sensors.ICompassReading2
+    property heading_magnetic_north
+        get get_HeadingMagneticNorth slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReading shape=4 reverse=43
+            out double return
+    property heading_true_north
+        get get_HeadingTrueNorth slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReading shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property heading_accuracy
+        get get_HeadingAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReadingHeadingAccuracy shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.MagnetometerAccuracy return
+
+class Windows.Devices.Sensors.CompassReadingChangedEventArgs python_type
+    py CompassReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.CompassReadingChangedEventArgs;{8f1549b0-e8bc-4c7e-b009-4e41df137072})
+    default Windows.Devices.Sensors.ICompassReadingChangedEventArgs
+    requires Windows.Devices.Sensors.ICompassReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ICompassReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.CompassReading return
+
+class Windows.Devices.Sensors.DetectedPerson python_type
+    py DetectedPerson
+    signature rc(Windows.Devices.Sensors.DetectedPerson;{168cc0d9-3f05-5029-a0bf-cdcab4be3f9e})
+    default Windows.Devices.Sensors.IDetectedPerson
+    requires Windows.Devices.Sensors.IDetectedPerson
+    property distance_in_millimeters
+        get get_DistanceInMillimeters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IDetectedPerson shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property engagement
+        get get_Engagement slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IDetectedPerson shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.HumanEngagement return
+    property head_orientation
+        get get_HeadOrientation slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IDetectedPerson shape=4 reverse=62
+            out class type=Windows.Devices.Sensors.HeadOrientation return
+    property head_position
+        get get_HeadPosition slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IDetectedPerson shape=4 reverse=99
+            out class type=Windows.Devices.Sensors.HeadPosition return
+    property person_id
+        get get_PersonId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IDetectedPerson shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+class Windows.Devices.Sensors.Gyrometer python_type
+    py Gyrometer
+    signature rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c})
+    default Windows.Devices.Sensors.IGyrometer
+    requires Windows.Devices.Sensors.IGyrometer
+    requires Windows.Devices.Sensors.IGyrometerDeviceId
+    requires Windows.Devices.Sensors.IGyrometer2
+    requires Windows.Devices.Sensors.IGyrometer3
+    requires Windows.Devices.Sensors.IGyrometer4
+    factory Windows.Devices.Sensors.IGyrometerStatics
+    factory Windows.Devices.Sensors.IGyrometerStatics2
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometer shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometer2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometer3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer3 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer4 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.GyrometerDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Gyrometer,Windows.Devices.Sensors.GyrometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometer shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerStatics2 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.GyrometerReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Gyrometer return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.Devices.Sensors.GyrometerDataThreshold python_type
+    py GyrometerDataThreshold
+    signature rc(Windows.Devices.Sensors.GyrometerDataThreshold;{8648b31e-6e52-5259-bbad-242a69dc38c8})
+    default Windows.Devices.Sensors.IGyrometerDataThreshold
+    requires Windows.Devices.Sensors.IGyrometerDataThreshold
+    property z_axis_in_degrees_per_second
+        get get_ZAxisInDegreesPerSecond slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=4 reverse=121
+            out double return
+        put put_ZAxisInDegreesPerSecond slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=2 reverse=138
+            in double name=value
+    property y_axis_in_degrees_per_second
+        get get_YAxisInDegreesPerSecond slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=4 reverse=62
+            out double return
+        put put_YAxisInDegreesPerSecond slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=2
+            in double name=value
+    property x_axis_in_degrees_per_second
+        get get_XAxisInDegreesPerSecond slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=4 reverse=22
+            out double return
+        put put_XAxisInDegreesPerSecond slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometerDataThreshold shape=2 reverse=38
+            in double name=value
+
+class Windows.Devices.Sensors.GyrometerReading python_type
+    py GyrometerReading
+    signature rc(Windows.Devices.Sensors.GyrometerReading;{b3d6de5c-1ee4-456f-9de7-e2493b5c8e03})
+    default Windows.Devices.Sensors.IGyrometerReading
+    requires Windows.Devices.Sensors.IGyrometerReading
+    requires Windows.Devices.Sensors.IGyrometerReading2
+    property angular_velocity_x
+        get get_AngularVelocityX slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading shape=4 reverse=43
+            out double return
+    property angular_velocity_y
+        get get_AngularVelocityY slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading shape=4 reverse=62
+            out double return
+    property angular_velocity_z
+        get get_AngularVelocityZ slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading shape=4 reverse=99
+            out double return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.Devices.Sensors.GyrometerReadingChangedEventArgs python_type
+    py GyrometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.GyrometerReadingChangedEventArgs;{0fdf1895-6f9e-42ce-8d58-388c0ab8356d})
+    default Windows.Devices.Sensors.IGyrometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IGyrometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.GyrometerReading return
+
+class Windows.Devices.Sensors.HeadOrientation python_type
+    py HeadOrientation
+    signature rc(Windows.Devices.Sensors.HeadOrientation;{519f54a9-513e-55e8-9c35-3e8da21dee69})
+    default Windows.Devices.Sensors.IHeadOrientation
+    requires Windows.Devices.Sensors.IHeadOrientation
+    property pitch_in_degrees
+        get get_PitchInDegrees slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHeadOrientation shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property roll_in_degrees
+        get get_RollInDegrees slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHeadOrientation shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property yaw_in_degrees
+        get get_YawInDegrees slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHeadOrientation shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+
+class Windows.Devices.Sensors.HeadPosition python_type
+    py HeadPosition
+    signature rc(Windows.Devices.Sensors.HeadPosition;{585aeb65-cf35-5e6d-a76a-37db131e17de})
+    default Windows.Devices.Sensors.IHeadPosition
+    requires Windows.Devices.Sensors.IHeadPosition
+    property altitude_in_degrees
+        get get_AltitudeInDegrees slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHeadPosition shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property azimuth_in_degrees
+        get get_AzimuthInDegrees slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHeadPosition shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+
+class Windows.Devices.Sensors.HingeAngleReading python_type
+    py HingeAngleReading
+    signature rc(Windows.Devices.Sensors.HingeAngleReading;{a3cd45b9-1bf1-4f65-a704-e2da04f182c0})
+    default Windows.Devices.Sensors.IHingeAngleReading
+    requires Windows.Devices.Sensors.IHingeAngleReading
+    property angle_in_degrees
+        get get_AngleInDegrees slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleReading shape=4 reverse=43
+            out double return
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleReading shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleReading shape=4 reverse=22
+            out datetime return
+
+class Windows.Devices.Sensors.HingeAngleSensor python_type
+    py HingeAngleSensor
+    signature rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309})
+    default Windows.Devices.Sensors.IHingeAngleSensor
+    requires Windows.Devices.Sensors.IHingeAngleSensor
+    factory Windows.Devices.Sensors.IHingeAngleSensorStatics
+    property report_threshold_in_degrees
+        get get_ReportThresholdInDegrees slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=4 reverse=99
+            out double return
+        put put_ReportThresholdInDegrees slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=2 reverse=119
+            in double name=value
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=4 reverse=43
+            out string return
+    property min_report_threshold_in_degrees
+        get get_MinReportThresholdInDegrees slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=4 reverse=62
+            out double return
+    event reading_changed
+        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HingeAngleSensor,Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=26 reverse=167
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorStatics shape=51 reverse=100 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> return
+    method get_current_reading_async
+        method GetCurrentReadingAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> return
+    method get_default_async static
+        method GetDefaultAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorStatics shape=4 reverse=22 static
+            out string return
+    method get_related_to_adjacent_panels_async static
+        method GetRelatedToAdjacentPanelsAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorStatics shape=117 reverse=66 static
+            in string name=firstPanelId
+            in string name=secondPanelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> return
+
+class Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs python_type
+    py HingeAngleSensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs;{24d9558b-fad0-42b8-a854-78923049a1ba})
+    default Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.HingeAngleReading return
+
+enum Windows.Devices.Sensors.HumanEngagement python_type
+    py HumanEngagement
+    signature enum(Windows.Devices.Sensors.HumanEngagement;i4)
+
+enum Windows.Devices.Sensors.HumanPresence python_type
+    py HumanPresence
+    signature enum(Windows.Devices.Sensors.HumanPresence;i4)
+
+class Windows.Devices.Sensors.HumanPresenceFeatures python_type
+    py HumanPresenceFeatures
+    signature rc(Windows.Devices.Sensors.HumanPresenceFeatures;{bdb09fda-3244-557a-bd29-8b004f59f2cc})
+    default Windows.Devices.Sensors.IHumanPresenceFeatures
+    requires Windows.Devices.Sensors.IHumanPresenceFeatures
+    requires Windows.Devices.Sensors.IHumanPresenceFeatures2
+    requires Windows.Devices.Sensors.IHumanPresenceFeatures3
+    property is_attention_aware_dimming_supported
+        get get_IsAttentionAwareDimmingSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures shape=4 reverse=121 deprecated
+            out boolean return
+    property is_lock_on_leave_supported
+        get get_IsLockOnLeaveSupported slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures shape=4 reverse=99
+            out boolean return
+    property is_wake_on_approach_supported
+        get get_IsWakeOnApproachSupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures shape=4 reverse=62
+            out boolean return
+    property sensor_id
+        get get_SensorId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures shape=4 reverse=22
+            out string return
+    property supported_wake_or_lock_distances_in_millimeters
+        get get_SupportedWakeOrLockDistancesInMillimeters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+    property is_adaptive_dimming_supported
+        get get_IsAdaptiveDimmingSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures2 shape=4 reverse=22
+            out boolean return
+    property is_onlooker_detection_supported
+        get get_IsOnlookerDetectionSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceFeatures3 shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Sensors.HumanPresenceSensor python_type
+    py HumanPresenceSensor
+    signature rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd})
+    default Windows.Devices.Sensors.IHumanPresenceSensor
+    requires Windows.Devices.Sensors.IHumanPresenceSensor
+    requires Windows.Devices.Sensors.IHumanPresenceSensor2
+    requires Windows.Devices.Sensors.IHumanPresenceSensor3
+    factory Windows.Devices.Sensors.IHumanPresenceSensorStatics2
+    factory Windows.Devices.Sensors.IHumanPresenceSensorStatics
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=4 reverse=22
+            out string return
+    property max_detectable_distance_in_millimeters
+        get get_MaxDetectableDistanceInMillimeters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property min_detectable_distance_in_millimeters
+        get get_MinDetectableDistanceInMillimeters slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property is_engagement_supported
+        get get_IsEngagementSupported slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor2 shape=4 reverse=43
+            out boolean return
+    property is_presence_supported
+        get get_IsPresenceSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor2 shape=4 reverse=22
+            out boolean return
+    property max_detectable_altitude_in_degrees
+        get get_MaxDetectableAltitudeInDegrees slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor3 shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property max_detectable_azimuth_in_degrees
+        get get_MaxDetectableAzimuthInDegrees slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor3 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property max_detectable_persons
+        get get_MaxDetectablePersons slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor3 shape=4 reverse=22
+            out int32 return
+    property min_detectable_altitude_in_degrees
+        get get_MinDetectableAltitudeInDegrees slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor3 shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property min_detectable_azimuth_in_degrees
+        get get_MinDetectableAzimuthInDegrees slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor3 shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor,Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=26 reverse=156
+            in event_token name=token
+    method from_id static
+        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics2 shape=51 reverse=24 static
+            in string name=sensorId
+            out class type=Windows.Devices.Sensors.HumanPresenceSensor return
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics shape=51 reverse=44 static
+            in string name=sensorId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> return
+    method get_current_reading
+        method GetCurrentReading slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=4 reverse=99
+            out class type=Windows.Devices.Sensors.HumanPresenceSensorReading return
+    method get_default static
+        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics2 shape=4 reverse=43 static
+            out class type=Windows.Devices.Sensors.HumanPresenceSensor return
+    method get_default_async static
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics shape=4 reverse=22 static
+            out string return
+
+class Windows.Devices.Sensors.HumanPresenceSensorReading python_type
+    py HumanPresenceSensorReading
+    signature rc(Windows.Devices.Sensors.HumanPresenceSensorReading;{83533bf5-a85a-5d50-8be4-6072d745a3bb})
+    default Windows.Devices.Sensors.IHumanPresenceSensorReading
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReading
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReading2
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReading3
+    property distance_in_millimeters
+        get get_DistanceInMillimeters slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property engagement
+        get get_Engagement slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sensors.HumanEngagement return
+    property presence
+        get get_Presence slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sensors.HumanPresence return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading shape=4 reverse=22
+            out datetime return
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property detected_persons
+        get get_DetectedPersons slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading3 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> return
+    property onlooker_presence
+        get get_OnlookerPresence slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReading3 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.HumanPresence return
+
+class Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs python_type
+    py HumanPresenceSensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs;{a9dc4583-fd69-5c5e-ab1f-942204eae2db})
+    default Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.HumanPresenceSensorReading return
+
+class Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate activatable python_type
+    py HumanPresenceSensorReadingUpdate
+    signature rc(Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate;{42419c77-6d2f-55a0-9e01-c9cbe7b2d6df})
+    default Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate
+    requires Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_Timestamp slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property presence
+        get get_Presence slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> return
+        put put_Presence slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> name=value
+    property engagement
+        get get_Engagement slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement> return
+        put put_Engagement slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement> name=value
+    property distance_in_millimeters
+        get get_DistanceInMillimeters slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_DistanceInMillimeters slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property onlooker_presence
+        get get_OnlookerPresence slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> return
+        put put_OnlookerPresence slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> name=value
+
+class Windows.Devices.Sensors.HumanPresenceSettings python_type
+    py HumanPresenceSettings
+    signature rc(Windows.Devices.Sensors.HumanPresenceSettings;{ef4daf5b-07b7-5eb6-86bb-b7ff49ce44fb})
+    default Windows.Devices.Sensors.IHumanPresenceSettings
+    requires Windows.Devices.Sensors.IHumanPresenceSettings
+    requires Windows.Devices.Sensors.IHumanPresenceSettings2
+    requires Windows.Devices.Sensors.IHumanPresenceSettings3
+    factory Windows.Devices.Sensors.IHumanPresenceSettingsStatics
+    property wake_on_approach_distance_in_millimeters
+        get get_WakeOnApproachDistanceInMillimeters slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_WakeOnApproachDistanceInMillimeters slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property sensor_id
+        get get_SensorId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=22
+            out string return
+        put put_SensorId slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=43
+            in string name=value
+    property lock_on_leave_timeout
+        get get_LockOnLeaveTimeout slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=202
+            out timespan return
+        put put_LockOnLeaveTimeout slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=26 reverse=215
+            in timespan name=value
+    property lock_on_leave_distance_in_millimeters
+        get get_LockOnLeaveDistanceInMillimeters slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_LockOnLeaveDistanceInMillimeters slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=194
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property is_wake_on_approach_enabled
+        get get_IsWakeOnApproachEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=62
+            out boolean return
+        put put_IsWakeOnApproachEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=99
+            in boolean name=value
+    property is_lock_on_leave_enabled
+        get get_IsLockOnLeaveEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=162
+            out boolean return
+        put put_IsLockOnLeaveEnabled slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=173
+            in boolean name=value
+    property is_attention_aware_dimming_enabled
+        get get_IsAttentionAwareDimmingEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=218 deprecated
+            out boolean return
+        put put_IsAttentionAwareDimmingEnabled slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings shape=4 reverse=223 deprecated
+            in boolean name=value
+    property is_adaptive_dimming_enabled
+        get get_IsAdaptiveDimmingEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings2 shape=4 reverse=22
+            out boolean return
+        put put_IsAdaptiveDimmingEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings2 shape=4 reverse=43
+            in boolean name=value
+    property dimming_options
+        get get_DimmingOptions slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings2 shape=4 reverse=99
+            out class type=Windows.Devices.Sensors.AdaptiveDimmingOptions return
+    property lock_options
+        get get_LockOptions slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings2 shape=4 reverse=121
+            out class type=Windows.Devices.Sensors.LockOnLeaveOptions return
+    property wake_options
+        get get_WakeOptions slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings2 shape=4 reverse=62
+            out class type=Windows.Devices.Sensors.WakeOnApproachOptions return
+    property is_onlooker_detection_enabled
+        get get_IsOnlookerDetectionEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings3 shape=4 reverse=22
+            out boolean return
+        put put_IsOnlookerDetectionEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettings3 shape=4 reverse=43
+            in boolean name=value
+    property onlooker_detection_options
+        get get_OnlookerDetectionOptions slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettings3 shape=4 reverse=62
+            out class type=Windows.Devices.Sensors.OnlookerDetectionOptions return
+    event settings_changed static
+        add add_SettingsChanged slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=51 reverse=174 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_SettingsChanged slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=26 reverse=192 static
+            in event_token name=token
+    method get_current_settings static
+        method GetCurrentSettings slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=4 reverse=43 static
+            out class type=Windows.Devices.Sensors.HumanPresenceSettings return
+    method get_current_settings_async static
+        method GetCurrentSettingsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> return
+    method get_supported_features_for_sensor_id static
+        method GetSupportedFeaturesForSensorId slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=51 reverse=144 static
+            in string name=sensorId
+            out class type=Windows.Devices.Sensors.HumanPresenceFeatures return
+    method get_supported_features_for_sensor_id_async static
+        method GetSupportedFeaturesForSensorIdAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=51 reverse=124 static
+            in string name=sensorId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> return
+    method get_supported_lock_on_leave_timeouts static
+        method GetSupportedLockOnLeaveTimeouts slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=4 reverse=162 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> return
+    method update_settings static
+        method UpdateSettings slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=4 reverse=99 static
+            in class type=Windows.Devices.Sensors.HumanPresenceSettings name=settings
+    method update_settings_async static
+        method UpdateSettingsAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=51 reverse=65 static
+            in class type=Windows.Devices.Sensors.HumanPresenceSettings name=settings
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Devices.Sensors.IAccelerometer
+    guid df184548-2711-4da7-8098-4b82205d3c7d
+
+interface Windows.Devices.Sensors.IAccelerometer2
+    guid e8f092ee-4964-401a-b602-220d7153c60a
+
+interface Windows.Devices.Sensors.IAccelerometer3
+    guid 87e0022a-ed80-49eb-bf8a-a4ea31e5cd84
+
+interface Windows.Devices.Sensors.IAccelerometer4
+    guid 1d373c4f-42d3-45b2-8144-ab7fb665eb59
+
+interface Windows.Devices.Sensors.IAccelerometer5
+    guid 7e7e7021-def4-53a6-af43-806fd538edf6
+
+interface Windows.Devices.Sensors.IAccelerometerDataThreshold
+    guid f92c1b68-6320-5577-879e-9942621c3dd9
+
+interface Windows.Devices.Sensors.IAccelerometerDeviceId
+    guid 7eac64a9-97d5-446d-ab5a-917df9b96a2c
+
+interface Windows.Devices.Sensors.IAccelerometerReading
+    guid b9fe7acb-d351-40af-8bb6-7aa9ae641fb7
+
+interface Windows.Devices.Sensors.IAccelerometerReading2
+    guid 0a864aa2-15ae-4a40-be55-db58d7de7389
+
+interface Windows.Devices.Sensors.IAccelerometerReadingChangedEventArgs
+    guid 0095c65b-b6ac-475a-9f44-8b32d35a3f25
+
+interface Windows.Devices.Sensors.IAccelerometerShakenEventArgs
+    guid 95ff01d1-4a28-4f35-98e8-8178aae4084a
+
+interface Windows.Devices.Sensors.IAccelerometerStatics
+    guid a5e28b74-5a87-4a2d-becc-0f906ea061dd
+
+interface Windows.Devices.Sensors.IAccelerometerStatics2
+    guid c4c4842f-d86b-4685-b2d7-3396f798d57b
+
+interface Windows.Devices.Sensors.IAccelerometerStatics3
+    guid 9de218cf-455d-4cf3-8200-70e1410340f8
+
+interface Windows.Devices.Sensors.IActivitySensor
+    guid cd7a630c-fb5f-48eb-b09b-a2708d1c61ef
+
+interface Windows.Devices.Sensors.IActivitySensorReading
+    guid 85125a96-1472-40a2-b2ae-e1ef29226c78
+
+interface Windows.Devices.Sensors.IActivitySensorReadingChangeReport
+    guid 4f3c2915-d93b-47bd-960a-f20fb2f322b9
+
+interface Windows.Devices.Sensors.IActivitySensorReadingChangedEventArgs
+    guid de386717-aeb6-4ec7-946a-d9cc19b951ec
+
+interface Windows.Devices.Sensors.IActivitySensorStatics
+    guid a71e0e9d-ee8b-45d1-b25b-08cc0df92ab6
+
+interface Windows.Devices.Sensors.IActivitySensorTriggerDetails
+    guid 2c9e6612-b9ca-4677-b263-243297f79d3a
+
+interface Windows.Devices.Sensors.IAdaptiveDimmingOptions
+    guid d3213cf7-89b5-5732-b2a0-aefe324f54e6
+
+interface Windows.Devices.Sensors.IAltimeter
+    guid 72f057fd-8f04-49f1-b4a7-f4e363b701a2
+
+interface Windows.Devices.Sensors.IAltimeter2
+    guid c9471bf9-2add-48f5-9f08-3d0c7660d938
+
+interface Windows.Devices.Sensors.IAltimeterReading
+    guid fbe8ef73-7f5e-48c8-aa1a-f1f3befc1144
+
+interface Windows.Devices.Sensors.IAltimeterReading2
+    guid 543a1bd9-6d0b-42b2-bd69-bc8fae0f782c
+
+interface Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs
+    guid 7069d077-446d-47f7-998c-ebc23b45e4a2
+
+interface Windows.Devices.Sensors.IAltimeterStatics
+    guid 9eb4d7c3-e5ac-47ce-8eef-d3718168c01f
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> concrete
+    guid fc761d3b-5e4d-5148-a618-7b677059d0b8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d}))
+    argument Windows.Devices.Sensors.Accelerometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> concrete
+    guid c33003ae-e7ae-572b-8d55-7db197356c30
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef}))
+    argument Windows.Devices.Sensors.ActivitySensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> concrete
+    guid 79a87969-327f-5b7a-a0d3-73eab16de21c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    argument Windows.Devices.Sensors.ActivitySensorReading
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> concrete
+    guid 51876037-9f36-5c86-855d-3ddd251df9a8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4}))
+    argument Windows.Devices.Sensors.Barometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> concrete
+    guid 5297c24c-a6fb-5e03-a4f8-ee143c435df8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64}))
+    argument Windows.Devices.Sensors.Compass
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> concrete
+    guid fcee7abf-1dcf-50cc-b91b-7a1f59e0c28b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c}))
+    argument Windows.Devices.Sensors.Gyrometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> concrete
+    guid 70c4c5a0-bcca-5227-96f0-17fa53539be8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HingeAngleReading;{a3cd45b9-1bf1-4f65-a704-e2da04f182c0}))
+    argument Windows.Devices.Sensors.HingeAngleReading
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> concrete
+    guid 4f998177-4080-56d8-a96f-9d5b55944e55
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309}))
+    argument Windows.Devices.Sensors.HingeAngleSensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> concrete
+    guid 00972df9-560b-5523-a611-a78ff72f919a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceFeatures;{bdb09fda-3244-557a-bd29-8b004f59f2cc}))
+    argument Windows.Devices.Sensors.HumanPresenceFeatures
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> concrete
+    guid 2d73352e-05a7-5a04-8d54-c95566932419
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd}))
+    argument Windows.Devices.Sensors.HumanPresenceSensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> concrete
+    guid 0188393f-c6b5-5f2e-a2c5-8009113126e8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceSettings;{ef4daf5b-07b7-5eb6-86bb-b7ff49ce44fb}))
+    argument Windows.Devices.Sensors.HumanPresenceSettings
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> concrete
+    guid 84ebb496-b69a-53cd-b690-a46189822b01
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf}))
+    argument Windows.Devices.Sensors.Inclinometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> concrete
+    guid 380e592c-47a0-5df4-8de2-b2eefa9db8ad
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0}))
+    argument Windows.Devices.Sensors.LightSensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> concrete
+    guid b0455443-e790-5aa3-8767-4932032274ee
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5}))
+    argument Windows.Devices.Sensors.Magnetometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> concrete
+    guid 8ef36aa8-6f6d-538b-a42b-37af7369049e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec}))
+    argument Windows.Devices.Sensors.OrientationSensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> concrete
+    guid 9414388f-1b3e-55f5-819b-ab3833646055
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97}))
+    argument Windows.Devices.Sensors.Pedometer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> concrete
+    guid 6b77c9f9-dcf7-5647-adc7-f70cf9927044
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd}))
+    argument Windows.Devices.Sensors.SimpleOrientationSensor
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> concrete
+    guid cd781b82-7900-51a3-80ce-903e2e0a4f0e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> concrete
+    guid 2aeac503-a3a8-57b3-a8a9-e16b0cd4c0a4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>
+
+interface Windows.Devices.Sensors.IBarometer
+    guid 934475a8-78bf-452f-b017-f0209ce6dab4
+
+interface Windows.Devices.Sensors.IBarometer2
+    guid 32bcc418-3eeb-4d04-9574-7633a8781f9f
+
+interface Windows.Devices.Sensors.IBarometer3
+    guid 0e35f0ea-02b5-5a04-b03d-822084863a54
+
+interface Windows.Devices.Sensors.IBarometerDataThreshold
+    guid 076b952c-cb62-5a90-a0d1-f85e4a936394
+
+interface Windows.Devices.Sensors.IBarometerReading
+    guid f5b9d2e6-1df6-4a1a-a7ad-321d4f5db247
+
+interface Windows.Devices.Sensors.IBarometerReading2
+    guid 85a244eb-90c5-4875-891c-3865b4c357e7
+
+interface Windows.Devices.Sensors.IBarometerReadingChangedEventArgs
+    guid 3d84945f-037b-404f-9bbb-6232d69543c3
+
+interface Windows.Devices.Sensors.IBarometerStatics
+    guid 286b270a-02e3-4f86-84fc-fdd892b5940f
+
+interface Windows.Devices.Sensors.IBarometerStatics2
+    guid 8fc6b1e7-95ff-44ac-878e-d65c8308c34c
+
+interface Windows.Devices.Sensors.ICompass
+    guid 292ffa94-1b45-403c-ba06-b106dba69a64
+
+interface Windows.Devices.Sensors.ICompass2
+    guid 36f26d09-c7d7-434f-b461-979ddfc2322f
+
+interface Windows.Devices.Sensors.ICompass3
+    guid a424801b-c5ea-4d45-a0ec-4b791f041a89
+
+interface Windows.Devices.Sensors.ICompass4
+    guid 291e7f11-ec32-5dcc-bfcb-0bb39eba5774
+
+interface Windows.Devices.Sensors.ICompassDataThreshold
+    guid d15b52b3-d39d-5ec8-b2e4-f193e6ab34ed
+
+interface Windows.Devices.Sensors.ICompassDeviceId
+    guid d181ca29-b085-4b1d-870a-4ff57ba74fd4
+
+interface Windows.Devices.Sensors.ICompassReading
+    guid 82911128-513d-4dc9-b781-5eedfbf02d0c
+
+interface Windows.Devices.Sensors.ICompassReading2
+    guid b13a661e-51bb-4a12-bedd-ad47ff87d2e8
+
+interface Windows.Devices.Sensors.ICompassReadingChangedEventArgs
+    guid 8f1549b0-e8bc-4c7e-b009-4e41df137072
+
+interface Windows.Devices.Sensors.ICompassReadingHeadingAccuracy
+    guid e761354e-8911-40f7-9e16-6ecc7daec5de
+
+interface Windows.Devices.Sensors.ICompassStatics
+    guid 9abc97df-56ec-4c25-b54d-40a68bb5b269
+
+interface Windows.Devices.Sensors.ICompassStatics2
+    guid 0ace0ead-3baa-4990-9ce4-be0913754ed2
+
+interface Windows.Devices.Sensors.IDetectedPerson
+    guid 168cc0d9-3f05-5029-a0bf-cdcab4be3f9e
+
+interface Windows.Devices.Sensors.IGyrometer
+    guid fdb9a9c4-84b1-4ca2-9763-9b589506c70c
+
+interface Windows.Devices.Sensors.IGyrometer2
+    guid 63df2443-8ce8-41c3-ac44-8698810b557f
+
+interface Windows.Devices.Sensors.IGyrometer3
+    guid 5d6f88d5-8fbc-4484-914b-528adfd947b1
+
+interface Windows.Devices.Sensors.IGyrometer4
+    guid 0628a60c-4c4b-5096-94e6-c356df68bef7
+
+interface Windows.Devices.Sensors.IGyrometerDataThreshold
+    guid 8648b31e-6e52-5259-bbad-242a69dc38c8
+
+interface Windows.Devices.Sensors.IGyrometerDeviceId
+    guid 1ee5e978-89a2-4275-9e95-7126f4708760
+
+interface Windows.Devices.Sensors.IGyrometerReading
+    guid b3d6de5c-1ee4-456f-9de7-e2493b5c8e03
+
+interface Windows.Devices.Sensors.IGyrometerReading2
+    guid 16afe13c-2b89-44bb-822b-d1e1556ff09b
+
+interface Windows.Devices.Sensors.IGyrometerReadingChangedEventArgs
+    guid 0fdf1895-6f9e-42ce-8d58-388c0ab8356d
+
+interface Windows.Devices.Sensors.IGyrometerStatics
+    guid 83b6e7c9-e49d-4b39-86e6-cd554be4c5c1
+
+interface Windows.Devices.Sensors.IGyrometerStatics2
+    guid ef83f7a1-d700-4204-9613-79c6b161df4e
+
+interface Windows.Devices.Sensors.IHeadOrientation
+    guid 519f54a9-513e-55e8-9c35-3e8da21dee69
+
+interface Windows.Devices.Sensors.IHeadPosition
+    guid 585aeb65-cf35-5e6d-a76a-37db131e17de
+
+interface Windows.Devices.Sensors.IHingeAngleReading
+    guid a3cd45b9-1bf1-4f65-a704-e2da04f182c0
+
+interface Windows.Devices.Sensors.IHingeAngleSensor
+    guid e9d3be02-bfdf-437f-8c29-88c77393d309
+
+interface Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs
+    guid 24d9558b-fad0-42b8-a854-78923049a1ba
+
+interface Windows.Devices.Sensors.IHingeAngleSensorStatics
+    guid b7b63910-fbb1-4123-89ce-4ea34eb0dfca
+
+interface Windows.Devices.Sensors.IHumanPresenceFeatures
+    guid bdb09fda-3244-557a-bd29-8b004f59f2cc
+
+interface Windows.Devices.Sensors.IHumanPresenceFeatures2
+    guid 08a9cdda-d929-5ec2-81e2-940bafa089cf
+
+interface Windows.Devices.Sensors.IHumanPresenceFeatures3
+    guid ed4e03aa-5ca2-5c02-b783-262e91295619
+
+interface Windows.Devices.Sensors.IHumanPresenceSensor
+    guid 2116788b-e389-5cc3-9a97-cb17be1008bd
+
+interface Windows.Devices.Sensors.IHumanPresenceSensor2
+    guid f8833779-65fe-541a-b9d6-1e474a485e7a
+
+interface Windows.Devices.Sensors.IHumanPresenceSensor3
+    guid 963f006d-090d-532c-9eaf-803a9f69285b
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorExtension python_type
+    py _IHumanPresenceSensorExtension
+    guid 3e526a71-2d1d-5d43-8a8e-a434a8242ef0
+    signature {3e526a71-2d1d-5d43-8a8e-a434a8242ef0}
+    method initialize
+        method Initialize slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=4 reverse=22
+            in string name=deviceInterface
+    method process_reading
+        method ProcessReading slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=51 reverse=65
+            in class type=Windows.Devices.Sensors.HumanPresenceSensorReading name=reading
+            out class type=Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate return
+    method process_reading_timeout_expired
+        method ProcessReadingTimeoutExpired slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=4 reverse=99
+            in class type=Windows.Devices.Sensors.HumanPresenceSensorReading name=reading
+    method reset
+        method Reset slot=12 inputs=0 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=0 reverse=159
+    method start
+        method Start slot=7 inputs=0 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=0 reverse=37
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=0 reverse=117
+    method uninitialize
+        method Uninitialize slot=11 inputs=0 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensorExtension shape=0 reverse=137
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReading
+    guid 83533bf5-a85a-5d50-8be4-6072d745a3bb
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReading2
+    guid c4f0e950-3bff-53d6-a0f8-514ea3705c66
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReading3
+    guid b876d918-f069-586f-90e3-7c6fa5c5d33a
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs
+    guid a9dc4583-fd69-5c5e-ab1f-942204eae2db
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate
+    guid 42419c77-6d2f-55a0-9e01-c9cbe7b2d6df
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate2
+    guid bb95a033-c688-546a-8e2d-b12642e7efeb
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorStatics
+    guid 2ae89842-dba9-56b2-9f27-eac69d621004
+
+interface Windows.Devices.Sensors.IHumanPresenceSensorStatics2
+    guid 5de35843-d260-5a87-995e-ace91326e1c4
+
+interface Windows.Devices.Sensors.IHumanPresenceSettings
+    guid ef4daf5b-07b7-5eb6-86bb-b7ff49ce44fb
+
+interface Windows.Devices.Sensors.IHumanPresenceSettings2
+    guid a26f705e-8696-5eb4-b9e1-26a508de1cd4
+
+interface Windows.Devices.Sensors.IHumanPresenceSettings3
+    guid 89757226-acc1-4f58-81df-47f1d69537f2
+
+interface Windows.Devices.Sensors.IHumanPresenceSettingsStatics
+    guid 7f343202-e010-52c4-af0c-04a8f1e033da
+
+interface Windows.Devices.Sensors.IInclinometer
+    guid 2648ca6f-2286-406f-9161-f0c4bd806ebf
+
+interface Windows.Devices.Sensors.IInclinometer2
+    guid 029f3393-28b2-45f8-bb16-61e86a7fae6e
+
+interface Windows.Devices.Sensors.IInclinometer3
+    guid 3a095004-d765-4384-a3d7-0283f3abe6ae
+
+interface Windows.Devices.Sensors.IInclinometer4
+    guid 43852618-8fca-548e-bbf5-5c50412b6aa4
+
+interface Windows.Devices.Sensors.IInclinometerDataThreshold
+    guid f80a4783-7bfe-545e-bb60-a0ebc47bd2fb
+
+interface Windows.Devices.Sensors.IInclinometerDeviceId
+    guid 01e91982-41ff-4406-ae83-62210ff16fe3
+
+interface Windows.Devices.Sensors.IInclinometerReading
+    guid 9f44f055-b6f6-497f-b127-1a775e501458
+
+interface Windows.Devices.Sensors.IInclinometerReading2
+    guid 4f164781-e90b-4658-8915-0103e08a805a
+
+interface Windows.Devices.Sensors.IInclinometerReadingChangedEventArgs
+    guid 4ae91dc1-e7eb-4938-8511-ae0d6b440438
+
+interface Windows.Devices.Sensors.IInclinometerReadingYawAccuracy
+    guid b453e880-1fe3-4986-a257-e6ece2723949
+
+interface Windows.Devices.Sensors.IInclinometerStatics
+    guid f22ec551-9c30-453a-8b49-3c3eeb33cb61
+
+interface Windows.Devices.Sensors.IInclinometerStatics2
+    guid 043f9775-6a1e-499c-86e0-638c1a864b00
+
+interface Windows.Devices.Sensors.IInclinometerStatics3
+    guid bd9a4280-b91a-4829-9392-abc0b6bdf2b4
+
+interface Windows.Devices.Sensors.IInclinometerStatics4
+    guid e8ba96f9-6e85-4a83-aed0-d7cdcc9856c8
+
+interface Windows.Devices.Sensors.ILightSensor
+    guid f84c0718-0c54-47ae-922e-789f57fb03a0
+
+interface Windows.Devices.Sensors.ILightSensor2
+    guid 486b24e8-a94c-4090-8f48-09f782a9f7d5
+
+interface Windows.Devices.Sensors.ILightSensor3
+    guid 4876d0ff-9f4c-5f72-adbd-a3471b063c00
+
+interface Windows.Devices.Sensors.ILightSensor4
+    guid 6167be97-6390-404c-9c19-445311c6a1d3
+
+interface Windows.Devices.Sensors.ILightSensorDataThreshold
+    guid b160afd1-878f-5492-9f2c-33dc3ae584a3
+
+interface Windows.Devices.Sensors.ILightSensorDataThreshold2
+    guid 6f040fbd-e08b-5b97-8f61-dd4ee66b1733
+
+interface Windows.Devices.Sensors.ILightSensorDeviceId
+    guid 7fee49f8-0afb-4f51-87f0-6c26375ce94f
+
+interface Windows.Devices.Sensors.ILightSensorReading
+    guid ffdf6300-227c-4d2b-b302-fc0142485c68
+
+interface Windows.Devices.Sensors.ILightSensorReading2
+    guid b7512185-44a3-44c9-8190-9ef6de0a8a74
+
+interface Windows.Devices.Sensors.ILightSensorReading3
+    guid f338ee06-96af-4029-b530-61acc05b7cfe
+
+interface Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs
+    guid a3a2f4cf-258b-420c-b8ab-8edd601ecf50
+
+interface Windows.Devices.Sensors.ILightSensorStatics
+    guid 45db8c84-c3a8-471e-9a53-6457fad87c0e
+
+interface Windows.Devices.Sensors.ILightSensorStatics2
+    guid 0ec0a650-ddc6-40ab-ace3-ec3359d42c51
+
+interface Windows.Devices.Sensors.ILockOnLeaveOptions
+    guid 3c6bf8bd-04c1-5829-8d4e-70521755b8be
+
+interface Windows.Devices.Sensors.IMagnetometer
+    guid 484f626e-d3c9-4111-b3f6-2cf1faa418d5
+
+interface Windows.Devices.Sensors.IMagnetometer2
+    guid b4656c85-26f6-444b-a9e2-a23f966cd368
+
+interface Windows.Devices.Sensors.IMagnetometer3
+    guid be93db7c-a625-48ef-acf7-fac104832671
+
+interface Windows.Devices.Sensors.IMagnetometer4
+    guid dfb17901-3e0f-508f-b24b-f2bb75015f40
+
+interface Windows.Devices.Sensors.IMagnetometerDataThreshold
+    guid d177cb01-9063-5fa5-b596-b445e9dc3401
+
+interface Windows.Devices.Sensors.IMagnetometerDeviceId
+    guid 58b498c2-7e4b-404c-9fc5-5de8b40ebae3
+
+interface Windows.Devices.Sensors.IMagnetometerReading
+    guid 0c2cc40d-ebfd-4e5c-bb11-afc29b3cae61
+
+interface Windows.Devices.Sensors.IMagnetometerReading2
+    guid d4c95c61-61d9-404b-a328-066f177a1409
+
+interface Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs
+    guid 17eae872-2eb9-4ee7-8ad0-3127537d949b
+
+interface Windows.Devices.Sensors.IMagnetometerStatics
+    guid 853c64cc-0698-4dda-a6df-9cb9cc4ab40a
+
+interface Windows.Devices.Sensors.IMagnetometerStatics2
+    guid 2c0819f0-ffc6-4f89-a06f-18fa10792933
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    argument System.String
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> concrete
+    guid 64f0c54c-4865-56bd-ac98-64a98451e362
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Devices.Sensors.PedometerStepKind;i4);rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    argument Windows.Devices.Sensors.PedometerStepKind
+    argument Windows.Devices.Sensors.PedometerReading
+
+interface Windows.Devices.Sensors.IOnlookerDetectionOptions
+    guid 0412b36f-36e6-51e2-876e-65197cc53c12
+
+interface Windows.Devices.Sensors.IOrientationSensor
+    guid 5e354635-cf6b-4c63-abd8-10252b0bf6ec
+
+interface Windows.Devices.Sensors.IOrientationSensor2
+    guid 0d924cf9-2f1f-49c9-8042-4a1813d67760
+
+interface Windows.Devices.Sensors.IOrientationSensor3
+    guid 2cce578d-646b-48c5-b7ee-44fdc4c6aafd
+
+interface Windows.Devices.Sensors.IOrientationSensorDeviceId
+    guid 5a69b648-4c29-49ec-b28f-ea1d117b66f0
+
+interface Windows.Devices.Sensors.IOrientationSensorReading
+    guid 4756c993-6595-4897-bcc6-d537ee757564
+
+interface Windows.Devices.Sensors.IOrientationSensorReading2
+    guid 00576e5f-49f8-4c05-9e07-24fac79408c3
+
+interface Windows.Devices.Sensors.IOrientationSensorReadingChangedEventArgs
+    guid 012c1186-c3ba-46bc-ae65-7a98996cbfb8
+
+interface Windows.Devices.Sensors.IOrientationSensorReadingYawAccuracy
+    guid d1ac9824-3f5a-49a2-bc7b-1180bc38cd2b
+
+interface Windows.Devices.Sensors.IOrientationSensorStatics
+    guid 10ef8712-fb4c-428a-898b-2765e409e669
+
+interface Windows.Devices.Sensors.IOrientationSensorStatics2
+    guid 59da0d0b-d40a-4c71-9276-8a272a0a6619
+
+interface Windows.Devices.Sensors.IOrientationSensorStatics3
+    guid d82ce920-2777-40ff-9f59-d654b085f12f
+
+interface Windows.Devices.Sensors.IOrientationSensorStatics4
+    guid a67feb55-2c85-4b28-a0fe-58c4b20495f5
+
+interface Windows.Devices.Sensors.IPedometer
+    guid 9a1e013d-3d98-45f8-8920-8e4ecaca5f97
+
+interface Windows.Devices.Sensors.IPedometer2
+    guid e5a406df-2b81-4add-b2ff-77ab6c98ba19
+
+interface Windows.Devices.Sensors.IPedometerDataThresholdFactory
+    guid cbad8f50-7a54-466b-9010-77a162fca5d7
+
+interface Windows.Devices.Sensors.IPedometerReading
+    guid 2245dcf4-a8e1-432f-896a-be0dd9b02d24
+
+interface Windows.Devices.Sensors.IPedometerReadingChangedEventArgs
+    guid f855e47e-abbc-4456-86a8-25cf2b333742
+
+interface Windows.Devices.Sensors.IPedometerStatics
+    guid 82980a2f-4083-4dfb-b411-938ea0f4b946
+
+interface Windows.Devices.Sensors.IPedometerStatics2
+    guid 79f5c6bb-ce0e-4133-b47e-8627ea72f677
+
+interface Windows.Devices.Sensors.IProximitySensor
+    guid 54c076b8-ecfb-4944-b928-74fc504d47ee
+
+interface Windows.Devices.Sensors.IProximitySensorDataThresholdFactory
+    guid 905ac121-6d27-4ad3-9db5-6467f2a5ad9d
+
+interface Windows.Devices.Sensors.IProximitySensorReading
+    guid 71228d59-132d-4d5f-8ff9-2f0db8751ced
+
+interface Windows.Devices.Sensors.IProximitySensorReadingChangedEventArgs
+    guid cfc2f366-c3e8-40fd-8cc3-67e289004938
+
+interface Windows.Devices.Sensors.IProximitySensorStatics
+    guid 29186649-6269-4e57-a5ad-82be80813392
+
+interface Windows.Devices.Sensors.IProximitySensorStatics2
+    guid cbf473ae-e9ca-422f-ad67-4c3d25df350c
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement> concrete
+    guid 148adf95-eb2c-5912-9c40-6dcec31357bd
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.Sensors.HumanEngagement;i4))
+    argument Windows.Devices.Sensors.HumanEngagement
+
+interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> concrete
+    guid bacd473d-348f-54d0-95c0-ffd5379f8b7f
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.Sensors.HumanPresence;i4))
+    argument Windows.Devices.Sensors.HumanPresence
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Devices.Sensors.ISensorDataThreshold python_type
+    py _ISensorDataThreshold
+    guid 54daec61-fe4b-4e07-b260-3a4cdfbe396e
+    signature {54daec61-fe4b-4e07-b260-3a4cdfbe396e}
+
+interface Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails
+    guid 9106f1b7-e88d-48b1-bc90-619c7b349391
+
+interface Windows.Devices.Sensors.ISensorQuaternion
+    guid c9c5c827-c71c-46e7-9da3-36a193b232bc
+
+interface Windows.Devices.Sensors.ISensorRotationMatrix
+    guid 0a3d5a67-22f4-4392-9538-65d0bd064aa6
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensor
+    guid 5ff53856-214a-4dee-a3f9-616f1ab06ffd
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensor2
+    guid a277a798-8870-453e-8bd6-b8f5d8d7941b
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId
+    guid fbc00acb-3b76-41f6-8091-30efe646d3cf
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs
+    guid bcd5c660-23d4-4b4c-a22e-ba81ade0c601
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensorStatics
+    guid 72ed066f-70aa-40c6-9b1b-3433f7459b4e
+
+interface Windows.Devices.Sensors.ISimpleOrientationSensorStatics2
+    guid 848f9c7f-b138-4e11-8910-a2a2a3b56d83
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete
+    guid e3e660d6-d041-5ecd-b18b-fa254e4a860f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sensors.ActivityType;i4))
+    argument Windows.Devices.Sensors.ActivityType
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+    guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> concrete
+    guid 726234a9-7137-55c4-a444-352dcdc30d77
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    argument Windows.Devices.Sensors.ActivitySensorReading
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> concrete
+    guid 10e48a80-dd6a-5704-8f3d-3d46111f391e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReadingChangeReport;{4f3c2915-d93b-47bd-960a-f20fb2f322b9}))
+    argument Windows.Devices.Sensors.ActivitySensorReadingChangeReport
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete
+    guid fc7a0488-2803-505c-9e62-9200afe416c6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.Sensors.ActivityType;i4))
+    argument Windows.Devices.Sensors.ActivityType
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> concrete
+    guid 1de993d5-739b-5f05-9985-c36376df9f39
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.DetectedPerson;{168cc0d9-3f05-5029-a0bf-cdcab4be3f9e}))
+    argument Windows.Devices.Sensors.DetectedPerson
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> concrete
+    guid 52076f5c-7838-54d9-9517-5511eb627952
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    argument Windows.Devices.Sensors.PedometerReading
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> concrete
+    guid 7a09d76c-8ced-5e30-b7fe-1ff74d4d9814
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ProximitySensorReading;{71228d59-132d-4d5f-8ff9-2f0db8751ced}))
+    argument Windows.Devices.Sensors.ProximitySensorReading
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> concrete
+    guid 6b5828d7-6b8d-58c4-ba3a-9f796710f53c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Devices.Sensors.IWakeOnApproachOptions
+    guid f0b87ae7-7e1f-5ea5-814d-6b7e07defc2b
+
+class Windows.Devices.Sensors.Inclinometer python_type
+    py Inclinometer
+    signature rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf})
+    default Windows.Devices.Sensors.IInclinometer
+    requires Windows.Devices.Sensors.IInclinometer
+    requires Windows.Devices.Sensors.IInclinometerDeviceId
+    requires Windows.Devices.Sensors.IInclinometer2
+    requires Windows.Devices.Sensors.IInclinometer3
+    requires Windows.Devices.Sensors.IInclinometer4
+    factory Windows.Devices.Sensors.IInclinometerStatics4
+    factory Windows.Devices.Sensors.IInclinometerStatics
+    factory Windows.Devices.Sensors.IInclinometerStatics2
+    factory Windows.Devices.Sensors.IInclinometerStatics3
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometer shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometer2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property reading_type
+        get get_ReadingType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer2 shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sensors.SensorReadingType return
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometer3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer3 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer4 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.InclinometerDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Inclinometer,Windows.Devices.Sensors.InclinometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometer shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics4 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.InclinometerReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Inclinometer return
+        method GetDefault slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics3 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingtype
+            out class type=Windows.Devices.Sensors.Inclinometer return
+    method get_default_for_relative_readings static
+        method GetDefaultForRelativeReadings slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics2 shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Inclinometer return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics4 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=readingType
+            out string return
+
+class Windows.Devices.Sensors.InclinometerDataThreshold python_type
+    py InclinometerDataThreshold
+    signature rc(Windows.Devices.Sensors.InclinometerDataThreshold;{f80a4783-7bfe-545e-bb60-a0ebc47bd2fb})
+    default Windows.Devices.Sensors.IInclinometerDataThreshold
+    requires Windows.Devices.Sensors.IInclinometerDataThreshold
+    property yaw_in_degrees
+        get get_YawInDegrees slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=4 reverse=121
+            out single return
+        put put_YawInDegrees slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=1
+            in single name=value
+    property roll_in_degrees
+        get get_RollInDegrees slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=4 reverse=62
+            out single return
+        put put_RollInDegrees slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=1 reverse=94
+            in single name=value
+    property pitch_in_degrees
+        get get_PitchInDegrees slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=4 reverse=22
+            out single return
+        put put_PitchInDegrees slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometerDataThreshold shape=1
+            in single name=value
+
+class Windows.Devices.Sensors.InclinometerReading python_type
+    py InclinometerReading
+    signature rc(Windows.Devices.Sensors.InclinometerReading;{9f44f055-b6f6-497f-b127-1a775e501458})
+    default Windows.Devices.Sensors.IInclinometerReading
+    requires Windows.Devices.Sensors.IInclinometerReading
+    requires Windows.Devices.Sensors.IInclinometerReadingYawAccuracy
+    requires Windows.Devices.Sensors.IInclinometerReading2
+    property pitch_degrees
+        get get_PitchDegrees slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading shape=4 reverse=43
+            out single return
+    property roll_degrees
+        get get_RollDegrees slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading shape=4 reverse=62
+            out single return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading shape=4 reverse=22
+            out datetime return
+    property yaw_degrees
+        get get_YawDegrees slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading shape=4 reverse=99
+            out single return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property yaw_accuracy
+        get get_YawAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReadingYawAccuracy shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.MagnetometerAccuracy return
+
+class Windows.Devices.Sensors.InclinometerReadingChangedEventArgs python_type
+    py InclinometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.InclinometerReadingChangedEventArgs;{4ae91dc1-e7eb-4938-8511-ae0d6b440438})
+    default Windows.Devices.Sensors.IInclinometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IInclinometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.InclinometerReading return
+
+class Windows.Devices.Sensors.LightSensor python_type
+    py LightSensor
+    signature rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0})
+    default Windows.Devices.Sensors.ILightSensor
+    requires Windows.Devices.Sensors.ILightSensor
+    requires Windows.Devices.Sensors.ILightSensorDeviceId
+    requires Windows.Devices.Sensors.ILightSensor2
+    requires Windows.Devices.Sensors.ILightSensor3
+    requires Windows.Devices.Sensors.ILightSensor4
+    factory Windows.Devices.Sensors.ILightSensorStatics2
+    factory Windows.Devices.Sensors.ILightSensorStatics
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensor shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=4 reverse=43
+            out uint32 return
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor2 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensor2 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor2 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor3 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.LightSensorDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.LightSensor,Windows.Devices.Sensors.LightSensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensor shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorStatics2 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.LightSensorReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.LightSensor return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorStatics2 shape=4 reverse=22 static
+            out string return
+    method is_chromaticity_supported
+        method IsChromaticitySupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor4 shape=4 reverse=22
+            out boolean return
+
+struct Windows.Devices.Sensors.LightSensorChromaticity python_type
+    py LightSensorChromaticity
+    signature struct(Windows.Devices.Sensors.LightSensorChromaticity;f8;f8)
+    field x X double
+    field y Y double
+
+class Windows.Devices.Sensors.LightSensorDataThreshold python_type
+    py LightSensorDataThreshold
+    signature rc(Windows.Devices.Sensors.LightSensorDataThreshold;{b160afd1-878f-5492-9f2c-33dc3ae584a3})
+    default Windows.Devices.Sensors.ILightSensorDataThreshold
+    requires Windows.Devices.Sensors.ILightSensorDataThreshold
+    requires Windows.Devices.Sensors.ILightSensorDataThreshold2
+    property lux_percentage
+        get get_LuxPercentage slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold shape=4 reverse=22
+            out single return
+        put put_LuxPercentage slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold shape=1
+            in single name=value
+    property absolute_lux
+        get get_AbsoluteLux slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold shape=4 reverse=62
+            out single return
+        put put_AbsoluteLux slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold shape=1 reverse=94
+            in single name=value
+    property chromaticity
+        get get_Chromaticity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold2 shape=4 reverse=22
+            out struct type=Windows.Devices.Sensors.LightSensorChromaticity return
+        put put_Chromaticity slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensorDataThreshold2 shape=17
+            in struct type=Windows.Devices.Sensors.LightSensorChromaticity name=value
+
+class Windows.Devices.Sensors.LightSensorReading python_type
+    py LightSensorReading
+    signature rc(Windows.Devices.Sensors.LightSensorReading;{ffdf6300-227c-4d2b-b302-fc0142485c68})
+    default Windows.Devices.Sensors.ILightSensorReading
+    requires Windows.Devices.Sensors.ILightSensorReading
+    requires Windows.Devices.Sensors.ILightSensorReading2
+    requires Windows.Devices.Sensors.ILightSensorReading3
+    property illuminance_in_lux
+        get get_IlluminanceInLux slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReading shape=4 reverse=43
+            out single return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property chromaticity
+        get get_Chromaticity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReading3 shape=4 reverse=22
+            out struct type=Windows.Devices.Sensors.LightSensorChromaticity return
+
+class Windows.Devices.Sensors.LightSensorReadingChangedEventArgs python_type
+    py LightSensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.LightSensorReadingChangedEventArgs;{a3a2f4cf-258b-420c-b8ab-8edd601ecf50})
+    default Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.LightSensorReading return
+
+class Windows.Devices.Sensors.LockOnLeaveOptions python_type
+    py LockOnLeaveOptions
+    signature rc(Windows.Devices.Sensors.LockOnLeaveOptions;{3c6bf8bd-04c1-5829-8d4e-70521755b8be})
+    default Windows.Devices.Sensors.ILockOnLeaveOptions
+    requires Windows.Devices.Sensors.ILockOnLeaveOptions
+    property allow_when_external_display_connected
+        get get_AllowWhenExternalDisplayConnected slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILockOnLeaveOptions shape=4 reverse=22
+            out boolean return
+        put put_AllowWhenExternalDisplayConnected slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILockOnLeaveOptions shape=4 reverse=43
+            in boolean name=value
+
+class Windows.Devices.Sensors.Magnetometer python_type
+    py Magnetometer
+    signature rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5})
+    default Windows.Devices.Sensors.IMagnetometer
+    requires Windows.Devices.Sensors.IMagnetometer
+    requires Windows.Devices.Sensors.IMagnetometerDeviceId
+    requires Windows.Devices.Sensors.IMagnetometer2
+    requires Windows.Devices.Sensors.IMagnetometer3
+    requires Windows.Devices.Sensors.IMagnetometer4
+    factory Windows.Devices.Sensors.IMagnetometerStatics
+    factory Windows.Devices.Sensors.IMagnetometerStatics2
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometer shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometer2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometer3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer3 shape=4 reverse=62
+            out uint32 return
+    property report_threshold
+        get get_ReportThreshold slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer4 shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.MagnetometerDataThreshold return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Magnetometer,Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometer shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerStatics2 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.MagnetometerReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.Magnetometer return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerStatics2 shape=4 reverse=22 static
+            out string return
+
+enum Windows.Devices.Sensors.MagnetometerAccuracy python_type
+    py MagnetometerAccuracy
+    signature enum(Windows.Devices.Sensors.MagnetometerAccuracy;i4)
+
+class Windows.Devices.Sensors.MagnetometerDataThreshold python_type
+    py MagnetometerDataThreshold
+    signature rc(Windows.Devices.Sensors.MagnetometerDataThreshold;{d177cb01-9063-5fa5-b596-b445e9dc3401})
+    default Windows.Devices.Sensors.IMagnetometerDataThreshold
+    requires Windows.Devices.Sensors.IMagnetometerDataThreshold
+    property z_axis_microteslas
+        get get_ZAxisMicroteslas slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=4 reverse=121
+            out single return
+        put put_ZAxisMicroteslas slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=1
+            in single name=value
+    property y_axis_microteslas
+        get get_YAxisMicroteslas slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=4 reverse=62
+            out single return
+        put put_YAxisMicroteslas slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=1 reverse=94
+            in single name=value
+    property x_axis_microteslas
+        get get_XAxisMicroteslas slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=4 reverse=22
+            out single return
+        put put_XAxisMicroteslas slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometerDataThreshold shape=1
+            in single name=value
+
+class Windows.Devices.Sensors.MagnetometerReading python_type
+    py MagnetometerReading
+    signature rc(Windows.Devices.Sensors.MagnetometerReading;{0c2cc40d-ebfd-4e5c-bb11-afc29b3cae61})
+    default Windows.Devices.Sensors.IMagnetometerReading
+    requires Windows.Devices.Sensors.IMagnetometerReading
+    requires Windows.Devices.Sensors.IMagnetometerReading2
+    property directional_accuracy
+        get get_DirectionalAccuracy slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading shape=4 reverse=121
+            out enum32 type=Windows.Devices.Sensors.MagnetometerAccuracy return
+    property magnetic_field_x
+        get get_MagneticFieldX slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading shape=4 reverse=43
+            out single return
+    property magnetic_field_y
+        get get_MagneticFieldY slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading shape=4 reverse=62
+            out single return
+    property magnetic_field_z
+        get get_MagneticFieldZ slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading shape=4 reverse=99
+            out single return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs python_type
+    py MagnetometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs;{17eae872-2eb9-4ee7-8ad0-3127537d949b})
+    default Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.MagnetometerReading return
+
+enum Windows.Devices.Sensors.OnlookerDetectionAction python_type
+    py OnlookerDetectionAction
+    signature enum(Windows.Devices.Sensors.OnlookerDetectionAction;i4)
+
+enum Windows.Devices.Sensors.OnlookerDetectionBackOnMode python_type
+    py OnlookerDetectionBackOnMode
+    signature enum(Windows.Devices.Sensors.OnlookerDetectionBackOnMode;i4)
+
+class Windows.Devices.Sensors.OnlookerDetectionOptions python_type
+    py OnlookerDetectionOptions
+    signature rc(Windows.Devices.Sensors.OnlookerDetectionOptions;{0412b36f-36e6-51e2-876e-65197cc53c12})
+    default Windows.Devices.Sensors.IOnlookerDetectionOptions
+    requires Windows.Devices.Sensors.IOnlookerDetectionOptions
+    property back_on_mode
+        get get_BackOnMode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOnlookerDetectionOptions shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sensors.OnlookerDetectionBackOnMode return
+        put put_BackOnMode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOnlookerDetectionOptions shape=4 reverse=99
+            in enum32 type=Windows.Devices.Sensors.OnlookerDetectionBackOnMode name=value
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOnlookerDetectionOptions shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.OnlookerDetectionAction return
+        put put_Action slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOnlookerDetectionOptions shape=4 reverse=43
+            in enum32 type=Windows.Devices.Sensors.OnlookerDetectionAction name=value
+
+class Windows.Devices.Sensors.OrientationSensor python_type
+    py OrientationSensor
+    signature rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec})
+    default Windows.Devices.Sensors.IOrientationSensor
+    requires Windows.Devices.Sensors.IOrientationSensor
+    requires Windows.Devices.Sensors.IOrientationSensorDeviceId
+    requires Windows.Devices.Sensors.IOrientationSensor2
+    requires Windows.Devices.Sensors.IOrientationSensor3
+    factory Windows.Devices.Sensors.IOrientationSensorStatics3
+    factory Windows.Devices.Sensors.IOrientationSensorStatics2
+    factory Windows.Devices.Sensors.IOrientationSensorStatics
+    factory Windows.Devices.Sensors.IOrientationSensorStatics4
+    property report_interval
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=99
+            out uint32 return
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=62
+            in uint32 name=value
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=43
+            out uint32 return
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOrientationSensor2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property reading_type
+        get get_ReadingType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor2 shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sensors.SensorReadingType return
+    property report_latency
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor3 shape=4 reverse=43
+            out uint32 return
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOrientationSensor3 shape=4 reverse=22
+            in uint32 name=value
+    property max_batch_size
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor3 shape=4 reverse=62
+            out uint32 return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorDeviceId shape=4 reverse=22
+            out string return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.OrientationSensor,Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOrientationSensor shape=26 reverse=156
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics4 shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> return
+    method get_current_reading
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.OrientationSensorReading return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics3 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingtype
+            out class type=Windows.Devices.Sensors.OrientationSensor return
+        method GetDefault slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics3 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingtype
+            out class type=Windows.Devices.Sensors.OrientationSensor return
+        method GetDefault slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics3 shape=117 reverse=45 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingType
+            in enum32 type=Windows.Devices.Sensors.SensorOptimizationGoal name=optimizationGoal
+            out class type=Windows.Devices.Sensors.OrientationSensor return
+    method get_default_for_relative_readings static
+        method GetDefaultForRelativeReadings slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics2 shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.OrientationSensor return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics4 shape=51 reverse=24 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=readingType
+            out string return
+        method GetDeviceSelector slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics4 shape=117 reverse=45 static
+            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=readingType
+            in enum32 type=Windows.Devices.Sensors.SensorOptimizationGoal name=optimizationGoal
+            out string return
+
+class Windows.Devices.Sensors.OrientationSensorReading python_type
+    py OrientationSensorReading
+    signature rc(Windows.Devices.Sensors.OrientationSensorReading;{4756c993-6595-4897-bcc6-d537ee757564})
+    default Windows.Devices.Sensors.IOrientationSensorReading
+    requires Windows.Devices.Sensors.IOrientationSensorReading
+    requires Windows.Devices.Sensors.IOrientationSensorReadingYawAccuracy
+    requires Windows.Devices.Sensors.IOrientationSensorReading2
+    property quaternion
+        get get_Quaternion slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReading shape=4 reverse=62
+            out class type=Windows.Devices.Sensors.SensorQuaternion return
+    property rotation_matrix
+        get get_RotationMatrix slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReading shape=4 reverse=43
+            out class type=Windows.Devices.Sensors.SensorRotationMatrix return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReading shape=4 reverse=22
+            out datetime return
+    property performance_count
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReading2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReading2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property yaw_accuracy
+        get get_YawAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReadingYawAccuracy shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.MagnetometerAccuracy return
+
+class Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs python_type
+    py OrientationSensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs;{012c1186-c3ba-46bc-ae65-7a98996cbfb8})
+    default Windows.Devices.Sensors.IOrientationSensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IOrientationSensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.OrientationSensorReading return
+
+class Windows.Devices.Sensors.Pedometer python_type
+    py Pedometer
+    signature rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97})
+    default Windows.Devices.Sensors.IPedometer
+    requires Windows.Devices.Sensors.IPedometer
+    requires Windows.Devices.Sensors.IPedometer2
+    factory Windows.Devices.Sensors.IPedometerStatics2
+    factory Windows.Devices.Sensors.IPedometerStatics
+    property report_interval
+        get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=121
+            out uint32 return
+        put put_ReportInterval slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=99
+            in uint32 name=value
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=22
+            out string return
+    property minimum_report_interval
+        get get_MinimumReportInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=62
+            out uint32 return
+    property power_in_milliwatts
+        get get_PowerInMilliwatts slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=43
+            out double return
+    event reading_changed
+        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Pedometer,Windows.Devices.Sensors.PedometerReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IPedometer shape=26 reverse=167
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=51 reverse=24 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> return
+    method get_current_readings
+        method GetCurrentReadings slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> return
+    method get_default_async static
+        method GetDefaultAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> return
+    method get_device_selector static
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=4 reverse=62 static
+            out string return
+    method get_readings_from_trigger_details static
+        method GetReadingsFromTriggerDetails slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics2 shape=51 reverse=24 static
+            in class type=Windows.Devices.Sensors.SensorDataThresholdTriggerDetails name=triggerDetails
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> return
+    method get_system_history_async static
+        method GetSystemHistoryAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=89 static
+            in datetime name=fromTime
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> return
+        method GetSystemHistoryAsync slot=10 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=170 static
+            in datetime name=fromTime
+            in timespan name=duration
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> return
+
+class Windows.Devices.Sensors.PedometerDataThreshold python_type
+    py PedometerDataThreshold
+    signature rc(Windows.Devices.Sensors.PedometerDataThreshold;{54daec61-fe4b-4e07-b260-3a4cdfbe396e})
+    default Windows.Devices.Sensors.ISensorDataThreshold
+    requires Windows.Devices.Sensors.ISensorDataThreshold
+    factory Windows.Devices.Sensors.IPedometerDataThresholdFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Sensors.IPedometerDataThresholdFactory shape=117 reverse=25
+            in class type=Windows.Devices.Sensors.Pedometer name=sensor
+            in int32 name=stepGoal
+            out class type=Windows.Devices.Sensors.PedometerDataThreshold return
+
+class Windows.Devices.Sensors.PedometerReading python_type
+    py PedometerReading
+    signature rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})
+    default Windows.Devices.Sensors.IPedometerReading
+    requires Windows.Devices.Sensors.IPedometerReading
+    property cumulative_steps
+        get get_CumulativeSteps slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerReading shape=4 reverse=43
+            out int32 return
+    property cumulative_steps_duration
+        get get_CumulativeStepsDuration slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerReading shape=4 reverse=99
+            out timespan return
+    property step_kind
+        get get_StepKind slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerReading shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.PedometerStepKind return
+    property timestamp
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerReading shape=4 reverse=62
+            out datetime return
+
+class Windows.Devices.Sensors.PedometerReadingChangedEventArgs python_type
+    py PedometerReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.PedometerReadingChangedEventArgs;{f855e47e-abbc-4456-86a8-25cf2b333742})
+    default Windows.Devices.Sensors.IPedometerReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IPedometerReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometerReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.PedometerReading return
+
+enum Windows.Devices.Sensors.PedometerStepKind python_type
+    py PedometerStepKind
+    signature enum(Windows.Devices.Sensors.PedometerStepKind;i4)
+
+class Windows.Devices.Sensors.ProximitySensor python_type
+    py ProximitySensor
+    signature rc(Windows.Devices.Sensors.ProximitySensor;{54c076b8-ecfb-4944-b928-74fc504d47ee})
+    default Windows.Devices.Sensors.IProximitySensor
+    requires Windows.Devices.Sensors.IProximitySensor
+    factory Windows.Devices.Sensors.IProximitySensorStatics
+    factory Windows.Devices.Sensors.IProximitySensorStatics2
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=22
+            out string return
+    property max_distance_in_millimeters
+        get get_MaxDistanceInMillimeters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property min_distance_in_millimeters
+        get get_MinDistanceInMillimeters slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    event reading_changed
+        add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ProximitySensor,Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IProximitySensor shape=26 reverse=156
+            in event_token name=token
+    method create_display_on_off_controller
+        method CreateDisplayOnOffController slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=162
+            out class type=Windows.Devices.Sensors.ProximitySensorDisplayOnOffController return
+    method from_id static
+        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorStatics shape=51 reverse=44 static
+            in string name=sensorId
+            out class type=Windows.Devices.Sensors.ProximitySensor return
+    method get_current_reading
+        method GetCurrentReading slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=99
+            out class type=Windows.Devices.Sensors.ProximitySensorReading return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorStatics shape=4 reverse=22 static
+            out string return
+    method get_readings_from_trigger_details static
+        method GetReadingsFromTriggerDetails slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorStatics2 shape=51 reverse=24 static
+            in class type=Windows.Devices.Sensors.SensorDataThresholdTriggerDetails name=triggerDetails
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> return
+
+class Windows.Devices.Sensors.ProximitySensorDataThreshold python_type
+    py ProximitySensorDataThreshold
+    signature rc(Windows.Devices.Sensors.ProximitySensorDataThreshold;{54daec61-fe4b-4e07-b260-3a4cdfbe396e})
+    default Windows.Devices.Sensors.ISensorDataThreshold
+    requires Windows.Devices.Sensors.ISensorDataThreshold
+    factory Windows.Devices.Sensors.IProximitySensorDataThresholdFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorDataThresholdFactory shape=51 reverse=24
+            in class type=Windows.Devices.Sensors.ProximitySensor name=sensor
+            out class type=Windows.Devices.Sensors.ProximitySensorDataThreshold return
+
+class Windows.Devices.Sensors.ProximitySensorDisplayOnOffController python_type closeable
+    py ProximitySensorDisplayOnOffController
+    signature rc(Windows.Devices.Sensors.ProximitySensorDisplayOnOffController;{30d5a829-7fa4-4026-83bb-d75bae4ea99e})
+    default Windows.Foundation.IClosable
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Devices.Sensors.ProximitySensorReading python_type
+    py ProximitySensorReading
+    signature rc(Windows.Devices.Sensors.ProximitySensorReading;{71228d59-132d-4d5f-8ff9-2f0db8751ced})
+    default Windows.Devices.Sensors.IProximitySensorReading
+    requires Windows.Devices.Sensors.IProximitySensorReading
+    property distance_in_millimeters
+        get get_DistanceInMillimeters slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorReading shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property is_detected
+        get get_IsDetected slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorReading shape=4 reverse=43
+            out boolean return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorReading shape=4 reverse=22
+            out datetime return
+
+class Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs python_type
+    py ProximitySensorReadingChangedEventArgs
+    signature rc(Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs;{cfc2f366-c3e8-40fd-8cc3-67e289004938})
+    default Windows.Devices.Sensors.IProximitySensorReadingChangedEventArgs
+    requires Windows.Devices.Sensors.IProximitySensorReadingChangedEventArgs
+    property reading
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensorReadingChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Sensors.ProximitySensorReading return
+
+class Windows.Devices.Sensors.SensorDataThresholdTriggerDetails python_type
+    py SensorDataThresholdTriggerDetails
+    signature rc(Windows.Devices.Sensors.SensorDataThresholdTriggerDetails;{9106f1b7-e88d-48b1-bc90-619c7b349391})
+    default Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails
+    requires Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails shape=4 reverse=22
+            out string return
+    property sensor_type
+        get get_SensorType slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorDataThresholdTriggerDetails shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sensors.SensorType return
+
+enum Windows.Devices.Sensors.SensorOptimizationGoal python_type
+    py SensorOptimizationGoal
+    signature enum(Windows.Devices.Sensors.SensorOptimizationGoal;i4)
+
+class Windows.Devices.Sensors.SensorQuaternion python_type
+    py SensorQuaternion
+    signature rc(Windows.Devices.Sensors.SensorQuaternion;{c9c5c827-c71c-46e7-9da3-36a193b232bc})
+    default Windows.Devices.Sensors.ISensorQuaternion
+    requires Windows.Devices.Sensors.ISensorQuaternion
+    property w
+        get get_W slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorQuaternion shape=4 reverse=22
+            out single return
+    property x
+        get get_X slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorQuaternion shape=4 reverse=43
+            out single return
+    property y
+        get get_Y slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorQuaternion shape=4 reverse=62
+            out single return
+    property z
+        get get_Z slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorQuaternion shape=4 reverse=99
+            out single return
+
+enum Windows.Devices.Sensors.SensorReadingType python_type
+    py SensorReadingType
+    signature enum(Windows.Devices.Sensors.SensorReadingType;i4)
+
+class Windows.Devices.Sensors.SensorRotationMatrix python_type
+    py SensorRotationMatrix
+    signature rc(Windows.Devices.Sensors.SensorRotationMatrix;{0a3d5a67-22f4-4392-9538-65d0bd064aa6})
+    default Windows.Devices.Sensors.ISensorRotationMatrix
+    requires Windows.Devices.Sensors.ISensorRotationMatrix
+    property m11
+        get get_M11 slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=22
+            out single return
+    property m12
+        get get_M12 slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=43
+            out single return
+    property m13
+        get get_M13 slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=62
+            out single return
+    property m21
+        get get_M21 slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=99
+            out single return
+    property m22
+        get get_M22 slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=121
+            out single return
+    property m23
+        get get_M23 slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=141
+            out single return
+    property m31
+        get get_M31 slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=162
+            out single return
+    property m32
+        get get_M32 slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=173
+            out single return
+    property m33
+        get get_M33 slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISensorRotationMatrix shape=4 reverse=186
+            out single return
+
+enum Windows.Devices.Sensors.SensorType python_type
+    py SensorType
+    signature enum(Windows.Devices.Sensors.SensorType;i4)
+
+enum Windows.Devices.Sensors.SimpleOrientation python_type
+    py SimpleOrientation
+    signature enum(Windows.Devices.Sensors.SimpleOrientation;i4)
+
+class Windows.Devices.Sensors.SimpleOrientationSensor python_type
+    py SimpleOrientationSensor
+    signature rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd})
+    default Windows.Devices.Sensors.ISimpleOrientationSensor
+    requires Windows.Devices.Sensors.ISimpleOrientationSensor
+    requires Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId
+    requires Windows.Devices.Sensors.ISimpleOrientationSensor2
+    factory Windows.Devices.Sensors.ISimpleOrientationSensorStatics2
+    factory Windows.Devices.Sensors.ISimpleOrientationSensorStatics
+    property reading_transform
+        get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor2 shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_ReadingTransform slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor2 shape=4 reverse=22
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId shape=4 reverse=22
+            out string return
+    event orientation_changed
+        add add_OrientationChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.SimpleOrientationSensor,Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs> name=handler
+            out event_token return
+        remove remove_OrientationChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor shape=26 reverse=82
+            in event_token name=token
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 shape=51 reverse=44 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> return
+    method get_current_orientation
+        method GetCurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.SimpleOrientation return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Sensors.SimpleOrientationSensor return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 shape=4 reverse=22 static
+            out string return
+
+class Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs python_type
+    py SimpleOrientationSensorOrientationChangedEventArgs
+    signature rc(Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs;{bcd5c660-23d4-4b4c-a22e-ba81ade0c601})
+    default Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs
+    requires Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs
+    property orientation
+        get get_Orientation slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sensors.SimpleOrientation return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs shape=4 reverse=22
+            out datetime return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs> concrete
+    guid a5e83e40-b597-5b83-92f5-5bed3926ca80
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d});rc(Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs;{0095c65b-b6ac-475a-9f44-8b32d35a3f25}))
+    argument Windows.Devices.Sensors.Accelerometer
+    argument Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerShakenEventArgs> concrete
+    guid 3e5d6eaf-f169-5d60-92b0-98cd6bd8f808
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d});rc(Windows.Devices.Sensors.AccelerometerShakenEventArgs;{95ff01d1-4a28-4f35-98e8-8178aae4084a}))
+    argument Windows.Devices.Sensors.Accelerometer
+    argument Windows.Devices.Sensors.AccelerometerShakenEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ActivitySensor,Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs> concrete
+    guid a5b72e01-546c-5fbb-b847-49200aaaaac5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef});rc(Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs;{de386717-aeb6-4ec7-946a-d9cc19b951ec}))
+    argument Windows.Devices.Sensors.ActivitySensor
+    argument Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Altimeter,Windows.Devices.Sensors.AltimeterReadingChangedEventArgs> concrete
+    guid d775d699-9d74-5473-9c1b-d51a89db6642
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Altimeter;{72f057fd-8f04-49f1-b4a7-f4e363b701a2});rc(Windows.Devices.Sensors.AltimeterReadingChangedEventArgs;{7069d077-446d-47f7-998c-ebc23b45e4a2}))
+    argument Windows.Devices.Sensors.Altimeter
+    argument Windows.Devices.Sensors.AltimeterReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Barometer,Windows.Devices.Sensors.BarometerReadingChangedEventArgs> concrete
+    guid e4caf459-d101-5ca5-a4ea-deb0917ae27e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4});rc(Windows.Devices.Sensors.BarometerReadingChangedEventArgs;{3d84945f-037b-404f-9bbb-6232d69543c3}))
+    argument Windows.Devices.Sensors.Barometer
+    argument Windows.Devices.Sensors.BarometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Compass,Windows.Devices.Sensors.CompassReadingChangedEventArgs> concrete
+    guid e787d73d-a121-5ae6-b497-ab934837e57f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64});rc(Windows.Devices.Sensors.CompassReadingChangedEventArgs;{8f1549b0-e8bc-4c7e-b009-4e41df137072}))
+    argument Windows.Devices.Sensors.Compass
+    argument Windows.Devices.Sensors.CompassReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Gyrometer,Windows.Devices.Sensors.GyrometerReadingChangedEventArgs> concrete
+    guid 15171524-5786-59a5-af5b-a01245726c44
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c});rc(Windows.Devices.Sensors.GyrometerReadingChangedEventArgs;{0fdf1895-6f9e-42ce-8d58-388c0ab8356d}))
+    argument Windows.Devices.Sensors.Gyrometer
+    argument Windows.Devices.Sensors.GyrometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HingeAngleSensor,Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs> concrete
+    guid 68de2bf4-243c-5aee-9dd9-d2e5e3165866
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309});rc(Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs;{24d9558b-fad0-42b8-a854-78923049a1ba}))
+    argument Windows.Devices.Sensors.HingeAngleSensor
+    argument Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor,Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs> concrete
+    guid 329678bc-3d7c-5ff3-87cb-4fc5e9fecf72
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd});rc(Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs;{a9dc4583-fd69-5c5e-ab1f-942204eae2db}))
+    argument Windows.Devices.Sensors.HumanPresenceSensor
+    argument Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Inclinometer,Windows.Devices.Sensors.InclinometerReadingChangedEventArgs> concrete
+    guid 6f3b411f-d147-59f1-bbe4-7bec396c7b6e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf});rc(Windows.Devices.Sensors.InclinometerReadingChangedEventArgs;{4ae91dc1-e7eb-4938-8511-ae0d6b440438}))
+    argument Windows.Devices.Sensors.Inclinometer
+    argument Windows.Devices.Sensors.InclinometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.LightSensor,Windows.Devices.Sensors.LightSensorReadingChangedEventArgs> concrete
+    guid 1ecf183a-9f0a-5f73-9225-5a33eab5594f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0});rc(Windows.Devices.Sensors.LightSensorReadingChangedEventArgs;{a3a2f4cf-258b-420c-b8ab-8edd601ecf50}))
+    argument Windows.Devices.Sensors.LightSensor
+    argument Windows.Devices.Sensors.LightSensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Magnetometer,Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs> concrete
+    guid f9a0da76-c4fd-50ab-98b6-bfd26d6d3d82
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5});rc(Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs;{17eae872-2eb9-4ee7-8ad0-3127537d949b}))
+    argument Windows.Devices.Sensors.Magnetometer
+    argument Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.OrientationSensor,Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs> concrete
+    guid 91ae0c43-e1f7-577d-a161-8aaf275eb927
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec});rc(Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs;{012c1186-c3ba-46bc-ae65-7a98996cbfb8}))
+    argument Windows.Devices.Sensors.OrientationSensor
+    argument Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Pedometer,Windows.Devices.Sensors.PedometerReadingChangedEventArgs> concrete
+    guid dcd47693-aad5-5b3c-9c8d-140b8bc2122b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97});rc(Windows.Devices.Sensors.PedometerReadingChangedEventArgs;{f855e47e-abbc-4456-86a8-25cf2b333742}))
+    argument Windows.Devices.Sensors.Pedometer
+    argument Windows.Devices.Sensors.PedometerReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ProximitySensor,Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs> concrete
+    guid 9f7e222b-892a-5e68-b08a-10384b5f92b9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.ProximitySensor;{54c076b8-ecfb-4944-b928-74fc504d47ee});rc(Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs;{cfc2f366-c3e8-40fd-8cc3-67e289004938}))
+    argument Windows.Devices.Sensors.ProximitySensor
+    argument Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.SimpleOrientationSensor,Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs> concrete
+    guid 92437fa7-ea7b-5fc5-8ecf-1b911bea2bfc
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd});rc(Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs;{bcd5c660-23d4-4b4c-a22e-ba81ade0c601}))
+    argument Windows.Devices.Sensors.SimpleOrientationSensor
+    argument Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs
+
+class Windows.Devices.Sensors.WakeOnApproachOptions python_type
+    py WakeOnApproachOptions
+    signature rc(Windows.Devices.Sensors.WakeOnApproachOptions;{f0b87ae7-7e1f-5ea5-814d-6b7e07defc2b})
+    default Windows.Devices.Sensors.IWakeOnApproachOptions
+    requires Windows.Devices.Sensors.IWakeOnApproachOptions
+    property disable_when_battery_saver_on
+        get get_DisableWhenBatterySaverOn slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IWakeOnApproachOptions shape=4 reverse=62
+            out boolean return
+        put put_DisableWhenBatterySaverOn slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IWakeOnApproachOptions shape=4 reverse=99
+            in boolean name=value
+    property allow_when_external_display_connected
+        get get_AllowWhenExternalDisplayConnected slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IWakeOnApproachOptions shape=4 reverse=22
+            out boolean return
+        put put_AllowWhenExternalDisplayConnected slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IWakeOnApproachOptions shape=4 reverse=43
+            in boolean name=value
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+enum Windows.Graphics.Display.DisplayOrientations external
+    py winrt.windows.graphics.display.DisplayOrientations

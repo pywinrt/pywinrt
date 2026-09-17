@@ -1,0 +1,1636 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.Vpn
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> concrete
+    guid 69d957be-045e-538f-98f6-1aa65cee244a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{7875b751-b0d7-43db-8a93-d3fe2479e56a}))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> concrete
+    guid 216a6f97-dba1-5f71-a14b-2818ad3c4c69
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.Vpn.VpnCredential;{b7e78af3-a46d-404b-8729-1832522853ac}))
+    argument Windows.Networking.Vpn.VpnCredential
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> concrete
+    guid e99b86dc-6b65-5f23-9419-90b55852f283
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Networking.Vpn.VpnManagementErrorStatus;i4))
+    argument Windows.Networking.Vpn.VpnManagementErrorStatus
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> concrete
+    guid 9e5f3ed0-cf1c-5d38-832c-acea6164bf5c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    argument Windows.Networking.HostName
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> concrete
+    guid fa954f6e-30d7-50e0-9d43-dadb6c53e196
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnPacketBuffer;{c2f891fc-4d5c-4a63-b70d-4e307eacce55}))
+    argument Windows.Networking.Vpn.VpnPacketBuffer
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> concrete
+    guid 04c88ba5-05e9-53b2-8524-df458d2a9179
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnPacketBuffer;{c2f891fc-4d5c-4a63-b70d-4e307eacce55}))
+    argument Windows.Networking.Vpn.VpnPacketBuffer
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete
+    guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.HostName> concrete
+    guid 90c71c29-a9b5-5267-a5ad-8b756736317c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    argument Windows.Networking.HostName
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> concrete
+    guid 89097d58-edb8-5ad4-abc5-603f21dd4b15
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54}))
+    argument Windows.Networking.Vpn.VpnAppId
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> concrete
+    guid 8179b6f2-7273-5ca3-a81b-53e902ca209b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a}))
+    argument Windows.Networking.Vpn.VpnDomainNameInfo
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> concrete
+    guid 056bddf2-135d-542e-a322-36aa4ca0e60d
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94}))
+    argument Windows.Networking.Vpn.VpnNamespaceInfo
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> concrete
+    guid 5b026bd8-2cc5-5570-bde5-0db7c4331279
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3}))
+    argument Windows.Networking.Vpn.VpnRoute
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> concrete
+    guid 2a5b9ad8-f005-5f69-ad81-300642e7c667
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50}))
+    argument Windows.Networking.Vpn.VpnTrafficFilter
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+    guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> concrete
+    guid f4706ab1-55a3-5270-afb2-732988fe8227
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    argument Windows.Networking.HostName
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> concrete
+    guid 804449c2-3bc1-5cfe-8468-3bbece4a5cd7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{9b2ebe7b-87d5-433c-b4f6-eee6aa68a244})
+    argument Windows.Networking.Vpn.IVpnCustomPrompt
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> concrete
+    guid 25eaf5eb-2f39-5b4d-bb6e-e652c7d00f6a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{73bd5638-6f04-404d-93dd-50a44924a38b})
+    argument Windows.Networking.Vpn.IVpnCustomPromptElement
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> concrete
+    guid f1dc8f7d-ca33-53fd-9d4c-40c51b5873ec
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    argument Windows.Networking.Vpn.IVpnProfile
+
+interface Windows.Networking.Vpn.IVpnAppId
+    guid 7b06a635-5c58-41d9-94a7-bfbcf1d8ca54
+
+interface Windows.Networking.Vpn.IVpnAppIdFactory
+    guid 46adfd2a-0aab-4fdb-821d-d3ddc919788b
+
+interface Windows.Networking.Vpn.IVpnChannel
+    guid 4ac78d07-d1a8-4303-a091-c8d2e0915bc3
+
+interface Windows.Networking.Vpn.IVpnChannel2
+    guid 2255d165-993b-4629-ad60-f1c3f3537f50
+
+interface Windows.Networking.Vpn.IVpnChannel4
+    guid d7266ede-2937-419d-9570-486aebb81803
+
+interface Windows.Networking.Vpn.IVpnChannel5
+    guid de7a0992-8384-4fbc-882c-1fd23124cd3b
+
+interface Windows.Networking.Vpn.IVpnChannel6
+    guid 55843696-bd63-49c5-abca-5da77885551a
+
+interface Windows.Networking.Vpn.IVpnChannelActivityEventArgs
+    guid a36c88f2-afdc-4775-855d-d4ac0a35fc55
+
+interface Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs
+    guid 3d750565-fdc0-4bbe-a23b-45fffc6d97a1
+
+interface Windows.Networking.Vpn.IVpnChannelConfiguration
+    guid 0e2ddca2-2012-4fe4-b179-8c652c6d107e
+
+interface Windows.Networking.Vpn.IVpnChannelConfiguration2
+    guid f30b574c-7824-471c-a118-63dbc93ae4c7
+
+interface Windows.Networking.Vpn.IVpnChannelStatics python_type
+    py _IVpnChannelStatics
+    guid 88eb062d-e818-4ffd-98a6-363e3736c95d
+    signature {88eb062d-e818-4ffd-98a6-363e3736c95d}
+    method process_event_async
+        method ProcessEventAsync slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannelStatics shape=51 reverse=24
+            in object name=thirdPartyPlugIn
+            in object name=event
+
+interface Windows.Networking.Vpn.IVpnCredential python_type
+    py _IVpnCredential
+    guid b7e78af3-a46d-404b-8729-1832522853ac
+    signature {b7e78af3-a46d-404b-8729-1832522853ac}
+    property additional_pin
+        get get_AdditionalPin slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=62
+            out string return
+    property certificate_credential
+        get get_CertificateCredential slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=43
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property old_password_credential
+        get get_OldPasswordCredential slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=99
+            out class type=Windows.Security.Credentials.PasswordCredential return
+    property passkey_credential
+        get get_PasskeyCredential slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+
+interface Windows.Networking.Vpn.IVpnCustomCheckBox
+    guid 43878753-03c5-4e61-93d7-a957714c4282
+
+interface Windows.Networking.Vpn.IVpnCustomComboBox
+    guid 9a24158e-dba1-4c6f-8270-dcf3c9761c4c
+
+interface Windows.Networking.Vpn.IVpnCustomEditBox
+    guid 3002d9a0-cfbf-4c0b-8f3c-66f503c20b39
+
+interface Windows.Networking.Vpn.IVpnCustomErrorBox
+    guid 9ec4efb2-c942-42af-b223-588b48328721
+
+interface Windows.Networking.Vpn.IVpnCustomPrompt python_type
+    py _IVpnCustomPrompt
+    guid 9b2ebe7b-87d5-433c-b4f6-eee6aa68a244
+    signature {9b2ebe7b-87d5-433c-b4f6-eee6aa68a244}
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+
+interface Windows.Networking.Vpn.IVpnCustomPromptBooleanInput
+    guid c4c9a69e-ff47-4527-9f27-a49292019979
+
+interface Windows.Networking.Vpn.IVpnCustomPromptElement python_type
+    py _IVpnCustomPromptElement
+    guid 73bd5638-6f04-404d-93dd-50a44924a38b
+    signature {73bd5638-6f04-404d-93dd-50a44924a38b}
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=22
+            in string name=value
+    property emphasized
+        get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
+            out boolean return
+        put put_Emphasized slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=121
+            in boolean name=value
+
+interface Windows.Networking.Vpn.IVpnCustomPromptOptionSelector
+    guid 3b8f34d9-8ec1-4e95-9a4e-7ba64d38f330
+
+interface Windows.Networking.Vpn.IVpnCustomPromptText
+    guid 3bc8bdee-3a42-49a3-abdd-07b2edea752d
+
+interface Windows.Networking.Vpn.IVpnCustomPromptTextInput
+    guid c9da9c75-913c-47d5-88ba-48fc48930235
+
+interface Windows.Networking.Vpn.IVpnCustomTextBox
+    guid daa4c3ca-8f23-4d36-91f1-76d937827942
+
+interface Windows.Networking.Vpn.IVpnDomainNameAssignment
+    guid 4135b141-ccdb-49b5-9401-039a8ae767e9
+
+interface Windows.Networking.Vpn.IVpnDomainNameInfo
+    guid ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a
+
+interface Windows.Networking.Vpn.IVpnDomainNameInfo2
+    guid ab871151-6c53-4828-9883-d886de104407
+
+interface Windows.Networking.Vpn.IVpnDomainNameInfoFactory python_type
+    py _IVpnDomainNameInfoFactory
+    guid 2507bb75-028f-4688-8d3a-c4531df37da8
+    signature {2507bb75-028f-4688-8d3a-c4531df37da8}
+    method create_vpn_domain_name_info
+        method CreateVpnDomainNameInfo slot=6 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfoFactory shape=239 reverse=27
+            in string name=name
+            in enum32 type=Windows.Networking.Vpn.VpnDomainNameType name=nameType
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=dnsServerList
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=proxyServerList
+            out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
+
+interface Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs
+    guid 85b465b0-cadb-4d70-ac92-543a24dc9ebc
+
+interface Windows.Networking.Vpn.IVpnForegroundActivationOperation
+    guid 9e010d57-f17a-4bd5-9b6d-f984f1297d3c
+
+interface Windows.Networking.Vpn.IVpnInterfaceId
+    guid 9e2ddca2-1712-4ce4-b179-8c652c6d1011
+
+interface Windows.Networking.Vpn.IVpnInterfaceIdFactory python_type
+    py _IVpnInterfaceIdFactory
+    guid 9e2ddca2-1712-4ce4-b179-8c652c6d1000
+    signature {9e2ddca2-1712-4ce4-b179-8c652c6d1000}
+    method create_vpn_interface_id
+        method CreateVpnInterfaceId slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceIdFactory shape=117 reverse=25
+            pass_array uint8 name=address
+            out class type=Windows.Networking.Vpn.VpnInterfaceId return
+
+interface Windows.Networking.Vpn.IVpnManagementAgent
+    guid 193696cd-a5c4-4abe-852b-785be4cb3e34
+
+interface Windows.Networking.Vpn.IVpnNamespaceAssignment
+    guid d7f7db18-307d-4c0e-bd62-8fa270bbadd6
+
+interface Windows.Networking.Vpn.IVpnNamespaceInfo
+    guid 30edfb43-444f-44c5-8167-a35a91f1af94
+
+interface Windows.Networking.Vpn.IVpnNamespaceInfoFactory python_type
+    py _IVpnNamespaceInfoFactory
+    guid cb3e951a-b0ce-442b-acbb-5f99b202c31c
+    signature {cb3e951a-b0ce-442b-acbb-5f99b202c31c}
+    method create_vpn_namespace_info
+        method CreateVpnNamespaceInfo slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfoFactory shape=195 reverse=26
+            in string name=name
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=dnsServerList
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=proxyServerList
+            out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
+
+interface Windows.Networking.Vpn.IVpnNativeProfile
+    guid a4aee29e-6417-4333-9842-f0a66db69802
+
+interface Windows.Networking.Vpn.IVpnNativeProfile2
+    guid 0fec2467-cdb5-4ac7-b5a3-0afb5ec47682
+
+interface Windows.Networking.Vpn.IVpnPacketBuffer
+    guid c2f891fc-4d5c-4a63-b70d-4e307eacce55
+
+interface Windows.Networking.Vpn.IVpnPacketBuffer2
+    guid 665e91f0-8805-4bf5-a619-2e84882e6b4f
+
+interface Windows.Networking.Vpn.IVpnPacketBuffer3
+    guid e256072f-107b-4c40-b127-5bc53e0ad960
+
+interface Windows.Networking.Vpn.IVpnPacketBufferFactory python_type
+    py _IVpnPacketBufferFactory
+    guid 9e2ddca2-1712-4ce4-b179-8c652c6d9999
+    signature {9e2ddca2-1712-4ce4-b179-8c652c6d9999}
+    method create_vpn_packet_buffer
+        method CreateVpnPacketBuffer slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferFactory shape=195 reverse=26
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=parentBuffer
+            in uint32 name=offset
+            in uint32 name=length
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+
+interface Windows.Networking.Vpn.IVpnPacketBufferList
+    guid c2f891fc-4d5c-4a63-b70d-4e307eacce77
+
+interface Windows.Networking.Vpn.IVpnPickedCredential
+    guid 9a793ac7-8854-4e52-ad97-24dd9a842bce
+
+interface Windows.Networking.Vpn.IVpnPlugIn python_type
+    py _IVpnPlugIn
+    guid ceb78d07-d0a8-4703-a091-c8c2c0915bc4
+    signature {ceb78d07-d0a8-4703-a091-c8c2c0915bc4}
+    method connect
+        method Connect slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugIn shape=4 reverse=22
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+    method decapsulate
+        method Decapsulate slot=10 inputs=4 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugIn shape=195 reverse=126
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=encapBuffer
+            in class type=Windows.Networking.Vpn.VpnPacketBufferList name=decapsulatedPackets
+            in class type=Windows.Networking.Vpn.VpnPacketBufferList name=controlPacketsToSend
+    method disconnect
+        method Disconnect slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugIn shape=4 reverse=43
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+    method encapsulate
+        method Encapsulate slot=9 inputs=3 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugIn shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+            in class type=Windows.Networking.Vpn.VpnPacketBufferList name=packets
+            in class type=Windows.Networking.Vpn.VpnPacketBufferList name=encapulatedPackets
+    method get_keep_alive_payload
+        method GetKeepAlivePayload slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugIn shape=51 reverse=65
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer name=keepAlivePacket
+
+interface Windows.Networking.Vpn.IVpnPlugInProfile
+    guid 0edf0da4-4f00-4589-8d7b-4bf988f6542c
+
+interface Windows.Networking.Vpn.IVpnPlugInProfile2
+    guid 611c4892-cf94-4ad6-ba99-00f4ff34565e
+
+interface Windows.Networking.Vpn.IVpnPlugInReconnectTransport python_type
+    py _IVpnPlugInReconnectTransport
+    guid 9d5a1092-bb46-4d34-9d88-f217893076f4
+    signature {9d5a1092-bb46-4d34-9d88-f217893076f4}
+    method reconnect_transport
+        method ReconnectTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInReconnectTransport shape=51 reverse=24
+            in class type=Windows.Networking.Vpn.VpnChannel name=channel
+            in object name=context
+
+interface Windows.Networking.Vpn.IVpnProfile python_type
+    py _IVpnProfile
+    guid 7875b751-b0d7-43db-8a93-d3fe2479e56a
+    signature {7875b751-b0d7-43db-8a93-d3fe2479e56a}
+    property always_on
+        get get_AlwaysOn slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=186
+            out boolean return
+        put put_AlwaysOn slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=194
+            in boolean name=value
+    property app_triggers
+        get get_AppTriggers slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> return
+    property domain_name_info_list
+        get get_DomainNameInfoList slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> return
+    property profile_name
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=22
+            out string return
+        put put_ProfileName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=43
+            in string name=value
+    property remember_credentials
+        get get_RememberCredentials slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=162
+            out boolean return
+        put put_RememberCredentials slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=173
+            in boolean name=value
+    property routes
+        get get_Routes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+    property traffic_filters
+        get get_TrafficFilters slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> return
+
+interface Windows.Networking.Vpn.IVpnRoute
+    guid b5731b83-0969-4699-938e-7776db29cfb3
+
+interface Windows.Networking.Vpn.IVpnRouteAssignment
+    guid db64de22-ce39-4a76-9550-f61039f80e48
+
+interface Windows.Networking.Vpn.IVpnRouteFactory python_type
+    py _IVpnRouteFactory
+    guid bdeab5ff-45cf-4b99-83fb-db3bc2672b02
+    signature {bdeab5ff-45cf-4b99-83fb-db3bc2672b02}
+    method create_vpn_route
+        method CreateVpnRoute slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteFactory shape=117 reverse=25
+            in class type=Windows.Networking.HostName name=address
+            in uint8 name=prefixSize
+            out class type=Windows.Networking.Vpn.VpnRoute return
+
+interface Windows.Networking.Vpn.IVpnSystemHealth
+    guid 99a8f8af-c0ee-4e75-817a-f231aee5123d
+
+interface Windows.Networking.Vpn.IVpnTrafficFilter
+    guid 2f691b60-6c9f-47f5-ac36-bb1b042e2c50
+
+interface Windows.Networking.Vpn.IVpnTrafficFilterAssignment
+    guid 56ccd45c-e664-471e-89cd-601603b9e0f3
+
+interface Windows.Networking.Vpn.IVpnTrafficFilterFactory
+    guid 480d41d5-7f99-474c-86ee-96df168318f1
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityEventArgs> concrete
+    guid 39907949-a8cc-5ce5-9e0a-06e3b2d31570
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Vpn.VpnChannel;{4ac78d07-d1a8-4303-a091-c8d2e0915bc3});rc(Windows.Networking.Vpn.VpnChannelActivityEventArgs;{a36c88f2-afdc-4775-855d-d4ac0a35fc55}))
+    argument Windows.Networking.Vpn.VpnChannel
+    argument Windows.Networking.Vpn.VpnChannelActivityEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs> concrete
+    guid 2cfcf1ba-bffc-5746-b868-2e45a46d2958
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Vpn.VpnChannel;{4ac78d07-d1a8-4303-a091-c8d2e0915bc3});rc(Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs;{3d750565-fdc0-4bbe-a23b-45fffc6d97a1}))
+    argument Windows.Networking.Vpn.VpnChannel
+    argument Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs
+
+class Windows.Networking.Vpn.VpnAppId python_type
+    py VpnAppId
+    signature rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54})
+    default Windows.Networking.Vpn.IVpnAppId
+    requires Windows.Networking.Vpn.IVpnAppId
+    factory Windows.Networking.Vpn.IVpnAppIdFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppIdFactory shape=117 reverse=25
+            in enum32 type=Windows.Networking.Vpn.VpnAppIdType name=type
+            in string name=value
+            out class type=Windows.Networking.Vpn.VpnAppId return
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=62
+            out string return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=99
+            in string name=value
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=22
+            out enum32 type=Windows.Networking.Vpn.VpnAppIdType return
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=43
+            in enum32 type=Windows.Networking.Vpn.VpnAppIdType name=value
+
+enum Windows.Networking.Vpn.VpnAppIdType python_type
+    py VpnAppIdType
+    signature enum(Windows.Networking.Vpn.VpnAppIdType;i4)
+
+enum Windows.Networking.Vpn.VpnAuthenticationMethod python_type
+    py VpnAuthenticationMethod
+    signature enum(Windows.Networking.Vpn.VpnAuthenticationMethod;i4)
+
+class Windows.Networking.Vpn.VpnChannel python_type
+    py VpnChannel
+    signature rc(Windows.Networking.Vpn.VpnChannel;{4ac78d07-d1a8-4303-a091-c8d2e0915bc3})
+    default Windows.Networking.Vpn.IVpnChannel
+    requires Windows.Networking.Vpn.IVpnChannel
+    requires Windows.Networking.Vpn.IVpnChannel2
+    requires Windows.Networking.Vpn.IVpnChannel4
+    requires Windows.Networking.Vpn.IVpnChannel5
+    requires Windows.Networking.Vpn.IVpnChannel6
+    factory Windows.Networking.Vpn.IVpnChannelStatics
+    property plug_in_context
+        get get_PlugInContext slot=17 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=210
+            out object return
+        put put_PlugInContext slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=202
+            in object name=value
+    property configuration
+        get get_Configuration slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=173
+            out class type=Windows.Networking.Vpn.VpnChannelConfiguration return
+    property id
+        get get_Id slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=162
+            out uint32 return
+    property system_health
+        get get_SystemHealth slot=18 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=218
+            out class type=Windows.Networking.Vpn.VpnSystemHealth return
+    property current_request_transport_context
+        get get_CurrentRequestTransportContext slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=4 reverse=141
+            out object return
+    event activity_change
+        add add_ActivityChange slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityEventArgs> name=handler
+            out event_token return
+        remove remove_ActivityChange slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=26 reverse=200
+            in event_token name=token
+    event activity_state_change
+        add add_ActivityStateChange slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs> name=handler
+            out event_token return
+        remove remove_ActivityStateChange slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=26 reverse=110
+            in event_token name=token
+    method activate_foreground
+        method ActivateForeground slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel6 shape=117 reverse=25
+            in string name=packageRelativeAppId
+            in class type=Windows.Foundation.Collections.ValueSet name=sharedContext
+            out class type=Windows.Foundation.Collections.ValueSet return
+    method add_and_associate_transport
+        method AddAndAssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=24
+            in object name=transport
+            in object name=context
+    method append_vpn_receive_packet_buffer
+        method AppendVpnReceivePacketBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4 reverse=22
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=decapsulatedPacketBuffer
+    method append_vpn_send_packet_buffer
+        method AppendVpnSendPacketBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4 reverse=43
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=encapsulatedPacketBuffer
+    method associate_transport
+        method AssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=24
+            in object name=mainOuterTunnelTransport
+            in object name=optionalOuterTunnelTransport
+    method flush_vpn_receive_packet_buffers
+        method FlushVpnReceivePacketBuffers slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0 reverse=55
+    method flush_vpn_send_packet_buffers
+        method FlushVpnSendPacketBuffers slot=9 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0 reverse=93
+    method get_slot_type_for_transport_context
+        method GetSlotTypeForTransportContext slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=124
+            in object name=context
+            out enum32 type=Windows.Networking.Sockets.ControlChannelTriggerStatus return
+    method get_vpn_receive_packet_buffer
+        method GetVpnReceivePacketBuffer slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=141
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+    method get_vpn_send_packet_buffer
+        method GetVpnSendPacketBuffer slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=121
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+    method log_diagnostic_message
+        method LogDiagnosticMessage slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=141
+            in string name=message
+    method process_event_async static
+        method ProcessEventAsync slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannelStatics shape=51 reverse=24 static
+            in object name=thirdPartyPlugIn
+            in object name=event
+    method replace_and_associate_transport
+        method ReplaceAndAssociateTransport slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=65
+            in object name=transport
+            in object name=context
+    method request_credentials
+        method RequestCredentials slot=9 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=239 reverse=103
+            in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
+            in boolean name=isRetry
+            in boolean name=isSingleSignOnCredential
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
+            out class type=Windows.Networking.Vpn.VpnPickedCredential return
+    method request_credentials_async
+        method RequestCredentialsAsync slot=15 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=196
+            in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
+        method RequestCredentialsAsync slot=14 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=117 reverse=188
+            in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
+            in uint32 name=credOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
+        method RequestCredentialsAsync slot=13 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=195 reverse=176
+            in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
+            in uint32 name=credOptions
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
+    method request_custom_prompt
+        method RequestCustomPrompt slot=19 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=223
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> name=customPrompt
+    method request_custom_prompt_async
+        method RequestCustomPromptAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=163
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> name=customPromptElement
+            out interface type=Windows.Foundation.IAsyncAction return
+    method request_vpn_packet_buffer
+        method RequestVpnPacketBuffer slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=124
+            in enum32 type=Windows.Networking.Vpn.VpnDataPathType name=type
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer name=vpnPacketBuffer
+    method set_allowed_ssl_tls_versions
+        method SetAllowedSslTlsVersions slot=21 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=233
+            in object name=tunnelTransport
+            in boolean name=useTls12
+    method set_error_message
+        method SetErrorMessage slot=20 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=228
+            in string name=message
+    method start
+        method Start slot=7 inputs=10 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=294
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv4list
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv6list
+            in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpnInterfaceId
+            in class type=Windows.Networking.Vpn.VpnRouteAssignment name=routeScope
+            in class type=Windows.Networking.Vpn.VpnNamespaceAssignment name=namespaceScope
+            in uint32 name=mtuSize
+            in uint32 name=maxFrameSize
+            in boolean name=optimizeForLowCostNetwork
+            in object name=mainOuterTunnelTransport
+            in object name=optionalOuterTunnelTransport
+    method start_existing_transports
+        method StartExistingTransports slot=7 inputs=8 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=286 reverse=47
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv4list
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv6list
+            in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpnInterfaceId
+            in class type=Windows.Networking.Vpn.VpnRouteAssignment name=assignedRoutes
+            in class type=Windows.Networking.Vpn.VpnDomainNameAssignment name=assignedDomainName
+            in uint32 name=mtuSize
+            in uint32 name=maxFrameSize
+            in boolean name=Reserved
+    method start_reconnecting_transport
+        method StartReconnectingTransport slot=9 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=100
+            in object name=transport
+            in object name=context
+    method start_with_main_transport
+        method StartWithMainTransport slot=6 inputs=9 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=292
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv4list
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv6list
+            in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpnInterfaceId
+            in class type=Windows.Networking.Vpn.VpnRouteAssignment name=assignedRoutes
+            in class type=Windows.Networking.Vpn.VpnDomainNameAssignment name=assignedDomainName
+            in uint32 name=mtuSize
+            in uint32 name=maxFrameSize
+            in boolean name=Reserved
+            in object name=mainOuterTunnelTransport
+    method start_with_traffic_filter
+        method StartWithTrafficFilter slot=7 inputs=10 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=294
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=assignedClientIpv4Addresses
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=assignedClientIpv6Addresses
+            in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpninterfaceId
+            in class type=Windows.Networking.Vpn.VpnRouteAssignment name=assignedRoutes
+            in class type=Windows.Networking.Vpn.VpnDomainNameAssignment name=assignedNamespace
+            in uint32 name=mtuSize
+            in uint32 name=maxFrameSize
+            in boolean name=reserved
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=transports
+            in class type=Windows.Networking.Vpn.VpnTrafficFilterAssignment name=assignedTrafficFilters
+        method StartWithTrafficFilter slot=17 inputs=11 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=297
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIpv4List
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIpv6List
+            in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpnInterfaceId
+            in class type=Windows.Networking.Vpn.VpnRouteAssignment name=assignedRoutes
+            in class type=Windows.Networking.Vpn.VpnDomainNameAssignment name=assignedNamespace
+            in uint32 name=mtuSize
+            in uint32 name=maxFrameSize
+            in boolean name=reserved
+            in object name=mainOuterTunnelTransport
+            in object name=optionalOuterTunnelTransport
+            in class type=Windows.Networking.Vpn.VpnTrafficFilterAssignment name=assignedTrafficFilters
+    method stop
+        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=0 reverse=55
+    method terminate_connection
+        method TerminateConnection slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=202
+            in string name=message
+
+class Windows.Networking.Vpn.VpnChannelActivityEventArgs python_type
+    py VpnChannelActivityEventArgs
+    signature rc(Windows.Networking.Vpn.VpnChannelActivityEventArgs;{a36c88f2-afdc-4775-855d-d4ac0a35fc55})
+    default Windows.Networking.Vpn.IVpnChannelActivityEventArgs
+    requires Windows.Networking.Vpn.IVpnChannelActivityEventArgs
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Networking.Vpn.VpnChannelActivityEventType return
+
+enum Windows.Networking.Vpn.VpnChannelActivityEventType python_type
+    py VpnChannelActivityEventType
+    signature enum(Windows.Networking.Vpn.VpnChannelActivityEventType;i4)
+
+class Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs python_type
+    py VpnChannelActivityStateChangedArgs
+    signature rc(Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs;{3d750565-fdc0-4bbe-a23b-45fffc6d97a1})
+    default Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs
+    requires Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs
+    property activity_state
+        get get_ActivityState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs shape=4 reverse=22
+            out enum32 type=Windows.Networking.Vpn.VpnChannelActivityEventType return
+
+class Windows.Networking.Vpn.VpnChannelConfiguration python_type
+    py VpnChannelConfiguration
+    signature rc(Windows.Networking.Vpn.VpnChannelConfiguration;{0e2ddca2-2012-4fe4-b179-8c652c6d107e})
+    default Windows.Networking.Vpn.IVpnChannelConfiguration
+    requires Windows.Networking.Vpn.IVpnChannelConfiguration
+    requires Windows.Networking.Vpn.IVpnChannelConfiguration2
+    property custom_field
+        get get_CustomField slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=62
+            out string return
+    property server_host_name_list
+        get get_ServerHostNameList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> return
+    property server_service_name
+        get get_ServerServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=22
+            out string return
+    property server_uris
+        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+
+enum Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions python_type
+    py VpnChannelRequestCredentialsOptions
+    signature enum(Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions;u4)
+
+class Windows.Networking.Vpn.VpnCredential python_type
+    py VpnCredential
+    signature rc(Windows.Networking.Vpn.VpnCredential;{b7e78af3-a46d-404b-8729-1832522853ac})
+    default Windows.Networking.Vpn.IVpnCredential
+    requires Windows.Networking.Vpn.IVpnCredential
+    property additional_pin
+        get get_AdditionalPin slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=62
+            out string return
+    property certificate_credential
+        get get_CertificateCredential slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=43
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property old_password_credential
+        get get_OldPasswordCredential slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=99
+            out class type=Windows.Security.Credentials.PasswordCredential return
+    property passkey_credential
+        get get_PasskeyCredential slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCredential shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+
+enum Windows.Networking.Vpn.VpnCredentialType python_type
+    py VpnCredentialType
+    signature enum(Windows.Networking.Vpn.VpnCredentialType;i4)
+
+class Windows.Networking.Vpn.VpnCustomCheckBox activatable python_type
+    py VpnCustomCheckBox
+    signature rc(Windows.Networking.Vpn.VpnCustomCheckBox;{43878753-03c5-4e61-93d7-a957714c4282})
+    default Windows.Networking.Vpn.IVpnCustomCheckBox
+    requires Windows.Networking.Vpn.IVpnCustomCheckBox
+    requires Windows.Networking.Vpn.IVpnCustomPrompt
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property initial_check_state
+        get get_InitialCheckState slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=43
+            out boolean return
+        put put_InitialCheckState slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=22
+            in boolean name=value
+    property checked
+        get get_Checked slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=62
+            out boolean return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+
+class Windows.Networking.Vpn.VpnCustomComboBox activatable python_type
+    py VpnCustomComboBox
+    signature rc(Windows.Networking.Vpn.VpnCustomComboBox;{9a24158e-dba1-4c6f-8270-dcf3c9761c4c})
+    default Windows.Networking.Vpn.IVpnCustomComboBox
+    requires Windows.Networking.Vpn.IVpnCustomComboBox
+    requires Windows.Networking.Vpn.IVpnCustomPrompt
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property options_text
+        get get_OptionsText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+        put put_OptionsText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=value
+    property selected
+        get get_Selected slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=62
+            out uint32 return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+
+class Windows.Networking.Vpn.VpnCustomEditBox activatable python_type
+    py VpnCustomEditBox
+    signature rc(Windows.Networking.Vpn.VpnCustomEditBox;{3002d9a0-cfbf-4c0b-8f3c-66f503c20b39})
+    default Windows.Networking.Vpn.IVpnCustomEditBox
+    requires Windows.Networking.Vpn.IVpnCustomEditBox
+    requires Windows.Networking.Vpn.IVpnCustomPrompt
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property no_echo
+        get get_NoEcho slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=99
+            out boolean return
+        put put_NoEcho slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=62
+            in boolean name=value
+    property default_text
+        get get_DefaultText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=43
+            out string return
+        put put_DefaultText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=22
+            in string name=value
+    property text
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=121
+            out string return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+
+class Windows.Networking.Vpn.VpnCustomErrorBox activatable python_type
+    py VpnCustomErrorBox
+    signature rc(Windows.Networking.Vpn.VpnCustomErrorBox;{9ec4efb2-c942-42af-b223-588b48328721})
+    default Windows.Networking.Vpn.IVpnCustomErrorBox
+    requires Windows.Networking.Vpn.IVpnCustomErrorBox
+    requires Windows.Networking.Vpn.IVpnCustomPrompt
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+
+class Windows.Networking.Vpn.VpnCustomPromptBooleanInput activatable python_type
+    py VpnCustomPromptBooleanInput
+    signature rc(Windows.Networking.Vpn.VpnCustomPromptBooleanInput;{c4c9a69e-ff47-4527-9f27-a49292019979})
+    default Windows.Networking.Vpn.IVpnCustomPromptBooleanInput
+    requires Windows.Networking.Vpn.IVpnCustomPromptBooleanInput
+    requires Windows.Networking.Vpn.IVpnCustomPromptElement
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property initial_value
+        get get_InitialValue slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=43
+            out boolean return
+        put put_InitialValue slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=22
+            in boolean name=value
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=62
+            out boolean return
+    property emphasized
+        get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
+            out boolean return
+        put put_Emphasized slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=121
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
+            in boolean name=value
+
+class Windows.Networking.Vpn.VpnCustomPromptOptionSelector activatable python_type
+    py VpnCustomPromptOptionSelector
+    signature rc(Windows.Networking.Vpn.VpnCustomPromptOptionSelector;{3b8f34d9-8ec1-4e95-9a4e-7ba64d38f330})
+    default Windows.Networking.Vpn.IVpnCustomPromptOptionSelector
+    requires Windows.Networking.Vpn.IVpnCustomPromptOptionSelector
+    requires Windows.Networking.Vpn.IVpnCustomPromptElement
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property emphasized
+        get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
+            out boolean return
+        put put_Emphasized slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=121
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
+            in boolean name=value
+    property options
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property selected_index
+        get get_SelectedIndex slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4 reverse=43
+            out uint32 return
+
+class Windows.Networking.Vpn.VpnCustomPromptText activatable python_type
+    py VpnCustomPromptText
+    signature rc(Windows.Networking.Vpn.VpnCustomPromptText;{3bc8bdee-3a42-49a3-abdd-07b2edea752d})
+    default Windows.Networking.Vpn.IVpnCustomPromptText
+    requires Windows.Networking.Vpn.IVpnCustomPromptText
+    requires Windows.Networking.Vpn.IVpnCustomPromptElement
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property emphasized
+        get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
+            out boolean return
+        put put_Emphasized slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=121
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
+            in boolean name=value
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4 reverse=43
+            out string return
+        put put_Text slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4 reverse=22
+            in string name=value
+
+class Windows.Networking.Vpn.VpnCustomPromptTextInput activatable python_type
+    py VpnCustomPromptTextInput
+    signature rc(Windows.Networking.Vpn.VpnCustomPromptTextInput;{c9da9c75-913c-47d5-88ba-48fc48930235})
+    default Windows.Networking.Vpn.IVpnCustomPromptTextInput
+    requires Windows.Networking.Vpn.IVpnCustomPromptTextInput
+    requires Windows.Networking.Vpn.IVpnCustomPromptElement
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property emphasized
+        get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
+            out boolean return
+        put put_Emphasized slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=121
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=43
+            out string return
+        put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
+            in boolean name=value
+    property placeholder_text
+        get get_PlaceholderText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=43
+            out string return
+        put put_PlaceholderText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=22
+            in string name=value
+    property is_text_hidden
+        get get_IsTextHidden slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=99
+            out boolean return
+        put put_IsTextHidden slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=62
+            in boolean name=value
+    property text
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=121
+            out string return
+
+class Windows.Networking.Vpn.VpnCustomTextBox activatable python_type
+    py VpnCustomTextBox
+    signature rc(Windows.Networking.Vpn.VpnCustomTextBox;{daa4c3ca-8f23-4d36-91f1-76d937827942})
+    default Windows.Networking.Vpn.IVpnCustomTextBox
+    requires Windows.Networking.Vpn.IVpnCustomTextBox
+    requires Windows.Networking.Vpn.IVpnCustomPrompt
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
+            out string return
+        put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=22
+            in string name=value
+    property compulsory
+        get get_Compulsory slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=99
+            out boolean return
+        put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=62
+            in boolean name=value
+    property bordered
+        get get_Bordered slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=141
+            out boolean return
+        put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
+            in boolean name=value
+    property display_text
+        get get_DisplayText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4 reverse=43
+            out string return
+        put put_DisplayText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4 reverse=22
+            in string name=value
+
+enum Windows.Networking.Vpn.VpnDataPathType python_type
+    py VpnDataPathType
+    signature enum(Windows.Networking.Vpn.VpnDataPathType;i4)
+
+class Windows.Networking.Vpn.VpnDomainNameAssignment activatable python_type
+    py VpnDomainNameAssignment
+    signature rc(Windows.Networking.Vpn.VpnDomainNameAssignment;{4135b141-ccdb-49b5-9401-039a8ae767e9})
+    default Windows.Networking.Vpn.IVpnDomainNameAssignment
+    requires Windows.Networking.Vpn.IVpnDomainNameAssignment
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property proxy_auto_configuration_uri
+        get get_ProxyAutoConfigurationUri slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+        put put_ProxyAutoConfigurationUri slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property domain_name_list
+        get get_DomainNameList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> return
+
+class Windows.Networking.Vpn.VpnDomainNameInfo python_type
+    py VpnDomainNameInfo
+    signature rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a})
+    default Windows.Networking.Vpn.IVpnDomainNameInfo
+    requires Windows.Networking.Vpn.IVpnDomainNameInfo
+    requires Windows.Networking.Vpn.IVpnDomainNameInfo2
+    factory Windows.Networking.Vpn.IVpnDomainNameInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfoFactory shape=239 reverse=27
+            in string name=name
+            in enum32 type=Windows.Networking.Vpn.VpnDomainNameType name=nameType
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=dnsServerList
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=proxyServerList
+            out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
+    property domain_name_type
+        get get_DomainNameType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=99
+            out enum32 type=Windows.Networking.Vpn.VpnDomainNameType return
+        put put_DomainNameType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=62
+            in enum32 type=Windows.Networking.Vpn.VpnDomainNameType name=value
+    property domain_name
+        get get_DomainName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=43
+            out class type=Windows.Networking.HostName return
+        put put_DomainName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=22
+            in class type=Windows.Networking.HostName name=value
+    property dns_servers
+        get get_DnsServers slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
+    property web_proxy_servers
+        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
+    property web_proxy_uris
+        get get_WebProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+
+enum Windows.Networking.Vpn.VpnDomainNameType python_type
+    py VpnDomainNameType
+    signature enum(Windows.Networking.Vpn.VpnDomainNameType;i4)
+
+class Windows.Networking.Vpn.VpnForegroundActivatedEventArgs python_type
+    py VpnForegroundActivatedEventArgs
+    signature rc(Windows.Networking.Vpn.VpnForegroundActivatedEventArgs;{85b465b0-cadb-4d70-ac92-543a24dc9ebc})
+    default Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs
+    requires Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property activation_operation
+        get get_ActivationOperation slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.Networking.Vpn.VpnForegroundActivationOperation return
+    property profile_name
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=22
+            out string return
+    property shared_context
+        get get_SharedContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Collections.ValueSet return
+
+class Windows.Networking.Vpn.VpnForegroundActivationOperation python_type
+    py VpnForegroundActivationOperation
+    signature rc(Windows.Networking.Vpn.VpnForegroundActivationOperation;{9e010d57-f17a-4bd5-9b6d-f984f1297d3c})
+    default Windows.Networking.Vpn.IVpnForegroundActivationOperation
+    requires Windows.Networking.Vpn.IVpnForegroundActivationOperation
+    method complete
+        method Complete slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnForegroundActivationOperation shape=4 reverse=22
+            in class type=Windows.Foundation.Collections.ValueSet name=result
+
+enum Windows.Networking.Vpn.VpnIPProtocol python_type
+    py VpnIPProtocol
+    signature enum(Windows.Networking.Vpn.VpnIPProtocol;i4)
+
+class Windows.Networking.Vpn.VpnInterfaceId python_type
+    py VpnInterfaceId
+    signature rc(Windows.Networking.Vpn.VpnInterfaceId;{9e2ddca2-1712-4ce4-b179-8c652c6d1011})
+    default Windows.Networking.Vpn.IVpnInterfaceId
+    requires Windows.Networking.Vpn.IVpnInterfaceId
+    factory Windows.Networking.Vpn.IVpnInterfaceIdFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceIdFactory shape=117 reverse=25
+            pass_array uint8 name=address
+            out class type=Windows.Networking.Vpn.VpnInterfaceId return
+    method get_address_info
+        method GetAddressInfo slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceId shape=51 reverse=24
+            receive_array uint8 name=id
+
+class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
+    py VpnManagementAgent
+    signature rc(Windows.Networking.Vpn.VpnManagementAgent;{193696cd-a5c4-4abe-852b-785be4cb3e34})
+    default Windows.Networking.Vpn.IVpnManagementAgent
+    requires Windows.Networking.Vpn.IVpnManagementAgent
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method add_profile_from_object_async
+        method AddProfileFromObjectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=44
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method add_profile_from_xml_async
+        method AddProfileFromXmlAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=24
+            in string name=xml
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method connect_profile_async
+        method ConnectProfileAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=163
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method connect_profile_with_password_credential_async
+        method ConnectProfileWithPasswordCredentialAsync slot=13 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=117 reverse=175
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method delete_profile_async
+        method DeleteProfileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=144
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method disconnect_profile_async
+        method DisconnectProfileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=187
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method get_profiles_async
+        method GetProfilesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> return
+    method update_profile_from_object_async
+        method UpdateProfileFromObjectAsync slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=100
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method update_profile_from_xml_async
+        method UpdateProfileFromXmlAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=65
+            in string name=xml
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+
+enum Windows.Networking.Vpn.VpnManagementConnectionStatus python_type
+    py VpnManagementConnectionStatus
+    signature enum(Windows.Networking.Vpn.VpnManagementConnectionStatus;i4)
+
+enum Windows.Networking.Vpn.VpnManagementErrorStatus python_type
+    py VpnManagementErrorStatus
+    signature enum(Windows.Networking.Vpn.VpnManagementErrorStatus;i4)
+
+class Windows.Networking.Vpn.VpnNamespaceAssignment activatable python_type
+    py VpnNamespaceAssignment
+    signature rc(Windows.Networking.Vpn.VpnNamespaceAssignment;{d7f7db18-307d-4c0e-bd62-8fa270bbadd6})
+    default Windows.Networking.Vpn.IVpnNamespaceAssignment
+    requires Windows.Networking.Vpn.IVpnNamespaceAssignment
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property proxy_auto_config_uri
+        get get_ProxyAutoConfigUri slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+        put put_ProxyAutoConfigUri slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=62
+            in class type=Windows.Foundation.Uri name=value
+    property namespace_list
+        get get_NamespaceList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> return
+        put put_NamespaceList slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> name=value
+
+class Windows.Networking.Vpn.VpnNamespaceInfo python_type
+    py VpnNamespaceInfo
+    signature rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94})
+    default Windows.Networking.Vpn.IVpnNamespaceInfo
+    requires Windows.Networking.Vpn.IVpnNamespaceInfo
+    factory Windows.Networking.Vpn.IVpnNamespaceInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfoFactory shape=195 reverse=26
+            in string name=name
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=dnsServerList
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=proxyServerList
+            out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
+    property web_proxy_servers
+        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
+        put put_WebProxyServers slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=121
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=value
+    property namespace
+        get get_Namespace slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=43
+            out string return
+        put put_Namespace slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=22
+            in string name=value
+    property dns_servers
+        get get_DnsServers slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
+        put put_DnsServers slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=62
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=value
+
+class Windows.Networking.Vpn.VpnNativeProfile activatable python_type
+    py VpnNativeProfile
+    signature rc(Windows.Networking.Vpn.VpnNativeProfile;{a4aee29e-6417-4333-9842-f0a66db69802})
+    default Windows.Networking.Vpn.IVpnNativeProfile
+    requires Windows.Networking.Vpn.IVpnNativeProfile
+    requires Windows.Networking.Vpn.IVpnProfile
+    requires Windows.Networking.Vpn.IVpnNativeProfile2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property user_authentication_method
+        get get_UserAuthenticationMethod slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=141
+            out enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod return
+        put put_UserAuthenticationMethod slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=162
+            in enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod name=value
+    property tunnel_authentication_method
+        get get_TunnelAuthenticationMethod slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=173
+            out enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod return
+        put put_TunnelAuthenticationMethod slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=186
+            in enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod name=value
+    property routing_policy_type
+        get get_RoutingPolicyType slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=43
+            out enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType return
+        put put_RoutingPolicyType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=62
+            in enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType name=value
+    property eap_configuration
+        get get_EapConfiguration slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=194
+            out string return
+        put put_EapConfiguration slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=202
+            in string name=value
+    property native_protocol_type
+        get get_NativeProtocolType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=99
+            out enum32 type=Windows.Networking.Vpn.VpnNativeProtocolType return
+        put put_NativeProtocolType slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=121
+            in enum32 type=Windows.Networking.Vpn.VpnNativeProtocolType name=value
+    property servers
+        get get_Servers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property require_vpn_client_app_ui
+        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=22
+            out boolean return
+        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=43
+            in boolean name=value
+    property connection_status
+        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=62
+            out enum32 type=Windows.Networking.Vpn.VpnManagementConnectionStatus return
+    property profile_name
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=22
+            out string return
+        put put_ProfileName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=43
+            in string name=value
+    property remember_credentials
+        get get_RememberCredentials slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=162
+            out boolean return
+        put put_RememberCredentials slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=173
+            in boolean name=value
+    property always_on
+        get get_AlwaysOn slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=186
+            out boolean return
+        put put_AlwaysOn slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=194
+            in boolean name=value
+    property routes
+        get get_Routes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+    property app_triggers
+        get get_AppTriggers slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> return
+    property traffic_filters
+        get get_TrafficFilters slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> return
+    property domain_name_info_list
+        get get_DomainNameInfoList slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> return
+
+enum Windows.Networking.Vpn.VpnNativeProtocolType python_type
+    py VpnNativeProtocolType
+    signature enum(Windows.Networking.Vpn.VpnNativeProtocolType;i4)
+
+class Windows.Networking.Vpn.VpnPacketBuffer python_type
+    py VpnPacketBuffer
+    signature rc(Windows.Networking.Vpn.VpnPacketBuffer;{c2f891fc-4d5c-4a63-b70d-4e307eacce55})
+    default Windows.Networking.Vpn.IVpnPacketBuffer
+    requires Windows.Networking.Vpn.IVpnPacketBuffer
+    requires Windows.Networking.Vpn.IVpnPacketBuffer2
+    requires Windows.Networking.Vpn.IVpnPacketBuffer3
+    factory Windows.Networking.Vpn.IVpnPacketBufferFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferFactory shape=195 reverse=26
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=parentBuffer
+            in uint32 name=offset
+            in uint32 name=length
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+    property transport_affinity
+        get get_TransportAffinity slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=121
+            out uint32 return
+        put put_TransportAffinity slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=99
+            in uint32 name=value
+    property status
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=62
+            out enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus return
+        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=43
+            in enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus name=value
+    property buffer
+        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=22
+            out class type=Windows.Storage.Streams.Buffer return
+    property app_id
+        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer2 shape=4 reverse=22
+            out class type=Windows.Networking.Vpn.VpnAppId return
+    property transport_context
+        get get_TransportContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4 reverse=43
+            out object return
+        put put_TransportContext slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4 reverse=22
+            in object name=value
+
+class Windows.Networking.Vpn.VpnPacketBufferList python_type iterable
+    py VpnPacketBufferList
+    signature rc(Windows.Networking.Vpn.VpnPacketBufferList;{c2f891fc-4d5c-4a63-b70d-4e307eacce77})
+    default Windows.Networking.Vpn.IVpnPacketBufferList
+    requires Windows.Networking.Vpn.IVpnPacketBufferList
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer>
+    property status
+        get get_Status slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=162
+            out enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus return
+        put put_Status slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=141
+            in enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus name=value
+    property size
+        get get_Size slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=173
+            out uint32 return
+    method add_at_begin
+        method AddAtBegin slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=43
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=nextVpnPacketBuffer
+    method append
+        method Append slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=22
+            in class type=Windows.Networking.Vpn.VpnPacketBuffer name=nextVpnPacketBuffer
+    method clear
+        method Clear slot=10 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=0 reverse=117
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> return
+    method remove_at_begin
+        method RemoveAtBegin slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=99
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+    method remove_at_end
+        method RemoveAtEnd slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=62
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+
+enum Windows.Networking.Vpn.VpnPacketBufferStatus python_type
+    py VpnPacketBufferStatus
+    signature enum(Windows.Networking.Vpn.VpnPacketBufferStatus;i4)
+
+class Windows.Networking.Vpn.VpnPickedCredential python_type
+    py VpnPickedCredential
+    signature rc(Windows.Networking.Vpn.VpnPickedCredential;{9a793ac7-8854-4e52-ad97-24dd9a842bce})
+    default Windows.Networking.Vpn.IVpnPickedCredential
+    requires Windows.Networking.Vpn.IVpnPickedCredential
+    property additional_pin
+        get get_AdditionalPin slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=43
+            out string return
+    property old_password_credential
+        get get_OldPasswordCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+    property passkey_credential
+        get get_PasskeyCredential slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+
+class Windows.Networking.Vpn.VpnPlugInProfile activatable python_type
+    py VpnPlugInProfile
+    signature rc(Windows.Networking.Vpn.VpnPlugInProfile;{0edf0da4-4f00-4589-8d7b-4bf988f6542c})
+    default Windows.Networking.Vpn.IVpnPlugInProfile
+    requires Windows.Networking.Vpn.IVpnPlugInProfile
+    requires Windows.Networking.Vpn.IVpnProfile
+    requires Windows.Networking.Vpn.IVpnPlugInProfile2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property vpn_plugin_package_family_name
+        get get_VpnPluginPackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=99
+            out string return
+        put put_VpnPluginPackageFamilyName slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=121
+            in string name=value
+    property custom_configuration
+        get get_CustomConfiguration slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=43
+            out string return
+        put put_CustomConfiguration slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=62
+            in string name=value
+    property server_uris
+        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property require_vpn_client_app_ui
+        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=22
+            out boolean return
+        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=43
+            in boolean name=value
+    property connection_status
+        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=62
+            out enum32 type=Windows.Networking.Vpn.VpnManagementConnectionStatus return
+    property profile_name
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=22
+            out string return
+        put put_ProfileName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=43
+            in string name=value
+    property remember_credentials
+        get get_RememberCredentials slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=162
+            out boolean return
+        put put_RememberCredentials slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=173
+            in boolean name=value
+    property always_on
+        get get_AlwaysOn slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=186
+            out boolean return
+        put put_AlwaysOn slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=194
+            in boolean name=value
+    property app_triggers
+        get get_AppTriggers slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> return
+    property domain_name_info_list
+        get get_DomainNameInfoList slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> return
+    property routes
+        get get_Routes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+    property traffic_filters
+        get get_TrafficFilters slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> return
+
+class Windows.Networking.Vpn.VpnRoute python_type
+    py VpnRoute
+    signature rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3})
+    default Windows.Networking.Vpn.IVpnRoute
+    requires Windows.Networking.Vpn.IVpnRoute
+    factory Windows.Networking.Vpn.IVpnRouteFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteFactory shape=117 reverse=25
+            in class type=Windows.Networking.HostName name=address
+            in uint8 name=prefixSize
+            out class type=Windows.Networking.Vpn.VpnRoute return
+    property prefix_size
+        get get_PrefixSize slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=99
+            out uint8 return
+        put put_PrefixSize slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=62
+            in uint8 name=value
+    property address
+        get get_Address slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=43
+            out class type=Windows.Networking.HostName return
+        put put_Address slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=22
+            in class type=Windows.Networking.HostName name=value
+
+class Windows.Networking.Vpn.VpnRouteAssignment activatable python_type
+    py VpnRouteAssignment
+    signature rc(Windows.Networking.Vpn.VpnRouteAssignment;{db64de22-ce39-4a76-9550-f61039f80e48})
+    default Windows.Networking.Vpn.IVpnRouteAssignment
+    requires Windows.Networking.Vpn.IVpnRouteAssignment
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property ipv6_inclusion_routes
+        get get_Ipv6InclusionRoutes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+        put put_Ipv6InclusionRoutes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=43
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
+    property ipv6_exclusion_routes
+        get get_Ipv6ExclusionRoutes slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+        put put_Ipv6ExclusionRoutes slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=141
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
+    property ipv4_inclusion_routes
+        get get_Ipv4InclusionRoutes slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+        put put_Ipv4InclusionRoutes slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
+    property ipv4_exclusion_routes
+        get get_Ipv4ExclusionRoutes slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
+        put put_Ipv4ExclusionRoutes slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=121
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
+    property exclude_local_subnets
+        get get_ExcludeLocalSubnets slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=194
+            out boolean return
+        put put_ExcludeLocalSubnets slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=186
+            in boolean name=value
+
+enum Windows.Networking.Vpn.VpnRoutingPolicyType python_type
+    py VpnRoutingPolicyType
+    signature enum(Windows.Networking.Vpn.VpnRoutingPolicyType;i4)
+
+class Windows.Networking.Vpn.VpnSystemHealth python_type
+    py VpnSystemHealth
+    signature rc(Windows.Networking.Vpn.VpnSystemHealth;{99a8f8af-c0ee-4e75-817a-f231aee5123d})
+    default Windows.Networking.Vpn.IVpnSystemHealth
+    requires Windows.Networking.Vpn.IVpnSystemHealth
+    property statement_of_health
+        get get_StatementOfHealth slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnSystemHealth shape=4 reverse=22
+            out class type=Windows.Storage.Streams.Buffer return
+
+class Windows.Networking.Vpn.VpnTrafficFilter python_type
+    py VpnTrafficFilter
+    signature rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50})
+    default Windows.Networking.Vpn.IVpnTrafficFilter
+    requires Windows.Networking.Vpn.IVpnTrafficFilter
+    factory Windows.Networking.Vpn.IVpnTrafficFilterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterFactory shape=51 reverse=24
+            in class type=Windows.Networking.Vpn.VpnAppId name=appId
+            out class type=Windows.Networking.Vpn.VpnTrafficFilter return
+    property routing_policy_type
+        get get_RoutingPolicyType slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=194
+            out enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType return
+        put put_RoutingPolicyType slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=202
+            in enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType name=value
+    property protocol
+        get get_Protocol slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=99
+            out enum32 type=Windows.Networking.Vpn.VpnIPProtocol return
+        put put_Protocol slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=121
+            in enum32 type=Windows.Networking.Vpn.VpnIPProtocol name=value
+    property app_id
+        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=22
+            out class type=Windows.Networking.Vpn.VpnAppId return
+        put put_AppId slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=43
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
+    property app_claims
+        get get_AppClaims slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property local_address_ranges
+        get get_LocalAddressRanges slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property local_port_ranges
+        get get_LocalPortRanges slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property remote_address_ranges
+        get get_RemoteAddressRanges slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property remote_port_ranges
+        get get_RemotePortRanges slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Networking.Vpn.VpnTrafficFilterAssignment activatable python_type
+    py VpnTrafficFilterAssignment
+    signature rc(Windows.Networking.Vpn.VpnTrafficFilterAssignment;{56ccd45c-e664-471e-89cd-601603b9e0f3})
+    default Windows.Networking.Vpn.IVpnTrafficFilterAssignment
+    requires Windows.Networking.Vpn.IVpnTrafficFilterAssignment
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allow_outbound
+        get get_AllowOutbound slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=43
+            out boolean return
+        put put_AllowOutbound slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=62
+            in boolean name=value
+    property allow_inbound
+        get get_AllowInbound slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=99
+            out boolean return
+        put put_AllowInbound slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=121
+            in boolean name=value
+    property traffic_filter_list
+        get get_TrafficFilterList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> return
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+enum Windows.ApplicationModel.Activation.ActivationKind external
+    py winrt.windows.applicationmodel.activation.ActivationKind
+
+enum Windows.ApplicationModel.Activation.ApplicationExecutionState external
+    py winrt.windows.applicationmodel.activation.ApplicationExecutionState
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
+    py winrt.windows.applicationmodel.activation._IActivatedEventArgs
+    guid cf651713-cd08-4fd8-b697-a281b6544e2e
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser external
+    py winrt.windows.applicationmodel.activation._IActivatedEventArgsWithUser
+    guid 1cf09b9e-9962-4936-80ff-afc8e8ae5c8c
+
+class Windows.ApplicationModel.Activation.SplashScreen external
+    py winrt.windows.applicationmodel.activation.SplashScreen
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+class Windows.Networking.HostName external
+    py winrt.windows.networking.HostName
+
+enum Windows.Networking.Sockets.ControlChannelTriggerStatus external
+    py winrt.windows.networking.sockets.ControlChannelTriggerStatus
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+class Windows.Security.Cryptography.Certificates.Certificate external
+    py winrt.windows.security.cryptography.certificates.Certificate
+
+class Windows.Storage.Streams.Buffer external
+    py winrt.windows.storage.streams.Buffer
+
+class Windows.System.User external
+    py winrt.windows.system.User

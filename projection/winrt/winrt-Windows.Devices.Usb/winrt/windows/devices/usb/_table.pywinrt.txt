@@ -1,0 +1,766 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Usb
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+    guid ef60385f-be78-584b-aaef-7829ada2b0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> concrete
+    guid 2138c5ed-b71a-5166-9948-d55792748f5c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Usb.UsbDevice;{5249b992-c456-44d5-ad5e-24f5a089f63b}))
+    argument Windows.Devices.Usb.UsbDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Foundation.IReference<System.Byte> concrete
+    guid e5198cc8-2873-55f5-b0a1-84ff9e4aad62
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u1)
+    argument System.Byte
+
+interface Windows.Devices.Usb.IUsbBulkInEndpointDescriptor
+    guid 3c6e4846-06cf-42a9-9dc2-971c1b14b6e3
+
+interface Windows.Devices.Usb.IUsbBulkInPipe
+    guid f01d2d3b-4548-4d50-b326-d82cdabe1220
+
+interface Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor
+    guid 2820847a-ffee-4f60-9be1-956cac3ecb65
+
+interface Windows.Devices.Usb.IUsbBulkOutPipe
+    guid a8e9ee6e-0115-45aa-8b21-37b225bccee7
+
+interface Windows.Devices.Usb.IUsbConfiguration
+    guid 68177429-36a9-46d7-b873-fc689251ec30
+
+interface Windows.Devices.Usb.IUsbConfigurationDescriptor
+    guid f2176d92-b442-407a-8207-7d646c0385f3
+
+interface Windows.Devices.Usb.IUsbConfigurationDescriptorStatics
+    guid 424ced93-e740-40a1-92bd-da120ea04914
+
+interface Windows.Devices.Usb.IUsbControlRequestType
+    guid 8e9465a6-d73d-46de-94be-aae7f07c0f5c
+
+interface Windows.Devices.Usb.IUsbDescriptor
+    guid 0a89f216-5f9d-4874-8904-da9ad3f5528f
+
+interface Windows.Devices.Usb.IUsbDevice
+    guid 5249b992-c456-44d5-ad5e-24f5a089f63b
+
+interface Windows.Devices.Usb.IUsbDeviceClass
+    guid 051942f9-845e-47eb-b12a-38f2f617afe7
+
+interface Windows.Devices.Usb.IUsbDeviceClasses
+    guid 686f955d-9b92-4b30-9781-c22c55ac35cb
+
+interface Windows.Devices.Usb.IUsbDeviceClassesStatics
+    guid b20b0527-c580-4599-a165-981b4fd03230
+
+interface Windows.Devices.Usb.IUsbDeviceDescriptor
+    guid 1f48d1f6-ba97-4322-b92c-b5b189216588
+
+interface Windows.Devices.Usb.IUsbDeviceStatics
+    guid 066b85a2-09b7-4446-8502-6fe6dcaa7309
+
+interface Windows.Devices.Usb.IUsbEndpointDescriptor
+    guid 6b4862d9-8df7-4b40-ac83-578f139f0575
+
+interface Windows.Devices.Usb.IUsbEndpointDescriptorStatics
+    guid c890b201-9a6a-495e-a82c-295b9e708106
+
+interface Windows.Devices.Usb.IUsbInterface
+    guid a0322b95-7f47-48ab-a727-678c25be2112
+
+interface Windows.Devices.Usb.IUsbInterfaceDescriptor
+    guid 199670c7-b7ee-4f90-8cd5-94a2e257598a
+
+interface Windows.Devices.Usb.IUsbInterfaceDescriptorStatics
+    guid e34a9ff5-77d6-48b6-b0be-16c6422316fe
+
+interface Windows.Devices.Usb.IUsbInterfaceSetting
+    guid 1827bba7-8da7-4af7-8f4c-7f3032e781f5
+
+interface Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor
+    guid c0528967-c911-4c3a-86b2-419c2da89039
+
+interface Windows.Devices.Usb.IUsbInterruptInEventArgs
+    guid b7b04092-1418-4936-8209-299cf5605583
+
+interface Windows.Devices.Usb.IUsbInterruptInPipe
+    guid fa007116-84d7-48c7-8a3f-4c0b235f2ea6
+
+interface Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor
+    guid cc9fed81-10ca-4533-952d-9e278341e80f
+
+interface Windows.Devices.Usb.IUsbInterruptOutPipe
+    guid e984c8a9-aaf9-49d0-b96c-f661ab4a7f95
+
+interface Windows.Devices.Usb.IUsbSetupPacket
+    guid 104ba132-c78f-4c51-b654-e49d02f2cb03
+
+interface Windows.Devices.Usb.IUsbSetupPacketFactory
+    guid c9257d50-1b2e-4a41-a2a7-338f0cef3c14
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> concrete
+    guid 9c69ac78-309e-5763-af26-9706ffa47ec0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkInEndpointDescriptor;{3c6e4846-06cf-42a9-9dc2-971c1b14b6e3}))
+    argument Windows.Devices.Usb.UsbBulkInEndpointDescriptor
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> concrete
+    guid a93c84bc-6484-5959-b61a-703cc7115f6f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkInPipe;{f01d2d3b-4548-4d50-b326-d82cdabe1220}))
+    argument Windows.Devices.Usb.UsbBulkInPipe
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> concrete
+    guid 22a53676-a3ea-5dcd-bb39-b28a5327c4a3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkOutEndpointDescriptor;{2820847a-ffee-4f60-9be1-956cac3ecb65}))
+    argument Windows.Devices.Usb.UsbBulkOutEndpointDescriptor
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> concrete
+    guid 0a873512-15f1-5e8e-a72a-045cfd7a5e83
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkOutPipe;{a8e9ee6e-0115-45aa-8b21-37b225bccee7}))
+    argument Windows.Devices.Usb.UsbBulkOutPipe
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> concrete
+    guid 5408baa2-291e-537a-b61f-137062f7ff7d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbDescriptor;{0a89f216-5f9d-4874-8904-da9ad3f5528f}))
+    argument Windows.Devices.Usb.UsbDescriptor
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> concrete
+    guid 9c69ec7f-2e42-58cd-a74a-f4974811134d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterface;{a0322b95-7f47-48ab-a727-678c25be2112}))
+    argument Windows.Devices.Usb.UsbInterface
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> concrete
+    guid 71194af7-77c2-54d5-a116-287f0b7fd53f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterfaceSetting;{1827bba7-8da7-4af7-8f4c-7f3032e781f5}))
+    argument Windows.Devices.Usb.UsbInterfaceSetting
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> concrete
+    guid 3fc7f890-218e-5057-904d-6387c591cc93
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptInEndpointDescriptor;{c0528967-c911-4c3a-86b2-419c2da89039}))
+    argument Windows.Devices.Usb.UsbInterruptInEndpointDescriptor
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> concrete
+    guid 37469574-b4c5-5ba0-9616-894dd822ff5b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6}))
+    argument Windows.Devices.Usb.UsbInterruptInPipe
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> concrete
+    guid 984e7e15-c5ac-5140-a3c0-b583190085d7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor;{cc9fed81-10ca-4533-952d-9e278341e80f}))
+    argument Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> concrete
+    guid 748196c8-83bf-5ec3-8d28-a3112b3ee3cc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptOutPipe;{e984c8a9-aaf9-49d0-b96c-f661ab4a7f95}))
+    argument Windows.Devices.Usb.UsbInterruptOutPipe
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Usb.UsbInterruptInPipe,Windows.Devices.Usb.UsbInterruptInEventArgs> concrete
+    guid e6db9449-f36a-50f2-926c-2afd85c49f01
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6});rc(Windows.Devices.Usb.UsbInterruptInEventArgs;{b7b04092-1418-4936-8209-299cf5605583}))
+    argument Windows.Devices.Usb.UsbInterruptInPipe
+    argument Windows.Devices.Usb.UsbInterruptInEventArgs
+
+class Windows.Devices.Usb.UsbBulkInEndpointDescriptor python_type
+    py UsbBulkInEndpointDescriptor
+    signature rc(Windows.Devices.Usb.UsbBulkInEndpointDescriptor;{3c6e4846-06cf-42a9-9dc2-971c1b14b6e3})
+    default Windows.Devices.Usb.IUsbBulkInEndpointDescriptor
+    requires Windows.Devices.Usb.IUsbBulkInEndpointDescriptor
+    property endpoint_number
+        get get_EndpointNumber slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInEndpointDescriptor shape=4 reverse=43
+            out uint8 return
+    property max_packet_size
+        get get_MaxPacketSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInEndpointDescriptor shape=4 reverse=22
+            out uint32 return
+    property pipe
+        get get_Pipe slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInEndpointDescriptor shape=4 reverse=62
+            out class type=Windows.Devices.Usb.UsbBulkInPipe return
+
+class Windows.Devices.Usb.UsbBulkInPipe python_type
+    py UsbBulkInPipe
+    signature rc(Windows.Devices.Usb.UsbBulkInPipe;{f01d2d3b-4548-4d50-b326-d82cdabe1220})
+    default Windows.Devices.Usb.IUsbBulkInPipe
+    requires Windows.Devices.Usb.IUsbBulkInPipe
+    property read_options
+        get get_ReadOptions slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=121
+            out enum_u32 type=Windows.Devices.Usb.UsbReadOptions return
+        put put_ReadOptions slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=99
+            in enum_u32 type=Windows.Devices.Usb.UsbReadOptions name=value
+    property endpoint_descriptor
+        get get_EndpointDescriptor slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=43
+            out class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor return
+    property input_stream
+        get get_InputStream slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property max_transfer_size_bytes
+        get get_MaxTransferSizeBytes slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=22
+            out uint32 return
+    method clear_stall_async
+        method ClearStallAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method flush_buffer
+        method FlushBuffer slot=11 inputs=0 outputs=0 declaring=Windows.Devices.Usb.IUsbBulkInPipe shape=0 reverse=137
+
+class Windows.Devices.Usb.UsbBulkOutEndpointDescriptor python_type
+    py UsbBulkOutEndpointDescriptor
+    signature rc(Windows.Devices.Usb.UsbBulkOutEndpointDescriptor;{2820847a-ffee-4f60-9be1-956cac3ecb65})
+    default Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor
+    requires Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor
+    property endpoint_number
+        get get_EndpointNumber slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor shape=4 reverse=43
+            out uint8 return
+    property max_packet_size
+        get get_MaxPacketSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor shape=4 reverse=22
+            out uint32 return
+    property pipe
+        get get_Pipe slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutEndpointDescriptor shape=4 reverse=62
+            out class type=Windows.Devices.Usb.UsbBulkOutPipe return
+
+class Windows.Devices.Usb.UsbBulkOutPipe python_type
+    py UsbBulkOutPipe
+    signature rc(Windows.Devices.Usb.UsbBulkOutPipe;{a8e9ee6e-0115-45aa-8b21-37b225bccee7})
+    default Windows.Devices.Usb.IUsbBulkOutPipe
+    requires Windows.Devices.Usb.IUsbBulkOutPipe
+    property write_options
+        get get_WriteOptions slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutPipe shape=4 reverse=99
+            out enum_u32 type=Windows.Devices.Usb.UsbWriteOptions return
+        put put_WriteOptions slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbBulkOutPipe shape=4 reverse=62
+            in enum_u32 type=Windows.Devices.Usb.UsbWriteOptions name=value
+    property endpoint_descriptor
+        get get_EndpointDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutPipe shape=4 reverse=22
+            out class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor return
+    property output_stream
+        get get_OutputStream slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutPipe shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method clear_stall_async
+        method ClearStallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbBulkOutPipe shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Usb.UsbConfiguration python_type
+    py UsbConfiguration
+    signature rc(Windows.Devices.Usb.UsbConfiguration;{68177429-36a9-46d7-b873-fc689251ec30})
+    default Windows.Devices.Usb.IUsbConfiguration
+    requires Windows.Devices.Usb.IUsbConfiguration
+    property configuration_descriptor
+        get get_ConfigurationDescriptor slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfiguration shape=4 reverse=43
+            out class type=Windows.Devices.Usb.UsbConfigurationDescriptor return
+    property descriptors
+        get get_Descriptors slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfiguration shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> return
+    property usb_interfaces
+        get get_UsbInterfaces slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfiguration shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> return
+
+class Windows.Devices.Usb.UsbConfigurationDescriptor python_type
+    py UsbConfigurationDescriptor
+    signature rc(Windows.Devices.Usb.UsbConfigurationDescriptor;{f2176d92-b442-407a-8207-7d646c0385f3})
+    default Windows.Devices.Usb.IUsbConfigurationDescriptor
+    requires Windows.Devices.Usb.IUsbConfigurationDescriptor
+    factory Windows.Devices.Usb.IUsbConfigurationDescriptorStatics
+    property configuration_value
+        get get_ConfigurationValue slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptor shape=4 reverse=22
+            out uint8 return
+    property max_power_milliamps
+        get get_MaxPowerMilliamps slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptor shape=4 reverse=43
+            out uint32 return
+    property remote_wakeup
+        get get_RemoteWakeup slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptor shape=4 reverse=99
+            out boolean return
+    property self_powered
+        get get_SelfPowered slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptor shape=4 reverse=62
+            out boolean return
+    method parse static
+        method Parse slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptorStatics shape=51 reverse=44 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbConfigurationDescriptor return
+    method try_parse static
+        method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Devices.Usb.IUsbConfigurationDescriptorStatics shape=117 reverse=25 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbConfigurationDescriptor name=parsed
+            out boolean return
+
+enum Windows.Devices.Usb.UsbControlRecipient python_type
+    py UsbControlRecipient
+    signature enum(Windows.Devices.Usb.UsbControlRecipient;i4)
+
+class Windows.Devices.Usb.UsbControlRequestType activatable python_type
+    py UsbControlRequestType
+    signature rc(Windows.Devices.Usb.UsbControlRequestType;{8e9465a6-d73d-46de-94be-aae7f07c0f5c})
+    default Windows.Devices.Usb.IUsbControlRequestType
+    requires Windows.Devices.Usb.IUsbControlRequestType
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property recipient
+        get get_Recipient slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=121
+            out enum32 type=Windows.Devices.Usb.UsbControlRecipient return
+        put put_Recipient slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=141
+            in enum32 type=Windows.Devices.Usb.UsbControlRecipient name=value
+    property direction
+        get get_Direction slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=22
+            out enum32 type=Windows.Devices.Usb.UsbTransferDirection return
+        put put_Direction slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=43
+            in enum32 type=Windows.Devices.Usb.UsbTransferDirection name=value
+    property control_transfer_type
+        get get_ControlTransferType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=62
+            out enum32 type=Windows.Devices.Usb.UsbControlTransferType return
+        put put_ControlTransferType slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=99
+            in enum32 type=Windows.Devices.Usb.UsbControlTransferType name=value
+    property as_byte
+        get get_AsByte slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=162
+            out uint8 return
+        put put_AsByte slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbControlRequestType shape=4 reverse=173
+            in uint8 name=value
+
+enum Windows.Devices.Usb.UsbControlTransferType python_type
+    py UsbControlTransferType
+    signature enum(Windows.Devices.Usb.UsbControlTransferType;i4)
+
+class Windows.Devices.Usb.UsbDescriptor python_type
+    py UsbDescriptor
+    signature rc(Windows.Devices.Usb.UsbDescriptor;{0a89f216-5f9d-4874-8904-da9ad3f5528f})
+    default Windows.Devices.Usb.IUsbDescriptor
+    requires Windows.Devices.Usb.IUsbDescriptor
+    property descriptor_type
+        get get_DescriptorType slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDescriptor shape=4 reverse=43
+            out uint8 return
+    property length
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDescriptor shape=4 reverse=22
+            out uint8 return
+    method read_descriptor_buffer
+        method ReadDescriptorBuffer slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbDescriptor shape=4 reverse=62
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+
+class Windows.Devices.Usb.UsbDevice python_type closeable
+    py UsbDevice
+    signature rc(Windows.Devices.Usb.UsbDevice;{5249b992-c456-44d5-ad5e-24f5a089f63b})
+    default Windows.Devices.Usb.IUsbDevice
+    requires Windows.Devices.Usb.IUsbDevice
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Usb.IUsbDeviceStatics
+    property configuration
+        get get_Configuration slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=4 reverse=162
+            out class type=Windows.Devices.Usb.UsbConfiguration return
+    property default_interface
+        get get_DefaultInterface slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=4 reverse=121
+            out class type=Windows.Devices.Usb.UsbInterface return
+    property device_descriptor
+        get get_DeviceDescriptor slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=4 reverse=141
+            out class type=Windows.Devices.Usb.UsbDeviceDescriptor return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=51 reverse=124 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> return
+    method get_device_class_selector static
+        method GetDeviceClassSelector slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=51 reverse=100 static
+            in class type=Windows.Devices.Usb.UsbDeviceClass name=usbClass
+            out string return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=94 reverse=54 static
+            in guid name=winUsbInterfaceClass
+            out string return
+        method GetDeviceSelector slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=202 static
+            in uint32 name=vendorId
+            in uint32 name=productId
+            in guid name=winUsbInterfaceClass
+            out string return
+        method GetDeviceSelector slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=202 static
+            in uint32 name=vendorId
+            in uint32 name=productId
+            in guid name=winUsbInterfaceClass
+            out string return
+    method send_control_in_transfer_async
+        method SendControlInTransferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=51 reverse=100
+            in class type=Windows.Devices.Usb.UsbSetupPacket name=setupPacket
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+        method SendControlInTransferAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbSetupPacket name=setupPacket
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method send_control_out_transfer_async
+        method SendControlOutTransferAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=51 reverse=44
+            in class type=Windows.Devices.Usb.UsbSetupPacket name=setupPacket
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+        method SendControlOutTransferAsync slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=117 reverse=25
+            in class type=Windows.Devices.Usb.UsbSetupPacket name=setupPacket
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
+
+class Windows.Devices.Usb.UsbDeviceClass activatable python_type
+    py UsbDeviceClass
+    signature rc(Windows.Devices.Usb.UsbDeviceClass;{051942f9-845e-47eb-b12a-38f2f617afe7})
+    default Windows.Devices.Usb.IUsbDeviceClass
+    requires Windows.Devices.Usb.IUsbDeviceClass
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property subclass_code
+        get get_SubclassCode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Byte> return
+        put put_SubclassCode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Byte> name=value
+    property protocol_code
+        get get_ProtocolCode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Byte> return
+        put put_ProtocolCode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.Byte> name=value
+    property class_code
+        get get_ClassCode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=22
+            out uint8 return
+        put put_ClassCode slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbDeviceClass shape=4 reverse=43
+            in uint8 name=value
+
+class Windows.Devices.Usb.UsbDeviceClasses python_type
+    py UsbDeviceClasses
+    signature rc(Windows.Devices.Usb.UsbDeviceClasses;{686f955d-9b92-4b30-9781-c22c55ac35cb})
+    default Windows.Devices.Usb.IUsbDeviceClasses
+    requires Windows.Devices.Usb.IUsbDeviceClasses
+    factory Windows.Devices.Usb.IUsbDeviceClassesStatics
+    property active_sync static
+        get get_ActiveSync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=99 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property cdc_control static
+        get get_CdcControl slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property device_firmware_update static
+        get get_DeviceFirmwareUpdate slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=141 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property irda static
+        get get_Irda slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=162 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property measurement static
+        get get_Measurement slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=173 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property palm_sync static
+        get get_PalmSync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=121 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property personal_healthcare static
+        get get_PersonalHealthcare slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=62 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property physical static
+        get get_Physical slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=43 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+    property vendor_specific static
+        get get_VendorSpecific slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceClassesStatics shape=4 reverse=186 static
+            out class type=Windows.Devices.Usb.UsbDeviceClass return
+
+class Windows.Devices.Usb.UsbDeviceDescriptor python_type
+    py UsbDeviceDescriptor
+    signature rc(Windows.Devices.Usb.UsbDeviceDescriptor;{1f48d1f6-ba97-4322-b92c-b5b189216588})
+    default Windows.Devices.Usb.IUsbDeviceDescriptor
+    requires Windows.Devices.Usb.IUsbDeviceDescriptor
+    property bcd_device_revision
+        get get_BcdDeviceRevision slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=121
+            out uint32 return
+    property bcd_usb
+        get get_BcdUsb slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=22
+            out uint32 return
+    property max_packet_size0
+        get get_MaxPacketSize0 slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=43
+            out uint8 return
+    property number_of_configurations
+        get get_NumberOfConfigurations slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=141
+            out uint8 return
+    property product_id
+        get get_ProductId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=99
+            out uint32 return
+    property vendor_id
+        get get_VendorId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceDescriptor shape=4 reverse=62
+            out uint32 return
+
+class Windows.Devices.Usb.UsbEndpointDescriptor python_type
+    py UsbEndpointDescriptor
+    signature rc(Windows.Devices.Usb.UsbEndpointDescriptor;{6b4862d9-8df7-4b40-ac83-578f139f0575})
+    default Windows.Devices.Usb.IUsbEndpointDescriptor
+    requires Windows.Devices.Usb.IUsbEndpointDescriptor
+    factory Windows.Devices.Usb.IUsbEndpointDescriptorStatics
+    property as_bulk_in_endpoint_descriptor
+        get get_AsBulkInEndpointDescriptor slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=99
+            out class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor return
+    property as_bulk_out_endpoint_descriptor
+        get get_AsBulkOutEndpointDescriptor slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=141
+            out class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor return
+    property as_interrupt_in_endpoint_descriptor
+        get get_AsInterruptInEndpointDescriptor slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=121
+            out class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor return
+    property as_interrupt_out_endpoint_descriptor
+        get get_AsInterruptOutEndpointDescriptor slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=162
+            out class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor return
+    property direction
+        get get_Direction slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=43
+            out enum32 type=Windows.Devices.Usb.UsbTransferDirection return
+    property endpoint_number
+        get get_EndpointNumber slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=22
+            out uint8 return
+    property endpoint_type
+        get get_EndpointType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptor shape=4 reverse=62
+            out enum32 type=Windows.Devices.Usb.UsbEndpointType return
+    method parse static
+        method Parse slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbEndpointDescriptorStatics shape=51 reverse=44 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbEndpointDescriptor return
+    method try_parse static
+        method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Devices.Usb.IUsbEndpointDescriptorStatics shape=117 reverse=25 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbEndpointDescriptor name=parsed
+            out boolean return
+
+enum Windows.Devices.Usb.UsbEndpointType python_type
+    py UsbEndpointType
+    signature enum(Windows.Devices.Usb.UsbEndpointType;i4)
+
+class Windows.Devices.Usb.UsbInterface python_type
+    py UsbInterface
+    signature rc(Windows.Devices.Usb.UsbInterface;{a0322b95-7f47-48ab-a727-678c25be2112})
+    default Windows.Devices.Usb.IUsbInterface
+    requires Windows.Devices.Usb.IUsbInterface
+    property bulk_in_pipes
+        get get_BulkInPipes slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> return
+    property bulk_out_pipes
+        get get_BulkOutPipes slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> return
+    property descriptors
+        get get_Descriptors slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> return
+    property interface_number
+        get get_InterfaceNumber slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=141
+            out uint8 return
+    property interface_settings
+        get get_InterfaceSettings slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> return
+    property interrupt_in_pipes
+        get get_InterruptInPipes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> return
+    property interrupt_out_pipes
+        get get_InterruptOutPipes slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterface shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> return
+
+class Windows.Devices.Usb.UsbInterfaceDescriptor python_type
+    py UsbInterfaceDescriptor
+    signature rc(Windows.Devices.Usb.UsbInterfaceDescriptor;{199670c7-b7ee-4f90-8cd5-94a2e257598a})
+    default Windows.Devices.Usb.IUsbInterfaceDescriptor
+    requires Windows.Devices.Usb.IUsbInterfaceDescriptor
+    factory Windows.Devices.Usb.IUsbInterfaceDescriptorStatics
+    property alternate_setting_number
+        get get_AlternateSettingNumber slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptor shape=4 reverse=99
+            out uint8 return
+    property class_code
+        get get_ClassCode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptor shape=4 reverse=22
+            out uint8 return
+    property interface_number
+        get get_InterfaceNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptor shape=4 reverse=121
+            out uint8 return
+    property protocol_code
+        get get_ProtocolCode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptor shape=4 reverse=62
+            out uint8 return
+    property subclass_code
+        get get_SubclassCode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptor shape=4 reverse=43
+            out uint8 return
+    method parse static
+        method Parse slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptorStatics shape=51 reverse=44 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbInterfaceDescriptor return
+    method try_parse static
+        method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Devices.Usb.IUsbInterfaceDescriptorStatics shape=117 reverse=25 static
+            in class type=Windows.Devices.Usb.UsbDescriptor name=descriptor
+            out class type=Windows.Devices.Usb.UsbInterfaceDescriptor name=parsed
+            out boolean return
+
+class Windows.Devices.Usb.UsbInterfaceSetting python_type
+    py UsbInterfaceSetting
+    signature rc(Windows.Devices.Usb.UsbInterfaceSetting;{1827bba7-8da7-4af7-8f4c-7f3032e781f5})
+    default Windows.Devices.Usb.IUsbInterfaceSetting
+    requires Windows.Devices.Usb.IUsbInterfaceSetting
+    property bulk_in_endpoints
+        get get_BulkInEndpoints slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> return
+    property bulk_out_endpoints
+        get get_BulkOutEndpoints slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> return
+    property descriptors
+        get get_Descriptors slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> return
+    property interface_descriptor
+        get get_InterfaceDescriptor slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=162
+            out class type=Windows.Devices.Usb.UsbInterfaceDescriptor return
+    property interrupt_in_endpoints
+        get get_InterruptInEndpoints slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> return
+    property interrupt_out_endpoints
+        get get_InterruptOutEndpoints slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> return
+    property selected
+        get get_Selected slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=121
+            out boolean return
+    method select_setting_async
+        method SelectSettingAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterfaceSetting shape=4 reverse=141
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Usb.UsbInterruptInEndpointDescriptor python_type
+    py UsbInterruptInEndpointDescriptor
+    signature rc(Windows.Devices.Usb.UsbInterruptInEndpointDescriptor;{c0528967-c911-4c3a-86b2-419c2da89039})
+    default Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor
+    requires Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor
+    property endpoint_number
+        get get_EndpointNumber slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor shape=4 reverse=43
+            out uint8 return
+    property interval
+        get get_Interval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor shape=4 reverse=62
+            out timespan return
+    property max_packet_size
+        get get_MaxPacketSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor shape=4 reverse=22
+            out uint32 return
+    property pipe
+        get get_Pipe slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInEndpointDescriptor shape=4 reverse=99
+            out class type=Windows.Devices.Usb.UsbInterruptInPipe return
+
+class Windows.Devices.Usb.UsbInterruptInEventArgs python_type
+    py UsbInterruptInEventArgs
+    signature rc(Windows.Devices.Usb.UsbInterruptInEventArgs;{b7b04092-1418-4936-8209-299cf5605583})
+    default Windows.Devices.Usb.IUsbInterruptInEventArgs
+    requires Windows.Devices.Usb.IUsbInterruptInEventArgs
+    property interrupt_data
+        get get_InterruptData slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInEventArgs shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Devices.Usb.UsbInterruptInPipe python_type
+    py UsbInterruptInPipe
+    signature rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6})
+    default Windows.Devices.Usb.IUsbInterruptInPipe
+    requires Windows.Devices.Usb.IUsbInterruptInPipe
+    property endpoint_descriptor
+        get get_EndpointDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInPipe shape=4 reverse=22
+            out class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor return
+    event data_received
+        add add_DataReceived slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInPipe shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Usb.UsbInterruptInPipe,Windows.Devices.Usb.UsbInterruptInEventArgs> name=handler
+            out event_token return
+        remove remove_DataReceived slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbInterruptInPipe shape=26 reverse=110
+            in event_token name=token
+    method clear_stall_async
+        method ClearStallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptInPipe shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor python_type
+    py UsbInterruptOutEndpointDescriptor
+    signature rc(Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor;{cc9fed81-10ca-4533-952d-9e278341e80f})
+    default Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor
+    requires Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor
+    property endpoint_number
+        get get_EndpointNumber slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor shape=4 reverse=43
+            out uint8 return
+    property interval
+        get get_Interval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor shape=4 reverse=62
+            out timespan return
+    property max_packet_size
+        get get_MaxPacketSize slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor shape=4 reverse=22
+            out uint32 return
+    property pipe
+        get get_Pipe slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutEndpointDescriptor shape=4 reverse=99
+            out class type=Windows.Devices.Usb.UsbInterruptOutPipe return
+
+class Windows.Devices.Usb.UsbInterruptOutPipe python_type
+    py UsbInterruptOutPipe
+    signature rc(Windows.Devices.Usb.UsbInterruptOutPipe;{e984c8a9-aaf9-49d0-b96c-f661ab4a7f95})
+    default Windows.Devices.Usb.IUsbInterruptOutPipe
+    requires Windows.Devices.Usb.IUsbInterruptOutPipe
+    property write_options
+        get get_WriteOptions slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=99
+            out enum_u32 type=Windows.Devices.Usb.UsbWriteOptions return
+        put put_WriteOptions slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=62
+            in enum_u32 type=Windows.Devices.Usb.UsbWriteOptions name=value
+    property endpoint_descriptor
+        get get_EndpointDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=22
+            out class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor return
+    property output_stream
+        get get_OutputStream slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    method clear_stall_async
+        method ClearStallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Devices.Usb.UsbReadOptions python_type
+    py UsbReadOptions
+    signature enum(Windows.Devices.Usb.UsbReadOptions;u4)
+
+class Windows.Devices.Usb.UsbSetupPacket activatable python_type
+    py UsbSetupPacket
+    signature rc(Windows.Devices.Usb.UsbSetupPacket;{104ba132-c78f-4c51-b654-e49d02f2cb03})
+    default Windows.Devices.Usb.IUsbSetupPacket
+    requires Windows.Devices.Usb.IUsbSetupPacket
+    factory Windows.Devices.Usb.IUsbSetupPacketFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacketFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=eightByteBuffer implicit
+            out class type=Windows.Devices.Usb.UsbSetupPacket return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacketFactory shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=eightByteBuffer
+            out class type=Windows.Devices.Usb.UsbSetupPacket return
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=121
+            out uint32 return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=141
+            in uint32 name=value
+    property request_type
+        get get_RequestType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=22
+            out class type=Windows.Devices.Usb.UsbControlRequestType return
+        put put_RequestType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=43
+            in class type=Windows.Devices.Usb.UsbControlRequestType name=value
+    property request
+        get get_Request slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=62
+            out uint8 return
+        put put_Request slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=99
+            in uint8 name=value
+    property length
+        get get_Length slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=186
+            out uint32 return
+        put put_Length slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=194
+            in uint32 name=value
+    property index
+        get get_Index slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=162
+            out uint32 return
+        put put_Index slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbSetupPacket shape=4 reverse=173
+            in uint32 name=value
+
+enum Windows.Devices.Usb.UsbTransferDirection python_type
+    py UsbTransferDirection
+    signature enum(Windows.Devices.Usb.UsbTransferDirection;i4)
+
+enum Windows.Devices.Usb.UsbWriteOptions python_type
+    py UsbWriteOptions
+    signature enum(Windows.Devices.Usb.UsbWriteOptions;u4)
+
+class System.Byte external
+    py winrt.system.Byte
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da

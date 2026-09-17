@@ -1,8 +1,6 @@
 using System.Collections.Concurrent;
-using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Mono.Cecil;
-using Mono.Collections.Generic;
 
 static class TypeExtensions
 {
@@ -27,247 +25,12 @@ static class TypeExtensions
             || type.FullName == "Windows.Foundation.TimeSpan";
     }
 
-    public static string ToStructFieldType(this TypeReference type) =>
-        type switch
-        {
-            GenericInstanceType gen => gen.ElementType.FullName switch
-            {
-                "Windows.Foundation.IReference`1" => "PyObject*",
-                _ => throw new NotImplementedException(),
-            },
-            // NB: Boolean needs to be int for Python compatibility, C++ bool is wrong size
-            { FullName: "System.Boolean" } => "int",
-            { FullName: "System.SByte" } => "int8_t",
-            { FullName: "System.Byte" } => "uint8_t",
-            { FullName: "System.Int16" } => "int16_t",
-            { FullName: "System.UInt16" } => "uint16_t",
-            { FullName: "System.Int32" } => "int32_t",
-            { FullName: "System.UInt32" } => "uint32_t",
-            { FullName: "System.Int64" } => "int64_t",
-            { FullName: "System.UInt64" } => "uint64_t",
-            { FullName: "System.Single" } => "float",
-            { FullName: "System.Double" } => "double",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" } => "PyObject*",
-            { IsValueType: true } => type.Resolve() switch
-            {
-                TypeDefinition t => t switch
-                {
-                    { IsEnum: true } => t.HasFlagsAttribute ? "uint32_t" : "int32_t",
-                    _ => $"PyObject*",
-                },
-            },
-            _ => throw new NotImplementedException(),
-        };
-
-    public static string ToWinrtFieldName(this FieldDefinition field)
-    {
-        if (
-            (
-                field.DeclaringType.Namespace == "Windows.Foundation"
-                && (
-                    field.DeclaringType.Name == "HResult"
-                    || field.DeclaringType.Name == "EventRegistrationToken"
-                )
-            ) || field.DeclaringType.IsCustomNumeric
-        )
-        {
-            return field.Name.ToLowerInvariant();
-        }
-
-        return field.Name;
-    }
-
-    public static string ToStructFieldKeywordList(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append($"\"{field.Name.ToPythonIdentifier()}\", ");
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructBufferFormat(this FieldDefinition field)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen => gen.ElementType.FullName switch
-            {
-                "Windows.Foundation.IReference`1" => "P",
-                _ => throw new NotImplementedException(),
-            },
-            { FullName: "System.Boolean" } => "?",
-            { FullName: "System.Char" } => "u",
-            { FullName: "System.SByte" } => "b",
-            { FullName: "System.Byte" } => "B",
-            { FullName: "System.Int16" } => "h",
-            { FullName: "System.UInt16" } => "H",
-            { FullName: "System.Int32" } => "i",
-            { FullName: "System.UInt32" } => "I",
-            { FullName: "System.Int64" } => "q",
-            { FullName: "System.UInt64" } => "Q",
-            { FullName: "System.Single" } => "f",
-            { FullName: "System.Double" } => "d",
-            { FullName: "System.String" } => "P",
-            { FullName: "System.Guid" } => "T{I2H8B}",
-            { IsValueType: true } => field.FieldType.Resolve() switch
-            {
-                TypeDefinition t => t switch
-                {
-                    { IsEnum: true } => t.HasFlagsAttribute ? "I" : "i",
-                    _ =>
-                        $"T{{{ string.Join(
-            "",
-            t.Fields.Select(f =>
-                $"{f.ToStructBufferFormat()}:{f.Name.ToPythonIdentifier()}:"
-            )
-        )}}}",
-                },
-            },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static string ToStructFieldFormat(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append(
-                field.FieldType switch
-                {
-                    GenericInstanceType gen => gen.ElementType.FullName switch
-                    {
-                        "Windows.Foundation.IReference`1" => "O",
-                        _ => throw new NotImplementedException(),
-                    },
-                    { FullName: "System.Boolean" } => "p",
-                    { FullName: "System.SByte" } => "b",
-                    { FullName: "System.Byte" } => "B",
-                    { FullName: "System.Int16" } => "h",
-                    { FullName: "System.UInt16" } => "H",
-                    { FullName: "System.Int32" } => "i",
-                    { FullName: "System.UInt32" } => "I",
-                    { FullName: "System.Int64" } => "L",
-                    { FullName: "System.UInt64" } => "K",
-                    { FullName: "System.Single" } => "f",
-                    { FullName: "System.Double" } => "d",
-                    { FullName: "System.Char" }
-                    or { FullName: "System.String" }
-                    or { FullName: "System.Guid" } => "O",
-                    { IsValueType: true } => field.FieldType.Resolve() switch
-                    {
-                        TypeDefinition t => t switch
-                        {
-                            { IsEnum: true } => t.HasFlagsAttribute ? "I" : "i",
-                            _ => "O",
-                        },
-                    },
-                    _ => throw new NotImplementedException(),
-                }
-            );
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructFieldParseParameterList(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append($", &_{field.Name}");
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructFieldPreInitializer(this FieldDefinition field)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen => gen.ElementType.FullName switch
-            {
-                "Windows.Foundation.IReference`1" => "",
-                _ => throw new NotImplementedException(),
-            },
-            { FullName: "System.Boolean" }
-            or { FullName: "System.SByte" }
-            or { FullName: "System.Byte" }
-            or { FullName: "System.Int16" }
-            or { FullName: "System.UInt16" }
-            or { FullName: "System.Int32" }
-            or { FullName: "System.UInt32" }
-            or { FullName: "System.Int64" }
-            or { FullName: "System.UInt64" }
-            or { FullName: "System.Single" }
-            or { FullName: "System.Double" } => $"self->obj.{field.ToWinrtFieldName()}",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" } => "",
-            { IsValueType: true } => field.FieldType.Resolve() switch
-            {
-                { IsEnum: true } =>
-                    $"static_cast<{field.FieldType.ToStructFieldType()}>(self->obj.{field.ToWinrtFieldName()})",
-                _ => "",
-            },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static string ToStructFieldInitializer(this FieldDefinition field, bool replace = false)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen => gen.ElementType.FullName switch
-            {
-                "Windows.Foundation.IReference`1" =>
-                    $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
-                _ => throw new NotImplementedException(),
-            },
-            { FullName: "System.Boolean" }
-            or { FullName: "System.SByte" }
-            or { FullName: "System.Byte" }
-            or { FullName: "System.Int16" }
-            or { FullName: "System.UInt16" }
-            or { FullName: "System.Int32" }
-            or { FullName: "System.UInt32" }
-            or { FullName: "System.Int64" }
-            or { FullName: "System.UInt64" }
-            or { FullName: "System.Single" }
-            or { FullName: "System.Double" } => $"_{field.Name}",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" } =>
-                $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
-            { IsValueType: true } => field.FieldType.Resolve() switch
-            {
-                { IsEnum: true } =>
-                    $"static_cast<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
-                _ =>
-                    $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
-            },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
     extension(TypeDefinition type)
     {
         public bool IsStaticClass =>
             type.GetCategory() == Category.Class
             && type.Attributes.HasFlag(TypeAttributes.Abstract);
     }
-
-    public static string ToParameterList(this Collection<ParameterDefinition> parameters) =>
-        string.Join(", ", parameters.Select(ToParamName));
-
-    public static string ToParamName(this ParameterDefinition param) => $"param{param.Index}";
 
     /// <summary>
     /// Formats <paramref name="type"/> the way WinRT metadata names it, for use
@@ -283,47 +46,6 @@ static class TypeExtensions
             { FullName: "System.Object" } => "Object",
             { FullName: "System.Guid" } => "Guid",
             _ => type.FullName,
-        };
-
-    public static string ToCppTypeName(
-        this TypeReference type,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
-    ) =>
-        type switch
-        {
-            GenericParameter p => map is null ? type.Name : map[p].ToCppTypeName(),
-            GenericInstanceType gen =>
-                $"winrt::{gen.Namespace.ToCppNamespace()}::{gen.Name.ToNonGeneric()}<{string.Join(", ", gen.GenericArguments.Select(p => p.ToCppTypeName(map)))}>",
-            ByReferenceType byRef => byRef.ElementType.ToCppTypeName(map),
-            OptionalModifierType opt => opt.ElementType.ToCppTypeName(map),
-            ArrayType t => t.ElementType.ToCppTypeName(map),
-            { FullName: "System.Void" } => "void",
-            { FullName: "System.Boolean" } => "bool",
-            { FullName: "System.SByte" } => "int8_t",
-            { FullName: "System.Byte" } => "uint8_t",
-            { FullName: "System.Char" } => "char16_t",
-            { FullName: "System.Double" } => "double",
-            { FullName: "System.Int16" } => "int16_t",
-            { FullName: "System.Int32" } => "int32_t",
-            { FullName: "System.Int64" } => "int64_t",
-            { FullName: "System.Single" } => "float",
-            { FullName: "System.UInt16" } => "uint16_t",
-            { FullName: "System.UInt32" } => "uint32_t",
-            { FullName: "System.UInt64" } => "uint64_t",
-            { FullName: "System.String" } => "winrt::hstring",
-            { FullName: "System.Guid" } => "winrt::guid",
-            { FullName: "System.Object" } => "winrt::Windows::Foundation::IInspectable",
-            { FullName: "Windows.Foundation.EventRegistrationToken" } => "winrt::event_token",
-            { FullName: "Windows.Foundation.HResult" } => "winrt::hresult",
-            { Namespace: "Windows.Foundation.Numerics" }
-                when type.TryGetCustomNumericCppName(out var cppName) =>
-                $"winrt::{type.Namespace.ToCppNamespace()}::{cppName}",
-            // NB: Checking the name for the generic arity suffix instead of
-            // HasGenericParameters avoids Mono.Cecil taking the module lock
-            // on every call for types that haven't been loaded yet.
-            TypeDefinition { Name: var name } when name.Contains('`') =>
-                $"winrt::{type.Namespace.ToCppNamespace()}::{type.Name.ToNonGeneric()}<{string.Join(", ", type.GenericParameters.Select(p => p.ToCppTypeName(map)))}>",
-            _ => $"winrt::{type.FullName.ToCppNamespace()}",
         };
 
     public static string GetDefaultPyValue(
@@ -652,20 +374,8 @@ static class TypeExtensions
         return returnType;
     }
 
-    public static Func<int, string> ToConvertToArgs(this MethodDefinition method) =>
-        method.GetArgumentConvention() switch
-        {
-            ArgumentConvention.Single => (_) => "arg",
-            ArgumentConvention.Variable => (i) => $"args, {i}",
-            _ => throw new NotImplementedException(),
-        };
-
     extension(ParameterDefinition param)
     {
-        public bool IsInParam =>
-            param.GetCategory() == ParamCategory.In
-            || param.GetCategory() == ParamCategory.PassArray;
-
         public bool IsPythonInParam =>
             param.GetCategory() switch
             {
@@ -688,31 +398,6 @@ static class TypeExtensions
                 _ => throw new NotImplementedException(),
             };
     }
-
-    public static string ToDelegateParam(
-        this ParameterDefinition param,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
-    ) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In => param.ParameterType switch
-            {
-                GenericParameter gen => map is null
-                    ? $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}"
-                    : $"{map[gen].ToCppTypeName(map)} const& {param.ToParamName()}",
-                { IsValueType: true } =>
-                    $"{param.ParameterType.ToCppTypeName(map)} {param.ToParamName()}",
-                _ => $"{param.ParameterType.ToCppTypeName(map)} const& {param.ToParamName()}",
-            },
-            ParamCategory.Out => $"{param.ParameterType.ToCppTypeName(map)}& {param.ToParamName()}",
-            ParamCategory.PassArray =>
-                $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)} const> {param.ToParamName()}",
-            ParamCategory.FillArray =>
-                $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)}> {param.ToParamName()}",
-            ParamCategory.ReceiveArray =>
-                $"winrt::com_array<{param.ParameterType.ToCppTypeName(map)}>& {param.ToParamName()}",
-            _ => throw new NotImplementedException(),
-        };
 
     private static readonly ConcurrentDictionary<
         TypeDefinition,
@@ -780,17 +465,6 @@ static class TypeExtensions
             && CustomNumerics.ContainsKey(type.Name);
     }
 
-    public static bool TryGetCustomNumericCppName(
-        this TypeReference type,
-        [NotNullWhen(true)] out string? cppName
-    )
-    {
-        cppName = default;
-
-        return type.Namespace == "Windows.Foundation.Numerics"
-            && CustomNumerics.TryGetValue(type.Name, out cppName);
-    }
-
     private enum Mark
     {
         Unmarked,
@@ -803,47 +477,6 @@ static class TypeExtensions
         public bool Equals(TypeDefinition? x, TypeDefinition? y) => x?.FullName == y?.FullName;
 
         public int GetHashCode(TypeDefinition obj) => obj.FullName.GetHashCode();
-    }
-
-    public static IEnumerable<ProjectedType> OrderByDependency(
-        this IEnumerable<ProjectedType> types
-    )
-    {
-        {
-            // depth-first search
-            var marked = types.ToDictionary(i => i.Type, _ => Mark.Unmarked, new TypeComparer());
-            var sorted = new List<TypeDefinition>();
-
-            void visit(TypeDefinition type)
-            {
-                marked.TryAdd(type, Mark.Unmarked);
-
-                switch (marked[type])
-                {
-                    case Mark.Permanent:
-                        return;
-                    case Mark.Temporary:
-                        throw new InvalidOperationException("Cyclic dependency detected");
-                }
-
-                marked[type] = Mark.Temporary;
-
-                if (type.BaseType.FullName != "System.Object")
-                {
-                    visit(type.BaseType.Resolve());
-                }
-
-                marked[type] = Mark.Permanent;
-                sorted.Add(type);
-            }
-
-            while (marked.Values.Any(m => m != Mark.Permanent))
-            {
-                visit(marked.First(m => m.Value == Mark.Unmarked).Key);
-            }
-
-            return types.OrderBy(t => sorted.IndexOf(t.Type));
-        }
     }
 
     /// <summary>

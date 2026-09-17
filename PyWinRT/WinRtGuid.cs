@@ -101,6 +101,28 @@ static class WinRtGuid
     }
 
     /// <summary>
+    /// Gets the WinRT signature of <paramref name="type"/>, or <c>null</c> if it
+    /// does not have one: a static class is not a type any value can have, so it
+    /// has no default interface to name.
+    /// </summary>
+    public static string? TryGetSignature(TypeDefinition type)
+    {
+        if (
+            type.GetCategory() == Category.Class
+            && !type.Interfaces.Any(i =>
+                i.CustomAttributes.Any(a =>
+                    a.AttributeType.FullName == "Windows.Foundation.Metadata.DefaultAttribute"
+                )
+            )
+        )
+        {
+            return null;
+        }
+
+        return GetSignature(type);
+    }
+
+    /// <summary>
     /// Gets the GUID of a parameterized interface or delegate instance.
     /// </summary>
     public static Guid GetGuid(GenericInstanceType type)
@@ -113,21 +135,6 @@ static class WinRtGuid
         hash[8] = (byte)((hash[8] & 0x3f) | 0x80);
 
         return FromNetworkOrder(hash);
-    }
-
-    /// <summary>
-    /// Formats <paramref name="guid"/> as a C++/WinRT <c>winrt::guid</c>
-    /// aggregate initializer.
-    /// </summary>
-    public static string ToCppInitializer(Guid guid)
-    {
-        var b = guid.ToByteArray();
-        var data1 = BitConverter.ToUInt32(b, 0);
-        var data2 = BitConverter.ToUInt16(b, 4);
-        var data3 = BitConverter.ToUInt16(b, 6);
-        var data4 = string.Join(",", b.Skip(8).Select(x => $"0x{x:X2}"));
-
-        return $"{{ 0x{data1:X8},0x{data2:X4},0x{data3:X4},{{ {data4} }} }}";
     }
 
     /// <summary>
@@ -213,6 +220,17 @@ static class WinRtGuid
                 return [];
         }
     }
+
+    /// <summary>
+    /// Gets the IID of an interface or delegate from its <c>Guid</c> attribute,
+    /// or <c>null</c> if it does not have one, as a runtime class does not.
+    /// </summary>
+    public static Guid? TryGetGuid(TypeDefinition type) =>
+        type.CustomAttributes.Any(a =>
+            a.AttributeType.FullName == "Windows.Foundation.Metadata.GuidAttribute"
+        )
+            ? GetGuidAttribute(type)
+            : null;
 
     private static Guid GetGuidAttribute(TypeDefinition type)
     {

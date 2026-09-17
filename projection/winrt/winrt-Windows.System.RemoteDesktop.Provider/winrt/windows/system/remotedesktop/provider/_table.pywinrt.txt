@@ -1,0 +1,157 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.RemoteDesktop.Provider
+
+interface Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs
+    guid 59359f4f-0862-53a3-a3b3-c932fb718cdc
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo
+    guid 68bd69d6-6dea-543b-b737-f347919f5093
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2
+    guid 871c0b26-23bf-5d3c-bc35-a85c405e25e6
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics
+    guid 4a7dc5a1-3368-5a75-bb78-807df7ebc439
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo
+    guid 2a3dfa7e-a7ab-547e-9a6a-4c565bbb8d71
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics
+    guid b590e64a-e4c9-53e8-b83d-a0db3676246a
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
+    guid d185bb25-2f1e-5098-b9e0-f46d6358c5c4
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
+    guid ad0e8d58-b56f-5a8b-b419-8002ee0c5ee9
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
+    guid 687c2750-46d9-5de3-8dc3-84a9202cecfb
+
+interface Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> concrete
+    guid 0d009032-ec6b-5789-9a69-eb769e0a1644
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo;{d185bb25-2f1e-5098-b9e0-f46d6358c5c4}))
+    argument Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+
+class Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs python_type
+    py PerformLocalActionRequestedEventArgs
+    signature rc(Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs;{59359f4f-0862-53a3-a3b3-c932fb718cdc})
+    default Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs
+    requires Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction return
+
+class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo python_type
+    py RemoteDesktopConnectionInfo
+    signature rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo;{68bd69d6-6dea-543b-b737-f347919f5093})
+    default Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo
+    requires Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo
+    requires Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2
+    factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics
+    method get_for_launch_uri static
+        method GetForLaunchUri slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics shape=142 static
+            in class type=Windows.Foundation.Uri name=launchUri
+            in struct type=Windows.UI.WindowId name=windowId
+            out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo return
+    method perform_local_action_from_remote
+        method PerformLocalActionFromRemote slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2 shape=4 reverse=22
+            in enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction name=action
+    method set_connection_status
+        method SetConnectionStatus slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=4 reverse=22
+            in enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus name=value
+    method switch_to_local_session
+        method SwitchToLocalSession slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=0 reverse=37
+
+class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo python_type closeable
+    py RemoteDesktopConnectionRemoteInfo
+    signature rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo;{2a3dfa7e-a7ab-547e-9a6a-4c565bbb8d71})
+    default Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo
+    requires Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo
+    requires Windows.Foundation.IClosable
+    factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics
+    event perform_local_action_requested
+        add add_PerformLocalActionRequested slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_PerformLocalActionRequested slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26 reverse=134
+            in event_token name=token
+    event switch_to_local_session_requested
+        add add_SwitchToLocalSessionRequested slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,System.Object> name=handler
+            out event_token return
+        remove remove_SwitchToLocalSessionRequested slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26 reverse=82
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_for_launch_uri static
+        method GetForLaunchUri slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=51 reverse=44 static
+            in class type=Windows.Foundation.Uri name=launchUri
+            out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo return
+    method is_switch_supported static
+        method IsSwitchSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=4 reverse=22 static
+            out boolean return
+    method report_switched
+        method ReportSwitched slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=0 reverse=16
+
+enum Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus python_type
+    py RemoteDesktopConnectionStatus
+    signature enum(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus;i4)
+
+class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo python_type
+    py RemoteDesktopInfo
+    signature rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo;{d185bb25-2f1e-5098-b9e0-f46d6358c5c4})
+    default Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
+    requires Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
+    factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory shape=117 reverse=25
+            in string name=id
+            in string name=displayName
+            out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo return
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4 reverse=22
+            out string return
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4 reverse=43
+            out string return
+
+enum Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction python_type
+    py RemoteDesktopLocalAction
+    signature enum(Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction;i4)
+
+class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar static python_type
+    py RemoteDesktopRegistrar
+    factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
+    property desktop_infos static
+        get get_DesktopInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> return
+    method is_switch_to_local_session_enabled static
+        method IsSwitchToLocalSessionEnabled slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=43 static
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,System.Object> concrete
+    guid ff5f83b6-18e5-5787-bf03-974ca9929275
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo;{2a3dfa7e-a7ab-547e-9a6a-4c565bbb8d71});cinterface(IInspectable))
+    argument Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs> concrete
+    guid 6bf735e4-8eaf-53ac-9053-4b2a415428a3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo;{2a3dfa7e-a7ab-547e-9a6a-4c565bbb8d71});rc(Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs;{59359f4f-0862-53a3-a3b3-c932fb718cdc}))
+    argument Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+    argument Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

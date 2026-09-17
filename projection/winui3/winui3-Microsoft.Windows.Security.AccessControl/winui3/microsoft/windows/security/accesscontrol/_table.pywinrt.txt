@@ -1,0 +1,28 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.Security.AccessControl
+
+struct Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess python_type
+    py AppContainerNameAndAccess
+    signature struct(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess;string;u4)
+    field app_container_name appContainerName string
+    field access_mask accessMask uint32
+
+interface Microsoft.Windows.Security.AccessControl.ISecurityDescriptorHelpersStatics
+    guid 14fa9e8d-59f0-5017-852f-3ae24fd5ebb1
+
+class Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers static python_type
+    py SecurityDescriptorHelpers
+    factory Microsoft.Windows.Security.AccessControl.ISecurityDescriptorHelpersStatics
+    method get_sddl_for_app_container_names static
+        method GetSddlForAppContainerNames slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.Security.AccessControl.ISecurityDescriptorHelpersStatics shape=239 reverse=27 static
+            pass_array struct type=Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess name=accessRequests
+            in string name=principalStringSid
+            in uint32 name=principalAccessMask
+            out string return
+    method get_security_descriptor_bytes_from_app_container_names static
+        method GetSecurityDescriptorBytesFromAppContainerNames slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.Security.AccessControl.ISecurityDescriptorHelpersStatics shape=267 static
+            pass_array struct type=Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess name=accessRequests
+            in string name=principalStringSid
+            in uint32 name=principalAccessMask
+            receive_array uint8 return

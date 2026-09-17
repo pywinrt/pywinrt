@@ -1,3 +1,6 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 include src/module_state.h
+include src/shapes-generated.h
+include src/shapes.h
+include src/table.h

@@ -1,0 +1,354 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.VoiceCommands
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> concrete
+    guid 815f1854-4d79-570d-9b57-5b47e282cd66
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommand;{936f5273-ec82-42a6-a55c-d2d79ec6f920}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommand
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> concrete
+    guid 3b39db5f-d2a4-5d88-851f-e9a0ea0d947e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult;{a022593e-8221-4526-b083-840972262247}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> concrete
+    guid b03d44c8-060f-5b98-953a-fd1eb1d46abc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult;{ecc68cfe-c9ac-45df-a8ea-feea08ef9c5e}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete
+    guid bd13249b-8099-5573-bf74-7457796e92e5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> concrete
+    guid 4c1168f0-a0b2-5312-b99a-471abd334e85
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae}))
+    argument System.String
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete
+    guid e45fe700-ea08-5172-b88c-c4b3e048c3e8
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommand
+    guid 936f5273-ec82-42a6-a55c-d2d79ec6f920
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs
+    guid c85e675d-fe42-432c-9907-09df9fcf64e8
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult
+    guid a022593e-8221-4526-b083-840972262247
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile
+    guid 3eefe9f0-b8c7-4c76-a0de-1607895ee327
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition
+    guid 7972aad0-0974-4979-984b-cb8959cd61ae
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics
+    guid 8fe7a69e-067e-4f16-a18c-5b17e9499940
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult
+    guid ecc68cfe-c9ac-45df-a8ea-feea08ef9c5e
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse
+    guid 0284b30e-8a3b-4cc4-a6a1-cad5be2716b5
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics
+    guid 2932f813-0d3b-49f2-96dd-625019bd3b5d
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection
+    guid d894bb9f-21da-44a4-98a2-fb131920a9cc
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics
+    guid 370ebffb-2d34-42df-8770-074d0f334697
+
+interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage
+    guid 674eb3c0-44f6-4f07-b979-4c723fc08597
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection,Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs> concrete
+    guid 780a6352-b400-5767-993b-90875710d937
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection;{d894bb9f-21da-44a4-98a2-fb131920a9cc});rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs;{c85e675d-fe42-432c-9907-09df9fcf64e8}))
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommand python_type
+    py VoiceCommand
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommand;{936f5273-ec82-42a6-a55c-d2d79ec6f920})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommand
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommand
+    property command_name
+        get get_CommandName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> return
+    property speech_recognition_result
+        get get_SpeechRecognitionResult slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=62
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs python_type
+    py VoiceCommandCompletedEventArgs
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs;{c85e675d-fe42-432c-9907-09df9fcf64e8})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason return
+
+enum Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason python_type
+    py VoiceCommandCompletionReason
+    signature enum(Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason;i4)
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult python_type
+    py VoiceCommandConfirmationResult
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult;{a022593e-8221-4526-b083-840972262247})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult
+    property confirmed
+        get get_Confirmed slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile activatable python_type
+    py VoiceCommandContentTile
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=22
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=43
+            in string name=value
+    property text_line3
+        get get_TextLine3 slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=162
+            out string return
+        put put_TextLine3 slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=173
+            in string name=value
+    property text_line2
+        get get_TextLine2 slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=121
+            out string return
+        put put_TextLine2 slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=141
+            in string name=value
+    property text_line1
+        get get_TextLine1 slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=62
+            out string return
+        put put_TextLine1 slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=99
+            in string name=value
+    property image
+        get get_Image slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=186
+            out interface type=Windows.Storage.IStorageFile return
+        put put_Image slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=194
+            in interface type=Windows.Storage.IStorageFile name=value
+    property content_tile_type
+        get get_ContentTileType slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=228
+            out enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType return
+        put put_ContentTileType slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=232
+            in enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType name=value
+    property app_launch_argument
+        get get_AppLaunchArgument slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=218
+            out string return
+        put put_AppLaunchArgument slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=223
+            in string name=value
+    property app_context
+        get get_AppContext slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=202
+            out object return
+        put put_AppContext slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=210
+            in object name=value
+
+enum Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType python_type
+    py VoiceCommandContentTileType
+    signature enum(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType;i4)
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition python_type
+    py VoiceCommandDefinition
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition
+    property language
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4 reverse=22
+            out string return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4 reverse=43
+            out string return
+    method set_phrase_list_async
+        method SetPhraseListAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=117 reverse=66
+            in string name=phraseListName
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phraseList
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager static python_type
+    py VoiceCommandDefinitionManager
+    factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics
+    property installed_command_definitions static
+        get get_InstalledCommandDefinitions slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> return
+    method install_command_definitions_from_storage_file_async static
+        method InstallCommandDefinitionsFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=51 reverse=24 static
+            in class type=Windows.Storage.StorageFile name=file
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult python_type
+    py VoiceCommandDisambiguationResult
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult;{ecc68cfe-c9ac-45df-a8ea-feea08ef9c5e})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult
+    property selected_item
+        get get_SelectedItem slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult shape=4 reverse=22
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse python_type
+    py VoiceCommandResponse
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse;{0284b30e-8a3b-4cc4-a6a1-cad5be2716b5})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse
+    factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics
+    property repeat_message
+        get get_RepeatMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=62
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage return
+        put put_RepeatMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=99
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=value
+    property message
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=22
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage return
+        put put_Message slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=43
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=value
+    property app_launch_argument
+        get get_AppLaunchArgument slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=121
+            out string return
+        put put_AppLaunchArgument slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=141
+            in string name=value
+    property voice_command_content_tiles
+        get get_VoiceCommandContentTiles slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
+    property max_supported_voice_command_content_tiles static
+        get get_MaxSupportedVoiceCommandContentTiles slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=4 reverse=22 static
+            out uint32 return
+    method create_response static
+        method CreateResponse slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=51 reverse=44 static
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=userMessage
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
+        method CreateResponse slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 reverse=66 static
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> name=contentTiles
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
+    method create_response_for_prompt static
+        method CreateResponseForPrompt slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 reverse=101 static
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=repeatMessage
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
+        method CreateResponseForPrompt slot=10 inputs=3 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=195 reverse=126 static
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=repeatMessage
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> name=contentTiles
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection python_type
+    py VoiceCommandServiceConnection
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection;{d894bb9f-21da-44a4-98a2-fb131920a9cc})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection
+    factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics
+    property language
+        get get_Language slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4 reverse=173
+            out class type=Windows.Globalization.Language return
+    event voice_command_completed
+        add add_VoiceCommandCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection,Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_VoiceCommandCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=26 reverse=200
+            in event_token name=token
+    method from_app_service_trigger_details static
+        method FromAppServiceTriggerDetails slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.AppService.AppServiceTriggerDetails name=triggerDetails
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection return
+    method get_voice_command_async
+        method GetVoiceCommandAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> return
+    method report_failure_async
+        method ReportFailureAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=144
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_progress_async
+        method ReportProgressAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=100
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_success_async
+        method ReportSuccessAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=124
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out interface type=Windows.Foundation.IAsyncAction return
+    method request_app_launch_async
+        method RequestAppLaunchAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=163
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out interface type=Windows.Foundation.IAsyncAction return
+    method request_confirmation_async
+        method RequestConfirmationAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=44
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> return
+    method request_disambiguation_async
+        method RequestDisambiguationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=65
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> return
+
+class Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage activatable python_type
+    py VoiceCommandUserMessage
+    signature rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage;{674eb3c0-44f6-4f07-b979-4c723fc08597})
+    default Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage
+    requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property spoken_message
+        get get_SpokenMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=62
+            out string return
+        put put_SpokenMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=99
+            in string name=value
+    property display_message
+        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=22
+            out string return
+        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=43
+            in string name=value
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.AppService.AppServiceTriggerDetails external
+    py winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Globalization.Language external
+    py winrt.windows.globalization.Language
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionResult external
+    py winrt.windows.media.speechrecognition.SpeechRecognitionResult
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

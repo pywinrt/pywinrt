@@ -1,0 +1,42 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Resources
+
+class Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader composable python_type
+    py CustomXamlResourceLoader
+    signature rc(Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader;{2832c2e5-2ace-5993-a173-3c9c3b992b2e})
+    default Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoader
+    requires Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoader
+    requires Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides
+    factory Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics
+    composable Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory
+    overridable Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader return
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader return
+        put put_Current slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics shape=4 reverse=43 static
+            in class type=Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader name=value
+    method _get_resource
+        method GetResource slot=6 inputs=4 outputs=1 declaring=Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides shape=239 reverse=27 overridable
+            in string name=resourceId
+            in string name=objectType
+            in string name=propertyName
+            in string name=propertyType
+            out object return
+
+interface Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoader
+    guid 2832c2e5-2ace-5993-a173-3c9c3b992b2e
+
+interface Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory
+    guid 174d49a6-e1e2-5f7b-a618-a8a953d1b5a0
+
+interface Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides
+    guid 84bb504c-6730-586a-bd04-9198264b2dc7
+
+interface Microsoft.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics
+    guid e08a5a92-b1a2-539a-9d4a-7994e4468cd7

@@ -1,0 +1,23 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Management.Core
+
+class Windows.Management.Core.ApplicationDataManager python_type
+    py ApplicationDataManager
+    signature rc(Windows.Management.Core.ApplicationDataManager;{74d10432-2e99-4000-9a3a-64307e858129})
+    default Windows.Management.Core.IApplicationDataManager
+    requires Windows.Management.Core.IApplicationDataManager
+    factory Windows.Management.Core.IApplicationDataManagerStatics
+    method create_for_package_family static
+        method CreateForPackageFamily slot=6 inputs=1 outputs=1 declaring=Windows.Management.Core.IApplicationDataManagerStatics shape=51 reverse=24 static
+            in string name=packageFamilyName
+            out class type=Windows.Storage.ApplicationData return
+
+interface Windows.Management.Core.IApplicationDataManager
+    guid 74d10432-2e99-4000-9a3a-64307e858129
+
+interface Windows.Management.Core.IApplicationDataManagerStatics
+    guid 1e1862e3-698e-49a1-9752-dee94925b9b3
+
+class Windows.Storage.ApplicationData external
+    py winrt.windows.storage.ApplicationData

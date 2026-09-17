@@ -1,0 +1,501 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI
+
+struct Windows.UI.Color python_type
+    py Color
+    signature struct(Windows.UI.Color;u1;u1;u1;u1)
+    field a A uint8
+    field r R uint8
+    field g G uint8
+    field b B uint8
+
+class Windows.UI.ColorHelper python_type
+    py ColorHelper
+    signature rc(Windows.UI.ColorHelper;{193cfbe7-65c7-4540-ad08-6283ba76879a})
+    default Windows.UI.IColorHelper
+    requires Windows.UI.IColorHelper
+    factory Windows.UI.IColorHelperStatics
+    factory Windows.UI.IColorHelperStatics2
+    method from_argb static
+        method FromArgb slot=6 inputs=4 outputs=1 declaring=Windows.UI.IColorHelperStatics shape=239 reverse=27 static
+            in uint8 name=a
+            in uint8 name=r
+            in uint8 name=g
+            in uint8 name=b
+            out struct type=Windows.UI.Color return
+    method to_display_name static
+        method ToDisplayName slot=6 inputs=1 outputs=1 declaring=Windows.UI.IColorHelperStatics2 shape=92 static
+            in struct type=Windows.UI.Color name=color
+            out string return
+
+class Windows.UI.Colors python_type
+    py Colors
+    signature rc(Windows.UI.Colors;{9b8c9326-4ca6-4ce5-8994-9eff65cabdcc})
+    default Windows.UI.IColors
+    requires Windows.UI.IColors
+    factory Windows.UI.IColorsStatics
+    property alice_blue static
+        get get_AliceBlue slot=6 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=22 static
+            out struct type=Windows.UI.Color return
+    property antique_white static
+        get get_AntiqueWhite slot=7 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=43 static
+            out struct type=Windows.UI.Color return
+    property aqua static
+        get get_Aqua slot=8 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=62 static
+            out struct type=Windows.UI.Color return
+    property aquamarine static
+        get get_Aquamarine slot=9 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=99 static
+            out struct type=Windows.UI.Color return
+    property azure static
+        get get_Azure slot=10 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=121 static
+            out struct type=Windows.UI.Color return
+    property beige static
+        get get_Beige slot=11 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=141 static
+            out struct type=Windows.UI.Color return
+    property bisque static
+        get get_Bisque slot=12 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=162 static
+            out struct type=Windows.UI.Color return
+    property black static
+        get get_Black slot=13 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=173 static
+            out struct type=Windows.UI.Color return
+    property blanched_almond static
+        get get_BlanchedAlmond slot=14 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=186 static
+            out struct type=Windows.UI.Color return
+    property blue static
+        get get_Blue slot=15 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=194 static
+            out struct type=Windows.UI.Color return
+    property blue_violet static
+        get get_BlueViolet slot=16 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=202 static
+            out struct type=Windows.UI.Color return
+    property brown static
+        get get_Brown slot=17 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=210 static
+            out struct type=Windows.UI.Color return
+    property burly_wood static
+        get get_BurlyWood slot=18 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=218 static
+            out struct type=Windows.UI.Color return
+    property cadet_blue static
+        get get_CadetBlue slot=19 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=223 static
+            out struct type=Windows.UI.Color return
+    property chartreuse static
+        get get_Chartreuse slot=20 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=228 static
+            out struct type=Windows.UI.Color return
+    property chocolate static
+        get get_Chocolate slot=21 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=232 static
+            out struct type=Windows.UI.Color return
+    property coral static
+        get get_Coral slot=22 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=237 static
+            out struct type=Windows.UI.Color return
+    property cornflower_blue static
+        get get_CornflowerBlue slot=23 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=242 static
+            out struct type=Windows.UI.Color return
+    property cornsilk static
+        get get_Cornsilk slot=24 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=247 static
+            out struct type=Windows.UI.Color return
+    property crimson static
+        get get_Crimson slot=25 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=252 static
+            out struct type=Windows.UI.Color return
+    property cyan static
+        get get_Cyan slot=26 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=255 static
+            out struct type=Windows.UI.Color return
+    property dark_blue static
+        get get_DarkBlue slot=27 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=259 static
+            out struct type=Windows.UI.Color return
+    property dark_cyan static
+        get get_DarkCyan slot=28 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=263 static
+            out struct type=Windows.UI.Color return
+    property dark_goldenrod static
+        get get_DarkGoldenrod slot=29 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=266 static
+            out struct type=Windows.UI.Color return
+    property dark_gray static
+        get get_DarkGray slot=30 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=270 static
+            out struct type=Windows.UI.Color return
+    property dark_green static
+        get get_DarkGreen slot=31 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=273 static
+            out struct type=Windows.UI.Color return
+    property dark_khaki static
+        get get_DarkKhaki slot=32 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=280 static
+            out struct type=Windows.UI.Color return
+    property dark_magenta static
+        get get_DarkMagenta slot=33 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=285 static
+            out struct type=Windows.UI.Color return
+    property dark_olive_green static
+        get get_DarkOliveGreen slot=34 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=288 static
+            out struct type=Windows.UI.Color return
+    property dark_orange static
+        get get_DarkOrange slot=35 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=292 static
+            out struct type=Windows.UI.Color return
+    property dark_orchid static
+        get get_DarkOrchid slot=36 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=296 static
+            out struct type=Windows.UI.Color return
+    property dark_red static
+        get get_DarkRed slot=37 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=299 static
+            out struct type=Windows.UI.Color return
+    property dark_salmon static
+        get get_DarkSalmon slot=38 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=302 static
+            out struct type=Windows.UI.Color return
+    property dark_sea_green static
+        get get_DarkSeaGreen slot=39 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=307 static
+            out struct type=Windows.UI.Color return
+    property dark_slate_blue static
+        get get_DarkSlateBlue slot=40 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=312 static
+            out struct type=Windows.UI.Color return
+    property dark_slate_gray static
+        get get_DarkSlateGray slot=41 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=316 static
+            out struct type=Windows.UI.Color return
+    property dark_turquoise static
+        get get_DarkTurquoise slot=42 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=319 static
+            out struct type=Windows.UI.Color return
+    property dark_violet static
+        get get_DarkViolet slot=43 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=322 static
+            out struct type=Windows.UI.Color return
+    property deep_pink static
+        get get_DeepPink slot=44 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=326 static
+            out struct type=Windows.UI.Color return
+    property deep_sky_blue static
+        get get_DeepSkyBlue slot=45 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=330 static
+            out struct type=Windows.UI.Color return
+    property dim_gray static
+        get get_DimGray slot=46 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=334 static
+            out struct type=Windows.UI.Color return
+    property dodger_blue static
+        get get_DodgerBlue slot=47 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=339 static
+            out struct type=Windows.UI.Color return
+    property firebrick static
+        get get_Firebrick slot=48 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=343 static
+            out struct type=Windows.UI.Color return
+    property floral_white static
+        get get_FloralWhite slot=49 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=347 static
+            out struct type=Windows.UI.Color return
+    property forest_green static
+        get get_ForestGreen slot=50 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=351 static
+            out struct type=Windows.UI.Color return
+    property fuchsia static
+        get get_Fuchsia slot=51 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=355 static
+            out struct type=Windows.UI.Color return
+    property gainsboro static
+        get get_Gainsboro slot=52 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=359 static
+            out struct type=Windows.UI.Color return
+    property ghost_white static
+        get get_GhostWhite slot=53 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=363 static
+            out struct type=Windows.UI.Color return
+    property gold static
+        get get_Gold slot=54 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=368 static
+            out struct type=Windows.UI.Color return
+    property goldenrod static
+        get get_Goldenrod slot=55 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=440 static
+            out struct type=Windows.UI.Color return
+    property gray static
+        get get_Gray slot=56 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=441 static
+            out struct type=Windows.UI.Color return
+    property green static
+        get get_Green slot=57 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=442 static
+            out struct type=Windows.UI.Color return
+    property green_yellow static
+        get get_GreenYellow slot=58 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=443 static
+            out struct type=Windows.UI.Color return
+    property honeydew static
+        get get_Honeydew slot=59 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=444 static
+            out struct type=Windows.UI.Color return
+    property hot_pink static
+        get get_HotPink slot=60 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=445 static
+            out struct type=Windows.UI.Color return
+    property indian_red static
+        get get_IndianRed slot=61 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=446 static
+            out struct type=Windows.UI.Color return
+    property indigo static
+        get get_Indigo slot=62 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=447 static
+            out struct type=Windows.UI.Color return
+    property ivory static
+        get get_Ivory slot=63 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=448 static
+            out struct type=Windows.UI.Color return
+    property khaki static
+        get get_Khaki slot=64 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=449 static
+            out struct type=Windows.UI.Color return
+    property lavender static
+        get get_Lavender slot=65 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=450 static
+            out struct type=Windows.UI.Color return
+    property lavender_blush static
+        get get_LavenderBlush slot=66 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=451 static
+            out struct type=Windows.UI.Color return
+    property lawn_green static
+        get get_LawnGreen slot=67 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=452 static
+            out struct type=Windows.UI.Color return
+    property lemon_chiffon static
+        get get_LemonChiffon slot=68 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=453 static
+            out struct type=Windows.UI.Color return
+    property light_blue static
+        get get_LightBlue slot=69 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=454 static
+            out struct type=Windows.UI.Color return
+    property light_coral static
+        get get_LightCoral slot=70 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_cyan static
+        get get_LightCyan slot=71 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_goldenrod_yellow static
+        get get_LightGoldenrodYellow slot=72 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_gray static
+        get get_LightGray slot=74 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_green static
+        get get_LightGreen slot=73 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_pink static
+        get get_LightPink slot=75 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property light_salmon static
+        get get_LightSalmon slot=76 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=461 static
+            out struct type=Windows.UI.Color return
+    property light_sea_green static
+        get get_LightSeaGreen slot=77 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=462 static
+            out struct type=Windows.UI.Color return
+    property light_sky_blue static
+        get get_LightSkyBlue slot=78 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=463 static
+            out struct type=Windows.UI.Color return
+    property light_slate_gray static
+        get get_LightSlateGray slot=79 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=464 static
+            out struct type=Windows.UI.Color return
+    property light_steel_blue static
+        get get_LightSteelBlue slot=80 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=465 static
+            out struct type=Windows.UI.Color return
+    property light_yellow static
+        get get_LightYellow slot=81 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=466 static
+            out struct type=Windows.UI.Color return
+    property lime static
+        get get_Lime slot=82 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property lime_green static
+        get get_LimeGreen slot=83 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property linen static
+        get get_Linen slot=84 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property magenta static
+        get get_Magenta slot=85 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property maroon static
+        get get_Maroon slot=86 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=471 static
+            out struct type=Windows.UI.Color return
+    property medium_aquamarine static
+        get get_MediumAquamarine slot=87 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=472 static
+            out struct type=Windows.UI.Color return
+    property medium_blue static
+        get get_MediumBlue slot=88 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=473 static
+            out struct type=Windows.UI.Color return
+    property medium_orchid static
+        get get_MediumOrchid slot=89 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=474 static
+            out struct type=Windows.UI.Color return
+    property medium_purple static
+        get get_MediumPurple slot=90 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property medium_sea_green static
+        get get_MediumSeaGreen slot=91 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property medium_slate_blue static
+        get get_MediumSlateBlue slot=92 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property medium_spring_green static
+        get get_MediumSpringGreen slot=93 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property medium_turquoise static
+        get get_MediumTurquoise slot=94 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=479 static
+            out struct type=Windows.UI.Color return
+    property medium_violet_red static
+        get get_MediumVioletRed slot=95 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 reverse=480 static
+            out struct type=Windows.UI.Color return
+    property midnight_blue static
+        get get_MidnightBlue slot=96 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property mint_cream static
+        get get_MintCream slot=97 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property misty_rose static
+        get get_MistyRose slot=98 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property moccasin static
+        get get_Moccasin slot=99 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property navajo_white static
+        get get_NavajoWhite slot=100 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property navy static
+        get get_Navy slot=101 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property old_lace static
+        get get_OldLace slot=102 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property olive static
+        get get_Olive slot=103 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property olive_drab static
+        get get_OliveDrab slot=104 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property orange static
+        get get_Orange slot=105 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property orange_red static
+        get get_OrangeRed slot=106 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property orchid static
+        get get_Orchid slot=107 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property pale_goldenrod static
+        get get_PaleGoldenrod slot=108 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property pale_green static
+        get get_PaleGreen slot=109 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property pale_turquoise static
+        get get_PaleTurquoise slot=110 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property pale_violet_red static
+        get get_PaleVioletRed slot=111 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property papaya_whip static
+        get get_PapayaWhip slot=112 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property peach_puff static
+        get get_PeachPuff slot=113 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property peru static
+        get get_Peru slot=114 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property pink static
+        get get_Pink slot=115 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property plum static
+        get get_Plum slot=116 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property powder_blue static
+        get get_PowderBlue slot=117 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property purple static
+        get get_Purple slot=118 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property red static
+        get get_Red slot=119 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property rosy_brown static
+        get get_RosyBrown slot=120 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property royal_blue static
+        get get_RoyalBlue slot=121 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property saddle_brown static
+        get get_SaddleBrown slot=122 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property salmon static
+        get get_Salmon slot=123 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property sandy_brown static
+        get get_SandyBrown slot=124 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property sea_green static
+        get get_SeaGreen slot=125 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property sea_shell static
+        get get_SeaShell slot=126 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property sienna static
+        get get_Sienna slot=127 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property silver static
+        get get_Silver slot=128 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property sky_blue static
+        get get_SkyBlue slot=129 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property slate_blue static
+        get get_SlateBlue slot=130 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property slate_gray static
+        get get_SlateGray slot=131 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property snow static
+        get get_Snow slot=132 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property spring_green static
+        get get_SpringGreen slot=133 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property steel_blue static
+        get get_SteelBlue slot=134 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property tan static
+        get get_Tan slot=135 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property teal static
+        get get_Teal slot=136 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property thistle static
+        get get_Thistle slot=137 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property tomato static
+        get get_Tomato slot=138 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property transparent static
+        get get_Transparent slot=139 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property turquoise static
+        get get_Turquoise slot=140 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property violet static
+        get get_Violet slot=141 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property wheat static
+        get get_Wheat slot=142 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property white static
+        get get_White slot=143 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property white_smoke static
+        get get_WhiteSmoke slot=144 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property yellow static
+        get get_Yellow slot=145 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+    property yellow_green static
+        get get_YellowGreen slot=146 inputs=0 outputs=1 declaring=Windows.UI.IColorsStatics shape=4 static
+            out struct type=Windows.UI.Color return
+
+interface Windows.UI.IColorHelper
+    guid 193cfbe7-65c7-4540-ad08-6283ba76879a
+
+interface Windows.UI.IColorHelperStatics
+    guid 8504dbea-fb6a-4144-a6c2-33499c9284f5
+
+interface Windows.UI.IColorHelperStatics2
+    guid 24d9af02-6eb0-4b94-855c-fcf0818d9a16
+
+interface Windows.UI.IColors
+    guid 9b8c9326-4ca6-4ce5-8994-9eff65cabdcc
+
+interface Windows.UI.IColorsStatics
+    guid cff52e04-cca6-4614-a17e-754910c84a99
+
+interface Windows.UI.IUIContentRoot
+    guid 1dfcbac6-b36b-5cb9-9bc5-2b7a0eddc378
+
+interface Windows.UI.IUIContext
+    guid bb5cfacd-5bd8-59d0-a59e-1c17a4d6d243
+
+class Windows.UI.UIContentRoot python_type
+    py UIContentRoot
+    signature rc(Windows.UI.UIContentRoot;{1dfcbac6-b36b-5cb9-9bc5-2b7a0eddc378})
+    default Windows.UI.IUIContentRoot
+    requires Windows.UI.IUIContentRoot
+    property ui_context
+        get get_UIContext slot=6 inputs=0 outputs=1 declaring=Windows.UI.IUIContentRoot shape=4 reverse=22
+            out class type=Windows.UI.UIContext return
+
+class Windows.UI.UIContext python_type
+    py UIContext
+    signature rc(Windows.UI.UIContext;{bb5cfacd-5bd8-59d0-a59e-1c17a4d6d243})
+    default Windows.UI.IUIContext
+    requires Windows.UI.IUIContext
+
+struct Windows.UI.WindowId python_type
+    py WindowId
+    signature struct(Windows.UI.WindowId;u8)
+    field value Value uint64

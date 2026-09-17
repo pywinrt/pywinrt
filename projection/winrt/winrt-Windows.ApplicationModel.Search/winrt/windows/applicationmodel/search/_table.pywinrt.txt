@@ -1,0 +1,412 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Search
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.ApplicationModel.Search.ILocalContentSuggestionSettings
+    guid eeaeb062-743d-456e-84a3-23f06f2d15d7
+
+interface Windows.ApplicationModel.Search.ISearchPane
+    guid fdacec38-3700-4d73-91a1-2f998674238a
+
+interface Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs python_type
+    py _ISearchPaneQueryChangedEventArgs
+    guid 3c064fe9-2351-4248-a529-7110f464a785
+    signature {3c064fe9-2351-4248-a529-7110f464a785}
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=43 deprecated
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=62 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=22 deprecated
+            out string return
+
+interface Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails
+    guid 82fb460e-0940-4b6d-b8d0-642b30989e15
+
+interface Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs
+    guid 143ba4fc-e9c5-4736-91b2-e8eb9cb88356
+
+interface Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails
+    guid 460c92e5-4c32-4538-a4d4-b6b4400d140f
+
+interface Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs
+    guid c8316cc0-aed2-41e0-bce0-c26ca74f85ec
+
+interface Windows.ApplicationModel.Search.ISearchPaneStatics
+    guid 9572adf1-8f1d-481f-a15b-c61655f16a0e
+
+interface Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication
+    guid 00732830-50f1-4d03-99ac-c6644c8ed8b5
+
+interface Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest
+    guid 81b10b1c-e561-4093-9b4d-2ad482794a53
+
+interface Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral
+    guid a0d009f7-8748-4ee2-ad44-afa6be997c51
+
+interface Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs
+    guid c89b8a2f-ac56-4460-8d2f-80023bec4fc5
+
+interface Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs
+    guid 3c4d3046-ac4b-49f2-97d6-020e6182cb9c
+
+interface Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails
+    guid 46a1205b-69c9-4745-b72f-a8a4fc8f24ae
+
+interface Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory
+    guid cac6c3b8-3c64-4dfd-ad9f-479e4d4065a4
+
+interface Windows.ApplicationModel.Search.ISearchSuggestionCollection
+    guid 323a8a4b-fbea-4446-abbc-3da7915fdd3a
+
+interface Windows.ApplicationModel.Search.ISearchSuggestionsRequest
+    guid 4e4e26a7-44e5-4039-9099-6000ead1f0c6
+
+interface Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral
+    guid b71598a9-c065-456d-a845-1eccec5dc28b
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.StorageFolder> concrete
+    guid 6c26b7be-5f01-5a60-9dd7-fd17be3a9dd6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    argument Windows.Storage.StorageFolder
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.ApplicationModel.Search.LocalContentSuggestionSettings activatable python_type
+    py LocalContentSuggestionSettings
+    signature rc(Windows.ApplicationModel.Search.LocalContentSuggestionSettings;{eeaeb062-743d-456e-84a3-23f06f2d15d7})
+    default Windows.ApplicationModel.Search.ILocalContentSuggestionSettings
+    requires Windows.ApplicationModel.Search.ILocalContentSuggestionSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property enabled
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=43
+            out boolean return
+        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=22
+            in boolean name=value
+    property aqs_filter
+        get get_AqsFilter slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=121
+            out string return
+        put put_AqsFilter slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=99
+            in string name=value
+    property locations
+        get get_Locations slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFolder> return
+    property properties_to_match
+        get get_PropertiesToMatch slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ILocalContentSuggestionSettings shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.ApplicationModel.Search.SearchPane python_type
+    py SearchPane
+    signature rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a})
+    default Windows.ApplicationModel.Search.ISearchPane
+    requires Windows.ApplicationModel.Search.ISearchPane
+    factory Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication
+    factory Windows.ApplicationModel.Search.ISearchPaneStatics
+    property show_on_keyboard_input
+        get get_ShowOnKeyboardInput slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=266 deprecated
+            out boolean return
+        put put_ShowOnKeyboardInput slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=263 deprecated
+            in boolean name=value
+    property search_history_enabled
+        get get_SearchHistoryEnabled slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=43 deprecated
+            out boolean return
+        put put_SearchHistoryEnabled slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=22 deprecated
+            in boolean name=value
+    property search_history_context
+        get get_SearchHistoryContext slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=99 deprecated
+            out string return
+        put put_SearchHistoryContext slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=62 deprecated
+            in string name=value
+    property placeholder_text
+        get get_PlaceholderText slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=141 deprecated
+            out string return
+        put put_PlaceholderText slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=121 deprecated
+            in string name=value
+    property language
+        get get_Language slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=173 deprecated
+            out string return
+    property query_text
+        get get_QueryText slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=162 deprecated
+            out string return
+    property visible
+        get get_Visible slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=186 deprecated
+            out boolean return
+    event query_changed
+        add add_QueryChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=211 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs> name=handler
+            out event_token return
+        remove remove_QueryChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=398 deprecated
+            in event_token name=token
+    event query_submitted
+        add add_QuerySubmitted slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=233 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs> name=handler
+            out event_token return
+        remove remove_QuerySubmitted slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=400 deprecated
+            in event_token name=token
+    event result_suggestion_chosen
+        add add_ResultSuggestionChosen slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=243 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs> name=handler
+            out event_token return
+        remove remove_ResultSuggestionChosen slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 deprecated
+            in event_token name=token
+    event suggestions_requested
+        add add_SuggestionsRequested slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=224 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_SuggestionsRequested slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=399 deprecated
+            in event_token name=token
+    event visibility_changed
+        add add_VisibilityChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=196 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs> name=handler
+            out event_token return
+        remove remove_VisibilityChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=397 deprecated
+            in event_token name=token
+    method get_for_current_view static deprecated
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPane return
+    method hide_this_application static deprecated
+        method HideThisApplication slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication shape=0 reverse=16 static deprecated
+    method set_local_content_suggestion_settings deprecated
+        method SetLocalContentSuggestionSettings slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=252 deprecated
+            in class type=Windows.ApplicationModel.Search.LocalContentSuggestionSettings name=settings
+    method show deprecated
+        method Show slot=26 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=0 deprecated
+        method Show slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=259 deprecated
+            in string name=query
+    method try_set_query_text deprecated
+        method TrySetQueryText slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=271 deprecated
+            in string name=query
+            out boolean return
+
+class Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs python_type
+    py SearchPaneQueryChangedEventArgs
+    signature rc(Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs;{3c064fe9-2351-4248-a529-7110f464a785})
+    default Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=43 deprecated
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=62 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=22 deprecated
+            out string return
+
+class Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails python_type
+    py SearchPaneQueryLinguisticDetails
+    signature rc(Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails;{82fb460e-0940-4b6d-b8d0-642b30989e15})
+    default Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails
+    requires Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails
+    property query_text_alternatives
+        get get_QueryTextAlternatives slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property query_text_composition_length
+        get get_QueryTextCompositionLength slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails shape=4 reverse=62
+            out uint32 return
+    property query_text_composition_start
+        get get_QueryTextCompositionStart slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails shape=4 reverse=43
+            out uint32 return
+
+class Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs python_type
+    py SearchPaneQuerySubmittedEventArgs
+    signature rc(Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs;{143ba4fc-e9c5-4736-91b2-e8eb9cb88356})
+    default Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs shape=4 reverse=43 deprecated
+            out string return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs shape=4 reverse=22 deprecated
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails shape=4 reverse=22 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+
+class Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs python_type
+    py SearchPaneResultSuggestionChosenEventArgs
+    signature rc(Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs;{c8316cc0-aed2-41e0-bce0-c26ca74f85ec})
+    default Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs
+    property tag
+        get get_Tag slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs shape=4 reverse=22 deprecated
+            out string return
+
+class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest python_type
+    py SearchPaneSuggestionsRequest
+    signature rc(Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest;{81b10b1c-e561-4093-9b4d-2ad482794a53})
+    default Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest
+    requires Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest
+    property is_canceled
+        get get_IsCanceled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest shape=4 reverse=22 deprecated
+            out boolean return
+    property search_suggestion_collection
+        get get_SearchSuggestionCollection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest shape=4 reverse=43 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchSuggestionCollection return
+    method get_deferral deprecated
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest shape=4 reverse=62 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral return
+
+class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral python_type
+    py SearchPaneSuggestionsRequestDeferral
+    signature rc(Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral;{a0d009f7-8748-4ee2-ad44-afa6be997c51})
+    default Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral
+    requires Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral
+    method complete deprecated
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral shape=0 reverse=16 deprecated
+
+class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs python_type
+    py SearchPaneSuggestionsRequestedEventArgs
+    signature rc(Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs;{c89b8a2f-ac56-4460-8d2f-80023bec4fc5})
+    default Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=43 deprecated
+            out string return
+    property linguistic_details
+        get get_LinguisticDetails slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=62 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails return
+    property query_text
+        get get_QueryText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs shape=4 reverse=22 deprecated
+            out string return
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest return
+
+class Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs python_type
+    py SearchPaneVisibilityChangedEventArgs
+    signature rc(Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs;{3c4d3046-ac4b-49f2-97d6-020e6182cb9c})
+    default Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs
+    requires Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs
+    property visible
+        get get_Visible slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs shape=4 reverse=22 deprecated
+            out boolean return
+
+class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails python_type
+    py SearchQueryLinguisticDetails
+    signature rc(Windows.ApplicationModel.Search.SearchQueryLinguisticDetails;{46a1205b-69c9-4745-b72f-a8a4fc8f24ae})
+    default Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails
+    requires Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails
+    factory Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory shape=195 reverse=26
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=queryTextAlternatives
+            in uint32 name=queryTextCompositionStart
+            in uint32 name=queryTextCompositionLength
+            out class type=Windows.ApplicationModel.Search.SearchQueryLinguisticDetails return
+    property query_text_alternatives
+        get get_QueryTextAlternatives slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property query_text_composition_length
+        get get_QueryTextCompositionLength slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails shape=4 reverse=62
+            out uint32 return
+    property query_text_composition_start
+        get get_QueryTextCompositionStart slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails shape=4 reverse=43
+            out uint32 return
+
+class Windows.ApplicationModel.Search.SearchSuggestionCollection python_type
+    py SearchSuggestionCollection
+    signature rc(Windows.ApplicationModel.Search.SearchSuggestionCollection;{323a8a4b-fbea-4446-abbc-3da7915fdd3a})
+    default Windows.ApplicationModel.Search.ISearchSuggestionCollection
+    requires Windows.ApplicationModel.Search.ISearchSuggestionCollection
+    property size
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchSuggestionCollection shape=4 reverse=22
+            out uint32 return
+    method append_query_suggestion
+        method AppendQuerySuggestion slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchSuggestionCollection shape=4 reverse=43
+            in string name=text
+    method append_query_suggestions
+        method AppendQuerySuggestions slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchSuggestionCollection shape=4 reverse=62
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=suggestions
+    method append_result_suggestion
+        method AppendResultSuggestion slot=9 inputs=5 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchSuggestionCollection shape=239 reverse=103
+            in string name=text
+            in string name=detailText
+            in string name=tag
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=image
+            in string name=imageAlternateText
+    method append_search_separator
+        method AppendSearchSeparator slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchSuggestionCollection shape=4 reverse=121
+            in string name=label
+
+class Windows.ApplicationModel.Search.SearchSuggestionsRequest python_type
+    py SearchSuggestionsRequest
+    signature rc(Windows.ApplicationModel.Search.SearchSuggestionsRequest;{4e4e26a7-44e5-4039-9099-6000ead1f0c6})
+    default Windows.ApplicationModel.Search.ISearchSuggestionsRequest
+    requires Windows.ApplicationModel.Search.ISearchSuggestionsRequest
+    property is_canceled
+        get get_IsCanceled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchSuggestionsRequest shape=4 reverse=22
+            out boolean return
+    property search_suggestion_collection
+        get get_SearchSuggestionCollection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchSuggestionsRequest shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Search.SearchSuggestionCollection return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchSuggestionsRequest shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral return
+
+class Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral python_type
+    py SearchSuggestionsRequestDeferral
+    signature rc(Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral;{b71598a9-c065-456d-a845-1eccec5dc28b})
+    default Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral
+    requires Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral shape=0 reverse=16
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs> concrete
+    guid 7ccd7da1-8767-5eef-972d-31d09f1bf308
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a});rc(Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs;{3c064fe9-2351-4248-a529-7110f464a785}))
+    argument Windows.ApplicationModel.Search.SearchPane
+    argument Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs> concrete
+    guid 5f05121b-61a6-5f6b-b007-20816dfe7009
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a});rc(Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs;{143ba4fc-e9c5-4736-91b2-e8eb9cb88356}))
+    argument Windows.ApplicationModel.Search.SearchPane
+    argument Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs> concrete
+    guid ec31e5d4-3b8c-5757-96bf-14096be946cd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a});rc(Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs;{c8316cc0-aed2-41e0-bce0-c26ca74f85ec}))
+    argument Windows.ApplicationModel.Search.SearchPane
+    argument Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs> concrete
+    guid 95088dc0-6c14-55b8-8a8f-9df1ca44d1d4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a});rc(Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs;{c89b8a2f-ac56-4460-8d2f-80023bec4fc5}))
+    argument Windows.ApplicationModel.Search.SearchPane
+    argument Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs> concrete
+    guid 3975ff72-971b-54b6-9b5f-cc442e2a87f0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a});rc(Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs;{3c4d3046-ac4b-49f2-97d6-020e6182cb9c}))
+    argument Windows.ApplicationModel.Search.SearchPane
+    argument Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

@@ -1,0 +1,456 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Hosting
+
+class Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs python_type
+    py DesignerAppExitedEventArgs
+    signature rc(Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs;{f6aac86a-0cad-410c-8f62-dc2936151c74})
+    default Windows.UI.Xaml.Hosting.IDesignerAppExitedEventArgs
+    requires Windows.UI.Xaml.Hosting.IDesignerAppExitedEventArgs
+    property exit_code
+        get get_ExitCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppExitedEventArgs shape=4 reverse=22
+            out uint32 return
+
+class Windows.UI.Xaml.Hosting.DesignerAppManager python_type closeable
+    py DesignerAppManager
+    signature rc(Windows.UI.Xaml.Hosting.DesignerAppManager;{a6272caa-d5c6-40cb-abd9-27ba43831bb7})
+    default Windows.UI.Xaml.Hosting.IDesignerAppManager
+    requires Windows.UI.Xaml.Hosting.IDesignerAppManager
+    requires Windows.Foundation.IClosable
+    factory Windows.UI.Xaml.Hosting.IDesignerAppManagerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManagerFactory shape=51 reverse=24
+            in string name=appUserModelId
+            out class type=Windows.UI.Xaml.Hosting.DesignerAppManager return
+    property app_user_model_id
+        get get_AppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=4 reverse=22
+            out string return
+    event designer_app_exited
+        add add_DesignerAppExited slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesignerAppManager,Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs> name=handler
+            out event_token return
+        remove remove_DesignerAppExited slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=26 reverse=82
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_new_view_async
+        method CreateNewViewAsync slot=9 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=134 reverse=386
+            in enum32 type=Windows.UI.Xaml.Hosting.DesignerAppViewState name=initialViewState
+            in struct type=Windows.Foundation.Size name=initialViewSize
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Hosting.DesignerAppView> return
+    method load_object_into_app_async
+        method LoadObjectIntoAppAsync slot=10 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=216
+            in string name=dllName
+            in guid name=classId
+            in string name=initializationData
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.UI.Xaml.Hosting.DesignerAppView python_type closeable
+    py DesignerAppView
+    signature rc(Windows.UI.Xaml.Hosting.DesignerAppView;{5c777cea-dd71-4a84-a56f-dacb4b14706f})
+    default Windows.UI.Xaml.Hosting.IDesignerAppView
+    requires Windows.UI.Xaml.Hosting.IDesignerAppView
+    requires Windows.Foundation.IClosable
+    property app_user_model_id
+        get get_AppUserModelId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppView shape=4 reverse=43
+            out string return
+    property application_view_id
+        get get_ApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppView shape=4 reverse=22
+            out int32 return
+    property view_size
+        get get_ViewSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppView shape=4 reverse=99
+            out struct type=Windows.Foundation.Size return
+    property view_state
+        get get_ViewState slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppView shape=4 reverse=62
+            out enum32 type=Windows.UI.Xaml.Hosting.DesignerAppViewState return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method update_view_async
+        method UpdateViewAsync slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppView shape=134
+            in enum32 type=Windows.UI.Xaml.Hosting.DesignerAppViewState name=viewState
+            in struct type=Windows.Foundation.Size name=viewSize
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.UI.Xaml.Hosting.DesignerAppViewState python_type
+    py DesignerAppViewState
+    signature enum(Windows.UI.Xaml.Hosting.DesignerAppViewState;i4)
+
+class Windows.UI.Xaml.Hosting.DesktopWindowXamlSource composable python_type closeable
+    py DesktopWindowXamlSource
+    signature rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSource;{d585bfe1-00ff-51be-ba1d-a1329956ea0a})
+    default Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource
+    requires Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource
+    requires Windows.Foundation.IClosable
+    composable Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Hosting.DesktopWindowXamlSource return
+    property content
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=4 reverse=22
+            out class type=Windows.UI.Xaml.UIElement return
+        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=4 reverse=43
+            in class type=Windows.UI.Xaml.UIElement name=value
+    property has_focus
+        get get_HasFocus slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=4 reverse=62
+            out boolean return
+    event got_focus
+        add add_GotFocus slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs> name=handler
+            out event_token return
+        remove remove_GotFocus slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=167
+            in event_token name=token
+    event take_focus_requested
+        add add_TakeFocusRequested slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_TakeFocusRequested slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=134
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method navigate_focus
+        method NavigateFocus slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=174
+            in class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest name=request
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult return
+
+class Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs python_type
+    py DesktopWindowXamlSourceGotFocusEventArgs
+    signature rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs;{39be4849-d9cc-5b70-8f05-1ad9a4aaa342})
+    default Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceGotFocusEventArgs
+    requires Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceGotFocusEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceGotFocusEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest return
+
+class Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs python_type
+    py DesktopWindowXamlSourceTakeFocusRequestedEventArgs
+    signature rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs;{fe61e4b9-a7af-52b3-bdb9-c3305c0b8df2})
+    default Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceTakeFocusRequestedEventArgs
+    requires Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceTakeFocusRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceTakeFocusRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest return
+
+class Windows.UI.Xaml.Hosting.ElementCompositionPreview python_type
+    py ElementCompositionPreview
+    signature rc(Windows.UI.Xaml.Hosting.ElementCompositionPreview;{b6f1a676-cfe6-46ac-acf6-c4687bb65e60})
+    default Windows.UI.Xaml.Hosting.IElementCompositionPreview
+    requires Windows.UI.Xaml.Hosting.IElementCompositionPreview
+    factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
+    factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics
+    factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2
+    method get_app_window_content static
+        method GetAppWindowContent slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 shape=51 reverse=44 static
+            in class type=Windows.UI.WindowManagement.AppWindow name=appWindow
+            out class type=Windows.UI.Xaml.UIElement return
+    method get_element_child_visual static
+        method GetElementChildVisual slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out class type=Windows.UI.Composition.Visual return
+    method get_element_visual static
+        method GetElementVisual slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics shape=51 reverse=24 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out class type=Windows.UI.Composition.Visual return
+    method get_pointer_position_property_set static
+        method GetPointerPositionPropertySet slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 shape=51 reverse=100 static
+            in class type=Windows.UI.Xaml.UIElement name=targetElement
+            out class type=Windows.UI.Composition.CompositionPropertySet return
+    method get_scroll_viewer_manipulation_property_set static
+        method GetScrollViewerManipulationPropertySet slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics shape=51 reverse=100 static
+            in class type=Windows.UI.Xaml.Controls.ScrollViewer name=scrollViewer
+            out class type=Windows.UI.Composition.CompositionPropertySet return
+    method set_app_window_content static
+        method SetAppWindowContent slot=6 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 shape=51 reverse=24 static
+            in class type=Windows.UI.WindowManagement.AppWindow name=appWindow
+            in class type=Windows.UI.Xaml.UIElement name=xamlContent
+    method set_element_child_visual static
+        method SetElementChildVisual slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in class type=Windows.UI.Composition.Visual name=visual
+    method set_implicit_hide_animation static
+        method SetImplicitHideAnimation slot=7 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in interface type=Windows.UI.Composition.ICompositionAnimationBase name=animation
+    method set_implicit_show_animation static
+        method SetImplicitShowAnimation slot=6 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 shape=51 reverse=24 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in interface type=Windows.UI.Composition.ICompositionAnimationBase name=animation
+    method set_is_translation_enabled static
+        method SetIsTranslationEnabled slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2 shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in boolean name=value
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Hosting.DesignerAppView> concrete
+    guid 49c6c658-1bd2-581e-a385-6eb3fd9bfee3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Xaml.Hosting.DesignerAppView;{5c777cea-dd71-4a84-a56f-dacb4b14706f}))
+    argument Windows.UI.Xaml.Hosting.DesignerAppView
+
+interface Windows.UI.Xaml.Hosting.IDesignerAppExitedEventArgs
+    guid f6aac86a-0cad-410c-8f62-dc2936151c74
+
+interface Windows.UI.Xaml.Hosting.IDesignerAppManager
+    guid a6272caa-d5c6-40cb-abd9-27ba43831bb7
+
+interface Windows.UI.Xaml.Hosting.IDesignerAppManagerFactory
+    guid 8f9d633b-1266-4c0e-8499-0db85bbd4c43
+
+interface Windows.UI.Xaml.Hosting.IDesignerAppView
+    guid 5c777cea-dd71-4a84-a56f-dacb4b14706f
+
+interface Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource
+    guid d585bfe1-00ff-51be-ba1d-a1329956ea0a
+
+interface Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceFactory
+    guid 5cd61dc0-2561-56e1-8e75-6e44173805e3
+
+interface Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceGotFocusEventArgs
+    guid 39be4849-d9cc-5b70-8f05-1ad9a4aaa342
+
+interface Windows.UI.Xaml.Hosting.IDesktopWindowXamlSourceTakeFocusRequestedEventArgs
+    guid fe61e4b9-a7af-52b3-bdb9-c3305c0b8df2
+
+interface Windows.UI.Xaml.Hosting.IElementCompositionPreview
+    guid b6f1a676-cfe6-46ac-acf6-c4687bb65e60
+
+interface Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics
+    guid 08c92b38-ec99-4c55-bc85-a1c180b27646
+
+interface Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2
+    guid 24148fbb-23d6-4f37-ba0c-0733e799722d
+
+interface Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
+    guid 843bc4c3-c105-59fe-a3d1-373c1d3e6fbc
+
+interface Windows.UI.Xaml.Hosting.IWindowsXamlManager
+    guid 56096c31-1aa0-5288-8818-6e74a2dcaff5
+
+interface Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics
+    guid 28258a12-7d82-505b-b210-712b04a58882
+
+interface Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest
+    guid fbb93bb5-1496-5a80-ac00-e757359755e6
+
+interface Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory
+    guid e746ab8f-b4ef-5390-97e5-cc0a2779c574
+
+interface Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResult
+    guid 88d55a5f-9603-5d8f-9cc7-d1c4070d9801
+
+interface Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory
+    guid 43bbadbf-f9e1-5527-b8c5-09339ff2ca76
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenter
+    guid a714944a-1619-4fc6-b31b-89512ef022a2
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenterHost python_type
+    py _IXamlUIPresenterHost
+    guid aafb84cd-9f6d-4f80-ac2c-0e6cb9f31659
+    signature {aafb84cd-9f6d-4f80-ac2c-0e6cb9f31659}
+    method resolve_file_resource
+        method ResolveFileResource slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterHost shape=51 reverse=24
+            in string name=path
+            out string return
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2 python_type
+    py _IXamlUIPresenterHost2
+    guid 61595672-7ca4-4a21-b56a-88f4812388ca
+    signature {61595672-7ca4-4a21-b56a-88f4812388ca}
+    method get_generic_xaml_file_path
+        method GetGenericXamlFilePath slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2 shape=4 reverse=22
+            out string return
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3 python_type
+    py _IXamlUIPresenterHost3
+    guid b14292bf-7320-41bb-9f26-4d6fd34db45a
+    signature {b14292bf-7320-41bb-9f26-4d6fd34db45a}
+    method resolve_dictionary_resource
+        method ResolveDictionaryResource slot=6 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3 shape=195 reverse=26
+            in class type=Windows.UI.Xaml.ResourceDictionary name=dictionary
+            in object name=dictionaryKey
+            in object name=suggestedValue
+            out object return
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics
+    guid 71eaeac8-45e1-4192-85aa-3a422edd23cf
+
+interface Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2
+    guid 5c6b68d2-cf1c-4f53-bf09-6a745f7a9703
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesignerAppManager,Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs> concrete
+    guid 3772ce98-9ba0-504b-8a0d-36b7f816a1c2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Hosting.DesignerAppManager;{a6272caa-d5c6-40cb-abd9-27ba43831bb7});rc(Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs;{f6aac86a-0cad-410c-8f62-dc2936151c74}))
+    argument Windows.UI.Xaml.Hosting.DesignerAppManager
+    argument Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs> concrete
+    guid a77f0e84-ced7-5681-b140-8c18a55ceb1d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSource;{d585bfe1-00ff-51be-ba1d-a1329956ea0a});rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs;{39be4849-d9cc-5b70-8f05-1ad9a4aaa342}))
+    argument Windows.UI.Xaml.Hosting.DesktopWindowXamlSource
+    argument Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs> concrete
+    guid 9e79eafe-c7fe-54a5-96ff-7abe02e05418
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSource;{d585bfe1-00ff-51be-ba1d-a1329956ea0a});rc(Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs;{fe61e4b9-a7af-52b3-bdb9-c3305c0b8df2}))
+    argument Windows.UI.Xaml.Hosting.DesktopWindowXamlSource
+    argument Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
+
+class Windows.UI.Xaml.Hosting.WindowsXamlManager python_type closeable
+    py WindowsXamlManager
+    signature rc(Windows.UI.Xaml.Hosting.WindowsXamlManager;{56096c31-1aa0-5288-8818-6e74a2dcaff5})
+    default Windows.UI.Xaml.Hosting.IWindowsXamlManager
+    requires Windows.UI.Xaml.Hosting.IWindowsXamlManager
+    requires Windows.Foundation.IClosable
+    factory Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method initialize_for_current_thread static
+        method InitializeForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IWindowsXamlManagerStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.Hosting.WindowsXamlManager return
+
+enum Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason python_type
+    py XamlSourceFocusNavigationReason
+    signature enum(Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason;i4)
+
+class Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest python_type
+    py XamlSourceFocusNavigationRequest
+    signature rc(Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest;{fbb93bb5-1496-5a80-ac00-e757359755e6})
+    default Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest
+    requires Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest
+    factory Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory shape=51 reverse=24
+            in enum32 type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason name=reason
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory shape=130
+            in enum32 type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason name=reason
+            in struct type=Windows.Foundation.Rect name=hintRect
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest return
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequestFactory shape=206
+            in enum32 type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason name=reason
+            in struct type=Windows.Foundation.Rect name=hintRect
+            in guid name=correlationId
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest return
+    property correlation_id
+        get get_CorrelationId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest shape=4 reverse=62
+            out guid return
+    property hint_rect
+        get get_HintRect slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest shape=4 reverse=43
+            out struct type=Windows.Foundation.Rect return
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationRequest shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason return
+
+class Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult python_type
+    py XamlSourceFocusNavigationResult
+    signature rc(Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult;{88d55a5f-9603-5d8f-9cc7-d1c4070d9801})
+    default Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResult
+    requires Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResult
+    factory Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory shape=51 reverse=24
+            in boolean name=focusMoved
+            out class type=Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationResult return
+    property was_focus_moved
+        get get_WasFocusMoved slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlSourceFocusNavigationResult shape=4 reverse=22
+            out boolean return
+
+class Windows.UI.Xaml.Hosting.XamlUIPresenter python_type
+    py XamlUIPresenter
+    signature rc(Windows.UI.Xaml.Hosting.XamlUIPresenter;{a714944a-1619-4fc6-b31b-89512ef022a2})
+    default Windows.UI.Xaml.Hosting.IXamlUIPresenter
+    requires Windows.UI.Xaml.Hosting.IXamlUIPresenter
+    factory Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2
+    factory Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics
+    property theme_resources_xaml
+        get get_ThemeResourcesXaml slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=121
+            out string return
+        put put_ThemeResourcesXaml slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=141
+            in string name=value
+    property theme_key
+        get get_ThemeKey slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=62
+            out string return
+        put put_ThemeKey slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=99
+            in string name=value
+    property root_element
+        get get_RootElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=22
+            out class type=Windows.UI.Xaml.UIElement return
+        put put_RootElement slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=43
+            in class type=Windows.UI.Xaml.UIElement name=value
+    property complete_timelines_automatically static
+        get get_CompleteTimelinesAutomatically slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics shape=4 reverse=22 static
+            out boolean return
+        put put_CompleteTimelinesAutomatically slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics shape=4 reverse=43 static
+            in boolean name=value
+    method get_flyout_placement static
+        method GetFlyoutPlacement slot=7 inputs=6 outputs=2 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2 shape=289 static
+            in struct type=Windows.Foundation.Rect name=placementTargetBounds
+            in struct type=Windows.Foundation.Size name=controlSize
+            in struct type=Windows.Foundation.Size name=minControlSize
+            in struct type=Windows.Foundation.Rect name=containerRect
+            in enum32 type=Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode name=targetPreferredPlacement
+            in boolean name=allowFallbacks
+            out enum32 type=Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode name=chosenPlacement
+            out struct type=Windows.Foundation.Rect return
+    method get_flyout_placement_target_info static
+        method GetFlyoutPlacementTargetInfo slot=6 inputs=2 outputs=3 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2 shape=239 reverse=27 static
+            in class type=Windows.UI.Xaml.FrameworkElement name=placementTarget
+            in enum32 type=Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode name=preferredPlacement
+            out enum32 type=Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode name=targetPreferredPlacement
+            out boolean name=allowFallbacks
+            out struct type=Windows.Foundation.Rect return
+    method notify_window_size_changed static
+        method NotifyWindowSizeChanged slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics shape=0 reverse=93 static
+    method present
+        method Present slot=14 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=0 reverse=185
+    method render
+        method Render slot=13 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=0 reverse=169
+    method set_host static
+        method SetHost slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics shape=4 reverse=62 static
+            in interface type=Windows.UI.Xaml.Hosting.IXamlUIPresenterHost name=host
+    method set_size
+        method SetSize slot=12 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=51 reverse=163
+            in int32 name=width
+            in int32 name=height
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.UI.Composition.CompositionPropertySet external
+    py winrt.windows.ui.composition.CompositionPropertySet
+
+interface Windows.UI.Composition.ICompositionAnimationBase external
+    py winrt.windows.ui.composition._ICompositionAnimationBase
+    guid 1c2c2999-e818-48d3-a6dd-d78c82f8ace9
+
+class Windows.UI.Composition.Visual external
+    py winrt.windows.ui.composition.Visual
+
+class Windows.UI.WindowManagement.AppWindow external
+    py winrt.windows.ui.windowmanagement.AppWindow
+
+class Windows.UI.Xaml.FrameworkElement external
+    py winrt.windows.ui.xaml.FrameworkElement
+
+class Windows.UI.Xaml.ResourceDictionary external
+    py winrt.windows.ui.xaml.ResourceDictionary
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement
+
+class Windows.UI.Xaml.Controls.ScrollViewer external
+    py winrt.windows.ui.xaml.controls.ScrollViewer
+
+enum Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode external
+    py winrt.windows.ui.xaml.controls.primitives.FlyoutPlacementMode

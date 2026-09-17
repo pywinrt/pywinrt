@@ -1,0 +1,2259 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Data.Xml.Dom
+
+class Windows.Data.Xml.Dom.DtdEntity python_type
+    py DtdEntity
+    signature rc(Windows.Data.Xml.Dom.DtdEntity;{6a0b5ffc-63b4-480f-9e6a-8a92816aade4})
+    default Windows.Data.Xml.Dom.IDtdEntity
+    requires Windows.Data.Xml.Dom.IDtdEntity
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property notation_name
+        get get_NotationName slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=62
+            out object return
+    property public_id
+        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=22
+            out object return
+    property system_id
+        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=43
+            out object return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.DtdNotation python_type
+    py DtdNotation
+    signature rc(Windows.Data.Xml.Dom.DtdNotation;{8cb4e04d-6d46-4edb-ab73-df83c51ad397})
+    default Windows.Data.Xml.Dom.IDtdNotation
+    requires Windows.Data.Xml.Dom.IDtdNotation
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property public_id
+        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4 reverse=22
+            out object return
+    property system_id
+        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4 reverse=43
+            out object return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> concrete
+    guid f858e239-1896-5982-8495-143168478eb8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Data.Xml.Dom.XmlDocument;{f7f3a506-1e87-42d6-bcfb-b8c809fa5494}))
+    argument Windows.Data.Xml.Dom.XmlDocument
+
+interface Windows.Data.Xml.Dom.IDtdEntity
+    guid 6a0b5ffc-63b4-480f-9e6a-8a92816aade4
+
+interface Windows.Data.Xml.Dom.IDtdNotation
+    guid 8cb4e04d-6d46-4edb-ab73-df83c51ad397
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode> concrete
+    guid f1146ffc-8c92-56e8-93f1-711f86722633
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{1c741d59-2122-47d5-a856-83f3d4214875})
+    argument Windows.Data.Xml.Dom.IXmlNode
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode> concrete
+    guid 3833a35e-2c61-56bd-b093-3694165f8898
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{1c741d59-2122-47d5-a856-83f3d4214875})
+    argument Windows.Data.Xml.Dom.IXmlNode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> concrete
+    guid 139d959e-e7b5-5cb6-a596-4b544478da9b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{1c741d59-2122-47d5-a856-83f3d4214875})
+    argument Windows.Data.Xml.Dom.IXmlNode
+
+interface Windows.Data.Xml.Dom.IXmlAttribute
+    guid ac144aa4-b4f1-4db6-b206-8a22c308db0a
+
+interface Windows.Data.Xml.Dom.IXmlCDataSection
+    guid 4d04b46f-c8bd-45b4-8899-0400d7c2c60f
+
+interface Windows.Data.Xml.Dom.IXmlCharacterData python_type
+    py _IXmlCharacterData
+    guid 132e42ab-4e36-4df6-b1c8-0ce62fd88b26
+    signature {132e42ab-4e36-4df6-b1c8-0ce62fd88b26}
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=22
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=43
+            in string name=value
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=62
+            out uint32 return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method append_data
+        method AppendData slot=10 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=121
+            in string name=data
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method delete_data
+        method DeleteData slot=12 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=163
+            in uint32 name=offset
+            in uint32 name=count
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_data
+        method InsertData slot=11 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=144
+            in uint32 name=offset
+            in string name=data
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_data
+        method ReplaceData slot=13 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=175
+            in uint32 name=offset
+            in uint32 name=count
+            in string name=data
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method substring_data
+        method SubstringData slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=101
+            in uint32 name=offset
+            in uint32 name=count
+            out string return
+
+interface Windows.Data.Xml.Dom.IXmlComment
+    guid bca474d5-b61f-4611-9cac-2e92e3476d47
+
+interface Windows.Data.Xml.Dom.IXmlDocument
+    guid f7f3a506-1e87-42d6-bcfb-b8c809fa5494
+
+interface Windows.Data.Xml.Dom.IXmlDocumentFragment
+    guid e2ea6a96-0c21-44a5-8bc9-9e4a262708ec
+
+interface Windows.Data.Xml.Dom.IXmlDocumentIO
+    guid 6cd0e74e-ee65-4489-9ebf-ca43e87ba637
+
+interface Windows.Data.Xml.Dom.IXmlDocumentIO2
+    guid 5d034661-7bd8-4ad5-9ebf-81e6347263b1
+
+interface Windows.Data.Xml.Dom.IXmlDocumentStatics
+    guid 5543d254-d757-4b79-9539-232b18f50bf1
+
+interface Windows.Data.Xml.Dom.IXmlDocumentType
+    guid f7342425-9781-4964-8e94-9b1c6dfc9bc7
+
+interface Windows.Data.Xml.Dom.IXmlDomImplementation
+    guid 6de58132-f11d-4fbb-8cc6-583cba93112f
+
+interface Windows.Data.Xml.Dom.IXmlElement
+    guid 2dfb8a1f-6b10-4ef8-9f83-efcce8faec37
+
+interface Windows.Data.Xml.Dom.IXmlEntityReference
+    guid 2e2f47bc-c3d0-4ccf-bb86-0ab8c36a61cf
+
+interface Windows.Data.Xml.Dom.IXmlLoadSettings
+    guid 58aa07a8-fed6-46f7-b4c5-fb1ba72108d6
+
+interface Windows.Data.Xml.Dom.IXmlNamedNodeMap
+    guid b3a69eb0-aab0-4b82-a6fa-b1453f7c021b
+
+interface Windows.Data.Xml.Dom.IXmlNode python_type
+    py _IXmlNode
+    guid 1c741d59-2122-47d5-a856-83f3d4214875
+    signature {1c741d59-2122-47d5-a856-83f3d4214875}
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+interface Windows.Data.Xml.Dom.IXmlNodeList
+    guid 8c60ad77-83a4-4ec1-9c54-7ba429e13da6
+
+interface Windows.Data.Xml.Dom.IXmlNodeSelector python_type
+    py _IXmlNodeSelector
+    guid 63dbba8b-d0db-4fe1-b745-f9433afdc25b
+    signature {63dbba8b-d0db-4fe1-b745-f9433afdc25b}
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+interface Windows.Data.Xml.Dom.IXmlNodeSerializer python_type
+    py _IXmlNodeSerializer
+    guid 5cc5b382-e6dd-4991-abef-06d8d2e7bd0c
+    signature {5cc5b382-e6dd-4991-abef-06d8d2e7bd0c}
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+
+interface Windows.Data.Xml.Dom.IXmlProcessingInstruction
+    guid 2707fd1e-1e92-4ece-b6f4-26f069078ddc
+
+interface Windows.Data.Xml.Dom.IXmlText python_type
+    py _IXmlText
+    guid f931a4cb-308d-4760-a1d5-43b67450ac7e
+    signature {f931a4cb-308d-4760-a1d5-43b67450ac7e}
+    requires Windows.Data.Xml.Dom.IXmlCharacterData
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=22
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=43
+            in string name=value
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=62
+            out uint32 return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method append_data
+        method AppendData slot=10 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=121
+            in string name=data
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method delete_data
+        method DeleteData slot=12 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=163
+            in uint32 name=offset
+            in uint32 name=count
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_data
+        method InsertData slot=11 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=144
+            in uint32 name=offset
+            in string name=data
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_data
+        method ReplaceData slot=13 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=175
+            in uint32 name=offset
+            in uint32 name=count
+            in string name=data
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method split_text
+        method SplitText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlText shape=51 reverse=24
+            in uint32 name=offset
+            out interface type=Windows.Data.Xml.Dom.IXmlText return
+    method substring_data
+        method SubstringData slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=101
+            in uint32 name=offset
+            in uint32 name=count
+            out string return
+
+enum Windows.Data.Xml.Dom.NodeType python_type
+    py NodeType
+    signature enum(Windows.Data.Xml.Dom.NodeType;i4)
+
+enum T parameterized
+
+class Windows.Data.Xml.Dom.XmlAttribute python_type
+    py XmlAttribute
+    signature rc(Windows.Data.Xml.Dom.XmlAttribute;{ac144aa4-b4f1-4db6-b206-8a22c308db0a})
+    default Windows.Data.Xml.Dom.IXmlAttribute
+    requires Windows.Data.Xml.Dom.IXmlAttribute
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=62
+            out string return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=99
+            in string name=value
+    property specified
+        get get_Specified slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=43
+            out boolean return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=22
+            out string return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlCDataSection python_type
+    py XmlCDataSection
+    signature rc(Windows.Data.Xml.Dom.XmlCDataSection;{4d04b46f-c8bd-45b4-8899-0400d7c2c60f})
+    default Windows.Data.Xml.Dom.IXmlCDataSection
+    requires Windows.Data.Xml.Dom.IXmlCDataSection
+    requires Windows.Data.Xml.Dom.IXmlText
+    requires Windows.Data.Xml.Dom.IXmlCharacterData
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=22
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=43
+            in string name=value
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=62
+            out uint32 return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method append_data
+        method AppendData slot=10 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=121
+            in string name=data
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method delete_data
+        method DeleteData slot=12 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=163
+            in uint32 name=offset
+            in uint32 name=count
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_data
+        method InsertData slot=11 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=144
+            in uint32 name=offset
+            in string name=data
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_data
+        method ReplaceData slot=13 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=175
+            in uint32 name=offset
+            in uint32 name=count
+            in string name=data
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method split_text
+        method SplitText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlText shape=51 reverse=24
+            in uint32 name=offset
+            out interface type=Windows.Data.Xml.Dom.IXmlText return
+    method substring_data
+        method SubstringData slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=101
+            in uint32 name=offset
+            in uint32 name=count
+            out string return
+
+class Windows.Data.Xml.Dom.XmlComment python_type
+    py XmlComment
+    signature rc(Windows.Data.Xml.Dom.XmlComment;{bca474d5-b61f-4611-9cac-2e92e3476d47})
+    default Windows.Data.Xml.Dom.IXmlComment
+    requires Windows.Data.Xml.Dom.IXmlComment
+    requires Windows.Data.Xml.Dom.IXmlCharacterData
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=22
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=43
+            in string name=value
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=62
+            out uint32 return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method append_data
+        method AppendData slot=10 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=121
+            in string name=data
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method delete_data
+        method DeleteData slot=12 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=163
+            in uint32 name=offset
+            in uint32 name=count
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_data
+        method InsertData slot=11 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=144
+            in uint32 name=offset
+            in string name=data
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_data
+        method ReplaceData slot=13 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=175
+            in uint32 name=offset
+            in uint32 name=count
+            in string name=data
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method substring_data
+        method SubstringData slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=101
+            in uint32 name=offset
+            in uint32 name=count
+            out string return
+
+class Windows.Data.Xml.Dom.XmlDocument activatable python_type
+    py XmlDocument
+    signature rc(Windows.Data.Xml.Dom.XmlDocument;{f7f3a506-1e87-42d6-bcfb-b8c809fa5494})
+    default Windows.Data.Xml.Dom.IXmlDocument
+    requires Windows.Data.Xml.Dom.IXmlDocument
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    requires Windows.Data.Xml.Dom.IXmlDocumentIO
+    requires Windows.Data.Xml.Dom.IXmlDocumentIO2
+    factory Windows.Data.Xml.Dom.IXmlDocumentStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property doctype
+        get get_Doctype slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=22
+            out class type=Windows.Data.Xml.Dom.XmlDocumentType return
+    property document_element
+        get get_DocumentElement slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=62
+            out class type=Windows.Data.Xml.Dom.XmlElement return
+    property document_uri
+        get get_DocumentUri slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=218
+            out string return
+    property implementation
+        get get_Implementation slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=43
+            out class type=Windows.Data.Xml.Dom.XmlDomImplementation return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method create_attribute
+        method CreateAttribute slot=14 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=187
+            in string name=name
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method create_attribute_ns
+        method CreateAttributeNS slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=225
+            in object name=namespaceUri
+            in string name=qualifiedName
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method create_c_data_section
+        method CreateCDataSection slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=211
+            in string name=data
+            out class type=Windows.Data.Xml.Dom.XmlCDataSection return
+    method create_comment
+        method CreateComment slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=163
+            in string name=data
+            out class type=Windows.Data.Xml.Dom.XmlComment return
+    method create_document_fragment
+        method CreateDocumentFragment slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=121
+            out class type=Windows.Data.Xml.Dom.XmlDocumentFragment return
+    method create_element
+        method CreateElement slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=100
+            in string name=tagName
+            out class type=Windows.Data.Xml.Dom.XmlElement return
+    method create_element_ns
+        method CreateElementNS slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=230
+            in object name=namespaceUri
+            in string name=qualifiedName
+            out class type=Windows.Data.Xml.Dom.XmlElement return
+    method create_entity_reference
+        method CreateEntityReference slot=15 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=196
+            in string name=name
+            out class type=Windows.Data.Xml.Dom.XmlEntityReference return
+    method create_processing_instruction
+        method CreateProcessingInstruction slot=13 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=175
+            in string name=target
+            in string name=data
+            out class type=Windows.Data.Xml.Dom.XmlProcessingInstruction return
+    method create_text_node
+        method CreateTextNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=144
+            in string name=data
+            out class type=Windows.Data.Xml.Dom.XmlText return
+    method get_element_by_id
+        method GetElementById slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=233
+            in string name=elementId
+            out class type=Windows.Data.Xml.Dom.XmlElement return
+    method get_elements_by_tag_name
+        method GetElementsByTagName slot=16 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=203
+            in string name=tagName
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method import_node
+        method ImportNode slot=22 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=239
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method load_from_file_async static
+        method LoadFromFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 reverse=65 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
+        method LoadFromFileAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 reverse=101 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
+    method load_from_uri_async static
+        method LoadFromUriAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 reverse=24 static
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
+        method LoadFromUriAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 reverse=45 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
+    method load_xml
+        method LoadXml slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=4 reverse=22
+            in string name=xml
+        method LoadXml slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51 reverse=44
+            in string name=xml
+            in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
+    method load_xml_from_buffer
+        method LoadXmlFromBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=4 reverse=22
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+        method LoadXmlFromBuffer slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method save_to_file_async
+        method SaveToFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51 reverse=65
+            in interface type=Windows.Storage.IStorageFile name=file
+            out interface type=Windows.Foundation.IAsyncAction return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlDocumentFragment python_type
+    py XmlDocumentFragment
+    signature rc(Windows.Data.Xml.Dom.XmlDocumentFragment;{e2ea6a96-0c21-44a5-8bc9-9e4a262708ec})
+    default Windows.Data.Xml.Dom.IXmlDocumentFragment
+    requires Windows.Data.Xml.Dom.IXmlDocumentFragment
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlDocumentType python_type
+    py XmlDocumentType
+    signature rc(Windows.Data.Xml.Dom.XmlDocumentType;{f7342425-9781-4964-8e94-9b1c6dfc9bc7})
+    default Windows.Data.Xml.Dom.IXmlDocumentType
+    requires Windows.Data.Xml.Dom.IXmlDocumentType
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property entities
+        get get_Entities slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=43
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=22
+            out string return
+    property notations
+        get get_Notations slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=62
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlDomImplementation python_type
+    py XmlDomImplementation
+    signature rc(Windows.Data.Xml.Dom.XmlDomImplementation;{6de58132-f11d-4fbb-8cc6-583cba93112f})
+    default Windows.Data.Xml.Dom.IXmlDomImplementation
+    requires Windows.Data.Xml.Dom.IXmlDomImplementation
+    method has_feature
+        method HasFeature slot=6 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDomImplementation shape=117 reverse=25
+            in string name=feature
+            in object name=version
+            out boolean return
+
+class Windows.Data.Xml.Dom.XmlElement python_type
+    py XmlElement
+    signature rc(Windows.Data.Xml.Dom.XmlElement;{2dfb8a1f-6b10-4ef8-9f83-efcce8faec37})
+    default Windows.Data.Xml.Dom.IXmlElement
+    requires Windows.Data.Xml.Dom.IXmlElement
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property tag_name
+        get get_TagName slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4 reverse=22
+            out string return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_attribute
+        method GetAttribute slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=44
+            in string name=attributeName
+            out string return
+    method get_attribute_ns
+        method GetAttributeNS slot=15 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=197
+            in object name=namespaceUri
+            in string name=localName
+            out string return
+    method get_attribute_node
+        method GetAttributeNode slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=124
+            in string name=attributeName
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method get_attribute_node_ns
+        method GetAttributeNodeNS slot=18 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=220
+            in object name=namespaceUri
+            in string name=localName
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method get_elements_by_tag_name
+        method GetElementsByTagName slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=174
+            in string name=tagName
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_attribute
+        method RemoveAttribute slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4 reverse=99
+            in string name=attributeName
+    method remove_attribute_ns
+        method RemoveAttributeNS slot=16 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=203
+            in object name=namespaceUri
+            in string name=localName
+    method remove_attribute_node
+        method RemoveAttributeNode slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=163
+            in class type=Windows.Data.Xml.Dom.XmlAttribute name=attributeNode
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method set_attribute
+        method SetAttribute slot=8 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=65
+            in string name=attributeName
+            in string name=attributeValue
+    method set_attribute_ns
+        method SetAttributeNS slot=14 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=188
+            in object name=namespaceUri
+            in string name=qualifiedName
+            in string name=value
+    method set_attribute_node
+        method SetAttributeNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=144
+            in class type=Windows.Data.Xml.Dom.XmlAttribute name=newAttribute
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+    method set_attribute_node_ns
+        method SetAttributeNodeNS slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=211
+            in class type=Windows.Data.Xml.Dom.XmlAttribute name=newAttribute
+            out class type=Windows.Data.Xml.Dom.XmlAttribute return
+
+class Windows.Data.Xml.Dom.XmlEntityReference python_type
+    py XmlEntityReference
+    signature rc(Windows.Data.Xml.Dom.XmlEntityReference;{2e2f47bc-c3d0-4ccf-bb86-0ab8c36a61cf})
+    default Windows.Data.Xml.Dom.IXmlEntityReference
+    requires Windows.Data.Xml.Dom.IXmlEntityReference
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlLoadSettings activatable python_type
+    py XmlLoadSettings
+    signature rc(Windows.Data.Xml.Dom.XmlLoadSettings;{58aa07a8-fed6-46f7-b4c5-fb1ba72108d6})
+    default Windows.Data.Xml.Dom.IXmlLoadSettings
+    requires Windows.Data.Xml.Dom.IXmlLoadSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property validate_on_parse
+        get get_ValidateOnParse slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=162
+            out boolean return
+        put put_ValidateOnParse slot=13 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=173
+            in boolean name=value
+    property resolve_externals
+        get get_ResolveExternals slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=121
+            out boolean return
+        put put_ResolveExternals slot=11 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=141
+            in boolean name=value
+    property prohibit_dtd
+        get get_ProhibitDtd slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=62
+            out boolean return
+        put put_ProhibitDtd slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=99
+            in boolean name=value
+    property max_element_depth
+        get get_MaxElementDepth slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=22
+            out uint32 return
+        put put_MaxElementDepth slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=43
+            in uint32 name=value
+    property element_content_white_space
+        get get_ElementContentWhiteSpace slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=186
+            out boolean return
+        put put_ElementContentWhiteSpace slot=15 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=194
+            in boolean name=value
+
+class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
+    py XmlNamedNodeMap
+    signature rc(Windows.Data.Xml.Dom.XmlNamedNodeMap;{b3a69eb0-aab0-4b82-a6fa-b1453f7c021b})
+    default Windows.Data.Xml.Dom.IXmlNamedNodeMap
+    requires Windows.Data.Xml.Dom.IXmlNamedNodeMap
+    requires Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
+    property length
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=4 reverse=22
+            out uint32 return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=51 reverse=24
+            in uint32 name=index
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
+            out uint32 return
+    method get_named_item
+        method GetNamedItem slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=65
+            in string name=name
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_named_item_ns
+        method GetNamedItemNS slot=11 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117 reverse=145
+            in object name=namespaceUri
+            in string name=name
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=117 reverse=66
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=value
+            out uint32 name=index
+            out boolean return
+    method item
+        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=44
+            in uint32 name=index
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method remove_named_item
+        method RemoveNamedItem slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=124
+            in string name=name
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method remove_named_item_ns
+        method RemoveNamedItemNS slot=12 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117 reverse=164
+            in object name=namespaceUri
+            in string name=name
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method set_named_item
+        method SetNamedItem slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=100
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method set_named_item_ns
+        method SetNamedItemNS slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=174
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlNodeList python_type iterable sequence
+    py XmlNodeList
+    signature rc(Windows.Data.Xml.Dom.XmlNodeList;{8c60ad77-83a4-4ec1-9c54-7ba429e13da6})
+    default Windows.Data.Xml.Dom.IXmlNodeList
+    requires Windows.Data.Xml.Dom.IXmlNodeList
+    requires Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
+    property length
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=4 reverse=22
+            out uint32 return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=51 reverse=24
+            in uint32 name=index
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=117 reverse=66
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=value
+            out uint32 name=index
+            out boolean return
+    method item
+        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=51 reverse=44
+            in uint32 name=index
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlProcessingInstruction python_type
+    py XmlProcessingInstruction
+    signature rc(Windows.Data.Xml.Dom.XmlProcessingInstruction;{2707fd1e-1e92-4ece-b6f4-26f069078ddc})
+    default Windows.Data.Xml.Dom.IXmlProcessingInstruction
+    requires Windows.Data.Xml.Dom.IXmlProcessingInstruction
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    property data
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=43
+            out string return
+        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=62
+            in string name=value
+    property target
+        get get_Target slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=22
+            out string return
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+
+class Windows.Data.Xml.Dom.XmlText python_type
+    py XmlText
+    signature rc(Windows.Data.Xml.Dom.XmlText;{f931a4cb-308d-4760-a1d5-43b67450ac7e})
+    default Windows.Data.Xml.Dom.IXmlText
+    requires Windows.Data.Xml.Dom.IXmlText
+    requires Windows.Data.Xml.Dom.IXmlCharacterData
+    requires Windows.Data.Xml.Dom.IXmlNode
+    requires Windows.Data.Xml.Dom.IXmlNodeSelector
+    requires Windows.Data.Xml.Dom.IXmlNodeSerializer
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=22
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=43
+            in string name=value
+    property length
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=62
+            out uint32 return
+    property prefix
+        get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
+            out object return
+        put put_Prefix slot=28 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=263
+            in object name=value
+    property node_value
+        get get_NodeValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=22
+            out object return
+        put put_NodeValue slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=43
+            in object name=value
+    property first_child
+        get get_FirstChild slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=162
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property last_child
+        get get_LastChild slot=13 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=173
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property local_name
+        get get_LocalName slot=25 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=252
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=24 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=247
+            out object return
+    property next_sibling
+        get get_NextSibling slot=15 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=194
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property node_name
+        get get_NodeName slot=9 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=99
+            out string return
+    property node_type
+        get get_NodeType slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=62
+            out enum32 type=Windows.Data.Xml.Dom.NodeType return
+    property attributes
+        get get_Attributes slot=16 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=202
+            out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
+    property owner_document
+        get get_OwnerDocument slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=218
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    property child_nodes
+        get get_ChildNodes slot=11 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=141
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    property parent_node
+        get get_ParentNode slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=121
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property previous_sibling
+        get get_PreviousSibling slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=186
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    property inner_text
+        get get_InnerText slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=43
+            out string return
+        put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
+            in string name=value
+    method append_child
+        method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method append_data
+        method AppendData slot=10 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=4 reverse=121
+            in string name=data
+    method clone_node
+        method CloneNode slot=23 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=243
+            in boolean name=deep
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method delete_data
+        method DeleteData slot=12 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=163
+            in uint32 name=offset
+            in uint32 name=count
+    method get_xml
+        method GetXml slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=22
+            out string return
+    method has_child_nodes
+        method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
+            out boolean return
+    method insert_before
+        method InsertBefore slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=225
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method insert_data
+        method InsertData slot=11 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=51 reverse=144
+            in uint32 name=offset
+            in string name=data
+    method normalize
+        method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
+    method remove_child
+        method RemoveChild slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=233
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=childNode
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_child
+        method ReplaceChild slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=117 reverse=230
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=newChild
+            in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method replace_data
+        method ReplaceData slot=13 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=175
+            in uint32 name=offset
+            in uint32 name=count
+            in string name=data
+    method select_nodes
+        method SelectNodes slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=44
+            in string name=xpath
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_nodes_ns
+        method SelectNodesNS slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=101
+            in string name=xpath
+            in object name=namespaces
+            out class type=Windows.Data.Xml.Dom.XmlNodeList return
+    method select_single_node
+        method SelectSingleNode slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=51 reverse=24
+            in string name=xpath
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method select_single_node_ns
+        method SelectSingleNodeNS slot=8 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeSelector shape=117 reverse=66
+            in string name=xpath
+            in object name=namespaces
+            out interface type=Windows.Data.Xml.Dom.IXmlNode return
+    method split_text
+        method SplitText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlText shape=51 reverse=24
+            in uint32 name=offset
+            out interface type=Windows.Data.Xml.Dom.IXmlText return
+    method substring_data
+        method SubstringData slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlCharacterData shape=117 reverse=101
+            in uint32 name=offset
+            in uint32 name=count
+            out string return
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

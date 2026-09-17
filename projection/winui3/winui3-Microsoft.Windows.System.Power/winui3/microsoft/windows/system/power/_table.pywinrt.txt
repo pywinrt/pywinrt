@@ -1,0 +1,158 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.System.Power
+
+enum Microsoft.Windows.System.Power.BatteryStatus python_type
+    py BatteryStatus
+    signature enum(Microsoft.Windows.System.Power.BatteryStatus;i4)
+
+enum Microsoft.Windows.System.Power.DisplayStatus python_type
+    py DisplayStatus
+    signature enum(Microsoft.Windows.System.Power.DisplayStatus;i4)
+
+enum Microsoft.Windows.System.Power.EffectivePowerMode python_type
+    py EffectivePowerMode
+    signature enum(Microsoft.Windows.System.Power.EffectivePowerMode;i4)
+
+enum Microsoft.Windows.System.Power.EnergySaverStatus python_type
+    py EnergySaverStatus
+    signature enum(Microsoft.Windows.System.Power.EnergySaverStatus;i4)
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.EffectivePowerMode> concrete
+    guid c4dc524f-9095-56f2-9acf-e10ffa600fcb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Microsoft.Windows.System.Power.EffectivePowerMode;i4))
+    argument Microsoft.Windows.System.Power.EffectivePowerMode
+
+interface Microsoft.Windows.System.Power.IPowerManagerStatics
+    guid fa3554cc-be1c-534c-bff8-72df78e9f4a4
+
+interface Microsoft.Windows.System.Power.IPowerManagerStatics2
+    guid 61f3cc25-65b4-5def-9c9b-990cef3b0833
+
+class Microsoft.Windows.System.Power.PowerManager static python_type
+    py PowerManager
+    factory Microsoft.Windows.System.Power.IPowerManagerStatics2
+    factory Microsoft.Windows.System.Power.IPowerManagerStatics
+    property battery_status static
+        get get_BatteryStatus slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=99 static
+            out enum32 type=Microsoft.Windows.System.Power.BatteryStatus return
+    property display_status static
+        get get_DisplayStatus slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=247 static
+            out enum32 type=Microsoft.Windows.System.Power.DisplayStatus return
+    property effective_power_mode static
+        get get_EffectivePowerMode slot=29 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=266 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.EffectivePowerMode> return
+    property energy_saver_status static
+        get get_EnergySaverStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.System.Power.EnergySaverStatus return
+    property power_source_kind static
+        get get_PowerSourceKind slot=21 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=232 static
+            out enum32 type=Microsoft.Windows.System.Power.PowerSourceKind return
+    property power_supply_status static
+        get get_PowerSupplyStatus slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=162 static
+            out enum32 type=Microsoft.Windows.System.Power.PowerSupplyStatus return
+    property remaining_charge_percent static
+        get get_RemainingChargePercent slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=194 static
+            out int32 return
+    property remaining_discharge_time static
+        get get_RemainingDischargeTime slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=218 static
+            out timespan return
+    property system_suspend_status static
+        get get_SystemSuspendStatus slot=35 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=292 static
+            out enum32 type=Microsoft.Windows.System.Power.SystemSuspendStatus return
+    property user_presence_status static
+        get get_UserPresenceStatus slot=32 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=280 static
+            out enum32 type=Microsoft.Windows.System.Power.UserPresenceStatus return
+    property effective_power_mode2 static
+        get get_EffectivePowerMode2 slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics2 shape=4 reverse=22 static
+            out enum32 type=Microsoft.Windows.System.Power.EffectivePowerMode return
+    event battery_status_changed static
+        add add_BatteryStatusChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=124 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_BatteryStatusChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=156 static
+            in event_token name=token
+    event display_status_changed static
+        add add_DisplayStatusChanged slot=25 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=253 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_DisplayStatusChanged slot=26 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=257 static
+            in event_token name=token
+    event effective_power_mode_changed static
+        add add_EffectivePowerModeChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=271 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_EffectivePowerModeChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=277 static
+            in event_token name=token
+    event energy_saver_status_changed static
+        add add_EnergySaverStatusChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_EnergySaverStatusChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=82 static
+            in event_token name=token
+    event power_source_kind_changed static
+        add add_PowerSourceKindChanged slot=22 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=238 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_PowerSourceKindChanged slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=245 static
+            in event_token name=token
+    event power_supply_status_changed static
+        add add_PowerSupplyStatusChanged slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=174 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_PowerSupplyStatusChanged slot=14 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=192 static
+            in event_token name=token
+    event remaining_charge_percent_changed static
+        add add_RemainingChargePercentChanged slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=203 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_RemainingChargePercentChanged slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=215 static
+            in event_token name=token
+    event remaining_discharge_time_changed static
+        add add_RemainingDischargeTimeChanged slot=19 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=224 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_RemainingDischargeTimeChanged slot=20 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=399 static
+            in event_token name=token
+    event system_idle_status_changed static
+        add add_SystemIdleStatusChanged slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=260 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_SystemIdleStatusChanged slot=28 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 static
+            in event_token name=token
+    event system_suspend_status_changed static
+        add add_SystemSuspendStatusChanged slot=36 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=297 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_SystemSuspendStatusChanged slot=37 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=301 static
+            in event_token name=token
+    event user_presence_status_changed static
+        add add_UserPresenceStatusChanged slot=33 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=286 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_UserPresenceStatusChanged slot=34 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=291 static
+            in event_token name=token
+
+enum Microsoft.Windows.System.Power.PowerSourceKind python_type
+    py PowerSourceKind
+    signature enum(Microsoft.Windows.System.Power.PowerSourceKind;i4)
+
+enum Microsoft.Windows.System.Power.PowerSupplyStatus python_type
+    py PowerSupplyStatus
+    signature enum(Microsoft.Windows.System.Power.PowerSupplyStatus;i4)
+
+enum Microsoft.Windows.System.Power.SystemSuspendStatus python_type
+    py SystemSuspendStatus
+    signature enum(Microsoft.Windows.System.Power.SystemSuspendStatus;i4)
+
+enum Microsoft.Windows.System.Power.UserPresenceStatus python_type
+    py UserPresenceStatus
+    signature enum(Microsoft.Windows.System.Power.UserPresenceStatus;i4)
+
+class System.Object external
+    py winrt.system.Object

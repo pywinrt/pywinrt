@@ -1,0 +1,367 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Store.Preview
+
+enum Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode python_type
+    py DeliveryOptimizationDownloadMode
+    signature enum(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode;i4)
+
+enum Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource python_type
+    py DeliveryOptimizationDownloadModeSource
+    signature enum(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource;i4)
+
+class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings python_type
+    py DeliveryOptimizationSettings
+    signature rc(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings;{1810fda0-e853-565e-b874-7a8a7b9a0e0f})
+    default Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
+    requires Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
+    factory Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics
+    property download_mode
+        get get_DownloadMode slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode return
+    property download_mode_source
+        get get_DownloadModeSource slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource return
+    method get_current_settings static
+        method GetCurrentSettings slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings return
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> concrete
+    guid 9aa2af80-0dcb-5ec1-8435-0b687ed374a5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults;{b0daaed1-d6c5-4e53-a043-fba0d8e61231}))
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> concrete
+    guid 49c36a66-3908-51b3-8402-eb8e94c68864
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> concrete
+    guid b1713163-ee1b-5290-8316-f7ebb9d53163
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4)))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+    guid 0a815852-7c44-5674-b3d2-fa2e4c1e46c9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> concrete
+    guid 65178d50-e6a2-5d16-b244-65e9725e5a0c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    argument Windows.Storage.Streams.IRandomAccessStreamReference
+
+interface Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
+    guid 1810fda0-e853-565e-b874-7a8a7b9a0e0f
+
+interface Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics
+    guid 5c817caf-aed5-5999-b4c9-8c60898bc4f3
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete
+    guid 98a8577a-b128-5400-8d3d-58654eaaf957
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4))
+    argument Windows.ApplicationModel.Store.Preview.StoreSystemFeature
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics
+    guid 728f7fc0-8628-42ec-84a2-07780eb44d8b
+
+interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2
+    guid 657c4595-c8b7-4fe9-9f4c-4d71027d347e
+
+interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3
+    guid 6d45f57c-f144-4cb5-9d3f-4eb05e30b6d3
+
+interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4
+    guid 20ff56d2-4ee3-4cf0-9b12-552c03310f75
+
+interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5
+    guid f7613191-8fa9-49db-822b-0160e7e4e5c5
+
+interface Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo
+    guid f292dc08-c654-43ac-a21f-34801c9d3388
+
+interface Windows.ApplicationModel.Store.Preview.IStorePreview
+    guid 8a157241-840e-49a9-bc01-5d5b01fbc8e9
+
+interface Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo
+    guid 1937dbb3-6c01-4c9d-85cd-5babaac2b351
+
+interface Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
+    guid b0daaed1-d6c5-4e53-a043-fba0d8e61231
+
+interface Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
+    guid 81fd76e2-0b26-48d9-98ce-27461c669d6c
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> concrete
+    guid fcc6add5-dc28-500f-8e24-b22d1ab56aad
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351}))
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> concrete
+    guid 47418723-a671-5fdc-8647-68f7d8c31416
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo;{81fd76e2-0b26-48d9-98ce-27461c669d6c}))
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete
+    guid c8f90757-ebcf-5f2c-b918-6487105b0ca1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4))
+    argument Windows.ApplicationModel.Store.Preview.StoreSystemFeature
+
+interface Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper
+    guid 06a50525-e715-4123-9276-9d6f865ba55f
+
+class Windows.ApplicationModel.Store.Preview.StoreConfiguration static python_type
+    py StoreConfiguration
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics
+    property hardware_manufacturer_info static
+        get get_HardwareManufacturerInfo slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 reverse=121 static
+            out class type=Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo return
+    property purchase_prompting_policy static
+        get get_PurchasePromptingPolicy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 reverse=22 static
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_PurchasePromptingPolicy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 reverse=43 static
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    method filter_unsupported_system_features_async static
+        method FilterUnsupportedSystemFeaturesAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 reverse=144 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> name=systemFeatures
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> return
+    method get_enterprise_store_web_account_id static
+        method GetEnterpriseStoreWebAccountId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=121 static
+            out string return
+    method get_enterprise_store_web_account_id_for_user static
+        method GetEnterpriseStoreWebAccountIdForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=144 static
+            in class type=Windows.System.User name=user
+            out string return
+    method get_purchase_prompting_policy_for_user static
+        method GetPurchasePromptingPolicyForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=144 static
+            in class type=Windows.System.User name=user
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    method get_store_log_data_async static
+        method GetStoreLogDataAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=65 static
+            in enum_u32 type=Windows.ApplicationModel.Store.Preview.StoreLogOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
+    method get_store_web_account_id static
+        method GetStoreWebAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=22 static
+            out string return
+    method get_store_web_account_id_for_user static
+        method GetStoreWebAccountIdForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out string return
+    method has_store_web_account static
+        method HasStoreWebAccount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=4 reverse=22 static
+            out boolean return
+    method has_store_web_account_for_user static
+        method HasStoreWebAccountForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out boolean return
+    method is_pin_to_desktop_supported static
+        method IsPinToDesktopSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=22 static
+            out boolean return
+    method is_pin_to_start_supported static
+        method IsPinToStartSupported slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=62 static
+            out boolean return
+    method is_pin_to_taskbar_supported static
+        method IsPinToTaskbarSupported slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=43 static
+            out boolean return
+    method is_store_web_account_id static
+        method IsStoreWebAccountId slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 reverse=100 static
+            in string name=webAccountId
+            out boolean return
+    method is_store_web_account_id_for_user static
+        method IsStoreWebAccountIdForUser slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=117 reverse=125 static
+            in class type=Windows.System.User name=user
+            in string name=webAccountId
+            out boolean return
+    method pin_to_desktop static
+        method PinToDesktop slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=99 static
+            in string name=appPackageFamilyName
+    method pin_to_desktop_for_user static
+        method PinToDesktopForUser slot=10 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=51 reverse=124 static
+            in class type=Windows.System.User name=user
+            in string name=appPackageFamilyName
+    method set_enterprise_store_web_account_id static
+        method SetEnterpriseStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=62 static
+            in string name=webAccountId
+    method set_enterprise_store_web_account_id_for_user static
+        method SetEnterpriseStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=100 static
+            in class type=Windows.System.User name=user
+            in string name=webAccountId
+    method set_mobile_operator_configuration static
+        method SetMobileOperatorConfiguration slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=117 reverse=45 static
+            in string name=mobileOperatorId
+            in uint32 name=appDownloadLimitInMegabytes
+            in uint32 name=updateDownloadLimitInMegabytes
+    method set_purchase_prompting_policy_for_user static
+        method SetPurchasePromptingPolicyForUser slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=163 static
+            in class type=Windows.System.User name=user
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    method set_store_web_account_id static
+        method SetStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 reverse=62 static
+            in string name=webAccountId
+    method set_store_web_account_id_for_user static
+        method SetStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=100 static
+            in class type=Windows.System.User name=user
+            in string name=webAccountId
+    method set_system_configuration static
+        method SetSystemConfiguration slot=6 inputs=4 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=200 static
+            in string name=catalogHardwareManufacturerId
+            in string name=catalogStoreContentModifierId
+            in datetime name=systemConfigurationExpiration
+            in string name=catalogHardwareDescriptor
+    method should_restrict_to_enterprise_store_only static
+        method ShouldRestrictToEnterpriseStoreOnly slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=162 static
+            out boolean return
+    method should_restrict_to_enterprise_store_only_for_user static
+        method ShouldRestrictToEnterpriseStoreOnlyForUser slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=174 static
+            in class type=Windows.System.User name=user
+            out boolean return
+
+class Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo python_type
+    py StoreHardwareManufacturerInfo
+    signature rc(Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo;{f292dc08-c654-43ac-a21f-34801c9d3388})
+    default Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo
+    requires Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo
+    property hardware_manufacturer_id
+        get get_HardwareManufacturerId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=22
+            out string return
+    property manufacturer_name
+        get get_ManufacturerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=99
+            out string return
+    property model_name
+        get get_ModelName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=62
+            out string return
+    property store_content_modifier_id
+        get get_StoreContentModifierId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=43
+            out string return
+
+enum Windows.ApplicationModel.Store.Preview.StoreLogOptions python_type
+    py StoreLogOptions
+    signature enum(Windows.ApplicationModel.Store.Preview.StoreLogOptions;u4)
+
+class Windows.ApplicationModel.Store.Preview.StorePreview static python_type
+    py StorePreview
+    factory Windows.ApplicationModel.Store.Preview.IStorePreview
+    method load_add_on_product_infos_async static
+        method LoadAddOnProductInfosAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> return
+    method request_product_purchase_by_product_id_and_sku_id_async static
+        method RequestProductPurchaseByProductIdAndSkuIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=117 reverse=25 static
+            in string name=productId
+            in string name=skuId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> return
+
+class Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo python_type
+    py StorePreviewProductInfo
+    signature rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351})
+    default Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo
+    requires Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=99
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=22
+            out string return
+    property product_type
+        get get_ProductType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=43
+            out string return
+    property sku_info_list
+        get get_SkuInfoList slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> return
+    property title
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=62
+            out string return
+
+enum Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus python_type
+    py StorePreviewProductPurchaseStatus
+    signature enum(Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus;i4)
+
+class Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults python_type
+    py StorePreviewPurchaseResults
+    signature rc(Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults;{b0daaed1-d6c5-4e53-a043-fba0d8e61231})
+    default Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
+    requires Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
+    property product_purchase_status
+        get get_ProductPurchaseStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus return
+
+class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo python_type
+    py StorePreviewSkuInfo
+    signature rc(Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo;{81fd76e2-0b26-48d9-98ce-27461c669d6c})
+    default Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
+    requires Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
+    property currency_code
+        get get_CurrencyCode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=162
+            out string return
+    property custom_developer_data
+        get get_CustomDeveloperData slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=141
+            out string return
+    property description
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=121
+            out string return
+    property extended_data
+        get get_ExtendedData slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=186
+            out string return
+    property formatted_list_price
+        get get_FormattedListPrice slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=173
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=22
+            out string return
+    property sku_id
+        get get_SkuId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=43
+            out string return
+    property sku_type
+        get get_SkuType slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=62
+            out string return
+    property title
+        get get_Title slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=99
+            out string return
+
+enum Windows.ApplicationModel.Store.Preview.StoreSystemFeature python_type
+    py StoreSystemFeature
+    signature enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4)
+
+class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper static python_type
+    py WebAuthenticationCoreManagerHelper
+    factory Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper
+    method request_token_with_ui_element_hosting_async static
+        method RequestTokenWithUIElementHostingAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=117 reverse=25 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            in class type=Windows.UI.Xaml.UIElement name=uiElement
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+        method RequestTokenWithUIElementHostingAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=195 reverse=46 static
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            in class type=Windows.UI.Xaml.UIElement name=uiElement
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class Windows.Security.Authentication.Web.Core.WebTokenRequest external
+    py winrt.windows.security.authentication.web.core.WebTokenRequest
+
+class Windows.Security.Authentication.Web.Core.WebTokenRequestResult external
+    py winrt.windows.security.authentication.web.core.WebTokenRequestResult
+
+class Windows.Security.Credentials.WebAccount external
+    py winrt.windows.security.credentials.WebAccount
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement

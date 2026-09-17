@@ -1,0 +1,428 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Security.Authentication.OAuth
+
+class Microsoft.Security.Authentication.OAuth.AuthFailure python_type
+    py AuthFailure
+    signature rc(Microsoft.Security.Authentication.OAuth.AuthFailure;{ec55ed5f-0497-53cb-976b-abd146350175})
+    default Microsoft.Security.Authentication.OAuth.IAuthFailure
+    requires Microsoft.Security.Authentication.OAuth.IAuthFailure
+    property additional_params
+        get get_AdditionalParams slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthFailure shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property error
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthFailure shape=4 reverse=22
+            out string return
+    property error_description
+        get get_ErrorDescription slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthFailure shape=4 reverse=43
+            out string return
+    property error_uri
+        get get_ErrorUri slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthFailure shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+    property state
+        get get_State slot=9 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthFailure shape=4 reverse=99
+            out string return
+
+class Microsoft.Security.Authentication.OAuth.AuthRequestParams python_type
+    py AuthRequestParams
+    signature rc(Microsoft.Security.Authentication.OAuth.AuthRequestParams;{aac61e23-9155-551a-ac37-cdb2995f88d2})
+    default Microsoft.Security.Authentication.OAuth.IAuthRequestParams
+    requires Microsoft.Security.Authentication.OAuth.IAuthRequestParams
+    factory Microsoft.Security.Authentication.OAuth.IAuthRequestParamsFactory
+    factory Microsoft.Security.Authentication.OAuth.IAuthRequestParamsStatics
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParamsFactory shape=117 reverse=25
+            in string name=responseType
+            in string name=clientId
+            out class type=Microsoft.Security.Authentication.OAuth.AuthRequestParams return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParamsFactory shape=195 reverse=46
+            in string name=responseType
+            in string name=clientId
+            in class type=Windows.Foundation.Uri name=redirectUri
+            out class type=Microsoft.Security.Authentication.OAuth.AuthRequestParams return
+    property state
+        get get_State slot=12 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=162
+            out string return
+        put put_State slot=13 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=173
+            in string name=value
+    property scope
+        get get_Scope slot=14 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=186
+            out string return
+        put put_Scope slot=15 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=194
+            in string name=value
+    property response_type
+        get get_ResponseType slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=22
+            out string return
+        put put_ResponseType slot=7 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=43
+            in string name=value
+    property redirect_uri
+        get get_RedirectUri slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_RedirectUri slot=11 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property code_challenge_method
+        get get_CodeChallengeMethod slot=18 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=218
+            out enum32 type=Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind return
+        put put_CodeChallengeMethod slot=19 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=223
+            in enum32 type=Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind name=value
+    property code_challenge
+        get get_CodeChallenge slot=16 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=202
+            out string return
+        put put_CodeChallenge slot=17 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=210
+            in string name=value
+    property client_id
+        get get_ClientId slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=62
+            out string return
+        put put_ClientId slot=9 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=99
+            in string name=value
+    property additional_params
+        get get_AdditionalParams slot=20 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParams shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    method create_for_authorization_code_request static
+        method CreateForAuthorizationCodeRequest slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParamsStatics shape=51 reverse=24 static
+            in string name=clientId
+            out class type=Microsoft.Security.Authentication.OAuth.AuthRequestParams return
+        method CreateForAuthorizationCodeRequest slot=7 inputs=2 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestParamsStatics shape=117 reverse=45 static
+            in string name=clientId
+            in class type=Windows.Foundation.Uri name=redirectUri
+            out class type=Microsoft.Security.Authentication.OAuth.AuthRequestParams return
+
+class Microsoft.Security.Authentication.OAuth.AuthRequestResult python_type
+    py AuthRequestResult
+    signature rc(Microsoft.Security.Authentication.OAuth.AuthRequestResult;{10f8b804-04cf-5651-bd52-7da9346debc1})
+    default Microsoft.Security.Authentication.OAuth.IAuthRequestResult
+    requires Microsoft.Security.Authentication.OAuth.IAuthRequestResult
+    property failure
+        get get_Failure slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestResult shape=4 reverse=62
+            out class type=Microsoft.Security.Authentication.OAuth.AuthFailure return
+    property response
+        get get_Response slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestResult shape=4 reverse=43
+            out class type=Microsoft.Security.Authentication.OAuth.AuthResponse return
+    property response_uri
+        get get_ResponseUri slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthRequestResult shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class Microsoft.Security.Authentication.OAuth.AuthResponse python_type
+    py AuthResponse
+    signature rc(Microsoft.Security.Authentication.OAuth.AuthResponse;{5bc1fa62-fded-5769-9d40-ded1eea90d72})
+    default Microsoft.Security.Authentication.OAuth.IAuthResponse
+    requires Microsoft.Security.Authentication.OAuth.IAuthResponse
+    property access_token
+        get get_AccessToken slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=62
+            out string return
+    property additional_params
+        get get_AdditionalParams slot=12 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property code
+        get get_Code slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=43
+            out string return
+    property expires_in
+        get get_ExpiresIn slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=121
+            out string return
+    property scope
+        get get_Scope slot=11 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=141
+            out string return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=22
+            out string return
+    property token_type
+        get get_TokenType slot=9 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IAuthResponse shape=4 reverse=99
+            out string return
+
+class Microsoft.Security.Authentication.OAuth.ClientAuthentication activatable python_type
+    py ClientAuthentication
+    signature rc(Microsoft.Security.Authentication.OAuth.ClientAuthentication;{ef99342d-d597-5eff-878a-8de0cb597172})
+    default Microsoft.Security.Authentication.OAuth.IClientAuthentication
+    requires Microsoft.Security.Authentication.OAuth.IClientAuthentication
+    factory Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory
+    factory Microsoft.Security.Authentication.OAuth.IClientAuthenticationStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory shape=51 reverse=24
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=authorization implicit
+            out class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory shape=51 reverse=24
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=authorization
+            out class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication return
+    property proxy_authorization
+        get get_ProxyAuthorization slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthentication shape=4 reverse=62
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+        put put_ProxyAuthorization slot=9 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthentication shape=4 reverse=99
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
+    property authorization
+        get get_Authorization slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthentication shape=4 reverse=22
+            out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
+        put put_Authorization slot=7 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthentication shape=4 reverse=43
+            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
+    property additional_headers
+        get get_AdditionalHeaders slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthentication shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    method create_for_basic_authorization static
+        method CreateForBasicAuthorization slot=6 inputs=2 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthenticationStatics shape=117 reverse=25 static
+            in string name=clientId
+            in string name=clientSecret
+            out class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication return
+
+enum Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind python_type
+    py CodeChallengeMethodKind
+    signature enum(Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind;i4)
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.AuthRequestResult> concrete
+    guid 90c43237-b071-547a-b4e1-b786e230e9de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Security.Authentication.OAuth.AuthRequestResult;{10f8b804-04cf-5651-bd52-7da9346debc1}))
+    argument Microsoft.Security.Authentication.OAuth.AuthRequestResult
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.TokenRequestResult> concrete
+    guid 001a3d77-0c75-5e5c-910b-d143e639a03f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Security.Authentication.OAuth.TokenRequestResult;{35b31f77-f166-50df-a837-ec0460215166}))
+    argument Microsoft.Security.Authentication.OAuth.TokenRequestResult
+
+interface Microsoft.Security.Authentication.OAuth.IAuthFailure
+    guid ec55ed5f-0497-53cb-976b-abd146350175
+
+interface Microsoft.Security.Authentication.OAuth.IAuthRequestParams
+    guid aac61e23-9155-551a-ac37-cdb2995f88d2
+
+interface Microsoft.Security.Authentication.OAuth.IAuthRequestParamsFactory
+    guid 539bdca7-bde4-5a63-85d1-33403f6e3452
+
+interface Microsoft.Security.Authentication.OAuth.IAuthRequestParamsStatics
+    guid 0befd4f0-6864-5bf4-bd8e-2f3bf98906b5
+
+interface Microsoft.Security.Authentication.OAuth.IAuthRequestResult
+    guid 10f8b804-04cf-5651-bd52-7da9346debc1
+
+interface Microsoft.Security.Authentication.OAuth.IAuthResponse
+    guid 5bc1fa62-fded-5769-9d40-ded1eea90d72
+
+interface Microsoft.Security.Authentication.OAuth.IClientAuthentication
+    guid ef99342d-d597-5eff-878a-8de0cb597172
+
+interface Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory
+    guid 0d50e9f5-c37f-57cc-b9ec-2b193b0f9cec
+
+interface Microsoft.Security.Authentication.OAuth.IClientAuthenticationStatics
+    guid 65613560-2b6f-52fd-a479-3a96624682ae
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> concrete
+    guid eecd690c-1ff3-529f-923f-9b1c31fd3d0f
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    argument System.String
+    argument Windows.Data.Json.IJsonValue
+
+interface Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics
+    guid ac9d0dd1-c07e-5302-8150-199c7d343f57
+
+interface Microsoft.Security.Authentication.OAuth.ITokenFailure
+    guid 60f8d417-ea6a-51d2-8ad7-f0e5177aef0a
+
+interface Microsoft.Security.Authentication.OAuth.ITokenRequestParams
+    guid 49134dbc-aab5-5ba4-bcdf-950214d81182
+
+interface Microsoft.Security.Authentication.OAuth.ITokenRequestParamsFactory
+    guid 2bf39c30-2f30-5788-98d2-a8ba622be809
+
+interface Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics
+    guid 68b7af65-4381-5593-8820-f74a605b9f3b
+
+interface Microsoft.Security.Authentication.OAuth.ITokenRequestResult
+    guid 35b31f77-f166-50df-a837-ec0460215166
+
+interface Microsoft.Security.Authentication.OAuth.ITokenResponse
+    guid 9d9d8cd3-04b2-5df6-bfd2-e8a6859745da
+
+class Microsoft.Security.Authentication.OAuth.OAuth2Manager static python_type
+    py OAuth2Manager
+    factory Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics
+    method complete_auth_request static
+        method CompleteAuthRequest slot=7 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics shape=51 reverse=44 static
+            in class type=Windows.Foundation.Uri name=responseUri
+            out boolean return
+    method request_auth_with_params_async static
+        method RequestAuthWithParamsAsync slot=6 inputs=3 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics shape=325 static
+            in struct type=Microsoft.UI.WindowId name=parentWindowId
+            in class type=Windows.Foundation.Uri name=authEndpoint
+            in class type=Microsoft.Security.Authentication.OAuth.AuthRequestParams name=params
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.AuthRequestResult> return
+    method request_token_async static
+        method RequestTokenAsync slot=8 inputs=2 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics shape=117 reverse=66 static
+            in class type=Windows.Foundation.Uri name=tokenEndpoint
+            in class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams name=params
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.TokenRequestResult> return
+        method RequestTokenAsync slot=9 inputs=3 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IOAuth2ManagerStatics shape=195 reverse=102 static
+            in class type=Windows.Foundation.Uri name=tokenEndpoint
+            in class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams name=params
+            in class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication name=clientAuth
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.TokenRequestResult> return
+
+class Microsoft.Security.Authentication.OAuth.TokenFailure python_type
+    py TokenFailure
+    signature rc(Microsoft.Security.Authentication.OAuth.TokenFailure;{60f8d417-ea6a-51d2-8ad7-f0e5177aef0a})
+    default Microsoft.Security.Authentication.OAuth.ITokenFailure
+    requires Microsoft.Security.Authentication.OAuth.ITokenFailure
+    property additional_params
+        get get_AdditionalParams slot=11 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> return
+    property error
+        get get_Error slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=62
+            out string return
+    property error_code
+        get get_ErrorCode slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=43
+            out hresult return
+    property error_description
+        get get_ErrorDescription slot=9 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=99
+            out string return
+    property error_uri
+        get get_ErrorUri slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=22
+            out enum32 type=Microsoft.Security.Authentication.OAuth.TokenFailureKind return
+
+enum Microsoft.Security.Authentication.OAuth.TokenFailureKind python_type
+    py TokenFailureKind
+    signature enum(Microsoft.Security.Authentication.OAuth.TokenFailureKind;i4)
+
+class Microsoft.Security.Authentication.OAuth.TokenRequestParams python_type
+    py TokenRequestParams
+    signature rc(Microsoft.Security.Authentication.OAuth.TokenRequestParams;{49134dbc-aab5-5ba4-bcdf-950214d81182})
+    default Microsoft.Security.Authentication.OAuth.ITokenRequestParams
+    requires Microsoft.Security.Authentication.OAuth.ITokenRequestParams
+    factory Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics
+    factory Microsoft.Security.Authentication.OAuth.ITokenRequestParamsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsFactory shape=51 reverse=24
+            in string name=grantType
+            out class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams return
+    property username
+        get get_Username slot=16 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=202
+            out string return
+        put put_Username slot=17 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=210
+            in string name=value
+    property scope
+        get get_Scope slot=20 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=228
+            out string return
+        put put_Scope slot=21 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=232
+            in string name=value
+    property refresh_token
+        get get_RefreshToken slot=22 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=237
+            out string return
+        put put_RefreshToken slot=23 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=242
+            in string name=value
+    property redirect_uri
+        get get_RedirectUri slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_RedirectUri slot=11 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property password
+        get get_Password slot=18 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=218
+            out string return
+        put put_Password slot=19 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=223
+            in string name=value
+    property grant_type
+        get get_GrantType slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=22
+            out string return
+        put put_GrantType slot=7 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=43
+            in string name=value
+    property code_verifier
+        get get_CodeVerifier slot=12 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=162
+            out string return
+        put put_CodeVerifier slot=13 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=173
+            in string name=value
+    property code
+        get get_Code slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=62
+            out string return
+        put put_Code slot=9 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=99
+            in string name=value
+    property client_id
+        get get_ClientId slot=14 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=186
+            out string return
+        put put_ClientId slot=15 inputs=1 outputs=0 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=194
+            in string name=value
+    property additional_params
+        get get_AdditionalParams slot=24 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParams shape=4 reverse=247
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    method create_for_authorization_code_request static
+        method CreateForAuthorizationCodeRequest slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics shape=51 reverse=24 static
+            in class type=Microsoft.Security.Authentication.OAuth.AuthResponse name=authResponse
+            out class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams return
+    method create_for_client_credentials static
+        method CreateForClientCredentials slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics shape=4 reverse=43 static
+            out class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams return
+    method create_for_extension static
+        method CreateForExtension slot=8 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics shape=51 reverse=65 static
+            in class type=Windows.Foundation.Uri name=extensionUri
+            out class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams return
+    method create_for_refresh_token static
+        method CreateForRefreshToken slot=9 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics shape=51 reverse=100 static
+            in string name=refreshToken
+            out class type=Microsoft.Security.Authentication.OAuth.TokenRequestParams return
+
+class Microsoft.Security.Authentication.OAuth.TokenRequestResult python_type
+    py TokenRequestResult
+    signature rc(Microsoft.Security.Authentication.OAuth.TokenRequestResult;{35b31f77-f166-50df-a837-ec0460215166})
+    default Microsoft.Security.Authentication.OAuth.ITokenRequestResult
+    requires Microsoft.Security.Authentication.OAuth.ITokenRequestResult
+    property failure
+        get get_Failure slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestResult shape=4 reverse=62
+            out class type=Microsoft.Security.Authentication.OAuth.TokenFailure return
+    property response
+        get get_Response slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestResult shape=4 reverse=43
+            out class type=Microsoft.Security.Authentication.OAuth.TokenResponse return
+    property response_message
+        get get_ResponseMessage slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestResult shape=4 reverse=22
+            out class type=Windows.Web.Http.HttpResponseMessage return
+
+class Microsoft.Security.Authentication.OAuth.TokenResponse python_type
+    py TokenResponse
+    signature rc(Microsoft.Security.Authentication.OAuth.TokenResponse;{9d9d8cd3-04b2-5df6-bfd2-e8a6859745da})
+    default Microsoft.Security.Authentication.OAuth.ITokenResponse
+    requires Microsoft.Security.Authentication.OAuth.ITokenResponse
+    property access_token
+        get get_AccessToken slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=22
+            out string return
+    property additional_params
+        get get_AdditionalParams slot=11 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> return
+    property expires_in
+        get get_ExpiresIn slot=8 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=62
+            out double return
+    property refresh_token
+        get get_RefreshToken slot=9 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=99
+            out string return
+    property scope
+        get get_Scope slot=10 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=121
+            out string return
+    property token_type
+        get get_TokenType slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenResponse shape=4 reverse=43
+            out string return
+
+struct Microsoft.UI.WindowId external
+    py winui3.microsoft.ui.WindowId
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Data.Json.IJsonValue external
+    py winrt.windows.data.json._IJsonValue
+    guid a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage
+
+class Windows.Web.Http.Headers.HttpCredentialsHeaderValue external
+    py winrt.windows.web.http.headers.HttpCredentialsHeaderValue

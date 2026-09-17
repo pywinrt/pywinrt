@@ -1,0 +1,29 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Management.Deployment.Preview
+
+class Windows.Management.Deployment.Preview.ClassicAppManager static python_type
+    py ClassicAppManager
+    factory Windows.Management.Deployment.Preview.IClassicAppManagerStatics
+    method find_installed_app static
+        method FindInstalledApp slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.Preview.IClassicAppManagerStatics shape=51 reverse=24 static
+            in string name=appUninstallKey
+            out class type=Windows.Management.Deployment.Preview.InstalledClassicAppInfo return
+
+interface Windows.Management.Deployment.Preview.IClassicAppManagerStatics
+    guid e2fad668-882c-4f33-b035-0df7b90d67e6
+
+interface Windows.Management.Deployment.Preview.IInstalledClassicAppInfo
+    guid 0a7d3da3-65d0-4086-80d6-0610d760207d
+
+class Windows.Management.Deployment.Preview.InstalledClassicAppInfo python_type
+    py InstalledClassicAppInfo
+    signature rc(Windows.Management.Deployment.Preview.InstalledClassicAppInfo;{0a7d3da3-65d0-4086-80d6-0610d760207d})
+    default Windows.Management.Deployment.Preview.IInstalledClassicAppInfo
+    requires Windows.Management.Deployment.Preview.IInstalledClassicAppInfo
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.Preview.IInstalledClassicAppInfo shape=4 reverse=22
+            out string return
+    property display_version
+        get get_DisplayVersion slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.Preview.IInstalledClassicAppInfo shape=4 reverse=43
+            out string return

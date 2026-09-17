@@ -1,0 +1,241 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Bluetooth.Background
+
+enum Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode python_type
+    py BluetoothEventTriggeringMode
+    signature enum(Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode;i4)
+
+class Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails python_type
+    py BluetoothLEAdvertisementPublisherTriggerDetails
+    signature rc(Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails;{610eca86-3480-41c9-a918-7ddadf207e00})
+    default Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2
+    property error
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails shape=4 reverse=43
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus return
+    property selected_transmit_power_level_in_dbm
+        get get_SelectedTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Int16> return
+
+class Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails python_type
+    py BluetoothLEAdvertisementWatcherTriggerDetails
+    signature rc(Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails;{a7db5ad7-2257-4e69-9784-fee645c1dce0})
+    default Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails
+    property advertisements
+        get get_Advertisements slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> return
+    property error
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
+    property signal_strength_filter
+        get get_SignalStrengthFilter slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails shape=4 reverse=62
+            out class type=Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter return
+
+class Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails python_type
+    py GattCharacteristicNotificationTriggerDetails
+    signature rc(Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails;{9ba03b18-0fec-436a-93b1-f46c697532a2})
+    default Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2
+    property characteristic
+        get get_Characteristic slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property error
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
+    property event_triggering_mode
+        get get_EventTriggeringMode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2 shape=4 reverse=43
+            out enum32 type=Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode return
+    property value_changed_events
+        get get_ValueChangedEvents slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> return
+
+class Windows.Devices.Bluetooth.Background.GattServiceProviderConnection python_type
+    py GattServiceProviderConnection
+    signature rc(Windows.Devices.Bluetooth.Background.GattServiceProviderConnection;{7fa1b9b9-2f13-40b5-9582-8eb78e98ef13})
+    default Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection
+    requires Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection
+    requires Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection2
+    factory Windows.Devices.Bluetooth.Background.IGattServiceProviderConnectionStatics
+    property service
+        get get_Service slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection shape=4 reverse=43
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService return
+    property trigger_id
+        get get_TriggerId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection shape=4 reverse=22
+            out string return
+    property all_services static
+        get get_AllServices slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderConnectionStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> return
+    method start
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection shape=0 reverse=55
+    method update_advertising_parameters
+        method UpdateAdvertisingParameters slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection2 shape=4 reverse=22
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters name=parameters
+
+class Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails python_type
+    py GattServiceProviderTriggerDetails
+    signature rc(Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails;{ae8c0625-05ff-4afb-b16a-de95f3cf0158})
+    default Windows.Devices.Bluetooth.Background.IGattServiceProviderTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IGattServiceProviderTriggerDetails
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IGattServiceProviderTriggerDetails shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.Background.GattServiceProviderConnection return
+
+interface Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails
+    guid 610eca86-3480-41c9-a918-7ddadf207e00
+
+interface Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2
+    guid d4a3d025-c601-42d6-9829-4ccb3f5cd77f
+
+interface Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementWatcherTriggerDetails
+    guid a7db5ad7-2257-4e69-9784-fee645c1dce0
+
+interface Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails
+    guid 9ba03b18-0fec-436a-93b1-f46c697532a2
+
+interface Windows.Devices.Bluetooth.Background.IGattCharacteristicNotificationTriggerDetails2
+    guid 727a50dc-949d-454a-b192-983467e3d50f
+
+interface Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection
+    guid 7fa1b9b9-2f13-40b5-9582-8eb78e98ef13
+
+interface Windows.Devices.Bluetooth.Background.IGattServiceProviderConnection2
+    guid 90d12be0-ebc0-484f-ae0a-7eb8b6266bac
+
+interface Windows.Devices.Bluetooth.Background.IGattServiceProviderConnectionStatics
+    guid 3d509f4b-0b0e-4466-b8cd-6ebdda1fa17d
+
+interface Windows.Devices.Bluetooth.Background.IGattServiceProviderTriggerDetails
+    guid ae8c0625-05ff-4afb-b16a-de95f3cf0158
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> concrete
+    guid 94eccb06-19ad-5e4f-953e-12c4aec054e9
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Devices.Bluetooth.Background.GattServiceProviderConnection;{7fa1b9b9-2f13-40b5-9582-8eb78e98ef13}))
+    argument System.String
+    argument Windows.Devices.Bluetooth.Background.GattServiceProviderConnection
+
+interface Windows.Foundation.IReference<System.Int16> concrete
+    guid 6ec9e41b-6709-5647-9918-a1270110fc4e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i2)
+    argument System.Int16
+
+interface Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails
+    guid f922734d-2e3c-4efc-ab59-fc5cf96f97e3
+
+interface Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation
+    guid 6d3e75a8-5429-4059-92e3-1e8b65528707
+
+interface Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation
+    guid b091227b-f434-4cb0-99b1-4ab8cedaedd7
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> concrete
+    guid 8aef9bca-fe7d-5966-9789-fede24cb41c4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs;{27987ddf-e596-41be-8d43-9e6731d4a913}))
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> concrete
+    guid 3f96e85f-ca51-5303-bd1b-acec7773baf6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs;{d21bdb54-06e3-4ed8-a263-acfac8ba7313}))
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+
+class Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails python_type
+    py RfcommConnectionTriggerDetails
+    signature rc(Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails;{f922734d-2e3c-4efc-ab59-fc5cf96f97e3})
+    default Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails
+    requires Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails
+    property incoming
+        get get_Incoming slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails shape=4 reverse=43
+            out boolean return
+    property remote_device
+        get get_RemoteDevice slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails shape=4 reverse=62
+            out class type=Windows.Devices.Bluetooth.BluetoothDevice return
+    property socket
+        get get_Socket slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommConnectionTriggerDetails shape=4 reverse=22
+            out class type=Windows.Networking.Sockets.StreamSocket return
+
+class Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation python_type
+    py RfcommInboundConnectionInformation
+    signature rc(Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation;{6d3e75a8-5429-4059-92e3-1e8b65528707})
+    default Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation
+    requires Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation
+    property service_capabilities
+        get get_ServiceCapabilities slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=121
+            out enum_u32 type=Windows.Devices.Bluetooth.BluetoothServiceCapabilities return
+        put put_ServiceCapabilities slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=141
+            in enum_u32 type=Windows.Devices.Bluetooth.BluetoothServiceCapabilities name=value
+    property sdp_record
+        get get_SdpRecord slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_SdpRecord slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property local_service_id
+        get get_LocalServiceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=62
+            out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
+        put put_LocalServiceId slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IRfcommInboundConnectionInformation shape=4 reverse=99
+            in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=value
+
+class Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation python_type
+    py RfcommOutboundConnectionInformation
+    signature rc(Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation;{b091227b-f434-4cb0-99b1-4ab8cedaedd7})
+    default Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation
+    requires Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation
+    property remote_service_id
+        get get_RemoteServiceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation shape=4 reverse=22
+            out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
+        put put_RemoteServiceId slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Background.IRfcommOutboundConnectionInformation shape=4 reverse=43
+            in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=value
+
+class System.Int16 external
+    py winrt.system.Int16
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Devices.Bluetooth.BluetoothDevice external
+    py winrt.windows.devices.bluetooth.BluetoothDevice
+
+enum Windows.Devices.Bluetooth.BluetoothError external
+    py winrt.windows.devices.bluetooth.BluetoothError
+
+enum Windows.Devices.Bluetooth.BluetoothServiceCapabilities external
+    py winrt.windows.devices.bluetooth.BluetoothServiceCapabilities
+
+class Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter external
+    py winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter
+
+enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus
+
+class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs external
+    py winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalService
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattServiceProviderAdvertisingParameters
+
+class Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs external
+    py winrt.windows.devices.bluetooth.genericattributeprofile.GattValueChangedEventArgs
+
+class Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId external
+    py winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId
+
+class Windows.Networking.Sockets.StreamSocket external
+    py winrt.windows.networking.sockets.StreamSocket
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

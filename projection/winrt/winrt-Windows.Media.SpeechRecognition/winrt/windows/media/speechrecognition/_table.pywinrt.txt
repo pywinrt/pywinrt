@@ -1,0 +1,653 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.SpeechRecognition
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> concrete
+    guid a392249a-e28a-564a-9e73-1dda63ca643c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult;{407e6c5d-6ac7-4da4-9cc1-2fce32cf7489}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete
+    guid ba3eebe8-8d7c-51f2-9ed4-ebafe3674db4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+
+interface Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs
+    guid e3d069bb-e30c-5e18-424b-7fbe81f8fbd0
+
+interface Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionResultGeneratedEventArgs
+    guid 19091e1e-6e7e-5a46-40fb-76594f786504
+
+interface Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession
+    guid 6a213c04-6614-49f8-99a2-b5e9b3a085c8
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionCompilationResult
+    guid 407e6c5d-6ac7-4da4-9cc1-2fce32cf7489
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint python_type
+    py _ISpeechRecognitionConstraint
+    guid 79ac1628-4d68-43c4-8911-40dc4101b55b
+    signature {79ac1628-4d68-43c4-8911-40dc4101b55b}
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=43
+            in boolean name=value
+    property probability
+        get get_Probability slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=141
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability return
+        put put_Probability slot=12 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=162
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability name=value
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=62
+            out string return
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=99
+            in string name=value
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType return
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraint
+    guid b5031a8f-85ca-4fa4-b11a-474fc41b3835
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory
+    guid 3da770eb-c479-4c27-9f19-89974ef392d1
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesis
+    guid 7a7b25b0-99c5-4f7d-bf84-10aa1302b634
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesisGeneratedEventArgs
+    guid 55161a7a-8023-5866-411d-1213bb271476
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraint
+    guid 09c487e9-e4ad-4526-81f2-4946fb481d98
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory
+    guid 40f3cdc7-562a-426a-9f3b-3b4e282be1d5
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionQualityDegradingEventArgs
+    guid 4fe24105-8c3a-4c7e-8d0a-5bd4f5b14ad8
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionResult
+    guid 4e303157-034e-4652-857e-d0454cc4beec
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionResult2
+    guid af7ed1ba-451b-4166-a0c1-1ffe84032d03
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionSemanticInterpretation
+    guid aae1da9b-7e32-4c1f-89fe-0c65f486f52e
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint
+    guid bf6fdf19-825d-4e69-a681-36e48cf1c93e
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory
+    guid 6e6863df-ec05-47d7-a5df-56a3431e58d2
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognitionVoiceCommandDefinitionConstraint
+    guid f2791c2b-1ef4-4ae7-9d77-b6ff10b8a3c2
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizer
+    guid 0bc3c9cb-c26a-40f2-aeb5-8096b2e48073
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizer2
+    guid 63c9baf1-91e3-4ea4-86a1-7c3867d084a6
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerFactory
+    guid 60c488dd-7fb8-4033-ac70-d046f64818e1
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerStateChangedEventArgs
+    guid 563d4f09-ba03-4bad-ad81-ddc6c4dab0c3
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerStatics
+    guid 87a35eac-a7dc-4b0b-bcc9-24f47c0b7ebf
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2
+    guid 1d1b0d95-7565-4ef9-a2f3-ba15162a96cf
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts
+    guid 2ef76fca-6a3c-4dca-a153-df1bc88a79af
+
+interface Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions
+    guid 7888d641-b92b-44ba-a25f-d1864630641f
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete
+    guid 2691d763-561e-5060-bbc9-7b07361acc95
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{79ac1628-4d68-43c4-8911-40dc4101b55b})
+    argument Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> concrete
+    guid 144b0f3d-2d59-5dd2-b012-908ec3e06435
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete
+    guid 0e37810f-1de6-5199-833f-5a6b0bd91e23
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+
+class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs python_type
+    py SpeechContinuousRecognitionCompletedEventArgs
+    signature rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs;{e3d069bb-e30c-5e18-424b-7fbe81f8fbd0})
+    default Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs
+    requires Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus return
+
+enum Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode python_type
+    py SpeechContinuousRecognitionMode
+    signature enum(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode;i4)
+
+class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs python_type
+    py SpeechContinuousRecognitionResultGeneratedEventArgs
+    signature rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs;{19091e1e-6e7e-5a46-40fb-76594f786504})
+    default Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionResultGeneratedEventArgs
+    requires Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionResultGeneratedEventArgs
+    property result
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionResultGeneratedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+
+class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession python_type
+    py SpeechContinuousRecognitionSession
+    signature rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession;{6a213c04-6614-49f8-99a2-b5e9b3a085c8})
+    default Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession
+    requires Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession
+    property auto_stop_silence_timeout
+        get get_AutoStopSilenceTimeout slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=22
+            out timespan return
+        put put_AutoStopSilenceTimeout slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=26 reverse=53
+            in timespan name=value
+    event completed
+        add add_Completed slot=14 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs> name=value
+            out event_token return
+        remove remove_Completed slot=15 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=26 reverse=200
+            in event_token name=value
+    event result_generated
+        add add_ResultGenerated slot=16 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs> name=value
+            out event_token return
+        remove remove_ResultGenerated slot=17 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=26 reverse=215
+            in event_token name=value
+    method cancel_async
+        method CancelAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=141
+            out interface type=Windows.Foundation.IAsyncAction return
+    method pause_async
+        method PauseAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=162
+            out interface type=Windows.Foundation.IAsyncAction return
+    method resume
+        method Resume slot=13 inputs=0 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=0 reverse=169
+    method start_async
+        method StartAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+        method StartAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=51 reverse=100
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode name=mode
+            out interface type=Windows.Foundation.IAsyncAction return
+    method stop_async
+        method StopAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=121
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem python_type
+    py SpeechRecognitionAudioProblem
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem;i4)
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult python_type
+    py SpeechRecognitionCompilationResult
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult;{407e6c5d-6ac7-4da4-9cc1-2fce32cf7489})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionCompilationResult
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionCompilationResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionCompilationResult shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus return
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionConfidence python_type
+    py SpeechRecognitionConfidence
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConfidence;i4)
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability python_type
+    py SpeechRecognitionConstraintProbability
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability;i4)
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType python_type
+    py SpeechRecognitionConstraintType
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType;i4)
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint python_type
+    py SpeechRecognitionGrammarFileConstraint
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint;{b5031a8f-85ca-4fa4-b11a-474fc41b3835})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    factory Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory shape=51 reverse=24
+            in class type=Windows.Storage.StorageFile name=file
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraintFactory shape=117 reverse=45
+            in class type=Windows.Storage.StorageFile name=file
+            in string name=tag
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint return
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=62
+            out string return
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=99
+            in string name=value
+    property probability
+        get get_Probability slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=141
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability return
+        put put_Probability slot=12 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=162
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=43
+            in boolean name=value
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType return
+    property grammar_file
+        get get_GrammarFile slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionGrammarFileConstraint shape=4 reverse=22
+            out class type=Windows.Storage.StorageFile return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis python_type
+    py SpeechRecognitionHypothesis
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis;{7a7b25b0-99c5-4f7d-bf84-10aa1302b634})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesis
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesis
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesis shape=4 reverse=22
+            out string return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs python_type
+    py SpeechRecognitionHypothesisGeneratedEventArgs
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs;{55161a7a-8023-5866-411d-1213bb271476})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesisGeneratedEventArgs
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesisGeneratedEventArgs
+    property hypothesis
+        get get_Hypothesis slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionHypothesisGeneratedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint python_type
+    py SpeechRecognitionListConstraint
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint;{09c487e9-e4ad-4526-81f2-4946fb481d98})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    factory Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=commands
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraintFactory shape=117 reverse=45
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=commands
+            in string name=tag
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint return
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=62
+            out string return
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=99
+            in string name=value
+    property probability
+        get get_Probability slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=141
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability return
+        put put_Probability slot=12 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=162
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=43
+            in boolean name=value
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType return
+    property commands
+        get get_Commands slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionListConstraint shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs python_type
+    py SpeechRecognitionQualityDegradingEventArgs
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs;{4fe24105-8c3a-4c7e-8d0a-5bd4f5b14ad8})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionQualityDegradingEventArgs
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionQualityDegradingEventArgs
+    property problem
+        get get_Problem slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionQualityDegradingEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionResult python_type
+    py SpeechRecognitionResult
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionResult
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionResult
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionResult2
+    property confidence
+        get get_Confidence slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=62
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConfidence return
+    property constraint
+        get get_Constraint slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=141
+            out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
+    property raw_confidence
+        get get_RawConfidence slot=13 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=173
+            out double return
+    property rule_path
+        get get_RulePath slot=12 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property semantic_interpretation
+        get get_SemanticInterpretation slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=99
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus return
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=4 reverse=43
+            out string return
+    property phrase_duration
+        get get_PhraseDuration slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult2 shape=4 reverse=43
+            out timespan return
+    property phrase_start_time
+        get get_PhraseStartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult2 shape=4 reverse=22
+            out datetime return
+    method get_alternates
+        method GetAlternates slot=10 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionResult shape=51 reverse=124
+            in uint32 name=maxAlternates
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus python_type
+    py SpeechRecognitionResultStatus
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus;i4)
+
+enum Windows.Media.SpeechRecognition.SpeechRecognitionScenario python_type
+    py SpeechRecognitionScenario
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionScenario;i4)
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation python_type
+    py SpeechRecognitionSemanticInterpretation
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation;{aae1da9b-7e32-4c1f-89fe-0c65f486f52e})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionSemanticInterpretation
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionSemanticInterpretation
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionSemanticInterpretation shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint python_type
+    py SpeechRecognitionTopicConstraint
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint;{bf6fdf19-825d-4e69-a681-36e48cf1c93e})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    factory Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory shape=117 reverse=25
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionScenario name=scenario
+            in string name=topicHint
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraintFactory shape=195 reverse=46
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionScenario name=scenario
+            in string name=topicHint
+            in string name=tag
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint return
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=62
+            out string return
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=99
+            in string name=value
+    property probability
+        get get_Probability slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=141
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability return
+        put put_Probability slot=12 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=162
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=43
+            in boolean name=value
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType return
+    property scenario
+        get get_Scenario slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionScenario return
+    property topic_hint
+        get get_TopicHint slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionTopicConstraint shape=4 reverse=43
+            out string return
+
+class Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint python_type
+    py SpeechRecognitionVoiceCommandDefinitionConstraint
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint;{f2791c2b-1ef4-4ae7-9d77-b6ff10b8a3c2})
+    default Windows.Media.SpeechRecognition.ISpeechRecognitionVoiceCommandDefinitionConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionVoiceCommandDefinitionConstraint
+    requires Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    property tag
+        get get_Tag slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=62
+            out string return
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=99
+            in string name=value
+    property probability
+        get get_Probability slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=141
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability return
+        put put_Probability slot=12 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=162
+            in enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability name=value
+    property is_enabled
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=22
+            out boolean return
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=43
+            in boolean name=value
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint shape=4 reverse=121
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType return
+
+class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type closeable
+    py SpeechRecognizer
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073})
+    default Windows.Media.SpeechRecognition.ISpeechRecognizer
+    requires Windows.Media.SpeechRecognition.ISpeechRecognizer
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.SpeechRecognition.ISpeechRecognizer2
+    factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics
+    factory Windows.Media.SpeechRecognition.ISpeechRecognizerFactory
+    factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerFactory shape=51 reverse=24
+            in class type=Windows.Globalization.Language name=language implicit
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognizer return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerFactory shape=51 reverse=24
+            in class type=Windows.Globalization.Language name=language
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognizer return
+    property constraints
+        get get_Constraints slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> return
+    property current_language
+        get get_CurrentLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=22
+            out class type=Windows.Globalization.Language return
+    property timeouts
+        get get_Timeouts slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=62
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts return
+    property ui_options
+        get get_UIOptions slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=99
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions return
+    property continuous_recognition_session
+        get get_ContinuousRecognitionSession slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=4 reverse=22
+            out class type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession return
+    property state
+        get get_State slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=4 reverse=43
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognizerState return
+    property supported_grammar_languages static
+        get get_SupportedGrammarLanguages slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> return
+    property supported_topic_languages static
+        get get_SupportedTopicLanguages slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> return
+    property system_speech_language static
+        get get_SystemSpeechLanguage slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerStatics shape=4 reverse=22 static
+            out class type=Windows.Globalization.Language return
+    event recognition_quality_degrading
+        add add_RecognitionQualityDegrading slot=13 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs> name=speechRecognitionQualityDegradingHandler
+            out event_token return
+        remove remove_RecognitionQualityDegrading slot=14 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=26 reverse=192
+            in event_token name=cookie
+    event state_changed
+        add add_StateChanged slot=15 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs> name=stateChangedHandler
+            out event_token return
+        remove remove_StateChanged slot=16 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=26 reverse=397
+            in event_token name=cookie
+    event hypothesis_generated
+        add add_HypothesisGenerated slot=9 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs> name=value
+            out event_token return
+        remove remove_HypothesisGenerated slot=10 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=26 reverse=134
+            in event_token name=value
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method compile_constraints_async
+        method CompileConstraintsAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> return
+    method recognize_async
+        method RecognizeAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=141
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+    method recognize_with_ui_async
+        method RecognizeWithUIAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=162
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+    method stop_recognition_async
+        method StopRecognitionAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_set_system_speech_language_async static
+        method TrySetSystemSpeechLanguageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2 shape=51 reverse=24 static
+            in class type=Windows.Globalization.Language name=speechLanguage
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.Media.SpeechRecognition.SpeechRecognizerState python_type
+    py SpeechRecognizerState
+    signature enum(Windows.Media.SpeechRecognition.SpeechRecognizerState;i4)
+
+class Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs python_type
+    py SpeechRecognizerStateChangedEventArgs
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs;{563d4f09-ba03-4bad-ad81-ddc6c4dab0c3})
+    default Windows.Media.SpeechRecognition.ISpeechRecognizerStateChangedEventArgs
+    requires Windows.Media.SpeechRecognition.ISpeechRecognizerStateChangedEventArgs
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerStateChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.SpeechRecognition.SpeechRecognizerState return
+
+class Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts python_type
+    py SpeechRecognizerTimeouts
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts;{2ef76fca-6a3c-4dca-a153-df1bc88a79af})
+    default Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts
+    requires Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts
+    property initial_silence_timeout
+        get get_InitialSilenceTimeout slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=4 reverse=22
+            out timespan return
+        put put_InitialSilenceTimeout slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=26 reverse=53
+            in timespan name=value
+    property end_silence_timeout
+        get get_EndSilenceTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=4 reverse=62
+            out timespan return
+        put put_EndSilenceTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=26 reverse=110
+            in timespan name=value
+    property babble_timeout
+        get get_BabbleTimeout slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=4 reverse=121
+            out timespan return
+        put put_BabbleTimeout slot=11 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts shape=26 reverse=156
+            in timespan name=value
+
+class Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions python_type
+    py SpeechRecognizerUIOptions
+    signature rc(Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions;{7888d641-b92b-44ba-a25f-d1864630641f})
+    default Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions
+    requires Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions
+    property show_confirmation
+        get get_ShowConfirmation slot=12 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=162
+            out boolean return
+        put put_ShowConfirmation slot=13 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=173
+            in boolean name=value
+    property is_read_back_enabled
+        get get_IsReadBackEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=121
+            out boolean return
+        put put_IsReadBackEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=141
+            in boolean name=value
+    property example_text
+        get get_ExampleText slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=22
+            out string return
+        put put_ExampleText slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=43
+            in string name=value
+    property audible_prompt
+        get get_AudiblePrompt slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=62
+            out string return
+        put put_AudiblePrompt slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions shape=4 reverse=99
+            in string name=value
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs> concrete
+    guid 8103c018-7952-59f9-9f41-23b17d6e452d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession;{6a213c04-6614-49f8-99a2-b5e9b3a085c8});rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs;{e3d069bb-e30c-5e18-424b-7fbe81f8fbd0}))
+    argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession
+    argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs> concrete
+    guid 26192073-a2c9-527d-9bd3-911c05e0011e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession;{6a213c04-6614-49f8-99a2-b5e9b3a085c8});rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs;{19091e1e-6e7e-5a46-40fb-76594f786504}))
+    argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession
+    argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs> concrete
+    guid 4cb45aba-7573-545a-b29a-e9be35bd4682
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs;{55161a7a-8023-5866-411d-1213bb271476}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognizer
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs> concrete
+    guid 15ca7918-61d2-57b2-b933-44063e8bb662
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs;{4fe24105-8c3a-4c7e-8d0a-5bd4f5b14ad8}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognizer
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs> concrete
+    guid d1185e92-5c30-5561-b3e2-e82ddbd872c3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs;{563d4f09-ba03-4bad-ad81-ddc6c4dab0c3}))
+    argument Windows.Media.SpeechRecognition.SpeechRecognizer
+    argument Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Globalization.Language external
+    py winrt.windows.globalization.Language
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

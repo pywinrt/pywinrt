@@ -22,37 +22,6 @@ class ProjectedType
 
         PyWrapperTypeName = Category == Category.Interface ? $"_{Name}" : Name;
 
-        CppNamespace = Namespace.ToCppNamespace();
-
-        // FIXME: HResult and EventRegistrationToken should not be projected
-        if (type.FullName == "Windows.Foundation.HResult")
-        {
-            CppWinrtType = "winrt::hresult";
-        }
-        else if (type.FullName == "Windows.Foundation.EventRegistrationToken")
-        {
-            CppWinrtType = "winrt::event_token";
-        }
-        else if (type.TryGetCustomNumericCppName(out var cppName))
-        {
-            CppWinrtType = $"winrt::{CppNamespace}::{cppName}";
-        }
-        else
-        {
-            CppWinrtType = $"winrt::{CppNamespace}::{Name}";
-
-            if (IsGeneric)
-            {
-                CppWinrtType +=
-                    $"<{string.Join(", ", type.GenericParameters.Select(p => p.ToCppTypeName()))}>";
-            }
-        }
-
-        CppPyWrapperType = IsComposable
-            ? "py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>"
-            : $"py::wrapper::{CppNamespace}::{Name}";
-        CppPyWrapperTemplateType = IsGeneric ? $"py::proj::{CppNamespace}::{Name}" : CppWinrtType;
-
         PyRequiresMetaclass =
             IsComposable || type.Methods.Any(m => m.IsStatic) || type.IsCustomNumeric;
 
@@ -90,7 +59,7 @@ class ProjectedType
             .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
             .ToArray();
 
-        var factories = GetFactories(type);
+        var factories = Factories = GetFactories(type);
         Constructors = EnumerateConstructors(type).ToArray();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
@@ -204,27 +173,6 @@ class ProjectedType
     public string PyWrapperTypeName { get; }
 
     /// <summary>
-    /// Gets the C++ namespace of the type, e.g. "Windows::Foundation".
-    /// </summary>
-    public string CppNamespace { get; }
-
-    /// <summary>
-    /// Gets the C++ type name, e.g. "winrt::Windows::Foundation::IIterable".
-    /// </summary>
-    public string CppWinrtType { get; }
-
-    /// <summary>
-    /// Gets the C++ wrapper type name, e.g. "py::wrapper::windows::foundation::IIterable".
-    /// </summary>
-    public string CppPyWrapperType { get; }
-
-    /// <summary>
-    /// Gets the C++ wrapper template type name, e.g. "py::proj::windows::foundation::IIterable"
-    /// or <see cref="CppWinrtType"/> for non-generic types.
-    /// </summary>
-    public string CppPyWrapperTemplateType { get; }
-
-    /// <summary>
     /// True if the type requires a Python metaclass, e.g. for static members.
     /// </summary>
     public bool PyRequiresMetaclass { get; }
@@ -329,95 +277,35 @@ class ProjectedType
     /// </summary>
     public bool HasComposableFactory { get; }
 
-    public string GetMethodInvokeContext(ProjectedMethod method)
-    {
-        if (method.IsStatic || method.IsConstructor)
-        {
-            return IsGeneric ? "_obj." : $"{CppWinrtType}::";
-        }
-
-        // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
-        // so far, this is the only case in the entire Windows SDK where
-        // a property is entirely replaced with one of the same name
-        if (
-            Namespace == "Windows.UI.Xaml.Controls.Maps"
-            && Name == "MapControl"
-            && method.Name == "get_Style"
-        )
-        {
-            return "static_cast<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl>(self->obj).";
-        }
-
-        // HACK: another similar workaround for an explicit interface
-        // implementation in the Windows App SDK.
-        // https://github.com/microsoft/cppwinrt/issues/1485
-        if (
-            Namespace == "Microsoft.Windows.ApplicationModel.Background.UniversalBGTask"
-            && Name == "Task"
-            && method.Name == "Run"
-        )
-        {
-            return "static_cast<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>(self->obj).";
-        }
-
-        var obj = IsGeneric ? "_obj" : "self->obj";
-
-        if (method.IsOverridable)
-        {
-            obj = $"py::get_inner_or_self({obj})";
-        }
-
-        var required = GetRequiredInterface(method);
-
-        if (required is null)
-        {
-            return $"{obj}.";
-        }
-
-        var declaringType = method.Method.DeclaringType;
-
-        // A parameterized interface is not named in the metadata, so there is
-        // nothing for the error path to ask ApiInformation about. Every other
-        // type is worth asking about, including one from a framework package,
-        // whose metadata is resolved through the package graph.
-        var typeName = declaringType.Name.Contains('`')
-            ? "nullptr"
-            : $"\"{declaringType.FullName}\"";
-
-        // the number of arguments only distinguishes overloads of a method
-        var argCount =
-            method.MemberKind == "method"
-                ? $", {method.Method.Parameters.Count(p => p.IsInParam)}"
-                : "";
-
-        return $"py::require<{required.ToCppTypeName()}>({obj}, "
-            + $"py::member_kind::{method.MemberKind}, {typeName}, "
-            + $"\"{method.CppName}\", \"{required.ToWinRtName()}\"{argCount}).";
-    }
+    /// <summary>
+    /// Gets the activation, static and composition factories of the type, keyed
+    /// by the full name of the factory interface. The key is the empty string
+    /// for plain activation, which goes through
+    /// <c>IActivationFactory::ActivateInstance</c> and has no interface of its
+    /// own.
+    /// </summary>
+    public IReadOnlyDictionary<string, FactoryInfo> Factories { get; }
 
     /// <summary>
-    /// Gets the interface that has to be queried from an instance of this type
-    /// to call <paramref name="method"/>, or <c>null</c> if the member can be
-    /// called on the object as the Python wrapper holds it.
+    /// Gets the interface that declares <paramref name="method"/>, which is the
+    /// interface an instance has to be queried for before the call.
     /// </summary>
     /// <remarks>
-    /// C++/WinRT gives a runtime class a base class of its default interface and
-    /// reaches every other interface with an implicit conversion that is
-    /// <c>noexcept</c> and yields null when the object does not implement it,
-    /// which the call then dereferences. Querying in the generated code costs
-    /// the same call and turns that crash into a Python exception. It also
-    /// answers the question the call actually depends on, where the
-    /// ApiInformation probe it replaces only asked whether this version of
-    /// Windows has the member.
+    /// C++/WinRT gave a runtime class a base class of its default interface and
+    /// reached every other interface with an implicit conversion that yields
+    /// null when the object does not implement it, which the call then
+    /// dereferences. The table says what declares a member and the runtime
+    /// queries for it, which turns that crash into a Python exception and
+    /// answers the question the call actually depends on.
+    ///
+    /// A static member and a constructor are declared by a factory interface
+    /// instead, which <see cref="GetFactoryMethod"/> finds.
     /// </remarks>
-    private TypeReference? GetRequiredInterface(ProjectedMethod method)
+    public TypeReference? GetDeclaringInterface(ProjectedMethod method)
     {
         if (method.IsStatic || method.IsConstructor)
         {
-            // there is no object to query - a member that this version of
-            // Windows does not have goes through the activation factory, which
-            // throws instead of returning null
-            return null;
+            return GetFactoryMethod(method)?.DeclaringType;
         }
 
         var declaring = method.Method.HasOverrides
@@ -426,24 +314,90 @@ class ProjectedType
             ? method.Method.Overrides[0].DeclaringType
             : ResolveDeclaringInterface(method.Inheritance);
 
-        if (IsComposable)
-        {
-            // the Python wrapper of a composable class holds an IInspectable,
-            // so even the default interface has to be queried
-            return declaring ?? Type;
-        }
-
-        if (declaring is null || method.IsOverridable || method.IsProtected)
+        if (declaring is not null)
         {
             return declaring;
         }
 
-        // the wrapper of an interface holds that interface and a runtime class
-        // derives from its default interface, so those members are reached
-        // without a query
-        var self = Category == Category.Interface ? Type.FullName : DefaultInterface?.FullName;
+        // the member is declared by the type being projected, which for an
+        // interface is that interface and for a class is its default interface
+        return Category == Category.Interface ? Type : DefaultInterface;
+    }
 
-        return declaring.FullName == self ? null : declaring;
+    /// <summary>
+    /// Gets the method of the factory interface behind a static member or a
+    /// constructor, or <c>null</c> when it is plain activation, which goes
+    /// through <c>IActivationFactory::ActivateInstance</c>.
+    /// </summary>
+    /// <remarks>
+    /// A runtime class redeclares the members of its factories the way it
+    /// redeclares the members of its interfaces, but without the
+    /// <c>.override</c> that says which one, so the factory is found by
+    /// matching the signature.
+    /// </remarks>
+    public MethodDefinition? GetFactoryMethod(ProjectedMethod method)
+    {
+        foreach (var factory in Factories.Values)
+        {
+            if (factory.Type is null)
+            {
+                continue;
+            }
+
+            if (method.IsConstructor != (factory.IsActivatable || factory.IsComposable))
+            {
+                continue;
+            }
+
+            foreach (var candidate in factory.Type.Methods)
+            {
+                if (IsFactoryMethodFor(candidate, method))
+                {
+                    return candidate;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// Tests whether <paramref name="candidate"/> is the factory method behind
+    /// <paramref name="method"/>.
+    /// </summary>
+    /// <remarks>
+    /// A composition factory method takes two more parameters than the
+    /// constructor it implements - the outer object and the non-delegating inner
+    /// - so only the parameters the constructor declares are compared.
+    /// </remarks>
+    private static bool IsFactoryMethodFor(MethodDefinition candidate, ProjectedMethod method)
+    {
+        if (!method.IsConstructor && candidate.Name != method.Method.Name)
+        {
+            return false;
+        }
+
+        var declared = method.Method.Parameters;
+
+        if (candidate.Parameters.Count < declared.Count)
+        {
+            return false;
+        }
+
+        for (var i = 0; i < declared.Count; i++)
+        {
+            if (
+                candidate.Parameters[i].ParameterType.FullName != declared[i].ParameterType.FullName
+            )
+            {
+                return false;
+            }
+        }
+
+        // a static member also has to agree on what it returns, since a factory
+        // interface can declare several members with the same parameters
+        return method.IsConstructor
+            || candidate.ReturnType.FullName == method.Method.ReturnType.FullName;
     }
 
     /// <summary>
@@ -542,9 +496,6 @@ class ProjectedType
 
         return methods[0];
     }
-
-    public string GetMethodSelfParam(bool isUnused) =>
-        isUnused ? "PyObject* /*unused*/" : $"{CppPyWrapperType}* self";
 
     private static IEnumerable<ProjectedMethod> EnumerateConstructors(TypeDefinition type)
     {

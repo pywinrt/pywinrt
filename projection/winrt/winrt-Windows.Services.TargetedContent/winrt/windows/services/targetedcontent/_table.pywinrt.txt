@@ -1,0 +1,477 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Services.TargetedContent
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> concrete
+    guid e757e0fc-0136-5f63-97b8-6a96b8d0601e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.TargetedContent.TargetedContentContainer;{bc2494c9-8837-47c2-850f-d79d64595926}))
+    argument Windows.Services.TargetedContent.TargetedContentContainer
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> concrete
+    guid 46f16f4b-8ec1-5c4f-b1f5-a7e7acd63366
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73}))
+    argument Windows.Services.TargetedContent.TargetedContentSubscription
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> concrete
+    guid 19a87e94-ab75-574f-a226-8726a0d8eb3e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf}))
+    argument System.String
+    argument Windows.Services.TargetedContent.TargetedContentValue
+
+interface Windows.Services.TargetedContent.ITargetedContentAction
+    guid d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6
+
+interface Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs
+    guid e0f59d26-5927-4450-965c-1ceb7becde65
+
+interface Windows.Services.TargetedContent.ITargetedContentChangedEventArgs
+    guid 99d488c9-587e-4586-8ef7-b54ca9453a16
+
+interface Windows.Services.TargetedContent.ITargetedContentCollection
+    guid 2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d
+
+interface Windows.Services.TargetedContent.ITargetedContentContainer
+    guid bc2494c9-8837-47c2-850f-d79d64595926
+
+interface Windows.Services.TargetedContent.ITargetedContentContainerStatics
+    guid 5b47e7fb-2140-4c1f-a736-c59583f227d8
+
+interface Windows.Services.TargetedContent.ITargetedContentImage
+    guid a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2
+
+interface Windows.Services.TargetedContent.ITargetedContentItem
+    guid 38168dc4-276c-4c32-96ba-565c6e406e74
+
+interface Windows.Services.TargetedContent.ITargetedContentItemState
+    guid 73935454-4c65-4b47-a441-472de53c79b6
+
+interface Windows.Services.TargetedContent.ITargetedContentObject
+    guid 041d7969-2212-42d1-9dfa-88a8e3033aa3
+
+interface Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs
+    guid 9a1cef3d-8073-4416-8df2-546835a6414f
+
+interface Windows.Services.TargetedContent.ITargetedContentSubscription
+    guid 882c2c49-c652-4c7a-acad-1f7fa2986c73
+
+interface Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions
+    guid 61ee6ad0-2c83-421b-8467-413eaf1aeb97
+
+interface Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics
+    guid faddfe80-360d-4916-b53c-7ea27090d02a
+
+interface Windows.Services.TargetedContent.ITargetedContentValue
+    guid aafde4b3-4215-4bf8-867f-43f04865f9bf
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete
+    guid 243a09cb-6f40-56af-a442-fe81431fbef5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.Collections.IVectorView<System.Double> concrete
+    guid af7586a8-6b21-5f61-bff1-1b682293ad96
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};f8)
+    argument System.Double
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+    guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> concrete
+    guid 4299bd84-e44e-5fcb-a465-e1bd434a317c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentAction;{d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6}))
+    argument Windows.Services.TargetedContent.TargetedContentAction
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> concrete
+    guid cea4c859-8736-5c75-bb83-a686bf7f7c6f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentCollection;{2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d}))
+    argument Windows.Services.TargetedContent.TargetedContentCollection
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> concrete
+    guid ec0d80cb-9a87-5f0b-b6df-2c09b6310177
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentFile;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    argument Windows.Services.TargetedContent.TargetedContentFile
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> concrete
+    guid f55ac7c6-168d-5010-84cf-36bf451ede38
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentImage;{a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2}))
+    argument Windows.Services.TargetedContent.TargetedContentImage
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> concrete
+    guid 31e3ed33-8554-5496-86a4-d78392204c8f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentItem;{38168dc4-276c-4c32-96ba-565c6e406e74}))
+    argument Windows.Services.TargetedContent.TargetedContentItem
+
+class Windows.Services.TargetedContent.TargetedContentAction python_type
+    py TargetedContentAction
+    signature rc(Windows.Services.TargetedContent.TargetedContentAction;{d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6})
+    default Windows.Services.TargetedContent.ITargetedContentAction
+    requires Windows.Services.TargetedContent.ITargetedContentAction
+    method invoke_async
+        method InvokeAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAction shape=4 reverse=22
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Services.TargetedContent.TargetedContentAppInstallationState python_type
+    py TargetedContentAppInstallationState
+    signature enum(Windows.Services.TargetedContent.TargetedContentAppInstallationState;i4)
+
+enum Windows.Services.TargetedContent.TargetedContentAvailability python_type
+    py TargetedContentAvailability
+    signature enum(Windows.Services.TargetedContent.TargetedContentAvailability;i4)
+
+class Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs python_type
+    py TargetedContentAvailabilityChangedEventArgs
+    signature rc(Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs;{e0f59d26-5927-4450-965c-1ceb7becde65})
+    default Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs
+    requires Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Services.TargetedContent.TargetedContentChangedEventArgs python_type
+    py TargetedContentChangedEventArgs
+    signature rc(Windows.Services.TargetedContent.TargetedContentChangedEventArgs;{99d488c9-587e-4586-8ef7-b54ca9453a16})
+    default Windows.Services.TargetedContent.ITargetedContentChangedEventArgs
+    requires Windows.Services.TargetedContent.ITargetedContentChangedEventArgs
+    property has_previous_content_expired
+        get get_HasPreviousContentExpired slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4 reverse=43
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Services.TargetedContent.TargetedContentCollection python_type
+    py TargetedContentCollection
+    signature rc(Windows.Services.TargetedContent.TargetedContentCollection;{2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d})
+    default Windows.Services.TargetedContent.ITargetedContentCollection
+    requires Windows.Services.TargetedContent.ITargetedContentCollection
+    property collections
+        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=22
+            out string return
+    property items
+        get get_Items slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> return
+    property path
+        get get_Path slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=99
+            out string return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> return
+    method report_custom_interaction
+        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=62
+            in string name=customInteractionName
+    method report_interaction
+        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=43
+            in enum32 type=Windows.Services.TargetedContent.TargetedContentInteraction name=interaction
+
+class Windows.Services.TargetedContent.TargetedContentContainer python_type
+    py TargetedContentContainer
+    signature rc(Windows.Services.TargetedContent.TargetedContentContainer;{bc2494c9-8837-47c2-850f-d79d64595926})
+    default Windows.Services.TargetedContent.ITargetedContentContainer
+    requires Windows.Services.TargetedContent.ITargetedContentContainer
+    factory Windows.Services.TargetedContent.ITargetedContentContainerStatics
+    property availability
+        get get_Availability slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=62
+            out enum32 type=Windows.Services.TargetedContent.TargetedContentAvailability return
+    property content
+        get get_Content slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=99
+            out class type=Windows.Services.TargetedContent.TargetedContentCollection return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=22
+            out string return
+    property timestamp
+        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=43
+            out datetime return
+    method get_async static
+        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainerStatics shape=51 reverse=24 static
+            in string name=contentId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> return
+    method select_single_object
+        method SelectSingleObject slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=51 reverse=124
+            in string name=path
+            out class type=Windows.Services.TargetedContent.TargetedContentObject return
+
+class Windows.Services.TargetedContent.TargetedContentFile python_type
+    py TargetedContentFile
+    signature rc(Windows.Services.TargetedContent.TargetedContentFile;{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    default Windows.Storage.Streams.IRandomAccessStreamReference
+    requires Windows.Storage.Streams.IRandomAccessStreamReference
+    method open_read_async
+        method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+class Windows.Services.TargetedContent.TargetedContentImage python_type
+    py TargetedContentImage
+    signature rc(Windows.Services.TargetedContent.TargetedContentImage;{a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2})
+    default Windows.Services.TargetedContent.ITargetedContentImage
+    requires Windows.Services.TargetedContent.ITargetedContentImage
+    requires Windows.Storage.Streams.IRandomAccessStreamReference
+    property height
+        get get_Height slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4 reverse=22
+            out uint32 return
+    property width
+        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4 reverse=43
+            out uint32 return
+    method open_read_async
+        method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+enum Windows.Services.TargetedContent.TargetedContentInteraction python_type
+    py TargetedContentInteraction
+    signature enum(Windows.Services.TargetedContent.TargetedContentInteraction;i4)
+
+class Windows.Services.TargetedContent.TargetedContentItem python_type
+    py TargetedContentItem
+    signature rc(Windows.Services.TargetedContent.TargetedContentItem;{38168dc4-276c-4c32-96ba-565c6e406e74})
+    default Windows.Services.TargetedContent.ITargetedContentItem
+    requires Windows.Services.TargetedContent.ITargetedContentItem
+    property collections
+        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> return
+    property path
+        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> return
+    property state
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=99
+            out class type=Windows.Services.TargetedContent.TargetedContentItemState return
+    method report_custom_interaction
+        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=62
+            in string name=customInteractionName
+    method report_interaction
+        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=43
+            in enum32 type=Windows.Services.TargetedContent.TargetedContentInteraction name=interaction
+
+class Windows.Services.TargetedContent.TargetedContentItemState python_type
+    py TargetedContentItemState
+    signature rc(Windows.Services.TargetedContent.TargetedContentItemState;{73935454-4c65-4b47-a441-472de53c79b6})
+    default Windows.Services.TargetedContent.ITargetedContentItemState
+    requires Windows.Services.TargetedContent.ITargetedContentItemState
+    property app_installation_state
+        get get_AppInstallationState slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4 reverse=43
+            out enum32 type=Windows.Services.TargetedContent.TargetedContentAppInstallationState return
+    property should_display
+        get get_ShouldDisplay slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4 reverse=22
+            out boolean return
+
+class Windows.Services.TargetedContent.TargetedContentObject python_type
+    py TargetedContentObject
+    signature rc(Windows.Services.TargetedContent.TargetedContentObject;{041d7969-2212-42d1-9dfa-88a8e3033aa3})
+    default Windows.Services.TargetedContent.ITargetedContentObject
+    requires Windows.Services.TargetedContent.ITargetedContentObject
+    property collection
+        get get_Collection slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=43
+            out class type=Windows.Services.TargetedContent.TargetedContentCollection return
+    property item
+        get get_Item slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=62
+            out class type=Windows.Services.TargetedContent.TargetedContentItem return
+    property object_kind
+        get get_ObjectKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=22
+            out enum32 type=Windows.Services.TargetedContent.TargetedContentObjectKind return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=99
+            out class type=Windows.Services.TargetedContent.TargetedContentValue return
+
+enum Windows.Services.TargetedContent.TargetedContentObjectKind python_type
+    py TargetedContentObjectKind
+    signature enum(Windows.Services.TargetedContent.TargetedContentObjectKind;i4)
+
+class Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs python_type
+    py TargetedContentStateChangedEventArgs
+    signature rc(Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs;{9a1cef3d-8073-4416-8df2-546835a6414f})
+    default Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs
+    requires Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Services.TargetedContent.TargetedContentSubscription python_type
+    py TargetedContentSubscription
+    signature rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73})
+    default Windows.Services.TargetedContent.ITargetedContentSubscription
+    requires Windows.Services.TargetedContent.ITargetedContentSubscription
+    factory Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4 reverse=22
+            out string return
+    event availability_changed
+        add add_AvailabilityChanged slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs> name=handler
+            out event_token return
+        remove remove_AvailabilityChanged slot=11 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=156
+            in event_token name=cookie
+    event content_changed
+        add add_ContentChanged slot=8 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ContentChanged slot=9 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=110
+            in event_token name=cookie
+    event state_changed
+        add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=181
+            in event_token name=cookie
+    method get_async static
+        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 reverse=24 static
+            in string name=subscriptionId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> return
+    method get_content_container_async
+        method GetContentContainerAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> return
+    method get_options static
+        method GetOptions slot=7 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 reverse=44 static
+            in string name=subscriptionId
+            out class type=Windows.Services.TargetedContent.TargetedContentSubscriptionOptions return
+
+class Windows.Services.TargetedContent.TargetedContentSubscriptionOptions python_type
+    py TargetedContentSubscriptionOptions
+    signature rc(Windows.Services.TargetedContent.TargetedContentSubscriptionOptions;{61ee6ad0-2c83-421b-8467-413eaf1aeb97})
+    default Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions
+    requires Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions
+    property allow_partial_content_availability
+        get get_AllowPartialContentAvailability slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=43
+            out boolean return
+        put put_AllowPartialContentAvailability slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=62
+            in boolean name=value
+    property cloud_query_parameters
+        get get_CloudQueryParameters slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property local_filters
+        get get_LocalFilters slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property subscription_id
+        get get_SubscriptionId slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=22
+            out string return
+    method update
+        method Update slot=11 inputs=0 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=0 reverse=137
+
+class Windows.Services.TargetedContent.TargetedContentValue python_type
+    py TargetedContentValue
+    signature rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf})
+    default Windows.Services.TargetedContent.ITargetedContentValue
+    requires Windows.Services.TargetedContent.ITargetedContentValue
+    property action
+        get get_Action slot=14 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=186
+            out class type=Windows.Services.TargetedContent.TargetedContentAction return
+    property actions
+        get get_Actions slot=21 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=232
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> return
+    property boolean
+        get get_Boolean slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=141
+            out boolean return
+    property booleans
+        get get_Booleans slot=18 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> return
+    property file
+        get get_File slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=162
+            out class type=Windows.Services.TargetedContent.TargetedContentFile return
+    property files
+        get get_Files slot=19 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> return
+    property image_file
+        get get_ImageFile slot=13 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=173
+            out class type=Windows.Services.TargetedContent.TargetedContentImage return
+    property image_files
+        get get_ImageFiles slot=20 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> return
+    property number
+        get get_Number slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=121
+            out double return
+    property numbers
+        get get_Numbers slot=17 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Double> return
+    property path
+        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=43
+            out string return
+    property string
+        get get_String slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=62
+            out string return
+    property strings
+        get get_Strings slot=15 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property uri
+        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+    property uris
+        get get_Uris slot=16 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    property value_kind
+        get get_ValueKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=22
+            out enum32 type=Windows.Services.TargetedContent.TargetedContentValueKind return
+
+enum Windows.Services.TargetedContent.TargetedContentValueKind python_type
+    py TargetedContentValueKind
+    signature enum(Windows.Services.TargetedContent.TargetedContentValueKind;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs> concrete
+    guid 99929904-138a-59ac-a11a-fe0042f0fd50
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs;{e0f59d26-5927-4450-965c-1ceb7becde65}))
+    argument Windows.Services.TargetedContent.TargetedContentSubscription
+    argument Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentChangedEventArgs> concrete
+    guid ef11d751-9d56-580d-8a9f-51ae7e8036e3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentChangedEventArgs;{99d488c9-587e-4586-8ef7-b54ca9453a16}))
+    argument Windows.Services.TargetedContent.TargetedContentSubscription
+    argument Windows.Services.TargetedContent.TargetedContentChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs> concrete
+    guid c4d5acbe-f65b-5fa4-9242-d2860de85d52
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs;{9a1cef3d-8073-4416-8df2-546835a6414f}))
+    argument Windows.Services.TargetedContent.TargetedContentSubscription
+    argument Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038

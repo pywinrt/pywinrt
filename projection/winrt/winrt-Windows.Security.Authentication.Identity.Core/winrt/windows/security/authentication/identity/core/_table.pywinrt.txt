@@ -1,0 +1,205 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Authentication.Identity.Core
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> concrete
+    guid 544cc4e9-a3da-5398-a308-e332a58961f6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult;{4e23a9a0-e9fa-497a-95de-6d5747bf974c}))
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> concrete
+    guid ae63588e-1fc2-58a3-af36-6f67b8922be7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo;{82ba264b-d87c-4668-a976-40cfae547d08}))
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> concrete
+    guid 05953b8e-5adb-51b9-a94a-ad030030b8e3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse;i4))
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> concrete
+    guid 989f4c21-ef69-56ad-ba8c-e5d25a3c624e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;{aa7ec5fb-da3f-4088-a20d-5618afadb2e5}))
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager
+    guid 0fd340a5-f574-4320-a08e-0a19a82322aa
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics
+    guid d964c2e6-f446-4c71-8b79-6ea4024aa9b8
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult
+    guid 4e23a9a0-e9fa-497a-95de-6d5747bf974c
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo
+    guid 82ba264b-d87c-4668-a976-40cfae547d08
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo
+    guid 5f7eabb4-a278-4635-b765-b494eb260af4
+
+interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    guid aa7ec5fb-da3f-4088-a20d-5618afadb2e5
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> concrete
+    guid 6abe486b-ea5e-5fda-9121-79d8a785c465
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo;{5f7eabb4-a278-4635-b765-b494eb260af4}))
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
+
+class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager python_type
+    py MicrosoftAccountMultiFactorAuthenticationManager
+    signature rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager;{0fd340a5-f574-4320-a08e-0a19a82322aa})
+    default Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager
+    requires Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager
+    factory Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics shape=4 reverse=22 static
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager return
+    method add_device_async
+        method AddDeviceAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=195 reverse=46
+            in string name=userAccountId
+            in string name=authenticationToken
+            in string name=wnsChannelId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+    method approve_session_async
+        method ApproveSessionAsync slot=12 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=117 reverse=164
+            in enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus name=sessionAuthentictionStatus
+            in class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo name=authenticationSessionInfo
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+        method ApproveSessionAsync slot=13 inputs=4 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=239
+            in enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus name=sessionAuthentictionStatus
+            in string name=userAccountId
+            in string name=sessionId
+            in enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType name=sessionAuthenticationType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+    method deny_session_async
+        method DenySessionAsync slot=14 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=51 reverse=187
+            in class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo name=authenticationSessionInfo
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+        method DenySessionAsync slot=15 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=195 reverse=198
+            in string name=userAccountId
+            in string name=sessionId
+            in enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType name=sessionAuthenticationType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+    method get_one_time_pass_code_async
+        method GetOneTimePassCodeAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=117 reverse=25
+            in string name=userAccountId
+            in uint32 name=codeLength
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> return
+    method get_sessions_and_unregistered_accounts_async
+        method GetSessionsAndUnregisteredAccountsAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=51 reverse=144
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=userAccountIdList
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> return
+    method get_sessions_async
+        method GetSessionsAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=51 reverse=124
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=userAccountIdList
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> return
+    method remove_device_async
+        method RemoveDeviceAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=51 reverse=65
+            in string name=userAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+    method update_wns_channel_async
+        method UpdateWnsChannelAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager shape=117 reverse=101
+            in string name=userAccountId
+            in string name=channelUri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+
+enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType python_type
+    py MicrosoftAccountMultiFactorAuthenticationType
+    signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType;i4)
+
+class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult python_type
+    py MicrosoftAccountMultiFactorGetSessionsResult
+    signature rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult;{4e23a9a0-e9fa-497a-95de-6d5747bf974c})
+    default Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult
+    requires Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult
+    property service_response
+        get get_ServiceResponse slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult shape=4 reverse=43
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse return
+    property sessions
+        get get_Sessions slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> return
+
+class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo python_type
+    py MicrosoftAccountMultiFactorOneTimeCodedInfo
+    signature rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo;{82ba264b-d87c-4668-a976-40cfae547d08})
+    default Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo
+    requires Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo
+    property code
+        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo shape=4 reverse=22
+            out string return
+    property service_response
+        get get_ServiceResponse slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo shape=4 reverse=99
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse return
+    property time_interval
+        get get_TimeInterval slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo shape=4 reverse=43
+            out timespan return
+    property time_to_live
+        get get_TimeToLive slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo shape=4 reverse=62
+            out timespan return
+
+enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse python_type
+    py MicrosoftAccountMultiFactorServiceResponse
+    signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse;i4)
+
+enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus python_type
+    py MicrosoftAccountMultiFactorSessionApprovalStatus
+    signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus;i4)
+
+enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus python_type
+    py MicrosoftAccountMultiFactorSessionAuthenticationStatus
+    signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus;i4)
+
+class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo python_type
+    py MicrosoftAccountMultiFactorSessionInfo
+    signature rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo;{5f7eabb4-a278-4635-b765-b494eb260af4})
+    default Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo
+    requires Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo
+    property approval_status
+        get get_ApprovalStatus slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=99
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus return
+    property authentication_type
+        get get_AuthenticationType slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=121
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType return
+    property display_session_id
+        get get_DisplaySessionId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=62
+            out string return
+    property expiration_time
+        get get_ExpirationTime slot=12 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=162
+            out datetime return
+    property request_time
+        get get_RequestTime slot=11 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=141
+            out datetime return
+    property session_id
+        get get_SessionId slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=43
+            out string return
+    property user_account_id
+        get get_UserAccountId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo shape=4 reverse=22
+            out string return
+
+class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo python_type
+    py MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    signature rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;{aa7ec5fb-da3f-4088-a20d-5618afadb2e5})
+    default Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    requires Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    property service_response
+        get get_ServiceResponse slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo shape=4 reverse=62
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse return
+    property sessions
+        get get_Sessions slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> return
+    property unregistered_accounts
+        get get_UnregisteredAccounts slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+class System.String external
+    py winrt.system.String

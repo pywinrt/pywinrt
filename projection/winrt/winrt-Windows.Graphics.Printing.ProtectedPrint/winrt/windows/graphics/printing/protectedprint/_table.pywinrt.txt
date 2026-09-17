@@ -1,0 +1,13 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Printing.ProtectedPrint
+
+interface Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics
+    guid a7d212f3-4168-5485-98ab-d89d04603b40
+
+class Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo static python_type
+    py WindowsProtectedPrintInfo
+    factory Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics
+    property is_protected_print_enabled static
+        get get_IsProtectedPrintEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics shape=4 reverse=22 static
+            out boolean return

@@ -1,0 +1,17 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Notifications.Preview
+
+interface Windows.UI.Notifications.Preview.IToastOcclusionManagerPreviewStatics
+    guid 507e5c83-50f9-5412-8953-b65c18cfab12
+
+class Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview static python_type
+    py ToastOcclusionManagerPreview
+    factory Windows.UI.Notifications.Preview.IToastOcclusionManagerPreviewStatics
+    method set_toast_window_margin static
+        method SetToastWindowMargin slot=6 inputs=2 outputs=0 declaring=Windows.UI.Notifications.Preview.IToastOcclusionManagerPreviewStatics shape=96 static
+            in struct type=Windows.UI.WindowId name=appWindowId
+            in double name=margin
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

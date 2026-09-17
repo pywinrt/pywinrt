@@ -1,0 +1,1097 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.MediaProperties
+
+class Windows.Media.MediaProperties.AudioEncodingProperties activatable python_type
+    py AudioEncodingProperties
+    signature rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3})
+    default Windows.Media.MediaProperties.IAudioEncodingProperties
+    requires Windows.Media.MediaProperties.IAudioEncodingProperties
+    requires Windows.Media.MediaProperties.IMediaEncodingProperties
+    requires Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData
+    requires Windows.Media.MediaProperties.IAudioEncodingProperties2
+    requires Windows.Media.MediaProperties.IAudioEncodingProperties3
+    factory Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics
+    factory Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property sample_rate
+        get get_SampleRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=141
+            out uint32 return
+        put put_SampleRate slot=10 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=121
+            in uint32 name=value
+    property channel_count
+        get get_ChannelCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=99
+            out uint32 return
+        put put_ChannelCount slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=62
+            in uint32 name=value
+    property bits_per_sample
+        get get_BitsPerSample slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=173
+            out uint32 return
+        put put_BitsPerSample slot=12 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=162
+            in uint32 name=value
+    property bitrate
+        get get_Bitrate slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=43
+            out uint32 return
+        put put_Bitrate slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties shape=4 reverse=22
+            in uint32 name=value
+    property is_spatial
+        get get_IsSpatial slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties2 shape=4 reverse=22
+            out boolean return
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+    method copy
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingProperties3 shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_aac static
+        method CreateAac slot=6 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics shape=195 reverse=26 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitrate
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_aac_adts static
+        method CreateAacAdts slot=7 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics shape=195 reverse=46 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitrate
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_alac static
+        method CreateAlac slot=6 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 shape=195 reverse=26 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitsPerSample
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_flac static
+        method CreateFlac slot=7 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 shape=195 reverse=46 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitsPerSample
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_mp3 static
+        method CreateMp3 slot=8 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics shape=195 reverse=68 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitrate
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_pcm static
+        method CreatePcm slot=9 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics shape=195 reverse=102 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitsPerSample
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method create_wma static
+        method CreateWma slot=10 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics shape=195 reverse=126 static
+            in uint32 name=sampleRate
+            in uint32 name=channelCount
+            in uint32 name=bitrate
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method get_format_user_data
+        method GetFormatUserData slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData shape=51 reverse=44
+            receive_array uint8 name=value
+    method set_format_user_data
+        method SetFormatUserData slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData shape=51 reverse=24
+            pass_array uint8 name=value
+
+enum Windows.Media.MediaProperties.AudioEncodingQuality python_type
+    py AudioEncodingQuality
+    signature enum(Windows.Media.MediaProperties.AudioEncodingQuality;i4)
+
+class Windows.Media.MediaProperties.Av1ProfileIds static python_type
+    py Av1ProfileIds
+    factory Windows.Media.MediaProperties.IAv1ProfileIdsStatics
+    property high_chroma_subsampling444_bit_depth10 static
+        get get_HighChromaSubsampling444BitDepth10 slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=141 static
+            out int32 return
+    property high_chroma_subsampling444_bit_depth8 static
+        get get_HighChromaSubsampling444BitDepth8 slot=10 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=121 static
+            out int32 return
+    property main_chroma_subsampling400_bit_depth10 static
+        get get_MainChromaSubsampling400BitDepth10 slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=99 static
+            out int32 return
+    property main_chroma_subsampling400_bit_depth8 static
+        get get_MainChromaSubsampling400BitDepth8 slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=62 static
+            out int32 return
+    property main_chroma_subsampling420_bit_depth10 static
+        get get_MainChromaSubsampling420BitDepth10 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=43 static
+            out int32 return
+    property main_chroma_subsampling420_bit_depth8 static
+        get get_MainChromaSubsampling420BitDepth8 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=22 static
+            out int32 return
+    property professional_chroma_subsampling400_bit_depth12 static
+        get get_ProfessionalChromaSubsampling400BitDepth12 slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=173 static
+            out int32 return
+    property professional_chroma_subsampling420_bit_depth12 static
+        get get_ProfessionalChromaSubsampling420BitDepth12 slot=12 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=162 static
+            out int32 return
+    property professional_chroma_subsampling422_bit_depth10 static
+        get get_ProfessionalChromaSubsampling422BitDepth10 slot=16 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=202 static
+            out int32 return
+    property professional_chroma_subsampling422_bit_depth12 static
+        get get_ProfessionalChromaSubsampling422BitDepth12 slot=17 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=210 static
+            out int32 return
+    property professional_chroma_subsampling422_bit_depth8 static
+        get get_ProfessionalChromaSubsampling422BitDepth8 slot=15 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=194 static
+            out int32 return
+    property professional_chroma_subsampling444_bit_depth12 static
+        get get_ProfessionalChromaSubsampling444BitDepth12 slot=14 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IAv1ProfileIdsStatics shape=4 reverse=186 static
+            out int32 return
+
+class Windows.Media.MediaProperties.ContainerEncodingProperties activatable python_type
+    py ContainerEncodingProperties
+    signature rc(Windows.Media.MediaProperties.ContainerEncodingProperties;{59ac2a57-b32a-479e-8a61-4b7f2e9e7ea0})
+    default Windows.Media.MediaProperties.IContainerEncodingProperties
+    requires Windows.Media.MediaProperties.IContainerEncodingProperties
+    requires Windows.Media.MediaProperties.IMediaEncodingProperties
+    requires Windows.Media.MediaProperties.IContainerEncodingProperties2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+    method copy
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IContainerEncodingProperties2 shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.ContainerEncodingProperties return
+
+class Windows.Media.MediaProperties.H264ProfileIds static python_type
+    py H264ProfileIds
+    factory Windows.Media.MediaProperties.IH264ProfileIdsStatics
+    property baseline static
+        get get_Baseline slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=43 static
+            out int32 return
+    property constrained_baseline static
+        get get_ConstrainedBaseline slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=22 static
+            out int32 return
+    property extended static
+        get get_Extended slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=62 static
+            out int32 return
+    property high static
+        get get_High slot=10 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=121 static
+            out int32 return
+    property high10 static
+        get get_High10 slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=141 static
+            out int32 return
+    property high422 static
+        get get_High422 slot=12 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=162 static
+            out int32 return
+    property high444 static
+        get get_High444 slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=173 static
+            out int32 return
+    property main static
+        get get_Main slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=99 static
+            out int32 return
+    property multiview_high static
+        get get_MultiviewHigh slot=15 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=194 static
+            out int32 return
+    property stereo_high static
+        get get_StereoHigh slot=14 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IH264ProfileIdsStatics shape=4 reverse=186 static
+            out int32 return
+
+class Windows.Media.MediaProperties.HevcProfileIds static python_type
+    py HevcProfileIds
+    factory Windows.Media.MediaProperties.IHevcProfileIdsStatics
+    property main_chroma_subsampling420_bit_depth10 static
+        get get_MainChromaSubsampling420BitDepth10 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=43 static
+            out int32 return
+    property main_chroma_subsampling420_bit_depth12 static
+        get get_MainChromaSubsampling420BitDepth12 slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=62 static
+            out int32 return
+    property main_chroma_subsampling420_bit_depth8 static
+        get get_MainChromaSubsampling420BitDepth8 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=22 static
+            out int32 return
+    property main_chroma_subsampling422_bit_depth10 static
+        get get_MainChromaSubsampling422BitDepth10 slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=99 static
+            out int32 return
+    property main_chroma_subsampling422_bit_depth12 static
+        get get_MainChromaSubsampling422BitDepth12 slot=10 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=121 static
+            out int32 return
+    property main_chroma_subsampling444_bit_depth10 static
+        get get_MainChromaSubsampling444BitDepth10 slot=12 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=162 static
+            out int32 return
+    property main_chroma_subsampling444_bit_depth12 static
+        get get_MainChromaSubsampling444BitDepth12 slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=173 static
+            out int32 return
+    property main_chroma_subsampling444_bit_depth8 static
+        get get_MainChromaSubsampling444BitDepth8 slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=141 static
+            out int32 return
+    property main_intra_chroma_subsampling420_bit_depth10 static
+        get get_MainIntraChromaSubsampling420BitDepth10 slot=17 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=210 static
+            out int32 return
+    property main_intra_chroma_subsampling420_bit_depth12 static
+        get get_MainIntraChromaSubsampling420BitDepth12 slot=18 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=218 static
+            out int32 return
+    property main_intra_chroma_subsampling420_bit_depth8 static
+        get get_MainIntraChromaSubsampling420BitDepth8 slot=16 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=202 static
+            out int32 return
+    property main_intra_chroma_subsampling422_bit_depth10 static
+        get get_MainIntraChromaSubsampling422BitDepth10 slot=19 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=223 static
+            out int32 return
+    property main_intra_chroma_subsampling422_bit_depth12 static
+        get get_MainIntraChromaSubsampling422BitDepth12 slot=20 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=228 static
+            out int32 return
+    property main_intra_chroma_subsampling444_bit_depth10 static
+        get get_MainIntraChromaSubsampling444BitDepth10 slot=22 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=237 static
+            out int32 return
+    property main_intra_chroma_subsampling444_bit_depth12 static
+        get get_MainIntraChromaSubsampling444BitDepth12 slot=23 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=242 static
+            out int32 return
+    property main_intra_chroma_subsampling444_bit_depth16 static
+        get get_MainIntraChromaSubsampling444BitDepth16 slot=24 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=247 static
+            out int32 return
+    property main_intra_chroma_subsampling444_bit_depth8 static
+        get get_MainIntraChromaSubsampling444BitDepth8 slot=21 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=232 static
+            out int32 return
+    property main_still_chroma_subsampling420_bit_depth8 static
+        get get_MainStillChromaSubsampling420BitDepth8 slot=25 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=252 static
+            out int32 return
+    property main_still_chroma_subsampling444_bit_depth16 static
+        get get_MainStillChromaSubsampling444BitDepth16 slot=27 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=259 static
+            out int32 return
+    property main_still_chroma_subsampling444_bit_depth8 static
+        get get_MainStillChromaSubsampling444BitDepth8 slot=26 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=255 static
+            out int32 return
+    property monochrome_bit_depth12 static
+        get get_MonochromeBitDepth12 slot=14 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=186 static
+            out int32 return
+    property monochrome_bit_depth16 static
+        get get_MonochromeBitDepth16 slot=15 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=194 static
+            out int32 return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> concrete
+    guid d4f86f16-c6cf-57c8-9743-5ec20c31ab79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.MediaProperties.MediaEncodingProfile;{e7dbf5a8-1db9-4783-876b-3dfe12acfdb3}))
+    argument Windows.Media.MediaProperties.MediaEncodingProfile
+
+interface Windows.Media.MediaProperties.IAudioEncodingProperties
+    guid 62bc7a16-005c-4b3b-8a0b-0a090e9687f3
+
+interface Windows.Media.MediaProperties.IAudioEncodingProperties2
+    guid c45d54da-80bd-4c23-80d5-72d4a181e894
+
+interface Windows.Media.MediaProperties.IAudioEncodingProperties3
+    guid 87600341-748c-4f8d-b0fd-10caf08ff087
+
+interface Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics
+    guid 0cad332c-ebe9-4527-b36d-e42a13cf38db
+
+interface Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2
+    guid 7489316f-77a0-433d-8ed5-4040280e8665
+
+interface Windows.Media.MediaProperties.IAudioEncodingPropertiesWithFormatUserData
+    guid 98f10d79-13ea-49ff-be70-2673db69702c
+
+interface Windows.Media.MediaProperties.IAv1ProfileIdsStatics
+    guid 9105812b-7c09-5882-88a4-678008a5174d
+
+interface Windows.Media.MediaProperties.IContainerEncodingProperties
+    guid 59ac2a57-b32a-479e-8a61-4b7f2e9e7ea0
+
+interface Windows.Media.MediaProperties.IContainerEncodingProperties2
+    guid b272c029-ae26-4819-baad-ad7a49b0a876
+
+interface Windows.Media.MediaProperties.IH264ProfileIdsStatics
+    guid 38654ca7-846a-4f97-a2e5-c3a15bbf70fd
+
+interface Windows.Media.MediaProperties.IHevcProfileIdsStatics
+    guid 1e50d280-2aa7-53c1-973f-2189fa656f53
+
+interface Windows.Media.MediaProperties.IImageEncodingProperties
+    guid 78625635-f331-4189-b1c3-b48d5ae034f1
+
+interface Windows.Media.MediaProperties.IImageEncodingProperties2
+    guid c854a2df-c923-469b-ac8e-6a9f3c1cd9e3
+
+interface Windows.Media.MediaProperties.IImageEncodingPropertiesStatics
+    guid 257c68dc-8b99-439e-aa59-913a36161297
+
+interface Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2
+    guid f6c25b29-3824-46b0-956e-501329e1be3c
+
+interface Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3
+    guid 48f4814d-a2ff-48dc-8ea0-e90680663656
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+    guid f3b20528-e3b3-5331-b2d0-0c2623aee785
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
+    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> concrete
+    guid a3e2c972-a171-5b94-8389-e983ebc3f3b9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    argument Windows.Media.Core.AudioStreamDescriptor
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete
+    guid f3d07841-3852-509d-a12b-a9f2ac89da93
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    argument Windows.Media.Core.TimedMetadataStreamDescriptor
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> concrete
+    guid 3acbf03c-0a79-5823-aaa9-d88bc3f8f594
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    argument Windows.Media.Core.VideoStreamDescriptor
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+    guid 4f25059a-0b9a-5f25-9b9e-4b9f1d22ff65
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> concrete
+    guid 3bda1540-d089-5a1a-8f0d-94eba8068e58
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
+    argument K
+    argument V
+
+interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete
+    guid 5ee3189c-7dbf-5998-ad07-5414fb82567c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
+    guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfile
+    guid e7dbf5a8-1db9-4783-876b-3dfe12acfdb3
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfile2
+    guid 349b3e0a-4035-488e-9877-85632865ed10
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfile3
+    guid ba6ebe88-7570-4e69-accf-5611ad015f88
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics
+    guid 197f352c-2ede-4a45-a896-817a4854f8fe
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics2
+    guid ce8de74f-6af4-4288-8fe2-79adf1f79a43
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics3
+    guid 90dac5aa-cf76-4294-a9ed-1a1420f51f6b
+
+interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
+    guid 6fafd7b5-9404-514a-81dd-c9444d648af0
+
+interface Windows.Media.MediaProperties.IMediaEncodingProperties python_type
+    py _IMediaEncodingProperties
+    guid b4002af6-acd4-4e5a-a24b-5d7498a8b8c4
+    signature {b4002af6-acd4-4e5a-a24b-5d7498a8b8c4}
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics
+    guid 37b6580e-a171-4464-ba5a-53189e48c1c8
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2
+    guid 4b7cd23d-42ff-4d33-8531-0626bee4b52d
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3
+    guid ba2414e4-883d-464e-a44f-097da08ef7ff
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4
+    guid ddece58a-3949-4644-8a2c-59ef02c642fa
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5
+    guid 5ad4a007-ffce-4760-9828-5d0c99637e6a
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6
+    guid a1252973-a984-5912-93bb-54e7e569e053
+
+interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
+    guid 92f2dca7-9937-52a1-b619-ddfad81cd99c
+
+interface Windows.Media.MediaProperties.IMediaRatio
+    guid d2d0fee5-8929-401d-ac78-7d357e378163
+
+interface Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics
+    guid a461ff85-e57a-4128-9b21-d5331b04235c
+
+interface Windows.Media.MediaProperties.ITimedMetadataEncodingProperties
+    guid 51cd30d3-d690-4cfa-97f4-4a398e9db420
+
+interface Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics
+    guid 6629bb67-6e55-5643-89a0-7a7e8d85b52c
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> concrete
+    guid 45afc129-988c-5f1e-9c17-6e34b917cd1b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    argument Windows.Media.Core.AudioStreamDescriptor
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete
+    guid 1ebdbbcf-4f75-5645-b8bc-31a716978bcc
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    argument Windows.Media.Core.TimedMetadataStreamDescriptor
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> concrete
+    guid 1fb064b3-636c-5988-9c97-02a9b76150f6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    argument Windows.Media.Core.VideoStreamDescriptor
+
+interface Windows.Media.MediaProperties.IVideoEncodingProperties
+    guid 76ee6c9a-37c2-4f2a-880a-1282bbb4373d
+
+interface Windows.Media.MediaProperties.IVideoEncodingProperties2
+    guid f743a1ef-d465-4290-a94b-ef0f1528f8e3
+
+interface Windows.Media.MediaProperties.IVideoEncodingProperties3
+    guid 386bcdc4-873a-479f-b3eb-56c1fcbec6d7
+
+interface Windows.Media.MediaProperties.IVideoEncodingProperties4
+    guid 724ef014-c10c-40f2-9d72-3ee13b45fa8e
+
+interface Windows.Media.MediaProperties.IVideoEncodingProperties5
+    guid 4959080f-272f-4ece-a4df-c0ccdb33d840
+
+interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics
+    guid 3ce14d44-1dc5-43db-9f38-ebebf90152cb
+
+interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2
+    guid cf1ebd5d-49fe-4d00-b59a-cfa4dfc51944
+
+interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
+    guid 65b46685-60da-5e51-91a2-b38c4763b872
+
+interface Windows.Media.MediaProperties.IVp9ProfileIdsStatics
+    guid 20311a55-fe06-5883-92d9-6080c97743e5
+
+class Windows.Media.MediaProperties.ImageEncodingProperties activatable python_type
+    py ImageEncodingProperties
+    signature rc(Windows.Media.MediaProperties.ImageEncodingProperties;{78625635-f331-4189-b1c3-b48d5ae034f1})
+    default Windows.Media.MediaProperties.IImageEncodingProperties
+    requires Windows.Media.MediaProperties.IImageEncodingProperties
+    requires Windows.Media.MediaProperties.IMediaEncodingProperties
+    requires Windows.Media.MediaProperties.IImageEncodingProperties2
+    factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2
+    factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics
+    factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property width
+        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingProperties shape=4 reverse=43
+            out uint32 return
+        put put_Width slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IImageEncodingProperties shape=4 reverse=22
+            in uint32 name=value
+    property height
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingProperties shape=4 reverse=99
+            out uint32 return
+        put put_Height slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IImageEncodingProperties shape=4 reverse=62
+            in uint32 name=value
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+    method copy
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingProperties2 shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_bmp static
+        method CreateBmp slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 shape=4 reverse=43 static
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_heif static
+        method CreateHeif slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_jpeg static
+        method CreateJpeg slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_jpeg_x_r static
+        method CreateJpegXR slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics shape=4 reverse=62 static
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_png static
+        method CreatePng slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics shape=4 reverse=43 static
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+    method create_uncompressed static
+        method CreateUncompressed slot=6 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.Media.MediaProperties.MediaPixelFormat name=format
+            out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
+
+enum K parameterized
+
+class Windows.Media.MediaProperties.MediaEncodingProfile activatable python_type
+    py MediaEncodingProfile
+    signature rc(Windows.Media.MediaProperties.MediaEncodingProfile;{e7dbf5a8-1db9-4783-876b-3dfe12acfdb3})
+    default Windows.Media.MediaProperties.IMediaEncodingProfile
+    requires Windows.Media.MediaProperties.IMediaEncodingProfile
+    requires Windows.Media.MediaProperties.IMediaEncodingProfile2
+    requires Windows.Media.MediaProperties.IMediaEncodingProfile3
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics2
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property video
+        get get_Video slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=99
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+        put put_Video slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=62
+            in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=value
+    property container
+        get get_Container slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=141
+            out class type=Windows.Media.MediaProperties.ContainerEncodingProperties return
+        put put_Container slot=10 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=121
+            in class type=Windows.Media.MediaProperties.ContainerEncodingProperties name=value
+    property audio
+        get get_Audio slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=43
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+        put put_Audio slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile shape=4 reverse=22
+            in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=value
+    method create_alac static
+        method CreateAlac slot=6 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 shape=51 reverse=24 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_av1 static
+        method CreateAv1 slot=7 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 shape=51 reverse=44 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_avi static
+        method CreateAvi slot=7 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 shape=51 reverse=44 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_flac static
+        method CreateFlac slot=7 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 shape=51 reverse=44 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_from_file_async static
+        method CreateFromFileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=144 static
+            in interface type=Windows.Storage.IStorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> return
+    method create_from_stream_async static
+        method CreateFromStreamAsync slot=12 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=163 static
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> return
+    method create_hevc static
+        method CreateHevc slot=8 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 shape=51 reverse=65 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_m4a static
+        method CreateM4a slot=6 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=24 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_mp3 static
+        method CreateMp3 slot=7 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=44 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_mp4 static
+        method CreateMp4 slot=9 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=100 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_vp9 static
+        method CreateVp9 slot=6 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 shape=51 reverse=24 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_wav static
+        method CreateWav slot=6 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_wma static
+        method CreateWma slot=8 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=65 static
+            in enum32 type=Windows.Media.MediaProperties.AudioEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method create_wmv static
+        method CreateWmv slot=10 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfileStatics shape=51 reverse=124 static
+            in enum32 type=Windows.Media.MediaProperties.VideoEncodingQuality name=quality
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
+    method get_audio_tracks
+        method GetAudioTracks slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> return
+    method get_timed_metadata_tracks
+        method GetTimedMetadataTracks slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile3 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> return
+    method get_video_tracks
+        method GetVideoTracks slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> return
+    method set_audio_tracks
+        method SetAudioTracks slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile2 shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> name=value
+    method set_timed_metadata_tracks
+        method SetTimedMetadataTracks slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile3 shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> name=value
+    method set_video_tracks
+        method SetVideoTracks slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProfile2 shape=4 reverse=62
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> name=value
+
+class Windows.Media.MediaProperties.MediaEncodingSubtypes static python_type
+    py MediaEncodingSubtypes
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5
+    property argb32 static
+        get get_Argb32 slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=141 static
+            out string return
+    property aac static
+        get get_Aac slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=22 static
+            out string return
+    property aac_adts static
+        get get_AacAdts slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=43 static
+            out string return
+    property ac3 static
+        get get_Ac3 slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=62 static
+            out string return
+    property amr_nb static
+        get get_AmrNb slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=99 static
+            out string return
+    property amr_wb static
+        get get_AmrWb slot=10 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=121 static
+            out string return
+    property mpeg static
+        get get_Mpeg slot=28 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=263 static
+            out string return
+    property asf static
+        get get_Asf slot=12 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=162 static
+            out string return
+    property avi static
+        get get_Avi slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=173 static
+            out string return
+    property bgra8 static
+        get get_Bgra8 slot=14 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=186 static
+            out string return
+    property bmp static
+        get get_Bmp slot=15 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=194 static
+            out string return
+    property eac3 static
+        get get_Eac3 slot=16 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=202 static
+            out string return
+    property float static
+        get get_Float slot=17 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=210 static
+            out string return
+    property gif static
+        get get_Gif slot=18 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=218 static
+            out string return
+    property h263 static
+        get get_H263 slot=19 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=223 static
+            out string return
+    property h264 static
+        get get_H264 slot=20 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=228 static
+            out string return
+    property h264_es static
+        get get_H264Es slot=21 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=232 static
+            out string return
+    property hevc static
+        get get_Hevc slot=22 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=237 static
+            out string return
+    property hevc_es static
+        get get_HevcEs slot=23 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=242 static
+            out string return
+    property iyuv static
+        get get_Iyuv slot=24 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=247 static
+            out string return
+    property jpeg static
+        get get_Jpeg slot=25 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=252 static
+            out string return
+    property jpeg_xr static
+        get get_JpegXr slot=26 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=255 static
+            out string return
+    property mjpg static
+        get get_Mjpg slot=27 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=259 static
+            out string return
+    property mp3 static
+        get get_Mp3 slot=31 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=273 static
+            out string return
+    property mpeg1 static
+        get get_Mpeg1 slot=29 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=266 static
+            out string return
+    property mpeg2 static
+        get get_Mpeg2 slot=30 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=270 static
+            out string return
+    property mpeg4 static
+        get get_Mpeg4 slot=32 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=280 static
+            out string return
+    property nv12 static
+        get get_Nv12 slot=33 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=285 static
+            out string return
+    property pcm static
+        get get_Pcm slot=34 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=288 static
+            out string return
+    property png static
+        get get_Png slot=35 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=292 static
+            out string return
+    property rgb24 static
+        get get_Rgb24 slot=36 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=296 static
+            out string return
+    property rgb32 static
+        get get_Rgb32 slot=37 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=299 static
+            out string return
+    property tiff static
+        get get_Tiff slot=38 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=302 static
+            out string return
+    property wave static
+        get get_Wave slot=39 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=307 static
+            out string return
+    property wma8 static
+        get get_Wma8 slot=40 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=312 static
+            out string return
+    property wma9 static
+        get get_Wma9 slot=41 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=316 static
+            out string return
+    property wmv3 static
+        get get_Wmv3 slot=42 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=319 static
+            out string return
+    property wvc1 static
+        get get_Wvc1 slot=43 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=322 static
+            out string return
+    property yuy2 static
+        get get_Yuy2 slot=44 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=326 static
+            out string return
+    property yv12 static
+        get get_Yv12 slot=45 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=330 static
+            out string return
+    property d16 static
+        get get_D16 slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 shape=4 reverse=99 static
+            out string return
+    property l16 static
+        get get_L16 slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 shape=4 reverse=62 static
+            out string return
+    property l8 static
+        get get_L8 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 shape=4 reverse=43 static
+            out string return
+    property vp9 static
+        get get_Vp9 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 shape=4 reverse=22 static
+            out string return
+    property alac static
+        get get_Alac slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 shape=4 reverse=22 static
+            out string return
+    property flac static
+        get get_Flac slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 shape=4 reverse=43 static
+            out string return
+    property p010 static
+        get get_P010 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 shape=4 reverse=22 static
+            out string return
+    property heif static
+        get get_Heif slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 shape=4 reverse=22 static
+            out string return
+    property pgs static
+        get get_Pgs slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 shape=4 reverse=22 static
+            out string return
+    property srt static
+        get get_Srt slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 shape=4 reverse=43 static
+            out string return
+    property ssa static
+        get get_Ssa slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 shape=4 reverse=62 static
+            out string return
+    property vob_sub static
+        get get_VobSub slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 shape=4 reverse=99 static
+            out string return
+    property av1 static
+        get get_Av1 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 shape=4 reverse=22 static
+            out string return
+
+enum Windows.Media.MediaProperties.MediaMirroringOptions python_type
+    py MediaMirroringOptions
+    signature enum(Windows.Media.MediaProperties.MediaMirroringOptions;u4)
+
+enum Windows.Media.MediaProperties.MediaPixelFormat python_type
+    py MediaPixelFormat
+    signature enum(Windows.Media.MediaProperties.MediaPixelFormat;i4)
+
+class Windows.Media.MediaProperties.MediaPropertySet activatable python_type iterable mapping mutable_mapping
+    py MediaPropertySet
+    signature rc(Windows.Media.MediaProperties.MediaPropertySet;pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable)))
+    default Windows.Foundation.Collections.IMap<System.Guid,System.Object>
+    requires Windows.Foundation.Collections.IMap<System.Guid,System.Object>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87
+            in guid name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=177 reverse=136
+            in guid name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=35
+            in guid name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=33 reverse=158
+            in guid name=key
+
+class Windows.Media.MediaProperties.MediaRatio python_type
+    py MediaRatio
+    signature rc(Windows.Media.MediaProperties.MediaRatio;{d2d0fee5-8929-401d-ac78-7d357e378163})
+    default Windows.Media.MediaProperties.IMediaRatio
+    requires Windows.Media.MediaProperties.IMediaRatio
+    property numerator
+        get get_Numerator slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaRatio shape=4 reverse=43
+            out uint32 return
+        put put_Numerator slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaRatio shape=4 reverse=22
+            in uint32 name=value
+    property denominator
+        get get_Denominator slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaRatio shape=4 reverse=99
+            out uint32 return
+        put put_Denominator slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaRatio shape=4 reverse=62
+            in uint32 name=value
+
+enum Windows.Media.MediaProperties.MediaRotation python_type
+    py MediaRotation
+    signature enum(Windows.Media.MediaProperties.MediaRotation;i4)
+
+enum Windows.Media.MediaProperties.MediaThumbnailFormat python_type
+    py MediaThumbnailFormat
+    signature enum(Windows.Media.MediaProperties.MediaThumbnailFormat;i4)
+
+class Windows.Media.MediaProperties.Mpeg2ProfileIds static python_type
+    py Mpeg2ProfileIds
+    factory Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics
+    property high static
+        get get_High slot=10 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics shape=4 reverse=121 static
+            out int32 return
+    property main static
+        get get_Main slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics shape=4 reverse=43 static
+            out int32 return
+    property signal_noise_ratio_scalable static
+        get get_SignalNoiseRatioScalable slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics shape=4 reverse=62 static
+            out int32 return
+    property simple static
+        get get_Simple slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics shape=4 reverse=22 static
+            out int32 return
+    property spatially_scalable static
+        get get_SpatiallyScalable slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMpeg2ProfileIdsStatics shape=4 reverse=99 static
+            out int32 return
+
+enum Windows.Media.MediaProperties.SphericalVideoFrameFormat python_type
+    py SphericalVideoFrameFormat
+    signature enum(Windows.Media.MediaProperties.SphericalVideoFrameFormat;i4)
+
+enum Windows.Media.MediaProperties.StereoscopicVideoPackingMode python_type
+    py StereoscopicVideoPackingMode
+    signature enum(Windows.Media.MediaProperties.StereoscopicVideoPackingMode;i4)
+
+class Windows.Media.MediaProperties.TimedMetadataEncodingProperties activatable python_type
+    py TimedMetadataEncodingProperties
+    signature rc(Windows.Media.MediaProperties.TimedMetadataEncodingProperties;{b4002af6-acd4-4e5a-a24b-5d7498a8b8c4})
+    default Windows.Media.MediaProperties.IMediaEncodingProperties
+    requires Windows.Media.MediaProperties.ITimedMetadataEncodingProperties
+    requires Windows.Media.MediaProperties.IMediaEncodingProperties
+    factory Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+    method copy
+        method Copy slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingProperties shape=4 reverse=62
+            out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
+    method create_pgs static
+        method CreatePgs slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
+    method create_srt static
+        method CreateSrt slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics shape=4 reverse=43 static
+            out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
+    method create_ssa static
+        method CreateSsa slot=8 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics shape=117 reverse=66 static
+            pass_array uint8 name=formatUserData
+            out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
+    method create_vob_sub static
+        method CreateVobSub slot=9 inputs=1 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics shape=117 reverse=101 static
+            pass_array uint8 name=formatUserData
+            out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
+    method get_format_user_data
+        method GetFormatUserData slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingProperties shape=51 reverse=44
+            receive_array uint8 name=value
+    method set_format_user_data
+        method SetFormatUserData slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingProperties shape=51 reverse=24
+            pass_array uint8 name=value
+
+enum V parameterized
+
+class Windows.Media.MediaProperties.VideoEncodingProperties activatable python_type
+    py VideoEncodingProperties
+    signature rc(Windows.Media.MediaProperties.VideoEncodingProperties;{76ee6c9a-37c2-4f2a-880a-1282bbb4373d})
+    default Windows.Media.MediaProperties.IVideoEncodingProperties
+    requires Windows.Media.MediaProperties.IVideoEncodingProperties
+    requires Windows.Media.MediaProperties.IMediaEncodingProperties
+    requires Windows.Media.MediaProperties.IVideoEncodingProperties2
+    requires Windows.Media.MediaProperties.IVideoEncodingProperties3
+    requires Windows.Media.MediaProperties.IVideoEncodingProperties4
+    requires Windows.Media.MediaProperties.IVideoEncodingProperties5
+    factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics
+    factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
+    factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property subtype
+        get get_Subtype slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=99
+            out string return
+        put put_Subtype slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=62
+            in string name=value
+    property type
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=43
+            out string return
+    property properties
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingProperties shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.MediaPropertySet return
+    property width
+        get get_Width slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=99
+            out uint32 return
+        put put_Width slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=62
+            in uint32 name=value
+    property height
+        get get_Height slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=141
+            out uint32 return
+        put put_Height slot=10 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=121
+            in uint32 name=value
+    property bitrate
+        get get_Bitrate slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=43
+            out uint32 return
+        put put_Bitrate slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=22
+            in uint32 name=value
+    property pixel_aspect_ratio
+        get get_PixelAspectRatio slot=13 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=173
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    property frame_rate
+        get get_FrameRate slot=12 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties shape=4 reverse=162
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    property profile_id
+        get get_ProfileId slot=9 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties2 shape=4 reverse=99
+            out int32 return
+        put put_ProfileId slot=8 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties2 shape=4 reverse=62
+            in int32 name=value
+    property stereoscopic_video_packing_mode
+        get get_StereoscopicVideoPackingMode slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties3 shape=4 reverse=22
+            out enum32 type=Windows.Media.MediaProperties.StereoscopicVideoPackingMode return
+    property spherical_video_frame_format
+        get get_SphericalVideoFrameFormat slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties4 shape=4 reverse=22
+            out enum32 type=Windows.Media.MediaProperties.SphericalVideoFrameFormat return
+    method copy
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties5 shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_av1 static
+        method CreateAv1 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 shape=4 reverse=43 static
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_h264 static
+        method CreateH264 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_hevc static
+        method CreateHevc slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_mpeg2 static
+        method CreateMpeg2 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics shape=4 reverse=43 static
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_uncompressed static
+        method CreateUncompressed slot=8 inputs=3 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics shape=195 reverse=68 static
+            in string name=subtype
+            in uint32 name=width
+            in uint32 name=height
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method create_vp9 static
+        method CreateVp9 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 shape=4 reverse=22 static
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method get_format_user_data
+        method GetFormatUserData slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties2 shape=51 reverse=44
+            receive_array uint8 name=value
+    method set_format_user_data
+        method SetFormatUserData slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.IVideoEncodingProperties2 shape=51 reverse=24
+            pass_array uint8 name=value
+
+enum Windows.Media.MediaProperties.VideoEncodingQuality python_type
+    py VideoEncodingQuality
+    signature enum(Windows.Media.MediaProperties.VideoEncodingQuality;i4)
+
+class Windows.Media.MediaProperties.Vp9ProfileIds static python_type
+    py Vp9ProfileIds
+    factory Windows.Media.MediaProperties.IVp9ProfileIdsStatics
+    property profile0_chroma_subsampling420_bit_depth8 static
+        get get_Profile0ChromaSubsampling420BitDepth8 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVp9ProfileIdsStatics shape=4 reverse=22 static
+            out int32 return
+    property profile2_chroma_subsampling420_bit_depth10 static
+        get get_Profile2ChromaSubsampling420BitDepth10 slot=7 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVp9ProfileIdsStatics shape=4 reverse=43 static
+            out int32 return
+    property profile2_chroma_subsampling420_bit_depth12 static
+        get get_Profile2ChromaSubsampling420BitDepth12 slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IVp9ProfileIdsStatics shape=4 reverse=62 static
+            out int32 return
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Media.Core.AudioStreamDescriptor external
+    py winrt.windows.media.core.AudioStreamDescriptor
+
+class Windows.Media.Core.TimedMetadataStreamDescriptor external
+    py winrt.windows.media.core.TimedMetadataStreamDescriptor
+
+class Windows.Media.Core.VideoStreamDescriptor external
+    py winrt.windows.media.core.VideoStreamDescriptor
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da

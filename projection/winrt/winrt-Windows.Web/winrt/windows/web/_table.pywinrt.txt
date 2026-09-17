@@ -1,0 +1,39 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+    guid a8fe0732-556d-5841-b7ee-b3450fb52666
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IInputStream
+
+interface Windows.Web.IUriToStreamResolver python_type
+    py _IUriToStreamResolver
+    guid b0aba86a-9aeb-4d3a-9590-003e3ca7e290
+    signature {b0aba86a-9aeb-4d3a-9590-003e3ca7e290}
+    method uri_to_stream_async
+        method UriToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.IUriToStreamResolver shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> return
+
+interface Windows.Web.IWebErrorStatics
+    guid fe616766-bf27-4064-87b7-6563bb11ce2e
+
+class Windows.Web.WebError static python_type
+    py WebError
+    factory Windows.Web.IWebErrorStatics
+    method get_status static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Web.IWebErrorStatics shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Web.WebErrorStatus return
+
+enum Windows.Web.WebErrorStatus python_type
+    py WebErrorStatus
+    signature enum(Windows.Web.WebErrorStatus;i4)
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da

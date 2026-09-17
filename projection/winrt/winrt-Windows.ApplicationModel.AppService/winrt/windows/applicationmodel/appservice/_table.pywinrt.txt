@@ -1,0 +1,287 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.AppService
+
+class Windows.ApplicationModel.AppService.AppServiceCatalog static python_type
+    py AppServiceCatalog
+    factory Windows.ApplicationModel.AppService.IAppServiceCatalogStatics
+    method find_app_service_providers_async static
+        method FindAppServiceProvidersAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceCatalogStatics shape=51 reverse=24 static
+            in string name=appServiceName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+
+class Windows.ApplicationModel.AppService.AppServiceClosedEventArgs python_type
+    py AppServiceClosedEventArgs
+    signature rc(Windows.ApplicationModel.AppService.AppServiceClosedEventArgs;{de6016f6-cb03-4d35-ac8d-cc6303239731})
+    default Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs
+    requires Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.AppService.AppServiceClosedStatus return
+
+enum Windows.ApplicationModel.AppService.AppServiceClosedStatus python_type
+    py AppServiceClosedStatus
+    signature enum(Windows.ApplicationModel.AppService.AppServiceClosedStatus;i4)
+
+class Windows.ApplicationModel.AppService.AppServiceConnection activatable python_type closeable
+    py AppServiceConnection
+    signature rc(Windows.ApplicationModel.AppService.AppServiceConnection;{9dd474a2-871f-4d52-89a9-9e090531bd27})
+    default Windows.ApplicationModel.AppService.IAppServiceConnection
+    requires Windows.ApplicationModel.AppService.IAppServiceConnection
+    requires Windows.ApplicationModel.AppService.IAppServiceConnection2
+    requires Windows.Foundation.IClosable
+    factory Windows.ApplicationModel.AppService.IAppServiceConnectionStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property package_family_name
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=62
+            out string return
+        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=99
+            in string name=value
+    property app_service_name
+        get get_AppServiceName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=22
+            out string return
+        put put_AppServiceName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=43
+            in string name=value
+    property user
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4 reverse=43
+            out class type=Windows.System.User return
+        put put_User slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4 reverse=62
+            in class type=Windows.System.User name=value
+    event request_received
+        add add_RequestReceived slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_RequestReceived slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26 reverse=181
+            in event_token name=token
+    event service_closed
+        add add_ServiceClosed slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs> name=handler
+            out event_token return
+        remove remove_ServiceClosed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26 reverse=200
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method open_async
+        method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
+    method open_remote_async
+        method OpenRemoteAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=51 reverse=24
+            in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
+    method send_message_async
+        method SendMessageAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=144
+            in class type=Windows.Foundation.Collections.ValueSet name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> return
+    method send_stateless_message_async static
+        method SendStatelessMessageAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnectionStatics shape=195 reverse=26 static
+            in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=connection
+            in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=connectionRequest
+            in class type=Windows.Foundation.Collections.ValueSet name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> return
+
+enum Windows.ApplicationModel.AppService.AppServiceConnectionStatus python_type
+    py AppServiceConnectionStatus
+    signature enum(Windows.ApplicationModel.AppService.AppServiceConnectionStatus;i4)
+
+class Windows.ApplicationModel.AppService.AppServiceDeferral python_type
+    py AppServiceDeferral
+    signature rc(Windows.ApplicationModel.AppService.AppServiceDeferral;{7e1b5322-eab0-4248-ae04-fdf93838e472})
+    default Windows.ApplicationModel.AppService.IAppServiceDeferral
+    requires Windows.ApplicationModel.AppService.IAppServiceDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceDeferral shape=0 reverse=16
+
+class Windows.ApplicationModel.AppService.AppServiceRequest python_type
+    py AppServiceRequest
+    signature rc(Windows.ApplicationModel.AppService.AppServiceRequest;{20e58d9d-18de-4b01-80ba-90a76204e3c8})
+    default Windows.ApplicationModel.AppService.IAppServiceRequest
+    requires Windows.ApplicationModel.AppService.IAppServiceRequest
+    property message
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    method send_response_async
+        method SendResponseAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=51 reverse=44
+            in class type=Windows.Foundation.Collections.ValueSet name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> return
+
+class Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs python_type
+    py AppServiceRequestReceivedEventArgs
+    signature rc(Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs;{6e122360-ff65-44ae-9e45-857fe4180681})
+    default Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs
+    requires Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppService.AppServiceRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4 reverse=43
+            out class type=Windows.ApplicationModel.AppService.AppServiceDeferral return
+
+class Windows.ApplicationModel.AppService.AppServiceResponse python_type
+    py AppServiceResponse
+    signature rc(Windows.ApplicationModel.AppService.AppServiceResponse;{8d503cec-9aa3-4e68-9559-9de63e372ce4})
+    default Windows.ApplicationModel.AppService.IAppServiceResponse
+    requires Windows.ApplicationModel.AppService.IAppServiceResponse
+    property message
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.AppService.AppServiceResponseStatus return
+
+enum Windows.ApplicationModel.AppService.AppServiceResponseStatus python_type
+    py AppServiceResponseStatus
+    signature enum(Windows.ApplicationModel.AppService.AppServiceResponseStatus;i4)
+
+class Windows.ApplicationModel.AppService.AppServiceTriggerDetails python_type
+    py AppServiceTriggerDetails
+    signature rc(Windows.ApplicationModel.AppService.AppServiceTriggerDetails;{88a2dcac-ad28-41b8-80bb-bdf1b2169e19})
+    default Windows.ApplicationModel.AppService.IAppServiceTriggerDetails
+    requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails
+    requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2
+    requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
+    requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
+    property app_service_connection
+        get get_AppServiceConnection slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=62
+            out class type=Windows.ApplicationModel.AppService.AppServiceConnection return
+    property caller_package_family_name
+        get get_CallerPackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=43
+            out string return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=22
+            out string return
+    property is_remote_system_connection
+        get get_IsRemoteSystemConnection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2 shape=4 reverse=22
+            out boolean return
+    property caller_remote_connection_token
+        get get_CallerRemoteConnectionToken slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4 shape=4 reverse=22
+            out string return
+    method check_caller_for_capability_async
+        method CheckCallerForCapabilityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3 shape=51 reverse=24
+            in string name=capabilityName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+interface Windows.ApplicationModel.AppService.IAppServiceCatalogStatics
+    guid ef0d2507-d132-4c85-8395-3c31d5a1e941
+
+interface Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs
+    guid de6016f6-cb03-4d35-ac8d-cc6303239731
+
+interface Windows.ApplicationModel.AppService.IAppServiceConnection
+    guid 9dd474a2-871f-4d52-89a9-9e090531bd27
+
+interface Windows.ApplicationModel.AppService.IAppServiceConnection2
+    guid 8bdfcd5f-2302-4fbd-8061-52511c2f8bf9
+
+interface Windows.ApplicationModel.AppService.IAppServiceConnectionStatics
+    guid adc56ce9-d408-5673-8637-827a4b274168
+
+interface Windows.ApplicationModel.AppService.IAppServiceDeferral
+    guid 7e1b5322-eab0-4248-ae04-fdf93838e472
+
+interface Windows.ApplicationModel.AppService.IAppServiceRequest
+    guid 20e58d9d-18de-4b01-80ba-90a76204e3c8
+
+interface Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs
+    guid 6e122360-ff65-44ae-9e45-857fe4180681
+
+interface Windows.ApplicationModel.AppService.IAppServiceResponse
+    guid 8d503cec-9aa3-4e68-9559-9de63e372ce4
+
+interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails
+    guid 88a2dcac-ad28-41b8-80bb-bdf1b2169e19
+
+interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2
+    guid e83d54b2-28cc-43f2-b465-c0482e59e2dc
+
+interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
+    guid fbd71e21-7939-4e68-9e3c-7780147aabb6
+
+interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
+    guid 1185b180-8861-5e30-ab55-1cf4d08bbf6d
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> concrete
+    guid 0d0e6663-2639-5a9a-9cbc-30d7d4ce533b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.AppService.AppServiceConnectionStatus;i4))
+    argument Windows.ApplicationModel.AppService.AppServiceConnectionStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> concrete
+    guid 48755a7c-c88f-5ef0-9b4c-876fcc2610b4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.AppService.AppServiceResponse;{8d503cec-9aa3-4e68-9559-9de63e372ce4}))
+    argument Windows.ApplicationModel.AppService.AppServiceResponse
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> concrete
+    guid 98fdb842-5a0b-539a-a35c-55ac5f228612
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.AppService.AppServiceResponseStatus;i4))
+    argument Windows.ApplicationModel.AppService.AppServiceResponseStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> concrete
+    guid b2a1524e-beab-5beb-aae9-b43501c3a488
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.AppService.StatelessAppServiceResponse;{43754af7-a9ec-52fe-82e7-939b68dc9388}))
+    argument Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> concrete
+    guid 07543d91-8610-5152-b0e4-43d6e4cdd0cb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>
+
+interface Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
+    guid 43754af7-a9ec-52fe-82e7-939b68dc9388
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> concrete
+    guid 8246ed12-33e8-52b3-a5c5-19779de9999e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1}))
+    argument Windows.ApplicationModel.AppInfo
+
+class Windows.ApplicationModel.AppService.StatelessAppServiceResponse python_type
+    py StatelessAppServiceResponse
+    signature rc(Windows.ApplicationModel.AppService.StatelessAppServiceResponse;{43754af7-a9ec-52fe-82e7-939b68dc9388})
+    default Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
+    requires Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
+    property message
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus return
+
+enum Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus python_type
+    py StatelessAppServiceResponseStatus
+    signature enum(Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs> concrete
+    guid e4efa98d-4bfc-5e61-a233-688f5f06521f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppService.AppServiceConnection;{9dd474a2-871f-4d52-89a9-9e090531bd27});rc(Windows.ApplicationModel.AppService.AppServiceClosedEventArgs;{de6016f6-cb03-4d35-ac8d-cc6303239731}))
+    argument Windows.ApplicationModel.AppService.AppServiceConnection
+    argument Windows.ApplicationModel.AppService.AppServiceClosedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs> concrete
+    guid 18c67d61-4176-5553-b18d-d8f57fe79552
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppService.AppServiceConnection;{9dd474a2-871f-4d52-89a9-9e090531bd27});rc(Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs;{6e122360-ff65-44ae-9e45-857fe4180681}))
+    argument Windows.ApplicationModel.AppService.AppServiceConnection
+    argument Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class Windows.ApplicationModel.AppInfo external
+    py winrt.windows.applicationmodel.AppInfo
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+class Windows.System.RemoteSystems.RemoteSystemConnectionRequest external
+    py winrt.windows.system.remotesystems.RemoteSystemConnectionRequest

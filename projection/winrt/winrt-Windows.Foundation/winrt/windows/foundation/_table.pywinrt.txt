@@ -1,0 +1,1127 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Foundation
+
+delegate Windows.Foundation.AsyncActionCompletedHandler python_type
+    py AsyncActionCompletedHandler
+    guid a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7
+    signature delegate({a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Foundation.IAsyncAction name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncActionProgressHandler<TProgress> parameterized
+    argument TProgress
+
+delegate Windows.Foundation.AsyncActionProgressHandler parameterized python_type
+    py AsyncActionProgressHandler
+    guid 6d844858-0cff-4590-ae89-95a5a5c8b4b8
+    method -
+        method Invoke slot=3 inputs=2 outputs=0
+            in parameterized type=Windows.Foundation.IAsyncActionWithProgress<TProgress> name=asyncInfo
+            in object name=progressInfo
+
+delegate Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress> parameterized
+    argument TProgress
+
+delegate Windows.Foundation.AsyncActionWithProgressCompletedHandler parameterized python_type
+    py AsyncActionWithProgressCompletedHandler
+    guid 9c029f91-cc84-44fd-ac26-0a6c4e555281
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncActionWithProgress<TProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<TResult> parameterized
+    argument TResult
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler parameterized python_type
+    py AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<TResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<TResult,TProgress> parameterized
+    argument TResult
+    argument TProgress
+
+delegate Windows.Foundation.AsyncOperationProgressHandler parameterized python_type
+    py AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+    method -
+        method Invoke slot=3 inputs=2 outputs=0
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<TResult,TProgress> name=asyncInfo
+            in object name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<TResult,TProgress> parameterized
+    argument TResult
+    argument TProgress
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler parameterized python_type
+    py AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<TResult,TProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+enum Windows.Foundation.AsyncStatus python_type
+    py AsyncStatus
+    signature enum(Windows.Foundation.AsyncStatus;i4)
+
+struct Windows.Foundation.DateTime python_type
+    py DateTime
+    signature struct(Windows.Foundation.DateTime;i8)
+    field universal_time UniversalTime int64
+
+class Windows.Foundation.Deferral python_type closeable
+    py Deferral
+    signature rc(Windows.Foundation.Deferral;{d6269732-3b7f-46a7-b40b-4fdca2a2c693})
+    default Windows.Foundation.IDeferral
+    requires Windows.Foundation.IDeferral
+    requires Windows.Foundation.IClosable
+    factory Windows.Foundation.IDeferralFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IDeferralFactory shape=51 reverse=24
+            in delegate type=Windows.Foundation.DeferralCompletedHandler name=handler
+            out class type=Windows.Foundation.Deferral return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IDeferral shape=0 reverse=16
+
+delegate Windows.Foundation.DeferralCompletedHandler python_type
+    py DeferralCompletedHandler
+    guid ed32a372-f3c8-4faa-9cfb-470148da3888
+    signature delegate({ed32a372-f3c8-4faa-9cfb-470148da3888})
+    method -
+        method Invoke slot=3 inputs=0 outputs=0 shape=0 reverse=0
+
+delegate Windows.Foundation.EventHandler parameterized python_type
+    py EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+    method -
+        method Invoke slot=3 inputs=2 outputs=0
+            in object name=sender
+            in object name=args
+
+struct Windows.Foundation.EventRegistrationToken python_type
+    py EventRegistrationToken
+    signature struct(Windows.Foundation.EventRegistrationToken;i8)
+    field value Value int64
+
+class Windows.Foundation.GuidHelper static python_type
+    py GuidHelper
+    factory Windows.Foundation.IGuidHelperStatics
+    property empty static
+        get get_Empty slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IGuidHelperStatics shape=4 reverse=43 static
+            out guid return
+    method create_new_guid static
+        method CreateNewGuid slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IGuidHelperStatics shape=4 reverse=22 static
+            out guid return
+    method equals static
+        method Equals slot=8 inputs=2 outputs=1 declaring=Windows.Foundation.IGuidHelperStatics shape=117 reverse=66 static
+            in guid name=target by_reference
+            in guid name=value by_reference
+            out boolean return
+
+struct Windows.Foundation.HResult python_type
+    py HResult
+    signature struct(Windows.Foundation.HResult;i4)
+    field value Value int32
+
+interface Windows.Foundation.IAsyncAction python_type awaitable
+    py _IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+    signature {5a648006-843a-4da9-865b-9d26e5dfad7b}
+    requires Windows.Foundation.IAsyncInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+
+interface Windows.Foundation.IAsyncActionWithProgress<TProgress> parameterized
+    argument TProgress
+
+interface Windows.Foundation.IAsyncActionWithProgress parameterized python_type awaitable
+    py _IAsyncActionWithProgress
+    guid 1f6db258-e803-48a1-9546-eb7353398884
+    requires Windows.Foundation.IAsyncInfo
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionProgressHandler<TProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionProgressHandler<TProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=99
+            out delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=0 reverse=117
+
+interface Windows.Foundation.IAsyncInfo python_type
+    py _IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+    signature {00000036-0000-0000-c000-000000000046}
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+
+interface Windows.Foundation.IAsyncOperation<TResult> parameterized
+    argument TResult
+
+interface Windows.Foundation.IAsyncOperation parameterized python_type awaitable
+    py _IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+    requires Windows.Foundation.IAsyncInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<TResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<TResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=62
+            out object return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<TResult,TProgress> parameterized
+    argument TResult
+    argument TProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress parameterized python_type awaitable
+    py _IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+    requires Windows.Foundation.IAsyncInfo
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<TResult,TProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<TResult,TProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=99
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<TResult,TProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<TResult,TProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=121
+            out object return
+
+interface Windows.Foundation.IClosable python_type closeable
+    py _IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+    signature {30d5a829-7fa4-4026-83bb-d75bae4ea99e}
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+interface Windows.Foundation.IDeferral
+    guid d6269732-3b7f-46a7-b40b-4fdca2a2c693
+
+interface Windows.Foundation.IDeferralFactory
+    guid 65a1ecc5-3fb5-4832-8ca9-f061b281d13a
+
+interface Windows.Foundation.IGetActivationFactory python_type
+    py _IGetActivationFactory
+    guid 4edb8ee2-96dd-49a7-94f7-4607ddab8e3c
+    signature {4edb8ee2-96dd-49a7-94f7-4607ddab8e3c}
+    method get_activation_factory
+        method GetActivationFactory slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IGetActivationFactory shape=51 reverse=24
+            in string name=activatableClassId
+            out object return
+
+interface Windows.Foundation.IGuidHelperStatics
+    guid 59c7966b-ae52-5283-ad7f-a1b9e9678add
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+    guid 876be83b-7218-5bfb-a169-83152ef7e146
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    argument Windows.Foundation.IWwwFormUrlDecoderEntry
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+    guid 32e54295-373c-50cb-80a1-468a990ca780
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    argument Windows.Foundation.IWwwFormUrlDecoderEntry
+
+interface Windows.Foundation.IMemoryBuffer python_type closeable
+    py _IMemoryBuffer
+    guid fbc4dd2a-245b-11e4-af98-689423260cf8
+    signature {fbc4dd2a-245b-11e4-af98-689423260cf8}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+
+interface Windows.Foundation.IMemoryBufferFactory
+    guid fbc4dd2b-245b-11e4-af98-689423260cf8
+
+interface Windows.Foundation.IMemoryBufferReference python_type closeable buffer
+    py _IMemoryBufferReference
+    guid fbc4dd29-245b-11e4-af98-689423260cf8
+    signature {fbc4dd29-245b-11e4-af98-689423260cf8}
+    requires Windows.Foundation.IClosable
+    property capacity
+        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBufferReference shape=4 reverse=22
+            out uint32 return
+    event closed
+        add add_Closed slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.IMemoryBufferReference shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.IMemoryBufferReference,System.Object> name=handler
+            out event_token return
+        remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IMemoryBufferReference shape=26 reverse=82
+            in event_token name=cookie
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+interface Windows.Foundation.IPropertyValue python_type
+    py _IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+    signature {4bd682dd-7554-40e9-9a9b-82654ede7e62}
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IPropertyValueStatics
+    guid 629bdbc8-d932-4ff4-96b9-8d96c5c1e858
+
+interface Windows.Foundation.IReference parameterized python_type
+    py _IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+    requires Windows.Foundation.IPropertyValue
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference shape=4 reverse=22
+            out object return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReferenceArray parameterized python_type
+    py _IReferenceArray
+    guid 61c17707-2d65-11e0-9ae8-d48564015472
+    requires Windows.Foundation.IPropertyValue
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReferenceArray shape=51 reverse=24
+            receive_array object return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IStringable python_type stringable
+    py _IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3
+    signature {96369f54-8eb6-48f0-abce-c1b211e627c3}
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+
+interface Windows.Foundation.IUriEscapeStatics
+    guid c1d432ba-c824-4452-a7fd-512bc3bbe9a1
+
+interface Windows.Foundation.IUriRuntimeClass
+    guid 9e365e57-48b2-4160-956f-c7385120bbfc
+
+interface Windows.Foundation.IUriRuntimeClassFactory
+    guid 44a9796f-723e-4fdf-a218-033e75b0c084
+
+interface Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
+    guid 758d9661-221c-480f-a339-50656673f46f
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+    guid b1f00d3b-1f06-5117-93ea-2a0d79116701
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    argument Windows.Foundation.IWwwFormUrlDecoderEntry
+
+interface Windows.Foundation.IWwwFormUrlDecoderEntry python_type
+    py _IWwwFormUrlDecoderEntry
+    guid 125e7431-f678-4e8e-b670-20a9b06c512d
+    signature {125e7431-f678-4e8e-b670-20a9b06c512d}
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderEntry shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderEntry shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
+    guid d45a0451-f225-4542-9296-0e1df5d254df
+
+interface Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
+    guid 5b8c6b3d-24ae-41b5-a1bf-f0c3d544845b
+
+class Windows.Foundation.MemoryBuffer python_type closeable
+    py MemoryBuffer
+    signature rc(Windows.Foundation.MemoryBuffer;{fbc4dd2a-245b-11e4-af98-689423260cf8})
+    default Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IMemoryBuffer
+    requires Windows.Foundation.IClosable
+    factory Windows.Foundation.IMemoryBufferFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IMemoryBufferFactory shape=51 reverse=24
+            in uint32 name=capacity
+            out class type=Windows.Foundation.MemoryBuffer return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_reference
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+            out interface type=Windows.Foundation.IMemoryBufferReference return
+
+struct Windows.Foundation.Point python_type
+    py Point
+    signature struct(Windows.Foundation.Point;f4;f4)
+    field x X single
+    field y Y single
+
+enum Windows.Foundation.PropertyType python_type
+    py PropertyType
+    signature enum(Windows.Foundation.PropertyType;i4)
+
+class Windows.Foundation.PropertyValue static python_type
+    py PropertyValue
+    factory Windows.Foundation.IPropertyValueStatics
+    method create_boolean static
+        method CreateBoolean slot=17 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=211 static
+            in boolean name=value
+            out object return
+    method create_boolean_array static
+        method CreateBooleanArray slot=36 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array boolean name=value
+            out object return
+    method create_char16 static
+        method CreateChar16 slot=16 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=203 static
+            in char16 name=value
+            out object return
+    method create_char16_array static
+        method CreateChar16Array slot=35 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array char16 name=value
+            out object return
+    method create_date_time static
+        method CreateDateTime slot=21 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=89 static
+            in datetime name=value
+            out object return
+    method create_date_time_array static
+        method CreateDateTimeArray slot=40 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array datetime name=value
+            out object return
+    method create_double static
+        method CreateDouble slot=15 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=46 static
+            in double name=value
+            out object return
+    method create_double_array static
+        method CreateDoubleArray slot=34 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array double name=value
+            out object return
+    method create_empty static
+        method CreateEmpty slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=4 reverse=22 static
+            out object return
+    method create_guid static
+        method CreateGuid slot=20 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=94 static
+            in guid name=value
+            out object return
+    method create_guid_array static
+        method CreateGuidArray slot=39 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 reverse=309 static
+            pass_array guid name=value
+            out object return
+    method create_inspectable static
+        method CreateInspectable slot=19 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=224 static
+            in object name=value
+            out object return
+    method create_inspectable_array static
+        method CreateInspectableArray slot=38 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array object name=value
+            out object return
+    method create_int16 static
+        method CreateInt16 slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=65 static
+            in int16 name=value
+            out object return
+    method create_int16_array static
+        method CreateInt16Array slot=27 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 reverse=261 static
+            pass_array int16 name=value
+            out object return
+    method create_int32 static
+        method CreateInt32 slot=10 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=124 static
+            in int32 name=value
+            out object return
+    method create_int32_array static
+        method CreateInt32Array slot=29 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array int32 name=value
+            out object return
+    method create_int64 static
+        method CreateInt64 slot=12 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=47 reverse=161 static
+            in int64 name=value
+            out object return
+    method create_int64_array static
+        method CreateInt64Array slot=31 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 reverse=275 static
+            pass_array int64 name=value
+            out object return
+    method create_point static
+        method CreatePoint slot=23 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=79 static
+            in struct type=Windows.Foundation.Point name=value
+            out object return
+    method create_point_array static
+        method CreatePointArray slot=42 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array struct type=Windows.Foundation.Point name=value
+            out object return
+    method create_rect static
+        method CreateRect slot=25 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=74 static
+            in struct type=Windows.Foundation.Rect name=value
+            out object return
+    method create_rect_array static
+        method CreateRectArray slot=44 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array struct type=Windows.Foundation.Rect name=value
+            out object return
+    method create_single static
+        method CreateSingle slot=14 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=40 static
+            in single name=value
+            out object return
+    method create_single_array static
+        method CreateSingleArray slot=33 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array single name=value
+            out object return
+    method create_size static
+        method CreateSize slot=24 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=79 static
+            in struct type=Windows.Foundation.Size name=value
+            out object return
+    method create_size_array static
+        method CreateSizeArray slot=43 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array struct type=Windows.Foundation.Size name=value
+            out object return
+    method create_string static
+        method CreateString slot=18 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=219 static
+            in string name=value
+            out object return
+    method create_string_array static
+        method CreateStringArray slot=37 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array string name=value
+            out object return
+    method create_time_span static
+        method CreateTimeSpan slot=22 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=89 static
+            in timespan name=value
+            out object return
+    method create_time_span_array static
+        method CreateTimeSpanArray slot=41 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array timespan name=value
+            out object return
+    method create_uint16 static
+        method CreateUInt16 slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=100 static
+            in uint16 name=value
+            out object return
+    method create_uint16_array static
+        method CreateUInt16Array slot=28 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array uint16 name=value
+            out object return
+    method create_uint32 static
+        method CreateUInt32 slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=144 static
+            in uint32 name=value
+            out object return
+    method create_uint32_array static
+        method CreateUInt32Array slot=30 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array uint32 name=value
+            out object return
+    method create_uint64 static
+        method CreateUInt64 slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=47 static
+            in uint64 name=value
+            out object return
+    method create_uint64_array static
+        method CreateUInt64Array slot=32 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 reverse=282 static
+            pass_array uint64 name=value
+            out object return
+    method create_uint8 static
+        method CreateUInt8 slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=51 reverse=44 static
+            in uint8 name=value
+            out object return
+    method create_uint8_array static
+        method CreateUInt8Array slot=26 inputs=1 outputs=1 declaring=Windows.Foundation.IPropertyValueStatics shape=117 static
+            pass_array uint8 name=value
+            out object return
+
+struct Windows.Foundation.Rect python_type
+    py Rect
+    signature struct(Windows.Foundation.Rect;f4;f4;f4;f4)
+    field x X single
+    field y Y single
+    field width Width single
+    field height Height single
+
+struct Windows.Foundation.Size python_type
+    py Size
+    signature struct(Windows.Foundation.Size;f4;f4)
+    field width Width single
+    field height Height single
+
+enum T parameterized
+
+enum TProgress parameterized
+
+enum TResult parameterized
+
+struct Windows.Foundation.TimeSpan python_type
+    py TimeSpan
+    signature struct(Windows.Foundation.TimeSpan;i8)
+    field duration Duration int64
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.IMemoryBufferReference,System.Object> concrete
+    guid f4637d4a-0760-5431-bfc0-24eb1d4f6c4f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{fbc4dd29-245b-11e4-af98-689423260cf8};cinterface(IInspectable))
+    argument Windows.Foundation.IMemoryBufferReference
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler parameterized python_type
+    py TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+    method -
+        method Invoke slot=3 inputs=2 outputs=0
+            in object name=sender
+            in object name=args
+
+class Windows.Foundation.Uri python_type stringable
+    py Uri
+    signature rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc})
+    default Windows.Foundation.IUriRuntimeClass
+    requires Windows.Foundation.IUriRuntimeClass
+    requires Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
+    requires Windows.Foundation.IStringable
+    factory Windows.Foundation.IUriRuntimeClassFactory
+    factory Windows.Foundation.IUriEscapeStatics
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IUriRuntimeClassFactory shape=51 reverse=24
+            in string name=uri
+            out class type=Windows.Foundation.Uri return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Foundation.IUriRuntimeClassFactory shape=117 reverse=45
+            in string name=baseUri
+            in string name=relativeUri
+            out class type=Windows.Foundation.Uri return
+    property absolute_uri
+        get get_AbsoluteUri slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=22
+            out string return
+    property display_uri
+        get get_DisplayUri slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=43
+            out string return
+    property domain
+        get get_Domain slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=62
+            out string return
+    property extension
+        get get_Extension slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=99
+            out string return
+    property fragment
+        get get_Fragment slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=121
+            out string return
+    property host
+        get get_Host slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=141
+            out string return
+    property password
+        get get_Password slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=162
+            out string return
+    property path
+        get get_Path slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=173
+            out string return
+    property port
+        get get_Port slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=223
+            out int32 return
+    property query
+        get get_Query slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=186
+            out string return
+    property query_parsed
+        get get_QueryParsed slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=194
+            out class type=Windows.Foundation.WwwFormUrlDecoder return
+    property raw_uri
+        get get_RawUri slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=202
+            out string return
+    property scheme_name
+        get get_SchemeName slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=210
+            out string return
+    property suspicious
+        get get_Suspicious slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=228
+            out boolean return
+    property user_name
+        get get_UserName slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=4 reverse=218
+            out string return
+    property absolute_canonical_uri
+        get get_AbsoluteCanonicalUri slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri shape=4 reverse=22
+            out string return
+    property display_iri
+        get get_DisplayIri slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri shape=4 reverse=43
+            out string return
+    method combine_uri
+        method CombineUri slot=22 inputs=1 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=51 reverse=238
+            in string name=relativeUri
+            out class type=Windows.Foundation.Uri return
+    method equals
+        method Equals slot=21 inputs=1 outputs=1 declaring=Windows.Foundation.IUriRuntimeClass shape=51 reverse=233
+            in class type=Windows.Foundation.Uri name=pUri
+            out boolean return
+    method escape_component static
+        method EscapeComponent slot=7 inputs=1 outputs=1 declaring=Windows.Foundation.IUriEscapeStatics shape=51 reverse=44 static
+            in string name=toEscape
+            out string return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+    method unescape_component static
+        method UnescapeComponent slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IUriEscapeStatics shape=51 reverse=24 static
+            in string name=toUnescape
+            out string return
+
+class Windows.Foundation.WwwFormUrlDecoder python_type iterable sequence
+    py WwwFormUrlDecoder
+    signature rc(Windows.Foundation.WwwFormUrlDecoder;{d45a0451-f225-4542-9296-0e1df5d254df})
+    default Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
+    requires Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry>
+    requires Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry>
+    requires Windows.Foundation.Collections.IIterable<T>
+    factory Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory shape=51 reverse=24
+            in string name=query
+            out class type=Windows.Foundation.WwwFormUrlDecoder return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=43
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=51 reverse=24
+            in uint32 name=index
+            out interface type=Windows.Foundation.IWwwFormUrlDecoderEntry return
+    method get_first_value_by_name
+        method GetFirstValueByName slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderRuntimeClass shape=51 reverse=24
+            in string name=name
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=117 reverse=66
+            in interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Foundation.WwwFormUrlDecoderEntry python_type
+    py WwwFormUrlDecoderEntry
+    signature rc(Windows.Foundation.WwwFormUrlDecoderEntry;{125e7431-f678-4e8e-b670-20a9b06c512d})
+    default Windows.Foundation.IWwwFormUrlDecoderEntry
+    requires Windows.Foundation.IWwwFormUrlDecoderEntry
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderEntry shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderEntry shape=4 reverse=43
+            out string return
+
+class System.Object external
+    py winrt.system.Object

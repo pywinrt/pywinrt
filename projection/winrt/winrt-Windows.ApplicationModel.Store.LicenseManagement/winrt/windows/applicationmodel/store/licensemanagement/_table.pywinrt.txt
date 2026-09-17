@@ -1,0 +1,103 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Store.LicenseManagement
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> concrete
+    guid b8447bc9-a9f8-5867-8b30-cd34720edc31
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult;{3c674f73-3c87-4ee1-8201-f428359bd3af}))
+    argument Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics
+    guid b5ac3ae0-da47-4f20-9a23-09182c9476ff
+
+interface Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2
+    guid ab2ec47b-1f79-4480-b87e-2c499e601ba3
+
+interface Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo
+    guid 3ccbb08f-db31-48d5-8384-fa17c81474e2
+
+interface Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
+    guid 3c674f73-3c87-4ee1-8201-f428359bd3af
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo> concrete
+    guid 19df5e64-c2b2-5bfd-a259-f02c23574cd3
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo;{3ccbb08f-db31-48d5-8384-fa17c81474e2}))
+    argument System.String
+    argument Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo
+
+class Windows.ApplicationModel.Store.LicenseManagement.LicenseManager static python_type
+    py LicenseManager
+    factory Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics
+    factory Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2
+    method add_license_async static
+        method AddLicenseAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=51 reverse=24 static
+            in interface type=Windows.Storage.Streams.IBuffer name=license
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_satisfaction_infos_async static
+        method GetSatisfactionInfosAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=117 reverse=45 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=keyIds
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> return
+    method refresh_licenses_async static
+        method RefreshLicensesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2 shape=51 reverse=24 static
+            in enum32 type=Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption name=refreshOption
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption python_type
+    py LicenseRefreshOption
+    signature enum(Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption;i4)
+
+class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo python_type
+    py LicenseSatisfactionInfo
+    signature rc(Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo;{3ccbb08f-db31-48d5-8384-fa17c81474e2})
+    default Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo
+    requires Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo
+    property is_satisfied
+        get get_IsSatisfied slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=162
+            out boolean return
+    property satisfied_by_device
+        get get_SatisfiedByDevice slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=22
+            out boolean return
+    property satisfied_by_install_media
+        get get_SatisfiedByInstallMedia slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=121
+            out boolean return
+    property satisfied_by_open_license
+        get get_SatisfiedByOpenLicense slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=43
+            out boolean return
+    property satisfied_by_pass
+        get get_SatisfiedByPass slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=99
+            out boolean return
+    property satisfied_by_signed_in_user
+        get get_SatisfiedBySignedInUser slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=141
+            out boolean return
+    property satisfied_by_trial
+        get get_SatisfiedByTrial slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=62
+            out boolean return
+
+class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult python_type
+    py LicenseSatisfactionResult
+    signature rc(Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult;{3c674f73-3c87-4ee1-8201-f428359bd3af})
+    default Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
+    requires Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=43
+            out hresult return
+    property license_satisfaction_infos
+        get get_LicenseSatisfactionInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo> return
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

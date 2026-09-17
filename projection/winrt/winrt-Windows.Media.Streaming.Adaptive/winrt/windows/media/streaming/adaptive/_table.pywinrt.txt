@@ -1,0 +1,684 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Streaming.Adaptive
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSource python_type closeable
+    py AdaptiveMediaSource
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource
+    requires Windows.Media.Core.IMediaSource
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource2
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3
+    requires Windows.Foundation.IClosable
+    factory Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics
+    property initial_bitrate
+        get get_InitialBitrate slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=99
+            out uint32 return
+        put put_InitialBitrate slot=10 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=121
+            in uint32 name=value
+    property inbound_bits_per_second_window
+        get get_InboundBitsPerSecondWindow slot=20 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=228
+            out timespan return
+        put put_InboundBitsPerSecondWindow slot=21 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=234
+            in timespan name=value
+    property desired_max_bitrate
+        get get_DesiredMaxBitrate slot=16 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=202
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_DesiredMaxBitrate slot=17 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=210
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property desired_live_offset
+        get get_DesiredLiveOffset slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=43
+            out timespan return
+        put put_DesiredLiveOffset slot=8 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=82
+            in timespan name=value
+    property desired_min_bitrate
+        get get_DesiredMinBitrate slot=14 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_DesiredMinBitrate slot=15 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=194
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property current_playback_bitrate
+        get get_CurrentPlaybackBitrate slot=12 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=162
+            out uint32 return
+    property audio_only_playback
+        get get_AudioOnlyPlayback slot=18 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=218
+            out boolean return
+    property inbound_bits_per_second
+        get get_InboundBitsPerSecond slot=19 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=223
+            out uint64 return
+    property available_bitrates
+        get get_AvailableBitrates slot=13 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
+    property current_download_bitrate
+        get get_CurrentDownloadBitrate slot=11 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=141
+            out uint32 return
+    property is_live
+        get get_IsLive slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=4 reverse=22
+            out boolean return
+    property advanced_settings
+        get get_AdvancedSettings slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource2 shape=4 reverse=22
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings return
+    property desired_seekable_window_size
+        get get_DesiredSeekableWindowSize slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_DesiredSeekableWindowSize slot=9 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property diagnostics
+        get get_Diagnostics slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=121
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics return
+    property max_seekable_window_size
+        get get_MaxSeekableWindowSize slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property min_live_offset
+        get get_MinLiveOffset slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    event download_bitrate_changed
+        add add_DownloadBitrateChanged slot=22 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=238
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_DownloadBitrateChanged slot=23 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=245
+            in event_token name=token
+    event download_completed
+        add add_DownloadCompleted slot=28 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=264
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_DownloadCompleted slot=29 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=268
+            in event_token name=token
+    event download_failed
+        add add_DownloadFailed slot=30 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=271
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs> name=handler
+            out event_token return
+        remove remove_DownloadFailed slot=31 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=277
+            in event_token name=token
+    event download_requested
+        add add_DownloadRequested slot=26 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=256
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_DownloadRequested slot=27 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=262
+            in event_token name=token
+    event playback_bitrate_changed
+        add add_PlaybackBitrateChanged slot=24 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=248
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PlaybackBitrateChanged slot=25 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=254
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create_from_stream_async static
+        method CreateFromStreamAsync slot=9 inputs=3 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics shape=195 reverse=102 static
+            in interface type=Windows.Storage.Streams.IInputStream name=stream
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=contentType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> return
+        method CreateFromStreamAsync slot=10 inputs=4 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics shape=239 static
+            in interface type=Windows.Storage.Streams.IInputStream name=stream
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=contentType
+            in class type=Windows.Web.Http.HttpClient name=httpClient
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> return
+    method create_from_uri_async static
+        method CreateFromUriAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics shape=51 reverse=44 static
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> return
+        method CreateFromUriAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics shape=117 reverse=66 static
+            in class type=Windows.Foundation.Uri name=uri
+            in class type=Windows.Web.Http.HttpClient name=httpClient
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> return
+    method get_correlated_times
+        method GetCorrelatedTimes slot=11 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3 shape=4 reverse=141
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes return
+    method is_content_type_supported static
+        method IsContentTypeSupported slot=6 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics shape=51 reverse=24 static
+            in string name=contentType
+            out boolean return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings python_type
+    py AdaptiveMediaSourceAdvancedSettings
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings;{55db1680-1aeb-47dc-aa08-9a11610ba45a})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings
+    property desired_bitrate_headroom_ratio
+        get get_DesiredBitrateHeadroomRatio slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Double> return
+        put put_DesiredBitrateHeadroomRatio slot=9 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.Double> name=value
+    property bitrate_downgrade_trigger_ratio
+        get get_BitrateDowngradeTriggerRatio slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.Double> return
+        put put_BitrateDowngradeTriggerRatio slot=11 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.Double> name=value
+    property all_segments_independent
+        get get_AllSegmentsIndependent slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=22
+            out boolean return
+        put put_AllSegmentsIndependent slot=7 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings shape=4 reverse=43
+            in boolean name=value
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes python_type
+    py AdaptiveMediaSourceCorrelatedTimes
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes;{05108787-e032-48e1-ab8d-002b0b3051df})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property presentation_time_stamp
+        get get_PresentationTimeStamp slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property program_date_time
+        get get_ProgramDateTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult python_type
+    py AdaptiveMediaSourceCreationResult
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult;{4686b6b2-800f-4e31-9093-76d4782013e7})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2
+    property http_response_message
+        get get_HttpResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult shape=4 reverse=62
+            out class type=Windows.Web.Http.HttpResponseMessage return
+    property media_source
+        get get_MediaSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult shape=4 reverse=43
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSource return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus return
+    property extended_error
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2 shape=4 reverse=22
+            out hresult return
+
+enum Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus python_type
+    py AdaptiveMediaSourceCreationStatus
+    signature enum(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus;i4)
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs python_type
+    py AdaptiveMediaSourceDiagnosticAvailableEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs;{3af64f06-6d9c-494a-b7a9-b3a5dee6ad68})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3
+    property bitrate
+        get get_Bitrate slot=14 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+    property diagnostic_type
+        get get_DiagnosticType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticType return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property request_id
+        get get_RequestId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+    property resource_byte_range_length
+        get get_ResourceByteRangeLength slot=13 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=173
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_byte_range_offset
+        get get_ResourceByteRangeOffset slot=12 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_type
+        get get_ResourceType slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType> return
+    property resource_uri
+        get get_ResourceUri slot=11 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+    property segment_id
+        get get_SegmentId slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property extended_error
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2 shape=4 reverse=22
+            out hresult return
+    property resource_content_type
+        get get_ResourceContentType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3 shape=4 reverse=43
+            out string return
+    property resource_duration
+        get get_ResourceDuration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+
+enum Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticType python_type
+    py AdaptiveMediaSourceDiagnosticType
+    signature enum(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticType;i4)
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics python_type
+    py AdaptiveMediaSourceDiagnostics
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics;{9b24ee68-962e-448c-aebf-b29b56098e23})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics
+    event diagnostic_available
+        add add_DiagnosticAvailable slot=6 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs> name=handler
+            out event_token return
+        remove remove_DiagnosticAvailable slot=7 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics shape=26 reverse=53
+            in event_token name=token
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs python_type
+    py AdaptiveMediaSourceDownloadBitrateChangedEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs;{670c0a44-e04e-4eff-816a-17399f78f4ba})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2
+    property new_value
+        get get_NewValue slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs shape=4 reverse=43
+            out uint32 return
+    property old_value
+        get get_OldValue slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs shape=4 reverse=22
+            out uint32 return
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2 shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedReason return
+
+enum Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedReason python_type
+    py AdaptiveMediaSourceDownloadBitrateChangedReason
+    signature enum(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedReason;i4)
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs python_type
+    py AdaptiveMediaSourceDownloadCompletedEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs;{19240dc3-5b37-4a1a-8970-d621cb6ca83b})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3
+    property http_response_message
+        get get_HttpResponseMessage slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs shape=4 reverse=121
+            out class type=Windows.Web.Http.HttpResponseMessage return
+    property resource_byte_range_length
+        get get_ResourceByteRangeLength slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_byte_range_offset
+        get get_ResourceByteRangeOffset slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_type
+        get get_ResourceType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType return
+    property resource_uri
+        get get_ResourceUri slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2 shape=4 reverse=22
+            out int32 return
+    property statistics
+        get get_Statistics slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2 shape=4 reverse=43
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics return
+    property resource_content_type
+        get get_ResourceContentType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3 shape=4 reverse=43
+            out string return
+    property resource_duration
+        get get_ResourceDuration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs python_type
+    py AdaptiveMediaSourceDownloadFailedEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs;{37739048-f4ab-40a4-b135-c6dfd8bd7ff1})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3
+    property http_response_message
+        get get_HttpResponseMessage slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs shape=4 reverse=121
+            out class type=Windows.Web.Http.HttpResponseMessage return
+    property resource_byte_range_length
+        get get_ResourceByteRangeLength slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_byte_range_offset
+        get get_ResourceByteRangeOffset slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_type
+        get get_ResourceType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType return
+    property resource_uri
+        get get_ResourceUri slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=43
+            out hresult return
+    property position
+        get get_Position slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=22
+            out int32 return
+    property statistics
+        get get_Statistics slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=62
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics return
+    property resource_content_type
+        get get_ResourceContentType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3 shape=4 reverse=43
+            out string return
+    property resource_duration
+        get get_ResourceDuration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral python_type
+    py AdaptiveMediaSourceDownloadRequestedDeferral
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral;{05c68f64-fa20-4dbd-9821-4bf4c9bf77ab})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedDeferral
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedDeferral shape=0 reverse=16
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs python_type
+    py AdaptiveMediaSourceDownloadRequestedEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs;{c83fdffd-44a9-47a2-bf96-03398b4bfaaf})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3
+    property resource_byte_range_length
+        get get_ResourceByteRangeLength slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_byte_range_offset
+        get get_ResourceByteRangeOffset slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+    property resource_type
+        get get_ResourceType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType return
+    property resource_uri
+        get get_ResourceUri slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property result
+        get get_Result slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=121
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult return
+    property position
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2 shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2 shape=4 reverse=22
+            out int32 return
+    property resource_content_type
+        get get_ResourceContentType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3 shape=4 reverse=43
+            out string return
+    property resource_duration
+        get get_ResourceDuration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    method get_deferral
+        method GetDeferral slot=11 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs shape=4 reverse=141
+            out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult python_type
+    py AdaptiveMediaSourceDownloadResult
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult;{f4afdc73-bcee-4a6a-9f0a-fec41e2339b0})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2
+    property resource_uri
+        get get_ResourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_ResourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property input_stream
+        get get_InputStream slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IInputStream return
+        put put_InputStream slot=9 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IInputStream name=value
+    property extended_status
+        get get_ExtendedStatus slot=14 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=186
+            out uint32 return
+        put put_ExtendedStatus slot=15 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=194
+            in uint32 name=value
+    property content_type
+        get get_ContentType slot=12 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=162
+            out string return
+        put put_ContentType slot=13 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=173
+            in string name=value
+    property buffer
+        get get_Buffer slot=10 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_Buffer slot=11 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult shape=4 reverse=141
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property resource_byte_range_offset
+        get get_ResourceByteRangeOffset slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+        put put_ResourceByteRangeOffset slot=7 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.UInt64> name=value
+    property resource_byte_range_length
+        get get_ResourceByteRangeLength slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt64> return
+        put put_ResourceByteRangeLength slot=9 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2 shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.UInt64> name=value
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics python_type
+    py AdaptiveMediaSourceDownloadStatistics
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics;{a306cefb-e96a-4dff-a9b8-1ae08c01ae98})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics
+    property content_bytes_received_count
+        get get_ContentBytesReceivedCount slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics shape=4 reverse=22
+            out uint64 return
+    property time_to_first_byte_received
+        get get_TimeToFirstByteReceived slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property time_to_headers_received
+        get get_TimeToHeadersReceived slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property time_to_last_byte_received
+        get get_TimeToLastByteReceived slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+
+class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs python_type
+    py AdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+    signature rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;{23a29f6d-7dda-4a51-87a9-6fa8c5b292be})
+    default Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+    requires Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+    property audio_only
+        get get_AudioOnly slot=8 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs shape=4 reverse=62
+            out boolean return
+    property new_value
+        get get_NewValue slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs shape=4 reverse=43
+            out uint32 return
+    property old_value
+        get get_OldValue slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs shape=4 reverse=22
+            out uint32 return
+
+enum Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType python_type
+    py AdaptiveMediaSourceResourceType
+    signature enum(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType;i4)
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource
+    guid 4c7332ef-d39f-4396-b4d9-043957a7c964
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource2
+    guid 17890342-6760-4bb9-a58a-f7aa98b08c0e
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource3
+    guid ba7023fd-c334-461b-a36e-c99f54f7174a
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceAdvancedSettings
+    guid 55db1680-1aeb-47dc-aa08-9a11610ba45a
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCorrelatedTimes
+    guid 05108787-e032-48e1-ab8d-002b0b3051df
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult
+    guid 4686b6b2-800f-4e31-9093-76d4782013e7
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2
+    guid 1c3243bf-1c44-404b-a201-df45ac7898e8
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs
+    guid 3af64f06-6d9c-494a-b7a9-b3a5dee6ad68
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2
+    guid 8c6dd857-16a5-4d9f-810e-00bd901b3ef9
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3
+    guid c3650cd5-daeb-4103-84da-68769ad513ff
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics
+    guid 9b24ee68-962e-448c-aebf-b29b56098e23
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs
+    guid 670c0a44-e04e-4eff-816a-17399f78f4ba
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadBitrateChangedEventArgs2
+    guid f3f1f444-96ae-4de0-b540-2b3246e6968c
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs
+    guid 19240dc3-5b37-4a1a-8970-d621cb6ca83b
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs2
+    guid 704744c4-964a-40e4-af95-9177dd6dfa00
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadCompletedEventArgs3
+    guid 0f8a8bd1-93b2-47c6-badc-8be2c8f7f6e8
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs
+    guid 37739048-f4ab-40a4-b135-c6dfd8bd7ff1
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2
+    guid 70919568-967c-4986-90c5-c6fc4b31e2d8
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs3
+    guid d0354549-1132-4a10-915a-c2211b5b9409
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedDeferral
+    guid 05c68f64-fa20-4dbd-9821-4bf4c9bf77ab
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs
+    guid c83fdffd-44a9-47a2-bf96-03398b4bfaaf
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs2
+    guid b37d8bfe-aa44-4d82-825b-611de3bcfecb
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadRequestedEventArgs3
+    guid 333c50fd-4f62-4481-ab44-1e47b0574225
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult
+    guid f4afdc73-bcee-4a6a-9f0a-fec41e2339b0
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadResult2
+    guid 15552cb7-7b80-4ac4-8660-a4b97f7c70f0
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadStatistics
+    guid a306cefb-e96a-4dff-a9b8-1ae08c01ae98
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+    guid 23a29f6d-7dda-4a51-87a9-6fa8c5b292be
+
+interface Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceStatics
+    guid 50a6bd5d-66ef-4cd3-9579-9e660507dc3f
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> concrete
+    guid be0bcc1d-d606-59d2-b2f9-ff204543da12
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult;{4686b6b2-800f-4e31-9093-76d4782013e7}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<System.UInt64> concrete
+    guid 6755e376-53bb-568b-a11d-17239868309e
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8)
+    argument System.UInt64
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.IReference<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType> concrete
+    guid 74c8c3aa-de03-5bf0-aae8-aa8b692066b3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType;i4))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceResourceType
+
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+    guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    argument System.UInt32
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs> concrete
+    guid ad268caf-7da0-5ad4-8585-ceeb903dbd50
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs;{670c0a44-e04e-4eff-816a-17399f78f4ba}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSource
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs> concrete
+    guid cef775dd-25b2-5588-8d51-dacdea660a7d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs;{19240dc3-5b37-4a1a-8970-d621cb6ca83b}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSource
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs> concrete
+    guid 6ee5cc44-49ad-5138-ab47-f5c075a2bc34
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs;{37739048-f4ab-40a4-b135-c6dfd8bd7ff1}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSource
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs> concrete
+    guid d3b7dbf1-fd8e-589e-9c7f-ba67397e50cd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs;{c83fdffd-44a9-47a2-bf96-03398b4bfaaf}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSource
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs> concrete
+    guid df4f4e89-6173-539b-94d8-69b7cb7578a7
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource;{4c7332ef-d39f-4396-b4d9-043957a7c964});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs;{23a29f6d-7dda-4a51-87a9-6fa8c5b292be}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSource
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs> concrete
+    guid fd4ce6b5-7c3b-58f4-9efc-1d9ee6a09d21
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics;{9b24ee68-962e-448c-aebf-b29b56098e23});rc(Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs;{3af64f06-6d9c-494a-b7a9-b3a5dee6ad68}))
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics
+    argument Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class System.UInt64 external
+    py winrt.system.UInt64
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Media.Core.IMediaSource external
+    py winrt.windows.media.core._IMediaSource
+    guid e7bfb599-a09d-4c21-bcdf-20af4f86b3d9
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+class Windows.Web.Http.HttpClient external
+    py winrt.windows.web.http.HttpClient
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

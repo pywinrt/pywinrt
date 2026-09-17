@@ -1,0 +1,166 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Preview.Notes
+
+interface Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs
+    guid 491d57b7-f780-4e7f-a939-9a4caf965214
+
+interface Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs
+    guid 0e34649e-3815-4ff6-83b3-a14d17120e24
+
+interface Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview
+    guid dc2ac23e-4850-4f13-9cc7-ff487efdfcde
+
+interface Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2
+    guid edfe864a-1f54-4b09-9823-ff477f6fa3bc
+
+interface Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions
+    guid 886b09d6-a6ae-4007-a56d-1ca70c84c0d2
+
+interface Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics
+    guid 6668cc88-0a8e-4127-a38e-995445868a78
+
+class Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs python_type
+    py NotePlacementChangedPreviewEventArgs
+    signature rc(Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs;{491d57b7-f780-4e7f-a939-9a4caf965214})
+    default Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs
+    requires Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs
+    property view_id
+        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs shape=4 reverse=22
+            out int32 return
+
+class Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs python_type
+    py NoteVisibilityChangedPreviewEventArgs
+    signature rc(Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs;{0e34649e-3815-4ff6-83b3-a14d17120e24})
+    default Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs
+    requires Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs
+    property is_visible
+        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4 reverse=43
+            out boolean return
+    property view_id
+        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4 reverse=22
+            out int32 return
+
+class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview python_type
+    py NotesWindowManagerPreview
+    signature rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde})
+    default Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview
+    requires Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview
+    requires Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2
+    factory Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics
+    property is_screen_locked
+        get get_IsScreenLocked slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=22
+            out boolean return
+    event note_placement_changed
+        add add_NotePlacementChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs> name=handler
+            out event_token return
+        remove remove_NotePlacementChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=398
+            in event_token name=token
+    event note_visibility_changed
+        add add_NoteVisibilityChanged slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs> name=handler
+            out event_token return
+        remove remove_NoteVisibilityChanged slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=399
+            in event_token name=token
+    event system_lock_state_changed
+        add add_SystemLockStateChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,System.Object> name=handler
+            out event_token return
+        remove remove_SystemLockStateChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=397
+            in event_token name=token
+    method get_for_current_app static
+        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview return
+    method get_note_placement
+        method GetNotePlacement slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=144
+            in int32 name=noteViewId
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method hide_note
+        method HideNote slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=121
+            in int32 name=noteViewId
+    method set_focus_to_next_view
+        method SetFocusToNextView slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=0 reverse=169
+    method set_focus_to_previous_view
+        method SetFocusToPreviousView slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=0 reverse=55
+    method set_notes_thumbnail_async
+        method SetNotesThumbnailAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=187
+            in interface type=Windows.Storage.Streams.IBuffer name=thumbnail
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_thumbnail_image_for_task_switcher_async
+        method SetThumbnailImageForTaskSwitcherAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=51 reverse=100
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_note
+        method ShowNote slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=43
+            in int32 name=noteViewId
+    method show_note_relative_to
+        method ShowNoteRelativeTo slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=65
+            in int32 name=noteViewId
+            in int32 name=anchorNoteViewId
+        method ShowNoteRelativeTo slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117 reverse=25
+            in int32 name=noteViewId
+            in int32 name=anchorNoteViewId
+            in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions name=options
+    method show_note_with_placement
+        method ShowNoteWithPlacement slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=100
+            in int32 name=noteViewId
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+        method ShowNoteWithPlacement slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117 reverse=45
+            in int32 name=noteViewId
+            in interface type=Windows.Storage.Streams.IBuffer name=data
+            in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions name=options
+    method try_set_note_size
+        method TrySetNoteSize slot=12 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=134
+            in int32 name=noteViewId
+            in struct type=Windows.Foundation.Size name=size
+            out boolean return
+
+class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions activatable python_type
+    py NotesWindowManagerPreviewShowNoteOptions
+    signature rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions;{886b09d6-a6ae-4007-a56d-1ca70c84c0d2})
+    default Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions
+    requires Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property show_with_focus
+        get get_ShowWithFocus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4 reverse=22
+            out boolean return
+        put put_ShowWithFocus slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4 reverse=43
+            in boolean name=value
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,System.Object> concrete
+    guid 6f2755fb-6c33-543c-9ab4-de486bc7bfe2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs> concrete
+    guid a28af2c7-4012-5999-a322-5236b30d995f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});rc(Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs;{491d57b7-f780-4e7f-a939-9a4caf965214}))
+    argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
+    argument Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs> concrete
+    guid 16d825c8-5271-51c8-a00f-0cfb1b029ab6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});rc(Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs;{0e34649e-3815-4ff6-83b3-a14d17120e24}))
+    argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
+    argument Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

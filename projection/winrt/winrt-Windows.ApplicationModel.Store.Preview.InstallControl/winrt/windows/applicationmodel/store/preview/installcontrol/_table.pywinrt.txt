@@ -1,0 +1,654 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Store.Preview.InstallControl
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem python_type
+    py AppInstallItem
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem;{49d3dfab-168a-4cbf-a93a-9e448c82737d})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5
+    property install_type
+        get get_InstallType slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallType return
+    property is_user_initiated
+        get get_IsUserInitiated slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=4 reverse=99
+            out boolean return
+    property package_family_name
+        get get_PackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=4 reverse=43
+            out string return
+    property product_id
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=4 reverse=22
+            out string return
+    property children
+        get get_Children slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    property item_operations_might_affect_other_items
+        get get_ItemOperationsMightAffectOtherItems slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3 shape=4 reverse=43
+            out boolean return
+    property launch_after_install
+        get get_LaunchAfterInstall slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4 shape=4 reverse=22
+            out boolean return
+        put put_LaunchAfterInstall slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4 shape=4 reverse=43
+            in boolean name=value
+    property pin_to_taskbar_after_install
+        get get_PinToTaskbarAfterInstall slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=121
+            out boolean return
+        put put_PinToTaskbarAfterInstall slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=141
+            in boolean name=value
+    property pin_to_start_after_install
+        get get_PinToStartAfterInstall slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=62
+            out boolean return
+        put put_PinToStartAfterInstall slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=99
+            in boolean name=value
+    property pin_to_desktop_after_install
+        get get_PinToDesktopAfterInstall slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=22
+            out boolean return
+        put put_PinToDesktopAfterInstall slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=43
+            in boolean name=value
+    property install_in_progress_toast_notification_mode
+        get get_InstallInProgressToastNotificationMode slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode return
+        put put_InstallInProgressToastNotificationMode slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode name=value
+    property completed_install_toast_notification_mode
+        get get_CompletedInstallToastNotificationMode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode return
+        put put_CompletedInstallToastNotificationMode slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5 shape=4 reverse=173
+            in enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode name=value
+    event completed
+        add add_Completed slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem,System.Object> name=handler
+            out event_token return
+        remove remove_Completed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=26 reverse=200
+            in event_token name=token
+    event status_changed
+        add add_StatusChanged slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem,System.Object> name=handler
+            out event_token return
+        remove remove_StatusChanged slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=26 reverse=215
+            in event_token name=token
+    method cancel
+        method Cancel slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=0 reverse=137
+        method Cancel slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2 shape=4 reverse=22
+            in string name=correlationVector
+    method get_current_status
+        method GetCurrentStatus slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=4 reverse=121
+            out class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus return
+    method pause
+        method Pause slot=12 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=0 reverse=159
+        method Pause slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2 shape=4 reverse=43
+            in string name=correlationVector
+    method restart
+        method Restart slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=0 reverse=169
+        method Restart slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2 shape=4 reverse=62
+            in string name=correlationVector
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager activatable python_type
+    py AppInstallManager
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager;{9353e170-8441-4b45-bd72-7c2fa925beee})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager5
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager7
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property auto_update_setting
+        get get_AutoUpdateSetting slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting return
+        put put_AutoUpdateSetting slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting name=value
+    property acquisition_identity
+        get get_AcquisitionIdentity slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=202
+            out string return
+        put put_AcquisitionIdentity slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=210
+            in string name=value
+    property app_install_items
+        get get_AppInstallItems slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    property app_install_items_with_group_support
+        get get_AppInstallItemsWithGroupSupport slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager5 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    property can_install_for_all_users
+        get get_CanInstallForAllUsers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager7 shape=4 reverse=22
+            out boolean return
+    event item_completed
+        add add_ItemCompleted slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager,Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs> name=handler
+            out event_token return
+        remove remove_ItemCompleted slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=26 reverse=156
+            in event_token name=token
+    event item_status_changed
+        add add_ItemStatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager,Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs> name=handler
+            out event_token return
+        remove remove_ItemStatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=26 reverse=181
+            in event_token name=token
+    method cancel
+        method Cancel slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=43
+            in string name=productId
+        method Cancel slot=11 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=51 reverse=144
+            in string name=productId
+            in string name=correlationVector
+    method get_free_device_entitlement_async
+        method GetFreeDeviceEntitlementAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4 shape=195 reverse=68
+            in string name=storeId
+            in string name=campaignId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult> return
+    method get_free_user_entitlement_async
+        method GetFreeUserEntitlementAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4 shape=195 reverse=26
+            in string name=storeId
+            in string name=campaignId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult> return
+    method get_free_user_entitlement_for_user_async
+        method GetFreeUserEntitlementForUserAsync slot=7 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4 shape=239
+            in class type=Windows.System.User name=user
+            in string name=storeId
+            in string name=campaignId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult> return
+    method get_is_app_allowed_to_install_async
+        method GetIsAppAllowedToInstallAsync slot=24 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=248
+            in string name=productId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method GetIsAppAllowedToInstallAsync slot=10 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=239
+            in string name=productId
+            in string name=skuId
+            in string name=catalogId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_is_app_allowed_to_install_for_user_async
+        method GetIsAppAllowedToInstallForUserAsync slot=11 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=267
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=skuId
+            in string name=catalogId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_is_applicable_async
+        method GetIsApplicableAsync slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=117 reverse=220
+            in string name=productId
+            in string name=skuId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_is_applicable_for_user_async
+        method GetIsApplicableForUserAsync slot=12 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=195 reverse=165
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=skuId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_is_package_identity_allowed_to_install_async
+        method GetIsPackageIdentityAllowedToInstallAsync slot=12 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=195 reverse=165
+            in string name=correlationVector
+            in string name=packageIdentityName
+            in string name=publisherCertificateName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_is_package_identity_allowed_to_install_for_user_async
+        method GetIsPackageIdentityAllowedToInstallForUserAsync slot=13 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=239
+            in class type=Windows.System.User name=user
+            in string name=correlationVector
+            in string name=packageIdentityName
+            in string name=publisherCertificateName
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method is_store_blocked_by_policy_async
+        method IsStoreBlockedByPolicyAsync slot=23 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=117 reverse=244
+            in string name=storeClientName
+            in string name=storeClientPublisher
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method move_to_front_of_download_queue
+        method MoveToFrontOfDownloadQueue slot=13 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=51 reverse=174
+            in string name=productId
+            in string name=correlationVector
+    method pause
+        method Pause slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=62
+            in string name=productId
+        method Pause slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=51 reverse=163
+            in string name=productId
+            in string name=correlationVector
+    method restart
+        method Restart slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=99
+            in string name=productId
+        method Restart slot=13 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=51 reverse=174
+            in string name=productId
+            in string name=correlationVector
+    method search_for_all_updates_async
+        method SearchForAllUpdatesAsync slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=237
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+        method SearchForAllUpdatesAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=51 reverse=100
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+        method SearchForAllUpdatesAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=195 reverse=26
+            in string name=correlationVector
+            in string name=clientId
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions name=updateOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+    method search_for_all_updates_for_user_async
+        method SearchForAllUpdatesForUserAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=117 reverse=125
+            in class type=Windows.System.User name=user
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+        method SearchForAllUpdatesForUserAsync slot=7 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=239
+            in class type=Windows.System.User name=user
+            in string name=correlationVector
+            in string name=clientId
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions name=updateOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+    method search_for_updates_async
+        method SearchForUpdatesAsync slot=21 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=117
+            in string name=productId
+            in string name=skuId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+        method SearchForUpdatesAsync slot=8 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=239 reverse=69
+            in string name=productId
+            in string name=skuId
+            in string name=catalogId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+        method SearchForUpdatesAsync slot=8 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=267 reverse=70
+            in string name=productId
+            in string name=skuId
+            in string name=correlationVector
+            in string name=clientId
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions name=updateOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    method search_for_updates_for_user_async
+        method SearchForUpdatesForUserAsync slot=9 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=267
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=skuId
+            in string name=catalogId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+        method SearchForUpdatesForUserAsync slot=9 inputs=6 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=278
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=skuId
+            in string name=correlationVector
+            in string name=clientId
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions name=updateOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    method start_app_install_async
+        method StartAppInstallAsync slot=19 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=239
+            in string name=productId
+            in string name=skuId
+            in boolean name=repair
+            in boolean name=forceUseOfNonRemovableStorage
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+        method StartAppInstallAsync slot=6 inputs=7 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=286
+            in string name=productId
+            in string name=skuId
+            in boolean name=repair
+            in boolean name=forceUseOfNonRemovableStorage
+            in string name=catalogId
+            in string name=bundleId
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    method start_product_install_async
+        method StartProductInstallAsync slot=10 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=267
+            in string name=productId
+            in string name=flightId
+            in string name=clientId
+            in string name=correlationVector
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions name=installOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+        method StartProductInstallAsync slot=6 inputs=8 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=292
+            in string name=productId
+            in string name=catalogId
+            in string name=flightId
+            in string name=clientId
+            in boolean name=repair
+            in boolean name=forceUseOfNonRemovableStorage
+            in string name=correlationVector
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+    method start_product_install_for_user_async
+        method StartProductInstallForUserAsync slot=11 inputs=6 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6 shape=278
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=flightId
+            in string name=clientId
+            in string name=correlationVector
+            in class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions name=installOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+        method StartProductInstallForUserAsync slot=7 inputs=9 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=294
+            in class type=Windows.System.User name=user
+            in string name=productId
+            in string name=catalogId
+            in string name=flightId
+            in string name=clientId
+            in boolean name=repair
+            in boolean name=forceUseOfNonRemovableStorage
+            in string name=correlationVector
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> return
+    method update_app_by_package_family_name_async
+        method UpdateAppByPackageFamilyNameAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=229
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+        method UpdateAppByPackageFamilyNameAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2 shape=117 reverse=45
+            in string name=packageFamilyName
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+    method update_app_by_package_family_name_for_user_async
+        method UpdateAppByPackageFamilyNameForUserAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3 shape=195 reverse=68
+            in class type=Windows.System.User name=user
+            in string name=packageFamilyName
+            in string name=correlationVector
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> return
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs python_type
+    py AppInstallManagerItemEventArgs
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs;{bc505743-4674-4dd1-957e-c25682086a14})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManagerItemEventArgs
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManagerItemEventArgs
+    property item
+        get get_Item slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManagerItemEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem return
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions activatable python_type
+    py AppInstallOptions
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions;{c9808300-1cb8-4eb6-8c9f-6a30c64a5b51})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property target_volume
+        get get_TargetVolume slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=186
+            out class type=Windows.Management.Deployment.PackageVolume return
+        put put_TargetVolume slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=194
+            in class type=Windows.Management.Deployment.PackageVolume name=value
+    property repair
+        get get_Repair slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=162
+            out boolean return
+        put put_Repair slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=173
+            in boolean name=value
+    property launch_after_install
+        get get_LaunchAfterInstall slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=202
+            out boolean return
+        put put_LaunchAfterInstall slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=210
+            in boolean name=value
+    property force_use_of_non_removable_storage
+        get get_ForceUseOfNonRemovableStorage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=62
+            out boolean return
+        put put_ForceUseOfNonRemovableStorage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=99
+            in boolean name=value
+    property catalog_id
+        get get_CatalogId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=22
+            out string return
+        put put_CatalogId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=43
+            in string name=value
+    property allow_forced_app_restart
+        get get_AllowForcedAppRestart slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=121
+            out boolean return
+        put put_AllowForcedAppRestart slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions shape=4 reverse=141
+            in boolean name=value
+    property stage_but_do_not_install
+        get get_StageButDoNotInstall slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=218
+            out boolean return
+        put put_StageButDoNotInstall slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=223
+            in boolean name=value
+    property pin_to_taskbar_after_install
+        get get_PinToTaskbarAfterInstall slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=121
+            out boolean return
+        put put_PinToTaskbarAfterInstall slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=141
+            in boolean name=value
+    property pin_to_start_after_install
+        get get_PinToStartAfterInstall slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=62
+            out boolean return
+        put put_PinToStartAfterInstall slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=99
+            in boolean name=value
+    property pin_to_desktop_after_install
+        get get_PinToDesktopAfterInstall slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=22
+            out boolean return
+        put put_PinToDesktopAfterInstall slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=43
+            in boolean name=value
+    property install_in_progress_toast_notification_mode
+        get get_InstallInProgressToastNotificationMode slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=186
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode return
+        put put_InstallInProgressToastNotificationMode slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=194
+            in enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode name=value
+    property install_for_all_users
+        get get_InstallForAllUsers slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=202
+            out boolean return
+        put put_InstallForAllUsers slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=210
+            in boolean name=value
+    property extended_campaign_id
+        get get_ExtendedCampaignId slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=237
+            out string return
+        put put_ExtendedCampaignId slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=242
+            in string name=value
+    property completed_install_toast_notification_mode
+        get get_CompletedInstallToastNotificationMode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=162
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode return
+        put put_CompletedInstallToastNotificationMode slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=173
+            in enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode name=value
+    property campaign_id
+        get get_CampaignId slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=228
+            out string return
+        put put_CampaignId slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2 shape=4 reverse=232
+            in string name=value
+
+enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState python_type
+    py AppInstallState
+    signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState;i4)
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus python_type
+    py AppInstallStatus
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus;{936dccfa-2450-4126-88b1-6127a644dd5c})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus3
+    property bytes_downloaded
+        get get_BytesDownloaded slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=62
+            out uint64 return
+    property download_size_in_bytes
+        get get_DownloadSizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=43
+            out uint64 return
+    property error_code
+        get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=121
+            out hresult return
+    property install_state
+        get get_InstallState slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState return
+    property percent_complete
+        get get_PercentComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=99
+            out double return
+    property ready_for_launch
+        get get_ReadyForLaunch slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2 shape=4 reverse=43
+            out boolean return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2 shape=4 reverse=22
+            out class type=Windows.System.User return
+    property is_staged
+        get get_IsStaged slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus3 shape=4 reverse=22
+            out boolean return
+
+enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallType python_type
+    py AppInstallType
+    signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallType;i4)
+
+enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode python_type
+    py AppInstallationToastNotificationMode
+    signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode;i4)
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions activatable python_type
+    py AppUpdateOptions
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions;{26f0b02f-c2f3-4aea-af8c-6308dd9db85f})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property catalog_id
+        get get_CatalogId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions shape=4 reverse=22
+            out string return
+        put put_CatalogId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions shape=4 reverse=43
+            in string name=value
+    property allow_forced_app_restart
+        get get_AllowForcedAppRestart slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions shape=4 reverse=62
+            out boolean return
+        put put_AllowForcedAppRestart slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions shape=4 reverse=99
+            in boolean name=value
+    property automatically_download_and_install_update_if_found
+        get get_AutomaticallyDownloadAndInstallUpdateIfFound slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2 shape=4 reverse=22
+            out boolean return
+        put put_AutomaticallyDownloadAndInstallUpdateIfFound slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2 shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting python_type
+    py AutoUpdateSetting
+    signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting;i4)
+
+class Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult python_type
+    py GetEntitlementResult
+    signature rc(Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult;{74fc843f-1a9e-4609-8e4d-819086d08a3d})
+    default Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult
+    requires Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus return
+    property availability_id
+        get get_AvailabilityId slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2 shape=4 reverse=99
+            out string return
+    property is_already_owned
+        get get_IsAlreadyOwned slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2 shape=4 reverse=22
+            out boolean return
+    property order_id
+        get get_OrderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2 shape=4 reverse=43
+            out string return
+    property sku_id
+        get get_SkuId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2 shape=4 reverse=62
+            out string return
+
+enum Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus python_type
+    py GetEntitlementStatus
+    signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus;i4)
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem
+    guid 49d3dfab-168a-4cbf-a93a-9e448c82737d
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2
+    guid d3972af8-40c0-4fd7-aa6c-0aa13ca6188c
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem3
+    guid 6f3dc998-dd47-433c-9234-560172d67a45
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem4
+    guid c2d1ce12-71ff-4fc8-b540-453d4b37e1d1
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem5
+    guid 5510e7cc-4076-4a0b-9472-c21d9d380e55
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager
+    guid 9353e170-8441-4b45-bd72-7c2fa925beee
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager2
+    guid 16937851-ed37-480d-8314-52e27c03f04a
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager3
+    guid 95b24b17-e96a-4d0e-84e1-c8cb417a0178
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager4
+    guid 260a2a16-5a9e-4ebd-b944-f2ba75c31159
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager5
+    guid 3cd7be4c-1be9-4f7f-b675-aa1d64a529b2
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager6
+    guid c9e7d408-f27a-4471-b2f4-e76efcbebcca
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager7
+    guid a5ee7b30-d5e4-49a3-9853-3db03203321d
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManagerItemEventArgs
+    guid bc505743-4674-4dd1-957e-c25682086a14
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions
+    guid c9808300-1cb8-4eb6-8c9f-6a30c64a5b51
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallOptions2
+    guid 8a04c0d7-c94b-425e-95b4-bf27faeaee89
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus
+    guid 936dccfa-2450-4126-88b1-6127a644dd5c
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus2
+    guid 96e7818a-5e92-4aa9-8edc-58fed4b87e00
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus3
+    guid cb880c56-837b-4b4c-9ebb-6d44a0a96307
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions
+    guid 26f0b02f-c2f3-4aea-af8c-6308dd9db85f
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppUpdateOptions2
+    guid f4646e08-ed26-4bf9-9679-48f628e53df8
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> concrete
+    guid 83b51cbf-35e0-59ad-ab3e-ffb3f03704f9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem;{49d3dfab-168a-4cbf-a93a-9e448c82737d}))
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult> concrete
+    guid 4c24d7ee-4b92-5cea-a4f4-7a5d6e919062
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult;{74fc843f-1a9e-4609-8e4d-819086d08a3d}))
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> concrete
+    guid 9267e107-2ac6-5e0d-86e9-3154f616c68b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem;{49d3dfab-168a-4cbf-a93a-9e448c82737d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult
+    guid 74fc843f-1a9e-4609-8e4d-819086d08a3d
+
+interface Windows.ApplicationModel.Store.Preview.InstallControl.IGetEntitlementResult2
+    guid e3906641-a981-4302-8c68-ff836666bb3b
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> concrete
+    guid 48d7f874-a83c-55db-b2e6-940be9569869
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem;{49d3dfab-168a-4cbf-a93a-9e448c82737d}))
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem,System.Object> concrete
+    guid 92730467-501e-5b05-8826-926f86925b03
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem;{49d3dfab-168a-4cbf-a93a-9e448c82737d});cinterface(IInspectable))
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager,Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs> concrete
+    guid abf1c837-dacd-5446-a032-3ee902880244
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager;{9353e170-8441-4b45-bd72-7c2fa925beee});rc(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs;{bc505743-4674-4dd1-957e-c25682086a14}))
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager
+    argument Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Management.Deployment.PackageVolume external
+    py winrt.windows.management.deployment.PackageVolume
+
+class Windows.System.User external
+    py winrt.windows.system.User

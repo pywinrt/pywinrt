@@ -1,0 +1,276 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Windows.ApplicationModel.Resources
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> concrete
+    guid 6a46de21-86a6-536a-937b-1edfa3e16474
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate;{6c54bc0c-ef1e-57b8-b478-34fece737356}))
+    argument System.String
+    argument Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate
+
+interface Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics
+    guid dd6cdedc-559b-50c8-ac53-82fe21f915f3
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate
+    guid 6c54bc0c-ef1e-57b8-b478-34fece737356
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceCandidateFactory
+    guid bb2b30f8-c19b-5f43-88d9-69ad728a32f4
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceContext python_type
+    py _IResourceContext
+    guid 96fb48dc-f77d-55ff-af12-34861e3d4939
+    signature {96fb48dc-f77d-55ff-af12-34861e3d4939}
+    property qualifier_values
+        get get_QualifierValues slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceContext shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceContext2
+    guid 7a3b1158-798c-5949-969d-03510b9ce6ca
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceLoader
+    guid bc3f76bf-da46-54cd-8715-8b8aaf16eaac
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory
+    guid 871f83aa-fb34-50d6-b9b9-2c35f3ffc004
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderStatics
+    guid ec9c894a-1466-5f2f-8eee-a70cbd2b51bb
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceManager python_type
+    py _IResourceManager
+    guid ac2291ef-81be-5c99-a0ae-bcee0180b8a8
+    signature {ac2291ef-81be-5c99-a0ae-bcee0180b8a8}
+    property main_resource_map
+        get get_MainResourceMap slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=22
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceMap return
+    event resource_not_found
+        add add_ResourceNotFound slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs> name=handler
+            out event_token return
+        remove remove_ResourceNotFound slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=26 reverse=110
+            in event_token name=token
+    method create_resource_context
+        method CreateResourceContext slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=43
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext return
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceManager2
+    guid 7ec10160-a154-5c42-8268-30e306b1f585
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory
+    guid d6acf18f-458a-535b-a5c4-ac2dc4e49099
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceMap
+    guid 4abbd9bc-df4e-5c7b-812c-7e7bb0c22377
+
+interface Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs
+    guid 64abb08b-e77d-5b26-830f-15941e0e8200
+
+class Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName static python_type
+    py KnownResourceQualifierName
+    factory Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics
+    property contrast static
+        get get_Contrast slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=22 static
+            out string return
+    property custom static
+        get get_Custom slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=43 static
+            out string return
+    property device_family static
+        get get_DeviceFamily slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=62 static
+            out string return
+    property home_region static
+        get get_HomeRegion slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=99 static
+            out string return
+    property language static
+        get get_Language slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=121 static
+            out string return
+    property layout_direction static
+        get get_LayoutDirection slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=141 static
+            out string return
+    property scale static
+        get get_Scale slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=162 static
+            out string return
+    property target_size static
+        get get_TargetSize slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=173 static
+            out string return
+    property theme static
+        get get_Theme slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IKnownResourceQualifierNameStatics shape=4 reverse=186 static
+            out string return
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate python_type
+    py ResourceCandidate
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate;{6c54bc0c-ef1e-57b8-b478-34fece737356})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate
+    factory Microsoft.Windows.ApplicationModel.Resources.IResourceCandidateFactory
+    constructor -
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidateFactory shape=117 reverse=45
+            pass_array uint8 name=data
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidateFactory shape=117 reverse=25
+            in enum32 type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind name=kind
+            in string name=data
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate shape=4 reverse=62
+            out enum32 type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind return
+    property qualifier_values
+        get get_QualifierValues slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property value_as_bytes
+        get get_ValueAsBytes slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate shape=51 reverse=44
+            receive_array uint8 return
+    property value_as_string
+        get get_ValueAsString slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceCandidate shape=4 reverse=22
+            out string return
+
+enum Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind python_type
+    py ResourceCandidateKind
+    signature enum(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind;i4)
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceContext python_type
+    py ResourceContext
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceContext;{96fb48dc-f77d-55ff-af12-34861e3d4939})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceContext
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceContext2
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceContext
+    property qualifier_values
+        get get_QualifierValues slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceContext shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceLoader activatable python_type
+    py ResourceLoader
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceLoader;{bc3f76bf-da46-54cd-8715-8b8aaf16eaac})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceLoader
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceLoader
+    factory Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory
+    factory Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
+            in string name=fileName implicit
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceLoader return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
+            in string name=fileName
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceLoader return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=117 reverse=45
+            in string name=fileName
+            in string name=resourceMap
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceLoader return
+    method get_default_resource_file_path static
+        method GetDefaultResourceFilePath slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderStatics shape=4 reverse=22 static
+            out string return
+    method get_string
+        method GetString slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoader shape=51 reverse=24
+            in string name=resourceId
+            out string return
+    method get_string_for_uri
+        method GetStringForUri slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoader shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=resourceUri
+            out string return
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceManager activatable python_type
+    py ResourceManager
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceManager;{ac2291ef-81be-5c99-a0ae-bcee0180b8a8})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceManager
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceManager2
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceManager
+    factory Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory shape=51 reverse=24
+            in string name=fileName implicit
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceManager return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory shape=51 reverse=24
+            in string name=fileName
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceManager return
+    property main_resource_map
+        get get_MainResourceMap slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=22
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceMap return
+    event resource_not_found
+        add add_ResourceNotFound slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs> name=handler
+            out event_token return
+        remove remove_ResourceNotFound slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=26 reverse=110
+            in event_token name=token
+    method create_resource_context
+        method CreateResourceContext slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=43
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext return
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceMap python_type
+    py ResourceMap
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceMap;{4abbd9bc-df4e-5c7b-812c-7e7bb0c22377})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceMap
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceMap
+    property resource_count
+        get get_ResourceCount slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=4 reverse=22
+            out uint32 return
+    method get_subtree
+        method GetSubtree slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=51 reverse=44
+            in string name=reference
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceMap return
+    method get_value
+        method GetValue slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=51 reverse=100
+            in string name=resource
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+        method GetValue slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=117 reverse=125
+            in string name=resource
+            in class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext name=context
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+    method get_value_by_index
+        method GetValueByIndex slot=11 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=51 reverse=144
+            in uint32 name=index
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> return
+        method GetValueByIndex slot=12 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=117 reverse=164
+            in uint32 name=index
+            in class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext name=context
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate> return
+    method try_get_subtree
+        method TryGetSubtree slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=51 reverse=65
+            in string name=reference
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceMap return
+    method try_get_value
+        method TryGetValue slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=51 reverse=174
+            in string name=resource
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+        method TryGetValue slot=14 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceMap shape=117 reverse=188
+            in string name=resource
+            in class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext name=context
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate return
+
+class Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs python_type
+    py ResourceNotFoundEventArgs
+    signature rc(Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs;{64abb08b-e77d-5b26-830f-15941e0e8200})
+    default Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs
+    requires Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs
+    property context
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs shape=4 reverse=22
+            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs shape=4 reverse=43
+            out string return
+    method set_resolved_candidate
+        method SetResolvedCandidate slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceNotFoundEventArgs shape=4 reverse=62
+            in class type=Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate name=candidate
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs> concrete
+    guid 30bb9803-2b8a-58e0-8812-93967822d6d0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.ApplicationModel.Resources.ResourceManager;{ac2291ef-81be-5c99-a0ae-bcee0180b8a8});rc(Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs;{64abb08b-e77d-5b26-830f-15941e0e8200}))
+    argument Microsoft.Windows.ApplicationModel.Resources.ResourceManager
+    argument Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

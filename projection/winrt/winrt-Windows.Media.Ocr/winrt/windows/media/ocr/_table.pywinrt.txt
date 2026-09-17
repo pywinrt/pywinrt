@@ -1,0 +1,125 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Ocr
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Ocr.OcrResult> concrete
+    guid c7d7118e-ae36-59c0-ac76-7badee711c8b
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Ocr.OcrResult;{9bd235b2-175b-3d6a-92e2-388c206e2f63}))
+    argument Windows.Media.Ocr.OcrResult
+
+interface Windows.Media.Ocr.IOcrEngine
+    guid 5a14bc41-5b76-3140-b680-8825562683ac
+
+interface Windows.Media.Ocr.IOcrEngineStatics
+    guid 5bffa85a-3384-3540-9940-699120d428a8
+
+interface Windows.Media.Ocr.IOcrLine
+    guid 0043a16f-e31f-3a24-899c-d444bd088124
+
+interface Windows.Media.Ocr.IOcrResult
+    guid 9bd235b2-175b-3d6a-92e2-388c206e2f63
+
+interface Windows.Media.Ocr.IOcrWord
+    guid 3c2a477a-5cd9-3525-ba2a-23d1e0a68a1d
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> concrete
+    guid 144b0f3d-2d59-5dd2-b012-908ec3e06435
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    argument Windows.Globalization.Language
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> concrete
+    guid 60c76eac-8875-5ddb-a19b-65a3936279ea
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Ocr.OcrLine;{0043a16f-e31f-3a24-899c-d444bd088124}))
+    argument Windows.Media.Ocr.OcrLine
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> concrete
+    guid 805a60c7-df4f-527c-86b2-e29e439a83d2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Ocr.OcrWord;{3c2a477a-5cd9-3525-ba2a-23d1e0a68a1d}))
+    argument Windows.Media.Ocr.OcrWord
+
+class Windows.Media.Ocr.OcrEngine python_type
+    py OcrEngine
+    signature rc(Windows.Media.Ocr.OcrEngine;{5a14bc41-5b76-3140-b680-8825562683ac})
+    default Windows.Media.Ocr.IOcrEngine
+    requires Windows.Media.Ocr.IOcrEngine
+    factory Windows.Media.Ocr.IOcrEngineStatics
+    property recognizer_language
+        get get_RecognizerLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=4 reverse=43
+            out class type=Windows.Globalization.Language return
+    property available_recognizer_languages static
+        get get_AvailableRecognizerLanguages slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> return
+    property max_image_dimension static
+        get get_MaxImageDimension slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=22 static
+            out uint32 return
+    method is_language_supported static
+        method IsLanguageSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 reverse=65 static
+            in class type=Windows.Globalization.Language name=language
+            out boolean return
+    method recognize_async
+        method RecognizeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=51 reverse=24
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Ocr.OcrResult> return
+    method try_create_from_language static
+        method TryCreateFromLanguage slot=9 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 reverse=100 static
+            in class type=Windows.Globalization.Language name=language
+            out class type=Windows.Media.Ocr.OcrEngine return
+    method try_create_from_user_profile_languages static
+        method TryCreateFromUserProfileLanguages slot=10 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=121 static
+            out class type=Windows.Media.Ocr.OcrEngine return
+
+class Windows.Media.Ocr.OcrLine python_type
+    py OcrLine
+    signature rc(Windows.Media.Ocr.OcrLine;{0043a16f-e31f-3a24-899c-d444bd088124})
+    default Windows.Media.Ocr.IOcrLine
+    requires Windows.Media.Ocr.IOcrLine
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4 reverse=43
+            out string return
+    property words
+        get get_Words slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> return
+
+class Windows.Media.Ocr.OcrResult python_type
+    py OcrResult
+    signature rc(Windows.Media.Ocr.OcrResult;{9bd235b2-175b-3d6a-92e2-388c206e2f63})
+    default Windows.Media.Ocr.IOcrResult
+    requires Windows.Media.Ocr.IOcrResult
+    property lines
+        get get_Lines slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> return
+    property text
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=62
+            out string return
+    property text_angle
+        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Double> return
+
+class Windows.Media.Ocr.OcrWord python_type
+    py OcrWord
+    signature rc(Windows.Media.Ocr.OcrWord;{3c2a477a-5cd9-3525-ba2a-23d1e0a68a1d})
+    default Windows.Media.Ocr.IOcrWord
+    requires Windows.Media.Ocr.IOcrWord
+    property bounding_rect
+        get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4 reverse=43
+            out string return
+
+class System.Double external
+    py winrt.system.Double
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Globalization.Language external
+    py winrt.windows.globalization.Language
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap

@@ -1,0 +1,19 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Effects
+
+interface Windows.Graphics.Effects.IGraphicsEffect python_type
+    py _IGraphicsEffect
+    guid cb51c0ce-8fe6-4636-b202-861faa07d8f3
+    signature {cb51c0ce-8fe6-4636-b202-861faa07d8f3}
+    requires Windows.Graphics.Effects.IGraphicsEffectSource
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Effects.IGraphicsEffect shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Effects.IGraphicsEffect shape=4 reverse=43
+            in string name=name
+
+interface Windows.Graphics.Effects.IGraphicsEffectSource python_type
+    py _IGraphicsEffectSource
+    guid 2d8f9ddc-4339-4eb9-9216-f9deb75658a2
+    signature {2d8f9ddc-4339-4eb9-9216-f9deb75658a2}

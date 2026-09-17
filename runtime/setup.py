@@ -42,6 +42,7 @@ setup(
                 "src/compose.cpp",
                 "src/errors.cpp",
                 "src/runtime.cpp",
+                "src/table.cpp",
             ],
             include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],

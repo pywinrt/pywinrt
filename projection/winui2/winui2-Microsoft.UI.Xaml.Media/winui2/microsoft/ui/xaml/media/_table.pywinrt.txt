@@ -1,0 +1,306 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Media
+
+enum Microsoft.UI.Xaml.Media.AcrylicBackgroundSource python_type
+    py AcrylicBackgroundSource
+    signature enum(Microsoft.UI.Xaml.Media.AcrylicBackgroundSource;i4)
+
+class Microsoft.UI.Xaml.Media.AcrylicBrush composable python_type
+    py AcrylicBrush
+    signature rc(Microsoft.UI.Xaml.Media.AcrylicBrush;{26861c81-72f4-5065-b144-e9ec7fce86a9})
+    base Windows.UI.Xaml.Media.XamlCompositionBrushBase
+    default Microsoft.UI.Xaml.Media.IAcrylicBrush
+    requires Microsoft.UI.Xaml.Media.IAcrylicBrush
+    requires Microsoft.UI.Xaml.Media.IAcrylicBrush2
+    factory Microsoft.UI.Xaml.Media.IAcrylicBrushStatics
+    factory Microsoft.UI.Xaml.Media.IAcrylicBrushStatics2
+    composable Microsoft.UI.Xaml.Media.IAcrylicBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.AcrylicBrush return
+    property tint_transition_duration
+        get get_TintTransitionDuration slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=162
+            out timespan return
+        put put_TintTransitionDuration slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=26 reverse=181
+            in timespan name=value
+    property tint_opacity
+        get get_TintOpacity slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=121
+            out double return
+        put put_TintOpacity slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=2 reverse=138
+            in double name=value
+    property tint_color
+        get get_TintColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+        put put_TintColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=29 reverse=113
+            in struct type=Windows.UI.Color name=value
+    property background_source
+        get get_BackgroundSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Media.AcrylicBackgroundSource return
+        put put_BackgroundSource slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Xaml.Media.AcrylicBackgroundSource name=value
+    property always_use_fallback
+        get get_AlwaysUseFallback slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=186
+            out boolean return
+        put put_AlwaysUseFallback slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=194
+            in boolean name=value
+    property tint_luminosity_opacity
+        get get_TintLuminosityOpacity slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.Double> return
+        put put_TintLuminosityOpacity slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrush2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.Double> name=value
+    property always_use_fallback_property static
+        get get_AlwaysUseFallbackProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property background_source_property static
+        get get_BackgroundSourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tint_color_property static
+        get get_TintColorProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tint_opacity_property static
+        get get_TintOpacityProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tint_transition_duration_property static
+        get get_TintTransitionDurationProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tint_luminosity_opacity_property static
+        get get_TintLuminosityOpacityProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IAcrylicBrushStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+interface Microsoft.UI.Xaml.Media.IAcrylicBrush
+    guid 26861c81-72f4-5065-b144-e9ec7fce86a9
+
+interface Microsoft.UI.Xaml.Media.IAcrylicBrush2
+    guid 23fad570-43ed-5a73-9de7-a303553d5414
+
+interface Microsoft.UI.Xaml.Media.IAcrylicBrushFactory
+    guid 80173353-611d-5a02-8864-1aaa279dff1c
+
+interface Microsoft.UI.Xaml.Media.IAcrylicBrushStatics
+    guid 3162419c-cabc-5b4e-9c64-786354147257
+
+interface Microsoft.UI.Xaml.Media.IAcrylicBrushStatics2
+    guid f03ee756-8a99-5aed-bd17-4c7314acc9ff
+
+interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Media.GradientStop> concrete
+    guid 0c8a981e-fd45-5a3d-83c9-da37669ddad9
+    signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.UI.Xaml.Media.GradientStop;{665f44fe-2e59-4c4a-ab53-076a100ccd81}))
+    argument Windows.UI.Xaml.Media.GradientStop
+
+interface Microsoft.UI.Xaml.Media.IRadialGradientBrush
+    guid 11c9da5d-b928-53ab-ba6e-8f4acc469b0f
+
+interface Microsoft.UI.Xaml.Media.IRadialGradientBrushFactory
+    guid d90ba26e-9e67-54bd-a2d9-61c8f9f1d433
+
+interface Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics
+    guid 4f0f8ddd-ca87-582f-9907-2cc4d57e6336
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    argument System.Double
+
+interface Microsoft.UI.Xaml.Media.IRevealBackgroundBrush
+    guid 3741d912-fc83-5c92-a22f-efc29588b373
+
+interface Microsoft.UI.Xaml.Media.IRevealBackgroundBrushFactory
+    guid 7e6f2b0a-e70d-529f-8097-43e023f2943b
+
+interface Microsoft.UI.Xaml.Media.IRevealBorderBrush
+    guid f85dbfcb-2ec6-5c73-a8be-3864c980b917
+
+interface Microsoft.UI.Xaml.Media.IRevealBorderBrushFactory
+    guid c677bdc2-f045-532c-bb13-3ceee19143b2
+
+interface Microsoft.UI.Xaml.Media.IRevealBrush
+    guid 9d1ddb86-adfa-5bae-bf9a-3edd031e61c2
+
+interface Microsoft.UI.Xaml.Media.IRevealBrushProtectedFactory
+    guid 46a94f5b-8abd-5571-b049-7f76e3f967c9
+
+interface Microsoft.UI.Xaml.Media.IRevealBrushStatics
+    guid 0afee634-34f3-50f5-a509-21cef266767e
+
+class Microsoft.UI.Xaml.Media.RadialGradientBrush composable python_type
+    py RadialGradientBrush
+    signature rc(Microsoft.UI.Xaml.Media.RadialGradientBrush;{11c9da5d-b928-53ab-ba6e-8f4acc469b0f})
+    base Windows.UI.Xaml.Media.XamlCompositionBrushBase
+    default Microsoft.UI.Xaml.Media.IRadialGradientBrush
+    requires Microsoft.UI.Xaml.Media.IRadialGradientBrush
+    factory Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics
+    composable Microsoft.UI.Xaml.Media.IRadialGradientBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.RadialGradientBrush return
+    property spread_method
+        get get_SpreadMethod slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=218
+            out enum32 type=Windows.UI.Xaml.Media.GradientSpreadMethod return
+        put put_SpreadMethod slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=223
+            in enum32 type=Windows.UI.Xaml.Media.GradientSpreadMethod name=value
+    property radius_y
+        get get_RadiusY slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=121
+            out double return
+        put put_RadiusY slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=2 reverse=138
+            in double name=value
+    property radius_x
+        get get_RadiusX slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=62
+            out double return
+        put put_RadiusX slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=2
+            in double name=value
+    property mapping_mode
+        get get_MappingMode slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=186
+            out enum32 type=Windows.UI.Xaml.Media.BrushMappingMode return
+        put put_MappingMode slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=194
+            in enum32 type=Windows.UI.Xaml.Media.BrushMappingMode name=value
+    property interpolation_space
+        get get_InterpolationSpace slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=202
+            out enum32 type=Windows.UI.Composition.CompositionColorSpace return
+        put put_InterpolationSpace slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=210
+            in enum32 type=Windows.UI.Composition.CompositionColorSpace name=value
+    property gradient_origin
+        get get_GradientOrigin slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=162
+            out struct type=Windows.Foundation.Point return
+        put put_GradientOrigin slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=10 reverse=177
+            in struct type=Windows.Foundation.Point name=value
+    property center
+        get get_Center slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=22
+            out struct type=Windows.Foundation.Point return
+        put put_Center slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=10
+            in struct type=Windows.Foundation.Point name=value
+    property gradient_stops
+        get get_GradientStops slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrush shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Media.GradientStop> return
+    property center_property static
+        get get_CenterProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property gradient_origin_property static
+        get get_GradientOriginProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property interpolation_space_property static
+        get get_InterpolationSpaceProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property mapping_mode_property static
+        get get_MappingModeProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property radius_x_property static
+        get get_RadiusXProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property radius_y_property static
+        get get_RadiusYProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property spread_method_property static
+        get get_SpreadMethodProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRadialGradientBrushStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Media.RevealBackgroundBrush composable python_type
+    py RevealBackgroundBrush
+    signature rc(Microsoft.UI.Xaml.Media.RevealBackgroundBrush;{3741d912-fc83-5c92-a22f-efc29588b373})
+    base Microsoft.UI.Xaml.Media.RevealBrush
+    default Microsoft.UI.Xaml.Media.IRevealBackgroundBrush
+    requires Microsoft.UI.Xaml.Media.IRevealBackgroundBrush
+    composable Microsoft.UI.Xaml.Media.IRevealBackgroundBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBackgroundBrushFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.RevealBackgroundBrush return
+
+class Microsoft.UI.Xaml.Media.RevealBorderBrush composable python_type
+    py RevealBorderBrush
+    signature rc(Microsoft.UI.Xaml.Media.RevealBorderBrush;{f85dbfcb-2ec6-5c73-a8be-3864c980b917})
+    base Microsoft.UI.Xaml.Media.RevealBrush
+    default Microsoft.UI.Xaml.Media.IRevealBorderBrush
+    requires Microsoft.UI.Xaml.Media.IRevealBorderBrush
+    composable Microsoft.UI.Xaml.Media.IRevealBorderBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBorderBrushFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.RevealBorderBrush return
+
+class Microsoft.UI.Xaml.Media.RevealBrush composable python_type
+    py RevealBrush
+    signature rc(Microsoft.UI.Xaml.Media.RevealBrush;{9d1ddb86-adfa-5bae-bf9a-3edd031e61c2})
+    base Windows.UI.Xaml.Media.XamlCompositionBrushBase
+    default Microsoft.UI.Xaml.Media.IRevealBrush
+    requires Microsoft.UI.Xaml.Media.IRevealBrush
+    factory Microsoft.UI.Xaml.Media.IRevealBrushStatics
+    composable Microsoft.UI.Xaml.Media.IRevealBrushProtectedFactory
+    property target_theme
+        get get_TargetTheme slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4 reverse=62
+            out enum32 type=Windows.UI.Xaml.ApplicationTheme return
+        put put_TargetTheme slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4 reverse=99
+            in enum32 type=Windows.UI.Xaml.ApplicationTheme name=value
+    property color
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_Color slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=29
+            in struct type=Windows.UI.Color name=value
+    property always_use_fallback
+        get get_AlwaysUseFallback slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4 reverse=121
+            out boolean return
+        put put_AlwaysUseFallback slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4 reverse=141
+            in boolean name=value
+    property always_use_fallback_property static
+        get get_AlwaysUseFallbackProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property color_property static
+        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property state_property static
+        get get_StateProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property target_theme_property static
+        get get_TargetThemeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    method get_state static
+        method GetState slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            out enum32 type=Microsoft.UI.Xaml.Media.RevealBrushState return
+    method set_state static
+        method SetState slot=10 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.IRevealBrushStatics shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.UIElement name=element
+            in enum32 type=Microsoft.UI.Xaml.Media.RevealBrushState name=value
+
+enum Microsoft.UI.Xaml.Media.RevealBrushState python_type
+    py RevealBrushState
+    signature enum(Microsoft.UI.Xaml.Media.RevealBrushState;i4)
+
+class System.Double external
+    py winrt.system.Double
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Composition.CompositionColorSpace external
+    py winrt.windows.ui.composition.CompositionColorSpace
+
+enum Windows.UI.Xaml.ApplicationTheme external
+    py winrt.windows.ui.xaml.ApplicationTheme
+
+class Windows.UI.Xaml.DependencyProperty external
+    py winrt.windows.ui.xaml.DependencyProperty
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement
+
+enum Windows.UI.Xaml.Media.BrushMappingMode external
+    py winrt.windows.ui.xaml.media.BrushMappingMode
+
+enum Windows.UI.Xaml.Media.GradientSpreadMethod external
+    py winrt.windows.ui.xaml.media.GradientSpreadMethod
+
+class Windows.UI.Xaml.Media.GradientStop external
+    py winrt.windows.ui.xaml.media.GradientStop
+
+class Windows.UI.Xaml.Media.XamlCompositionBrushBase external
+    py winrt.windows.ui.xaml.media.XamlCompositionBrushBase

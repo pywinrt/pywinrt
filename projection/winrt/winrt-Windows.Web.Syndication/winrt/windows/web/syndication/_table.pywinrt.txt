@@ -1,0 +1,1105 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web.Syndication
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete
+    guid 92eaf151-415e-5f87-8095-781623c88998
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    argument Windows.Web.Syndication.SyndicationFeed
+    argument Windows.Web.Syndication.RetrievalProgress
+
+interface Windows.Web.Syndication.ISyndicationAttribute
+    guid 71e8f969-526e-4001-9a91-e84f83161ab1
+
+interface Windows.Web.Syndication.ISyndicationAttributeFactory
+    guid 624f1599-ed3e-420f-be86-640414886e4b
+
+interface Windows.Web.Syndication.ISyndicationCategory
+    guid 8715626f-0cba-4a7f-89ff-ecb5281423b6
+
+interface Windows.Web.Syndication.ISyndicationCategoryFactory
+    guid ab42802f-49e0-4525-8ab2-ab45c02528ff
+
+interface Windows.Web.Syndication.ISyndicationClient python_type
+    py _ISyndicationClient
+    guid 9e18a9b7-7249-4b45-b229-7df895a5a1f5
+    signature {9e18a9b7-7249-4b45-b229-7df895a5a1f5}
+    property bypass_cache_on_retrieve
+        get get_BypassCacheOnRetrieve slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=186
+            out boolean return
+        put put_BypassCacheOnRetrieve slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=194
+            in boolean name=value
+    property max_response_buffer_size
+        get get_MaxResponseBufferSize slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=121
+            out uint32 return
+        put put_MaxResponseBufferSize slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=141
+            in uint32 name=value
+    property proxy_credential
+        get get_ProxyCredential slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property server_credential
+        get get_ServerCredential slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=43
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property timeout
+        get get_Timeout slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=162
+            out uint32 return
+        put put_Timeout slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=173
+            in uint32 name=value
+    method retrieve_feed_async
+        method RetrieveFeedAsync slot=17 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=211
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
+    method set_request_header
+        method SetRequestHeader slot=16 inputs=2 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=203
+            in string name=name
+            in string name=value
+
+interface Windows.Web.Syndication.ISyndicationClientFactory
+    guid 2ec4b32c-a79b-4114-b29a-05dffbafb9a4
+
+interface Windows.Web.Syndication.ISyndicationContent
+    guid 4641fefe-0e55-40d0-b8d0-6a2ccba9fc7c
+
+interface Windows.Web.Syndication.ISyndicationContentFactory
+    guid 3d2fbb93-9520-4173-9388-7e2df324a8a0
+
+interface Windows.Web.Syndication.ISyndicationErrorStatics
+    guid 1fbb2361-45c7-4833-8aa0-be5f3b58a7f4
+
+interface Windows.Web.Syndication.ISyndicationFeed
+    guid 7ffe3cd2-5b66-4d62-8403-1bc10d910d6b
+
+interface Windows.Web.Syndication.ISyndicationFeedFactory
+    guid 23472232-8be9-48b7-8934-6205131d9357
+
+interface Windows.Web.Syndication.ISyndicationGenerator
+    guid 9768b379-fb2b-4f6d-b41c-088a5868825c
+
+interface Windows.Web.Syndication.ISyndicationGeneratorFactory
+    guid a34083e3-1e26-4dbc-ba9d-1ab84beff97b
+
+interface Windows.Web.Syndication.ISyndicationItem
+    guid 548db883-c384-45c1-8ae8-a378c4ec486c
+
+interface Windows.Web.Syndication.ISyndicationItemFactory
+    guid 251d434f-7db8-487a-85e4-10d191e66ebb
+
+interface Windows.Web.Syndication.ISyndicationLink
+    guid 27553abd-a10e-41b5-86bd-9759086eb0c5
+
+interface Windows.Web.Syndication.ISyndicationLinkFactory
+    guid 5ed863d4-5535-48ac-98d4-c190995080b3
+
+interface Windows.Web.Syndication.ISyndicationNode python_type
+    py _ISyndicationNode
+    guid 753cef78-51f8-45c0-a9f5-f1719dec3fb2
+    signature {753cef78-51f8-45c0-a9f5-f1719dec3fb2}
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+interface Windows.Web.Syndication.ISyndicationNodeFactory
+    guid 12902188-4acb-49a8-b777-a5eb92e18a79
+
+interface Windows.Web.Syndication.ISyndicationPerson
+    guid fa1ee5da-a7c6-4517-a096-0143faf29327
+
+interface Windows.Web.Syndication.ISyndicationPersonFactory
+    guid dcf4886d-229d-4b58-a49b-f3d2f0f5c99f
+
+interface Windows.Web.Syndication.ISyndicationText python_type
+    py _ISyndicationText
+    guid b9cc5e80-313a-4091-a2a6-243e0ee923f9
+    signature {b9cc5e80-313a-4091-a2a6-243e0ee923f9}
+    requires Windows.Web.Syndication.ISyndicationNode
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=22
+            out string return
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=43
+            in string name=value
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=62
+            out string return
+        put put_Type slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=99
+            in string name=value
+    property xml
+        get get_Xml slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=121
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+        put put_Xml slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=141
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+interface Windows.Web.Syndication.ISyndicationTextFactory
+    guid ee7342f7-11c6-4b25-ab62-e596bd162946
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> concrete
+    guid f4508afa-9f02-5eb8-a389-14bbe5193ac0
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    argument Windows.Web.Syndication.ISyndicationNode
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> concrete
+    guid 2fe84e7b-2350-5941-94b5-a64677b585d1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    argument Windows.Web.Syndication.SyndicationAttribute
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> concrete
+    guid 72e456e4-0e52-52cb-b363-f3581327f033
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    argument Windows.Web.Syndication.SyndicationCategory
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> concrete
+    guid aa01130b-4631-5117-8c48-dc21b0295096
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c}))
+    argument Windows.Web.Syndication.SyndicationItem
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> concrete
+    guid b8fb25a5-01c3-5207-814e-892b2b5343f7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5}))
+    argument Windows.Web.Syndication.SyndicationLink
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> concrete
+    guid ab772cd6-8ce7-5db9-83ac-0db9e44a1b0c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327}))
+    argument Windows.Web.Syndication.SyndicationPerson
+
+struct Windows.Web.Syndication.RetrievalProgress python_type
+    py RetrievalProgress
+    signature struct(Windows.Web.Syndication.RetrievalProgress;u4;u4)
+    field bytes_retrieved BytesRetrieved uint32
+    field total_bytes_to_retrieve TotalBytesToRetrieve uint32
+
+class Windows.Web.Syndication.SyndicationAttribute activatable python_type
+    py SyndicationAttribute
+    signature rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1})
+    default Windows.Web.Syndication.ISyndicationAttribute
+    requires Windows.Web.Syndication.ISyndicationAttribute
+    factory Windows.Web.Syndication.ISyndicationAttributeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttributeFactory shape=195 reverse=26
+            in string name=attributeName implicit
+            in string name=attributeNamespace implicit
+            in string name=attributeValue implicit
+            out class type=Windows.Web.Syndication.SyndicationAttribute return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttributeFactory shape=195 reverse=26
+            in string name=attributeName
+            in string name=attributeNamespace
+            in string name=attributeValue
+            out class type=Windows.Web.Syndication.SyndicationAttribute return
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=121
+            out string return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=141
+            in string name=value
+    property namespace
+        get get_Namespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=62
+            out string return
+        put put_Namespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=99
+            in string name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=22
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationAttribute shape=4 reverse=43
+            in string name=value
+
+class Windows.Web.Syndication.SyndicationCategory activatable python_type
+    py SyndicationCategory
+    signature rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6})
+    default Windows.Web.Syndication.ISyndicationCategory
+    requires Windows.Web.Syndication.ISyndicationCategory
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationCategoryFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategoryFactory shape=51 reverse=24
+            in string name=term implicit
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategoryFactory shape=51 reverse=24
+            in string name=term
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategoryFactory shape=195 reverse=46
+            in string name=term
+            in string name=scheme
+            in string name=label
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+    property term
+        get get_Term slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=121
+            out string return
+        put put_Term slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=141
+            in string name=value
+    property scheme
+        get get_Scheme slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=62
+            out string return
+        put put_Scheme slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=99
+            in string name=value
+    property label
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=22
+            out string return
+        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationCategory shape=4 reverse=43
+            in string name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationClient activatable python_type
+    py SyndicationClient
+    signature rc(Windows.Web.Syndication.SyndicationClient;{9e18a9b7-7249-4b45-b229-7df895a5a1f5})
+    default Windows.Web.Syndication.ISyndicationClient
+    requires Windows.Web.Syndication.ISyndicationClient
+    factory Windows.Web.Syndication.ISyndicationClientFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClientFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential implicit
+            out class type=Windows.Web.Syndication.SyndicationClient return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClientFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential
+            out class type=Windows.Web.Syndication.SyndicationClient return
+    property timeout
+        get get_Timeout slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=162
+            out uint32 return
+        put put_Timeout slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=173
+            in uint32 name=value
+    property server_credential
+        get get_ServerCredential slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=43
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property proxy_credential
+        get get_ProxyCredential slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=62
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=99
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property max_response_buffer_size
+        get get_MaxResponseBufferSize slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=121
+            out uint32 return
+        put put_MaxResponseBufferSize slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=141
+            in uint32 name=value
+    property bypass_cache_on_retrieve
+        get get_BypassCacheOnRetrieve slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=186
+            out boolean return
+        put put_BypassCacheOnRetrieve slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=194
+            in boolean name=value
+    method retrieve_feed_async
+        method RetrieveFeedAsync slot=17 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=211
+            in class type=Windows.Foundation.Uri name=uri
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
+    method set_request_header
+        method SetRequestHeader slot=16 inputs=2 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=51 reverse=203
+            in string name=name
+            in string name=value
+
+class Windows.Web.Syndication.SyndicationContent activatable python_type
+    py SyndicationContent
+    signature rc(Windows.Web.Syndication.SyndicationContent;{4641fefe-0e55-40d0-b8d0-6a2ccba9fc7c})
+    default Windows.Web.Syndication.ISyndicationContent
+    requires Windows.Web.Syndication.ISyndicationText
+    requires Windows.Web.Syndication.ISyndicationNode
+    requires Windows.Web.Syndication.ISyndicationContent
+    factory Windows.Web.Syndication.ISyndicationContentFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContentFactory shape=117 reverse=25
+            in string name=text implicit
+            in enum32 type=Windows.Web.Syndication.SyndicationTextType name=type implicit
+            out class type=Windows.Web.Syndication.SyndicationContent return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContentFactory shape=51 reverse=44
+            in class type=Windows.Foundation.Uri name=sourceUri
+            out class type=Windows.Web.Syndication.SyndicationContent return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContentFactory shape=117 reverse=25
+            in string name=text
+            in enum32 type=Windows.Web.Syndication.SyndicationTextType name=type
+            out class type=Windows.Web.Syndication.SyndicationContent return
+    property source_uri
+        get get_SourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContent shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_SourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationContent shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=22
+            out string return
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=43
+            in string name=value
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=62
+            out string return
+        put put_Type slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=99
+            in string name=value
+    property xml
+        get get_Xml slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=121
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+        put put_Xml slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=141
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=value
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationError static python_type
+    py SyndicationError
+    factory Windows.Web.Syndication.ISyndicationErrorStatics
+    method get_status static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationErrorStatics shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Web.Syndication.SyndicationErrorStatus return
+
+enum Windows.Web.Syndication.SyndicationErrorStatus python_type
+    py SyndicationErrorStatus
+    signature enum(Windows.Web.Syndication.SyndicationErrorStatus;i4)
+
+class Windows.Web.Syndication.SyndicationFeed activatable python_type
+    py SyndicationFeed
+    signature rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b})
+    default Windows.Web.Syndication.ISyndicationFeed
+    requires Windows.Web.Syndication.ISyndicationFeed
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationFeedFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeedFactory shape=195 reverse=26
+            in string name=title implicit
+            in string name=subtitle implicit
+            in class type=Windows.Foundation.Uri name=uri implicit
+            out class type=Windows.Web.Syndication.SyndicationFeed return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeedFactory shape=195 reverse=26
+            in string name=title
+            in string name=subtitle
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.Web.Syndication.SyndicationFeed return
+    property title
+        get get_Title slot=25 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=252
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Title slot=26 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=255
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property subtitle
+        get get_Subtitle slot=23 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=242
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Subtitle slot=24 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=247
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property rights
+        get get_Rights slot=21 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=232
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Rights slot=22 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=237
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property generator
+        get get_Generator slot=9 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=99
+            out class type=Windows.Web.Syndication.SyndicationGenerator return
+        put put_Generator slot=10 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=121
+            in class type=Windows.Web.Syndication.SyndicationGenerator name=value
+    property last_updated_time
+        get get_LastUpdatedTime slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=202
+            out datetime return
+        put put_LastUpdatedTime slot=17 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=26 reverse=215
+            in datetime name=value
+    property image_uri
+        get get_ImageUri slot=19 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=223
+            out class type=Windows.Foundation.Uri return
+        put put_ImageUri slot=20 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=228
+            in class type=Windows.Foundation.Uri name=value
+    property icon_uri
+        get get_IconUri slot=11 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+        put put_IconUri slot=12 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=162
+            in class type=Windows.Foundation.Uri name=value
+    property id
+        get get_Id slot=13 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=173
+            out string return
+        put put_Id slot=14 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=186
+            in string name=value
+    property first_uri
+        get get_FirstUri slot=27 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=259
+            out class type=Windows.Foundation.Uri return
+    property items
+        get get_Items slot=15 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> return
+    property last_uri
+        get get_LastUri slot=28 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=263
+            out class type=Windows.Foundation.Uri return
+    property links
+        get get_Links slot=18 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> return
+    property next_uri
+        get get_NextUri slot=29 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=266
+            out class type=Windows.Foundation.Uri return
+    property previous_uri
+        get get_PreviousUri slot=30 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=270
+            out class type=Windows.Foundation.Uri return
+    property categories
+        get get_Categories slot=7 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> return
+    property source_format
+        get get_SourceFormat slot=31 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=273
+            out enum32 type=Windows.Web.Syndication.SyndicationFormat return
+    property contributors
+        get get_Contributors slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> return
+    property authors
+        get get_Authors slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    method load
+        method Load slot=32 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=280
+            in string name=feed
+    method load_from_xml
+        method LoadFromXml slot=33 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationFeed shape=4 reverse=285
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=feedDocument
+
+enum Windows.Web.Syndication.SyndicationFormat python_type
+    py SyndicationFormat
+    signature enum(Windows.Web.Syndication.SyndicationFormat;i4)
+
+class Windows.Web.Syndication.SyndicationGenerator activatable python_type
+    py SyndicationGenerator
+    signature rc(Windows.Web.Syndication.SyndicationGenerator;{9768b379-fb2b-4f6d-b41c-088a5868825c})
+    default Windows.Web.Syndication.ISyndicationGenerator
+    requires Windows.Web.Syndication.ISyndicationGenerator
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationGeneratorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGeneratorFactory shape=51 reverse=24
+            in string name=text implicit
+            out class type=Windows.Web.Syndication.SyndicationGenerator return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGeneratorFactory shape=51 reverse=24
+            in string name=text
+            out class type=Windows.Web.Syndication.SyndicationGenerator return
+    property version
+        get get_Version slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=121
+            out string return
+        put put_Version slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=141
+            in string name=value
+    property uri
+        get get_Uri slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=99
+            in class type=Windows.Foundation.Uri name=value
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=22
+            out string return
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationGenerator shape=4 reverse=43
+            in string name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationItem activatable python_type
+    py SyndicationItem
+    signature rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c})
+    default Windows.Web.Syndication.ISyndicationItem
+    requires Windows.Web.Syndication.ISyndicationItem
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItemFactory shape=195 reverse=26
+            in string name=title implicit
+            in class type=Windows.Web.Syndication.SyndicationContent name=content implicit
+            in class type=Windows.Foundation.Uri name=uri implicit
+            out class type=Windows.Web.Syndication.SyndicationItem return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItemFactory shape=195 reverse=26
+            in string name=title
+            in class type=Windows.Web.Syndication.SyndicationContent name=content
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.Web.Syndication.SyndicationItem return
+    property title
+        get get_Title slot=24 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=247
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Title slot=25 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=252
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property source
+        get get_Source slot=20 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=228
+            out class type=Windows.Web.Syndication.SyndicationFeed return
+        put put_Source slot=21 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=232
+            in class type=Windows.Web.Syndication.SyndicationFeed name=value
+    property rights
+        get get_Rights slot=18 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=218
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Rights slot=19 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=223
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property summary
+        get get_Summary slot=22 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=237
+            out interface type=Windows.Web.Syndication.ISyndicationText return
+        put put_Summary slot=23 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=242
+            in interface type=Windows.Web.Syndication.ISyndicationText name=value
+    property published_date
+        get get_PublishedDate slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=202
+            out datetime return
+        put put_PublishedDate slot=17 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=26 reverse=215
+            in datetime name=value
+    property comments_uri
+        get get_CommentsUri slot=26 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=255
+            out class type=Windows.Foundation.Uri return
+        put put_CommentsUri slot=27 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=259
+            in class type=Windows.Foundation.Uri name=value
+    property id
+        get get_Id slot=11 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=141
+            out string return
+        put put_Id slot=12 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=162
+            in string name=value
+    property last_updated_time
+        get get_LastUpdatedTime slot=13 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=173
+            out datetime return
+        put put_LastUpdatedTime slot=14 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=26 reverse=192
+            in datetime name=value
+    property content
+        get get_Content slot=9 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=99
+            out class type=Windows.Web.Syndication.SyndicationContent return
+        put put_Content slot=10 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=121
+            in class type=Windows.Web.Syndication.SyndicationContent name=value
+    property edit_uri
+        get get_EditUri slot=28 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=263
+            out class type=Windows.Foundation.Uri return
+    property links
+        get get_Links slot=15 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> return
+    property authors
+        get get_Authors slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> return
+    property categories
+        get get_Categories slot=7 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> return
+    property contributors
+        get get_Contributors slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> return
+    property item_uri
+        get get_ItemUri slot=31 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=273
+            out class type=Windows.Foundation.Uri return
+    property e_tag
+        get get_ETag slot=30 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=270
+            out string return
+    property edit_media_uri
+        get get_EditMediaUri slot=29 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=266
+            out class type=Windows.Foundation.Uri return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    method load
+        method Load slot=32 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=280
+            in string name=item
+    method load_from_xml
+        method LoadFromXml slot=33 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationItem shape=4 reverse=285
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=itemDocument
+
+class Windows.Web.Syndication.SyndicationLink activatable python_type
+    py SyndicationLink
+    signature rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5})
+    default Windows.Web.Syndication.ISyndicationLink
+    requires Windows.Web.Syndication.ISyndicationLink
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationLinkFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLinkFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri implicit
+            out class type=Windows.Web.Syndication.SyndicationLink return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLinkFactory shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.Web.Syndication.SyndicationLink return
+        ctor .ctor slot=7 inputs=5 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLinkFactory shape=267
+            in class type=Windows.Foundation.Uri name=uri
+            in string name=relationship
+            in string name=title
+            in string name=mediaType
+            in uint32 name=length
+            out class type=Windows.Web.Syndication.SyndicationLink return
+    property uri
+        get get_Uri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property title
+        get get_Title slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=162
+            out string return
+        put put_Title slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=173
+            in string name=value
+    property resource_language
+        get get_ResourceLanguage slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=202
+            out string return
+        put put_ResourceLanguage slot=17 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=210
+            in string name=value
+    property relationship
+        get get_Relationship slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=121
+            out string return
+        put put_Relationship slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=141
+            in string name=value
+    property media_type
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=62
+            out string return
+        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=99
+            in string name=value
+    property length
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=22
+            out uint32 return
+        put put_Length slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationLink shape=4 reverse=43
+            in uint32 name=value
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationNode activatable python_type
+    py SyndicationNode
+    signature rc(Windows.Web.Syndication.SyndicationNode;{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    default Windows.Web.Syndication.ISyndicationNode
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationNodeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNodeFactory shape=195 reverse=26
+            in string name=nodeName implicit
+            in string name=nodeNamespace implicit
+            in string name=nodeValue implicit
+            out class type=Windows.Web.Syndication.SyndicationNode return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNodeFactory shape=195 reverse=26
+            in string name=nodeName
+            in string name=nodeNamespace
+            in string name=nodeValue
+            out class type=Windows.Web.Syndication.SyndicationNode return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationPerson activatable python_type
+    py SyndicationPerson
+    signature rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327})
+    default Windows.Web.Syndication.ISyndicationPerson
+    requires Windows.Web.Syndication.ISyndicationPerson
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationPersonFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPersonFactory shape=51 reverse=24
+            in string name=name implicit
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPersonFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPersonFactory shape=195 reverse=46
+            in string name=name
+            in string name=email
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    property uri
+        get get_Uri slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property name
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=62
+            out string return
+        put put_Name slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=99
+            in string name=value
+    property email
+        get get_Email slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=22
+            out string return
+        put put_Email slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationPerson shape=4 reverse=43
+            in string name=value
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+class Windows.Web.Syndication.SyndicationText activatable python_type
+    py SyndicationText
+    signature rc(Windows.Web.Syndication.SyndicationText;{b9cc5e80-313a-4091-a2a6-243e0ee923f9})
+    default Windows.Web.Syndication.ISyndicationText
+    requires Windows.Web.Syndication.ISyndicationText
+    requires Windows.Web.Syndication.ISyndicationNode
+    factory Windows.Web.Syndication.ISyndicationTextFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationTextFactory shape=51 reverse=24
+            in string name=text implicit
+            out class type=Windows.Web.Syndication.SyndicationText return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationTextFactory shape=51 reverse=24
+            in string name=text
+            out class type=Windows.Web.Syndication.SyndicationText return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Syndication.ISyndicationTextFactory shape=117 reverse=45
+            in string name=text
+            in enum32 type=Windows.Web.Syndication.SyndicationTextType name=type
+            out class type=Windows.Web.Syndication.SyndicationText return
+    property node_value
+        get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
+            out string return
+        put put_NodeValue slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=141
+            in string name=value
+    property node_namespace
+        get get_NodeNamespace slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=62
+            out string return
+        put put_NodeNamespace slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=99
+            in string name=value
+    property node_name
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=22
+            out string return
+        put put_NodeName slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=43
+            in string name=value
+    property language
+        get get_Language slot=12 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=162
+            out string return
+        put put_Language slot=13 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=173
+            in string name=value
+    property base_uri
+        get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+        put put_BaseUri slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=194
+            in class type=Windows.Foundation.Uri name=value
+    property attribute_extensions
+        get get_AttributeExtensions slot=16 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> return
+    property element_extensions
+        get get_ElementExtensions slot=17 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> return
+    property xml
+        get get_Xml slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=121
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+        put put_Xml slot=11 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=141
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=value
+    property type
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=62
+            out string return
+        put put_Type slot=9 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=99
+            in string name=value
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=22
+            out string return
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationText shape=4 reverse=43
+            in string name=value
+    method get_xml_document
+        method GetXmlDocument slot=18 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=51 reverse=219
+            in enum32 type=Windows.Web.Syndication.SyndicationFormat name=format
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+
+enum Windows.Web.Syndication.SyndicationTextType python_type
+    py SyndicationTextType
+    signature enum(Windows.Web.Syndication.SyndicationTextType;i4)
+
+struct Windows.Web.Syndication.TransferProgress python_type
+    py TransferProgress
+    signature struct(Windows.Web.Syndication.TransferProgress;u4;u4;u4;u4)
+    field bytes_sent BytesSent uint32
+    field total_bytes_to_send TotalBytesToSend uint32
+    field bytes_retrieved BytesRetrieved uint32
+    field total_bytes_to_retrieve TotalBytesToRetrieve uint32
+
+class Windows.Data.Xml.Dom.XmlDocument external
+    py winrt.windows.data.xml.dom.XmlDocument
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential

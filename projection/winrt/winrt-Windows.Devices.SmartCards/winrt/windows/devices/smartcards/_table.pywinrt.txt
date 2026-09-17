@@ -1,0 +1,1373 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.SmartCards
+
+class Windows.Devices.SmartCards.CardAddedEventArgs python_type
+    py CardAddedEventArgs
+    signature rc(Windows.Devices.SmartCards.CardAddedEventArgs;{18bbef98-f18b-4dd3-b118-dfb2c8e23cc6})
+    default Windows.Devices.SmartCards.ICardAddedEventArgs
+    requires Windows.Devices.SmartCards.ICardAddedEventArgs
+    property smart_card
+        get get_SmartCard slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ICardAddedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCard return
+
+class Windows.Devices.SmartCards.CardRemovedEventArgs python_type
+    py CardRemovedEventArgs
+    signature rc(Windows.Devices.SmartCards.CardRemovedEventArgs;{15331aaf-22d7-4945-afc9-03b46f42a6cd})
+    default Windows.Devices.SmartCards.ICardRemovedEventArgs
+    requires Windows.Devices.SmartCards.ICardRemovedEventArgs
+    property smart_card
+        get get_SmartCard slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ICardRemovedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCard return
+
+interface Windows.Foundation.IAsyncOperation<System.Guid> concrete
+    guid 6607bc41-294b-5975-9c3f-4b49836d0916
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};g16)
+    argument System.Guid
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> concrete
+    guid b8f15d35-2f3d-53aa-b5c6-faca4c7ff16e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult;i4))
+    argument Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete
+    guid d8030032-5f3c-50e8-91b8-691c454609e8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> concrete
+    guid 1c650663-3f68-599b-b9d4-c350f13ee4e4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardChallengeContext;{192a5319-c9c4-4947-81cc-44794a61ef91}))
+    argument Windows.Devices.SmartCards.SmartCardChallengeContext
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> concrete
+    guid 779bbc5b-a75c-5988-978f-34dbc629d576
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardConnection;{7edb991a-a81a-47bc-a649-156be6b7f231}))
+    argument Windows.Devices.SmartCards.SmartCardConnection
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> concrete
+    guid 5dfde47d-9770-5f44-a983-f2fee430768e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGenerator;{e39f587b-edd3-4e49-b594-0ff5e4d0c76f}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGenerator
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> concrete
+    guid f5b0e1b0-57a7-5ab3-aeaa-d6b635257866
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus;i4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> concrete
+    guid 001a0095-2adc-54c2-8594-3a36ba16fd86
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;{2798e029-d687-4c92-86c6-399e9a0ecb09}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> concrete
+    guid 2cab81a8-3c29-50d1-9761-5f3927c96dca
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;{4e6a8a5c-9773-46c4-a32f-b1e543159e04}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> concrete
+    guid 8110f6e1-3520-5cd2-bab5-0831185d2c2e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;{8c7ce857-a7e7-489d-b9d6-368061515012}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> concrete
+    guid 6f2eea36-de40-55b4-90c3-255673f71b2e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof;{e5b9ab8c-a141-4135-9add-b0d2e3aa1fc9}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> concrete
+    guid 2187f5a4-691c-50e1-bf4f-ddedc3e684b8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo;{77b0f00d-b097-4f61-a26a-9561639c9c3a}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> concrete
+    guid 1dd898f0-c825-5bf3-9564-4708932f955f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb}))
+    argument Windows.Devices.SmartCards.SmartCardEmulator
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> concrete
+    guid 6184fc80-b752-5ce8-a136-f57174bb9309
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardProvisioning;{19eeedbd-1fab-477c-b712-1a2c5af1fd6e}))
+    argument Windows.Devices.SmartCards.SmartCardProvisioning
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> concrete
+    guid 036a830d-bbca-5cb9-977f-b29ea3042149
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c}))
+    argument Windows.Devices.SmartCards.SmartCardReader
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> concrete
+    guid 5ae402fa-1f22-5570-a0c8-b2320adedb81
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardReaderStatus;i4))
+    argument Windows.Devices.SmartCards.SmartCardReaderStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> concrete
+    guid e2223376-8cf6-51bd-9907-1344aa665e5d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardStatus;i4))
+    argument Windows.Devices.SmartCards.SmartCardStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> concrete
+    guid 3b2691b2-fc5e-59ff-8c6f-e6dd29a967fc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> concrete
+    guid 045e34b9-f153-5920-99de-ed912ea38b1a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+    guid 3bee8834-b9a7-5a80-a746-5ef097227878
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Devices.SmartCards.ICardAddedEventArgs
+    guid 18bbef98-f18b-4dd3-b118-dfb2c8e23cc6
+
+interface Windows.Devices.SmartCards.ICardRemovedEventArgs
+    guid 15331aaf-22d7-4945-afc9-03b46f42a6cd
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> concrete
+    guid db52d376-027e-5270-a457-fb8b4ae8958c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu;{52152bab-c63e-4531-a857-d756d99b986a}))
+    argument Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> concrete
+    guid 234ab631-ed5f-51bc-8a8a-d5f3495f32de
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep;{947b03eb-8342-4792-a2e5-925636378a53}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep
+
+interface Windows.Devices.SmartCards.IKnownSmartCardAppletIds
+    guid 7b04d8d8-95b4-4c88-8cea-411e55511efc
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Devices.SmartCards.ISmartCard
+    guid 1b718871-6434-43f4-b55a-6a29623870aa
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroup
+    guid 7db165e6-6264-56f4-5e03-c86385395eb1
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroup2
+    guid 6b0ef9dc-9956-4a62-8d4e-d37a68ebc3a6
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory
+    guid 9105eb4d-4a65-4e41-8061-cbe83f3695e5
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration
+    guid df1208d1-31bb-5596-43b1-6d69a0257b3a
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2
+    guid 5f5508d8-98a7-4f2e-91d9-6cfcceda407f
+
+interface Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics
+    guid ab2899a9-e76c-45cf-bf1d-90eaa6205927
+
+interface Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu
+    guid 52152bab-c63e-4531-a857-d756d99b986a
+
+interface Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2
+    guid 44aebb14-559d-4531-4e51-89db6fa8a57a
+
+interface Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3
+    guid bf43da74-6576-4392-9367-fe3bc9e2d496
+
+interface Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory
+    guid e97ea2fa-d02c-4c55-b02a-8cff7fa9f05b
+
+interface Windows.Devices.SmartCards.ISmartCardChallengeContext
+    guid 192a5319-c9c4-4947-81cc-44794a61ef91
+
+interface Windows.Devices.SmartCards.ISmartCardConnect
+    guid 2fdf87e5-028d-491e-a058-3382c3986f40
+
+interface Windows.Devices.SmartCards.ISmartCardConnection
+    guid 7edb991a-a81a-47bc-a649-156be6b7f231
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGenerator
+    guid e39f587b-edd3-4e49-b594-0ff5e4d0c76f
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2
+    guid 7116aa34-5d6d-4b4a-96a3-efa47d2a7e25
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics
+    guid 09933910-cb9c-4015-967d-5234f3b02900
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2
+    guid 09bdf5e5-b4bd-4e23-a588-74469204c128
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    guid 2798e029-d687-4c92-86c6-399e9a0ecb09
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    guid 4e6a8a5c-9773-46c4-a32f-b1e543159e04
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    guid 8c7ce857-a7e7-489d-b9d6-368061515012
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics
+    guid fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics
+    guid ffb58e1f-0692-4c47-93cf-34d91f9dcd00
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof
+    guid e5b9ab8c-a141-4135-9add-b0d2e3aa1fc9
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep
+    guid 947b03eb-8342-4792-a2e5-925636378a53
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics
+    guid 8552546e-4457-4825-b464-635471a39f5c
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo
+    guid 77b0f00d-b097-4f61-a26a-9561639c9c3a
+
+interface Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2
+    guid 000440f9-f7fd-417d-89e1-fbb0382adc4d
+
+interface Windows.Devices.SmartCards.ISmartCardEmulator
+    guid dfb906b2-875e-47e5-8077-e8bff1b1c6fb
+
+interface Windows.Devices.SmartCards.ISmartCardEmulator2
+    guid fe3fc0b8-8529-411a-807b-48edc2a0ab44
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs
+    guid d55d1576-69d2-5333-5b5f-f8c0d6e9f09f
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2
+    guid 8bf93df0-22e1-4238-8610-94ce4a965425
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms
+    guid d550bac7-b7bf-4e29-9294-0c4ac3c941bd
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs
+    guid 2186d8d3-c5eb-5262-43df-62a0a1b55557
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties
+    guid 4e2ca5ee-f969-507d-6cf9-34e2d18df311
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorStatics
+    guid 7a9bfc4b-c4d3-494f-b8a2-6215d81e85b2
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorStatics2
+    guid 69ae9f8a-b775-488b-8436-6c1e28ed731f
+
+interface Windows.Devices.SmartCards.ISmartCardEmulatorStatics3
+    guid 59ea142a-9f09-43f5-8565-cfa8148e4cb2
+
+interface Windows.Devices.SmartCards.ISmartCardPinPolicy
+    guid 183ce184-4db6-4841-ac9e-2ac1f39b7304
+
+interface Windows.Devices.SmartCards.ISmartCardPinResetDeferral
+    guid 18c94aac-7805-4004-85e4-bbefac8f6884
+
+interface Windows.Devices.SmartCards.ISmartCardPinResetRequest
+    guid 12fe3c4d-5fb9-4e8e-9ff6-61f475124fef
+
+interface Windows.Devices.SmartCards.ISmartCardProvisioning
+    guid 19eeedbd-1fab-477c-b712-1a2c5af1fd6e
+
+interface Windows.Devices.SmartCards.ISmartCardProvisioning2
+    guid 10fd28eb-3f79-4b66-9b7c-11c149b7d0bc
+
+interface Windows.Devices.SmartCards.ISmartCardProvisioningStatics
+    guid 13882848-0d13-4e70-9735-51daeca5254f
+
+interface Windows.Devices.SmartCards.ISmartCardProvisioningStatics2
+    guid 3447c6a8-c9a0-4bd6-b50d-251f4e8d3a62
+
+interface Windows.Devices.SmartCards.ISmartCardReader
+    guid 1074b4e0-54c2-4df0-817a-14c14378f06c
+
+interface Windows.Devices.SmartCards.ISmartCardReaderStatics
+    guid 103c04e1-a1ca-48f2-a281-5b6f669af107
+
+interface Windows.Devices.SmartCards.ISmartCardTriggerDetails
+    guid 5f9bf11e-39ef-4f2b-b44f-0a9155b177bc
+
+interface Windows.Devices.SmartCards.ISmartCardTriggerDetails2
+    guid 2945c569-8975-4a51-9e1a-5f8a76ee51af
+
+interface Windows.Devices.SmartCards.ISmartCardTriggerDetails3
+    guid b3e2c27d-18c6-4ba8-8376-ef03d4912666
+
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> concrete
+    guid 308fe894-cc06-5007-bc85-cbe94ac1a70c
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    argument Windows.Storage.Streams.IBuffer
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> concrete
+    guid 4bee6991-3508-5f03-a2f4-90a5ddb26bd8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa}))
+    argument Windows.Devices.SmartCards.SmartCard
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete
+    guid b24324ba-192b-568b-81cf-9ac383406ed9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> concrete
+    guid a9df831c-c22b-5d30-a86c-5a31fe192433
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> concrete
+    guid 6e5e4447-1552-591b-afa0-387b26b7ac93
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics;{fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> concrete
+    guid 94d937e9-0edc-5dad-a3ad-b2eb5ab88671
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics;{ffb58e1f-0692-4c47-93cf-34d91f9dcd00}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> concrete
+    guid 3a4176a2-d221-5a9f-a4c2-a5b8736da2d8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> concrete
+    guid b7cce3f2-9889-586c-beb1-68feddb7cb15
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> concrete
+    guid 394bc0cc-c621-5ba3-b4f0-712fcf591392
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialType
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> concrete
+    guid 9c0dfca0-4b62-56a8-8af3-8376898a15bc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> concrete
+    guid f14872b9-7f4c-58f8-8bfa-af767f58971a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics;{8552546e-4457-4825-b464-635471a39f5c}))
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics
+
+class Windows.Devices.SmartCards.KnownSmartCardAppletIds static python_type
+    py KnownSmartCardAppletIds
+    factory Windows.Devices.SmartCards.IKnownSmartCardAppletIds
+    property payment_system_environment static
+        get get_PaymentSystemEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.IKnownSmartCardAppletIds shape=4 reverse=22 static
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property proximity_payment_system_environment static
+        get get_ProximityPaymentSystemEnvironment slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.IKnownSmartCardAppletIds shape=4 reverse=43 static
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Devices.SmartCards.SmartCard python_type
+    py SmartCard
+    signature rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa})
+    default Windows.Devices.SmartCards.ISmartCard
+    requires Windows.Devices.SmartCards.ISmartCard
+    requires Windows.Devices.SmartCards.ISmartCardConnect
+    property reader
+        get get_Reader slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCard shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCardReader return
+    method connect_async
+        method ConnectAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardConnect shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> return
+    method get_answer_to_reset_async
+        method GetAnswerToResetAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCard shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+    method get_status_async
+        method GetStatusAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCard shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> return
+
+enum Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult python_type
+    py SmartCardActivationPolicyChangeResult
+    signature enum(Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult;i4)
+
+class Windows.Devices.SmartCards.SmartCardAppletIdGroup activatable python_type
+    py SmartCardAppletIdGroup
+    signature rc(Windows.Devices.SmartCards.SmartCardAppletIdGroup;{7db165e6-6264-56f4-5e03-c86385395eb1})
+    default Windows.Devices.SmartCards.ISmartCardAppletIdGroup
+    requires Windows.Devices.SmartCards.ISmartCardAppletIdGroup
+    requires Windows.Devices.SmartCards.ISmartCardAppletIdGroup2
+    factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics
+    factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory shape=239 reverse=27
+            in string name=displayName implicit
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> name=appletIds implicit
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationCategory name=emulationCategory implicit
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationType name=emulationType implicit
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroup return
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory shape=239 reverse=27
+            in string name=displayName
+            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> name=appletIds
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationCategory name=emulationCategory
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationType name=emulationType
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroup return
+    property smart_card_emulation_type
+        get get_SmartCardEmulationType slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=141
+            out enum32 type=Windows.Devices.SmartCards.SmartCardEmulationType return
+        put put_SmartCardEmulationType slot=12 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=162
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationType name=value
+    property smart_card_emulation_category
+        get get_SmartCardEmulationCategory slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=99
+            out enum32 type=Windows.Devices.SmartCards.SmartCardEmulationCategory return
+        put put_SmartCardEmulationCategory slot=10 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=121
+            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationCategory name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=22
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=43
+            in string name=value
+    property automatic_enablement
+        get get_AutomaticEnablement slot=13 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=173
+            out boolean return
+        put put_AutomaticEnablement slot=14 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=186
+            in boolean name=value
+    property applet_ids
+        get get_AppletIds slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> return
+    property secure_user_authentication_required
+        get get_SecureUserAuthenticationRequired slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=141
+            out boolean return
+        put put_SecureUserAuthenticationRequired slot=12 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=162
+            in boolean name=value
+    property logo
+        get get_Logo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+        put put_Logo slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=62
+            out string return
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=99
+            in string name=value
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroup2 shape=4 reverse=121
+            out class type=Windows.Foundation.Collections.ValueSet return
+    property max_applet_ids static
+        get get_MaxAppletIds slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics shape=4 reverse=22 static
+            out uint16 return
+
+enum Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy python_type
+    py SmartCardAppletIdGroupActivationPolicy
+    signature enum(Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy;i4)
+
+class Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration python_type
+    py SmartCardAppletIdGroupRegistration
+    signature rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a})
+    default Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration
+    requires Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration
+    requires Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2
+    property activation_policy
+        get get_ActivationPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy return
+    property applet_id_group
+        get get_AppletIdGroup slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration shape=4 reverse=43
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroup return
+    property id
+        get get_Id slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration shape=4 reverse=99
+            out guid return
+    property smart_card_reader_id
+        get get_SmartCardReaderId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2 shape=4 reverse=22
+            out string return
+    method request_activation_policy_change_async
+        method RequestActivationPolicyChangeAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration shape=51 reverse=65
+            in enum32 type=Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy name=policy
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> return
+    method set_automatic_response_apdus_async
+        method SetAutomaticResponseApdusAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration shape=51 reverse=124
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> name=apdus
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_properties_async
+        method SetPropertiesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2 shape=51 reverse=44
+            in class type=Windows.Foundation.Collections.ValueSet name=props
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu python_type
+    py SmartCardAutomaticResponseApdu
+    signature rc(Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu;{52152bab-c63e-4531-a857-d756d99b986a})
+    default Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu
+    requires Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu
+    requires Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2
+    requires Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3
+    factory Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory shape=117 reverse=25
+            in interface type=Windows.Storage.Streams.IBuffer name=commandApdu
+            in interface type=Windows.Storage.Streams.IBuffer name=responseApdu
+            out class type=Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu return
+    property should_match_length
+        get get_ShouldMatchLength slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=121
+            out boolean return
+        put put_ShouldMatchLength slot=11 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=141
+            in boolean name=value
+    property response_apdu
+        get get_ResponseApdu slot=14 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=186
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_ResponseApdu slot=15 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=194
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property command_apdu_bit_mask
+        get get_CommandApduBitMask slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_CommandApduBitMask slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property command_apdu
+        get get_CommandApdu slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_CommandApdu slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=43
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property applet_id
+        get get_AppletId slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=162
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_AppletId slot=13 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property output_state
+        get get_OutputState slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2 shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_OutputState slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2 shape=4 reverse=99
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property input_state
+        get get_InputState slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_InputState slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property allow_when_cryptogram_generator_not_prepared
+        get get_AllowWhenCryptogramGeneratorNotPrepared slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3 shape=4 reverse=22
+            out boolean return
+        put put_AllowWhenCryptogramGeneratorNotPrepared slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3 shape=4 reverse=43
+            in boolean name=value
+
+enum Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus python_type
+    py SmartCardAutomaticResponseStatus
+    signature enum(Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus;i4)
+
+class Windows.Devices.SmartCards.SmartCardChallengeContext python_type closeable
+    py SmartCardChallengeContext
+    signature rc(Windows.Devices.SmartCards.SmartCardChallengeContext;{192a5319-c9c4-4947-81cc-44794a61ef91})
+    default Windows.Devices.SmartCards.ISmartCardChallengeContext
+    requires Windows.Devices.SmartCards.ISmartCardChallengeContext
+    requires Windows.Foundation.IClosable
+    property challenge
+        get get_Challenge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method change_administrative_key_async
+        method ChangeAdministrativeKeyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=117 reverse=125
+            in interface type=Windows.Storage.Streams.IBuffer name=response
+            in interface type=Windows.Storage.Streams.IBuffer name=newAdministrativeKey
+            out interface type=Windows.Foundation.IAsyncAction return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method provision_async
+        method ProvisionAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=117 reverse=66
+            in interface type=Windows.Storage.Streams.IBuffer name=response
+            in boolean name=formatCard
+            out interface type=Windows.Foundation.IAsyncAction return
+        method ProvisionAsync slot=9 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=202
+            in interface type=Windows.Storage.Streams.IBuffer name=response
+            in boolean name=formatCard
+            in guid name=newCardId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method verify_response_async
+        method VerifyResponseAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=51 reverse=44
+            in interface type=Windows.Storage.Streams.IBuffer name=response
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Devices.SmartCards.SmartCardConnection python_type closeable
+    py SmartCardConnection
+    signature rc(Windows.Devices.SmartCards.SmartCardConnection;{7edb991a-a81a-47bc-a649-156be6b7f231})
+    default Windows.Devices.SmartCards.ISmartCardConnection
+    requires Windows.Devices.SmartCards.ISmartCardConnection
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method transmit_async
+        method TransmitAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardConnection shape=51 reverse=24
+            in interface type=Windows.Storage.Streams.IBuffer name=command
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm python_type
+    py SmartCardCryptogramAlgorithm
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4)
+
+class Windows.Devices.SmartCards.SmartCardCryptogramGenerator python_type
+    py SmartCardCryptogramGenerator
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramGenerator;{e39f587b-edd3-4e49-b594-0ff5e4d0c76f})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramGenerator
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramGenerator
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2
+    factory Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2
+    factory Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics
+    property supported_cryptogram_algorithms
+        get get_SupportedCryptogramAlgorithms slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
+    property supported_cryptogram_material_package_confirmation_response_formats
+        get get_SupportedCryptogramMaterialPackageConfirmationResponseFormats slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> return
+    property supported_cryptogram_material_package_formats
+        get get_SupportedCryptogramMaterialPackageFormats slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> return
+    property supported_cryptogram_material_types
+        get get_SupportedCryptogramMaterialTypes slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> return
+    property supported_smart_card_cryptogram_storage_key_capabilities
+        get get_SupportedSmartCardCryptogramStorageKeyCapabilities slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> return
+    method create_cryptogram_material_storage_key_async
+        method CreateCryptogramMaterialStorageKeyAsync slot=12 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=239 reverse=166
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            in string name=storageKeyName
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm name=algorithm
+            in enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities name=capabilities
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+    method delete_cryptogram_material_package_async
+        method DeleteCryptogramMaterialPackageAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=51 reverse=211
+            in string name=materialPackageName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+    method delete_cryptogram_material_storage_key_async
+        method DeleteCryptogramMaterialStorageKeyAsync slot=11 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=51 reverse=144
+            in string name=storageKeyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+    method get_all_cryptogram_material_characteristics_async
+        method GetAllCryptogramMaterialCharacteristicsAsync slot=10 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 shape=117 reverse=125
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            in string name=materialPackageName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> return
+    method get_all_cryptogram_material_package_characteristics_async
+        method GetAllCryptogramMaterialPackageCharacteristicsAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> return
+        method GetAllCryptogramMaterialPackageCharacteristicsAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 shape=51 reverse=100
+            in string name=storageKeyName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> return
+    method get_all_cryptogram_storage_key_characteristics_async
+        method GetAllCryptogramStorageKeyCharacteristicsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> return
+    method get_smart_card_cryptogram_generator_async static
+        method GetSmartCardCryptogramGeneratorAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> return
+    method import_cryptogram_material_package_async
+        method ImportCryptogramMaterialPackageAsync slot=14 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=239 reverse=190
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat name=format
+            in string name=storageKeyName
+            in string name=materialPackageName
+            in interface type=Windows.Storage.Streams.IBuffer name=cryptogramMaterialPackage
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2 shape=4 reverse=22 static
+            out boolean return
+    method request_cryptogram_material_storage_key_info_async
+        method RequestCryptogramMaterialStorageKeyInfoAsync slot=13 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=195 reverse=176
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            in string name=storageKeyName
+            in enum32 type=Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType name=format
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> return
+    method request_unlock_cryptogram_material_for_use_async
+        method RequestUnlockCryptogramMaterialForUseAsync slot=16 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=51 reverse=203
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+    method try_prove_possession_of_cryptogram_material_package_async
+        method TryProvePossessionOfCryptogramMaterialPackageAsync slot=15 inputs=5 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=267 reverse=199
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat name=responseFormat
+            in string name=materialPackageName
+            in string name=materialName
+            in interface type=Windows.Storage.Streams.IBuffer name=challenge
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> return
+    method validate_request_apdu_async
+        method ValidateRequestApduAsync slot=6 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2 shape=195 reverse=26
+            in enum32 type=Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior name=promptingBehavior
+            in interface type=Windows.Storage.Streams.IBuffer name=apduToValidate
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> name=cryptogramPlacementSteps
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus python_type
+    py SmartCardCryptogramGeneratorOperationStatus
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus;i4)
+
+class Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult activatable python_type
+    py SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;{2798e029-d687-4c92-86c6-399e9a0ecb09})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property characteristics
+        get get_Characteristics slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> return
+    property operation_status
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
+
+class Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult activatable python_type
+    py SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;{4e6a8a5c-9773-46c4-a32f-b1e543159e04})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property characteristics
+        get get_Characteristics slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> return
+    property operation_status
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
+
+class Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult activatable python_type
+    py SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;{8c7ce857-a7e7-489d-b9d6-368061515012})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property characteristics
+        get get_Characteristics slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> return
+    property operation_status
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
+
+class Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics activatable python_type
+    py SmartCardCryptogramMaterialCharacteristics
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics;{fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allowed_algorithms
+        get get_AllowedAlgorithms slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
+    property allowed_proof_of_possession_algorithms
+        get get_AllowedProofOfPossessionAlgorithms slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> return
+    property allowed_validations
+        get get_AllowedValidations slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
+    property material_length
+        get get_MaterialLength slot=13 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=173
+            out int32 return
+    property material_name
+        get get_MaterialName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=22
+            out string return
+    property material_type
+        get get_MaterialType slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=121
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType return
+    property protection_method
+        get get_ProtectionMethod slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=141
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod return
+    property protection_version
+        get get_ProtectionVersion slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics shape=4 reverse=162
+            out int32 return
+
+class Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics activatable python_type
+    py SmartCardCryptogramMaterialPackageCharacteristics
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics;{ffb58e1f-0692-4c47-93cf-34d91f9dcd00})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property date_imported
+        get get_DateImported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics shape=4 reverse=62
+            out datetime return
+    property package_format
+        get get_PackageFormat slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics shape=4 reverse=99
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat return
+    property package_name
+        get get_PackageName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics shape=4 reverse=22
+            out string return
+    property storage_key_name
+        get get_StorageKeyName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics shape=4 reverse=43
+            out string return
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat python_type
+    py SmartCardCryptogramMaterialPackageConfirmationResponseFormat
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4)
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat python_type
+    py SmartCardCryptogramMaterialPackageFormat
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4)
+
+class Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof python_type
+    py SmartCardCryptogramMaterialPossessionProof
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof;{e5b9ab8c-a141-4135-9add-b0d2e3aa1fc9})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof
+    property operation_status
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
+    property proof
+        get get_Proof slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod python_type
+    py SmartCardCryptogramMaterialProtectionMethod
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod;i4)
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialType python_type
+    py SmartCardCryptogramMaterialType
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4)
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions python_type
+    py SmartCardCryptogramPlacementOptions
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions;u4)
+
+class Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep activatable python_type
+    py SmartCardCryptogramPlacementStep
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep;{947b03eb-8342-4792-a2e5-925636378a53})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property template_offset
+        get get_TemplateOffset slot=14 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=186
+            out int32 return
+        put put_TemplateOffset slot=15 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=194
+            in int32 name=value
+    property source_data
+        get get_SourceData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_SourceData slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property cryptogram_placement_options
+        get get_CryptogramPlacementOptions slot=20 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=228
+            out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions return
+        put put_CryptogramPlacementOptions slot=21 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=232
+            in enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions name=value
+    property cryptogram_offset
+        get get_CryptogramOffset slot=16 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=202
+            out int32 return
+        put put_CryptogramOffset slot=17 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=210
+            in int32 name=value
+    property cryptogram_material_package_name
+        get get_CryptogramMaterialPackageName slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=121
+            out string return
+        put put_CryptogramMaterialPackageName slot=11 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=141
+            in string name=value
+    property cryptogram_material_name
+        get get_CryptogramMaterialName slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=162
+            out string return
+        put put_CryptogramMaterialName slot=13 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=173
+            in string name=value
+    property cryptogram_length
+        get get_CryptogramLength slot=18 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=218
+            out int32 return
+        put put_CryptogramLength slot=19 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=223
+            in int32 name=value
+    property chained_output_step
+        get get_ChainedOutputStep slot=22 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=237
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep return
+        put put_ChainedOutputStep slot=23 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=242
+            in class type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep name=value
+    property algorithm
+        get get_Algorithm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm return
+        put put_Algorithm slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep shape=4 reverse=43
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm name=value
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm python_type
+    py SmartCardCryptogramStorageKeyAlgorithm
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm;i4)
+
+enum Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities python_type
+    py SmartCardCryptogramStorageKeyCapabilities
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4)
+
+class Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics activatable python_type
+    py SmartCardCryptogramStorageKeyCharacteristics
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics;{8552546e-4457-4825-b464-635471a39f5c})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property algorithm
+        get get_Algorithm slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics shape=4 reverse=62
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm return
+    property capabilities
+        get get_Capabilities slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics shape=4 reverse=99
+            out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities return
+    property date_created
+        get get_DateCreated slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics shape=4 reverse=43
+            out datetime return
+    property storage_key_name
+        get get_StorageKeyName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics shape=4 reverse=22
+            out string return
+
+class Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo python_type
+    py SmartCardCryptogramStorageKeyInfo
+    signature rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo;{77b0f00d-b097-4f61-a26a-9561639c9c3a})
+    default Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo
+    requires Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2
+    property attestation
+        get get_Attestation slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=121
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property attestation_certificate_chain
+        get get_AttestationCertificateChain slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=141
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property attestation_status
+        get get_AttestationStatus slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=99
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus return
+    property capabilities
+        get get_Capabilities slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=162
+            out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities return
+    property operation_status
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
+    property public_key
+        get get_PublicKey slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property public_key_blob_type
+        get get_PublicKeyBlobType slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo shape=4 reverse=43
+            out enum32 type=Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType return
+    property operational_requirements
+        get get_OperationalRequirements slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2 shape=4 reverse=22
+            out string return
+
+enum Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus python_type
+    py SmartCardCryptographicKeyAttestationStatus
+    signature enum(Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus;i4)
+
+enum Windows.Devices.SmartCards.SmartCardEmulationCategory python_type
+    py SmartCardEmulationCategory
+    signature enum(Windows.Devices.SmartCards.SmartCardEmulationCategory;i4)
+
+enum Windows.Devices.SmartCards.SmartCardEmulationType python_type
+    py SmartCardEmulationType
+    signature enum(Windows.Devices.SmartCards.SmartCardEmulationType;i4)
+
+class Windows.Devices.SmartCards.SmartCardEmulator python_type
+    py SmartCardEmulator
+    signature rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb})
+    default Windows.Devices.SmartCards.ISmartCardEmulator
+    requires Windows.Devices.SmartCards.ISmartCardEmulator
+    requires Windows.Devices.SmartCards.ISmartCardEmulator2
+    factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics3
+    factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics
+    factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics2
+    property enablement_policy
+        get get_EnablementPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy return
+    property max_applet_id_group_registrations static
+        get get_MaxAppletIdGroupRegistrations slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 shape=4 reverse=99 static
+            out uint16 return
+    event apdu_received
+        add add_ApduReceived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs> name=value
+            out event_token return
+        remove remove_ApduReceived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=26 reverse=53
+            in event_token name=value
+    event connection_deactivated
+        add add_ConnectionDeactivated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs> name=value
+            out event_token return
+        remove remove_ConnectionDeactivated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=26 reverse=110
+            in event_token name=value
+    method get_applet_id_group_registrations_async static
+        method GetAppletIdGroupRegistrationsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> return
+    method is_host_card_emulation_supported
+        method IsHostCardEmulationSupported slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=4 reverse=141
+            out boolean return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 shape=4 reverse=22 static
+            out boolean return
+    method register_applet_id_group_async static
+        method RegisterAppletIdGroupAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 shape=51 reverse=44 static
+            in class type=Windows.Devices.SmartCards.SmartCardAppletIdGroup name=appletIdGroup
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> return
+    method start
+        method Start slot=10 inputs=0 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=0 reverse=117
+    method unregister_applet_id_group_async static
+        method UnregisterAppletIdGroupAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 shape=51 reverse=65 static
+            in class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration name=registration
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs python_type
+    py SmartCardEmulatorApduReceivedEventArgs
+    signature rc(Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs;{d55d1576-69d2-5333-5b5f-f8c0d6e9f09f})
+    default Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs
+    requires Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs
+    requires Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms
+    requires Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2
+    property automatic_response_status
+        get get_AutomaticResponseStatus slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs shape=4 reverse=99
+            out enum32 type=Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus return
+    property command_apdu
+        get get_CommandApdu slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property connection_properties
+        get get_ConnectionProperties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs shape=4 reverse=43
+            out class type=Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2 shape=4 reverse=22
+            out uint32 return
+    method try_respond_async
+        method TryRespondAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IBuffer name=responseApdu
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method TryRespondAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2 shape=117 reverse=45
+            in interface type=Windows.Storage.Streams.IBuffer name=responseApdu
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=nextState
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_respond_with_cryptograms_async
+        method TryRespondWithCryptogramsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms shape=117 reverse=25
+            in interface type=Windows.Storage.Streams.IBuffer name=responseTemplate
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> name=cryptogramPlacementSteps
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+        method TryRespondWithCryptogramsAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms shape=195 reverse=46
+            in interface type=Windows.Storage.Streams.IBuffer name=responseTemplate
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> name=cryptogramPlacementSteps
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=nextState
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+
+class Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs python_type
+    py SmartCardEmulatorConnectionDeactivatedEventArgs
+    signature rc(Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs;{2186d8d3-c5eb-5262-43df-62a0a1b55557})
+    default Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs
+    requires Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs
+    property connection_properties
+        get get_ConnectionProperties slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties return
+    property reason
+        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason return
+
+enum Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason python_type
+    py SmartCardEmulatorConnectionDeactivatedReason
+    signature enum(Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason;i4)
+
+class Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties python_type
+    py SmartCardEmulatorConnectionProperties
+    signature rc(Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties;{4e2ca5ee-f969-507d-6cf9-34e2d18df311})
+    default Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties
+    requires Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties shape=4 reverse=22
+            out guid return
+    property source
+        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties shape=4 reverse=43
+            out enum32 type=Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource return
+
+enum Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource python_type
+    py SmartCardEmulatorConnectionSource
+    signature enum(Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource;i4)
+
+enum Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy python_type
+    py SmartCardEmulatorEnablementPolicy
+    signature enum(Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy;i4)
+
+enum Windows.Devices.SmartCards.SmartCardLaunchBehavior python_type
+    py SmartCardLaunchBehavior
+    signature enum(Windows.Devices.SmartCards.SmartCardLaunchBehavior;i4)
+
+enum Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption python_type
+    py SmartCardPinCharacterPolicyOption
+    signature enum(Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption;i4)
+
+class Windows.Devices.SmartCards.SmartCardPinPolicy activatable python_type
+    py SmartCardPinPolicy
+    signature rc(Windows.Devices.SmartCards.SmartCardPinPolicy;{183ce184-4db6-4841-ac9e-2ac1f39b7304})
+    default Windows.Devices.SmartCards.ISmartCardPinPolicy
+    requires Windows.Devices.SmartCards.ISmartCardPinPolicy
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property uppercase_letters
+        get get_UppercaseLetters slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=121
+            out enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption return
+        put put_UppercaseLetters slot=11 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=141
+            in enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption name=value
+    property special_characters
+        get get_SpecialCharacters slot=16 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=202
+            out enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption return
+        put put_SpecialCharacters slot=17 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=210
+            in enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption name=value
+    property min_length
+        get get_MinLength slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=22
+            out uint32 return
+        put put_MinLength slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=43
+            in uint32 name=value
+    property max_length
+        get get_MaxLength slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=62
+            out uint32 return
+        put put_MaxLength slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=99
+            in uint32 name=value
+    property lowercase_letters
+        get get_LowercaseLetters slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=162
+            out enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption return
+        put put_LowercaseLetters slot=13 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=173
+            in enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption name=value
+    property digits
+        get get_Digits slot=14 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=186
+            out enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption return
+        put put_Digits slot=15 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinPolicy shape=4 reverse=194
+            in enum32 type=Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption name=value
+
+class Windows.Devices.SmartCards.SmartCardPinResetDeferral python_type
+    py SmartCardPinResetDeferral
+    signature rc(Windows.Devices.SmartCards.SmartCardPinResetDeferral;{18c94aac-7805-4004-85e4-bbefac8f6884})
+    default Windows.Devices.SmartCards.ISmartCardPinResetDeferral
+    requires Windows.Devices.SmartCards.ISmartCardPinResetDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinResetDeferral shape=0 reverse=16
+
+delegate Windows.Devices.SmartCards.SmartCardPinResetHandler python_type
+    py SmartCardPinResetHandler
+    guid 138d5e40-f3bc-4a5c-b41d-4b4ef684e237
+    signature delegate({138d5e40-f3bc-4a5c-b41d-4b4ef684e237})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.SmartCards.SmartCardProvisioning name=sender
+            in class type=Windows.Devices.SmartCards.SmartCardPinResetRequest name=request
+
+class Windows.Devices.SmartCards.SmartCardPinResetRequest python_type
+    py SmartCardPinResetRequest
+    signature rc(Windows.Devices.SmartCards.SmartCardPinResetRequest;{12fe3c4d-5fb9-4e8e-9ff6-61f475124fef})
+    default Windows.Devices.SmartCards.ISmartCardPinResetRequest
+    requires Windows.Devices.SmartCards.ISmartCardPinResetRequest
+    property challenge
+        get get_Challenge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinResetRequest shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property deadline
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinResetRequest shape=4 reverse=43
+            out datetime return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardPinResetRequest shape=4 reverse=62
+            out class type=Windows.Devices.SmartCards.SmartCardPinResetDeferral return
+    method set_response
+        method SetResponse slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardPinResetRequest shape=4 reverse=99
+            in interface type=Windows.Storage.Streams.IBuffer name=response
+
+class Windows.Devices.SmartCards.SmartCardProvisioning python_type
+    py SmartCardProvisioning
+    signature rc(Windows.Devices.SmartCards.SmartCardProvisioning;{19eeedbd-1fab-477c-b712-1a2c5af1fd6e})
+    default Windows.Devices.SmartCards.ISmartCardProvisioning
+    requires Windows.Devices.SmartCards.ISmartCardProvisioning
+    requires Windows.Devices.SmartCards.ISmartCardProvisioning2
+    factory Windows.Devices.SmartCards.ISmartCardProvisioningStatics
+    factory Windows.Devices.SmartCards.ISmartCardProvisioningStatics2
+    property smart_card
+        get get_SmartCard slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCard return
+    method from_smart_card_async static
+        method FromSmartCardAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics shape=51 reverse=24 static
+            in class type=Windows.Devices.SmartCards.SmartCard name=card
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> return
+    method get_authority_key_container_name_async
+        method GetAuthorityKeyContainerNameAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_challenge_context_async
+        method GetChallengeContextAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> return
+    method get_id_async
+        method GetIdAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=4 reverse=43
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Guid> return
+    method get_name_async
+        method GetNameAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method request_attested_virtual_smart_card_creation_async static
+        method RequestAttestedVirtualSmartCardCreationAsync slot=6 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 shape=195 reverse=26 static
+            in string name=friendlyName
+            in interface type=Windows.Storage.Streams.IBuffer name=administrativeKey
+            in class type=Windows.Devices.SmartCards.SmartCardPinPolicy name=pinPolicy
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> return
+        method RequestAttestedVirtualSmartCardCreationAsync slot=7 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 shape=241 static
+            in string name=friendlyName
+            in interface type=Windows.Storage.Streams.IBuffer name=administrativeKey
+            in class type=Windows.Devices.SmartCards.SmartCardPinPolicy name=pinPolicy
+            in guid name=cardId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> return
+    method request_pin_change_async
+        method RequestPinChangeAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_pin_reset_async
+        method RequestPinResetAsync slot=11 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioning shape=51 reverse=144
+            in delegate type=Windows.Devices.SmartCards.SmartCardPinResetHandler name=handler
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_virtual_smart_card_creation_async static
+        method RequestVirtualSmartCardCreationAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics shape=195 reverse=46 static
+            in string name=friendlyName
+            in interface type=Windows.Storage.Streams.IBuffer name=administrativeKey
+            in class type=Windows.Devices.SmartCards.SmartCardPinPolicy name=pinPolicy
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> return
+        method RequestVirtualSmartCardCreationAsync slot=8 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics shape=241 static
+            in string name=friendlyName
+            in interface type=Windows.Storage.Streams.IBuffer name=administrativeKey
+            in class type=Windows.Devices.SmartCards.SmartCardPinPolicy name=pinPolicy
+            in guid name=cardId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> return
+    method request_virtual_smart_card_deletion_async static
+        method RequestVirtualSmartCardDeletionAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardProvisioningStatics shape=51 reverse=100 static
+            in class type=Windows.Devices.SmartCards.SmartCard name=card
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.Devices.SmartCards.SmartCardReader python_type
+    py SmartCardReader
+    signature rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c})
+    default Windows.Devices.SmartCards.ISmartCardReader
+    requires Windows.Devices.SmartCards.ISmartCardReader
+    factory Windows.Devices.SmartCards.ISmartCardReaderStatics
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=22
+            out string return
+    property kind
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=62
+            out enum32 type=Windows.Devices.SmartCards.SmartCardReaderKind return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=43
+            out string return
+    event card_added
+        add add_CardAdded slot=11 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardAddedEventArgs> name=handler
+            out event_token return
+        remove remove_CardAdded slot=12 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=26 reverse=167
+            in event_token name=token
+    event card_removed
+        add add_CardRemoved slot=13 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_CardRemoved slot=14 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=26 reverse=192
+            in event_token name=token
+    method find_all_cards_async
+        method FindAllCardsAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=121
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> return
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReaderStatics shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReaderStatics shape=4 reverse=22 static
+            out string return
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReaderStatics shape=51 reverse=44 static
+            in enum32 type=Windows.Devices.SmartCards.SmartCardReaderKind name=kind
+            out string return
+    method get_status_async
+        method GetStatusAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> return
+
+enum Windows.Devices.SmartCards.SmartCardReaderKind python_type
+    py SmartCardReaderKind
+    signature enum(Windows.Devices.SmartCards.SmartCardReaderKind;i4)
+
+enum Windows.Devices.SmartCards.SmartCardReaderStatus python_type
+    py SmartCardReaderStatus
+    signature enum(Windows.Devices.SmartCards.SmartCardReaderStatus;i4)
+
+enum Windows.Devices.SmartCards.SmartCardStatus python_type
+    py SmartCardStatus
+    signature enum(Windows.Devices.SmartCards.SmartCardStatus;i4)
+
+class Windows.Devices.SmartCards.SmartCardTriggerDetails python_type
+    py SmartCardTriggerDetails
+    signature rc(Windows.Devices.SmartCards.SmartCardTriggerDetails;{5f9bf11e-39ef-4f2b-b44f-0a9155b177bc})
+    default Windows.Devices.SmartCards.ISmartCardTriggerDetails
+    requires Windows.Devices.SmartCards.ISmartCardTriggerDetails
+    requires Windows.Devices.SmartCards.ISmartCardTriggerDetails2
+    requires Windows.Devices.SmartCards.ISmartCardTriggerDetails3
+    property source_applet_id
+        get get_SourceAppletId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property trigger_data
+        get get_TriggerData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property trigger_type
+        get get_TriggerType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Devices.SmartCards.SmartCardTriggerType return
+    property emulator
+        get get_Emulator slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails2 shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCardEmulator return
+    property smart_card
+        get get_SmartCard slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails3 shape=4 reverse=22
+            out class type=Windows.Devices.SmartCards.SmartCard return
+    method try_launch_current_app_async
+        method TryLaunchCurrentAppAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails2 shape=51 reverse=44
+            in string name=arguments
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method TryLaunchCurrentAppAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardTriggerDetails2 shape=117 reverse=66
+            in string name=arguments
+            in enum32 type=Windows.Devices.SmartCards.SmartCardLaunchBehavior name=behavior
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+enum Windows.Devices.SmartCards.SmartCardTriggerType python_type
+    py SmartCardTriggerType
+    signature enum(Windows.Devices.SmartCards.SmartCardTriggerType;i4)
+
+enum Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior python_type
+    py SmartCardUnlockPromptingBehavior
+    signature enum(Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs> concrete
+    guid 146f9403-42f4-59a2-a85a-8294af3e3e78
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb});rc(Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs;{d55d1576-69d2-5333-5b5f-f8c0d6e9f09f}))
+    argument Windows.Devices.SmartCards.SmartCardEmulator
+    argument Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs> concrete
+    guid cb9840cb-cc46-5c37-ab00-dd23d77b263b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb});rc(Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs;{2186d8d3-c5eb-5262-43df-62a0a1b55557}))
+    argument Windows.Devices.SmartCards.SmartCardEmulator
+    argument Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardAddedEventArgs> concrete
+    guid d36f2db9-5674-5f74-9f69-3cdc4559999f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c});rc(Windows.Devices.SmartCards.CardAddedEventArgs;{18bbef98-f18b-4dd3-b118-dfb2c8e23cc6}))
+    argument Windows.Devices.SmartCards.SmartCardReader
+    argument Windows.Devices.SmartCards.CardAddedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardRemovedEventArgs> concrete
+    guid 69da07c6-b266-5a1c-937c-d82b4a8232c6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c});rc(Windows.Devices.SmartCards.CardRemovedEventArgs;{15331aaf-22d7-4945-afc9-03b46f42a6cd}))
+    argument Windows.Devices.SmartCards.SmartCardReader
+    argument Windows.Devices.SmartCards.CardRemovedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
+
+enum Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType external
+    py winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b

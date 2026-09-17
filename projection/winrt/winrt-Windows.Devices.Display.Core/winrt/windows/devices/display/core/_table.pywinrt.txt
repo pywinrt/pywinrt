@@ -1,0 +1,1112 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Display.Core
+
+class Windows.Devices.Display.Core.DisplayAdapter python_type
+    py DisplayAdapter
+    signature rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5})
+    default Windows.Devices.Display.Core.IDisplayAdapter
+    requires Windows.Devices.Display.Core.IDisplayAdapter
+    requires Windows.Devices.Display.Core.IDisplayAdapter2
+    factory Windows.Devices.Display.Core.IDisplayAdapterStatics
+    property device_interface_path
+        get get_DeviceInterfacePath slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=43
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=22
+            out struct type=Windows.Graphics.DisplayAdapterId return
+    property pci_device_id
+        get get_PciDeviceId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=121
+            out uint32 return
+    property pci_revision
+        get get_PciRevision slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=162
+            out uint32 return
+    property pci_sub_system_id
+        get get_PciSubSystemId slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=141
+            out uint32 return
+    property pci_vendor_id
+        get get_PciVendorId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=99
+            out uint32 return
+    property properties
+        get get_Properties slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property source_count
+        get get_SourceCount slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter shape=4 reverse=62
+            out uint32 return
+    property is_indirect_display_device
+        get get_IsIndirectDisplayDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter2 shape=4 reverse=22
+            out boolean return
+    property preferred_render_adapter
+        get get_PreferredRenderAdapter slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapter2 shape=4 reverse=43
+            out class type=Windows.Devices.Display.Core.DisplayAdapter return
+    method from_id static
+        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayAdapterStatics shape=93 static
+            in struct type=Windows.Graphics.DisplayAdapterId name=id
+            out class type=Windows.Devices.Display.Core.DisplayAdapter return
+
+enum Windows.Devices.Display.Core.DisplayBitsPerChannel python_type
+    py DisplayBitsPerChannel
+    signature enum(Windows.Devices.Display.Core.DisplayBitsPerChannel;u4)
+
+class Windows.Devices.Display.Core.DisplayDevice python_type
+    py DisplayDevice
+    signature rc(Windows.Devices.Display.Core.DisplayDevice;{a4c9b62c-335f-5731-8cb4-c1ccd4731070})
+    default Windows.Devices.Display.Core.IDisplayDevice
+    requires Windows.Devices.Display.Core.IDisplayDevice
+    requires Windows.Devices.Display.Core.IDisplayDevice2
+    requires Windows.Devices.Display.Core.IDisplayDeviceRenderAdapter
+    property render_adapter_id
+        get get_RenderAdapterId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDeviceRenderAdapter shape=4 reverse=22
+            out struct type=Windows.Graphics.DisplayAdapterId return
+    method create_periodic_fence
+        method CreatePeriodicFence slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=135
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            in timespan name=offsetFromVBlank
+            out class type=Windows.Devices.Display.Core.DisplayFence return
+    method create_primary
+        method CreatePrimary slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=117 reverse=45
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            in class type=Windows.Devices.Display.Core.DisplayPrimaryDescription name=desc
+            out class type=Windows.Devices.Display.Core.DisplaySurface return
+    method create_scanout_source
+        method CreateScanoutSource slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=51 reverse=24
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out class type=Windows.Devices.Display.Core.DisplaySource return
+    method create_simple_scanout
+        method CreateSimpleScanout slot=11 inputs=4 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=239
+            in class type=Windows.Devices.Display.Core.DisplaySource name=pSource
+            in class type=Windows.Devices.Display.Core.DisplaySurface name=pSurface
+            in uint32 name=SubResourceIndex
+            in uint32 name=SyncInterval
+            out class type=Windows.Devices.Display.Core.DisplayScanout return
+    method create_simple_scanout_with_dirty_rects_and_options
+        method CreateSimpleScanoutWithDirtyRectsAndOptions slot=6 inputs=6 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice2 shape=278 reverse=28
+            in class type=Windows.Devices.Display.Core.DisplaySource name=source
+            in class type=Windows.Devices.Display.Core.DisplaySurface name=surface
+            in uint32 name=subresourceIndex
+            in uint32 name=syncInterval
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> name=dirtyRects
+            in enum_u32 type=Windows.Devices.Display.Core.DisplayScanoutOptions name=options
+            out class type=Windows.Devices.Display.Core.DisplayScanout return
+    method create_task_pool
+        method CreateTaskPool slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=4 reverse=62
+            out class type=Windows.Devices.Display.Core.DisplayTaskPool return
+    method is_capability_supported
+        method IsCapabilitySupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=51 reverse=163
+            in enum32 type=Windows.Devices.Display.Core.DisplayDeviceCapability name=capability
+            out boolean return
+    method wait_for_v_blank
+        method WaitForVBlank slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=4 reverse=121
+            in class type=Windows.Devices.Display.Core.DisplaySource name=source
+
+enum Windows.Devices.Display.Core.DisplayDeviceCapability python_type
+    py DisplayDeviceCapability
+    signature enum(Windows.Devices.Display.Core.DisplayDeviceCapability;i4)
+
+class Windows.Devices.Display.Core.DisplayFence python_type
+    py DisplayFence
+    signature rc(Windows.Devices.Display.Core.DisplayFence;{04dcf9ef-3406-5700-8fec-77eba4c5a74b})
+    default Windows.Devices.Display.Core.IDisplayFence
+    requires Windows.Devices.Display.Core.IDisplayFence
+
+class Windows.Devices.Display.Core.DisplayManager python_type closeable
+    py DisplayManager
+    signature rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7})
+    default Windows.Devices.Display.Core.IDisplayManager
+    requires Windows.Devices.Display.Core.IDisplayManager
+    requires Windows.Devices.Display.Core.IDisplayManager2
+    requires Windows.Devices.Display.Core.IDisplayManager3
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Display.Core.IDisplayManagerStatics
+    event changed
+        add add_Changed slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=224
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerChangedEventArgs> name=handler
+            out event_token return
+        remove remove_Changed slot=20 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=399
+            in event_token name=token
+    event disabled
+        add add_Disabled slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs> name=handler
+            out event_token return
+        remove remove_Disabled slot=18 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=398
+            in event_token name=token
+    event enabled
+        add add_Enabled slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs> name=handler
+            out event_token return
+        remove remove_Enabled slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=397
+            in event_token name=token
+    event paths_failed_or_invalidated
+        add add_PathsFailedOrInvalidated slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=233
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs> name=handler
+            out event_token return
+        remove remove_PathsFailedOrInvalidated slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=400
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerStatics shape=51 reverse=24 static
+            in enum_u32 type=Windows.Devices.Display.Core.DisplayManagerOptions name=options
+            out class type=Windows.Devices.Display.Core.DisplayManager return
+    method create_display_device
+        method CreateDisplayDevice slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=187
+            in class type=Windows.Devices.Display.Core.DisplayAdapter name=adapter
+            out class type=Windows.Devices.Display.Core.DisplayDevice return
+    method create_display_device_for_indirect_adapter
+        method CreateDisplayDeviceForIndirectAdapter slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager3 shape=117 reverse=25
+            in class type=Windows.Devices.Display.Core.DisplayAdapter name=indirectAdapter
+            in class type=Windows.Devices.Display.Core.DisplayAdapter name=renderAdapter
+            out class type=Windows.Devices.Display.Core.DisplayDevice return
+    method get_current_adapters
+        method GetCurrentAdapters slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> return
+    method get_current_targets
+        method GetCurrentTargets slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> return
+    method release_target
+        method ReleaseTarget slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=4 reverse=99
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+    method start
+        method Start slot=23 inputs=0 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=0 reverse=240
+    method stop
+        method Stop slot=24 inputs=0 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=0 reverse=401
+    method try_acquire_target
+        method TryAcquireTarget slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=65
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out enum32 type=Windows.Devices.Display.Core.DisplayManagerResult return
+    method try_acquire_targets_and_create_empty_state
+        method TryAcquireTargetsAndCreateEmptyState slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=163
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> name=targets
+            out class type=Windows.Devices.Display.Core.DisplayManagerResultWithState return
+    method try_acquire_targets_and_create_substate
+        method TryAcquireTargetsAndCreateSubstate slot=13 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=117 reverse=175
+            in class type=Windows.Devices.Display.Core.DisplayState name=existingState
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> name=targets
+            out class type=Windows.Devices.Display.Core.DisplayManagerResultWithState return
+    method try_acquire_targets_and_read_current_state
+        method TryAcquireTargetsAndReadCurrentState slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=144
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> name=targets
+            out class type=Windows.Devices.Display.Core.DisplayManagerResultWithState return
+    method try_read_current_state_for_all_targets
+        method TryReadCurrentStateForAllTargets slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=4 reverse=121
+            out class type=Windows.Devices.Display.Core.DisplayManagerResultWithState return
+    method try_read_current_state_for_mode_query
+        method TryReadCurrentStateForModeQuery slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager2 shape=4 reverse=22
+            out class type=Windows.Devices.Display.Core.DisplayManagerResultWithState return
+
+class Windows.Devices.Display.Core.DisplayManagerChangedEventArgs python_type
+    py DisplayManagerChangedEventArgs
+    signature rc(Windows.Devices.Display.Core.DisplayManagerChangedEventArgs;{6abfa285-6cca-5731-bcdc-42e5d2f5c50f})
+    default Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs
+    requires Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs python_type
+    py DisplayManagerDisabledEventArgs
+    signature rc(Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs;{8726dde4-6793-5973-a11f-5ffbc93fdb90})
+    default Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs
+    requires Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs python_type
+    py DisplayManagerEnabledEventArgs
+    signature rc(Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs;{f0cf3f6f-42fa-59a2-b297-26e1713de848})
+    default Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs
+    requires Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.Devices.Display.Core.DisplayManagerOptions python_type
+    py DisplayManagerOptions
+    signature enum(Windows.Devices.Display.Core.DisplayManagerOptions;u4)
+
+class Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs python_type
+    py DisplayManagerPathsFailedOrInvalidatedEventArgs
+    signature rc(Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs;{03a65659-1dec-5c15-b2a2-8fe9129869fe})
+    default Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs
+    requires Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs
+    property handled
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs shape=4 reverse=43
+            in boolean name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.Devices.Display.Core.DisplayManagerResult python_type
+    py DisplayManagerResult
+    signature enum(Windows.Devices.Display.Core.DisplayManagerResult;i4)
+
+class Windows.Devices.Display.Core.DisplayManagerResultWithState python_type
+    py DisplayManagerResultWithState
+    signature rc(Windows.Devices.Display.Core.DisplayManagerResultWithState;{8e656aa6-6614-54be-bfef-4994547f7be1})
+    default Windows.Devices.Display.Core.IDisplayManagerResultWithState
+    requires Windows.Devices.Display.Core.IDisplayManagerResultWithState
+    property error_code
+        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerResultWithState shape=4 reverse=22
+            out enum32 type=Windows.Devices.Display.Core.DisplayManagerResult return
+    property extended_error_code
+        get get_ExtendedErrorCode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerResultWithState shape=4 reverse=43
+            out hresult return
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerResultWithState shape=4 reverse=62
+            out class type=Windows.Devices.Display.Core.DisplayState return
+
+class Windows.Devices.Display.Core.DisplayModeInfo python_type
+    py DisplayModeInfo
+    signature rc(Windows.Devices.Display.Core.DisplayModeInfo;{48d513a0-f79b-5a74-a05e-da821f470868})
+    default Windows.Devices.Display.Core.IDisplayModeInfo
+    requires Windows.Devices.Display.Core.IDisplayModeInfo
+    requires Windows.Devices.Display.Core.IDisplayModeInfo2
+    property is_interlaced
+        get get_IsInterlaced slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=141
+            out boolean return
+    property is_stereo
+        get get_IsStereo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=43
+            out boolean return
+    property presentation_rate
+        get get_PresentationRate slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=121
+            out struct type=Windows.Devices.Display.Core.DisplayPresentationRate return
+    property properties
+        get get_Properties slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property source_pixel_format
+        get get_SourcePixelFormat slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=62
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property source_resolution
+        get get_SourceResolution slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=22
+            out struct type=Windows.Graphics.SizeInt32 return
+    property target_resolution
+        get get_TargetResolution slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=4 reverse=99
+            out struct type=Windows.Graphics.SizeInt32 return
+    property physical_presentation_rate
+        get get_PhysicalPresentationRate slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo2 shape=4 reverse=22
+            out struct type=Windows.Devices.Display.Core.DisplayPresentationRate return
+    method get_wire_format_supported_bits_per_channel
+        method GetWireFormatSupportedBitsPerChannel slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=51 reverse=163
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding name=encoding
+            out enum_u32 type=Windows.Devices.Display.Core.DisplayBitsPerChannel return
+    method is_wire_format_supported
+        method IsWireFormatSupported slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayModeInfo shape=51 reverse=174
+            in class type=Windows.Devices.Display.Core.DisplayWireFormat name=wireFormat
+            out boolean return
+
+enum Windows.Devices.Display.Core.DisplayModeQueryOptions python_type
+    py DisplayModeQueryOptions
+    signature enum(Windows.Devices.Display.Core.DisplayModeQueryOptions;u4)
+
+class Windows.Devices.Display.Core.DisplayMuxDevice python_type closeable
+    py DisplayMuxDevice
+    signature rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068})
+    default Windows.Devices.Display.Core.IDisplayMuxDevice
+    requires Windows.Devices.Display.Core.IDisplayMuxDevice
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.Display.Core.IDisplayMuxDeviceStatics
+    property current_target
+        get get_CurrentTarget slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=99
+            out class type=Windows.Devices.Display.Core.DisplayTarget return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=22
+            out string return
+    property is_active
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=43
+            out boolean return
+    property is_automatic_target_switching_enabled
+        get get_IsAutomaticTargetSwitchingEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=141
+            out boolean return
+    property preferred_target
+        get get_PreferredTarget slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=121
+            out class type=Windows.Devices.Display.Core.DisplayTarget return
+    event changed
+        add add_Changed slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayMuxDevice,System.Object> name=handler
+            out event_token return
+        remove remove_Changed slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=26 reverse=200
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDeviceStatics shape=51 reverse=44 static
+            in string name=deviceInterfaceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> return
+    method get_available_mux_targets
+        method GetAvailableMuxTargets slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDeviceStatics shape=4 reverse=22 static
+            out string return
+    method set_automatic_target_switching
+        method SetAutomaticTargetSwitching slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_preferred_target
+        method SetPreferredTarget slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=51 reverse=163
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.Display.Core.DisplayPath python_type
+    py DisplayPath
+    signature rc(Windows.Devices.Display.Core.DisplayPath;{b3dfd64a-7460-5cde-811b-d5ae9f3d9f84})
+    default Windows.Devices.Display.Core.IDisplayPath
+    requires Windows.Devices.Display.Core.IDisplayPath
+    requires Windows.Devices.Display.Core.IDisplayPath2
+    property wire_format
+        get get_WireFormat slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=232
+            out class type=Windows.Devices.Display.Core.DisplayWireFormat return
+        put put_WireFormat slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=237
+            in class type=Windows.Devices.Display.Core.DisplayWireFormat name=value
+    property target_resolution
+        get get_TargetResolution slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=194
+            out reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> return
+        put put_TargetResolution slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=202
+            in reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> name=value
+    property source_resolution
+        get get_SourceResolution slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> return
+        put put_SourceResolution slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=121
+            in reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> name=value
+    property source_pixel_format
+        get get_SourcePixelFormat slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=141
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+        put put_SourcePixelFormat slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=162
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+    property scaling
+        get get_Scaling slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=252
+            out enum32 type=Windows.Devices.Display.Core.DisplayPathScaling return
+        put put_Scaling slot=26 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=255
+            in enum32 type=Windows.Devices.Display.Core.DisplayPathScaling name=value
+    property rotation
+        get get_Rotation slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=242
+            out enum32 type=Windows.Devices.Display.Core.DisplayRotation return
+        put put_Rotation slot=24 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=247
+            in enum32 type=Windows.Devices.Display.Core.DisplayRotation name=value
+    property presentation_rate
+        get get_PresentationRate slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=210
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> return
+        put put_PresentationRate slot=18 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=218
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> name=value
+    property is_stereo
+        get get_IsStereo slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=173
+            out boolean return
+        put put_IsStereo slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=186
+            in boolean name=value
+    property is_interlaced
+        get get_IsInterlaced slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=223
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+        put put_IsInterlaced slot=20 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=228
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+    property properties
+        get get_Properties slot=29 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=266
+            out parameterized type=Windows.Foundation.Collections.IMap<System.Guid,System.Object> return
+    property status
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=62
+            out enum32 type=Windows.Devices.Display.Core.DisplayPathStatus return
+    property target
+        get get_Target slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=43
+            out class type=Windows.Devices.Display.Core.DisplayTarget return
+    property view
+        get get_View slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=22
+            out class type=Windows.Devices.Display.Core.DisplayView return
+    property physical_presentation_rate
+        get get_PhysicalPresentationRate slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath2 shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> return
+        put put_PhysicalPresentationRate slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath2 shape=4 reverse=43
+            in reference type=Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> name=value
+    method apply_properties_from_mode
+        method ApplyPropertiesFromMode slot=28 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayPath shape=4 reverse=263
+            in class type=Windows.Devices.Display.Core.DisplayModeInfo name=modeResult
+    method find_modes
+        method FindModes slot=27 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPath shape=51 reverse=260
+            in enum_u32 type=Windows.Devices.Display.Core.DisplayModeQueryOptions name=flags
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> return
+
+enum Windows.Devices.Display.Core.DisplayPathScaling python_type
+    py DisplayPathScaling
+    signature enum(Windows.Devices.Display.Core.DisplayPathScaling;i4)
+
+enum Windows.Devices.Display.Core.DisplayPathStatus python_type
+    py DisplayPathStatus
+    signature enum(Windows.Devices.Display.Core.DisplayPathStatus;i4)
+
+enum Windows.Devices.Display.Core.DisplayPresentStatus python_type
+    py DisplayPresentStatus
+    signature enum(Windows.Devices.Display.Core.DisplayPresentStatus;i4)
+
+struct Windows.Devices.Display.Core.DisplayPresentationRate python_type
+    py DisplayPresentationRate
+    signature struct(Windows.Devices.Display.Core.DisplayPresentationRate;struct(Windows.Foundation.Numerics.Rational;u4;u4);i4)
+    field vertical_sync_rate VerticalSyncRate struct type=Windows.Foundation.Numerics.Rational
+    field vertical_syncs_per_presentation VerticalSyncsPerPresentation int32
+
+class Windows.Devices.Display.Core.DisplayPrimaryDescription python_type
+    py DisplayPrimaryDescription
+    signature rc(Windows.Devices.Display.Core.DisplayPrimaryDescription;{872591d2-d533-50ff-a85e-06696194b77c})
+    default Windows.Devices.Display.Core.IDisplayPrimaryDescription
+    requires Windows.Devices.Display.Core.IDisplayPrimaryDescription
+    factory Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics
+    factory Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=6 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory shape=279
+            in uint32 name=width
+            in uint32 name=height
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            in enum32 type=Windows.Graphics.DirectX.DirectXColorSpace name=colorSpace
+            in boolean name=isStereo
+            in struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription name=multisampleDescription
+            out class type=Windows.Devices.Display.Core.DisplayPrimaryDescription return
+    property color_space
+        get get_ColorSpace slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=99
+            out enum32 type=Windows.Graphics.DirectX.DirectXColorSpace return
+    property format
+        get get_Format slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=62
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property height
+        get get_Height slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=43
+            out uint32 return
+    property is_stereo
+        get get_IsStereo slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=121
+            out boolean return
+    property multisample_description
+        get get_MultisampleDescription slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=141
+            out struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription return
+    property properties
+        get get_Properties slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property width
+        get get_Width slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescription shape=4 reverse=22
+            out uint32 return
+    method create_with_properties static
+        method CreateWithProperties slot=6 inputs=7 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics shape=287 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> name=extraProperties
+            in uint32 name=width
+            in uint32 name=height
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            in enum32 type=Windows.Graphics.DirectX.DirectXColorSpace name=colorSpace
+            in boolean name=isStereo
+            in struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription name=multisampleDescription
+            out class type=Windows.Devices.Display.Core.DisplayPrimaryDescription return
+
+enum Windows.Devices.Display.Core.DisplayRotation python_type
+    py DisplayRotation
+    signature enum(Windows.Devices.Display.Core.DisplayRotation;i4)
+
+class Windows.Devices.Display.Core.DisplayScanout python_type
+    py DisplayScanout
+    signature rc(Windows.Devices.Display.Core.DisplayScanout;{e3051828-1ba5-50e7-8a39-bb1fd2f4f8b9})
+    default Windows.Devices.Display.Core.IDisplayScanout
+    requires Windows.Devices.Display.Core.IDisplayScanout
+
+enum Windows.Devices.Display.Core.DisplayScanoutOptions python_type
+    py DisplayScanoutOptions
+    signature enum(Windows.Devices.Display.Core.DisplayScanoutOptions;u4)
+
+class Windows.Devices.Display.Core.DisplaySource python_type
+    py DisplaySource
+    signature rc(Windows.Devices.Display.Core.DisplaySource;{ecd15fc1-eadc-51bc-971d-3bc628db2dd4})
+    default Windows.Devices.Display.Core.IDisplaySource
+    requires Windows.Devices.Display.Core.IDisplaySource
+    requires Windows.Devices.Display.Core.IDisplaySource2
+    property adapter_id
+        get get_AdapterId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource shape=4 reverse=22
+            out struct type=Windows.Graphics.DisplayAdapterId return
+    property source_id
+        get get_SourceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource shape=4 reverse=43
+            out uint32 return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource2 shape=4 reverse=22
+            out enum32 type=Windows.Devices.Display.Core.DisplaySourceStatus return
+    event status_changed
+        add add_StatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource2 shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource,System.Object> name=handler
+            out event_token return
+        remove remove_StatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplaySource2 shape=26 reverse=82
+            in event_token name=token
+    method get_metadata
+        method GetMetadata slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource shape=94 reverse=87
+            in guid name=Key
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+enum Windows.Devices.Display.Core.DisplaySourceStatus python_type
+    py DisplaySourceStatus
+    signature enum(Windows.Devices.Display.Core.DisplaySourceStatus;i4)
+
+class Windows.Devices.Display.Core.DisplayState python_type
+    py DisplayState
+    signature rc(Windows.Devices.Display.Core.DisplayState;{08129321-11b5-5cb2-99f8-e90b479a8a1d})
+    default Windows.Devices.Display.Core.IDisplayState
+    requires Windows.Devices.Display.Core.IDisplayState
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=22
+            out boolean return
+    property is_stale
+        get get_IsStale slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=43
+            out boolean return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMap<System.Guid,System.Object> return
+    property targets
+        get get_Targets slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> return
+    property views
+        get get_Views slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> return
+    method can_connect_target_to_view
+        method CanConnectTargetToView slot=13 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=117 reverse=175
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            in class type=Windows.Devices.Display.Core.DisplayView name=view
+            out boolean return
+    method clone
+        method Clone slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=223
+            out class type=Windows.Devices.Display.Core.DisplayState return
+    method connect_target
+        method ConnectTarget slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=51 reverse=144 default_overload
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out class type=Windows.Devices.Display.Core.DisplayPath return
+        method ConnectTarget slot=12 inputs=2 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=117 reverse=164
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            in class type=Windows.Devices.Display.Core.DisplayView name=view
+            out class type=Windows.Devices.Display.Core.DisplayPath return
+    method disconnect_target
+        method DisconnectTarget slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayState shape=4 reverse=202
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+    method get_path_for_target
+        method GetPathForTarget slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=51 reverse=196
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out class type=Windows.Devices.Display.Core.DisplayPath return
+    method get_view_for_target
+        method GetViewForTarget slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=51 reverse=187
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=target
+            out class type=Windows.Devices.Display.Core.DisplayView return
+    method try_apply
+        method TryApply slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=51 reverse=219
+            in enum_u32 type=Windows.Devices.Display.Core.DisplayStateApplyOptions name=options
+            out class type=Windows.Devices.Display.Core.DisplayStateOperationResult return
+    method try_functionalize
+        method TryFunctionalize slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayState shape=51 reverse=211
+            in enum_u32 type=Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions name=options
+            out class type=Windows.Devices.Display.Core.DisplayStateOperationResult return
+
+enum Windows.Devices.Display.Core.DisplayStateApplyOptions python_type
+    py DisplayStateApplyOptions
+    signature enum(Windows.Devices.Display.Core.DisplayStateApplyOptions;u4)
+
+enum Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions python_type
+    py DisplayStateFunctionalizeOptions
+    signature enum(Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions;u4)
+
+class Windows.Devices.Display.Core.DisplayStateOperationResult python_type
+    py DisplayStateOperationResult
+    signature rc(Windows.Devices.Display.Core.DisplayStateOperationResult;{fcadbfdf-dc27-5638-b7f2-ebdfa4f7ea93})
+    default Windows.Devices.Display.Core.IDisplayStateOperationResult
+    requires Windows.Devices.Display.Core.IDisplayStateOperationResult
+    property extended_error_code
+        get get_ExtendedErrorCode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayStateOperationResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayStateOperationResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Display.Core.DisplayStateOperationStatus return
+
+enum Windows.Devices.Display.Core.DisplayStateOperationStatus python_type
+    py DisplayStateOperationStatus
+    signature enum(Windows.Devices.Display.Core.DisplayStateOperationStatus;i4)
+
+class Windows.Devices.Display.Core.DisplaySurface python_type
+    py DisplaySurface
+    signature rc(Windows.Devices.Display.Core.DisplaySurface;{594f6cc6-139a-56d6-a4b1-15fe2cb76adb})
+    default Windows.Devices.Display.Core.IDisplaySurface
+    requires Windows.Devices.Display.Core.IDisplaySurface
+
+class Windows.Devices.Display.Core.DisplayTarget python_type
+    py DisplayTarget
+    signature rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a})
+    default Windows.Devices.Display.Core.IDisplayTarget
+    requires Windows.Devices.Display.Core.IDisplayTarget
+    property adapter
+        get get_Adapter slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=22
+            out class type=Windows.Devices.Display.Core.DisplayAdapter return
+    property adapter_relative_id
+        get get_AdapterRelativeId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=62
+            out uint32 return
+    property device_interface_path
+        get get_DeviceInterfacePath slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=43
+            out string return
+    property is_connected
+        get get_IsConnected slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=99
+            out boolean return
+    property is_stale
+        get get_IsStale slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=210
+            out boolean return
+    property is_virtual_mode_enabled
+        get get_IsVirtualModeEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=121
+            out boolean return
+    property is_virtual_topology_enabled
+        get get_IsVirtualTopologyEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=141
+            out boolean return
+    property monitor_persistence
+        get get_MonitorPersistence slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=173
+            out enum32 type=Windows.Devices.Display.Core.DisplayTargetPersistence return
+    property properties
+        get get_Properties slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property stable_monitor_id
+        get get_StableMonitorId slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=186
+            out string return
+    property usage_kind
+        get get_UsageKind slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=162
+            out enum32 type=Windows.Devices.Display.DisplayMonitorUsageKind return
+    method is_equal
+        method IsEqual slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=51 reverse=224
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=otherTarget
+            out boolean return
+    method is_same
+        method IsSame slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=51 reverse=219
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=otherTarget
+            out boolean return
+    method try_get_monitor
+        method TryGetMonitor slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTarget shape=4 reverse=194
+            out class type=Windows.Devices.Display.DisplayMonitor return
+
+enum Windows.Devices.Display.Core.DisplayTargetPersistence python_type
+    py DisplayTargetPersistence
+    signature enum(Windows.Devices.Display.Core.DisplayTargetPersistence;i4)
+
+class Windows.Devices.Display.Core.DisplayTask python_type
+    py DisplayTask
+    signature rc(Windows.Devices.Display.Core.DisplayTask;{5e087448-135b-5bb0-bf63-637f84227c7a})
+    default Windows.Devices.Display.Core.IDisplayTask
+    requires Windows.Devices.Display.Core.IDisplayTask
+    requires Windows.Devices.Display.Core.IDisplayTask2
+    method set_scanout
+        method SetScanout slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayTask shape=4 reverse=22
+            in class type=Windows.Devices.Display.Core.DisplayScanout name=scanout
+    method set_signal
+        method SetSignal slot=6 inputs=2 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayTask2 shape=51 reverse=24
+            in enum32 type=Windows.Devices.Display.Core.DisplayTaskSignalKind name=signalKind
+            in class type=Windows.Devices.Display.Core.DisplayFence name=fence
+    method set_wait
+        method SetWait slot=7 inputs=2 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayTask shape=50
+            in class type=Windows.Devices.Display.Core.DisplayFence name=readyFence
+            in uint64 name=readyFenceValue
+
+class Windows.Devices.Display.Core.DisplayTaskPool python_type
+    py DisplayTaskPool
+    signature rc(Windows.Devices.Display.Core.DisplayTaskPool;{c676253d-237d-5548-aafa-3e517fefef1c})
+    default Windows.Devices.Display.Core.IDisplayTaskPool
+    requires Windows.Devices.Display.Core.IDisplayTaskPool
+    requires Windows.Devices.Display.Core.IDisplayTaskPool2
+    method create_task
+        method CreateTask slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskPool shape=4 reverse=22
+            out class type=Windows.Devices.Display.Core.DisplayTask return
+    method execute_task deprecated
+        method ExecuteTask slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayTaskPool shape=4 reverse=43 deprecated
+            in class type=Windows.Devices.Display.Core.DisplayTask name=task
+    method try_execute_task
+        method TryExecuteTask slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskPool2 shape=51 reverse=24
+            in class type=Windows.Devices.Display.Core.DisplayTask name=task
+            out class type=Windows.Devices.Display.Core.DisplayTaskResult return
+
+class Windows.Devices.Display.Core.DisplayTaskResult python_type
+    py DisplayTaskResult
+    signature rc(Windows.Devices.Display.Core.DisplayTaskResult;{6fbc7d67-f9b1-55e0-9d88-d3a5197a3f59})
+    default Windows.Devices.Display.Core.IDisplayTaskResult
+    requires Windows.Devices.Display.Core.IDisplayTaskResult
+    property present_id
+        get get_PresentId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskResult shape=4 reverse=43
+            out uint64 return
+    property present_status
+        get get_PresentStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Display.Core.DisplayPresentStatus return
+    property source_status
+        get get_SourceStatus slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskResult shape=4 reverse=62
+            out enum32 type=Windows.Devices.Display.Core.DisplaySourceStatus return
+
+enum Windows.Devices.Display.Core.DisplayTaskSignalKind python_type
+    py DisplayTaskSignalKind
+    signature enum(Windows.Devices.Display.Core.DisplayTaskSignalKind;i4)
+
+class Windows.Devices.Display.Core.DisplayView python_type
+    py DisplayView
+    signature rc(Windows.Devices.Display.Core.DisplayView;{b0c98ca1-b759-5b59-b1ad-f0786aa9e53d})
+    default Windows.Devices.Display.Core.IDisplayView
+    requires Windows.Devices.Display.Core.IDisplayView
+    property content_resolution
+        get get_ContentResolution slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayView shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> return
+        put put_ContentResolution slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayView shape=4 reverse=62
+            in reference type=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> name=value
+    property paths
+        get get_Paths slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayView shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayView shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMap<System.Guid,System.Object> return
+    method set_primary_path
+        method SetPrimaryPath slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayView shape=4 reverse=99
+            in class type=Windows.Devices.Display.Core.DisplayPath name=path
+
+class Windows.Devices.Display.Core.DisplayWireFormat python_type
+    py DisplayWireFormat
+    signature rc(Windows.Devices.Display.Core.DisplayWireFormat;{1acc967d-872c-5a38-bbb9-1d4872b76255})
+    default Windows.Devices.Display.Core.IDisplayWireFormat
+    requires Windows.Devices.Display.Core.IDisplayWireFormat
+    factory Windows.Devices.Display.Core.IDisplayWireFormatFactory
+    factory Windows.Devices.Display.Core.IDisplayWireFormatStatics
+    constructor -
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormatFactory shape=267
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding name=pixelEncoding
+            in int32 name=bitsPerChannel
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatColorSpace name=colorSpace
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatEotf name=eotf
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata name=hdrMetadata
+            out class type=Windows.Devices.Display.Core.DisplayWireFormat return
+    property bits_per_channel
+        get get_BitsPerChannel slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=43
+            out int32 return
+    property color_space
+        get get_ColorSpace slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=62
+            out enum32 type=Windows.Devices.Display.Core.DisplayWireFormatColorSpace return
+    property eotf
+        get get_Eotf slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=99
+            out enum32 type=Windows.Devices.Display.Core.DisplayWireFormatEotf return
+    property hdr_metadata
+        get get_HdrMetadata slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=121
+            out enum32 type=Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata return
+    property pixel_encoding
+        get get_PixelEncoding slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=22
+            out enum32 type=Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding return
+    property properties
+        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormat shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    method create_with_properties static
+        method CreateWithProperties slot=6 inputs=6 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormatStatics shape=278 reverse=28 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> name=extraProperties
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding name=pixelEncoding
+            in int32 name=bitsPerChannel
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatColorSpace name=colorSpace
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatEotf name=eotf
+            in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata name=hdrMetadata
+            out class type=Windows.Devices.Display.Core.DisplayWireFormat return
+
+enum Windows.Devices.Display.Core.DisplayWireFormatColorSpace python_type
+    py DisplayWireFormatColorSpace
+    signature enum(Windows.Devices.Display.Core.DisplayWireFormatColorSpace;i4)
+
+enum Windows.Devices.Display.Core.DisplayWireFormatEotf python_type
+    py DisplayWireFormatEotf
+    signature enum(Windows.Devices.Display.Core.DisplayWireFormatEotf;i4)
+
+enum Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata python_type
+    py DisplayWireFormatHdrMetadata
+    signature enum(Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata;i4)
+
+enum Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding python_type
+    py DisplayWireFormatPixelEncoding
+    signature enum(Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding;i4)
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> concrete
+    guid 066c3b59-099b-5f37-89eb-1d54fd93e9b3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068}))
+    argument Windows.Devices.Display.Core.DisplayMuxDevice
+
+interface Windows.Devices.Display.Core.IDisplayAdapter
+    guid a56f5287-f000-5f2e-b5ac-3783a2b69af5
+
+interface Windows.Devices.Display.Core.IDisplayAdapter2
+    guid 9ab49b18-b3c7-5546-8374-a9127111edd8
+
+interface Windows.Devices.Display.Core.IDisplayAdapterStatics
+    guid 1dac3cda-481f-5469-8470-82c4ba680a28
+
+interface Windows.Devices.Display.Core.IDisplayDevice
+    guid a4c9b62c-335f-5731-8cb4-c1ccd4731070
+
+interface Windows.Devices.Display.Core.IDisplayDevice2
+    guid 3fefe50c-0940-54bd-a02f-f9c7a536ad60
+
+interface Windows.Devices.Display.Core.IDisplayDeviceRenderAdapter
+    guid 41c86ce5-b18f-573f-9d59-70463115e4cc
+
+interface Windows.Devices.Display.Core.IDisplayFence
+    guid 04dcf9ef-3406-5700-8fec-77eba4c5a74b
+
+interface Windows.Devices.Display.Core.IDisplayManager
+    guid 4ed9245b-15ec-56e2-9072-7fe5084a31a7
+
+interface Windows.Devices.Display.Core.IDisplayManager2
+    guid e001ec1e-7eb1-597f-9a30-14d3fe3714cd
+
+interface Windows.Devices.Display.Core.IDisplayManager3
+    guid 6f14cb89-7f49-587d-93ce-77487cbcb530
+
+interface Windows.Devices.Display.Core.IDisplayManagerChangedEventArgs
+    guid 6abfa285-6cca-5731-bcdc-42e5d2f5c50f
+
+interface Windows.Devices.Display.Core.IDisplayManagerDisabledEventArgs
+    guid 8726dde4-6793-5973-a11f-5ffbc93fdb90
+
+interface Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs
+    guid f0cf3f6f-42fa-59a2-b297-26e1713de848
+
+interface Windows.Devices.Display.Core.IDisplayManagerPathsFailedOrInvalidatedEventArgs
+    guid 03a65659-1dec-5c15-b2a2-8fe9129869fe
+
+interface Windows.Devices.Display.Core.IDisplayManagerResultWithState
+    guid 8e656aa6-6614-54be-bfef-4994547f7be1
+
+interface Windows.Devices.Display.Core.IDisplayManagerStatics
+    guid 2b6b9446-b999-5535-9d69-53f092c780a1
+
+interface Windows.Devices.Display.Core.IDisplayModeInfo
+    guid 48d513a0-f79b-5a74-a05e-da821f470868
+
+interface Windows.Devices.Display.Core.IDisplayModeInfo2
+    guid c86fa386-0ddb-5473-bfb0-4b7807b5f909
+
+interface Windows.Devices.Display.Core.IDisplayMuxDevice
+    guid d81c4925-83dd-52c9-ab4e-e0833fc75068
+
+interface Windows.Devices.Display.Core.IDisplayMuxDeviceStatics
+    guid 7b37a64a-0465-53da-baee-70028480ced0
+
+interface Windows.Devices.Display.Core.IDisplayPath
+    guid b3dfd64a-7460-5cde-811b-d5ae9f3d9f84
+
+interface Windows.Devices.Display.Core.IDisplayPath2
+    guid f32459c5-e994-570b-9ec8-ef42c35a8547
+
+interface Windows.Devices.Display.Core.IDisplayPrimaryDescription
+    guid 872591d2-d533-50ff-a85e-06696194b77c
+
+interface Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory
+    guid 1a6aff7b-3637-5c46-b479-76d576216e65
+
+interface Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics
+    guid e60e4cfb-36c9-56dd-8fa1-6ff8c4e0ff07
+
+interface Windows.Devices.Display.Core.IDisplayScanout
+    guid e3051828-1ba5-50e7-8a39-bb1fd2f4f8b9
+
+interface Windows.Devices.Display.Core.IDisplaySource
+    guid ecd15fc1-eadc-51bc-971d-3bc628db2dd4
+
+interface Windows.Devices.Display.Core.IDisplaySource2
+    guid 71e18952-b321-5af4-bfe8-03fbea31e40d
+
+interface Windows.Devices.Display.Core.IDisplayState
+    guid 08129321-11b5-5cb2-99f8-e90b479a8a1d
+
+interface Windows.Devices.Display.Core.IDisplayStateOperationResult
+    guid fcadbfdf-dc27-5638-b7f2-ebdfa4f7ea93
+
+interface Windows.Devices.Display.Core.IDisplaySurface
+    guid 594f6cc6-139a-56d6-a4b1-15fe2cb76adb
+
+interface Windows.Devices.Display.Core.IDisplayTarget
+    guid aec57c6f-47b4-546b-987c-e73fa791fe3a
+
+interface Windows.Devices.Display.Core.IDisplayTask
+    guid 5e087448-135b-5bb0-bf63-637f84227c7a
+
+interface Windows.Devices.Display.Core.IDisplayTask2
+    guid 0957ea19-bd55-55de-9267-c97b61e71c37
+
+interface Windows.Devices.Display.Core.IDisplayTaskPool
+    guid c676253d-237d-5548-aafa-3e517fefef1c
+
+interface Windows.Devices.Display.Core.IDisplayTaskPool2
+    guid 46b879b6-5d17-5955-a872-eb38003db586
+
+interface Windows.Devices.Display.Core.IDisplayTaskResult
+    guid 6fbc7d67-f9b1-55e0-9d88-d3a5197a3f59
+
+interface Windows.Devices.Display.Core.IDisplayView
+    guid b0c98ca1-b759-5b59-b1ad-f0786aa9e53d
+
+interface Windows.Devices.Display.Core.IDisplayWireFormat
+    guid 1acc967d-872c-5a38-bbb9-1d4872b76255
+
+interface Windows.Devices.Display.Core.IDisplayWireFormatFactory
+    guid b2efc8d5-09d6-55e6-ad22-9014b3d25229
+
+interface Windows.Devices.Display.Core.IDisplayWireFormatStatics
+    guid c575a22d-c3e6-5f7a-bdfb-87c6ab8661d5
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> concrete
+    guid ccb2e527-3a37-50fd-8d28-59e9db8cf9d9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a}))
+    argument Windows.Devices.Display.Core.DisplayTarget
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+    guid f3b20528-e3b3-5331-b2d0-0c2623aee785
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> concrete
+    guid d6222360-b82e-5eed-9eab-2e275b36e47e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    argument Windows.Graphics.RectInt32
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> concrete
+    guid 3bda1540-d089-5a1a-8f0d-94eba8068e58
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete
+    guid 5ee3189c-7dbf-5998-ad07-5414fb82567c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
+    guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> concrete
+    guid 08882ddb-a981-5887-b751-106993d66229
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Devices.Display.Core.DisplayPresentationRate;struct(Windows.Foundation.Numerics.Rational;u4;u4);i4))
+    argument Windows.Devices.Display.Core.DisplayPresentationRate
+
+interface Windows.Foundation.IReference<Windows.Graphics.SizeInt32> concrete
+    guid b77aa86d-2d6e-55f1-8f99-64ac5c05328b
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Graphics.SizeInt32;i4;i4))
+    argument Windows.Graphics.SizeInt32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> concrete
+    guid b491b91f-2107-5c1c-aa64-07f39803e64c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5}))
+    argument Windows.Devices.Display.Core.DisplayAdapter
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> concrete
+    guid 339be624-f7dc-562c-b5d2-1b4405bdb7e2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayModeInfo;{48d513a0-f79b-5a74-a05e-da821f470868}))
+    argument Windows.Devices.Display.Core.DisplayModeInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> concrete
+    guid eb9b91c4-3d7a-52f6-882b-4b850156e12b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayPath;{b3dfd64a-7460-5cde-811b-d5ae9f3d9f84}))
+    argument Windows.Devices.Display.Core.DisplayPath
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> concrete
+    guid 5011224d-182d-5d88-a56b-d543c6be3621
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a}))
+    argument Windows.Devices.Display.Core.DisplayTarget
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> concrete
+    guid 442a33f9-7b39-5c9e-84d7-b43cf55171d4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayView;{b0c98ca1-b759-5b59-b1ad-f0786aa9e53d}))
+    argument Windows.Devices.Display.Core.DisplayView
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerChangedEventArgs> concrete
+    guid 04d7559d-5bbd-5b73-8782-c2ceea70bd5d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerChangedEventArgs;{6abfa285-6cca-5731-bcdc-42e5d2f5c50f}))
+    argument Windows.Devices.Display.Core.DisplayManager
+    argument Windows.Devices.Display.Core.DisplayManagerChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs> concrete
+    guid d836ed01-b36e-574c-92d8-86a1b80ba56d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs;{8726dde4-6793-5973-a11f-5ffbc93fdb90}))
+    argument Windows.Devices.Display.Core.DisplayManager
+    argument Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs> concrete
+    guid a92a0c2b-f309-5bc8-bf69-47c844d6da41
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs;{f0cf3f6f-42fa-59a2-b297-26e1713de848}))
+    argument Windows.Devices.Display.Core.DisplayManager
+    argument Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs> concrete
+    guid 28c6cddb-754f-574d-ac7d-be8d773dd4dd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs;{03a65659-1dec-5c15-b2a2-8fe9129869fe}))
+    argument Windows.Devices.Display.Core.DisplayManager
+    argument Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayMuxDevice,System.Object> concrete
+    guid f63ed5f6-c9fb-5876-9e02-a31a9fee1157
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068});cinterface(IInspectable))
+    argument Windows.Devices.Display.Core.DisplayMuxDevice
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource,System.Object> concrete
+    guid 65f431e8-efc4-552f-8404-321531583839
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplaySource;{ecd15fc1-eadc-51bc-971d-3bc628db2dd4});cinterface(IInspectable))
+    argument Windows.Devices.Display.Core.DisplaySource
+    argument System.Object
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Devices.Display.DisplayMonitor external
+    py winrt.windows.devices.display.DisplayMonitor
+
+enum Windows.Devices.Display.DisplayMonitorUsageKind external
+    py winrt.windows.devices.display.DisplayMonitorUsageKind
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Numerics.Rational external
+    py winrt.windows.foundation.numerics.Rational
+
+struct Windows.Graphics.DisplayAdapterId external
+    py winrt.windows.graphics.DisplayAdapterId
+
+struct Windows.Graphics.RectInt32 external
+    py winrt.windows.graphics.RectInt32
+
+struct Windows.Graphics.SizeInt32 external
+    py winrt.windows.graphics.SizeInt32
+
+enum Windows.Graphics.DirectX.DirectXColorSpace external
+    py winrt.windows.graphics.directx.DirectXColorSpace
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat external
+    py winrt.windows.graphics.directx.DirectXPixelFormat
+
+struct Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription external
+    py winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

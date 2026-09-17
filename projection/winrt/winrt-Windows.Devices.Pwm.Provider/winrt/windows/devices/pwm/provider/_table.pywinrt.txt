@@ -1,0 +1,54 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Pwm.Provider
+
+interface Windows.Devices.Pwm.Provider.IPwmControllerProvider python_type
+    py _IPwmControllerProvider
+    guid 1300593b-e2e3-40a4-b7d9-48dff0377a52
+    signature {1300593b-e2e3-40a4-b7d9-48dff0377a52}
+    property actual_frequency
+        get get_ActualFrequency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=43
+            out double return
+    property max_frequency
+        get get_MaxFrequency slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=99
+            out double return
+    property min_frequency
+        get get_MinFrequency slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=121
+            out double return
+    property pin_count
+        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=22
+            out int32 return
+    method acquire_pin
+        method AcquirePin slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=141
+            in int32 name=pin
+    method disable_pin
+        method DisablePin slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=186
+            in int32 name=pin
+    method enable_pin
+        method EnablePin slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=173
+            in int32 name=pin
+    method release_pin
+        method ReleasePin slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=162
+            in int32 name=pin
+    method set_desired_frequency
+        method SetDesiredFrequency slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=46 reverse=58
+            in double name=frequency
+            out double return
+    method set_pulse_parameters
+        method SetPulseParameters slot=15 inputs=3 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=111 reverse=195
+            in int32 name=pin
+            in double name=dutyCycle
+            in boolean name=invertPolarity
+
+interface Windows.Devices.Pwm.Provider.IPwmProvider python_type
+    py _IPwmProvider
+    guid a3301228-52f1-47b0-9349-66ba43d25902
+    signature {a3301228-52f1-47b0-9349-66ba43d25902}
+    method get_controllers
+        method GetControllers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> concrete
+    guid 1a166093-1a7a-5e12-9d38-f892fec3ec66
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{1300593b-e2e3-40a4-b7d9-48dff0377a52})
+    argument Windows.Devices.Pwm.Provider.IPwmControllerProvider

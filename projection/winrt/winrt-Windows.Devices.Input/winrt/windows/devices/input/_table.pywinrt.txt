@@ -1,0 +1,383 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Input
+
+interface Windows.Devices.Input.IKeyboardCapabilities
+    guid 3a3f9b56-6798-4bbc-833e-0f34b17c65ff
+
+interface Windows.Devices.Input.IMouseCapabilities
+    guid bca5e023-7dd9-4b6b-9a92-55d43cb38f73
+
+interface Windows.Devices.Input.IMouseDevice
+    guid 88edf458-f2c8-49f4-be1f-c256b388bc11
+
+interface Windows.Devices.Input.IMouseDeviceStatics
+    guid 484a9045-6d70-49db-8e68-46ffbd17d38d
+
+interface Windows.Devices.Input.IMouseEventArgs
+    guid f625aa5d-2354-4cc7-9230-96941c969fde
+
+interface Windows.Devices.Input.IPenButtonListener
+    guid 8245c376-1ee3-53f7-b1f7-8334a16f2815
+
+interface Windows.Devices.Input.IPenButtonListenerStatics
+    guid 19a8a584-862f-5f69-bfea-05f6584f133f
+
+interface Windows.Devices.Input.IPenDevice
+    guid 31856eba-a738-5a8c-b8f6-f97ef68d18ef
+
+interface Windows.Devices.Input.IPenDevice2
+    guid 0207d327-7fb8-5566-8c34-f8342037b7f9
+
+interface Windows.Devices.Input.IPenDeviceStatics
+    guid 9dfbbe01-0966-5180-bcb4-b85060e39479
+
+interface Windows.Devices.Input.IPenDockListener
+    guid 759f4d90-1dc0-55cb-ad18-b9101456f592
+
+interface Windows.Devices.Input.IPenDockListenerStatics
+    guid cab75e9a-0016-5c72-969e-a97e11992a93
+
+interface Windows.Devices.Input.IPenDockedEventArgs
+    guid fd4277c6-ca63-5d4e-9ed3-a28a54521c8c
+
+interface Windows.Devices.Input.IPenTailButtonClickedEventArgs
+    guid 5d2fb7b6-6ad3-5d3e-ab29-05ea2410e390
+
+interface Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs
+    guid 846321a2-618a-5478-b04c-b358231da4a7
+
+interface Windows.Devices.Input.IPenTailButtonLongPressedEventArgs
+    guid f37c606e-c60a-5f42-b818-a53112406c13
+
+interface Windows.Devices.Input.IPenUndockedEventArgs
+    guid ccd09150-261b-59e6-a5d4-c1964cd03feb
+
+interface Windows.Devices.Input.IPointerDevice
+    guid 93c9bafc-ebcb-467e-82c6-276feae36b5a
+
+interface Windows.Devices.Input.IPointerDevice2
+    guid f8a6d2a0-c484-489f-ae3e-30d2ee1ffd3e
+
+interface Windows.Devices.Input.IPointerDeviceStatics
+    guid d8b89aa1-d1c6-416e-bd8d-5790914dc563
+
+interface Windows.Devices.Input.ITouchCapabilities
+    guid 20dd55f9-13f1-46c8-9285-2c05fa3eda6f
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> concrete
+    guid cf5674f1-9808-5a2b-80b8-5684ed0ea816
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Input.PointerDevice;{93c9bafc-ebcb-467e-82c6-276feae36b5a}))
+    argument Windows.Devices.Input.PointerDevice
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> concrete
+    guid 8e5a2c7e-3830-50d5-92ba-3163c89cbbd0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Devices.Input.PointerDeviceUsage;u4;u4;i4;i4;i4;i4;u4;f4))
+    argument Windows.Devices.Input.PointerDeviceUsage
+
+class Windows.Devices.Input.KeyboardCapabilities activatable python_type
+    py KeyboardCapabilities
+    signature rc(Windows.Devices.Input.KeyboardCapabilities;{3a3f9b56-6798-4bbc-833e-0f34b17c65ff})
+    default Windows.Devices.Input.IKeyboardCapabilities
+    requires Windows.Devices.Input.IKeyboardCapabilities
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property keyboard_present
+        get get_KeyboardPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IKeyboardCapabilities shape=4 reverse=22
+            out int32 return
+
+class Windows.Devices.Input.MouseCapabilities activatable python_type
+    py MouseCapabilities
+    signature rc(Windows.Devices.Input.MouseCapabilities;{bca5e023-7dd9-4b6b-9a92-55d43cb38f73})
+    default Windows.Devices.Input.IMouseCapabilities
+    requires Windows.Devices.Input.IMouseCapabilities
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property horizontal_wheel_present
+        get get_HorizontalWheelPresent slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=62
+            out int32 return
+    property mouse_present
+        get get_MousePresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=22
+            out int32 return
+    property number_of_buttons
+        get get_NumberOfButtons slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=121
+            out uint32 return
+    property swap_buttons
+        get get_SwapButtons slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=99
+            out int32 return
+    property vertical_wheel_present
+        get get_VerticalWheelPresent slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=43
+            out int32 return
+
+struct Windows.Devices.Input.MouseDelta python_type
+    py MouseDelta
+    signature struct(Windows.Devices.Input.MouseDelta;i4;i4)
+    field x X int32
+    field y Y int32
+
+class Windows.Devices.Input.MouseDevice python_type
+    py MouseDevice
+    signature rc(Windows.Devices.Input.MouseDevice;{88edf458-f2c8-49f4-be1f-c256b388bc11})
+    default Windows.Devices.Input.IMouseDevice
+    requires Windows.Devices.Input.IMouseDevice
+    factory Windows.Devices.Input.IMouseDeviceStatics
+    event mouse_moved
+        add add_MouseMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IMouseDevice shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs> name=handler
+            out event_token return
+        remove remove_MouseMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.IMouseDevice shape=26 reverse=53
+            in event_token name=cookie
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseDeviceStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Input.MouseDevice return
+
+class Windows.Devices.Input.MouseEventArgs python_type
+    py MouseEventArgs
+    signature rc(Windows.Devices.Input.MouseEventArgs;{f625aa5d-2354-4cc7-9230-96941c969fde})
+    default Windows.Devices.Input.IMouseEventArgs
+    requires Windows.Devices.Input.IMouseEventArgs
+    property mouse_delta
+        get get_MouseDelta slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseEventArgs shape=4 reverse=22
+            out struct type=Windows.Devices.Input.MouseDelta return
+
+class Windows.Devices.Input.PenButtonListener python_type
+    py PenButtonListener
+    signature rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815})
+    default Windows.Devices.Input.IPenButtonListener
+    requires Windows.Devices.Input.IPenButtonListener
+    factory Windows.Devices.Input.IPenButtonListenerStatics
+    event is_supported_changed
+        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,System.Object> name=handler
+            out event_token return
+        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=82
+            in event_token name=token
+    event tail_button_clicked
+        add add_TailButtonClicked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonClickedEventArgs> name=handler
+            out event_token return
+        remove remove_TailButtonClicked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=134
+            in event_token name=token
+    event tail_button_double_clicked
+        add add_TailButtonDoubleClicked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs> name=handler
+            out event_token return
+        remove remove_TailButtonDoubleClicked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=167
+            in event_token name=token
+    event tail_button_long_pressed
+        add add_TailButtonLongPressed slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonLongPressedEventArgs> name=handler
+            out event_token return
+        remove remove_TailButtonLongPressed slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=192
+            in event_token name=token
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListenerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Input.PenButtonListener return
+    method is_supported
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Input.PenDevice python_type
+    py PenDevice
+    signature rc(Windows.Devices.Input.PenDevice;{31856eba-a738-5a8c-b8f6-f97ef68d18ef})
+    default Windows.Devices.Input.IPenDevice
+    requires Windows.Devices.Input.IPenDevice
+    requires Windows.Devices.Input.IPenDevice2
+    factory Windows.Devices.Input.IPenDeviceStatics
+    property pen_id
+        get get_PenId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice shape=4 reverse=22
+            out guid return
+    property simple_haptics_controller
+        get get_SimpleHapticsController slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice2 shape=4 reverse=22
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+    method get_from_pointer_id static
+        method GetFromPointerId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDeviceStatics shape=51 reverse=24 static
+            in uint32 name=pointerId
+            out class type=Windows.Devices.Input.PenDevice return
+
+class Windows.Devices.Input.PenDockListener python_type
+    py PenDockListener
+    signature rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592})
+    default Windows.Devices.Input.IPenDockListener
+    requires Windows.Devices.Input.IPenDockListener
+    factory Windows.Devices.Input.IPenDockListenerStatics
+    event docked
+        add add_Docked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs> name=handler
+            out event_token return
+        remove remove_Docked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=134
+            in event_token name=token
+    event is_supported_changed
+        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,System.Object> name=handler
+            out event_token return
+        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=82
+            in event_token name=token
+    event undocked
+        add add_Undocked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenUndockedEventArgs> name=handler
+            out event_token return
+        remove remove_Undocked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=167
+            in event_token name=token
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListenerStatics shape=4 reverse=22 static
+            out class type=Windows.Devices.Input.PenDockListener return
+    method is_supported
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=4 reverse=22
+            out boolean return
+
+class Windows.Devices.Input.PenDockedEventArgs python_type
+    py PenDockedEventArgs
+    signature rc(Windows.Devices.Input.PenDockedEventArgs;{fd4277c6-ca63-5d4e-9ed3-a28a54521c8c})
+    default Windows.Devices.Input.IPenDockedEventArgs
+    requires Windows.Devices.Input.IPenDockedEventArgs
+
+class Windows.Devices.Input.PenTailButtonClickedEventArgs python_type
+    py PenTailButtonClickedEventArgs
+    signature rc(Windows.Devices.Input.PenTailButtonClickedEventArgs;{5d2fb7b6-6ad3-5d3e-ab29-05ea2410e390})
+    default Windows.Devices.Input.IPenTailButtonClickedEventArgs
+    requires Windows.Devices.Input.IPenTailButtonClickedEventArgs
+
+class Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs python_type
+    py PenTailButtonDoubleClickedEventArgs
+    signature rc(Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs;{846321a2-618a-5478-b04c-b358231da4a7})
+    default Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs
+    requires Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs
+
+class Windows.Devices.Input.PenTailButtonLongPressedEventArgs python_type
+    py PenTailButtonLongPressedEventArgs
+    signature rc(Windows.Devices.Input.PenTailButtonLongPressedEventArgs;{f37c606e-c60a-5f42-b818-a53112406c13})
+    default Windows.Devices.Input.IPenTailButtonLongPressedEventArgs
+    requires Windows.Devices.Input.IPenTailButtonLongPressedEventArgs
+
+class Windows.Devices.Input.PenUndockedEventArgs python_type
+    py PenUndockedEventArgs
+    signature rc(Windows.Devices.Input.PenUndockedEventArgs;{ccd09150-261b-59e6-a5d4-c1964cd03feb})
+    default Windows.Devices.Input.IPenUndockedEventArgs
+    requires Windows.Devices.Input.IPenUndockedEventArgs
+
+class Windows.Devices.Input.PointerDevice python_type
+    py PointerDevice
+    signature rc(Windows.Devices.Input.PointerDevice;{93c9bafc-ebcb-467e-82c6-276feae36b5a})
+    default Windows.Devices.Input.IPointerDevice
+    requires Windows.Devices.Input.IPointerDevice
+    requires Windows.Devices.Input.IPointerDevice2
+    factory Windows.Devices.Input.IPointerDeviceStatics
+    property is_integrated
+        get get_IsIntegrated slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=43
+            out boolean return
+    property max_contacts
+        get get_MaxContacts slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=62
+            out uint32 return
+    property physical_device_rect
+        get get_PhysicalDeviceRect slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=99
+            out struct type=Windows.Foundation.Rect return
+    property pointer_device_type
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=22
+            out enum32 type=Windows.Devices.Input.PointerDeviceType return
+    property screen_rect
+        get get_ScreenRect slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=121
+            out struct type=Windows.Foundation.Rect return
+    property supported_usages
+        get get_SupportedUsages slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> return
+    property max_pointers_with_z_distance
+        get get_MaxPointersWithZDistance slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice2 shape=4 reverse=22
+            out uint32 return
+    method get_pointer_device static
+        method GetPointerDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=51 reverse=24 static
+            in uint32 name=pointerId
+            out class type=Windows.Devices.Input.PointerDevice return
+    method get_pointer_devices static
+        method GetPointerDevices slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> return
+
+enum Windows.Devices.Input.PointerDeviceType python_type
+    py PointerDeviceType
+    signature enum(Windows.Devices.Input.PointerDeviceType;i4)
+
+struct Windows.Devices.Input.PointerDeviceUsage python_type
+    py PointerDeviceUsage
+    signature struct(Windows.Devices.Input.PointerDeviceUsage;u4;u4;i4;i4;i4;i4;u4;f4)
+    field usage_page UsagePage uint32
+    field usage Usage uint32
+    field min_logical MinLogical int32
+    field max_logical MaxLogical int32
+    field min_physical MinPhysical int32
+    field max_physical MaxPhysical int32
+    field unit Unit uint32
+    field physical_multiplier PhysicalMultiplier single
+
+class Windows.Devices.Input.TouchCapabilities activatable python_type
+    py TouchCapabilities
+    signature rc(Windows.Devices.Input.TouchCapabilities;{20dd55f9-13f1-46c8-9285-2c05fa3eda6f})
+    default Windows.Devices.Input.ITouchCapabilities
+    requires Windows.Devices.Input.ITouchCapabilities
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property contacts
+        get get_Contacts slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4 reverse=43
+            out uint32 return
+    property touch_present
+        get get_TouchPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4 reverse=22
+            out int32 return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs> concrete
+    guid 5d72e594-28e4-5895-a34b-ea910f70fdbb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.MouseDevice;{88edf458-f2c8-49f4-be1f-c256b388bc11});rc(Windows.Devices.Input.MouseEventArgs;{f625aa5d-2354-4cc7-9230-96941c969fde}))
+    argument Windows.Devices.Input.MouseDevice
+    argument Windows.Devices.Input.MouseEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,System.Object> concrete
+    guid 0a0ee5ed-041b-5569-b4a4-a1e58f1343a2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});cinterface(IInspectable))
+    argument Windows.Devices.Input.PenButtonListener
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonClickedEventArgs> concrete
+    guid 2eda7109-f1c9-5f26-a054-3d25062cc0de
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonClickedEventArgs;{5d2fb7b6-6ad3-5d3e-ab29-05ea2410e390}))
+    argument Windows.Devices.Input.PenButtonListener
+    argument Windows.Devices.Input.PenTailButtonClickedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs> concrete
+    guid e6e58d94-6f7b-593f-81f0-033150b4432c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs;{846321a2-618a-5478-b04c-b358231da4a7}))
+    argument Windows.Devices.Input.PenButtonListener
+    argument Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonLongPressedEventArgs> concrete
+    guid ca6dab1f-20d6-52b0-94ce-6dcc75a1a984
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonLongPressedEventArgs;{f37c606e-c60a-5f42-b818-a53112406c13}))
+    argument Windows.Devices.Input.PenButtonListener
+    argument Windows.Devices.Input.PenTailButtonLongPressedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,System.Object> concrete
+    guid 7ceae82f-499a-5b31-a1d8-3b11c53c7871
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});cinterface(IInspectable))
+    argument Windows.Devices.Input.PenDockListener
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs> concrete
+    guid 19786a6c-8e23-5de7-a773-e711a5a068c5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});rc(Windows.Devices.Input.PenDockedEventArgs;{fd4277c6-ca63-5d4e-9ed3-a28a54521c8c}))
+    argument Windows.Devices.Input.PenDockListener
+    argument Windows.Devices.Input.PenDockedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenUndockedEventArgs> concrete
+    guid 51dba508-3194-5c91-a2e7-f94637e75a13
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});rc(Windows.Devices.Input.PenUndockedEventArgs;{ccd09150-261b-59e6-a5d4-c1964cd03feb}))
+    argument Windows.Devices.Input.PenDockListener
+    argument Windows.Devices.Input.PenUndockedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Devices.Haptics.SimpleHapticsController external
+    py winrt.windows.devices.haptics.SimpleHapticsController
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect

@@ -1,0 +1,43 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Management.Workplace
+
+interface Windows.Management.Workplace.IMdmAllowPolicyStatics
+    guid c39709e7-741c-41f2-a4b6-314c31502586
+
+interface Windows.Management.Workplace.IMdmPolicyStatics2
+    guid c99c7526-03d4-49f9-a993-43efccd265c4
+
+interface Windows.Management.Workplace.IWorkplaceSettingsStatics
+    guid e4676ffd-2d92-4c08-bad4-f6590b54a6d3
+
+class Windows.Management.Workplace.MdmPolicy static python_type
+    py MdmPolicy
+    factory Windows.Management.Workplace.IMdmAllowPolicyStatics
+    factory Windows.Management.Workplace.IMdmPolicyStatics2
+    method get_messaging_sync_policy static
+        method GetMessagingSyncPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IMdmPolicyStatics2 shape=4 reverse=22 static
+            out enum32 type=Windows.Management.Workplace.MessagingSyncPolicy return
+    method is_browser_allowed static
+        method IsBrowserAllowed slot=6 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IMdmAllowPolicyStatics shape=4 reverse=22 static
+            out boolean return
+    method is_camera_allowed static
+        method IsCameraAllowed slot=7 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IMdmAllowPolicyStatics shape=4 reverse=43 static
+            out boolean return
+    method is_microsoft_account_allowed static
+        method IsMicrosoftAccountAllowed slot=8 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IMdmAllowPolicyStatics shape=4 reverse=62 static
+            out boolean return
+    method is_store_allowed static
+        method IsStoreAllowed slot=9 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IMdmAllowPolicyStatics shape=4 reverse=99 static
+            out boolean return
+
+enum Windows.Management.Workplace.MessagingSyncPolicy python_type
+    py MessagingSyncPolicy
+    signature enum(Windows.Management.Workplace.MessagingSyncPolicy;i4)
+
+class Windows.Management.Workplace.WorkplaceSettings static python_type
+    py WorkplaceSettings
+    factory Windows.Management.Workplace.IWorkplaceSettingsStatics
+    property is_microsoft_account_optional static
+        get get_IsMicrosoftAccountOptional slot=6 inputs=0 outputs=1 declaring=Windows.Management.Workplace.IWorkplaceSettingsStatics shape=4 reverse=22 static
+            out boolean return

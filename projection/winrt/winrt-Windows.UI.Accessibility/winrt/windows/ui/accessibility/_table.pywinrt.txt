@@ -1,0 +1,48 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Accessibility
+
+interface Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs
+    guid 557eb5e5-54d0-5ccd-9fc5-ed33357f8a9f
+
+interface Windows.UI.Accessibility.IScreenReaderService
+    guid 19475427-eac0-50d3-bdd9-9b487a226256
+
+class Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs python_type
+    py ScreenReaderPositionChangedEventArgs
+    signature rc(Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs;{557eb5e5-54d0-5ccd-9fc5-ed33357f8a9f})
+    default Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs
+    requires Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs
+    property is_reading_text
+        get get_IsReadingText slot=7 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4 reverse=43
+            out boolean return
+    property screen_position_in_raw_pixels
+        get get_ScreenPositionInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4 reverse=22
+            out struct type=Windows.Foundation.Rect return
+
+class Windows.UI.Accessibility.ScreenReaderService activatable python_type
+    py ScreenReaderService
+    signature rc(Windows.UI.Accessibility.ScreenReaderService;{19475427-eac0-50d3-bdd9-9b487a226256})
+    default Windows.UI.Accessibility.IScreenReaderService
+    requires Windows.UI.Accessibility.IScreenReaderService
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property current_screen_reader_position
+        get get_CurrentScreenReaderPosition slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=4 reverse=22
+            out class type=Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs return
+    event screen_reader_position_changed
+        add add_ScreenReaderPositionChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs> name=handler
+            out event_token return
+        remove remove_ScreenReaderPositionChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Accessibility.IScreenReaderService shape=26 reverse=82
+            in event_token name=token
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs> concrete
+    guid 51b01f42-eefc-56d2-8185-23de8f080e0a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Accessibility.ScreenReaderService;{19475427-eac0-50d3-bdd9-9b487a226256});rc(Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs;{557eb5e5-54d0-5ccd-9fc5-ed33357f8a9f}))
+    argument Windows.UI.Accessibility.ScreenReaderService
+    argument Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect

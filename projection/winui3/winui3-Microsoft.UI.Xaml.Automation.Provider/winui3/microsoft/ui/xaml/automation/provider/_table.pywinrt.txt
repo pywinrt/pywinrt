@@ -1,0 +1,793 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Automation.Provider
+
+interface Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider python_type
+    py _IAnnotationProvider
+    guid 546ab18e-986d-5deb-8f2a-2d9303a43006
+    signature {546ab18e-986d-5deb-8f2a-2d9303a43006}
+    property annotation_type_id
+        get get_AnnotationTypeId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider shape=4 reverse=22
+            out int32 return
+    property annotation_type_name
+        get get_AnnotationTypeName slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider shape=4 reverse=43
+            out string return
+    property author
+        get get_Author slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider shape=4 reverse=62
+            out string return
+    property date_time
+        get get_DateTime slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider shape=4 reverse=99
+            out string return
+    property target
+        get get_Target slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider shape=4 reverse=121
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider python_type
+    py _ICustomNavigationProvider
+    guid cad51322-faa9-5a2b-90f0-b762c46178b3
+    signature {cad51322-faa9-5a2b-90f0-b762c46178b3}
+    method navigate_custom
+        method NavigateCustom slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider shape=51 reverse=24
+            in enum32 type=Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection name=direction
+            out object return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IDockProvider python_type
+    py _IDockProvider
+    guid 9882b971-70ea-5c6d-a818-7a7ab68c6f3b
+    signature {9882b971-70ea-5c6d-a818-7a7ab68c6f3b}
+    property dock_position
+        get get_DockPosition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDockProvider shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Automation.DockPosition return
+    method set_dock_position
+        method SetDockPosition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IDockProvider shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Xaml.Automation.DockPosition name=dockPosition
+
+interface Microsoft.UI.Xaml.Automation.Provider.IDragProvider python_type
+    py _IDragProvider
+    guid c60bb643-a356-5132-a258-ffba6c7480f2
+    signature {c60bb643-a356-5132-a258-ffba6c7480f2}
+    property drop_effect
+        get get_DropEffect slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDragProvider shape=4 reverse=43
+            out string return
+    property drop_effects
+        get get_DropEffects slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDragProvider shape=51 reverse=65
+            receive_array string return
+    property is_grabbed
+        get get_IsGrabbed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDragProvider shape=4 reverse=22
+            out boolean return
+    method get_grabbed_items
+        method GetGrabbedItems slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDragProvider shape=51 reverse=100
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider python_type
+    py _IDropTargetProvider
+    guid 9b2a9f3d-bbb1-510d-99e8-0e0ae14a6e3b
+    signature {9b2a9f3d-bbb1-510d-99e8-0e0ae14a6e3b}
+    property drop_effect
+        get get_DropEffect slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider shape=4 reverse=22
+            out string return
+    property drop_effects
+        get get_DropEffects slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider shape=51 reverse=44
+            receive_array string return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider python_type
+    py _IExpandCollapseProvider
+    guid 6cef349c-b181-5d0b-b297-c3b0166120c3
+    signature {6cef349c-b181-5d0b-b297-c3b0166120c3}
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Automation.ExpandCollapseState return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+
+interface Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider python_type
+    py _IGridItemProvider
+    guid d2557a0e-6909-5170-a680-60728df339b4
+    signature {d2557a0e-6909-5170-a680-60728df339b4}
+    property column
+        get get_Column slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider shape=4 reverse=22
+            out int32 return
+    property column_span
+        get get_ColumnSpan slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider shape=4 reverse=43
+            out int32 return
+    property containing_grid
+        get get_ContainingGrid slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    property row
+        get get_Row slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider shape=4 reverse=99
+            out int32 return
+    property row_span
+        get get_RowSpan slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider shape=4 reverse=121
+            out int32 return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IGridProvider python_type
+    py _IGridProvider
+    guid 50992d5e-d225-56e9-a25a-78c372e81955
+    signature {50992d5e-d225-56e9-a25a-78c372e81955}
+    property column_count
+        get get_ColumnCount slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridProvider shape=4 reverse=22
+            out int32 return
+    property row_count
+        get get_RowCount slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridProvider shape=4 reverse=43
+            out int32 return
+    method get_item
+        method GetItem slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IGridProvider shape=117 reverse=66
+            in int32 name=row
+            in int32 name=column
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IIRawElementProviderSimple
+    guid f90bc239-ade2-55c9-a838-a3b0579763c5
+
+interface Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider python_type
+    py _IInvokeProvider
+    guid 02481105-3378-544d-b4e1-a1b368afbc02
+    signature {02481105-3378-544d-b4e1-a1b368afbc02}
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
+interface Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider python_type
+    py _IItemContainerProvider
+    guid ad297363-694e-5885-997d-a2d6dff415a7
+    signature {ad297363-694e-5885-997d-a2d6dff415a7}
+    method find_item_by_property
+        method FindItemByProperty slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider shape=195 reverse=26
+            in class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=startAfter
+            in class type=Microsoft.UI.Xaml.Automation.AutomationProperty name=automationProperty
+            in object name=value
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider python_type
+    py _IMultipleViewProvider
+    guid 60be5484-3d8f-51fd-beab-423422ee1e03
+    signature {60be5484-3d8f-51fd-beab-423422ee1e03}
+    property current_view
+        get get_CurrentView slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider shape=4 reverse=22
+            out int32 return
+    method get_supported_views
+        method GetSupportedViews slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider shape=51 reverse=44
+            receive_array int32 return
+    method get_view_name
+        method GetViewName slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider shape=51 reverse=65
+            in int32 name=viewId
+            out string return
+    method set_current_view
+        method SetCurrentView slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider shape=4 reverse=99
+            in int32 name=viewId
+
+interface Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider python_type
+    py _IObjectModelProvider
+    guid 92953ed0-4bd8-5624-8e3d-78d45fde9cf2
+    signature {92953ed0-4bd8-5624-8e3d-78d45fde9cf2}
+    method get_underlying_object_model
+        method GetUnderlyingObjectModel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider shape=4 reverse=22
+            out object return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider python_type
+    py _IRangeValueProvider
+    guid 729ae414-1e8f-5020-82bb-bb574d145fd8
+    signature {729ae414-1e8f-5020-82bb-bb574d145fd8}
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=22
+            out boolean return
+    property large_change
+        get get_LargeChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=43
+            out double return
+    property maximum
+        get get_Maximum slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=62
+            out double return
+    property minimum
+        get get_Minimum slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=99
+            out double return
+    property small_change
+        get get_SmallChange slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=121
+            out double return
+    property value
+        get get_Value slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=4 reverse=141
+            out double return
+    method set_value
+        method SetValue slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider shape=2 reverse=160
+            in double name=value
+
+class Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple python_type
+    py IRawElementProviderSimple
+    signature rc(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple;{f90bc239-ade2-55c9-a838-a3b0579763c5})
+    base Microsoft.UI.Xaml.DependencyObject
+    default Microsoft.UI.Xaml.Automation.Provider.IIRawElementProviderSimple
+    requires Microsoft.UI.Xaml.Automation.Provider.IIRawElementProviderSimple
+
+interface Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider python_type
+    py _IScrollItemProvider
+    guid 8a6fb8eb-e5f1-58eb-8e72-8b95f236fc47
+    signature {8a6fb8eb-e5f1-58eb-8e72-8b95f236fc47}
+    method scroll_into_view
+        method ScrollIntoView slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider shape=0 reverse=16
+
+interface Microsoft.UI.Xaml.Automation.Provider.IScrollProvider python_type
+    py _IScrollProvider
+    guid 7e2e5af3-ff50-5365-bcfe-ef424b2fd590
+    signature {7e2e5af3-ff50-5365-bcfe-ef424b2fd590}
+    property horizontal_scroll_percent
+        get get_HorizontalScrollPercent slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=43
+            out double return
+    property horizontal_view_size
+        get get_HorizontalViewSize slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=62
+            out double return
+    property horizontally_scrollable
+        get get_HorizontallyScrollable slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=22
+            out boolean return
+    property vertical_scroll_percent
+        get get_VerticalScrollPercent slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=121
+            out double return
+    property vertical_view_size
+        get get_VerticalViewSize slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=141
+            out double return
+    property vertically_scrollable
+        get get_VerticallyScrollable slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=4 reverse=99
+            out boolean return
+    method scroll
+        method Scroll slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=51 reverse=163
+            in enum32 type=Microsoft.UI.Xaml.Automation.ScrollAmount name=horizontalAmount
+            in enum32 type=Microsoft.UI.Xaml.Automation.ScrollAmount name=verticalAmount
+    method set_scroll_percent
+        method SetScrollPercent slot=13 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IScrollProvider shape=45 reverse=172
+            in double name=horizontalPercent
+            in double name=verticalPercent
+
+interface Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider python_type
+    py _ISelectionItemProvider
+    guid c9dfdd81-d4ac-5d31-be7f-24fab16060e4
+    signature {c9dfdd81-d4ac-5d31-be7f-24fab16060e4}
+    property is_selected
+        get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=22
+            out boolean return
+    property selection_container
+        get get_SelectionContainer slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=4 reverse=43
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method add_to_selection
+        method AddToSelection slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=55
+    method remove_from_selection
+        method RemoveFromSelection slot=9 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=93
+    method select
+        method Select slot=10 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider shape=0 reverse=117
+
+interface Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider python_type
+    py _ISelectionProvider
+    guid 80d56d4e-0052-541f-9411-9d1778b3bfca
+    signature {80d56d4e-0052-541f-9411-9d1778b3bfca}
+    property can_select_multiple
+        get get_CanSelectMultiple slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=22
+            out boolean return
+    property is_selection_required
+        get get_IsSelectionRequired slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider shape=4 reverse=43
+            out boolean return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider shape=51 reverse=65
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider python_type
+    py _ISpreadsheetItemProvider
+    guid 51c1ce89-b21f-592c-8768-0accdefd5738
+    signature {51c1ce89-b21f-592c-8768-0accdefd5738}
+    property formula
+        get get_Formula slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider shape=4 reverse=22
+            out string return
+    method get_annotation_objects
+        method GetAnnotationObjects slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider shape=51 reverse=44
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_annotation_types
+        method GetAnnotationTypes slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider shape=51 reverse=65
+            receive_array enum32 type=Microsoft.UI.Xaml.Automation.AnnotationType return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider python_type
+    py _ISpreadsheetProvider
+    guid 1ff41bac-d9e3-5e48-b5f8-9eab0fb2d9d8
+    signature {1ff41bac-d9e3-5e48-b5f8-9eab0fb2d9d8}
+    method get_item_by_name
+        method GetItemByName slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider shape=51 reverse=24
+            in string name=name
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.IStylesProvider python_type
+    py _IStylesProvider
+    guid d8895839-0048-54de-9c1f-152de6665e80
+    signature {d8895839-0048-54de-9c1f-152de6665e80}
+    property extended_properties
+        get get_ExtendedProperties slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=22
+            out string return
+    property fill_color
+        get get_FillColor slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=43
+            out struct type=Windows.UI.Color return
+    property fill_pattern_color
+        get get_FillPatternColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=62
+            out struct type=Windows.UI.Color return
+    property fill_pattern_style
+        get get_FillPatternStyle slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=99
+            out string return
+    property shape
+        get get_Shape slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=121
+            out string return
+    property style_id
+        get get_StyleId slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=141
+            out int32 return
+    property style_name
+        get get_StyleName slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IStylesProvider shape=4 reverse=162
+            out string return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider python_type
+    py _ISynchronizedInputProvider
+    guid c5615613-936d-5289-a190-e82057e0ff5a
+    signature {c5615613-936d-5289-a190-e82057e0ff5a}
+    method cancel
+        method Cancel slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider shape=0 reverse=16
+    method start_listening
+        method StartListening slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Xaml.Automation.SynchronizedInputType name=inputType
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider python_type
+    py _ITableItemProvider
+    guid 6ce6f038-54d4-5553-a4ad-03cbcf358197
+    signature {6ce6f038-54d4-5553-a4ad-03cbcf358197}
+    method get_column_header_items
+        method GetColumnHeaderItems slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider shape=51 reverse=24
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_row_header_items
+        method GetRowHeaderItems slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider shape=51 reverse=44
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITableProvider python_type
+    py _ITableProvider
+    guid 9aba6724-b22d-5db8-8abb-81f911f18af2
+    signature {9aba6724-b22d-5db8-8abb-81f911f18af2}
+    property row_or_column_major
+        get get_RowOrColumnMajor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITableProvider shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Automation.RowOrColumnMajor return
+    method get_column_headers
+        method GetColumnHeaders slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITableProvider shape=51 reverse=44
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_row_headers
+        method GetRowHeaders slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITableProvider shape=51 reverse=65
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider python_type
+    py _ITextChildProvider
+    guid 7c72e55f-f75d-5522-aeb5-c1f82c32933b
+    signature {7c72e55f-f75d-5522-aeb5-c1f82c32933b}
+    property text_container
+        get get_TextContainer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider shape=4 reverse=22
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    property text_range
+        get get_TextRange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider shape=4 reverse=43
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider python_type
+    py _ITextEditProvider
+    guid 7f09bbe8-bea7-5dd3-ba6b-28dbb402fad4
+    signature {7f09bbe8-bea7-5dd3-ba6b-28dbb402fad4}
+    requires Microsoft.UI.Xaml.Automation.Provider.ITextProvider
+    property document_range
+        get get_DocumentRange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    property supported_text_selection
+        get get_SupportedTextSelection slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=43
+            out enum32 type=Microsoft.UI.Xaml.Automation.SupportedTextSelection return
+    method get_active_composition
+        method GetActiveComposition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_conversion_target
+        method GetConversionTarget slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider shape=4 reverse=43
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=65
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_visible_ranges
+        method GetVisibleRanges slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=100
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_child
+        method RangeFromChild slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=124
+            in class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=childElement
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_point
+        method RangeFromPoint slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=79 reverse=154
+            in struct type=Windows.Foundation.Point name=screenLocation
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextProvider python_type
+    py _ITextProvider
+    guid 37e7dce6-fe7a-56a7-a47a-9462872c67ef
+    signature {37e7dce6-fe7a-56a7-a47a-9462872c67ef}
+    property document_range
+        get get_DocumentRange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    property supported_text_selection
+        get get_SupportedTextSelection slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=43
+            out enum32 type=Microsoft.UI.Xaml.Automation.SupportedTextSelection return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=65
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_visible_ranges
+        method GetVisibleRanges slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=100
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_child
+        method RangeFromChild slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=124
+            in class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=childElement
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_point
+        method RangeFromPoint slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=79 reverse=154
+            in struct type=Windows.Foundation.Point name=screenLocation
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextProvider2 python_type
+    py _ITextProvider2
+    guid 6844f012-c7e6-5763-ba04-5b6db910cd34
+    signature {6844f012-c7e6-5763-ba04-5b6db910cd34}
+    requires Microsoft.UI.Xaml.Automation.Provider.ITextProvider
+    property document_range
+        get get_DocumentRange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    property supported_text_selection
+        get get_SupportedTextSelection slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=4 reverse=43
+            out enum32 type=Microsoft.UI.Xaml.Automation.SupportedTextSelection return
+    method get_caret_range
+        method GetCaretRange slot=7 inputs=0 outputs=2 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider2 shape=51 reverse=44
+            out boolean name=isActive
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_selection
+        method GetSelection slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=65
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_visible_ranges
+        method GetVisibleRanges slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=100
+            receive_array interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_annotation
+        method RangeFromAnnotation slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider2 shape=51 reverse=24
+            in class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=annotationElement
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_child
+        method RangeFromChild slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=51 reverse=124
+            in class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple name=childElement
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method range_from_point
+        method RangeFromPoint slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextProvider shape=79 reverse=154
+            in struct type=Windows.Foundation.Point name=screenLocation
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider python_type
+    py _ITextRangeProvider
+    guid 84210361-6ce2-5084-bf3b-28afa6e9851f
+    signature {84210361-6ce2-5084-bf3b-28afa6e9851f}
+    method add_to_selection
+        method AddToSelection slot=20 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=227
+    method clone
+        method Clone slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method compare
+        method Compare slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=44
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            out boolean return
+    method compare_endpoints
+        method CompareEndpoints slot=8 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=68
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=targetEndpoint
+            out int32 return
+    method expand_to_enclosing_unit
+        method ExpandToEnclosingUnit slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=99
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+    method find_attribute
+        method FindAttribute slot=10 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=126
+            in int32 name=attributeId
+            in object name=value
+            in boolean name=backward
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method find_text
+        method FindText slot=11 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=146
+            in string name=text
+            in boolean name=backward
+            in boolean name=ignoreCase
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_attribute_value
+        method GetAttributeValue slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=163
+            in int32 name=attributeId
+            out object return
+    method get_bounding_rectangles
+        method GetBoundingRectangles slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=174
+            receive_array double name=returnValue
+    method get_children
+        method GetChildren slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=243
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_enclosing_element
+        method GetEnclosingElement slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=186
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_text
+        method GetText slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=196
+            in int32 name=maxLength
+            out string return
+    method move
+        method Move slot=16 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=117 reverse=204
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_endpoint_by_range
+        method MoveEndpointByRange slot=18 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=117 reverse=220
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=targetEndpoint
+    method move_endpoint_by_unit
+        method MoveEndpointByUnit slot=17 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=212
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+            in int32 name=count
+            out int32 return
+    method remove_from_selection
+        method RemoveFromSelection slot=21 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=231
+    method scroll_into_view
+        method ScrollIntoView slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=237
+            in boolean name=alignToTop
+    method select
+        method Select slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=221
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2 python_type
+    py _ITextRangeProvider2
+    guid 34d4a80e-36bb-5362-a53b-490428a8b367
+    signature {34d4a80e-36bb-5362-a53b-490428a8b367}
+    requires Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider
+    method add_to_selection
+        method AddToSelection slot=20 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=227
+    method clone
+        method Clone slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=22
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method compare
+        method Compare slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=44
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            out boolean return
+    method compare_endpoints
+        method CompareEndpoints slot=8 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=68
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=targetEndpoint
+            out int32 return
+    method expand_to_enclosing_unit
+        method ExpandToEnclosingUnit slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=99
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+    method find_attribute
+        method FindAttribute slot=10 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=126
+            in int32 name=attributeId
+            in object name=value
+            in boolean name=backward
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method find_text
+        method FindText slot=11 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=146
+            in string name=text
+            in boolean name=backward
+            in boolean name=ignoreCase
+            out interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider return
+    method get_attribute_value
+        method GetAttributeValue slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=163
+            in int32 name=attributeId
+            out object return
+    method get_bounding_rectangles
+        method GetBoundingRectangles slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=174
+            receive_array double name=returnValue
+    method get_children
+        method GetChildren slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=243
+            receive_array class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_enclosing_element
+        method GetEnclosingElement slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=186
+            out class type=Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple return
+    method get_text
+        method GetText slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=51 reverse=196
+            in int32 name=maxLength
+            out string return
+    method move
+        method Move slot=16 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=117 reverse=204
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+            in int32 name=count
+            out int32 return
+    method move_endpoint_by_range
+        method MoveEndpointByRange slot=18 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=117 reverse=220
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in interface type=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider name=textRangeProvider
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=targetEndpoint
+    method move_endpoint_by_unit
+        method MoveEndpointByUnit slot=17 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=195 reverse=212
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint name=endpoint
+            in enum32 type=Microsoft.UI.Xaml.Automation.Text.TextUnit name=unit
+            in int32 name=count
+            out int32 return
+    method remove_from_selection
+        method RemoveFromSelection slot=21 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=231
+    method scroll_into_view
+        method ScrollIntoView slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=4 reverse=237
+            in boolean name=alignToTop
+    method select
+        method Select slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider shape=0 reverse=221
+    method show_context_menu
+        method ShowContextMenu slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2 shape=0 reverse=16
+
+interface Microsoft.UI.Xaml.Automation.Provider.IToggleProvider python_type
+    py _IToggleProvider
+    guid 021080c2-30a9-52ef-bc32-2b79847b6ba7
+    signature {021080c2-30a9-52ef-bc32-2b79847b6ba7}
+    property toggle_state
+        get get_ToggleState slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IToggleProvider shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Automation.ToggleState return
+    method toggle
+        method Toggle slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IToggleProvider shape=0 reverse=37
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITransformProvider python_type
+    py _ITransformProvider
+    guid 6fd76988-8f52-5ef2-a826-9c8c4951c911
+    signature {6fd76988-8f52-5ef2-a826-9c8c4951c911}
+    property can_move
+        get get_CanMove slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=22
+            out boolean return
+    property can_resize
+        get get_CanResize slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=43
+            out boolean return
+    property can_rotate
+        get get_CanRotate slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=62
+            out boolean return
+    method move
+        method Move slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=96
+            in double name=x
+            in double name=y
+    method resize
+        method Resize slot=10 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=120
+            in double name=width
+            in double name=height
+    method rotate
+        method Rotate slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=2 reverse=138
+            in double name=degrees
+
+interface Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 python_type
+    py _ITransformProvider2
+    guid 7d91d02d-8401-5cf8-bbc4-47391a524215
+    signature {7d91d02d-8401-5cf8-bbc4-47391a524215}
+    requires Microsoft.UI.Xaml.Automation.Provider.ITransformProvider
+    property can_zoom
+        get get_CanZoom slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=22
+            out boolean return
+    property max_zoom
+        get get_MaxZoom slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=62
+            out double return
+    property min_zoom
+        get get_MinZoom slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=99
+            out double return
+    property zoom_level
+        get get_ZoomLevel slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=43
+            out double return
+    property can_move
+        get get_CanMove slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=22
+            out boolean return
+    property can_resize
+        get get_CanResize slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=43
+            out boolean return
+    property can_rotate
+        get get_CanRotate slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=4 reverse=62
+            out boolean return
+    method move
+        method Move slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=96
+            in double name=x
+            in double name=y
+    method resize
+        method Resize slot=10 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=45 reverse=120
+            in double name=width
+            in double name=height
+    method rotate
+        method Rotate slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider shape=2 reverse=138
+            in double name=degrees
+    method zoom
+        method Zoom slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=2 reverse=119
+            in double name=zoom
+    method zoom_by_unit
+        method ZoomByUnit slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2 shape=4 reverse=141
+            in enum32 type=Microsoft.UI.Xaml.Automation.ZoomUnit name=zoomUnit
+
+interface Microsoft.UI.Xaml.Automation.Provider.IValueProvider python_type
+    py _IValueProvider
+    guid 984f11cf-4611-588e-b52e-b96a12322c71
+    signature {984f11cf-4611-588e-b52e-b96a12322c71}
+    property is_read_only
+        get get_IsReadOnly slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=43
+            out string return
+    method set_value
+        method SetValue slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IValueProvider shape=4 reverse=62
+            in string name=value
+
+interface Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider python_type
+    py _IVirtualizedItemProvider
+    guid 098f858a-2e63-5985-ab87-f8ebdb1c5740
+    signature {098f858a-2e63-5985-ab87-f8ebdb1c5740}
+    method realize
+        method Realize slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider shape=0 reverse=16
+
+interface Microsoft.UI.Xaml.Automation.Provider.IWindowProvider python_type
+    py _IWindowProvider
+    guid 83f1df99-9ddf-575e-a651-2ee657fd16e0
+    signature {83f1df99-9ddf-575e-a651-2ee657fd16e0}
+    property interaction_state
+        get get_InteractionState slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=121
+            out enum32 type=Microsoft.UI.Xaml.Automation.WindowInteractionState return
+    property is_modal
+        get get_IsModal slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=22
+            out boolean return
+    property is_topmost
+        get get_IsTopmost slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=43
+            out boolean return
+    property maximizable
+        get get_Maximizable slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=62
+            out boolean return
+    property minimizable
+        get get_Minimizable slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=99
+            out boolean return
+    property visual_state
+        get get_VisualState slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=141
+            out enum32 type=Microsoft.UI.Xaml.Automation.WindowVisualState return
+    method close
+        method Close slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=0 reverse=159
+    method set_visual_state
+        method SetVisualState slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=4 reverse=173
+            in enum32 type=Microsoft.UI.Xaml.Automation.WindowVisualState name=state
+    method wait_for_input_idle
+        method WaitForInputIdle slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IWindowProvider shape=51 reverse=187
+            in int32 name=milliseconds
+            out boolean return
+
+class Microsoft.UI.Xaml.DependencyObject external
+    py winui3.microsoft.ui.xaml.DependencyObject
+
+enum Microsoft.UI.Xaml.Automation.AnnotationType external
+    py winui3.microsoft.ui.xaml.automation.AnnotationType
+
+class Microsoft.UI.Xaml.Automation.AutomationProperty external
+    py winui3.microsoft.ui.xaml.automation.AutomationProperty
+
+enum Microsoft.UI.Xaml.Automation.DockPosition external
+    py winui3.microsoft.ui.xaml.automation.DockPosition
+
+enum Microsoft.UI.Xaml.Automation.ExpandCollapseState external
+    py winui3.microsoft.ui.xaml.automation.ExpandCollapseState
+
+enum Microsoft.UI.Xaml.Automation.RowOrColumnMajor external
+    py winui3.microsoft.ui.xaml.automation.RowOrColumnMajor
+
+enum Microsoft.UI.Xaml.Automation.ScrollAmount external
+    py winui3.microsoft.ui.xaml.automation.ScrollAmount
+
+enum Microsoft.UI.Xaml.Automation.SupportedTextSelection external
+    py winui3.microsoft.ui.xaml.automation.SupportedTextSelection
+
+enum Microsoft.UI.Xaml.Automation.SynchronizedInputType external
+    py winui3.microsoft.ui.xaml.automation.SynchronizedInputType
+
+enum Microsoft.UI.Xaml.Automation.ToggleState external
+    py winui3.microsoft.ui.xaml.automation.ToggleState
+
+enum Microsoft.UI.Xaml.Automation.WindowInteractionState external
+    py winui3.microsoft.ui.xaml.automation.WindowInteractionState
+
+enum Microsoft.UI.Xaml.Automation.WindowVisualState external
+    py winui3.microsoft.ui.xaml.automation.WindowVisualState
+
+enum Microsoft.UI.Xaml.Automation.ZoomUnit external
+    py winui3.microsoft.ui.xaml.automation.ZoomUnit
+
+enum Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection external
+    py winui3.microsoft.ui.xaml.automation.peers.AutomationNavigationDirection
+
+enum Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint external
+    py winui3.microsoft.ui.xaml.automation.text.TextPatternRangeEndpoint
+
+enum Microsoft.UI.Xaml.Automation.Text.TextUnit external
+    py winui3.microsoft.ui.xaml.automation.text.TextUnit
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

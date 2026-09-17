@@ -1,0 +1,94 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices
+
+interface Windows.Devices.ILowLevelDevicesAggregateProvider python_type
+    py _ILowLevelDevicesAggregateProvider
+    guid a73e561c-aac1-4ec7-a852-479f7060d01f
+    signature {a73e561c-aac1-4ec7-a852-479f7060d01f}
+    property adc_controller_provider
+        get get_AdcControllerProvider slot=6 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=22
+            out interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider return
+    property gpio_controller_provider
+        get get_GpioControllerProvider slot=8 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=62
+            out interface type=Windows.Devices.Gpio.Provider.IGpioControllerProvider return
+    property i2c_controller_provider
+        get get_I2cControllerProvider slot=9 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=99
+            out interface type=Windows.Devices.I2c.Provider.II2cControllerProvider return
+    property pwm_controller_provider
+        get get_PwmControllerProvider slot=7 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=43
+            out interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider return
+    property spi_controller_provider
+        get get_SpiControllerProvider slot=10 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=121
+            out interface type=Windows.Devices.Spi.Provider.ISpiControllerProvider return
+
+interface Windows.Devices.ILowLevelDevicesAggregateProviderFactory
+    guid 9ac4aaf6-3473-465e-96d5-36281a2c57af
+
+interface Windows.Devices.ILowLevelDevicesController
+    guid 2ec23dd4-179b-45de-9b39-3ae02527de52
+
+interface Windows.Devices.ILowLevelDevicesControllerStatics
+    guid 093e926a-fccb-4394-a697-19de637c2db3
+
+class Windows.Devices.LowLevelDevicesAggregateProvider python_type
+    py LowLevelDevicesAggregateProvider
+    signature rc(Windows.Devices.LowLevelDevicesAggregateProvider;{a73e561c-aac1-4ec7-a852-479f7060d01f})
+    default Windows.Devices.ILowLevelDevicesAggregateProvider
+    requires Windows.Devices.ILowLevelDevicesAggregateProvider
+    factory Windows.Devices.ILowLevelDevicesAggregateProviderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProviderFactory shape=267
+            in interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=adc
+            in interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=pwm
+            in interface type=Windows.Devices.Gpio.Provider.IGpioControllerProvider name=gpio
+            in interface type=Windows.Devices.I2c.Provider.II2cControllerProvider name=i2c
+            in interface type=Windows.Devices.Spi.Provider.ISpiControllerProvider name=spi
+            out class type=Windows.Devices.LowLevelDevicesAggregateProvider return
+    property adc_controller_provider
+        get get_AdcControllerProvider slot=6 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=22
+            out interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider return
+    property gpio_controller_provider
+        get get_GpioControllerProvider slot=8 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=62
+            out interface type=Windows.Devices.Gpio.Provider.IGpioControllerProvider return
+    property i2c_controller_provider
+        get get_I2cControllerProvider slot=9 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=99
+            out interface type=Windows.Devices.I2c.Provider.II2cControllerProvider return
+    property pwm_controller_provider
+        get get_PwmControllerProvider slot=7 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=43
+            out interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider return
+    property spi_controller_provider
+        get get_SpiControllerProvider slot=10 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProvider shape=4 reverse=121
+            out interface type=Windows.Devices.Spi.Provider.ISpiControllerProvider return
+
+class Windows.Devices.LowLevelDevicesController python_type
+    py LowLevelDevicesController
+    signature rc(Windows.Devices.LowLevelDevicesController;{2ec23dd4-179b-45de-9b39-3ae02527de52})
+    default Windows.Devices.ILowLevelDevicesController
+    requires Windows.Devices.ILowLevelDevicesController
+    factory Windows.Devices.ILowLevelDevicesControllerStatics
+    property default_provider static
+        get get_DefaultProvider slot=6 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 reverse=22 static
+            out interface type=Windows.Devices.ILowLevelDevicesAggregateProvider return
+        put put_DefaultProvider slot=7 inputs=1 outputs=0 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 reverse=43 static
+            in interface type=Windows.Devices.ILowLevelDevicesAggregateProvider name=value
+
+interface Windows.Devices.Adc.Provider.IAdcControllerProvider external
+    py winrt.windows.devices.adc.provider._IAdcControllerProvider
+    guid be545828-816d-4de5-a048-aba06958aaa8
+
+interface Windows.Devices.Gpio.Provider.IGpioControllerProvider external
+    py winrt.windows.devices.gpio.provider._IGpioControllerProvider
+    guid ad11cec7-19ea-4b21-874f-b91aed4a25db
+
+interface Windows.Devices.I2c.Provider.II2cControllerProvider external
+    py winrt.windows.devices.i2c.provider._II2cControllerProvider
+    guid 61c2bb82-4510-4163-a87c-4e15a9558980
+
+interface Windows.Devices.Pwm.Provider.IPwmControllerProvider external
+    py winrt.windows.devices.pwm.provider._IPwmControllerProvider
+    guid 1300593b-e2e3-40a4-b7d9-48dff0377a52
+
+interface Windows.Devices.Spi.Provider.ISpiControllerProvider external
+    py winrt.windows.devices.spi.provider._ISpiControllerProvider
+    guid c1686504-02ce-4226-a385-4f11fb04b41b

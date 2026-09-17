@@ -1,0 +1,135 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Calls.Background
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails
+    guid a4a690a2-e4c1-427f-864e-e470477ddb67
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails
+    guid 6e9b5b3f-c54b-4e82-4cc9-e329a4184592
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails
+    guid bad30276-83b6-5732-9c38-0c206546196a
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails
+    guid 2b0e6044-9b32-5d42-8222-d2812e39fb21
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails
+    guid c6d321e7-d11d-40d8-b2b7-e40a01d66249
+
+interface Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails
+    guid 13a8c01b-b831-48d3-8ba9-8d22a6580dcf
+
+enum Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason python_type
+    py PhoneCallBlockedReason
+    signature enum(Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason;i4)
+
+class Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails python_type
+    py PhoneCallBlockedTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails;{a4a690a2-e4c1-427f-864e-e470477ddb67})
+    default Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails
+    property call_blocked_reason
+        get get_CallBlockedReason slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails shape=4 reverse=62
+            out enum32 type=Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason return
+    property line_id
+        get get_LineId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails shape=4 reverse=43
+            out guid return
+    property phone_number
+        get get_PhoneNumber slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails shape=4 reverse=22
+            out string return
+
+class Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails python_type
+    py PhoneCallOriginDataRequestTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails;{6e9b5b3f-c54b-4e82-4cc9-e329a4184592})
+    default Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails
+    property phone_number
+        get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails shape=4 reverse=43 deprecated
+            out string return
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails shape=4 reverse=22 deprecated
+            out guid return
+
+enum Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason python_type
+    py PhoneIncomingCallDismissedReason
+    signature enum(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason;i4)
+
+class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails python_type
+    py PhoneIncomingCallDismissedTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails;{bad30276-83b6-5732-9c38-0c206546196a})
+    default Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails
+    property dismissal_time
+        get get_DismissalTime slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=99 deprecated
+            out datetime return
+    property display_name
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=62 deprecated
+            out string return
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=22 deprecated
+            out guid return
+    property phone_number
+        get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=43 deprecated
+            out string return
+    property reason
+        get get_Reason slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=141 deprecated
+            out enum32 type=Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason return
+    property text_reply_message
+        get get_TextReplyMessage slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails shape=4 reverse=121 deprecated
+            out string return
+
+class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails python_type
+    py PhoneIncomingCallNotificationTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails;{2b0e6044-9b32-5d42-8222-d2812e39fb21})
+    default Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails
+    property call_id
+        get get_CallId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails shape=4 reverse=43
+            out string return
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails shape=4 reverse=22
+            out guid return
+
+enum Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind python_type
+    py PhoneLineChangeKind
+    signature enum(Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind;i4)
+
+class Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails python_type
+    py PhoneLineChangedTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails;{c6d321e7-d11d-40d8-b2b7-e40a01d66249})
+    default Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails
+    property change_type
+        get get_ChangeType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind return
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails shape=4 reverse=22
+            out guid return
+    method has_line_property_changed
+        method HasLinePropertyChanged slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails shape=51 reverse=65
+            in enum_u32 type=Windows.ApplicationModel.Calls.Background.PhoneLineProperties name=lineProperty
+            out boolean return
+
+enum Windows.ApplicationModel.Calls.Background.PhoneLineProperties python_type
+    py PhoneLineProperties
+    signature enum(Windows.ApplicationModel.Calls.Background.PhoneLineProperties;u4)
+
+class Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails python_type
+    py PhoneNewVoicemailMessageTriggerDetails
+    signature rc(Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails;{13a8c01b-b831-48d3-8ba9-8d22a6580dcf})
+    default Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails
+    requires Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails
+    property line_id
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails shape=4 reverse=22
+            out guid return
+    property operator_message
+        get get_OperatorMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails shape=4 reverse=62
+            out string return
+    property voicemail_count
+        get get_VoicemailCount slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails shape=4 reverse=43
+            out int32 return
+
+enum Windows.ApplicationModel.Calls.Background.PhoneTriggerType python_type
+    py PhoneTriggerType
+    signature enum(Windows.ApplicationModel.Calls.Background.PhoneTriggerType;i4)

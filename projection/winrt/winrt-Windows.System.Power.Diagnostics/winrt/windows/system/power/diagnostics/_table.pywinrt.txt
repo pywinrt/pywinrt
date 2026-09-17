@@ -1,0 +1,33 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Power.Diagnostics
+
+class Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics static python_type
+    py BackgroundEnergyDiagnostics
+    factory Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics
+    property device_specific_conversion_factor static
+        get get_DeviceSpecificConversionFactor slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics shape=4 reverse=22 static deprecated
+            out double return
+    method compute_total_energy_usage static deprecated
+        method ComputeTotalEnergyUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics shape=4 reverse=43 static deprecated
+            out uint64 return
+    method reset_total_energy_usage static deprecated
+        method ResetTotalEnergyUsage slot=8 inputs=0 outputs=0 declaring=Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics shape=0 reverse=55 static deprecated
+
+class Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics static python_type
+    py ForegroundEnergyDiagnostics
+    factory Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics
+    property device_specific_conversion_factor static
+        get get_DeviceSpecificConversionFactor slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics shape=4 reverse=22 static deprecated
+            out double return
+    method compute_total_energy_usage static deprecated
+        method ComputeTotalEnergyUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics shape=4 reverse=43 static deprecated
+            out uint64 return
+    method reset_total_energy_usage static deprecated
+        method ResetTotalEnergyUsage slot=8 inputs=0 outputs=0 declaring=Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics shape=0 reverse=55 static deprecated
+
+interface Windows.System.Power.Diagnostics.IBackgroundEnergyDiagnosticsStatics
+    guid d7663702-d3a6-46e0-8f9b-50b95bb4f9c5
+
+interface Windows.System.Power.Diagnostics.IForegroundEnergyDiagnosticsStatics
+    guid 23ca0917-cd07-4609-be15-8fe894c5e41e

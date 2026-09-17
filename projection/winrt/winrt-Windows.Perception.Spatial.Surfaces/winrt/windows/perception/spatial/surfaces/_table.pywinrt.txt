@@ -1,0 +1,229 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Perception.Spatial.Surfaces
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> concrete
+    guid b425d126-1069-563f-a863-44a30a8f071d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4))
+    argument Windows.Perception.Spatial.SpatialPerceptionAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> concrete
+    guid f5938fad-a8a1-5f7e-9440-bdb781ad26b6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh;{108f57d9-df0d-3950-a0fd-f972c77c27b4}))
+    argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh
+
+interface Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> concrete
+    guid 89e8f1ee-3a2a-5b69-a786-cddcf7456a3a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Perception.Spatial.SpatialBoundingVolume;{fb2065da-68c3-33df-b7af-4c787207999c}))
+    argument Windows.Perception.Spatial.SpatialBoundingVolume
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> concrete
+    guid eaa722b9-2859-593d-bb66-0c538e415e71
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1}))
+    argument System.Guid
+    argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo
+
+interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingOrientedBox> concrete
+    guid 09f88309-9f81-5207-bdb2-abef926db18f
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Perception.Spatial.SpatialBoundingOrientedBox;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Quaternion;f4;f4;f4;f4)))
+    argument Windows.Perception.Spatial.SpatialBoundingOrientedBox
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo
+    guid f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh
+    guid 108f57d9-df0d-3950-a0fd-f972c77c27b4
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer
+    guid 93cf59e0-871f-33f8-98b2-03d101458f6f
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions
+    guid d2759f89-3572-3d2d-a10d-5fee9394aa37
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics
+    guid 9b340abf-9781-4505-8935-013575caae5e
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver
+    guid 10b69819-ddca-3483-ac3a-748fe8c86df5
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics
+    guid 165951ed-2108-4168-9175-87e027bc9285
+
+interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2
+    guid 0f534261-c55d-4e6b-a895-a19de69a42e3
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete
+    guid 1edda1c2-0f6e-516c-80b8-7687dcd1280e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+
+class Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo python_type
+    py SpatialSurfaceInfo
+    signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1})
+    default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo
+    requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo shape=4 reverse=22
+            out guid return
+    property update_time
+        get get_UpdateTime slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo shape=4 reverse=43
+            out datetime return
+    method try_compute_latest_mesh_async
+        method TryComputeLatestMeshAsync slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo shape=46
+            in double name=maxTrianglesPerCubicMeter
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> return
+        method TryComputeLatestMeshAsync slot=10 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo shape=106
+            in double name=maxTrianglesPerCubicMeter
+            in class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> return
+    method try_get_bounds
+        method TryGetBounds slot=8 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo shape=51 reverse=65
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingOrientedBox> return
+
+class Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh python_type
+    py SpatialSurfaceMesh
+    signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh;{108f57d9-df0d-3950-a0fd-f972c77c27b4})
+    default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh
+    requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh
+    property coordinate_system
+        get get_CoordinateSystem slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=43
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property surface_info
+        get get_SurfaceInfo slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=22
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo return
+    property triangle_indices
+        get get_TriangleIndices slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=62
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer return
+    property vertex_normals
+        get get_VertexNormals slot=11 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=141
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer return
+    property vertex_position_scale
+        get get_VertexPositionScale slot=10 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=121
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property vertex_positions
+        get get_VertexPositions slot=9 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMesh shape=4 reverse=99
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer return
+
+class Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer python_type
+    py SpatialSurfaceMeshBuffer
+    signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer;{93cf59e0-871f-33f8-98b2-03d101458f6f})
+    default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer
+    requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer
+    property data
+        get get_Data slot=9 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer shape=4 reverse=99
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property element_count
+        get get_ElementCount slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer shape=4 reverse=62
+            out uint32 return
+    property format
+        get get_Format slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer shape=4 reverse=22
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property stride
+        get get_Stride slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshBuffer shape=4 reverse=43
+            out uint32 return
+
+class Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions activatable python_type
+    py SpatialSurfaceMeshOptions
+    signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions;{d2759f89-3572-3d2d-a10d-5fee9394aa37})
+    default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions
+    requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions
+    factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property vertex_position_format
+        get get_VertexPositionFormat slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=22
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+        put put_VertexPositionFormat slot=7 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=43
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+    property vertex_normal_format
+        get get_VertexNormalFormat slot=10 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=121
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+        put put_VertexNormalFormat slot=11 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=141
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+    property triangle_index_format
+        get get_TriangleIndexFormat slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=62
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+        put put_TriangleIndexFormat slot=9 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=99
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+    property include_vertex_normals
+        get get_IncludeVertexNormals slot=12 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=162
+            out boolean return
+        put put_IncludeVertexNormals slot=13 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptions shape=4 reverse=173
+            in boolean name=value
+    property supported_triangle_index_formats static
+        get get_SupportedTriangleIndexFormats slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> return
+    property supported_vertex_normal_formats static
+        get get_SupportedVertexNormalFormats slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics shape=4 reverse=62 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> return
+    property supported_vertex_position_formats static
+        get get_SupportedVertexPositionFormats slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceMeshOptionsStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> return
+
+class Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver activatable python_type
+    py SpatialSurfaceObserver
+    signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver;{10b69819-ddca-3483-ac3a-748fe8c86df5})
+    default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver
+    requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver
+    factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2
+    factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    event observed_surfaces_changed
+        add add_ObservedSurfacesChanged slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver,System.Object> name=handler
+            out event_token return
+        remove remove_ObservedSurfacesChanged slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver shape=26 reverse=134
+            in event_token name=token
+    method get_observed_surfaces
+        method GetObservedSurfaces slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2 shape=4 reverse=22 static
+            out boolean return
+    method request_access_async static
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> return
+    method set_bounding_volume
+        method SetBoundingVolume slot=7 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver shape=4 reverse=43
+            in class type=Windows.Perception.Spatial.SpatialBoundingVolume name=bounds
+    method set_bounding_volumes
+        method SetBoundingVolumes slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver shape=4 reverse=62
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> name=bounds
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver,System.Object> concrete
+    guid 8b31274a-7693-52be-9014-b0f5f65a3539
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver;{10b69819-ddca-3483-ac3a-748fe8c86df5});cinterface(IInspectable))
+    argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver
+    argument System.Object
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat external
+    py winrt.windows.graphics.directx.DirectXPixelFormat
+
+struct Windows.Perception.Spatial.SpatialBoundingOrientedBox external
+    py winrt.windows.perception.spatial.SpatialBoundingOrientedBox
+
+class Windows.Perception.Spatial.SpatialBoundingVolume external
+    py winrt.windows.perception.spatial.SpatialBoundingVolume
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem external
+    py winrt.windows.perception.spatial.SpatialCoordinateSystem
+
+enum Windows.Perception.Spatial.SpatialPerceptionAccessStatus external
+    py winrt.windows.perception.spatial.SpatialPerceptionAccessStatus
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

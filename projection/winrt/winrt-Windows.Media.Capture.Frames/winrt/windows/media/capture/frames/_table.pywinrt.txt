@@ -1,0 +1,696 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Capture.Frames
+
+class Windows.Media.Capture.Frames.AudioMediaFrame python_type
+    py AudioMediaFrame
+    signature rc(Windows.Media.Capture.Frames.AudioMediaFrame;{a3a9feff-8021-441b-9a46-e7f0137b7981})
+    default Windows.Media.Capture.Frames.IAudioMediaFrame
+    requires Windows.Media.Capture.Frames.IAudioMediaFrame
+    property audio_encoding_properties
+        get get_AudioEncodingProperties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IAudioMediaFrame shape=4 reverse=43
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    property frame_reference
+        get get_FrameReference slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IAudioMediaFrame shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+    method get_audio_frame
+        method GetAudioFrame slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IAudioMediaFrame shape=4 reverse=62
+            out class type=Windows.Media.AudioFrame return
+
+class Windows.Media.Capture.Frames.BufferMediaFrame python_type
+    py BufferMediaFrame
+    signature rc(Windows.Media.Capture.Frames.BufferMediaFrame;{b5b153c7-9b84-4062-b79c-a365b2596854})
+    default Windows.Media.Capture.Frames.IBufferMediaFrame
+    requires Windows.Media.Capture.Frames.IBufferMediaFrame
+    property buffer
+        get get_Buffer slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IBufferMediaFrame shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property frame_reference
+        get get_FrameReference slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IBufferMediaFrame shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+
+class Windows.Media.Capture.Frames.DepthMediaFrame python_type
+    py DepthMediaFrame
+    signature rc(Windows.Media.Capture.Frames.DepthMediaFrame;{47135e4f-8549-45c0-925b-80d35efdb10a})
+    default Windows.Media.Capture.Frames.IDepthMediaFrame
+    requires Windows.Media.Capture.Frames.IDepthMediaFrame
+    requires Windows.Media.Capture.Frames.IDepthMediaFrame2
+    property depth_format
+        get get_DepthFormat slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame shape=4 reverse=62
+            out class type=Windows.Media.Capture.Frames.DepthMediaFrameFormat return
+    property frame_reference
+        get get_FrameReference slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+    property video_media_frame
+        get get_VideoMediaFrame slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrame return
+    property max_reliable_depth
+        get get_MaxReliableDepth slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame2 shape=4 reverse=22
+            out uint32 return
+    property min_reliable_depth
+        get get_MinReliableDepth slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame2 shape=4 reverse=43
+            out uint32 return
+    method try_create_coordinate_mapper
+        method TryCreateCoordinateMapper slot=9 inputs=2 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrame shape=117 reverse=101
+            in class type=Windows.Media.Devices.Core.CameraIntrinsics name=cameraIntrinsics
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
+            out class type=Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper return
+
+class Windows.Media.Capture.Frames.DepthMediaFrameFormat python_type
+    py DepthMediaFrameFormat
+    signature rc(Windows.Media.Capture.Frames.DepthMediaFrameFormat;{c312cf40-d729-453e-8780-2e04f140d28e})
+    default Windows.Media.Capture.Frames.IDepthMediaFrameFormat
+    requires Windows.Media.Capture.Frames.IDepthMediaFrameFormat
+    property depth_scale_in_meters
+        get get_DepthScaleInMeters slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrameFormat shape=4 reverse=43
+            out double return
+    property video_format
+        get get_VideoFormat slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrameFormat shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrameFormat return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> concrete
+    guid a795889f-6d49-5687-aabe-f2fc6237fa1a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> concrete
+    guid db8e251a-adc6-5753-8784-c44b4d7c5b07
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MediaFrameReaderStartStatus;i4))
+    argument Windows.Media.Capture.Frames.MediaFrameReaderStartStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> concrete
+    guid 80003979-4986-52a7-b227-ae6be4d2b5cd
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult;{088616c2-3a64-4bd5-bd2b-e7c898d2f37a}))
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete
+    guid f3256a87-b1cf-5943-b664-9f19367d2779
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> concrete
+    guid a1507c16-5f84-586e-8ca9-224f37e0e0de
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus;i4))
+    argument Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> concrete
+    guid a242b952-76aa-54e5-a13b-a8707c1098e1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus;i4))
+    argument Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus
+
+interface Windows.Media.Capture.Frames.IAudioMediaFrame
+    guid a3a9feff-8021-441b-9a46-e7f0137b7981
+
+interface Windows.Media.Capture.Frames.IBufferMediaFrame
+    guid b5b153c7-9b84-4062-b79c-a365b2596854
+
+interface Windows.Media.Capture.Frames.IDepthMediaFrame
+    guid 47135e4f-8549-45c0-925b-80d35efdb10a
+
+interface Windows.Media.Capture.Frames.IDepthMediaFrame2
+    guid 6cca473d-c4a4-4176-b0cd-33eae3b35aa3
+
+interface Windows.Media.Capture.Frames.IDepthMediaFrameFormat
+    guid c312cf40-d729-453e-8780-2e04f140d28e
+
+interface Windows.Media.Capture.Frames.IInfraredMediaFrame
+    guid 3fd13503-004b-4f0e-91ac-465299b41658
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
+    guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    argument System.Guid
+    argument System.Object
+
+interface Windows.Media.Capture.Frames.IMediaFrameArrivedEventArgs
+    guid 0b430add-a490-4435-ada1-9affd55239f7
+
+interface Windows.Media.Capture.Frames.IMediaFrameFormat
+    guid 71902b4e-b279-4a97-a9db-bd5a2fb78f39
+
+interface Windows.Media.Capture.Frames.IMediaFrameFormat2
+    guid 63856340-5e87-4c10-86d1-6df097a6c6a8
+
+interface Windows.Media.Capture.Frames.IMediaFrameReader
+    guid e4c94395-2028-48ed-90b0-d1c1b162e24c
+
+interface Windows.Media.Capture.Frames.IMediaFrameReader2
+    guid 871127b3-8531-4050-87cc-a13733cf3e9b
+
+interface Windows.Media.Capture.Frames.IMediaFrameReference
+    guid f6b88641-f0dc-4044-8dc9-961cedd05bad
+
+interface Windows.Media.Capture.Frames.IMediaFrameReference2
+    guid ddbc3ecc-d5b2-49ef-836a-947d989b80c1
+
+interface Windows.Media.Capture.Frames.IMediaFrameSource
+    guid d6782953-90db-46a8-8add-2aa884a8d253
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceController
+    guid 6d076635-316d-4b8f-b7b6-eeb04a8c6525
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceController2
+    guid efc49fd4-fcf2-4a03-b4e4-ac9628739bee
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceController3
+    guid 1f0cf815-2464-4651-b1e8-4a82dbdb54de
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult
+    guid 088616c2-3a64-4bd5-bd2b-e7c898d2f37a
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceGroup
+    guid 7f605b87-4832-4b5f-ae3d-412faab37d34
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics
+    guid 1c48bfc5-436f-4508-94cf-d5d8b7326445
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo
+    guid 87bdc9cd-4601-408f-91cf-038318cd0af3
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo2
+    guid 195a7855-6457-42c6-a769-19b65bd32e6e
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo3
+    guid ca824ab6-66ea-5885-a2b6-26c0eeec3c7b
+
+interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo4
+    guid 4817d721-85eb-470c-8f37-43ca5498e41d
+
+interface Windows.Media.Capture.Frames.IMultiSourceMediaFrameArrivedEventArgs
+    guid 63115e01-cf51-48fd-aab0-6d693eb48127
+
+interface Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader
+    guid 8d144402-f763-488d-98f2-b437bcf075e7
+
+interface Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2
+    guid ef5c8abd-fc5c-4c6b-9d81-3cb9cc637c26
+
+interface Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference
+    guid 21964b1a-7fe2-44d6-92e5-298e6d2810e9
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    argument Windows.Foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> concrete
+    guid bae2547d-3fae-55cd-b209-45c3b5b2f816
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameFormat;{71902b4e-b279-4a97-a9db-bd5a2fb78f39}))
+    argument Windows.Media.Capture.Frames.MediaFrameFormat
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete
+    guid d01148ae-cccd-56eb-b2b4-a7d2acce14ec
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> concrete
+    guid dbdb7946-9b30-51d0-9c8c-c7105af690e0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceInfo;{87bdc9cd-4601-408f-91cf-038318cd0af3}))
+    argument Windows.Media.Capture.Frames.MediaFrameSourceInfo
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> concrete
+    guid 726c7c8c-789e-5fcb-b31f-f9d9d4a3ac42
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription;{8012afef-b691-49ff-83f2-c1e76eaaea1b}))
+    argument Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
+
+interface Windows.Media.Capture.Frames.IVideoMediaFrame
+    guid 00dd4ccb-32bd-4fe1-a013-7cc13cf5dbcf
+
+interface Windows.Media.Capture.Frames.IVideoMediaFrameFormat
+    guid 46027fc0-d71b-45c7-8f14-6d9a0ae604e4
+
+class Windows.Media.Capture.Frames.InfraredMediaFrame python_type
+    py InfraredMediaFrame
+    signature rc(Windows.Media.Capture.Frames.InfraredMediaFrame;{3fd13503-004b-4f0e-91ac-465299b41658})
+    default Windows.Media.Capture.Frames.IInfraredMediaFrame
+    requires Windows.Media.Capture.Frames.IInfraredMediaFrame
+    property frame_reference
+        get get_FrameReference slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IInfraredMediaFrame shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+    property is_illuminated
+        get get_IsIlluminated slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IInfraredMediaFrame shape=4 reverse=62
+            out boolean return
+    property video_media_frame
+        get get_VideoMediaFrame slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IInfraredMediaFrame shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrame return
+
+class Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs python_type
+    py MediaFrameArrivedEventArgs
+    signature rc(Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs;{0b430add-a490-4435-ada1-9affd55239f7})
+    default Windows.Media.Capture.Frames.IMediaFrameArrivedEventArgs
+    requires Windows.Media.Capture.Frames.IMediaFrameArrivedEventArgs
+
+class Windows.Media.Capture.Frames.MediaFrameFormat python_type
+    py MediaFrameFormat
+    signature rc(Windows.Media.Capture.Frames.MediaFrameFormat;{71902b4e-b279-4a97-a9db-bd5a2fb78f39})
+    default Windows.Media.Capture.Frames.IMediaFrameFormat
+    requires Windows.Media.Capture.Frames.IMediaFrameFormat
+    requires Windows.Media.Capture.Frames.IMediaFrameFormat2
+    property frame_rate
+        get get_FrameRate slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat shape=4 reverse=62
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    property major_type
+        get get_MajorType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat shape=4 reverse=22
+            out string return
+    property properties
+        get get_Properties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property subtype
+        get get_Subtype slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat shape=4 reverse=43
+            out string return
+    property video_format
+        get get_VideoFormat slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat shape=4 reverse=121
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrameFormat return
+    property audio_encoding_properties
+        get get_AudioEncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameFormat2 shape=4 reverse=22
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+
+class Windows.Media.Capture.Frames.MediaFrameReader python_type closeable
+    py MediaFrameReader
+    signature rc(Windows.Media.Capture.Frames.MediaFrameReader;{e4c94395-2028-48ed-90b0-d1c1b162e24c})
+    default Windows.Media.Capture.Frames.IMediaFrameReader
+    requires Windows.Media.Capture.Frames.IMediaFrameReader
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.Capture.Frames.IMediaFrameReader2
+    property acquisition_mode
+        get get_AcquisitionMode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader2 shape=4 reverse=43
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode return
+        put put_AcquisitionMode slot=6 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameReader2 shape=4 reverse=22
+            in enum32 type=Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode name=value
+    event frame_arrived
+        add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameReader,Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=26 reverse=53
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method start_async
+        method StartAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> return
+    method stop_async
+        method StopAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=4 reverse=121
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_acquire_latest_frame
+        method TryAcquireLatestFrame slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=4 reverse=62
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+
+enum Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode python_type
+    py MediaFrameReaderAcquisitionMode
+    signature enum(Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode;i4)
+
+enum Windows.Media.Capture.Frames.MediaFrameReaderStartStatus python_type
+    py MediaFrameReaderStartStatus
+    signature enum(Windows.Media.Capture.Frames.MediaFrameReaderStartStatus;i4)
+
+class Windows.Media.Capture.Frames.MediaFrameReference python_type closeable
+    py MediaFrameReference
+    signature rc(Windows.Media.Capture.Frames.MediaFrameReference;{f6b88641-f0dc-4044-8dc9-961cedd05bad})
+    default Windows.Media.Capture.Frames.IMediaFrameReference
+    requires Windows.Media.Capture.Frames.IMediaFrameReference
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.Capture.Frames.IMediaFrameReference2
+    property buffer_media_frame
+        get get_BufferMediaFrame slot=11 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=141
+            out class type=Windows.Media.Capture.Frames.BufferMediaFrame return
+    property coordinate_system
+        get get_CoordinateSystem slot=13 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=173
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property duration
+        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=99
+            out timespan return
+    property format
+        get get_Format slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.MediaFrameFormat return
+    property properties
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property source_kind
+        get get_SourceKind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=22
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameSourceKind return
+    property system_relative_time
+        get get_SystemRelativeTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+    property video_media_frame
+        get get_VideoMediaFrame slot=12 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference shape=4 reverse=162
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrame return
+    property audio_media_frame
+        get get_AudioMediaFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference2 shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.AudioMediaFrame return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Media.Capture.Frames.MediaFrameSource python_type
+    py MediaFrameSource
+    signature rc(Windows.Media.Capture.Frames.MediaFrameSource;{d6782953-90db-46a8-8add-2aa884a8d253})
+    default Windows.Media.Capture.Frames.IMediaFrameSource
+    requires Windows.Media.Capture.Frames.IMediaFrameSource
+    property controller
+        get get_Controller slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceController return
+    property current_format
+        get get_CurrentFormat slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=4 reverse=99
+            out class type=Windows.Media.Capture.Frames.MediaFrameFormat return
+    property info
+        get get_Info slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo return
+    property supported_formats
+        get get_SupportedFormats slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> return
+    event format_changed
+        add add_FormatChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameSource,System.Object> name=handler
+            out event_token return
+        remove remove_FormatChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=26 reverse=167
+            in event_token name=token
+    method set_format_async
+        method SetFormatAsync slot=10 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=51 reverse=124
+            in class type=Windows.Media.Capture.Frames.MediaFrameFormat name=format
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_get_camera_intrinsics
+        method TryGetCameraIntrinsics slot=13 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=51 reverse=174
+            in class type=Windows.Media.Capture.Frames.MediaFrameFormat name=format
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+
+class Windows.Media.Capture.Frames.MediaFrameSourceController python_type
+    py MediaFrameSourceController
+    signature rc(Windows.Media.Capture.Frames.MediaFrameSourceController;{6d076635-316d-4b8f-b7b6-eeb04a8c6525})
+    default Windows.Media.Capture.Frames.IMediaFrameSourceController
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceController
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceController2
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceController3
+    property video_device_controller
+        get get_VideoDeviceController slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController shape=4 reverse=62
+            out class type=Windows.Media.Devices.VideoDeviceController return
+    property audio_device_controller
+        get get_AudioDeviceController slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController3 shape=4 reverse=22
+            out class type=Windows.Media.Devices.AudioDeviceController return
+    method get_property_async
+        method GetPropertyAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController shape=51 reverse=24
+            in string name=propertyId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> return
+    method get_property_by_extended_id_async
+        method GetPropertyByExtendedIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController2 shape=195 reverse=26
+            pass_array uint8 name=extendedPropertyId
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=maxPropertyValueSize
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> return
+    method set_property_async
+        method SetPropertyAsync slot=7 inputs=2 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController shape=117 reverse=45
+            in string name=propertyId
+            in object name=propertyValue
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> return
+    method set_property_by_extended_id_async
+        method SetPropertyByExtendedIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceController2 shape=239
+            pass_array uint8 name=extendedPropertyId
+            pass_array uint8 name=propertyValue
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> return
+
+class Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult python_type
+    py MediaFrameSourceGetPropertyResult
+    signature rc(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult;{088616c2-3a64-4bd5-bd2b-e7c898d2f37a})
+    default Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGetPropertyResult shape=4 reverse=43
+            out object return
+
+enum Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus python_type
+    py MediaFrameSourceGetPropertyStatus
+    signature enum(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus;i4)
+
+class Windows.Media.Capture.Frames.MediaFrameSourceGroup python_type
+    py MediaFrameSourceGroup
+    signature rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34})
+    default Windows.Media.Capture.Frames.IMediaFrameSourceGroup
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceGroup
+    factory Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroup shape=4 reverse=43
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroup shape=4 reverse=22
+            out string return
+    property source_infos
+        get get_SourceInfos slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroup shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> return
+    method find_all_async static
+        method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> return
+    method from_id_async static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics shape=51 reverse=44 static
+            in string name=id
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> return
+    method get_device_selector static
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceGroupStatics shape=4 reverse=62 static
+            out string return
+
+class Windows.Media.Capture.Frames.MediaFrameSourceInfo python_type
+    py MediaFrameSourceInfo
+    signature rc(Windows.Media.Capture.Frames.MediaFrameSourceInfo;{87bdc9cd-4601-408f-91cf-038318cd0af3})
+    default Windows.Media.Capture.Frames.IMediaFrameSourceInfo
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceInfo
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceInfo2
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceInfo3
+    requires Windows.Media.Capture.Frames.IMediaFrameSourceInfo4
+    property coordinate_system
+        get get_CoordinateSystem slot=12 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=162
+            out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
+    property device_information
+        get get_DeviceInformation slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=121
+            out class type=Windows.Devices.Enumeration.DeviceInformation return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=22
+            out string return
+    property media_stream_type
+        get get_MediaStreamType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=43
+            out enum32 type=Windows.Media.Capture.MediaStreamType return
+    property properties
+        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    property source_group
+        get get_SourceGroup slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=99
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup return
+    property source_kind
+        get get_SourceKind slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo shape=4 reverse=62
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameSourceKind return
+    property profile_id
+        get get_ProfileId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo2 shape=4 reverse=22
+            out string return
+    property video_profile_media_description
+        get get_VideoProfileMediaDescription slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo2 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> return
+    property is_shareable
+        get get_IsShareable slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo4 shape=4 reverse=22
+            out boolean return
+    method get_relative_panel
+        method GetRelativePanel slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSourceInfo3 shape=51 reverse=24
+            in class type=Windows.UI.WindowManagement.DisplayRegion name=displayRegion
+            out enum32 type=Windows.Devices.Enumeration.Panel return
+
+enum Windows.Media.Capture.Frames.MediaFrameSourceKind python_type
+    py MediaFrameSourceKind
+    signature enum(Windows.Media.Capture.Frames.MediaFrameSourceKind;i4)
+
+enum Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus python_type
+    py MediaFrameSourceSetPropertyStatus
+    signature enum(Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus;i4)
+
+class Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs python_type
+    py MultiSourceMediaFrameArrivedEventArgs
+    signature rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs;{63115e01-cf51-48fd-aab0-6d693eb48127})
+    default Windows.Media.Capture.Frames.IMultiSourceMediaFrameArrivedEventArgs
+    requires Windows.Media.Capture.Frames.IMultiSourceMediaFrameArrivedEventArgs
+
+class Windows.Media.Capture.Frames.MultiSourceMediaFrameReader python_type closeable
+    py MultiSourceMediaFrameReader
+    signature rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameReader;{8d144402-f763-488d-98f2-b437bcf075e7})
+    default Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader
+    requires Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader
+    requires Windows.Foundation.IClosable
+    requires Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2
+    property acquisition_mode
+        get get_AcquisitionMode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2 shape=4 reverse=43
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode return
+        put put_AcquisitionMode slot=6 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader2 shape=4 reverse=22
+            in enum32 type=Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode name=value
+    event frame_arrived
+        add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader,Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=26 reverse=53
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method start_async
+        method StartAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> return
+    method stop_async
+        method StopAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=4 reverse=121
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_acquire_latest_frame
+        method TryAcquireLatestFrame slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=4 reverse=62
+            out class type=Windows.Media.Capture.Frames.MultiSourceMediaFrameReference return
+
+enum Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus python_type
+    py MultiSourceMediaFrameReaderStartStatus
+    signature enum(Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus;i4)
+
+class Windows.Media.Capture.Frames.MultiSourceMediaFrameReference python_type closeable
+    py MultiSourceMediaFrameReference
+    signature rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameReference;{21964b1a-7fe2-44d6-92e5-298e6d2810e9})
+    default Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference
+    requires Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method try_get_frame_reference_by_source_id
+        method TryGetFrameReferenceBySourceId slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference shape=51 reverse=24
+            in string name=sourceId
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameReader,Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs> concrete
+    guid d3dd49cb-8d25-591a-80f7-8363d5c03ec9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MediaFrameReader;{e4c94395-2028-48ed-90b0-d1c1b162e24c});rc(Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs;{0b430add-a490-4435-ada1-9affd55239f7}))
+    argument Windows.Media.Capture.Frames.MediaFrameReader
+    argument Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameSource,System.Object> concrete
+    guid c7e61aa7-4716-5514-a913-ef1796b98dbd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MediaFrameSource;{d6782953-90db-46a8-8add-2aa884a8d253});cinterface(IInspectable))
+    argument Windows.Media.Capture.Frames.MediaFrameSource
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader,Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs> concrete
+    guid 82b1ad4d-9887-56f4-9a9e-3ab18b02198c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameReader;{8d144402-f763-488d-98f2-b437bcf075e7});rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs;{63115e01-cf51-48fd-aab0-6d693eb48127}))
+    argument Windows.Media.Capture.Frames.MultiSourceMediaFrameReader
+    argument Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs
+
+class Windows.Media.Capture.Frames.VideoMediaFrame python_type
+    py VideoMediaFrame
+    signature rc(Windows.Media.Capture.Frames.VideoMediaFrame;{00dd4ccb-32bd-4fe1-a013-7cc13cf5dbcf})
+    default Windows.Media.Capture.Frames.IVideoMediaFrame
+    requires Windows.Media.Capture.Frames.IVideoMediaFrame
+    property camera_intrinsics
+        get get_CameraIntrinsics slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=121
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+    property depth_media_frame
+        get get_DepthMediaFrame slot=12 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=162
+            out class type=Windows.Media.Capture.Frames.DepthMediaFrame return
+    property direct3d_surface
+        get get_Direct3DSurface slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=99
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    property frame_reference
+        get get_FrameReference slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameReference return
+    property infrared_media_frame
+        get get_InfraredMediaFrame slot=11 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=141
+            out class type=Windows.Media.Capture.Frames.InfraredMediaFrame return
+    property software_bitmap
+        get get_SoftwareBitmap slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=62
+            out class type=Windows.Graphics.Imaging.SoftwareBitmap return
+    property video_format
+        get get_VideoFormat slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.VideoMediaFrameFormat return
+    method get_video_frame
+        method GetVideoFrame slot=13 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrame shape=4 reverse=173
+            out class type=Windows.Media.VideoFrame return
+
+class Windows.Media.Capture.Frames.VideoMediaFrameFormat python_type
+    py VideoMediaFrameFormat
+    signature rc(Windows.Media.Capture.Frames.VideoMediaFrameFormat;{46027fc0-d71b-45c7-8f14-6d9a0ae604e4})
+    default Windows.Media.Capture.Frames.IVideoMediaFrameFormat
+    requires Windows.Media.Capture.Frames.IVideoMediaFrameFormat
+    property depth_format
+        get get_DepthFormat slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrameFormat shape=4 reverse=43
+            out class type=Windows.Media.Capture.Frames.DepthMediaFrameFormat return
+    property height
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrameFormat shape=4 reverse=99
+            out uint32 return
+    property media_frame_format
+        get get_MediaFrameFormat slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrameFormat shape=4 reverse=22
+            out class type=Windows.Media.Capture.Frames.MediaFrameFormat return
+    property width
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IVideoMediaFrameFormat shape=4 reverse=62
+            out uint32 return
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.Object external
+    py winrt.system.Object
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+enum Windows.Devices.Enumeration.Panel external
+    py winrt.windows.devices.enumeration.Panel
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+class Windows.Media.AudioFrame external
+    py winrt.windows.media.AudioFrame
+
+class Windows.Media.VideoFrame external
+    py winrt.windows.media.VideoFrame
+
+class Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription external
+    py winrt.windows.media.capture.MediaCaptureVideoProfileMediaDescription
+
+enum Windows.Media.Capture.MediaStreamType external
+    py winrt.windows.media.capture.MediaStreamType
+
+class Windows.Media.Devices.AudioDeviceController external
+    py winrt.windows.media.devices.AudioDeviceController
+
+class Windows.Media.Devices.VideoDeviceController external
+    py winrt.windows.media.devices.VideoDeviceController
+
+class Windows.Media.Devices.Core.CameraIntrinsics external
+    py winrt.windows.media.devices.core.CameraIntrinsics
+
+class Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper external
+    py winrt.windows.media.devices.core.DepthCorrelatedCoordinateMapper
+
+class Windows.Media.MediaProperties.AudioEncodingProperties external
+    py winrt.windows.media.mediaproperties.AudioEncodingProperties
+
+class Windows.Media.MediaProperties.MediaRatio external
+    py winrt.windows.media.mediaproperties.MediaRatio
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem external
+    py winrt.windows.perception.spatial.SpatialCoordinateSystem
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da
+
+class Windows.UI.WindowManagement.DisplayRegion external
+    py winrt.windows.ui.windowmanagement.DisplayRegion

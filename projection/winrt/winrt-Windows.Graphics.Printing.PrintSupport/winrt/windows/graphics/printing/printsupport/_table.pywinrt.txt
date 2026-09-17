@@ -1,0 +1,489 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Printing.PrintSupport
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> concrete
+    guid 8e4a9120-da3e-5f31-8739-405a3b2dbfb5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement;{4b2a4489-730d-5be7-80e6-8332941abf13}))
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
+    guid 9c90151e-ad1b-5081-a491-4a2d94244f2d
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession
+    guid eea45f1a-f4c6-54b3-a0b8-a559839aa4c3
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2
+    guid 10fa8c11-6de8-5765-8fcf-e716e0f27ed1
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3
+    guid 0d1b755d-1273-5e14-81d3-b6bb582b9ed8
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionTriggerDetails
+    guid ae083711-9b09-55d1-a0ae-2a14c5f83d6a
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration
+    guid dbc36e0b-2d90-53b9-90d2-93faf30dafdd
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts
+    guid a3b2de71-564c-5806-a1a9-c6043ca5d373
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration
+    guid 0e0d0b86-d202-58a3-a1ed-2ef9dbc0f291
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs
+    guid 15969bf0-9028-5722-8a37-7d7c34b41dd6
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2
+    guid 469df9e7-fd07-5eeb-a07d-9fcc67f089ba
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3
+    guid d4e9b3fc-8094-5cb6-a343-ce7a97187b45
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4
+    guid 31734ad5-9bfb-5bfb-bdef-8476258e3390
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicy
+    guid 5f5fc025-8c35-5529-8038-8cdc3634bbcd
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics
+    guid 3d9e1a70-7c39-551f-aa1f-f8ca35b3119e
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement
+    guid 4b2a4489-730d-5be7-80e6-8332941abf13
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
+    guid 338e4e69-db55-55c7-8338-ef64680a8f90
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs
+    guid 7b1cb7d9-a8a4-5c09-adb2-66165f817977
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo
+    guid 852149af-777d-53e9-9ee9-45d3f4b5be9c
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs
+    guid 1e1b565e-a013-55ea-9b8c-eea39d9fb6c1
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs2
+    guid abe45f6e-dc9d-5403-8107-c864d9276367
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession
+    guid c6da2251-83c3-55e4-a0f8-5de8b062adbf
+
+enum Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind python_type
+    py IppCommunicationErrorKind
+    signature enum(Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind;i4)
+
+enum Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind python_type
+    py IppPrinterCommunicationKind
+    signature enum(Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind;i4)
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs python_type
+    py PrintSupportCommunicationErrorDetectedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs;{9c90151e-ad1b-5081-a491-4a2d94244f2d})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
+    property communication_configuration
+        get get_CommunicationConfiguration slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration return
+    property error_kind
+        get get_ErrorKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=43
+            out hresult return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=99
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession python_type
+    py PrintSupportExtensionSession
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3
+    property printer
+        get get_Printer slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=4 reverse=22
+            out class type=Windows.Devices.Printers.IppPrintDevice return
+    event print_device_capabilities_changed
+        add add_PrintDeviceCapabilitiesChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs> name=handler
+            out event_token return
+        remove remove_PrintDeviceCapabilitiesChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=26 reverse=134
+            in event_token name=token
+    event print_ticket_validation_requested
+        add add_PrintTicketValidationRequested slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_PrintTicketValidationRequested slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=26 reverse=82
+            in event_token name=token
+    event printer_selected
+        add add_PrinterSelected slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs> name=handler
+            out event_token return
+        remove remove_PrinterSelected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2 shape=26 reverse=53
+            in event_token name=token
+    event communication_error_detected
+        add add_CommunicationErrorDetected slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs> name=handler
+            out event_token return
+        remove remove_CommunicationErrorDetected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3 shape=26 reverse=53
+            in event_token name=token
+    method start
+        method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=0 reverse=137
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails python_type
+    py PrintSupportExtensionTriggerDetails
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails;{ae083711-9b09-55d1-a0ae-2a14c5f83d6a})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionTriggerDetails
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionTriggerDetails
+    property session
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionTriggerDetails shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration python_type
+    py PrintSupportIppCommunicationConfiguration
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration;{dbc36e0b-2d90-53b9-90d2-93faf30dafdd})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration
+    property can_modify_timeouts
+        get get_CanModifyTimeouts slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration shape=4 reverse=43
+            out boolean return
+    property communication_kind
+        get get_CommunicationKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind return
+    property ipp_attribute_timeouts
+        get get_IppAttributeTimeouts slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration shape=4 reverse=62
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts return
+    property ipp_job_timeouts
+        get get_IppJobTimeouts slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration shape=4 reverse=99
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts python_type
+    py PrintSupportIppCommunicationTimeouts
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts;{a3b2de71-564c-5806-a1a9-c6043ca5d373})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts
+    property send_timeout
+        get get_SendTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=4 reverse=62
+            out timespan return
+        put put_SendTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=26 reverse=110
+            in timespan name=value
+    property receive_timeout
+        get get_ReceiveTimeout slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=4 reverse=121
+            out timespan return
+        put put_ReceiveTimeout slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=26 reverse=156
+            in timespan name=value
+    property connect_timeout
+        get get_ConnectTimeout slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=4 reverse=22
+            out timespan return
+        put put_ConnectTimeout slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts shape=26 reverse=53
+            in timespan name=value
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration python_type
+    py PrintSupportMxdcImageQualityConfiguration
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration;{0e0d0b86-d202-58a3-a1ed-2ef9dbc0f291})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration
+    property text_output_quality
+        get get_TextOutputQuality slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=186
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_TextOutputQuality slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=194
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property photographic_output_quality
+        get get_PhotographicOutputQuality slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=162
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_PhotographicOutputQuality slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=173
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property normal_output_quality
+        get get_NormalOutputQuality slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_NormalOutputQuality slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property high_output_quality
+        get get_HighOutputQuality slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=121
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_HighOutputQuality slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=141
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property fax_output_quality
+        get get_FaxOutputQuality slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=218
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_FaxOutputQuality slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=223
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property draft_output_quality
+        get get_DraftOutputQuality slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=62
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_DraftOutputQuality slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=99
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+    property automatic_output_quality
+        get get_AutomaticOutputQuality slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=202
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality return
+        put put_AutomaticOutputQuality slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportMxdcImageQualityConfiguration shape=4 reverse=210
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.XpsImageQuality name=value
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs python_type
+    py PrintSupportPrintDeviceCapabilitiesChangedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs;{15969bf0-9028-5722-8a37-7d7c34b41dd6})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4
+    property resource_language
+        get get_ResourceLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=43
+            out string return
+    property communication_configuration
+        get get_CommunicationConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3 shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration return
+    property mxdc_image_quality_configuration
+        get get_MxdcImageQualityConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4 shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration return
+    method get_current_print_device_capabilities
+        method GetCurrentPrintDeviceCapabilities slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    method get_current_print_device_resources
+        method GetCurrentPrintDeviceResources slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=62
+            out class type=Windows.Data.Xml.Dom.XmlDocument return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+    method set_print_device_capabilities_update_policy
+        method SetPrintDeviceCapabilitiesUpdatePolicy slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=121
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy name=updatePolicy
+    method set_supported_pdl_passthrough_content_types
+        method SetSupportedPdlPassthroughContentTypes slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedPdlContentTypes
+    method update_print_device_capabilities
+        method UpdatePrintDeviceCapabilities slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs shape=4 reverse=43
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=updatedPdc
+    method update_print_device_resources
+        method UpdatePrintDeviceResources slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=99
+            in class type=Windows.Data.Xml.Dom.XmlDocument name=updatedPdr
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy python_type
+    py PrintSupportPrintDeviceCapabilitiesUpdatePolicy
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;{5f5fc025-8c35-5529-8038-8cdc3634bbcd})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicy
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicy
+    factory Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics
+    method create_periodic_refresh static
+        method CreatePeriodicRefresh slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics shape=89 static
+            in timespan name=updatePeriod
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy return
+    method create_print_job_refresh static
+        method CreatePrintJobRefresh slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicyStatics shape=51 reverse=44 static
+            in uint32 name=numberOfJobs
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement activatable python_type
+    py PrintSupportPrintTicketElement
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement;{4b2a4489-730d-5be7-80e6-8332941abf13})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property namespace_uri
+        get get_NamespaceUri slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement shape=4 reverse=62
+            out string return
+        put put_NamespaceUri slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement shape=4 reverse=99
+            in string name=value
+    property local_name
+        get get_LocalName slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement shape=4 reverse=22
+            out string return
+        put put_LocalName slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement shape=4 reverse=43
+            in string name=value
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs python_type
+    py PrintSupportPrintTicketValidationRequestedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs;{338e4e69-db55-55c7-8338-ef64680a8f90})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
+    property print_ticket
+        get get_PrintTicket slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+    method set_print_ticket_validation_status
+        method SetPrintTicketValidationStatus slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus name=status
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs python_type
+    py PrintSupportPrinterSelectedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs;{7b1cb7d9-a8a4-5c09-adb2-66165f817977})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs
+    property print_ticket
+        get get_PrintTicket slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=43
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
+        put put_PrintTicket slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=62
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=value
+    property allowed_additional_features_and_parameters_count
+        get get_AllowedAdditionalFeaturesAndParametersCount slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=141
+            out uint32 return
+    property source_app_info
+        get get_SourceAppInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppInfo return
+    method get_deferral
+        method GetDeferral slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=173
+            out class type=Windows.Foundation.Deferral return
+    method set_adaptive_card
+        method SetAdaptiveCard slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=162
+            in interface type=Windows.UI.Shell.IAdaptiveCard name=adaptiveCard
+    method set_additional_features
+        method SetAdditionalFeatures slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=99
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> name=features
+    method set_additional_parameters
+        method SetAdditionalParameters slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs shape=4 reverse=121
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> name=parameters
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo python_type
+    py PrintSupportSessionInfo
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo;{852149af-777d-53e9-9ee9-45d3f4b5be9c})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo
+    property printer
+        get get_Printer slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo shape=4 reverse=43
+            out class type=Windows.Devices.Printers.IppPrintDevice return
+    property source_app_info
+        get get_SourceAppInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSessionInfo shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppInfo return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs python_type
+    py PrintSupportSettingsActivatedEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs;{1e1b565e-a013-55ea-9b8c-eea39d9fb6c1})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs2
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property session
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession return
+    property owner_window_id
+        get get_OwnerWindowId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs2 shape=4 reverse=22
+            out struct type=Windows.UI.WindowId return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession python_type
+    py PrintSupportSettingsUISession
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession;{c6da2251-83c3-55e4-a0f8-5de8b062adbf})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession
+    property document_title
+        get get_DocumentTitle slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession shape=4 reverse=43
+            out string return
+    property launch_kind
+        get get_LaunchKind slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession shape=4 reverse=62
+            out enum32 type=Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind return
+    property session_info
+        get get_SessionInfo slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession shape=4 reverse=121
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo return
+    property session_print_ticket
+        get get_SessionPrintTicket slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
+    method update_print_ticket
+        method UpdatePrintTicket slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession shape=4 reverse=99
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
+
+enum Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind python_type
+    py SettingsLaunchKind
+    signature enum(Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs> concrete
+    guid cee7c5ea-81e8-54a0-93c6-9f926e1eeb3d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs;{9c90151e-ad1b-5081-a491-4a2d94244f2d}))
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs> concrete
+    guid f9203731-8ec4-5001-a5b7-b67fee4ca00b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs;{15969bf0-9028-5722-8a37-7d7c34b41dd6}))
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs> concrete
+    guid ad13135a-1c8f-5ebd-a426-eb7434639d11
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs;{338e4e69-db55-55c7-8338-ef64680a8f90}))
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs> concrete
+    guid 0cff2f5c-9b0d-56d5-afe8-c213f2b3793d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs;{7b1cb7d9-a8a4-5c09-adb2-66165f817977}))
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs
+
+enum Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus python_type
+    py WorkflowPrintTicketValidationStatus
+    signature enum(Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus;i4)
+
+enum Windows.Graphics.Printing.PrintSupport.XpsImageQuality python_type
+    py XpsImageQuality
+    signature enum(Windows.Graphics.Printing.PrintSupport.XpsImageQuality;i4)
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.AppInfo external
+    py winrt.windows.applicationmodel.AppInfo
+
+enum Windows.ApplicationModel.Activation.ActivationKind external
+    py winrt.windows.applicationmodel.activation.ActivationKind
+
+enum Windows.ApplicationModel.Activation.ApplicationExecutionState external
+    py winrt.windows.applicationmodel.activation.ApplicationExecutionState
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
+    py winrt.windows.applicationmodel.activation._IActivatedEventArgs
+    guid cf651713-cd08-4fd8-b697-a281b6544e2e
+
+interface Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser external
+    py winrt.windows.applicationmodel.activation._IActivatedEventArgsWithUser
+    guid 1cf09b9e-9962-4936-80ff-afc8e8ae5c8c
+
+class Windows.ApplicationModel.Activation.SplashScreen external
+    py winrt.windows.applicationmodel.activation.SplashScreen
+
+class Windows.Data.Xml.Dom.XmlDocument external
+    py winrt.windows.data.xml.dom.XmlDocument
+
+class Windows.Devices.Printers.IppPrintDevice external
+    py winrt.windows.devices.printers.IppPrintDevice
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket external
+    py winrt.windows.graphics.printing.printticket.WorkflowPrintTicket
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId
+
+interface Windows.UI.Shell.IAdaptiveCard external
+    py winrt.windows.ui.shell._IAdaptiveCard
+    guid 72d0568c-a274-41cd-82a8-989d40b9b05e

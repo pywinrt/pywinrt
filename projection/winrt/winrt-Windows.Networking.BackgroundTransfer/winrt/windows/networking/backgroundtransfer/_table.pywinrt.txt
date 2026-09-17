@@ -1,0 +1,897 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking.BackgroundTransfer
+
+struct Windows.Networking.BackgroundTransfer.BackgroundDownloadProgress python_type
+    py BackgroundDownloadProgress
+    signature struct(Windows.Networking.BackgroundTransfer.BackgroundDownloadProgress;u8;u8;enum(Windows.Networking.BackgroundTransfer.BackgroundTransferStatus;i4);b1;b1)
+    field bytes_received BytesReceived uint64
+    field total_bytes_to_receive TotalBytesToReceive uint64
+    field status Status enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferStatus
+    field has_response_changed HasResponseChanged boolean
+    field has_restarted HasRestarted boolean
+
+class Windows.Networking.BackgroundTransfer.BackgroundDownloader activatable python_type
+    py BackgroundDownloader
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundDownloader;{c1c79333-6649-4b1d-a826-a4b3dd234d0b})
+    default Windows.Networking.BackgroundTransfer.IBackgroundDownloader
+    requires Windows.Networking.BackgroundTransfer.IBackgroundDownloader
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferBase
+    requires Windows.Networking.BackgroundTransfer.IBackgroundDownloader2
+    requires Windows.Networking.BackgroundTransfer.IBackgroundDownloader3
+    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods
+    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2
+    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent
+    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory shape=51 reverse=24
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup implicit
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundDownloader return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory shape=51 reverse=24
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundDownloader return
+    property failure_toast_notification
+        get get_FailureToastNotification slot=10 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=121
+            out class type=Windows.UI.Notifications.ToastNotification return
+        put put_FailureToastNotification slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=141
+            in class type=Windows.UI.Notifications.ToastNotification name=value
+    property success_tile_notification
+        get get_SuccessTileNotification slot=12 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=162
+            out class type=Windows.UI.Notifications.TileNotification return
+        put put_SuccessTileNotification slot=13 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=173
+            in class type=Windows.UI.Notifications.TileNotification name=value
+    property success_toast_notification
+        get get_SuccessToastNotification slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=62
+            out class type=Windows.UI.Notifications.ToastNotification return
+        put put_SuccessToastNotification slot=9 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=99
+            in class type=Windows.UI.Notifications.ToastNotification name=value
+    property transfer_group
+        get get_TransferGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup return
+        put put_TransferGroup slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=43
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=value
+    property failure_tile_notification
+        get get_FailureTileNotification slot=14 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=186
+            out class type=Windows.UI.Notifications.TileNotification return
+        put put_FailureTileNotification slot=15 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader2 shape=4 reverse=194
+            in class type=Windows.UI.Notifications.TileNotification name=value
+    property completion_group
+        get get_CompletionGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader3 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup return
+    property cost_policy
+        get get_CostPolicy slot=15 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=194
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=16 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=202
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property group
+        get get_Group slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=173 deprecated
+            out string return
+        put put_Group slot=14 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=186 deprecated
+            in string name=value
+    property method
+        get get_Method slot=11 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=141
+            out string return
+        put put_Method slot=12 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=162
+            in string name=value
+    property proxy_credential
+        get get_ProxyCredential slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=99
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=10 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=121
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    property server_credential
+        get get_ServerCredential slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=43
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=8 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=62
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    method create_download
+        method CreateDownload slot=6 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader shape=117 reverse=25
+            in class type=Windows.Foundation.Uri name=uri
+            in interface type=Windows.Storage.IStorageFile name=resultFile
+            out class type=Windows.Networking.BackgroundTransfer.DownloadOperation return
+        method CreateDownload slot=7 inputs=3 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader shape=195 reverse=46
+            in class type=Windows.Foundation.Uri name=uri
+            in interface type=Windows.Storage.IStorageFile name=resultFile
+            in interface type=Windows.Storage.IStorageFile name=requestBodyFile
+            out class type=Windows.Networking.BackgroundTransfer.DownloadOperation return
+    method create_download_async
+        method CreateDownloadAsync slot=8 inputs=3 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloader shape=195 reverse=68
+            in class type=Windows.Foundation.Uri name=uri
+            in interface type=Windows.Storage.IStorageFile name=resultFile
+            in interface type=Windows.Storage.Streams.IInputStream name=requestBodyStream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.DownloadOperation> return
+    method get_current_downloads_async static
+        method GetCurrentDownloadsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>> return
+        method GetCurrentDownloadsAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods shape=51 reverse=44 static deprecated
+            in string name=group
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>> return
+    method get_current_downloads_for_transfer_group_async static
+        method GetCurrentDownloadsForTransferGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2 shape=51 reverse=24 static
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=group
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>> return
+    method request_unconstrained_downloads_async static deprecated
+        method RequestUnconstrainedDownloadsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent shape=51 reverse=24 static deprecated
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.DownloadOperation> name=operations
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> return
+    method set_request_header
+        method SetRequestHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+
+enum Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior python_type
+    py BackgroundTransferBehavior
+    signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior;i4)
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup activatable python_type
+    py BackgroundTransferCompletionGroup
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup;{2d930225-986b-574d-7950-0add47f5d706})
+    default Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property is_enabled
+        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup shape=4 reverse=43
+            out boolean return
+    property trigger
+        get get_Trigger slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup shape=4 reverse=22
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTrigger return
+    method enable
+        method Enable slot=8 inputs=0 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup shape=0 reverse=55
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails python_type
+    py BackgroundTransferCompletionGroupTriggerDetails
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails;{7b6be286-6e47-5136-7fcb-fa4389f46f5b})
+    default Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails
+    property downloads
+        get get_Downloads slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation> return
+    property uploads
+        get get_Uploads slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation> return
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart activatable python_type
+    py BackgroundTransferContentPart
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart;{e8e15657-d7d1-4ed8-838e-674ac217ace6})
+    default Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart
+    factory Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=51 reverse=24
+            in string name=name implicit
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=117 reverse=45
+            in string name=name
+            in string name=fileName
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+    method set_file
+        method SetFile slot=8 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart shape=4 reverse=62
+            in interface type=Windows.Storage.IStorageFile name=value
+    method set_header
+        method SetHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+    method set_text
+        method SetText slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart shape=4 reverse=43
+            in string name=value
+
+enum Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy python_type
+    py BackgroundTransferCostPolicy
+    signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy;i4)
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferError static python_type
+    py BackgroundTransferError
+    factory Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods
+    method get_status static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods shape=51 reverse=24 static
+            in int32 name=hresult
+            out enum32 type=Windows.Web.WebErrorStatus return
+
+struct Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange python_type
+    py BackgroundTransferFileRange
+    signature struct(Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange;u8;u8)
+    field offset Offset uint64
+    field length Length uint64
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferGroup python_type
+    py BackgroundTransferGroup
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundTransferGroup;{d8c3e3e4-6459-4540-85eb-aaa1c8903677})
+    default Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup
+    factory Windows.Networking.BackgroundTransfer.IBackgroundTransferGroupStatics
+    property transfer_behavior
+        get get_TransferBehavior slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup shape=4 reverse=43
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior return
+        put put_TransferBehavior slot=8 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup shape=4 reverse=62
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup shape=4 reverse=22
+            out string return
+    method create_group static
+        method CreateGroup slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferGroupStatics shape=51 reverse=24 static
+            in string name=name
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup return
+
+enum Windows.Networking.BackgroundTransfer.BackgroundTransferPriority python_type
+    py BackgroundTransferPriority
+    signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferPriority;i4)
+
+class Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs python_type
+    py BackgroundTransferRangesDownloadedEventArgs
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs;{3ebc7453-bf48-4a88-9248-b0c165184f5c})
+    default Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs
+    property added_ranges
+        get get_AddedRanges slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> return
+    property was_download_restarted
+        get get_WasDownloadRestarted slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs shape=4 reverse=22
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.Networking.BackgroundTransfer.BackgroundTransferStatus python_type
+    py BackgroundTransferStatus
+    signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferStatus;i4)
+
+struct Windows.Networking.BackgroundTransfer.BackgroundUploadProgress python_type
+    py BackgroundUploadProgress
+    signature struct(Windows.Networking.BackgroundTransfer.BackgroundUploadProgress;u8;u8;u8;u8;enum(Windows.Networking.BackgroundTransfer.BackgroundTransferStatus;i4);b1;b1)
+    field bytes_received BytesReceived uint64
+    field bytes_sent BytesSent uint64
+    field total_bytes_to_receive TotalBytesToReceive uint64
+    field total_bytes_to_send TotalBytesToSend uint64
+    field status Status enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferStatus
+    field has_response_changed HasResponseChanged boolean
+    field has_restarted HasRestarted boolean
+
+class Windows.Networking.BackgroundTransfer.BackgroundUploader activatable python_type
+    py BackgroundUploader
+    signature rc(Windows.Networking.BackgroundTransfer.BackgroundUploader;{c595c9ae-cead-465b-8801-c55ac90a01ce})
+    default Windows.Networking.BackgroundTransfer.IBackgroundUploader
+    requires Windows.Networking.BackgroundTransfer.IBackgroundUploader
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferBase
+    requires Windows.Networking.BackgroundTransfer.IBackgroundUploader2
+    requires Windows.Networking.BackgroundTransfer.IBackgroundUploader3
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory shape=51 reverse=24
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup implicit
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundUploader return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory shape=51 reverse=24
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundUploader return
+    property server_credential
+        get get_ServerCredential slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=43
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=8 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=62
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    property proxy_credential
+        get get_ProxyCredential slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=99
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=10 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=121
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    property method
+        get get_Method slot=11 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=141
+            out string return
+        put put_Method slot=12 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=162
+            in string name=value
+    property group
+        get get_Group slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=173 deprecated
+            out string return
+        put put_Group slot=14 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=186 deprecated
+            in string name=value
+    property cost_policy
+        get get_CostPolicy slot=15 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=194
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=16 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=202
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property failure_tile_notification
+        get get_FailureTileNotification slot=14 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=186
+            out class type=Windows.UI.Notifications.TileNotification return
+        put put_FailureTileNotification slot=15 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=194
+            in class type=Windows.UI.Notifications.TileNotification name=value
+    property transfer_group
+        get get_TransferGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup return
+        put put_TransferGroup slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=43
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=value
+    property success_toast_notification
+        get get_SuccessToastNotification slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=62
+            out class type=Windows.UI.Notifications.ToastNotification return
+        put put_SuccessToastNotification slot=9 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=99
+            in class type=Windows.UI.Notifications.ToastNotification name=value
+    property success_tile_notification
+        get get_SuccessTileNotification slot=12 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=162
+            out class type=Windows.UI.Notifications.TileNotification return
+        put put_SuccessTileNotification slot=13 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=173
+            in class type=Windows.UI.Notifications.TileNotification name=value
+    property failure_toast_notification
+        get get_FailureToastNotification slot=10 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=121
+            out class type=Windows.UI.Notifications.ToastNotification return
+        put put_FailureToastNotification slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader2 shape=4 reverse=141
+            in class type=Windows.UI.Notifications.ToastNotification name=value
+    property completion_group
+        get get_CompletionGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader3 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup return
+    method create_upload
+        method CreateUpload slot=6 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader shape=117 reverse=25
+            in class type=Windows.Foundation.Uri name=uri
+            in interface type=Windows.Storage.IStorageFile name=sourceFile
+            out class type=Windows.Networking.BackgroundTransfer.UploadOperation return
+    method create_upload_async
+        method CreateUploadAsync slot=8 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader shape=117 reverse=66
+            in class type=Windows.Foundation.Uri name=uri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart> name=parts
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UploadOperation> return
+        method CreateUploadAsync slot=9 inputs=3 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader shape=195 reverse=102
+            in class type=Windows.Foundation.Uri name=uri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart> name=parts
+            in string name=subType
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UploadOperation> return
+        method CreateUploadAsync slot=10 inputs=4 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader shape=239
+            in class type=Windows.Foundation.Uri name=uri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart> name=parts
+            in string name=subType
+            in string name=boundary
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UploadOperation> return
+    method create_upload_from_stream_async
+        method CreateUploadFromStreamAsync slot=7 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploader shape=117 reverse=45
+            in class type=Windows.Foundation.Uri name=uri
+            in interface type=Windows.Storage.Streams.IInputStream name=sourceStream
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UploadOperation> return
+    method get_current_uploads_async static
+        method GetCurrentUploadsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>> return
+        method GetCurrentUploadsAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods shape=51 reverse=44 static deprecated
+            in string name=group
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>> return
+    method get_current_uploads_for_transfer_group_async static
+        method GetCurrentUploadsForTransferGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2 shape=51 reverse=24 static
+            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=group
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>> return
+    method request_unconstrained_uploads_async static deprecated
+        method RequestUnconstrainedUploadsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent shape=51 reverse=24 static deprecated
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.UploadOperation> name=operations
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> return
+    method set_request_header
+        method SetRequestHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+
+class Windows.Networking.BackgroundTransfer.ContentPrefetcher static python_type
+    py ContentPrefetcher
+    factory Windows.Networking.BackgroundTransfer.IContentPrefetcher
+    factory Windows.Networking.BackgroundTransfer.IContentPrefetcherTime
+    property indirect_content_uri static
+        get get_IndirectContentUri slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IContentPrefetcher shape=4 reverse=62 static
+            out class type=Windows.Foundation.Uri return
+        put put_IndirectContentUri slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IContentPrefetcher shape=4 reverse=43 static
+            in class type=Windows.Foundation.Uri name=value
+    property content_uris static
+        get get_ContentUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IContentPrefetcher shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property last_successful_prefetch_time static
+        get get_LastSuccessfulPrefetchTime slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IContentPrefetcherTime shape=4 reverse=22 static
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+
+class Windows.Networking.BackgroundTransfer.DownloadOperation python_type
+    py DownloadOperation
+    signature rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7})
+    default Windows.Networking.BackgroundTransfer.IDownloadOperation
+    requires Windows.Networking.BackgroundTransfer.IDownloadOperation
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority
+    requires Windows.Networking.BackgroundTransfer.IDownloadOperation2
+    requires Windows.Networking.BackgroundTransfer.IDownloadOperation3
+    requires Windows.Networking.BackgroundTransfer.IDownloadOperation4
+    requires Windows.Networking.BackgroundTransfer.IDownloadOperation5
+    property cost_policy
+        get get_CostPolicy slot=10 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=121
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=141
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property requested_uri
+        get get_RequestedUri slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+        put put_RequestedUri slot=12 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=162
+            in class type=Windows.Foundation.Uri name=value
+    property method
+        get get_Method slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=62
+            out string return
+    property group
+        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=99 deprecated
+            out string return
+    property guid
+        get get_Guid slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=22
+            out guid return
+    property priority
+        get get_Priority slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=22
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority return
+        put put_Priority slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=43
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority name=value
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=4 reverse=43
+            out struct type=Windows.Networking.BackgroundTransfer.BackgroundDownloadProgress return
+    property result_file
+        get get_ResultFile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=4 reverse=22
+            out interface type=Windows.Storage.IStorageFile return
+    property transfer_group
+        get get_TransferGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation2 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup return
+    property is_random_access_required
+        get get_IsRandomAccessRequired slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=22
+            out boolean return
+        put put_IsRandomAccessRequired slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=43
+            in boolean name=value
+    property current_web_error_status
+        get get_CurrentWebErrorStatus slot=14 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<Windows.Web.WebErrorStatus> return
+    property recoverable_web_error_statuses
+        get get_RecoverableWebErrorStatuses slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.WebErrorStatus> return
+    event ranges_downloaded
+        add add_RangesDownloaded slot=10 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs> name=eventHandler
+            out event_token return
+        remove remove_RangesDownloaded slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=26 reverse=156
+            in event_token name=eventCookie
+    method attach_async
+        method AttachAsync slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.DownloadOperation> return
+    method get_downloaded_ranges
+        method GetDownloadedRanges slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> return
+    method get_response_information
+        method GetResponseInformation slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=173
+            out class type=Windows.Networking.BackgroundTransfer.ResponseInformation return
+    method get_result_random_access_stream_reference
+        method GetResultRandomAccessStreamReference slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation3 shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    method get_result_stream_at
+        method GetResultStreamAt slot=12 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=47 reverse=161
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method make_current_in_transfer_group
+        method MakeCurrentInTransferGroup slot=6 inputs=0 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation4 shape=0 reverse=16
+    method pause
+        method Pause slot=10 inputs=0 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=0 reverse=117
+    method remove_request_header
+        method RemoveRequestHeader slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation5 shape=4 reverse=43
+            in string name=headerName
+    method resume
+        method Resume slot=11 inputs=0 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=0 reverse=137
+    method set_request_header
+        method SetRequestHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation5 shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+    method start_async
+        method StartAsync slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IDownloadOperation shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.DownloadOperation> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>> concrete
+    guid ae42cddf-3042-5d92-a01e-643c252b8050
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>> concrete
+    guid 3e4c6a3c-48a4-5e22-b29a-3e429469462f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.DownloadOperation> concrete
+    guid 43ef3a5f-cc7d-566d-a92a-4caa76b92a1f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7}))
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> concrete
+    guid a8dc2a04-3f44-5046-8182-cd0ec147e17d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult;{4c24b81f-d944-4112-a98e-6a69522b7ebb}))
+    argument Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UploadOperation> concrete
+    guid 44212ea1-b524-5aee-a320-7199225381d1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae}))
+    argument Windows.Networking.BackgroundTransfer.UploadOperation
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.DownloadOperation> concrete
+    guid e86a4f5d-743a-5f18-9d4c-bc8ed5942659
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7});rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7}))
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.UploadOperation,Windows.Networking.BackgroundTransfer.UploadOperation> concrete
+    guid 35ddaefa-db6a-5d0d-ba54-a0728401171e
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae});rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae}))
+    argument Windows.Networking.BackgroundTransfer.UploadOperation
+    argument Windows.Networking.BackgroundTransfer.UploadOperation
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloader
+    guid c1c79333-6649-4b1d-a826-a4b3dd234d0b
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloader2
+    guid a94a5847-348d-4a35-890e-8a1ef3798479
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloader3
+    guid d11a8c48-86e8-48e2-b615-6976aabf861d
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory
+    guid 26836c24-d89e-46f4-a29a-4f4d4f144155
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods
+    guid 52a65a35-c64e-426c-9919-540d0d21a650
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2
+    guid 2faa1327-1ad4-4ca5-b2cd-08dbf0746afe
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent
+    guid 5d14e906-9266-4808-bd71-5925f2a3130a
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferBase python_type
+    py _IBackgroundTransferBase
+    guid 2a9da250-c769-458c-afe8-feb8d4d3b2ef
+    signature {2a9da250-c769-458c-afe8-feb8d4d3b2ef}
+    property cost_policy
+        get get_CostPolicy slot=15 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=194
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=16 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=202
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property group
+        get get_Group slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=173 deprecated
+            out string return
+        put put_Group slot=14 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=186 deprecated
+            in string name=value
+    property method
+        get get_Method slot=11 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=141
+            out string return
+        put put_Method slot=12 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=162
+            in string name=value
+    property proxy_credential
+        get get_ProxyCredential slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=99
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=10 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=121
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    property server_credential
+        get get_ServerCredential slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=43
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=8 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=4 reverse=62
+            in class type=Windows.Security.Credentials.PasswordCredential name=credential
+    method set_request_header
+        method SetRequestHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferBase shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroup
+    guid 2d930225-986b-574d-7950-0add47f5d706
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferCompletionGroupTriggerDetails
+    guid 7b6be286-6e47-5136-7fcb-fa4389f46f5b
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart
+    guid e8e15657-d7d1-4ed8-838e-674ac217ace6
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory python_type
+    py _IBackgroundTransferContentPartFactory
+    guid 90ef98a9-7a01-4a0b-9f80-a0b0bb370f8d
+    signature {90ef98a9-7a01-4a0b-9f80-a0b0bb370f8d}
+    method create_with_name
+        method CreateWithName slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+    method create_with_name_and_file_name
+        method CreateWithNameAndFileName slot=7 inputs=2 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=117 reverse=45
+            in string name=name
+            in string name=fileName
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods
+    guid aad33b04-1192-4bf4-8b68-39c5add244e2
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup
+    guid d8c3e3e4-6459-4540-85eb-aaa1c8903677
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferGroupStatics
+    guid 02ec50b2-7d18-495b-aa22-32a97d45d3e2
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation python_type
+    py _IBackgroundTransferOperation
+    guid ded06846-90ca-44fb-8fb1-124154c0d539
+    signature {ded06846-90ca-44fb-8fb1-124154c0d539}
+    property cost_policy
+        get get_CostPolicy slot=10 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=121
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=141
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property group
+        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=99 deprecated
+            out string return
+    property guid
+        get get_Guid slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=22
+            out guid return
+    property method
+        get get_Method slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=62
+            out string return
+    property requested_uri
+        get get_RequestedUri slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    method get_response_information
+        method GetResponseInformation slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=173
+            out class type=Windows.Networking.BackgroundTransfer.ResponseInformation return
+    method get_result_stream_at
+        method GetResultStreamAt slot=12 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=47 reverse=161
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority python_type
+    py _IBackgroundTransferOperationPriority
+    guid 04854327-5254-4b3a-915e-0aa49275c0f9
+    signature {04854327-5254-4b3a-915e-0aa49275c0f9}
+    property priority
+        get get_Priority slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=22
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority return
+        put put_Priority slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=43
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority name=value
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundTransferRangesDownloadedEventArgs
+    guid 3ebc7453-bf48-4a88-9248-b0c165184f5c
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploader
+    guid c595c9ae-cead-465b-8801-c55ac90a01ce
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploader2
+    guid 8e0612ce-0c34-4463-807f-198a1b8bd4ad
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploader3
+    guid b95e9439-5bf0-4b3a-8c47-2c6199a854b9
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory
+    guid 736203c7-10e7-48a0-ac3c-1ac71095ec57
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods
+    guid f2875cfb-9b05-4741-9121-740a83e247df
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2
+    guid e919ac62-ea08-42f0-a2ac-07e467549080
+
+interface Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent
+    guid 3bb384cb-0760-461d-907f-5138f84d44c1
+
+interface Windows.Networking.BackgroundTransfer.IContentPrefetcher
+    guid a8d6f754-7dc1-4cd9-8810-2a6aa9417e11
+
+interface Windows.Networking.BackgroundTransfer.IContentPrefetcherTime
+    guid e361fd08-132a-4fde-a7cc-fcb0e66523af
+
+interface Windows.Networking.BackgroundTransfer.IDownloadOperation
+    guid bd87ebb0-5714-4e09-ba68-bef73903b0d7
+
+interface Windows.Networking.BackgroundTransfer.IDownloadOperation2
+    guid a3cced40-8f9c-4353-9cd4-290dee387c38
+
+interface Windows.Networking.BackgroundTransfer.IDownloadOperation3
+    guid 5027351c-7d5e-4adc-b8d3-df5c6031b9cc
+
+interface Windows.Networking.BackgroundTransfer.IDownloadOperation4
+    guid 0cdaaef4-8cef-404a-966d-f058400bed80
+
+interface Windows.Networking.BackgroundTransfer.IDownloadOperation5
+    guid a699a86f-5590-463a-b8d6-1e491a2760a5
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart> concrete
+    guid cf303199-de3b-5dac-a703-6c57d80821c4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart;{e8e15657-d7d1-4ed8-838e-674ac217ace6}))
+    argument Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.DownloadOperation> concrete
+    guid f6fd69cb-e6e7-56d5-9be6-e0dc4683fa80
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7}))
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.UploadOperation> concrete
+    guid 79778799-38cc-5b67-9cd0-043fc47a9ef7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae}))
+    argument Windows.Networking.BackgroundTransfer.UploadOperation
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.IReference<Windows.Web.WebErrorStatus> concrete
+    guid f2b26336-6a9d-54de-8eca-00d6c871e469
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Web.WebErrorStatus;i4))
+    argument Windows.Web.WebErrorStatus
+
+interface Windows.Networking.BackgroundTransfer.IResponseInformation
+    guid f8bb9a12-f713-4792-8b68-d9d297f91d2e
+
+interface Windows.Networking.BackgroundTransfer.IUnconstrainedTransferRequestResult
+    guid 4c24b81f-d944-4112-a98e-6a69522b7ebb
+
+interface Windows.Networking.BackgroundTransfer.IUploadOperation
+    guid 3e5624e0-7389-434c-8b35-427fd36bbdae
+
+interface Windows.Networking.BackgroundTransfer.IUploadOperation2
+    guid 556189f2-2774-4df6-9fa5-209f2bfb12f7
+
+interface Windows.Networking.BackgroundTransfer.IUploadOperation3
+    guid 42c92ca3-de39-4546-bc62-3774b4294de3
+
+interface Windows.Networking.BackgroundTransfer.IUploadOperation4
+    guid 50edef31-fac5-41ee-b030-dc77caee9faa
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete
+    guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    argument Windows.Foundation.Uri
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> concrete
+    guid c73ceef0-854a-5947-9e7c-527e3915d335
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange;u8;u8))
+    argument Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange
+
+interface Windows.Foundation.Collections.IVector<Windows.Web.WebErrorStatus> concrete
+    guid 61bc06e3-b752-5b56-8374-3b45a214693f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Web.WebErrorStatus;i4))
+    argument Windows.Web.WebErrorStatus
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation> concrete
+    guid f87d9755-2a7d-59fc-bc92-b48636f4d955
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7}))
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation> concrete
+    guid 8e96d4b0-f0ae-51cb-b7c4-024251bd16d8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae}))
+    argument Windows.Networking.BackgroundTransfer.UploadOperation
+
+class Windows.Networking.BackgroundTransfer.ResponseInformation python_type
+    py ResponseInformation
+    signature rc(Windows.Networking.BackgroundTransfer.ResponseInformation;{f8bb9a12-f713-4792-8b68-d9d297f91d2e})
+    default Windows.Networking.BackgroundTransfer.IResponseInformation
+    requires Windows.Networking.BackgroundTransfer.IResponseInformation
+    property actual_uri
+        get get_ActualUri slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IResponseInformation shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property headers
+        get get_Headers slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IResponseInformation shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    property is_resumable
+        get get_IsResumable slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IResponseInformation shape=4 reverse=22
+            out boolean return
+    property status_code
+        get get_StatusCode slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IResponseInformation shape=4 reverse=62
+            out uint32 return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs> concrete
+    guid 93a20d85-bdfc-5195-90d9-8cb56cbcb3d8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.BackgroundTransfer.DownloadOperation;{bd87ebb0-5714-4e09-ba68-bef73903b0d7});rc(Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs;{3ebc7453-bf48-4a88-9248-b0c165184f5c}))
+    argument Windows.Networking.BackgroundTransfer.DownloadOperation
+    argument Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs
+
+class Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult python_type
+    py UnconstrainedTransferRequestResult
+    signature rc(Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult;{4c24b81f-d944-4112-a98e-6a69522b7ebb})
+    default Windows.Networking.BackgroundTransfer.IUnconstrainedTransferRequestResult
+    requires Windows.Networking.BackgroundTransfer.IUnconstrainedTransferRequestResult
+    property is_unconstrained
+        get get_IsUnconstrained slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUnconstrainedTransferRequestResult shape=4 reverse=22 deprecated
+            out boolean return
+
+class Windows.Networking.BackgroundTransfer.UploadOperation python_type
+    py UploadOperation
+    signature rc(Windows.Networking.BackgroundTransfer.UploadOperation;{3e5624e0-7389-434c-8b35-427fd36bbdae})
+    default Windows.Networking.BackgroundTransfer.IUploadOperation
+    requires Windows.Networking.BackgroundTransfer.IUploadOperation
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation
+    requires Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority
+    requires Windows.Networking.BackgroundTransfer.IUploadOperation2
+    requires Windows.Networking.BackgroundTransfer.IUploadOperation3
+    requires Windows.Networking.BackgroundTransfer.IUploadOperation4
+    property cost_policy
+        get get_CostPolicy slot=10 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=121
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy return
+        put put_CostPolicy slot=11 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=141
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy name=value
+    property group
+        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=99 deprecated
+            out string return
+    property guid
+        get get_Guid slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=22
+            out guid return
+    property method
+        get get_Method slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=62
+            out string return
+    property requested_uri
+        get get_RequestedUri slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+    property priority
+        get get_Priority slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=22
+            out enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority return
+        put put_Priority slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority shape=4 reverse=43
+            in enum32 type=Windows.Networking.BackgroundTransfer.BackgroundTransferPriority name=value
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation shape=4 reverse=43
+            out struct type=Windows.Networking.BackgroundTransfer.BackgroundUploadProgress return
+    property source_file
+        get get_SourceFile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation shape=4 reverse=22
+            out interface type=Windows.Storage.IStorageFile return
+    property transfer_group
+        get get_TransferGroup slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation2 shape=4 reverse=22
+            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup return
+    method attach_async
+        method AttachAsync slot=9 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.UploadOperation,Windows.Networking.BackgroundTransfer.UploadOperation> return
+    method get_response_information
+        method GetResponseInformation slot=13 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=4 reverse=173
+            out class type=Windows.Networking.BackgroundTransfer.ResponseInformation return
+    method get_result_stream_at
+        method GetResultStreamAt slot=12 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation shape=47 reverse=161
+            in uint64 name=position
+            out interface type=Windows.Storage.Streams.IInputStream return
+    method make_current_in_transfer_group
+        method MakeCurrentInTransferGroup slot=6 inputs=0 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation3 shape=0 reverse=16
+    method remove_request_header
+        method RemoveRequestHeader slot=7 inputs=1 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation4 shape=4 reverse=43
+            in string name=headerName
+    method set_request_header
+        method SetRequestHeader slot=6 inputs=2 outputs=0 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation4 shape=51 reverse=24
+            in string name=headerName
+            in string name=headerValue
+    method start_async
+        method StartAsync slot=8 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IUploadOperation shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.BackgroundTransfer.UploadOperation,Windows.Networking.BackgroundTransfer.UploadOperation> return
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.ApplicationModel.Background.IBackgroundTrigger external
+    py winrt.windows.applicationmodel.background._IBackgroundTrigger
+    guid 84b3a058-6027-4b87-9790-bdf3f757dbd7
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IRandomAccessStreamReference external
+    py winrt.windows.storage.streams._IRandomAccessStreamReference
+    guid 33ee3134-1dd6-4e3a-8067-d1c162e8642b
+
+class Windows.UI.Notifications.TileNotification external
+    py winrt.windows.ui.notifications.TileNotification
+
+class Windows.UI.Notifications.ToastNotification external
+    py winrt.windows.ui.notifications.ToastNotification
+
+enum Windows.Web.WebErrorStatus external
+    py winrt.windows.web.WebErrorStatus

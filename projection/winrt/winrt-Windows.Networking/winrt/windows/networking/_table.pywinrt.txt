@@ -1,0 +1,111 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Networking
+
+enum Windows.Networking.DomainNameType python_type
+    py DomainNameType
+    signature enum(Windows.Networking.DomainNameType;i4)
+
+class Windows.Networking.EndpointPair python_type
+    py EndpointPair
+    signature rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d})
+    default Windows.Networking.IEndpointPair
+    requires Windows.Networking.IEndpointPair
+    factory Windows.Networking.IEndpointPairFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Networking.IEndpointPairFactory shape=239 reverse=27
+            in class type=Windows.Networking.HostName name=localHostName
+            in string name=localServiceName
+            in class type=Windows.Networking.HostName name=remoteHostName
+            in string name=remoteServiceName
+            out class type=Windows.Networking.EndpointPair return
+    property remote_service_name
+        get get_RemoteServiceName slot=12 inputs=0 outputs=1 declaring=Windows.Networking.IEndpointPair shape=4 reverse=162
+            out string return
+        put put_RemoteServiceName slot=13 inputs=1 outputs=0 declaring=Windows.Networking.IEndpointPair shape=4 reverse=173
+            in string name=value
+    property remote_host_name
+        get get_RemoteHostName slot=10 inputs=0 outputs=1 declaring=Windows.Networking.IEndpointPair shape=4 reverse=121
+            out class type=Windows.Networking.HostName return
+        put put_RemoteHostName slot=11 inputs=1 outputs=0 declaring=Windows.Networking.IEndpointPair shape=4 reverse=141
+            in class type=Windows.Networking.HostName name=value
+    property local_service_name
+        get get_LocalServiceName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.IEndpointPair shape=4 reverse=62
+            out string return
+        put put_LocalServiceName slot=9 inputs=1 outputs=0 declaring=Windows.Networking.IEndpointPair shape=4 reverse=99
+            in string name=value
+    property local_host_name
+        get get_LocalHostName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.IEndpointPair shape=4 reverse=22
+            out class type=Windows.Networking.HostName return
+        put put_LocalHostName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.IEndpointPair shape=4 reverse=43
+            in class type=Windows.Networking.HostName name=value
+
+class Windows.Networking.HostName python_type stringable
+    py HostName
+    signature rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb})
+    default Windows.Networking.IHostName
+    requires Windows.Networking.IHostName
+    requires Windows.Foundation.IStringable
+    factory Windows.Networking.IHostNameStatics
+    factory Windows.Networking.IHostNameFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.IHostNameFactory shape=51 reverse=24
+            in string name=hostName
+            out class type=Windows.Networking.HostName return
+    property canonical_name
+        get get_CanonicalName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.IHostName shape=4 reverse=99
+            out string return
+    property display_name
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.IHostName shape=4 reverse=62
+            out string return
+    property ip_information
+        get get_IPInformation slot=6 inputs=0 outputs=1 declaring=Windows.Networking.IHostName shape=4 reverse=22
+            out class type=Windows.Networking.Connectivity.IPInformation return
+    property raw_name
+        get get_RawName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.IHostName shape=4 reverse=43
+            out string return
+    property type
+        get get_Type slot=10 inputs=0 outputs=1 declaring=Windows.Networking.IHostName shape=4 reverse=121
+            out enum32 type=Windows.Networking.HostNameType return
+    method compare static
+        method Compare slot=6 inputs=2 outputs=1 declaring=Windows.Networking.IHostNameStatics shape=117 reverse=25 static
+            in string name=value1
+            in string name=value2
+            out int32 return
+    method is_equal
+        method IsEqual slot=11 inputs=1 outputs=1 declaring=Windows.Networking.IHostName shape=51 reverse=144
+            in class type=Windows.Networking.HostName name=hostName
+            out boolean return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+
+enum Windows.Networking.HostNameSortOptions python_type
+    py HostNameSortOptions
+    signature enum(Windows.Networking.HostNameSortOptions;u4)
+
+enum Windows.Networking.HostNameType python_type
+    py HostNameType
+    signature enum(Windows.Networking.HostNameType;i4)
+
+interface Windows.Networking.IEndpointPair
+    guid 33a0aa36-f8fa-4b30-b856-76517c3bd06d
+
+interface Windows.Networking.IEndpointPairFactory
+    guid b609d971-64e0-442b-aa6f-cc8c8f181f78
+
+interface Windows.Networking.IHostName
+    guid bf8ecaad-ed96-49a7-9084-d416cae88dcb
+
+interface Windows.Networking.IHostNameFactory
+    guid 458c23ed-712f-4576-adf1-c20b2c643558
+
+interface Windows.Networking.IHostNameStatics
+    guid f68cd4bf-a388-4e8b-91ea-54dd6dd901c0
+
+interface Windows.Foundation.IStringable external
+    py winrt.windows.foundation._IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3
+
+class Windows.Networking.Connectivity.IPInformation external
+    py winrt.windows.networking.connectivity.IPInformation

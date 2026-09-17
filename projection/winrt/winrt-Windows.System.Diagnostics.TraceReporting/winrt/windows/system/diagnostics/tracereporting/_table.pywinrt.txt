@@ -1,0 +1,142 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Diagnostics.TraceReporting
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics
+    guid c1145cfa-9292-4267-890a-9ea3ed072312
+
+interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
+    guid f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2
+
+interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
+    guid 3d4d5e2d-01d8-4768-8554-1eb1ca610986
+
+interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete
+    guid 9520e64b-15b2-52a6-98ed-3191fa6cf68a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};g16)
+    argument System.Guid
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> concrete
+    guid 8f1b3397-4dc3-5b72-91fa-0fdc915d950c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo;{f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2}))
+    argument Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState python_type
+    py PlatformDiagnosticActionState
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState;i4)
+
+class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static python_type
+    py PlatformDiagnosticActions
+    factory Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics
+    method download_latest_settings_for_namespace static
+        method DownloadLatestSettingsForNamespace slot=8 inputs=5 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=267 reverse=70 static
+            in string name=partner
+            in string name=feature
+            in boolean name=isScenarioNamespace
+            in boolean name=downloadOverCostedNetwork
+            in boolean name=downloadOverBattery
+            out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState return
+    method force_upload static
+        method ForceUpload slot=10 inputs=3 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=195 reverse=126 static
+            in enum_u32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies name=latency
+            in boolean name=uploadOverCostedNetwork
+            in boolean name=uploadOverBattery
+            out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState return
+    method get_active_scenario_list static
+        method GetActiveScenarioList slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Guid> return
+    method get_active_trace_runtime static
+        method GetActiveTraceRuntime slot=12 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 reverse=163 static
+            in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType name=slotType
+            out class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo return
+    method get_known_trace_list static
+        method GetKnownTraceList slot=13 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 reverse=174 static
+            in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType name=slotType
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> return
+    method is_scenario_enabled static
+        method IsScenarioEnabled slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=94 reverse=35 static
+            in guid name=scenarioId
+            out boolean return
+    method is_trace_running static
+        method IsTraceRunning slot=11 inputs=3 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=215 static
+            in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType name=slotType
+            in guid name=scenarioId
+            in uint64 name=traceProfileHash
+            out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState return
+    method try_escalate_scenario static
+        method TryEscalateScenario slot=7 inputs=6 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=284 static
+            in guid name=scenarioId
+            in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType name=escalationType
+            in string name=outputDirectory
+            in boolean name=timestampOutputDirectory
+            in boolean name=forceEscalationUpload
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=triggers
+            out boolean return
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType python_type
+    py PlatformDiagnosticEscalationType
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType;i4)
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies python_type
+    py PlatformDiagnosticEventBufferLatencies
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies;u4)
+
+class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo python_type
+    py PlatformDiagnosticTraceInfo
+    signature rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo;{f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2})
+    default Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
+    requires Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
+    property is_auto_logger
+        get get_IsAutoLogger slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=99
+            out boolean return
+    property is_exclusive
+        get get_IsExclusive slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=62
+            out boolean return
+    property max_trace_duration_file_time
+        get get_MaxTraceDurationFileTime slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=121
+            out int64 return
+    property priority
+        get get_Priority slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=141
+            out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority return
+    property profile_hash
+        get get_ProfileHash slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=43
+            out uint64 return
+    property scenario_id
+        get get_ScenarioId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=22
+            out guid return
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority python_type
+    py PlatformDiagnosticTracePriority
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority;i4)
+
+class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo python_type
+    py PlatformDiagnosticTraceRuntimeInfo
+    signature rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo;{3d4d5e2d-01d8-4768-8554-1eb1ca610986})
+    default Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
+    requires Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
+    property etw_runtime_file_time
+        get get_EtwRuntimeFileTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4 reverse=43
+            out int64 return
+    property runtime_file_time
+        get get_RuntimeFileTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4 reverse=22
+            out int64 return
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState python_type
+    py PlatformDiagnosticTraceSlotState
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState;i4)
+
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType python_type
+    py PlatformDiagnosticTraceSlotType
+    signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType;i4)
+
+class System.Guid external
+    py winrt.system.Guid
+
+class System.String external
+    py winrt.system.String

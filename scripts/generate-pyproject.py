@@ -47,13 +47,17 @@ RUNTIME_PACKAGE_FIND_SRC = """
 where = ["python"]
 """
 
-# module_state.h is private to the runtime's own translation units, so it is not
-# package data the way the public headers are, but the sdist still has to
-# carry it or building winrt-runtime from source fails.
+# These are private to the runtime's own translation units, so they are not
+# package data the way the public headers are, but the sdist still has to carry
+# them or building winrt-runtime from source fails. shapes-generated.h is the
+# census of ABI call shapes that the trampolines are instantiated from.
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 include src/module_state.h
+include src/shapes-generated.h
+include src/shapes.h
+include src/table.h
 """
 
 SDK_PACKAGE_TEMPLATE = """\
@@ -658,6 +662,7 @@ write_project_files(
         "src/compose.cpp",
         "src/errors.cpp",
         "src/runtime.cpp",
+        "src/table.cpp",
     ],
     package_name="winrt-runtime",
 )

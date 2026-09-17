@@ -1,0 +1,39 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics
+
+struct Windows.Graphics.DisplayAdapterId python_type
+    py DisplayAdapterId
+    signature struct(Windows.Graphics.DisplayAdapterId;u4;i4)
+    field low_part LowPart uint32
+    field high_part HighPart int32
+
+struct Windows.Graphics.DisplayId python_type
+    py DisplayId
+    signature struct(Windows.Graphics.DisplayId;u8)
+    field value Value uint64
+
+interface Windows.Graphics.IGeometrySource2D python_type
+    py _IGeometrySource2D
+    guid caff7902-670c-4181-a624-da977203b845
+    signature {caff7902-670c-4181-a624-da977203b845}
+
+struct Windows.Graphics.PointInt32 python_type
+    py PointInt32
+    signature struct(Windows.Graphics.PointInt32;i4;i4)
+    field x X int32
+    field y Y int32
+
+struct Windows.Graphics.RectInt32 python_type
+    py RectInt32
+    signature struct(Windows.Graphics.RectInt32;i4;i4;i4;i4)
+    field x X int32
+    field y Y int32
+    field width Width int32
+    field height Height int32
+
+struct Windows.Graphics.SizeInt32 python_type
+    py SizeInt32
+    signature struct(Windows.Graphics.SizeInt32;i4;i4)
+    field width Width int32
+    field height Height int32

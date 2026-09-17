@@ -1,0 +1,50 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Geolocation.Provider
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+class Windows.Devices.Geolocation.Provider.GeolocationProvider activatable python_type
+    py GeolocationProvider
+    signature rc(Windows.Devices.Geolocation.Provider.GeolocationProvider;{e4cf071d-3f64-509f-8dc2-0b74a059829d})
+    default Windows.Devices.Geolocation.Provider.IGeolocationProvider
+    requires Windows.Devices.Geolocation.Provider.IGeolocationProvider
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property is_overridden
+        get get_IsOverridden slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=4 reverse=22
+            out boolean return
+    event is_overridden_changed
+        add add_IsOverriddenChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=51 reverse=100
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_IsOverriddenChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=26 reverse=134
+            in event_token name=token
+    method clear_override_position
+        method ClearOverridePosition slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=0 reverse=55
+    method set_override_position
+        method SetOverridePosition slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=223
+            in struct type=Windows.Devices.Geolocation.BasicGeoposition name=newPosition
+            in enum32 type=Windows.Devices.Geolocation.PositionSource name=positionSource
+            in double name=accuracyInMeters
+            out enum32 type=Windows.Devices.Geolocation.Provider.LocationOverrideStatus return
+
+interface Windows.Devices.Geolocation.Provider.IGeolocationProvider
+    guid e4cf071d-3f64-509f-8dc2-0b74a059829d
+
+enum Windows.Devices.Geolocation.Provider.LocationOverrideStatus python_type
+    py LocationOverrideStatus
+    signature enum(Windows.Devices.Geolocation.Provider.LocationOverrideStatus;i4)
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.Devices.Geolocation.BasicGeoposition external
+    py winrt.windows.devices.geolocation.BasicGeoposition
+
+enum Windows.Devices.Geolocation.PositionSource external
+    py winrt.windows.devices.geolocation.PositionSource

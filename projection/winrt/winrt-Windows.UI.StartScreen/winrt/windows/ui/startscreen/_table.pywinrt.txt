@@ -1,0 +1,571 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.StartScreen
+
+enum Windows.UI.StartScreen.ForegroundText python_type
+    py ForegroundText
+    signature enum(Windows.UI.StartScreen.ForegroundText;i4)
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile>> concrete
+    guid f72d55b2-b004-5e35-b5c4-22e87619b30a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.StartScreen.SecondaryTile;{9e9e51e0-2bb5-4bc0-bb8d-42b23abcc88d})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile>
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.StartScreen.JumpList> concrete
+    guid 1c008c58-733b-5b42-962a-b33328236cd3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.StartScreen.JumpList;{b0234c3e-cd6f-4cb6-a611-61fd505f3ed1}))
+    argument Windows.UI.StartScreen.JumpList
+
+interface Windows.UI.StartScreen.IJumpList
+    guid b0234c3e-cd6f-4cb6-a611-61fd505f3ed1
+
+interface Windows.UI.StartScreen.IJumpListItem
+    guid 7adb6717-8b5d-4820-995b-9b418dbe48b0
+
+interface Windows.UI.StartScreen.IJumpListItemStatics
+    guid f1bfc4e8-c7aa-49cb-8dde-ecfccd7ad7e4
+
+interface Windows.UI.StartScreen.IJumpListStatics
+    guid a7e0c681-e67e-4b74-8250-3f322c4d92c3
+
+interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingBox> concrete
+    guid ab3274d9-9b82-5396-bb00-d70c539796b3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Perception.Spatial.SpatialBoundingBox;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4)))
+    argument Windows.Perception.Spatial.SpatialBoundingBox
+
+interface Windows.UI.StartScreen.ISecondaryTile
+    guid 9e9e51e0-2bb5-4bc0-bb8d-42b23abcc88d
+
+interface Windows.UI.StartScreen.ISecondaryTile2
+    guid b2f6cc35-3250-4990-923c-294ab4b694dd
+
+interface Windows.UI.StartScreen.ISecondaryTileFactory
+    guid 57f52ca0-51bc-4abf-8ebf-627a0398b05a
+
+interface Windows.UI.StartScreen.ISecondaryTileFactory2
+    guid 274b8a3b-522d-448e-9eb2-d0672ab345c8
+
+interface Windows.UI.StartScreen.ISecondaryTileStatics
+    guid 99908dae-d051-4676-87fe-9ec242d83c74
+
+interface Windows.UI.StartScreen.ISecondaryTileVisualElements
+    guid 1d8df333-815e-413f-9f50-a81da70a96b2
+
+interface Windows.UI.StartScreen.ISecondaryTileVisualElements2
+    guid fd2e31d0-57dc-4794-8ecf-5682f5f3e6ef
+
+interface Windows.UI.StartScreen.ISecondaryTileVisualElements3
+    guid 56b55ad6-d15c-40f4-81e7-57ffd8f8a4e9
+
+interface Windows.UI.StartScreen.ISecondaryTileVisualElements4
+    guid 66566117-b544-40d2-8d12-74d4ec24d04c
+
+interface Windows.UI.StartScreen.IStartScreenManager
+    guid 4a1dcbcb-26e9-4eb4-8933-859eb6ecdb29
+
+interface Windows.UI.StartScreen.IStartScreenManager2
+    guid 08a716b6-316b-4ad9-acb8-fe9cf00bd608
+
+interface Windows.UI.StartScreen.IStartScreenManagerStatics
+    guid 7865ef0f-b585-464e-8993-34e8f8738d48
+
+interface Windows.UI.StartScreen.ITileMixedRealityModel
+    guid b0764e5b-887d-4242-9a19-3d0a4ea78031
+
+interface Windows.UI.StartScreen.ITileMixedRealityModel2
+    guid 439470b2-d7c5-410b-8319-9486a27b6c67
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> concrete
+    guid af8f3fb2-f179-5f0a-aa09-28942eedf625
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.StartScreen.JumpListItem;{7adb6717-8b5d-4820-995b-9b418dbe48b0}))
+    argument Windows.UI.StartScreen.JumpListItem
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile> concrete
+    guid 16f89727-d811-5051-9ab5-0cb86a0f0ac3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.StartScreen.SecondaryTile;{9e9e51e0-2bb5-4bc0-bb8d-42b23abcc88d}))
+    argument Windows.UI.StartScreen.SecondaryTile
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> concrete
+    guid 1cd2cc9b-a41c-5dc7-9d95-4cef69a293f4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.StartScreen.SecondaryTileVisualElements;{1d8df333-815e-413f-9f50-a81da70a96b2}))
+    argument Windows.UI.StartScreen.SecondaryTileVisualElements
+
+interface Windows.UI.StartScreen.IVisualElementsRequest
+    guid c138333a-9308-4072-88cc-d068db347c68
+
+interface Windows.UI.StartScreen.IVisualElementsRequestDeferral
+    guid a1656eb0-0126-4357-8204-bd82bb2a046d
+
+interface Windows.UI.StartScreen.IVisualElementsRequestedEventArgs
+    guid 7b6fc982-3a0d-4ece-af96-cd17e1b00b2d
+
+class Windows.UI.StartScreen.JumpList python_type
+    py JumpList
+    signature rc(Windows.UI.StartScreen.JumpList;{b0234c3e-cd6f-4cb6-a611-61fd505f3ed1})
+    default Windows.UI.StartScreen.IJumpList
+    requires Windows.UI.StartScreen.IJumpList
+    factory Windows.UI.StartScreen.IJumpListStatics
+    property system_group_kind
+        get get_SystemGroupKind slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpList shape=4 reverse=43
+            out enum32 type=Windows.UI.StartScreen.JumpListSystemGroupKind return
+        put put_SystemGroupKind slot=8 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.IJumpList shape=4 reverse=62
+            in enum32 type=Windows.UI.StartScreen.JumpListSystemGroupKind name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpList shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> return
+    method is_supported static
+        method IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListStatics shape=4 reverse=43 static
+            out boolean return
+    method load_current_async static
+        method LoadCurrentAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.StartScreen.JumpList> return
+    method save_async
+        method SaveAsync slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpList shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.UI.StartScreen.JumpListItem python_type
+    py JumpListItem
+    signature rc(Windows.UI.StartScreen.JumpListItem;{7adb6717-8b5d-4820-995b-9b418dbe48b0})
+    default Windows.UI.StartScreen.IJumpListItem
+    requires Windows.UI.StartScreen.IJumpListItem
+    factory Windows.UI.StartScreen.IJumpListItemStatics
+    property logo
+        get get_Logo slot=15 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+        put put_Logo slot=16 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=202
+            in class type=Windows.Foundation.Uri name=value
+    property group_name
+        get get_GroupName slot=13 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=173
+            out string return
+        put put_GroupName slot=14 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=186
+            in string name=value
+    property display_name
+        get get_DisplayName slot=11 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=141
+            out string return
+        put put_DisplayName slot=12 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=162
+            in string name=value
+    property description
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=99
+            out string return
+        put put_Description slot=10 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=121
+            in string name=value
+    property arguments
+        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=43
+            out string return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=22
+            out enum32 type=Windows.UI.StartScreen.JumpListItemKind return
+    property removed_by_user
+        get get_RemovedByUser slot=8 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItem shape=4 reverse=62
+            out boolean return
+    method create_separator static
+        method CreateSeparator slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItemStatics shape=4 reverse=43 static
+            out class type=Windows.UI.StartScreen.JumpListItem return
+    method create_with_arguments static
+        method CreateWithArguments slot=6 inputs=2 outputs=1 declaring=Windows.UI.StartScreen.IJumpListItemStatics shape=117 reverse=25 static
+            in string name=arguments
+            in string name=displayName
+            out class type=Windows.UI.StartScreen.JumpListItem return
+
+enum Windows.UI.StartScreen.JumpListItemKind python_type
+    py JumpListItemKind
+    signature enum(Windows.UI.StartScreen.JumpListItemKind;i4)
+
+enum Windows.UI.StartScreen.JumpListSystemGroupKind python_type
+    py JumpListSystemGroupKind
+    signature enum(Windows.UI.StartScreen.JumpListSystemGroupKind;i4)
+
+class Windows.UI.StartScreen.SecondaryTile activatable python_type
+    py SecondaryTile
+    signature rc(Windows.UI.StartScreen.SecondaryTile;{9e9e51e0-2bb5-4bc0-bb8d-42b23abcc88d})
+    default Windows.UI.StartScreen.ISecondaryTile
+    requires Windows.UI.StartScreen.ISecondaryTile
+    requires Windows.UI.StartScreen.ISecondaryTile2
+    factory Windows.UI.StartScreen.ISecondaryTileStatics
+    factory Windows.UI.StartScreen.ISecondaryTileFactory
+    factory Windows.UI.StartScreen.ISecondaryTileFactory2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=278 reverse=28
+            in string name=tileId implicit
+            in string name=shortName implicit
+            in string name=displayName implicit
+            in string name=arguments implicit
+            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions implicit
+            in class type=Windows.Foundation.Uri name=logoReference implicit
+            out class type=Windows.UI.StartScreen.SecondaryTile return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=278 reverse=28
+            in string name=tileId
+            in string name=shortName implicit
+            in string name=displayName implicit
+            in string name=arguments implicit
+            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions implicit
+            in class type=Windows.Foundation.Uri name=logoReference implicit
+            out class type=Windows.UI.StartScreen.SecondaryTile return
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory2 shape=267
+            in string name=tileId
+            in string name=displayName
+            in string name=arguments
+            in class type=Windows.Foundation.Uri name=square150x150Logo
+            in enum32 type=Windows.UI.StartScreen.TileSize name=desiredSize
+            out class type=Windows.UI.StartScreen.SecondaryTile return
+        ctor .ctor slot=6 inputs=6 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=278 reverse=28 deprecated
+            in string name=tileId
+            in string name=shortName
+            in string name=displayName
+            in string name=arguments
+            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions
+            in class type=Windows.Foundation.Uri name=logoReference
+            out class type=Windows.UI.StartScreen.SecondaryTile return
+        ctor .ctor slot=7 inputs=7 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=286 reverse=47 deprecated
+            in string name=tileId
+            in string name=shortName
+            in string name=displayName
+            in string name=arguments
+            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions
+            in class type=Windows.Foundation.Uri name=logoReference
+            in class type=Windows.Foundation.Uri name=wideLogoReference
+            out class type=Windows.UI.StartScreen.SecondaryTile return
+    property short_name
+        get get_ShortName slot=11 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=141 deprecated
+            out string return
+        put put_ShortName slot=10 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=121 deprecated
+            in string name=value
+    property logo
+        get get_Logo slot=15 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=194 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_Logo slot=14 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=186 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property tile_id
+        get get_TileId slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=43
+            out string return
+        put put_TileId slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=22
+            in string name=value
+    property lock_screen_display_badge_and_tile_text
+        get get_LockScreenDisplayBadgeAndTileText slot=23 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=242
+            out boolean return
+        put put_LockScreenDisplayBadgeAndTileText slot=22 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=237
+            in boolean name=value
+    property lock_screen_badge_logo
+        get get_LockScreenBadgeLogo slot=21 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=232
+            out class type=Windows.Foundation.Uri return
+        put put_LockScreenBadgeLogo slot=20 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=228
+            in class type=Windows.Foundation.Uri name=value
+    property arguments
+        get get_Arguments slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=99
+            out string return
+        put put_Arguments slot=8 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=62
+            in string name=value
+    property foreground_text
+        get get_ForegroundText slot=27 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=259 deprecated
+            out enum32 type=Windows.UI.StartScreen.ForegroundText return
+        put put_ForegroundText slot=26 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=255 deprecated
+            in enum32 type=Windows.UI.StartScreen.ForegroundText name=value
+    property display_name
+        get get_DisplayName slot=13 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=173
+            out string return
+        put put_DisplayName slot=12 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=162
+            in string name=value
+    property background_color
+        get get_BackgroundColor slot=29 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=266 deprecated
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=28 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=29 deprecated
+            in struct type=Windows.UI.Color name=value
+    property wide_logo
+        get get_WideLogo slot=19 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=223 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_WideLogo slot=18 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=218 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property tile_options
+        get get_TileOptions slot=25 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=252 deprecated
+            out enum_u32 type=Windows.UI.StartScreen.TileOptions return
+        put put_TileOptions slot=24 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=247 deprecated
+            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=value
+    property small_logo
+        get get_SmallLogo slot=17 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=210 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_SmallLogo slot=16 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=202 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property roaming_enabled
+        get get_RoamingEnabled slot=10 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=4 reverse=121
+            out boolean return
+        put put_RoamingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=4 reverse=99
+            in boolean name=value
+    property phonetic_name
+        get get_PhoneticName slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=4 reverse=43
+            out string return
+        put put_PhoneticName slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=4 reverse=22
+            in string name=value
+    property visual_elements
+        get get_VisualElements slot=8 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=4 reverse=62
+            out class type=Windows.UI.StartScreen.SecondaryTileVisualElements return
+    event visual_elements_requested
+        add add_VisualElementsRequested slot=11 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.StartScreen.SecondaryTile,Windows.UI.StartScreen.VisualElementsRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_VisualElementsRequested slot=12 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTile2 shape=26 reverse=167
+            in event_token name=token
+    method exists static
+        method Exists slot=6 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileStatics shape=51 reverse=24 static
+            in string name=tileId
+            out boolean return
+    method find_all_async static
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileStatics shape=4 reverse=43 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile>> return
+        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileStatics shape=51 reverse=65 static
+            in string name=applicationId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile>> return
+    method find_all_for_package_async static
+        method FindAllForPackageAsync slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile>> return
+    method request_create_async
+        method RequestCreateAsync slot=30 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=270
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestCreateAsync slot=31 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=79 reverse=276
+            in struct type=Windows.Foundation.Point name=invocationPoint
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_create_for_selection_async
+        method RequestCreateForSelectionAsync slot=32 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestCreateForSelectionAsync slot=33 inputs=2 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=143
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_delete_async
+        method RequestDeleteAsync slot=34 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=288
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestDeleteAsync slot=35 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=79
+            in struct type=Windows.Foundation.Point name=invocationPoint
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method request_delete_for_selection_async
+        method RequestDeleteForSelectionAsync slot=36 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+        method RequestDeleteForSelectionAsync slot=37 inputs=2 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=143
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method update_async
+        method UpdateAsync slot=38 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTile shape=4 reverse=302
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.UI.StartScreen.SecondaryTileVisualElements python_type
+    py SecondaryTileVisualElements
+    signature rc(Windows.UI.StartScreen.SecondaryTileVisualElements;{1d8df333-815e-413f-9f50-a81da70a96b2})
+    default Windows.UI.StartScreen.ISecondaryTileVisualElements
+    requires Windows.UI.StartScreen.ISecondaryTileVisualElements
+    requires Windows.UI.StartScreen.ISecondaryTileVisualElements2
+    requires Windows.UI.StartScreen.ISecondaryTileVisualElements3
+    requires Windows.UI.StartScreen.ISecondaryTileVisualElements4
+    property square150x150_logo
+        get get_Square150x150Logo slot=11 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+        put put_Square150x150Logo slot=10 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=121
+            in class type=Windows.Foundation.Uri name=value
+    property show_name_on_wide310x150_logo
+        get get_ShowNameOnWide310x150Logo slot=23 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=242
+            out boolean return
+        put put_ShowNameOnWide310x150Logo slot=22 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=237
+            in boolean name=value
+    property show_name_on_square310x310_logo
+        get get_ShowNameOnSquare310x310Logo slot=25 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=252
+            out boolean return
+        put put_ShowNameOnSquare310x310Logo slot=24 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=247
+            in boolean name=value
+    property show_name_on_square150x150_logo
+        get get_ShowNameOnSquare150x150Logo slot=21 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=232
+            out boolean return
+        put put_ShowNameOnSquare150x150Logo slot=20 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=228
+            in boolean name=value
+    property foreground_text
+        get get_ForegroundText slot=17 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=210
+            out enum32 type=Windows.UI.StartScreen.ForegroundText return
+        put put_ForegroundText slot=16 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=202
+            in enum32 type=Windows.UI.StartScreen.ForegroundText name=value
+    property background_color
+        get get_BackgroundColor slot=19 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=223
+            out struct type=Windows.UI.Color return
+        put put_BackgroundColor slot=18 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=29
+            in struct type=Windows.UI.Color name=value
+    property wide310x150_logo
+        get get_Wide310x150Logo slot=13 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=173
+            out class type=Windows.Foundation.Uri return
+        put put_Wide310x150Logo slot=12 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=162
+            in class type=Windows.Foundation.Uri name=value
+    property square70x70_logo
+        get get_Square70x70Logo slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=99 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_Square70x70Logo slot=8 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=62 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property square310x310_logo
+        get get_Square310x310Logo slot=15 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+        put put_Square310x310Logo slot=14 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=186
+            in class type=Windows.Foundation.Uri name=value
+    property square30x30_logo
+        get get_Square30x30Logo slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=43 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_Square30x30Logo slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements shape=4 reverse=22 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property square71x71_logo
+        get get_Square71x71Logo slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements2 shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+        put put_Square71x71Logo slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements2 shape=4 reverse=22
+            in class type=Windows.Foundation.Uri name=value
+    property square44x44_logo
+        get get_Square44x44Logo slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements3 shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+        put put_Square44x44Logo slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements3 shape=4 reverse=22
+            in class type=Windows.Foundation.Uri name=value
+    property mixed_reality_model
+        get get_MixedRealityModel slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileVisualElements4 shape=4 reverse=22
+            out class type=Windows.UI.StartScreen.TileMixedRealityModel return
+
+class Windows.UI.StartScreen.StartScreenManager python_type
+    py StartScreenManager
+    signature rc(Windows.UI.StartScreen.StartScreenManager;{4a1dcbcb-26e9-4eb4-8933-859eb6ecdb29})
+    default Windows.UI.StartScreen.IStartScreenManager
+    requires Windows.UI.StartScreen.IStartScreenManager
+    requires Windows.UI.StartScreen.IStartScreenManager2
+    factory Windows.UI.StartScreen.IStartScreenManagerStatics
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager shape=4 reverse=22
+            out class type=Windows.System.User return
+    method contains_app_list_entry_async
+        method ContainsAppListEntryAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager shape=51 reverse=65
+            in class type=Windows.ApplicationModel.Core.AppListEntry name=appListEntry
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method contains_secondary_tile_async
+        method ContainsSecondaryTileAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager2 shape=51 reverse=24
+            in string name=tileId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManagerStatics shape=4 reverse=22 static
+            out class type=Windows.UI.StartScreen.StartScreenManager return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManagerStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.UI.StartScreen.StartScreenManager return
+    method request_add_app_list_entry_async
+        method RequestAddAppListEntryAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager shape=51 reverse=100
+            in class type=Windows.ApplicationModel.Core.AppListEntry name=appListEntry
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method supports_app_list_entry
+        method SupportsAppListEntry slot=7 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager shape=51 reverse=44
+            in class type=Windows.ApplicationModel.Core.AppListEntry name=appListEntry
+            out boolean return
+    method try_remove_secondary_tile_async
+        method TryRemoveSecondaryTileAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.IStartScreenManager2 shape=51 reverse=44
+            in string name=tileId
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Windows.UI.StartScreen.TileMixedRealityModel python_type
+    py TileMixedRealityModel
+    signature rc(Windows.UI.StartScreen.TileMixedRealityModel;{b0764e5b-887d-4242-9a19-3d0a4ea78031})
+    default Windows.UI.StartScreen.ITileMixedRealityModel
+    requires Windows.UI.StartScreen.ITileMixedRealityModel
+    requires Windows.UI.StartScreen.ITileMixedRealityModel2
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ITileMixedRealityModel shape=4 reverse=43
+            out class type=Windows.Foundation.Uri return
+        put put_Uri slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ITileMixedRealityModel shape=4 reverse=22
+            in class type=Windows.Foundation.Uri name=value
+    property bounding_box
+        get get_BoundingBox slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ITileMixedRealityModel shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingBox> return
+        put put_BoundingBox slot=8 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ITileMixedRealityModel shape=4 reverse=62
+            in reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingBox> name=value
+    property activation_behavior
+        get get_ActivationBehavior slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ITileMixedRealityModel2 shape=4 reverse=43
+            out enum32 type=Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior return
+        put put_ActivationBehavior slot=6 inputs=1 outputs=0 declaring=Windows.UI.StartScreen.ITileMixedRealityModel2 shape=4 reverse=22
+            in enum32 type=Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior name=value
+
+enum Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior python_type
+    py TileMixedRealityModelActivationBehavior
+    signature enum(Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior;i4)
+
+enum Windows.UI.StartScreen.TileOptions python_type
+    py TileOptions
+    signature enum(Windows.UI.StartScreen.TileOptions;u4)
+
+enum Windows.UI.StartScreen.TileSize python_type
+    py TileSize
+    signature enum(Windows.UI.StartScreen.TileSize;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.StartScreen.SecondaryTile,Windows.UI.StartScreen.VisualElementsRequestedEventArgs> concrete
+    guid 02d9f968-fa76-5d77-934b-665e7c3be7cf
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.StartScreen.SecondaryTile;{9e9e51e0-2bb5-4bc0-bb8d-42b23abcc88d});rc(Windows.UI.StartScreen.VisualElementsRequestedEventArgs;{7b6fc982-3a0d-4ece-af96-cd17e1b00b2d}))
+    argument Windows.UI.StartScreen.SecondaryTile
+    argument Windows.UI.StartScreen.VisualElementsRequestedEventArgs
+
+class Windows.UI.StartScreen.VisualElementsRequest python_type
+    py VisualElementsRequest
+    signature rc(Windows.UI.StartScreen.VisualElementsRequest;{c138333a-9308-4072-88cc-d068db347c68})
+    default Windows.UI.StartScreen.IVisualElementsRequest
+    requires Windows.UI.StartScreen.IVisualElementsRequest
+    property alternate_visual_elements
+        get get_AlternateVisualElements slot=7 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IVisualElementsRequest shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> return
+    property deadline
+        get get_Deadline slot=8 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IVisualElementsRequest shape=4 reverse=62
+            out datetime return
+    property visual_elements
+        get get_VisualElements slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IVisualElementsRequest shape=4 reverse=22
+            out class type=Windows.UI.StartScreen.SecondaryTileVisualElements return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IVisualElementsRequest shape=4 reverse=99
+            out class type=Windows.UI.StartScreen.VisualElementsRequestDeferral return
+
+class Windows.UI.StartScreen.VisualElementsRequestDeferral python_type
+    py VisualElementsRequestDeferral
+    signature rc(Windows.UI.StartScreen.VisualElementsRequestDeferral;{a1656eb0-0126-4357-8204-bd82bb2a046d})
+    default Windows.UI.StartScreen.IVisualElementsRequestDeferral
+    requires Windows.UI.StartScreen.IVisualElementsRequestDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.StartScreen.IVisualElementsRequestDeferral shape=0 reverse=16
+
+class Windows.UI.StartScreen.VisualElementsRequestedEventArgs python_type
+    py VisualElementsRequestedEventArgs
+    signature rc(Windows.UI.StartScreen.VisualElementsRequestedEventArgs;{7b6fc982-3a0d-4ece-af96-cd17e1b00b2d})
+    default Windows.UI.StartScreen.IVisualElementsRequestedEventArgs
+    requires Windows.UI.StartScreen.IVisualElementsRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.IVisualElementsRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.StartScreen.VisualElementsRequest return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class Windows.ApplicationModel.Core.AppListEntry external
+    py winrt.windows.applicationmodel.core.AppListEntry
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+struct Windows.Perception.Spatial.SpatialBoundingBox external
+    py winrt.windows.perception.spatial.SpatialBoundingBox
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement

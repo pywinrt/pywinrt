@@ -1,0 +1,191 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.AppRecording
+
+class Windows.Media.AppRecording.AppRecordingManager python_type
+    py AppRecordingManager
+    signature rc(Windows.Media.AppRecording.AppRecordingManager;{e7e26076-a044-48e2-a512-3094d574c7cc})
+    default Windows.Media.AppRecording.IAppRecordingManager
+    requires Windows.Media.AppRecording.IAppRecordingManager
+    factory Windows.Media.AppRecording.IAppRecordingManagerStatics
+    property supported_screenshot_media_encoding_subtypes
+        get get_SupportedScreenshotMediaEncodingSubtypes slot=9 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManagerStatics shape=4 reverse=22 static
+            out class type=Windows.Media.AppRecording.AppRecordingManager return
+    method get_status
+        method GetStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManager shape=4 reverse=22
+            out class type=Windows.Media.AppRecording.AppRecordingStatus return
+    method record_time_span_to_file_async
+        method RecordTimeSpanToFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManager shape=228
+            in datetime name=startTime
+            in timespan name=duration
+            in class type=Windows.Storage.StorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.AppRecording.AppRecordingResult> return
+    method save_screenshot_to_files_async
+        method SaveScreenshotToFilesAsync slot=10 inputs=4 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManager shape=239
+            in class type=Windows.Storage.StorageFolder name=folder
+            in string name=filenamePrefix
+            in enum32 type=Windows.Media.AppRecording.AppRecordingSaveScreenshotOption name=option
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedFormats
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult> return
+    method start_recording_to_file_async
+        method StartRecordingToFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingManager shape=51 reverse=44
+            in class type=Windows.Storage.StorageFile name=file
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.AppRecording.AppRecordingResult> return
+
+class Windows.Media.AppRecording.AppRecordingResult python_type
+    py AppRecordingResult
+    signature rc(Windows.Media.AppRecording.AppRecordingResult;{3a900864-c66d-46f9-b2d9-5bc2dad070d7})
+    default Windows.Media.AppRecording.IAppRecordingResult
+    requires Windows.Media.AppRecording.IAppRecordingResult
+    property duration
+        get get_Duration slot=8 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingResult shape=4 reverse=62
+            out timespan return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingResult shape=4 reverse=43
+            out hresult return
+    property is_file_truncated
+        get get_IsFileTruncated slot=9 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingResult shape=4 reverse=99
+            out boolean return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingResult shape=4 reverse=22
+            out boolean return
+
+enum Windows.Media.AppRecording.AppRecordingSaveScreenshotOption python_type
+    py AppRecordingSaveScreenshotOption
+    signature enum(Windows.Media.AppRecording.AppRecordingSaveScreenshotOption;i4)
+
+class Windows.Media.AppRecording.AppRecordingSaveScreenshotResult python_type
+    py AppRecordingSaveScreenshotResult
+    signature rc(Windows.Media.AppRecording.AppRecordingSaveScreenshotResult;{9c5b8d0a-0abb-4457-aaee-24f9c12ec778})
+    default Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult
+    requires Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult shape=4 reverse=43
+            out hresult return
+    property saved_screenshot_infos
+        get get_SavedScreenshotInfos slot=8 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo> return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo python_type
+    py AppRecordingSavedScreenshotInfo
+    signature rc(Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo;{9b642d0a-189a-4d00-bf25-e1bb1249d594})
+    default Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo
+    requires Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo
+    property file
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo shape=4 reverse=22
+            out class type=Windows.Storage.StorageFile return
+    property media_encoding_subtype
+        get get_MediaEncodingSubtype slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo shape=4 reverse=43
+            out string return
+
+class Windows.Media.AppRecording.AppRecordingStatus python_type
+    py AppRecordingStatus
+    signature rc(Windows.Media.AppRecording.AppRecordingStatus;{1d0cc82c-bc18-4b8a-a6ef-127efab3b5d9})
+    default Windows.Media.AppRecording.IAppRecordingStatus
+    requires Windows.Media.AppRecording.IAppRecordingStatus
+    property can_record
+        get get_CanRecord slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatus shape=4 reverse=22
+            out boolean return
+    property can_record_time_span
+        get get_CanRecordTimeSpan slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatus shape=4 reverse=43
+            out boolean return
+    property details
+        get get_Details slot=9 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatus shape=4 reverse=99
+            out class type=Windows.Media.AppRecording.AppRecordingStatusDetails return
+    property historical_buffer_duration
+        get get_HistoricalBufferDuration slot=8 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatus shape=4 reverse=62
+            out timespan return
+
+class Windows.Media.AppRecording.AppRecordingStatusDetails python_type
+    py AppRecordingStatusDetails
+    signature rc(Windows.Media.AppRecording.AppRecordingStatusDetails;{b538a9b0-14ed-4412-ac45-6d672c9c9949})
+    default Windows.Media.AppRecording.IAppRecordingStatusDetails
+    requires Windows.Media.AppRecording.IAppRecordingStatusDetails
+    property is_any_app_broadcasting
+        get get_IsAnyAppBroadcasting slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=22
+            out boolean return
+    property is_app_inactive
+        get get_IsAppInactive slot=11 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=141
+            out boolean return
+    property is_blocked_for_app
+        get get_IsBlockedForApp slot=12 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=162
+            out boolean return
+    property is_capture_resource_unavailable
+        get get_IsCaptureResourceUnavailable slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=43
+            out boolean return
+    property is_disabled_by_system
+        get get_IsDisabledBySystem slot=14 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=186
+            out boolean return
+    property is_disabled_by_user
+        get get_IsDisabledByUser slot=13 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=173
+            out boolean return
+    property is_game_stream_in_progress
+        get get_IsGameStreamInProgress slot=8 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=62
+            out boolean return
+    property is_gpu_constrained
+        get get_IsGpuConstrained slot=10 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=121
+            out boolean return
+    property is_time_span_recording_disabled
+        get get_IsTimeSpanRecordingDisabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.AppRecording.IAppRecordingStatusDetails shape=4 reverse=99
+            out boolean return
+
+interface Windows.Media.AppRecording.IAppRecordingManager
+    guid e7e26076-a044-48e2-a512-3094d574c7cc
+
+interface Windows.Media.AppRecording.IAppRecordingManagerStatics
+    guid 50e709f7-38ce-4bd3-9db2-e72bbe9de11d
+
+interface Windows.Media.AppRecording.IAppRecordingResult
+    guid 3a900864-c66d-46f9-b2d9-5bc2dad070d7
+
+interface Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult
+    guid 9c5b8d0a-0abb-4457-aaee-24f9c12ec778
+
+interface Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo
+    guid 9b642d0a-189a-4d00-bf25-e1bb1249d594
+
+interface Windows.Media.AppRecording.IAppRecordingStatus
+    guid 1d0cc82c-bc18-4b8a-a6ef-127efab3b5d9
+
+interface Windows.Media.AppRecording.IAppRecordingStatusDetails
+    guid b538a9b0-14ed-4412-ac45-6d672c9c9949
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.AppRecording.AppRecordingResult> concrete
+    guid 2c72c716-30ea-552c-aaca-51d123234ee3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.AppRecording.AppRecordingResult;{3a900864-c66d-46f9-b2d9-5bc2dad070d7}))
+    argument Windows.Media.AppRecording.AppRecordingResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult> concrete
+    guid a048c53e-e624-512b-8e07-ac4e64391b2a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.AppRecording.AppRecordingSaveScreenshotResult;{9c5b8d0a-0abb-4457-aaee-24f9c12ec778}))
+    argument Windows.Media.AppRecording.AppRecordingSaveScreenshotResult
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo> concrete
+    guid 43c83783-b36d-5a8e-b993-e19c823e6c1a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo;{9b642d0a-189a-4d00-bf25-e1bb1249d594}))
+    argument Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile
+
+class Windows.Storage.StorageFolder external
+    py winrt.windows.storage.StorageFolder

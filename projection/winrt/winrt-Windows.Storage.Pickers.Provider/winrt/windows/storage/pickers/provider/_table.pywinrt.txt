@@ -1,0 +1,237 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Storage.Pickers.Provider
+
+enum Windows.Storage.Pickers.Provider.AddFileResult python_type
+    py AddFileResult
+    signature enum(Windows.Storage.Pickers.Provider.AddFileResult;i4)
+
+class Windows.Storage.Pickers.Provider.FileOpenPickerUI python_type
+    py FileOpenPickerUI
+    signature rc(Windows.Storage.Pickers.Provider.FileOpenPickerUI;{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d})
+    default Windows.Storage.Pickers.Provider.IFileOpenPickerUI
+    requires Windows.Storage.Pickers.Provider.IFileOpenPickerUI
+    property title
+        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=173
+            out string return
+        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=186
+            in string name=value
+    property allowed_file_types
+        get get_AllowedFileTypes slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property selection_mode
+        get get_SelectionMode slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=141
+            out enum32 type=Windows.Storage.Pickers.Provider.FileSelectionMode return
+    property settings_identifier
+        get get_SettingsIdentifier slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=162
+            out string return
+    event closing
+        add add_Closing slot=17 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.PickerClosingEventArgs> name=handler
+            out event_token return
+        remove remove_Closing slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26 reverse=398
+            in event_token name=token
+    event file_removed
+        add add_FileRemoved slot=15 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=196 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs> name=handler
+            out event_token return
+        remove remove_FileRemoved slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26 reverse=397 deprecated
+            in event_token name=token
+    method add_file
+        method AddFile slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=117 reverse=25
+            in string name=id
+            in interface type=Windows.Storage.IStorageFile name=file
+            out enum32 type=Windows.Storage.Pickers.Provider.AddFileResult return
+    method can_add_file
+        method CanAddFile slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=100
+            in interface type=Windows.Storage.IStorageFile name=file
+            out boolean return
+    method contains_file
+        method ContainsFile slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=65
+            in string name=id
+            out boolean return
+    method remove_file
+        method RemoveFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=43
+            in string name=id
+
+class Windows.Storage.Pickers.Provider.FileRemovedEventArgs python_type
+    py FileRemovedEventArgs
+    signature rc(Windows.Storage.Pickers.Provider.FileRemovedEventArgs;{13043da7-7fca-4c2b-9eca-6890f9f00185})
+    default Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
+    requires Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileRemovedEventArgs shape=4 reverse=22 deprecated
+            out string return
+
+class Windows.Storage.Pickers.Provider.FileSavePickerUI python_type
+    py FileSavePickerUI
+    signature rc(Windows.Storage.Pickers.Provider.FileSavePickerUI;{9656c1e7-3e56-43cc-8a39-33c73d9d542b})
+    default Windows.Storage.Pickers.Provider.IFileSavePickerUI
+    requires Windows.Storage.Pickers.Provider.IFileSavePickerUI
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=22
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=43
+            in string name=value
+    property allowed_file_types
+        get get_AllowedFileTypes slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property file_name
+        get get_FileName slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=121
+            out string return
+    property settings_identifier
+        get get_SettingsIdentifier slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=99
+            out string return
+    event file_name_changed
+        add add_FileNameChanged slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object> name=handler
+            out event_token return
+        remove remove_FileNameChanged slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26 reverse=181
+            in event_token name=token
+    event target_file_requested
+        add add_TargetFileRequested slot=14 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_TargetFileRequested slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26 reverse=200
+            in event_token name=token
+    method try_set_file_name
+        method TrySetFileName slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=144
+            in string name=value
+            out enum32 type=Windows.Storage.Pickers.Provider.SetFileNameResult return
+
+enum Windows.Storage.Pickers.Provider.FileSelectionMode python_type
+    py FileSelectionMode
+    signature enum(Windows.Storage.Pickers.Provider.FileSelectionMode;i4)
+
+interface Windows.Storage.Pickers.Provider.IFileOpenPickerUI
+    guid dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d
+
+interface Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
+    guid 13043da7-7fca-4c2b-9eca-6890f9f00185
+
+interface Windows.Storage.Pickers.Provider.IFileSavePickerUI
+    guid 9656c1e7-3e56-43cc-8a39-33c73d9d542b
+
+interface Windows.Storage.Pickers.Provider.IPickerClosingDeferral
+    guid 7af7f71e-1a67-4a31-ae80-e907708a619b
+
+interface Windows.Storage.Pickers.Provider.IPickerClosingEventArgs
+    guid 7e59f224-b332-4f12-8b9f-a8c2f06b32cd
+
+interface Windows.Storage.Pickers.Provider.IPickerClosingOperation
+    guid 4ce9fb84-beee-4e39-a773-fc5f0eae328d
+
+interface Windows.Storage.Pickers.Provider.ITargetFileRequest
+    guid 42bd3355-7f88-478b-8e81-690b20340678
+
+interface Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
+    guid 4aee9d91-bf15-4da9-95f6-f6b7d558225b
+
+interface Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
+    guid b163dbc1-1b51-4c89-a591-0fd40b3c57c9
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.Storage.Pickers.Provider.PickerClosingDeferral python_type
+    py PickerClosingDeferral
+    signature rc(Windows.Storage.Pickers.Provider.PickerClosingDeferral;{7af7f71e-1a67-4a31-ae80-e907708a619b})
+    default Windows.Storage.Pickers.Provider.IPickerClosingDeferral
+    requires Windows.Storage.Pickers.Provider.IPickerClosingDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.IPickerClosingDeferral shape=0 reverse=16
+
+class Windows.Storage.Pickers.Provider.PickerClosingEventArgs python_type
+    py PickerClosingEventArgs
+    signature rc(Windows.Storage.Pickers.Provider.PickerClosingEventArgs;{7e59f224-b332-4f12-8b9f-a8c2f06b32cd})
+    default Windows.Storage.Pickers.Provider.IPickerClosingEventArgs
+    requires Windows.Storage.Pickers.Provider.IPickerClosingEventArgs
+    property closing_operation
+        get get_ClosingOperation slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.PickerClosingOperation return
+    property is_canceled
+        get get_IsCanceled slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4 reverse=43
+            out boolean return
+
+class Windows.Storage.Pickers.Provider.PickerClosingOperation python_type
+    py PickerClosingOperation
+    signature rc(Windows.Storage.Pickers.Provider.PickerClosingOperation;{4ce9fb84-beee-4e39-a773-fc5f0eae328d})
+    default Windows.Storage.Pickers.Provider.IPickerClosingOperation
+    requires Windows.Storage.Pickers.Provider.IPickerClosingOperation
+    property deadline
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4 reverse=43
+            out datetime return
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.PickerClosingDeferral return
+
+enum Windows.Storage.Pickers.Provider.SetFileNameResult python_type
+    py SetFileNameResult
+    signature enum(Windows.Storage.Pickers.Provider.SetFileNameResult;i4)
+
+class Windows.Storage.Pickers.Provider.TargetFileRequest python_type
+    py TargetFileRequest
+    signature rc(Windows.Storage.Pickers.Provider.TargetFileRequest;{42bd3355-7f88-478b-8e81-690b20340678})
+    default Windows.Storage.Pickers.Provider.ITargetFileRequest
+    requires Windows.Storage.Pickers.Provider.ITargetFileRequest
+    property target_file
+        get get_TargetFile slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=22
+            out interface type=Windows.Storage.IStorageFile return
+        put put_TargetFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=43
+            in interface type=Windows.Storage.IStorageFile name=value
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=62
+            out class type=Windows.Storage.Pickers.Provider.TargetFileRequestDeferral return
+
+class Windows.Storage.Pickers.Provider.TargetFileRequestDeferral python_type
+    py TargetFileRequestDeferral
+    signature rc(Windows.Storage.Pickers.Provider.TargetFileRequestDeferral;{4aee9d91-bf15-4da9-95f6-f6b7d558225b})
+    default Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
+    requires Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral shape=0 reverse=16
+
+class Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs python_type
+    py TargetFileRequestedEventArgs
+    signature rc(Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs;{b163dbc1-1b51-4c89-a591-0fd40b3c57c9})
+    default Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
+    requires Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs shape=4 reverse=22
+            out class type=Windows.Storage.Pickers.Provider.TargetFileRequest return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs> concrete
+    guid f1fb2939-695b-5f56-841a-a52a7d148572
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileOpenPickerUI;{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d});rc(Windows.Storage.Pickers.Provider.FileRemovedEventArgs;{13043da7-7fca-4c2b-9eca-6890f9f00185}))
+    argument Windows.Storage.Pickers.Provider.FileOpenPickerUI
+    argument Windows.Storage.Pickers.Provider.FileRemovedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.PickerClosingEventArgs> concrete
+    guid 2b06bdac-983b-5552-b5c9-b0990a2db3a1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileOpenPickerUI;{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d});rc(Windows.Storage.Pickers.Provider.PickerClosingEventArgs;{7e59f224-b332-4f12-8b9f-a8c2f06b32cd}))
+    argument Windows.Storage.Pickers.Provider.FileOpenPickerUI
+    argument Windows.Storage.Pickers.Provider.PickerClosingEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object> concrete
+    guid f1e6a632-f97f-54d9-9e1b-a714edc3ff06
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileSavePickerUI;{9656c1e7-3e56-43cc-8a39-33c73d9d542b});cinterface(IInspectable))
+    argument Windows.Storage.Pickers.Provider.FileSavePickerUI
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs> concrete
+    guid d3e1f8c7-45c5-5249-b336-a111bfaa985b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileSavePickerUI;{9656c1e7-3e56-43cc-8a39-33c73d9d542b});rc(Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs;{b163dbc1-1b51-4c89-a591-0fd40b3c57c9}))
+    argument Windows.Storage.Pickers.Provider.FileSavePickerUI
+    argument Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Storage.IStorageFile external
+    py winrt.windows.storage._IStorageFile
+    guid fa3f6186-4214-428c-a64c-14c9ac7315ea

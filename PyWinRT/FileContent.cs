@@ -1,4 +1,5 @@
 using System.Buffers;
+using System.Text;
 
 /// <summary>
 /// Destination for the bytes of a file that is being produced incrementally.
@@ -6,6 +7,34 @@ using System.Buffers;
 abstract class ByteSink
 {
     public abstract void Write(ReadOnlySpan<byte> bytes);
+}
+
+/// <summary>
+/// Writes the lines of a text file to a <see cref="ByteSink"/> as UTF-8.
+/// </summary>
+/// <remarks>
+/// The line ending is always a line feed, since every file in the repository
+/// has line feed endings whichever platform generated it.
+/// </remarks>
+sealed class TextSink(ByteSink sink)
+{
+    private byte[] buffer = new byte[1024];
+
+    public void Line(string text)
+    {
+        var length = Encoding.UTF8.GetMaxByteCount(text.Length) + 1;
+
+        if (buffer.Length < length)
+        {
+            buffer = new byte[length];
+        }
+
+        var count = Encoding.UTF8.GetBytes(text, buffer);
+
+        buffer[count] = (byte)'\n';
+
+        sink.Write(buffer.AsSpan(0, count + 1));
+    }
 }
 
 /// <summary>

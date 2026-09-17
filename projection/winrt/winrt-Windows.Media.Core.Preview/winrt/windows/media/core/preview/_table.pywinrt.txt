@@ -1,0 +1,30 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Core.Preview
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Media.Core.Preview.ISoundLevelBrokerStatics
+    guid 6a633961-dbed-464c-a09a-33412f5caa3f
+
+class Windows.Media.Core.Preview.SoundLevelBroker static python_type
+    py SoundLevelBroker
+    factory Windows.Media.Core.Preview.ISoundLevelBrokerStatics
+    property sound_level static
+        get get_SoundLevel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=4 reverse=22 static
+            out enum32 type=Windows.Media.SoundLevel return
+    event sound_level_changed static
+        add add_SoundLevelChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=51 reverse=44 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_SoundLevelChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=26 reverse=82 static
+            in event_token name=token
+
+class System.Object external
+    py winrt.system.Object
+
+enum Windows.Media.SoundLevel external
+    py winrt.windows.media.SoundLevel

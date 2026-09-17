@@ -1,0 +1,388 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.WiFi
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAccessStatus> concrete
+    guid f8c75a3a-739a-57aa-986d-1f7604d7e386
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.WiFi.WiFiAccessStatus;i4))
+    argument Windows.Devices.WiFi.WiFiAccessStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAdapter> concrete
+    guid 1dcf739d-10b7-59e9-ab47-8b0277e20193
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.WiFi.WiFiAdapter;{a6c4e423-3d75-43a4-b9de-11e26b72d9b0}))
+    argument Windows.Devices.WiFi.WiFiAdapter
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnectionResult> concrete
+    guid ffa41f49-4c30-50d3-9549-e4f055b417b4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.WiFi.WiFiConnectionResult;{143bdfd9-c37d-40be-a5c8-857bce85a931}))
+    argument Windows.Devices.WiFi.WiFiConnectionResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult> concrete
+    guid 81ec4b01-3e45-5a39-baec-0bda4ab1e3ae
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult;{911794a1-6c82-5de3-8a4a-f9ff22a4957a}))
+    argument Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiWpsConfigurationResult> concrete
+    guid 4b721d74-0289-583c-a81d-f3be03ea596d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.WiFi.WiFiWpsConfigurationResult;{67b49871-17ee-42d1-b14f-5a11f1226fb5}))
+    argument Windows.Devices.WiFi.WiFiWpsConfigurationResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter>> concrete
+    guid 3140802b-987c-5c56-a430-90fbc1898dda
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.WiFi.WiFiAdapter;{a6c4e423-3d75-43a4-b9de-11e26b72d9b0})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter>
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars> concrete
+    guid d5cc7e52-2520-5460-84e6-8258c83d0c68
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars;i4))
+    argument Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter> concrete
+    guid 670a3c41-ecc8-55c2-84d4-51864496a328
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.WiFi.WiFiAdapter;{a6c4e423-3d75-43a4-b9de-11e26b72d9b0}))
+    argument Windows.Devices.WiFi.WiFiAdapter
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAvailableNetwork> concrete
+    guid 7c65d286-7285-5d63-bdea-5ef951bdf618
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.WiFi.WiFiAvailableNetwork;{26e96246-183e-4704-9826-71b4a2f0f668}))
+    argument Windows.Devices.WiFi.WiFiAvailableNetwork
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiWpsKind> concrete
+    guid aae7e5e5-27f0-5b28-8c58-9039356d3dc7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.WiFi.WiFiWpsKind;i4))
+    argument Windows.Devices.WiFi.WiFiWpsKind
+
+interface Windows.Devices.WiFi.IWiFiAdapter
+    guid a6c4e423-3d75-43a4-b9de-11e26b72d9b0
+
+interface Windows.Devices.WiFi.IWiFiAdapter2
+    guid 5bc4501d-81e4-453d-9430-1fcafbadd6b6
+
+interface Windows.Devices.WiFi.IWiFiAdapterStatics
+    guid da25fddd-d24c-43e3-aabd-c4659f730f99
+
+interface Windows.Devices.WiFi.IWiFiAvailableNetwork
+    guid 26e96246-183e-4704-9826-71b4a2f0f668
+
+interface Windows.Devices.WiFi.IWiFiConnectionResult
+    guid 143bdfd9-c37d-40be-a5c8-857bce85a931
+
+interface Windows.Devices.WiFi.IWiFiNetworkReport
+    guid 9524ded2-5911-445e-8194-be4f1a704895
+
+interface Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails
+    guid a268eb58-68f5-59cf-8d38-35bf44b097ef
+
+interface Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectionResult
+    guid 911794a1-6c82-5de3-8a4a-f9ff22a4957a
+
+interface Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork
+    guid 18dc7115-a04e-507c-bbaf-b78369d29fa7
+
+interface Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties
+    guid c810a1f2-c81d-5852-be50-e4bd4d81e98d
+
+interface Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkStatics
+    guid 00f5b8ac-80e7-5054-871c-8739f374e3c9
+
+interface Windows.Devices.WiFi.IWiFiWpsConfigurationResult
+    guid 67b49871-17ee-42d1-b14f-5a11f1226fb5
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.WiFi.WiFiAdapter,System.Object> concrete
+    guid f6c02d1b-43e8-5fc8-8e8e-ee7b8094b683
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.WiFi.WiFiAdapter;{a6c4e423-3d75-43a4-b9de-11e26b72d9b0});cinterface(IInspectable))
+    argument Windows.Devices.WiFi.WiFiAdapter
+    argument System.Object
+
+enum Windows.Devices.WiFi.WiFiAccessStatus python_type
+    py WiFiAccessStatus
+    signature enum(Windows.Devices.WiFi.WiFiAccessStatus;i4)
+
+class Windows.Devices.WiFi.WiFiAdapter python_type
+    py WiFiAdapter
+    signature rc(Windows.Devices.WiFi.WiFiAdapter;{a6c4e423-3d75-43a4-b9de-11e26b72d9b0})
+    default Windows.Devices.WiFi.IWiFiAdapter
+    requires Windows.Devices.WiFi.IWiFiAdapter
+    requires Windows.Devices.WiFi.IWiFiAdapter2
+    factory Windows.Devices.WiFi.IWiFiAdapterStatics
+    property network_adapter
+        get get_NetworkAdapter slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=4 reverse=22
+            out class type=Windows.Networking.Connectivity.NetworkAdapter return
+    property network_report
+        get get_NetworkReport slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=4 reverse=62
+            out class type=Windows.Devices.WiFi.WiFiNetworkReport return
+    event available_networks_changed
+        add add_AvailableNetworksChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFi.WiFiAdapter,System.Object> name=args
+            out event_token return
+        remove remove_AvailableNetworksChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=26 reverse=134
+            in event_token name=eventCookie
+    method connect_async
+        method ConnectAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=117 reverse=145
+            in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
+            in enum32 type=Windows.Devices.WiFi.WiFiReconnectionKind name=reconnectionKind
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnectionResult> return
+        method ConnectAsync slot=12 inputs=3 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=195 reverse=165
+            in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
+            in enum32 type=Windows.Devices.WiFi.WiFiReconnectionKind name=reconnectionKind
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnectionResult> return
+        method ConnectAsync slot=13 inputs=4 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=239
+            in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
+            in enum32 type=Windows.Devices.WiFi.WiFiReconnectionKind name=reconnectionKind
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            in string name=ssid
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnectionResult> return
+        method ConnectAsync slot=7 inputs=5 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter2 shape=267
+            in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
+            in enum32 type=Windows.Devices.WiFi.WiFiReconnectionKind name=reconnectionKind
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            in string name=ssid
+            in enum32 type=Windows.Devices.WiFi.WiFiConnectionMethod name=connectionMethod
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnectionResult> return
+    method disconnect
+        method Disconnect slot=14 inputs=0 outputs=0 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=0 reverse=185
+    method find_all_adapters_async static
+        method FindAllAdaptersAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapterStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter>> return
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapterStatics shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAdapter> return
+    method get_device_selector static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapterStatics shape=4 reverse=43 static
+            out string return
+    method get_wps_configuration_async
+        method GetWpsConfigurationAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter2 shape=51 reverse=24
+            in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiWpsConfigurationResult> return
+    method request_access_async static
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapterStatics shape=4 reverse=99 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAccessStatus> return
+    method scan_async
+        method ScanAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Devices.WiFi.WiFiAvailableNetwork python_type
+    py WiFiAvailableNetwork
+    signature rc(Windows.Devices.WiFi.WiFiAvailableNetwork;{26e96246-183e-4704-9826-71b4a2f0f668})
+    default Windows.Devices.WiFi.IWiFiAvailableNetwork
+    requires Windows.Devices.WiFi.IWiFiAvailableNetwork
+    property beacon_interval
+        get get_BeaconInterval slot=15 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=194
+            out timespan return
+    property bssid
+        get get_Bssid slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=62
+            out string return
+    property channel_center_frequency_in_kilohertz
+        get get_ChannelCenterFrequencyInKilohertz slot=9 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=99
+            out int32 return
+    property is_wi_fi_direct
+        get get_IsWiFiDirect slot=16 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=202
+            out boolean return
+    property network_kind
+        get get_NetworkKind slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=162
+            out enum32 type=Windows.Devices.WiFi.WiFiNetworkKind return
+    property network_rssi_in_decibel_milliwatts
+        get get_NetworkRssiInDecibelMilliwatts slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=121
+            out double return
+    property phy_kind
+        get get_PhyKind slot=13 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=173
+            out enum32 type=Windows.Devices.WiFi.WiFiPhyKind return
+    property security_settings
+        get get_SecuritySettings slot=14 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=186
+            out class type=Windows.Networking.Connectivity.NetworkSecuritySettings return
+    property signal_bars
+        get get_SignalBars slot=11 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=141
+            out uint8 return
+    property ssid
+        get get_Ssid slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=43
+            out string return
+    property uptime
+        get get_Uptime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAvailableNetwork shape=4 reverse=22
+            out timespan return
+
+enum Windows.Devices.WiFi.WiFiConnectionMethod python_type
+    py WiFiConnectionMethod
+    signature enum(Windows.Devices.WiFi.WiFiConnectionMethod;i4)
+
+class Windows.Devices.WiFi.WiFiConnectionResult python_type
+    py WiFiConnectionResult
+    signature rc(Windows.Devices.WiFi.WiFiConnectionResult;{143bdfd9-c37d-40be-a5c8-857bce85a931})
+    default Windows.Devices.WiFi.IWiFiConnectionResult
+    requires Windows.Devices.WiFi.IWiFiConnectionResult
+    property connection_status
+        get get_ConnectionStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiConnectionResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.WiFi.WiFiConnectionStatus return
+
+enum Windows.Devices.WiFi.WiFiConnectionStatus python_type
+    py WiFiConnectionStatus
+    signature enum(Windows.Devices.WiFi.WiFiConnectionStatus;i4)
+
+enum Windows.Devices.WiFi.WiFiNetworkKind python_type
+    py WiFiNetworkKind
+    signature enum(Windows.Devices.WiFi.WiFiNetworkKind;i4)
+
+class Windows.Devices.WiFi.WiFiNetworkReport python_type
+    py WiFiNetworkReport
+    signature rc(Windows.Devices.WiFi.WiFiNetworkReport;{9524ded2-5911-445e-8194-be4f1a704895})
+    default Windows.Devices.WiFi.IWiFiNetworkReport
+    requires Windows.Devices.WiFi.IWiFiNetworkReport
+    property available_networks
+        get get_AvailableNetworks slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiNetworkReport shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAvailableNetwork> return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiNetworkReport shape=4 reverse=22
+            out datetime return
+
+enum Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability python_type
+    py WiFiOnDemandHotspotAvailability
+    signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability;i4)
+
+enum Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars python_type
+    py WiFiOnDemandHotspotCellularBars
+    signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars;i4)
+
+enum Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus python_type
+    py WiFiOnDemandHotspotConnectStatus
+    signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus;i4)
+
+class Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails python_type
+    py WiFiOnDemandHotspotConnectTriggerDetails
+    signature rc(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails;{a268eb58-68f5-59cf-8d38-35bf44b097ef})
+    default Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails
+    requires Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails
+    property requested_network
+        get get_RequestedNetwork slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails shape=4 reverse=22
+            out class type=Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork return
+    method connect
+        method Connect slot=9 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails shape=4 reverse=99
+            out class type=Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult return
+    method connect_async
+        method ConnectAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails shape=4 reverse=62
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult> return
+    method report_error
+        method ReportError slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails shape=4 reverse=43
+            in enum32 type=Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus name=status
+
+class Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult python_type
+    py WiFiOnDemandHotspotConnectionResult
+    signature rc(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult;{911794a1-6c82-5de3-8a4a-f9ff22a4957a})
+    default Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectionResult
+    requires Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectionResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectionResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus return
+
+class Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork python_type
+    py WiFiOnDemandHotspotNetwork
+    signature rc(Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork;{18dc7115-a04e-507c-bbaf-b78369d29fa7})
+    default Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork
+    requires Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork
+    factory Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkStatics
+    property id
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork shape=4 reverse=62
+            out guid return
+    method get_or_create_by_id static
+        method GetOrCreateById slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkStatics shape=94 reverse=35 static
+            in guid name=networkId
+            out class type=Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork return
+    method get_properties
+        method GetProperties slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork shape=4 reverse=22
+            out class type=Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties return
+    method update_properties
+        method UpdateProperties slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetwork shape=4 reverse=43
+            in class type=Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties name=newProperties
+
+class Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties python_type
+    py WiFiOnDemandHotspotNetworkProperties
+    signature rc(Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties;{c810a1f2-c81d-5852-be50-e4bd4d81e98d})
+    default Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties
+    requires Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties
+    property ssid
+        get get_Ssid slot=16 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=202
+            out string return
+        put put_Ssid slot=17 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=210
+            in string name=value
+    property remaining_battery_percent
+        get get_RemainingBatteryPercent slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_RemainingBatteryPercent slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property password
+        get get_Password slot=18 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=218
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_Password slot=19 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=223
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property is_metered
+        get get_IsMetered slot=14 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=186
+            out boolean return
+        put put_IsMetered slot=15 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=194
+            in boolean name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=22
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=43
+            in string name=value
+    property cellular_bars
+        get get_CellularBars slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars> return
+        put put_CellularBars slot=13 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars> name=value
+    property availability
+        get get_Availability slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=62
+            out enum32 type=Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability return
+        put put_Availability slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiOnDemandHotspotNetworkProperties shape=4 reverse=99
+            in enum32 type=Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability name=value
+
+enum Windows.Devices.WiFi.WiFiPhyKind python_type
+    py WiFiPhyKind
+    signature enum(Windows.Devices.WiFi.WiFiPhyKind;i4)
+
+enum Windows.Devices.WiFi.WiFiReconnectionKind python_type
+    py WiFiReconnectionKind
+    signature enum(Windows.Devices.WiFi.WiFiReconnectionKind;i4)
+
+class Windows.Devices.WiFi.WiFiWpsConfigurationResult python_type
+    py WiFiWpsConfigurationResult
+    signature rc(Windows.Devices.WiFi.WiFiWpsConfigurationResult;{67b49871-17ee-42d1-b14f-5a11f1226fb5})
+    default Windows.Devices.WiFi.IWiFiWpsConfigurationResult
+    requires Windows.Devices.WiFi.IWiFiWpsConfigurationResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiWpsConfigurationResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.WiFi.WiFiWpsConfigurationStatus return
+    property supported_wps_kinds
+        get get_SupportedWpsKinds slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFi.IWiFiWpsConfigurationResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiWpsKind> return
+
+enum Windows.Devices.WiFi.WiFiWpsConfigurationStatus python_type
+    py WiFiWpsConfigurationStatus
+    signature enum(Windows.Devices.WiFi.WiFiWpsConfigurationStatus;i4)
+
+enum Windows.Devices.WiFi.WiFiWpsKind python_type
+    py WiFiWpsKind
+    signature enum(Windows.Devices.WiFi.WiFiWpsKind;i4)
+
+class System.Object external
+    py winrt.system.Object
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Networking.Connectivity.NetworkAdapter external
+    py winrt.windows.networking.connectivity.NetworkAdapter
+
+class Windows.Networking.Connectivity.NetworkSecuritySettings external
+    py winrt.windows.networking.connectivity.NetworkSecuritySettings
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential

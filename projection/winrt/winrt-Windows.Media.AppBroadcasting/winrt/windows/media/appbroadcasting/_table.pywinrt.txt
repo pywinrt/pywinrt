@@ -1,0 +1,109 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.AppBroadcasting
+
+class Windows.Media.AppBroadcasting.AppBroadcastingMonitor activatable python_type
+    py AppBroadcastingMonitor
+    signature rc(Windows.Media.AppBroadcasting.AppBroadcastingMonitor;{00f95a68-8907-48a0-b8ef-24d208137542})
+    default Windows.Media.AppBroadcasting.IAppBroadcastingMonitor
+    requires Windows.Media.AppBroadcasting.IAppBroadcastingMonitor
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property is_current_app_broadcasting
+        get get_IsCurrentAppBroadcasting slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingMonitor shape=4 reverse=22
+            out boolean return
+    event is_current_app_broadcasting_changed
+        add add_IsCurrentAppBroadcastingChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingMonitor shape=51 reverse=44
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.AppBroadcasting.AppBroadcastingMonitor,System.Object> name=handler
+            out event_token return
+        remove remove_IsCurrentAppBroadcastingChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingMonitor shape=26 reverse=82
+            in event_token name=token
+
+class Windows.Media.AppBroadcasting.AppBroadcastingStatus python_type
+    py AppBroadcastingStatus
+    signature rc(Windows.Media.AppBroadcasting.AppBroadcastingStatus;{1225e4df-03a1-42f8-8b80-c9228cd9cf2e})
+    default Windows.Media.AppBroadcasting.IAppBroadcastingStatus
+    requires Windows.Media.AppBroadcasting.IAppBroadcastingStatus
+    property can_start_broadcast
+        get get_CanStartBroadcast slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatus shape=4 reverse=22
+            out boolean return
+    property details
+        get get_Details slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatus shape=4 reverse=43
+            out class type=Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails return
+
+class Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails python_type
+    py AppBroadcastingStatusDetails
+    signature rc(Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails;{069dada4-b573-4e3c-8e19-1bafacd09713})
+    default Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails
+    requires Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails
+    property is_any_app_broadcasting
+        get get_IsAnyAppBroadcasting slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=22
+            out boolean return
+    property is_app_inactive
+        get get_IsAppInactive slot=10 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=121
+            out boolean return
+    property is_blocked_for_app
+        get get_IsBlockedForApp slot=11 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=141
+            out boolean return
+    property is_capture_resource_unavailable
+        get get_IsCaptureResourceUnavailable slot=7 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=43
+            out boolean return
+    property is_disabled_by_system
+        get get_IsDisabledBySystem slot=13 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=173
+            out boolean return
+    property is_disabled_by_user
+        get get_IsDisabledByUser slot=12 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=162
+            out boolean return
+    property is_game_stream_in_progress
+        get get_IsGameStreamInProgress slot=8 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=62
+            out boolean return
+    property is_gpu_constrained
+        get get_IsGpuConstrained slot=9 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails shape=4 reverse=99
+            out boolean return
+
+class Windows.Media.AppBroadcasting.AppBroadcastingUI python_type
+    py AppBroadcastingUI
+    signature rc(Windows.Media.AppBroadcasting.AppBroadcastingUI;{e56f9f8f-ee99-4dca-a3c3-70af3db44f5f})
+    default Windows.Media.AppBroadcasting.IAppBroadcastingUI
+    requires Windows.Media.AppBroadcasting.IAppBroadcastingUI
+    factory Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics shape=4 reverse=22 static
+            out class type=Windows.Media.AppBroadcasting.AppBroadcastingUI return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Media.AppBroadcasting.AppBroadcastingUI return
+    method get_status
+        method GetStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingUI shape=4 reverse=22
+            out class type=Windows.Media.AppBroadcasting.AppBroadcastingStatus return
+    method show_broadcast_ui
+        method ShowBroadcastUI slot=7 inputs=0 outputs=0 declaring=Windows.Media.AppBroadcasting.IAppBroadcastingUI shape=0 reverse=37
+
+interface Windows.Media.AppBroadcasting.IAppBroadcastingMonitor
+    guid 00f95a68-8907-48a0-b8ef-24d208137542
+
+interface Windows.Media.AppBroadcasting.IAppBroadcastingStatus
+    guid 1225e4df-03a1-42f8-8b80-c9228cd9cf2e
+
+interface Windows.Media.AppBroadcasting.IAppBroadcastingStatusDetails
+    guid 069dada4-b573-4e3c-8e19-1bafacd09713
+
+interface Windows.Media.AppBroadcasting.IAppBroadcastingUI
+    guid e56f9f8f-ee99-4dca-a3c3-70af3db44f5f
+
+interface Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics
+    guid 55a8a79d-23cb-4579-9c34-886fe02c045a
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.AppBroadcasting.AppBroadcastingMonitor,System.Object> concrete
+    guid dc64118b-04f9-5161-a7c0-e6a96070a8d1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.AppBroadcasting.AppBroadcastingMonitor;{00f95a68-8907-48a0-b8ef-24d208137542});cinterface(IInspectable))
+    argument Windows.Media.AppBroadcasting.AppBroadcastingMonitor
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.System.User external
+    py winrt.windows.system.User

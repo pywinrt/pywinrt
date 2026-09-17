@@ -1,0 +1,19 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Composition.Desktop
+
+class Windows.UI.Composition.Desktop.DesktopWindowTarget python_type
+    py DesktopWindowTarget
+    signature rc(Windows.UI.Composition.Desktop.DesktopWindowTarget;{6329d6ca-3366-490e-9db3-25312929ac51})
+    base Windows.UI.Composition.CompositionTarget
+    default Windows.UI.Composition.Desktop.IDesktopWindowTarget
+    requires Windows.UI.Composition.Desktop.IDesktopWindowTarget
+    property is_topmost
+        get get_IsTopmost slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Desktop.IDesktopWindowTarget shape=4 reverse=22
+            out boolean return
+
+interface Windows.UI.Composition.Desktop.IDesktopWindowTarget
+    guid 6329d6ca-3366-490e-9db3-25312929ac51
+
+class Windows.UI.Composition.CompositionTarget external
+    py winrt.windows.ui.composition.CompositionTarget

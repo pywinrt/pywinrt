@@ -1,0 +1,88 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Authentication.Web
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> concrete
+    guid b34952ac-265e-5947-8735-e9318f4301ff
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.WebAuthenticationResult;{64002b4b-ede9-470a-a5cd-0323faf6e262}))
+    argument Windows.Security.Authentication.Web.WebAuthenticationResult
+
+interface Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics
+    guid 2f149f1a-e673-40b5-bc22-201a6864a37b
+
+interface Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2
+    guid 73cdfb9e-14e7-41da-a971-aaf4410b621e
+
+interface Windows.Security.Authentication.Web.IWebAuthenticationResult
+    guid 64002b4b-ede9-470a-a5cd-0323faf6e262
+
+enum Windows.Security.Authentication.Web.TokenBindingKeyType python_type
+    py TokenBindingKeyType
+    signature enum(Windows.Security.Authentication.Web.TokenBindingKeyType;i4)
+
+class Windows.Security.Authentication.Web.WebAuthenticationBroker static python_type
+    py WebAuthenticationBroker
+    factory Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics
+    factory Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2
+    method authenticate_and_continue static
+        method AuthenticateAndContinue slot=6 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=4 reverse=22 static
+            in class type=Windows.Foundation.Uri name=requestUri
+        method AuthenticateAndContinue slot=7 inputs=2 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 reverse=44 static
+            in class type=Windows.Foundation.Uri name=requestUri
+            in class type=Windows.Foundation.Uri name=callbackUri
+        method AuthenticateAndContinue slot=8 inputs=4 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=195 reverse=68 static
+            in class type=Windows.Foundation.Uri name=requestUri
+            in class type=Windows.Foundation.Uri name=callbackUri
+            in class type=Windows.Foundation.Collections.ValueSet name=continuationData
+            in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
+    method authenticate_async static
+        method AuthenticateAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 reverse=26 static
+            in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
+            in class type=Windows.Foundation.Uri name=requestUri
+            in class type=Windows.Foundation.Uri name=callbackUri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
+        method AuthenticateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 reverse=26 static
+            in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
+            in class type=Windows.Foundation.Uri name=requestUri
+            in class type=Windows.Foundation.Uri name=callbackUri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
+    method authenticate_silently_async static
+        method AuthenticateSilentlyAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 reverse=100 static
+            in class type=Windows.Foundation.Uri name=requestUri
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
+        method AuthenticateSilentlyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=117 reverse=125 static
+            in class type=Windows.Foundation.Uri name=requestUri
+            in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
+    method get_current_application_callback_uri static
+        method GetCurrentApplicationCallbackUri slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=4 reverse=62 static
+            out class type=Windows.Foundation.Uri return
+
+enum Windows.Security.Authentication.Web.WebAuthenticationOptions python_type
+    py WebAuthenticationOptions
+    signature enum(Windows.Security.Authentication.Web.WebAuthenticationOptions;u4)
+
+class Windows.Security.Authentication.Web.WebAuthenticationResult python_type
+    py WebAuthenticationResult
+    signature rc(Windows.Security.Authentication.Web.WebAuthenticationResult;{64002b4b-ede9-470a-a5cd-0323faf6e262})
+    default Windows.Security.Authentication.Web.IWebAuthenticationResult
+    requires Windows.Security.Authentication.Web.IWebAuthenticationResult
+    property response_data
+        get get_ResponseData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=22
+            out string return
+    property response_error_detail
+        get get_ResponseErrorDetail slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=62
+            out uint32 return
+    property response_status
+        get get_ResponseStatus slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=43
+            out enum32 type=Windows.Security.Authentication.Web.WebAuthenticationStatus return
+
+enum Windows.Security.Authentication.Web.WebAuthenticationStatus python_type
+    py WebAuthenticationStatus
+    signature enum(Windows.Security.Authentication.Web.WebAuthenticationStatus;i4)
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet

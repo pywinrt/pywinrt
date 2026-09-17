@@ -1,0 +1,182 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Gaming.Input.Preview
+
+enum Windows.Gaming.Input.Preview.DeviceCommand python_type
+    py DeviceCommand
+    signature enum(Windows.Gaming.Input.Preview.DeviceCommand;i4)
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryChargingState python_type
+    py GameControllerBatteryChargingState
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryChargingState;i4)
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryKind python_type
+    py GameControllerBatteryKind
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryKind;i4)
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryLevel python_type
+    py GameControllerBatteryLevel
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryLevel;i4)
+
+enum Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason python_type
+    py GameControllerFirmwareCorruptReason
+    signature enum(Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason;i4)
+
+class Windows.Gaming.Input.Preview.GameControllerProviderInfo static python_type
+    py GameControllerProviderInfo
+    factory Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
+    method get_parent_provider_id static
+        method GetParentProviderId slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics shape=51 reverse=24 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out string return
+    method get_provider_id static
+        method GetProviderId slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics shape=51 reverse=44 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out string return
+
+struct Windows.Gaming.Input.Preview.HeadsetGeqGains python_type
+    py HeadsetGeqGains
+    signature struct(Windows.Gaming.Input.Preview.HeadsetGeqGains;i4;i4;i4;i4;i4)
+    field band1_gain band1Gain int32
+    field band2_gain band2Gain int32
+    field band3_gain band3Gain int32
+    field band4_gain band4Gain int32
+    field band5_gain band5Gain int32
+
+enum Windows.Gaming.Input.Preview.HeadsetLevel python_type
+    py HeadsetLevel
+    signature enum(Windows.Gaming.Input.Preview.HeadsetLevel;i4)
+
+enum Windows.Gaming.Input.Preview.HeadsetOperation python_type
+    py HeadsetOperation
+    signature enum(Windows.Gaming.Input.Preview.HeadsetOperation;i4)
+
+interface Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
+    guid 0be1e6c5-d9bd-44ee-8362-488b2e464bfb
+
+interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    guid 2da3ed52-ffd9-43e2-825c-1d2790e04d14
+
+interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics
+    guid d40dda17-b1f4-499a-874c-7095aac15291
+
+interface Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete
+    guid a73dd129-3e15-5afc-ba2b-18ecabbdb6fb
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable))
+    argument Windows.Gaming.Input.Preview.RemappingButtonCategory
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+class Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider python_type
+    py LegacyGipGameControllerProvider
+    signature rc(Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider;{2da3ed52-ffd9-43e2-825c-1d2790e04d14})
+    default Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    requires Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    factory Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics
+    property app_compat_version
+        get get_AppCompatVersion slot=19 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=223
+            out uint32 return
+    property battery_charging_state
+        get get_BatteryChargingState slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=22
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryChargingState return
+    property battery_kind
+        get get_BatteryKind slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=43
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryKind return
+    property battery_level
+        get get_BatteryLevel slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryLevel return
+    property is_firmware_corrupted
+        get get_IsFirmwareCorrupted slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=121
+            out boolean return
+    property is_synthetic_device
+        get get_IsSyntheticDevice slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=162
+            out boolean return
+    property preferred_types
+        get get_PreferredTypes slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=173
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method clear_pairing static
+        method ClearPairing slot=9 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 reverse=100 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+    method execute_command
+        method ExecuteCommand slot=14 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=186
+            in enum32 type=Windows.Gaming.Input.Preview.DeviceCommand name=command
+    method from_game_controller static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 reverse=24 static
+            in interface type=Windows.Gaming.Input.IGameController name=controller
+            out class type=Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider return
+    method from_game_controller_provider static
+        method FromGameControllerProvider slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 reverse=44 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out class type=Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider return
+    method get_device_firmware_corruption_state
+        method GetDeviceFirmwareCorruptionState slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=99
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason return
+    method get_extended_device_info
+        method GetExtendedDeviceInfo slot=16 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=51 reverse=203
+            receive_array uint8 return
+    method get_headset_operation
+        method GetHeadsetOperation slot=18 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117 reverse=220
+            in enum32 type=Windows.Gaming.Input.Preview.HeadsetOperation name=operation
+            receive_array uint8 return
+    method get_standard_controller_button_remapping
+        method GetStandardControllerButtonRemapping slot=21 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in class type=Windows.System.User name=user
+            in boolean name=previous
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> return
+    method is_copilot static
+        method IsCopilot slot=11 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 reverse=145 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+            out string return
+    method is_interface_supported
+        method IsInterfaceSupported slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=94
+            in guid name=interfaceId
+            out boolean return
+    method is_pilot static
+        method IsPilot slot=10 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 reverse=125 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+            out string return
+    method pair_pilot_to_copilot static
+        method PairPilotToCopilot slot=8 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 reverse=66 static
+            in class type=Windows.System.User name=user
+            in string name=pilotControllerProviderId
+            in string name=copilotControllerProviderId
+    method set_headset_operation
+        method SetHeadsetOperation slot=17 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in enum32 type=Windows.Gaming.Input.Preview.HeadsetOperation name=operation
+            pass_array uint8 name=buffer
+    method set_home_led_intensity
+        method SetHomeLedIntensity slot=15 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4 reverse=194
+            in uint8 name=intensity
+    method set_standard_controller_button_remapping
+        method SetStandardControllerButtonRemapping slot=20 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117 reverse=230
+            in class type=Windows.System.User name=user
+            in boolean name=previous
+            in parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=remapping
+
+enum Windows.Gaming.Input.Preview.RemappingButtonCategory python_type
+    py RemappingButtonCategory
+    signature enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4)
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Gaming.Input.IGameController external
+    py winrt.windows.gaming.input._IGameController
+    guid 1baf6522-5f64-42c5-8267-b9fe2215bfbd
+
+interface Windows.Gaming.Input.Custom.IGameControllerProvider external
+    py winrt.windows.gaming.input.custom._IGameControllerProvider
+    guid e6d73982-2996-4559-b16c-3e57d46e58d6
+
+class Windows.System.User external
+    py winrt.windows.system.User

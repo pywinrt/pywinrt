@@ -1,0 +1,1848 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Devices
+
+class Windows.Media.Devices.AdvancedPhotoCaptureSettings activatable python_type
+    py AdvancedPhotoCaptureSettings
+    signature rc(Windows.Media.Devices.AdvancedPhotoCaptureSettings;{08f3863a-0018-445b-93d2-646d1c5ed05c})
+    default Windows.Media.Devices.IAdvancedPhotoCaptureSettings
+    requires Windows.Media.Devices.IAdvancedPhotoCaptureSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedPhotoCaptureSettings shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.AdvancedPhotoMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAdvancedPhotoCaptureSettings shape=4 reverse=43
+            in enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=value
+
+class Windows.Media.Devices.AdvancedPhotoControl python_type
+    py AdvancedPhotoControl
+    signature rc(Windows.Media.Devices.AdvancedPhotoControl;{c5b15486-9001-4682-9309-68eae0080eec})
+    default Windows.Media.Devices.IAdvancedPhotoControl
+    requires Windows.Media.Devices.IAdvancedPhotoControl
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedPhotoControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.AdvancedPhotoMode return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedPhotoControl shape=4 reverse=22
+            out boolean return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedPhotoControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> return
+    method configure
+        method Configure slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAdvancedPhotoControl shape=4 reverse=99
+            in class type=Windows.Media.Devices.AdvancedPhotoCaptureSettings name=settings
+
+enum Windows.Media.Devices.AdvancedPhotoMode python_type
+    py AdvancedPhotoMode
+    signature enum(Windows.Media.Devices.AdvancedPhotoMode;i4)
+
+class Windows.Media.Devices.AudioDeviceController python_type
+    py AudioDeviceController
+    signature rc(Windows.Media.Devices.AudioDeviceController;{edd4a388-79c7-4f7c-90e8-ef934b21580a})
+    default Windows.Media.Devices.IAudioDeviceController
+    requires Windows.Media.Devices.IAudioDeviceController
+    requires Windows.Media.Devices.IMediaDeviceController
+    requires Windows.Media.Devices.IAudioDeviceController2
+    property volume_percent
+        get get_VolumePercent slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceController shape=4 reverse=99
+            out single return
+        put put_VolumePercent slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAudioDeviceController shape=1
+            in single name=value
+    property muted
+        get get_Muted slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceController shape=4 reverse=43
+            out boolean return
+        put put_Muted slot=6 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAudioDeviceController shape=4 reverse=22
+            in boolean name=value
+    property audio_capture_effects_manager
+        get get_AudioCaptureEffectsManager slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceController2 shape=4 reverse=22
+            out class type=Windows.Media.Effects.AudioCaptureEffectsManager return
+    method get_available_media_stream_properties
+        method GetAvailableMediaStreamProperties slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=24
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> return
+    method get_media_stream_properties
+        method GetMediaStreamProperties slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=44
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out interface type=Windows.Media.MediaProperties.IMediaEncodingProperties return
+    method set_media_stream_properties_async
+        method SetMediaStreamPropertiesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=117 reverse=66
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=mediaEncodingProperties
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Devices.AudioDeviceModule python_type
+    py AudioDeviceModule
+    signature rc(Windows.Media.Devices.AudioDeviceModule;{86cfac36-47c1-4b33-9852-8773ec4be123})
+    default Windows.Media.Devices.IAudioDeviceModule
+    requires Windows.Media.Devices.IAudioDeviceModule
+    property class_id
+        get get_ClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=4 reverse=22
+            out string return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=4 reverse=43
+            out string return
+    property instance_id
+        get get_InstanceId slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=4 reverse=62
+            out uint32 return
+    property major_version
+        get get_MajorVersion slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=4 reverse=99
+            out uint32 return
+    property minor_version
+        get get_MinorVersion slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=4 reverse=121
+            out uint32 return
+    method send_command_async
+        method SendCommandAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModule shape=51 reverse=144
+            in interface type=Windows.Storage.Streams.IBuffer name=Command
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> return
+
+class Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs python_type
+    py AudioDeviceModuleNotificationEventArgs
+    signature rc(Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs;{e3e3ccaf-224c-48be-956b-9a13134e96e8})
+    default Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs
+    requires Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs
+    property module
+        get get_Module slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Devices.AudioDeviceModule return
+    property notification_data
+        get get_NotificationData slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+class Windows.Media.Devices.AudioDeviceModulesManager python_type
+    py AudioDeviceModulesManager
+    signature rc(Windows.Media.Devices.AudioDeviceModulesManager;{6aa40c4d-960a-4d1c-b318-0022604547ed})
+    default Windows.Media.Devices.IAudioDeviceModulesManager
+    requires Windows.Media.Devices.IAudioDeviceModulesManager
+    factory Windows.Media.Devices.IAudioDeviceModulesManagerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManagerFactory shape=51 reverse=24
+            in string name=deviceId
+            out class type=Windows.Media.Devices.AudioDeviceModulesManager return
+    event module_notification_received
+        add add_ModuleNotificationReceived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Devices.AudioDeviceModulesManager,Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs> name=handler
+            out event_token return
+        remove remove_ModuleNotificationReceived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=26 reverse=53
+            in event_token name=token
+    method find_all
+        method FindAll slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> return
+    method find_all_by_id
+        method FindAllById slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=51 reverse=65
+            in string name=moduleId
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> return
+
+enum Windows.Media.Devices.AudioDeviceRole python_type
+    py AudioDeviceRole
+    signature enum(Windows.Media.Devices.AudioDeviceRole;i4)
+
+enum Windows.Media.Devices.AutoFocusRange python_type
+    py AutoFocusRange
+    signature enum(Windows.Media.Devices.AutoFocusRange;i4)
+
+class Windows.Media.Devices.CallControl python_type
+    py CallControl
+    signature rc(Windows.Media.Devices.CallControl;{a520d0d6-ae8d-45db-8011-ca49d3b3e578})
+    default Windows.Media.Devices.ICallControl
+    requires Windows.Media.Devices.ICallControl
+    factory Windows.Media.Devices.ICallControlStatics
+    property has_ringer
+        get get_HasRinger slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=4 reverse=121
+            out boolean return
+    event answer_requested
+        add add_AnswerRequested slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=144
+            in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
+            out event_token return
+        remove remove_AnswerRequested slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=167
+            in event_token name=token
+    event audio_transfer_requested
+        add add_AudioTransferRequested slot=21 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=233
+            in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
+            out event_token return
+        remove remove_AudioTransferRequested slot=22 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=400
+            in event_token name=token
+    event dial_requested
+        add add_DialRequested slot=15 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=196
+            in delegate type=Windows.Media.Devices.DialRequestedEventHandler name=handler
+            out event_token return
+        remove remove_DialRequested slot=16 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=397
+            in event_token name=token
+    event hang_up_requested
+        add add_HangUpRequested slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=174
+            in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
+            out event_token return
+        remove remove_HangUpRequested slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=192
+            in event_token name=token
+    event keypad_pressed
+        add add_KeypadPressed slot=19 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=224
+            in delegate type=Windows.Media.Devices.KeypadPressedEventHandler name=handler
+            out event_token return
+        remove remove_KeypadPressed slot=20 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=399
+            in event_token name=token
+    event redial_requested
+        add add_RedialRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=211
+            in delegate type=Windows.Media.Devices.RedialRequestedEventHandler name=handler
+            out event_token return
+        remove remove_RedialRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=398
+            in event_token name=token
+    method end_call
+        method EndCall slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=3
+            in uint64 name=callToken
+    method from_id static
+        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControlStatics shape=51 reverse=44 static
+            in string name=deviceId
+            out class type=Windows.Media.Devices.CallControl return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICallControlStatics shape=4 reverse=22 static
+            out class type=Windows.Media.Devices.CallControl return
+    method indicate_active_call
+        method IndicateActiveCall slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=3
+            in uint64 name=callToken
+    method indicate_new_incoming_call
+        method IndicateNewIncomingCall slot=6 inputs=2 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=117 reverse=25
+            in boolean name=enableRinger
+            in string name=callerId
+            out uint64 return
+    method indicate_new_outgoing_call
+        method IndicateNewOutgoingCall slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=4 reverse=43
+            out uint64 return
+
+delegate Windows.Media.Devices.CallControlEventHandler python_type
+    py CallControlEventHandler
+    guid 596f759f-50df-4454-bc63-4d3d01b61958
+    signature delegate({596f759f-50df-4454-bc63-4d3d01b61958})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Media.Devices.CallControl name=sender
+
+class Windows.Media.Devices.CameraOcclusionInfo python_type
+    py CameraOcclusionInfo
+    signature rc(Windows.Media.Devices.CameraOcclusionInfo;{af6c4ad0-a84d-5db6-be58-a5da21cfe011})
+    default Windows.Media.Devices.ICameraOcclusionInfo
+    requires Windows.Media.Devices.ICameraOcclusionInfo
+    event state_changed
+        add add_StateChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo,Windows.Media.Devices.CameraOcclusionStateChangedEventArgs> name=handler
+            out event_token return
+        remove remove_StateChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=26 reverse=110
+            in event_token name=token
+    method get_state
+        method GetState slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=4 reverse=22
+            out class type=Windows.Media.Devices.CameraOcclusionState return
+    method is_occlusion_kind_supported
+        method IsOcclusionKindSupported slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=51 reverse=44
+            in enum32 type=Windows.Media.Devices.CameraOcclusionKind name=occlusionKind
+            out boolean return
+
+enum Windows.Media.Devices.CameraOcclusionKind python_type
+    py CameraOcclusionKind
+    signature enum(Windows.Media.Devices.CameraOcclusionKind;i4)
+
+class Windows.Media.Devices.CameraOcclusionState python_type
+    py CameraOcclusionState
+    signature rc(Windows.Media.Devices.CameraOcclusionState;{430adeb8-6842-5e55-9bde-04b4ef3a8a57})
+    default Windows.Media.Devices.ICameraOcclusionState
+    requires Windows.Media.Devices.ICameraOcclusionState
+    property is_occluded
+        get get_IsOccluded slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionState shape=4 reverse=22
+            out boolean return
+    method is_occlusion_kind
+        method IsOcclusionKind slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionState shape=51 reverse=44
+            in enum32 type=Windows.Media.Devices.CameraOcclusionKind name=occlusionKind
+            out boolean return
+
+class Windows.Media.Devices.CameraOcclusionStateChangedEventArgs python_type
+    py CameraOcclusionStateChangedEventArgs
+    signature rc(Windows.Media.Devices.CameraOcclusionStateChangedEventArgs;{8512d848-c0de-57ca-a1ca-fb2c3d23df55})
+    default Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs
+    requires Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Devices.CameraOcclusionState return
+
+enum Windows.Media.Devices.CameraStreamState python_type
+    py CameraStreamState
+    signature enum(Windows.Media.Devices.CameraStreamState;i4)
+
+enum Windows.Media.Devices.CaptureSceneMode python_type
+    py CaptureSceneMode
+    signature enum(Windows.Media.Devices.CaptureSceneMode;i4)
+
+enum Windows.Media.Devices.CaptureUse python_type
+    py CaptureUse
+    signature enum(Windows.Media.Devices.CaptureUse;i4)
+
+enum Windows.Media.Devices.ColorTemperaturePreset python_type
+    py ColorTemperaturePreset
+    signature enum(Windows.Media.Devices.ColorTemperaturePreset;i4)
+
+class Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs python_type
+    py DefaultAudioCaptureDeviceChangedEventArgs
+    signature rc(Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab})
+    default Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs
+    requires Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=22
+            out string return
+    property role
+        get get_Role slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.AudioDeviceRole return
+
+class Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs python_type
+    py DefaultAudioRenderDeviceChangedEventArgs
+    signature rc(Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab})
+    default Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs
+    requires Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=22
+            out string return
+    property role
+        get get_Role slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.AudioDeviceRole return
+
+class Windows.Media.Devices.DialRequestedEventArgs python_type
+    py DialRequestedEventArgs
+    signature rc(Windows.Media.Devices.DialRequestedEventArgs;{037b929e-953c-4286-8866-4f0f376c855a})
+    default Windows.Media.Devices.IDialRequestedEventArgs
+    requires Windows.Media.Devices.IDialRequestedEventArgs
+    property contact
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDialRequestedEventArgs shape=4 reverse=43
+            out object return
+    method handled
+        method Handled slot=6 inputs=0 outputs=0 declaring=Windows.Media.Devices.IDialRequestedEventArgs shape=0 reverse=16
+
+delegate Windows.Media.Devices.DialRequestedEventHandler python_type
+    py DialRequestedEventHandler
+    guid 5abbffdb-c21f-4bc4-891b-257e28c1b1a4
+    signature delegate({5abbffdb-c21f-4bc4-891b-257e28c1b1a4})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Devices.CallControl name=sender
+            in class type=Windows.Media.Devices.DialRequestedEventArgs name=e
+
+class Windows.Media.Devices.DigitalWindowBounds activatable python_type
+    py DigitalWindowBounds
+    signature rc(Windows.Media.Devices.DigitalWindowBounds;{dd4f21dd-d173-5c6b-8c25-bdd26d5122b1})
+    default Windows.Media.Devices.IDigitalWindowBounds
+    requires Windows.Media.Devices.IDigitalWindowBounds
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property scale
+        get get_Scale slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=4 reverse=121
+            out double return
+        put put_Scale slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=2 reverse=138
+            in double name=value
+    property normalized_origin_top
+        get get_NormalizedOriginTop slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=4 reverse=22
+            out double return
+        put put_NormalizedOriginTop slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=2 reverse=38
+            in double name=value
+    property normalized_origin_left
+        get get_NormalizedOriginLeft slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=4 reverse=62
+            out double return
+        put put_NormalizedOriginLeft slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IDigitalWindowBounds shape=2
+            in double name=value
+
+class Windows.Media.Devices.DigitalWindowCapability python_type
+    py DigitalWindowCapability
+    signature rc(Windows.Media.Devices.DigitalWindowCapability;{d78bad2c-f721-5244-a196-b56ccbec606c})
+    default Windows.Media.Devices.IDigitalWindowCapability
+    requires Windows.Media.Devices.IDigitalWindowCapability
+    property height
+        get get_Height slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=43
+            out int32 return
+    property max_scale_value
+        get get_MaxScaleValue slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=99
+            out double return
+    property min_scale_value
+        get get_MinScaleValue slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=62
+            out double return
+    property min_scale_value_without_upsampling
+        get get_MinScaleValueWithoutUpsampling slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=121
+            out double return
+    property normalized_field_of_view_limit
+        get get_NormalizedFieldOfViewLimit slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=141
+            out struct type=Windows.Foundation.Rect return
+    property width
+        get get_Width slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowCapability shape=4 reverse=22
+            out int32 return
+
+class Windows.Media.Devices.DigitalWindowControl python_type
+    py DigitalWindowControl
+    signature rc(Windows.Media.Devices.DigitalWindowControl;{23b69eff-65d2-53ea-8780-de582b48b544})
+    default Windows.Media.Devices.IDigitalWindowControl
+    requires Windows.Media.Devices.IDigitalWindowControl
+    property current_mode
+        get get_CurrentMode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.DigitalWindowMode return
+    property is_supported
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=4 reverse=22
+            out boolean return
+    property supported_capabilities
+        get get_SupportedCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=51 reverse=44
+            receive_array enum32 type=Windows.Media.Devices.DigitalWindowMode return
+    method configure
+        method Configure slot=10 inputs=1 outputs=0 declaring=Windows.Media.Devices.IDigitalWindowControl shape=4 reverse=121
+            in enum32 type=Windows.Media.Devices.DigitalWindowMode name=digitalWindowMode
+        method Configure slot=11 inputs=2 outputs=0 declaring=Windows.Media.Devices.IDigitalWindowControl shape=51 reverse=144
+            in enum32 type=Windows.Media.Devices.DigitalWindowMode name=digitalWindowMode
+            in class type=Windows.Media.Devices.DigitalWindowBounds name=digitalWindowBounds
+    method get_bounds
+        method GetBounds slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=4 reverse=99
+            out class type=Windows.Media.Devices.DigitalWindowBounds return
+    method get_capability_for_size
+        method GetCapabilityForSize slot=13 inputs=2 outputs=1 declaring=Windows.Media.Devices.IDigitalWindowControl shape=117 reverse=175
+            in int32 name=width
+            in int32 name=height
+            out class type=Windows.Media.Devices.DigitalWindowCapability return
+
+enum Windows.Media.Devices.DigitalWindowMode python_type
+    py DigitalWindowMode
+    signature enum(Windows.Media.Devices.DigitalWindowMode;i4)
+
+class Windows.Media.Devices.ExposureCompensationControl python_type
+    py ExposureCompensationControl
+    signature rc(Windows.Media.Devices.ExposureCompensationControl;{81c8e834-dcec-4011-a610-1f3847e64aca})
+    default Windows.Media.Devices.IExposureCompensationControl
+    requires Windows.Media.Devices.IExposureCompensationControl
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=4 reverse=62
+            out single return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=4 reverse=43
+            out single return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=4 reverse=99
+            out single return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=4 reverse=121
+            out single return
+    method set_value_async
+        method SetValueAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.IExposureCompensationControl shape=40
+            in single name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Devices.ExposureControl python_type
+    py ExposureControl
+    signature rc(Windows.Media.Devices.ExposureControl;{09e8cbe2-ad96-4f28-a0e0-96ed7e1b5fd2})
+    default Windows.Media.Devices.IExposureControl
+    requires Windows.Media.Devices.IExposureControl
+    property auto
+        get get_Auto slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=43
+            out boolean return
+    property max
+        get get_Max slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=121
+            out timespan return
+    property min
+        get get_Min slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=99
+            out timespan return
+    property step
+        get get_Step slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=141
+            out timespan return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=4 reverse=162
+            out timespan return
+    method set_auto_async
+        method SetAutoAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=51 reverse=65
+            in boolean name=value
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_value_async
+        method SetValueAsync slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.IExposureControl shape=89
+            in timespan name=shutterDuration
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Devices.ExposurePriorityVideoControl python_type
+    py ExposurePriorityVideoControl
+    signature rc(Windows.Media.Devices.ExposurePriorityVideoControl;{2cb240a3-5168-4271-9ea5-47621a98a352})
+    default Windows.Media.Devices.IExposurePriorityVideoControl
+    requires Windows.Media.Devices.IExposurePriorityVideoControl
+    property enabled
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposurePriorityVideoControl shape=4 reverse=43
+            out boolean return
+        put put_Enabled slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IExposurePriorityVideoControl shape=4 reverse=62
+            in boolean name=value
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IExposurePriorityVideoControl shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Devices.FlashControl python_type
+    py FlashControl
+    signature rc(Windows.Media.Devices.FlashControl;{def41dbe-7d68-45e3-8c0f-be7bb32837d0})
+    default Windows.Media.Devices.IFlashControl
+    requires Windows.Media.Devices.IFlashControl
+    requires Windows.Media.Devices.IFlashControl2
+    property red_eye_reduction
+        get get_RedEyeReduction slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=173
+            out boolean return
+        put put_RedEyeReduction slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=186
+            in boolean name=value
+    property power_percent
+        get get_PowerPercent slot=15 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=194
+            out single return
+        put put_PowerPercent slot=16 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFlashControl shape=1
+            in single name=value
+    property enabled
+        get get_Enabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=99
+            out boolean return
+        put put_Enabled slot=10 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=121
+            in boolean name=value
+    property auto
+        get get_Auto slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=141
+            out boolean return
+        put put_Auto slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=162
+            in boolean name=value
+    property power_supported
+        get get_PowerSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=43
+            out boolean return
+    property red_eye_reduction_supported
+        get get_RedEyeReductionSupported slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=62
+            out boolean return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl shape=4 reverse=22
+            out boolean return
+    property assistant_light_enabled
+        get get_AssistantLightEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl2 shape=4 reverse=43
+            out boolean return
+        put put_AssistantLightEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFlashControl2 shape=4 reverse=62
+            in boolean name=value
+    property assistant_light_supported
+        get get_AssistantLightSupported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFlashControl2 shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Devices.FocusControl python_type
+    py FocusControl
+    signature rc(Windows.Media.Devices.FocusControl;{c0d889f6-5228-4453-b153-85606592b238})
+    default Windows.Media.Devices.IFocusControl
+    requires Windows.Media.Devices.IFocusControl
+    requires Windows.Media.Devices.IFocusControl2
+    property max
+        get get_Max slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=162
+            out uint32 return
+    property min
+        get get_Min slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=141
+            out uint32 return
+    property preset
+        get get_Preset slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.FocusPreset return
+    property step
+        get get_Step slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=173
+            out uint32 return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=22
+            out boolean return
+    property supported_presets
+        get get_SupportedPresets slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> return
+    property value
+        get get_Value slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=186
+            out uint32 return
+    property focus_changed_supported
+        get get_FocusChangedSupported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=22
+            out boolean return
+    property focus_state
+        get get_FocusState slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=162
+            out enum32 type=Windows.Media.Devices.MediaCaptureFocusState return
+    property mode
+        get get_Mode slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=141
+            out enum32 type=Windows.Media.Devices.FocusMode return
+    property supported_focus_distances
+        get get_SupportedFocusDistances slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> return
+    property supported_focus_modes
+        get get_SupportedFocusModes slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> return
+    property supported_focus_ranges
+        get get_SupportedFocusRanges slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> return
+    property wait_for_focus_supported
+        get get_WaitForFocusSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=43
+            out boolean return
+    method configure
+        method Configure slot=15 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=194
+            in class type=Windows.Media.Devices.FocusSettings name=settings
+    method focus_async
+        method FocusAsync slot=16 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=4 reverse=202
+            out interface type=Windows.Foundation.IAsyncAction return
+    method lock_async
+        method LockAsync slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=186
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_preset_async
+        method SetPresetAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=51 reverse=100
+            in enum32 type=Windows.Media.Devices.FocusPreset name=preset
+            out interface type=Windows.Foundation.IAsyncAction return
+        method SetPresetAsync slot=10 inputs=2 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=117 reverse=125
+            in enum32 type=Windows.Media.Devices.FocusPreset name=preset
+            in boolean name=completeBeforeFocus
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_value_async
+        method SetValueAsync slot=15 inputs=1 outputs=1 declaring=Windows.Media.Devices.IFocusControl shape=51 reverse=196
+            in uint32 name=focus
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unlock_async
+        method UnlockAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusControl2 shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Media.Devices.FocusMode python_type
+    py FocusMode
+    signature enum(Windows.Media.Devices.FocusMode;i4)
+
+enum Windows.Media.Devices.FocusPreset python_type
+    py FocusPreset
+    signature enum(Windows.Media.Devices.FocusPreset;i4)
+
+class Windows.Media.Devices.FocusSettings activatable python_type
+    py FocusSettings
+    signature rc(Windows.Media.Devices.FocusSettings;{79958f6b-3263-4275-85d6-aeae891c96ee})
+    default Windows.Media.Devices.IFocusSettings
+    requires Windows.Media.Devices.IFocusSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property wait_for_focus
+        get get_WaitForFocus slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=186
+            out boolean return
+        put put_WaitForFocus slot=15 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=194
+            in boolean name=value
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.FocusMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=43
+            in enum32 type=Windows.Media.Devices.FocusMode name=value
+    property distance
+        get get_Distance slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Media.Devices.ManualFocusDistance> return
+        put put_Distance slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=173
+            in reference type=Windows.Foundation.IReference<Windows.Media.Devices.ManualFocusDistance> name=value
+    property disable_driver_fallback
+        get get_DisableDriverFallback slot=16 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=202
+            out boolean return
+        put put_DisableDriverFallback slot=17 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=210
+            in boolean name=value
+    property auto_focus_range
+        get get_AutoFocusRange slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.AutoFocusRange return
+        put put_AutoFocusRange slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IFocusSettings shape=4 reverse=99
+            in enum32 type=Windows.Media.Devices.AutoFocusRange name=value
+
+class Windows.Media.Devices.HdrVideoControl python_type
+    py HdrVideoControl
+    signature rc(Windows.Media.Devices.HdrVideoControl;{55d8e2d0-30c0-43bf-9b9a-9799d70ced94})
+    default Windows.Media.Devices.IHdrVideoControl
+    requires Windows.Media.Devices.IHdrVideoControl
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IHdrVideoControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.HdrVideoMode return
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IHdrVideoControl shape=4 reverse=99
+            in enum32 type=Windows.Media.Devices.HdrVideoMode name=value
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IHdrVideoControl shape=4 reverse=22
+            out boolean return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IHdrVideoControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> return
+
+enum Windows.Media.Devices.HdrVideoMode python_type
+    py HdrVideoMode
+    signature enum(Windows.Media.Devices.HdrVideoMode;i4)
+
+interface Windows.Media.Devices.IAdvancedPhotoCaptureSettings
+    guid 08f3863a-0018-445b-93d2-646d1c5ed05c
+
+interface Windows.Media.Devices.IAdvancedPhotoControl
+    guid c5b15486-9001-4682-9309-68eae0080eec
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController
+    guid de6ff4d3-2b96-4583-80ab-b5b01dc6a8d7
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
+    guid c621b82d-d6f0-5c1b-a388-a6e938407146
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11
+    guid d5b65ae2-3772-580c-a630-e75de9106904
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2
+    guid 8bb94f8f-f11a-43db-b402-11930b80ae56
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3
+    guid a98b8f34-ee0d-470c-b9f0-4229c4bbd089
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4
+    guid ea9fbfaf-d371-41c3-9a17-824a87ebdfd2
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5
+    guid 33512b17-b9cb-4a23-b875-f9eaab535492
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
+    guid b6563a53-68a1-44b7-9f89-b5fa97ac0cbe
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
+    guid 8d2927f0-a054-50e7-b7df-7c04234d10f0
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
+    guid d843f010-e7fb-595b-9a78-0e54c4532b43
+
+interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+    guid 8bdca95d-0255-51bc-a10d-5a169ec1625a
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> concrete
+    guid 2e1f3d72-a58d-5b0a-b42d-3660c04cfeeb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Devices.ModuleCommandResult;{520d1eb4-1374-4c7d-b1e4-39dcdf3eae4e}))
+    argument Windows.Media.Devices.ModuleCommandResult
+
+interface Windows.Media.Devices.IAudioDeviceController
+    guid edd4a388-79c7-4f7c-90e8-ef934b21580a
+
+interface Windows.Media.Devices.IAudioDeviceController2
+    guid 85326599-4c24-48b0-81dd-0c5cc79ddf05
+
+interface Windows.Media.Devices.IAudioDeviceModule
+    guid 86cfac36-47c1-4b33-9852-8773ec4be123
+
+interface Windows.Media.Devices.IAudioDeviceModuleNotificationEventArgs
+    guid e3e3ccaf-224c-48be-956b-9a13134e96e8
+
+interface Windows.Media.Devices.IAudioDeviceModulesManager
+    guid 6aa40c4d-960a-4d1c-b318-0022604547ed
+
+interface Windows.Media.Devices.IAudioDeviceModulesManagerFactory
+    guid 8db03670-e64d-4773-96c0-bc7ebf0e063f
+
+interface Windows.Media.Devices.ICallControl
+    guid a520d0d6-ae8d-45db-8011-ca49d3b3e578
+
+interface Windows.Media.Devices.ICallControlStatics
+    guid 03945ad5-85ab-40e1-af19-56c94303b019
+
+interface Windows.Media.Devices.ICameraOcclusionInfo
+    guid af6c4ad0-a84d-5db6-be58-a5da21cfe011
+
+interface Windows.Media.Devices.ICameraOcclusionState
+    guid 430adeb8-6842-5e55-9bde-04b4ef3a8a57
+
+interface Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs
+    guid 8512d848-c0de-57ca-a1ca-fb2c3d23df55
+
+interface Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs python_type
+    py _IDefaultAudioDeviceChangedEventArgs
+    guid 110f882f-1c05-4657-a18e-47c9b69f07ab
+    signature {110f882f-1c05-4657-a18e-47c9b69f07ab}
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=22
+            out string return
+    property role
+        get get_Role slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.AudioDeviceRole return
+
+interface Windows.Media.Devices.IDialRequestedEventArgs
+    guid 037b929e-953c-4286-8866-4f0f376c855a
+
+interface Windows.Media.Devices.IDigitalWindowBounds
+    guid dd4f21dd-d173-5c6b-8c25-bdd26d5122b1
+
+interface Windows.Media.Devices.IDigitalWindowCapability
+    guid d78bad2c-f721-5244-a196-b56ccbec606c
+
+interface Windows.Media.Devices.IDigitalWindowControl
+    guid 23b69eff-65d2-53ea-8780-de582b48b544
+
+interface Windows.Media.Devices.IExposureCompensationControl
+    guid 81c8e834-dcec-4011-a610-1f3847e64aca
+
+interface Windows.Media.Devices.IExposureControl
+    guid 09e8cbe2-ad96-4f28-a0e0-96ed7e1b5fd2
+
+interface Windows.Media.Devices.IExposurePriorityVideoControl
+    guid 2cb240a3-5168-4271-9ea5-47621a98a352
+
+interface Windows.Media.Devices.IFlashControl
+    guid def41dbe-7d68-45e3-8c0f-be7bb32837d0
+
+interface Windows.Media.Devices.IFlashControl2
+    guid 7d29cc9e-75e1-4af7-bd7d-4e38e1c06cd6
+
+interface Windows.Media.Devices.IFocusControl
+    guid c0d889f6-5228-4453-b153-85606592b238
+
+interface Windows.Media.Devices.IFocusControl2
+    guid 3f7cff48-c534-4e9e-94c3-52ef2afd5d07
+
+interface Windows.Media.Devices.IFocusSettings
+    guid 79958f6b-3263-4275-85d6-aeae891c96ee
+
+interface Windows.Media.Devices.IHdrVideoControl
+    guid 55d8e2d0-30c0-43bf-9b9a-9799d70ced94
+
+interface Windows.Media.Devices.IInfraredTorchControl
+    guid 1cba2c83-6cb6-5a04-a6fc-3be7b33ff056
+
+interface Windows.Media.Devices.IIsoSpeedControl
+    guid 27b6c322-25ad-4f1b-aaab-524ab376ca33
+
+interface Windows.Media.Devices.IIsoSpeedControl2
+    guid 6f1578f2-6d77-4f8a-8c2f-6130b6395053
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> concrete
+    guid d73144c7-9d75-5dfb-8040-626202dcf454
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Devices.RegionOfInterest;{e5ecc834-ce66-4e05-a78f-cf391a5ec2d1}))
+    argument Windows.Media.Devices.RegionOfInterest
+
+interface Windows.Media.Devices.IKeypadPressedEventArgs
+    guid d3a43900-b4fa-49cd-9442-89af6568f601
+
+interface Windows.Media.Devices.ILowLagPhotoControl
+    guid 6d5c4dd0-fadf-415d-aee6-3baa529300c9
+
+interface Windows.Media.Devices.ILowLagPhotoSequenceControl
+    guid 3dcf909d-6d16-409c-bafe-b9a594c6fde6
+
+interface Windows.Media.Devices.IMediaDeviceControl
+    guid efa8dfa9-6f75-4863-ba0b-583f3036b4de
+
+interface Windows.Media.Devices.IMediaDeviceControlCapabilities
+    guid 23005816-eb85-43e2-b92b-8240d5ee70ec
+
+interface Windows.Media.Devices.IMediaDeviceController python_type
+    py _IMediaDeviceController
+    guid f6f8f5ce-209a-48fb-86fc-d44578f317e6
+    signature {f6f8f5ce-209a-48fb-86fc-d44578f317e6}
+    method get_available_media_stream_properties
+        method GetAvailableMediaStreamProperties slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=24
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> return
+    method get_media_stream_properties
+        method GetMediaStreamProperties slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=44
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out interface type=Windows.Media.MediaProperties.IMediaEncodingProperties return
+    method set_media_stream_properties_async
+        method SetMediaStreamPropertiesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=117 reverse=66
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=mediaEncodingProperties
+            out interface type=Windows.Foundation.IAsyncAction return
+
+interface Windows.Media.Devices.IMediaDeviceStatics
+    guid aa2d9a40-909f-4bba-bf8b-0c0d296f14f0
+
+interface Windows.Media.Devices.IModuleCommandResult
+    guid 520d1eb4-1374-4c7d-b1e4-39dcdf3eae4e
+
+interface Windows.Media.Devices.IOpticalImageStabilizationControl
+    guid bfad9c1d-00bc-423b-8eb2-a0178ca94247
+
+interface Windows.Media.Devices.IPanelBasedOptimizationControl
+    guid 33323223-6247-5419-a5a4-3d808645d917
+
+interface Windows.Media.Devices.IPhotoConfirmationControl
+    guid c8f3f363-ff5e-4582-a9a8-0550f85a4a76
+
+interface Windows.Media.Devices.IRedialRequestedEventArgs
+    guid 7eb55209-76ab-4c31-b40e-4b58379d580c
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    argument System.UInt32
+
+interface Windows.Foundation.IReference<Windows.Media.Devices.ManualFocusDistance> concrete
+    guid b0060b8a-1105-5ad4-963d-f6cf1905d349
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    argument Windows.Media.Devices.ManualFocusDistance
+
+interface Windows.Media.Devices.IRegionOfInterest
+    guid e5ecc834-ce66-4e05-a78f-cf391a5ec2d1
+
+interface Windows.Media.Devices.IRegionOfInterest2
+    guid 19fe2a91-73aa-4d51-8a9d-56ccf7db7f54
+
+interface Windows.Media.Devices.IRegionsOfInterestControl
+    guid c323f527-ab0b-4558-8b5b-df5693db0378
+
+interface Windows.Media.Devices.ISceneModeControl
+    guid d48e5af7-8d59-4854-8c62-12c70ba89b7c
+
+interface Windows.Media.Devices.ITorchControl
+    guid a6053665-8250-416c-919a-724296afa306
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> concrete
+    guid d05843b6-03c8-523e-b6fb-1fcb03218a54
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.AdvancedPhotoMode;i4))
+    argument Windows.Media.Devices.AdvancedPhotoMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> concrete
+    guid b9f55617-48ec-5ad7-95ca-33395284f28b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Devices.AudioDeviceModule;{86cfac36-47c1-4b33-9852-8773ec4be123}))
+    argument Windows.Media.Devices.AudioDeviceModule
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> concrete
+    guid 5df64825-c9e1-525f-9aeb-3c0f5f805f26
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.AutoFocusRange;i4))
+    argument Windows.Media.Devices.AutoFocusRange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> concrete
+    guid 9b915d69-e718-5b48-bb94-54bdf3737ea5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.CaptureSceneMode;i4))
+    argument Windows.Media.Devices.CaptureSceneMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> concrete
+    guid 18cb0c91-2753-542f-a33a-e4f9410f923b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Devices.DigitalWindowCapability;{d78bad2c-f721-5244-a196-b56ccbec606c}))
+    argument Windows.Media.Devices.DigitalWindowCapability
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> concrete
+    guid c877975c-f3c3-5b3d-93e4-5787be9b7f58
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.FocusMode;i4))
+    argument Windows.Media.Devices.FocusMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> concrete
+    guid d8a495e3-d7d4-5e9f-a9c2-6b250655a2e0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.FocusPreset;i4))
+    argument Windows.Media.Devices.FocusPreset
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> concrete
+    guid ad0a4bbd-7630-53a4-aa9b-35a8c7d4958c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.HdrVideoMode;i4))
+    argument Windows.Media.Devices.HdrVideoMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> concrete
+    guid b5af65de-bdf4-5155-b2b6-3139978e9c24
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.InfraredTorchMode;i4))
+    argument Windows.Media.Devices.InfraredTorchMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> concrete
+    guid ef6c9fe3-06f9-5eff-98a8-917d9644c946
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.IsoSpeedPreset;i4))
+    argument Windows.Media.Devices.IsoSpeedPreset
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> concrete
+    guid 85f7663b-5467-5736-8d34-34395aa6d123
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    argument Windows.Media.Devices.ManualFocusDistance
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> concrete
+    guid 8c2658d8-acaa-5a80-b259-1ba0697c6138
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4))
+    argument Windows.Media.Devices.OpticalImageStabilizationMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> concrete
+    guid 094d5da9-91cc-55d8-b7b7-52e597156987
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4))
+    argument Windows.Media.Devices.VideoTemporalDenoisingMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> concrete
+    guid 4d556155-d021-5a46-9a1c-f401d61b8529
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.ZoomTransitionMode;i4))
+    argument Windows.Media.Devices.ZoomTransitionMode
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> concrete
+    guid 0f6c3b8b-5818-5cbf-bf26-6616bfc308c4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{b4002af6-acd4-4e5a-a24b-5d7498a8b8c4})
+    argument Windows.Media.MediaProperties.IMediaEncodingProperties
+
+interface Windows.Media.Devices.IVideoDeviceController
+    guid 99555575-2e2e-40b8-b6c7-f82d10013210
+
+interface Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult
+    guid c5d88395-6ed5-4790-8b5d-0ef13935d0f8
+
+interface Windows.Media.Devices.IVideoTemporalDenoisingControl
+    guid 7ab34735-3e2a-4a32-baff-4358c4fbdd57
+
+interface Windows.Media.Devices.IWhiteBalanceControl
+    guid 781f047e-7162-49c8-a8f9-9481c565363e
+
+interface Windows.Media.Devices.IZoomControl
+    guid 3a1e0b12-32da-4c17-bfd7-8d0c73c8f5a5
+
+interface Windows.Media.Devices.IZoomControl2
+    guid 69843db0-2e99-4641-8529-184f319d1671
+
+interface Windows.Media.Devices.IZoomSettings
+    guid 6ad66b24-14b4-4bfd-b18f-88fe24463b52
+
+class Windows.Media.Devices.InfraredTorchControl python_type
+    py InfraredTorchControl
+    signature rc(Windows.Media.Devices.InfraredTorchControl;{1cba2c83-6cb6-5a04-a6fc-3be7b33ff056})
+    default Windows.Media.Devices.IInfraredTorchControl
+    requires Windows.Media.Devices.IInfraredTorchControl
+    property power
+        get get_Power slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=173
+            out int32 return
+        put put_Power slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=186
+            in int32 name=value
+    property current_mode
+        get get_CurrentMode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.InfraredTorchMode return
+        put put_CurrentMode slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=99
+            in enum32 type=Windows.Media.Devices.InfraredTorchMode name=value
+    property is_supported
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=22
+            out boolean return
+    property max_power
+        get get_MaxPower slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=141
+            out int32 return
+    property min_power
+        get get_MinPower slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=121
+            out int32 return
+    property power_step
+        get get_PowerStep slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=162
+            out int32 return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IInfraredTorchControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> return
+
+enum Windows.Media.Devices.InfraredTorchMode python_type
+    py InfraredTorchMode
+    signature enum(Windows.Media.Devices.InfraredTorchMode;i4)
+
+class Windows.Media.Devices.IsoSpeedControl python_type
+    py IsoSpeedControl
+    signature rc(Windows.Media.Devices.IsoSpeedControl;{27b6c322-25ad-4f1b-aaab-524ab376ca33})
+    default Windows.Media.Devices.IIsoSpeedControl
+    requires Windows.Media.Devices.IIsoSpeedControl
+    requires Windows.Media.Devices.IIsoSpeedControl2
+    property preset
+        get get_Preset slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl shape=4 reverse=62 deprecated
+            out enum32 type=Windows.Media.Devices.IsoSpeedPreset return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl shape=4 reverse=22
+            out boolean return
+    property supported_presets
+        get get_SupportedPresets slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl shape=4 reverse=43 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> return
+    property auto
+        get get_Auto slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=141
+            out boolean return
+    property max
+        get get_Max slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=43
+            out uint32 return
+    property min
+        get get_Min slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=22
+            out uint32 return
+    property step
+        get get_Step slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=62
+            out uint32 return
+    property value
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=99
+            out uint32 return
+    method set_auto_async
+        method SetAutoAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4 reverse=162
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_preset_async deprecated
+        method SetPresetAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl shape=51 reverse=100 deprecated
+            in enum32 type=Windows.Media.Devices.IsoSpeedPreset name=preset
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_value_async
+        method SetValueAsync slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=51 reverse=124
+            in uint32 name=isoSpeed
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Media.Devices.IsoSpeedPreset python_type
+    py IsoSpeedPreset
+    signature enum(Windows.Media.Devices.IsoSpeedPreset;i4)
+
+class Windows.Media.Devices.KeypadPressedEventArgs python_type
+    py KeypadPressedEventArgs
+    signature rc(Windows.Media.Devices.KeypadPressedEventArgs;{d3a43900-b4fa-49cd-9442-89af6568f601})
+    default Windows.Media.Devices.IKeypadPressedEventArgs
+    requires Windows.Media.Devices.IKeypadPressedEventArgs
+    property telephony_key
+        get get_TelephonyKey slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IKeypadPressedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.TelephonyKey return
+
+delegate Windows.Media.Devices.KeypadPressedEventHandler python_type
+    py KeypadPressedEventHandler
+    guid e637a454-c527-422c-8926-c9af83b559a0
+    signature delegate({e637a454-c527-422c-8926-c9af83b559a0})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Devices.CallControl name=sender
+            in class type=Windows.Media.Devices.KeypadPressedEventArgs name=e
+
+class Windows.Media.Devices.LowLagPhotoControl python_type
+    py LowLagPhotoControl
+    signature rc(Windows.Media.Devices.LowLagPhotoControl;{6d5c4dd0-fadf-415d-aee6-3baa529300c9})
+    default Windows.Media.Devices.ILowLagPhotoControl
+    requires Windows.Media.Devices.ILowLagPhotoControl
+    property thumbnail_format
+        get get_ThumbnailFormat slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=121
+            out enum32 type=Windows.Media.MediaProperties.MediaThumbnailFormat return
+        put put_ThumbnailFormat slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=141
+            in enum32 type=Windows.Media.MediaProperties.MediaThumbnailFormat name=value
+    property thumbnail_enabled
+        get get_ThumbnailEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=62
+            out boolean return
+        put put_ThumbnailEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=99
+            in boolean name=value
+    property desired_thumbnail_size
+        get get_DesiredThumbnailSize slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=162
+            out uint32 return
+        put put_DesiredThumbnailSize slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=173
+            in uint32 name=value
+    property hardware_accelerated_thumbnail_supported
+        get get_HardwareAcceleratedThumbnailSupported slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=186
+            out uint32 return
+    method get_current_frame_rate
+        method GetCurrentFrameRate slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=4 reverse=43
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    method get_highest_concurrent_frame_rate
+        method GetHighestConcurrentFrameRate slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoControl shape=51 reverse=24
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=captureProperties
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+
+class Windows.Media.Devices.LowLagPhotoSequenceControl python_type
+    py LowLagPhotoSequenceControl
+    signature rc(Windows.Media.Devices.LowLagPhotoSequenceControl;{3dcf909d-6d16-409c-bafe-b9a594c6fde6})
+    default Windows.Media.Devices.ILowLagPhotoSequenceControl
+    requires Windows.Media.Devices.ILowLagPhotoSequenceControl
+    property thumbnail_format
+        get get_ThumbnailFormat slot=17 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=210
+            out enum32 type=Windows.Media.MediaProperties.MediaThumbnailFormat return
+        put put_ThumbnailFormat slot=18 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=218
+            in enum32 type=Windows.Media.MediaProperties.MediaThumbnailFormat name=value
+    property thumbnail_enabled
+        get get_ThumbnailEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=194
+            out boolean return
+        put put_ThumbnailEnabled slot=16 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=202
+            in boolean name=value
+    property photos_per_second_limit
+        get get_PhotosPerSecondLimit slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=141
+            out single return
+        put put_PhotosPerSecondLimit slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=1
+            in single name=value
+    property past_photo_limit
+        get get_PastPhotoLimit slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=99
+            out uint32 return
+        put put_PastPhotoLimit slot=10 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=121
+            in uint32 name=value
+    property desired_thumbnail_size
+        get get_DesiredThumbnailSize slot=19 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=223
+            out uint32 return
+        put put_DesiredThumbnailSize slot=20 inputs=1 outputs=0 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=228
+            in uint32 name=value
+    property hardware_accelerated_thumbnail_supported
+        get get_HardwareAcceleratedThumbnailSupported slot=21 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=232
+            out uint32 return
+    property max_past_photos
+        get get_MaxPastPhotos slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=43
+            out uint32 return
+    property max_photos_per_second
+        get get_MaxPhotosPerSecond slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=62
+            out single return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=22
+            out boolean return
+    method get_current_frame_rate
+        method GetCurrentFrameRate slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=4 reverse=186
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    method get_highest_concurrent_frame_rate
+        method GetHighestConcurrentFrameRate slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.ILowLagPhotoSequenceControl shape=51 reverse=174
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=captureProperties
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+
+enum Windows.Media.Devices.ManualFocusDistance python_type
+    py ManualFocusDistance
+    signature enum(Windows.Media.Devices.ManualFocusDistance;i4)
+
+enum Windows.Media.Devices.MediaCaptureFocusState python_type
+    py MediaCaptureFocusState
+    signature enum(Windows.Media.Devices.MediaCaptureFocusState;i4)
+
+enum Windows.Media.Devices.MediaCaptureOptimization python_type
+    py MediaCaptureOptimization
+    signature enum(Windows.Media.Devices.MediaCaptureOptimization;i4)
+
+enum Windows.Media.Devices.MediaCapturePauseBehavior python_type
+    py MediaCapturePauseBehavior
+    signature enum(Windows.Media.Devices.MediaCapturePauseBehavior;i4)
+
+class Windows.Media.Devices.MediaDevice static python_type
+    py MediaDevice
+    factory Windows.Media.Devices.IMediaDeviceStatics
+    event default_audio_capture_device_changed static
+        add add_DefaultAudioCaptureDeviceChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=144 static
+            in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs> name=handler
+            out event_token return
+        remove remove_DefaultAudioCaptureDeviceChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=26 reverse=167 static
+            in event_token name=cookie
+    event default_audio_render_device_changed static
+        add add_DefaultAudioRenderDeviceChanged slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=174 static
+            in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs> name=handler
+            out event_token return
+        remove remove_DefaultAudioRenderDeviceChanged slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=26 reverse=192 static
+            in event_token name=cookie
+    method get_audio_capture_selector static
+        method GetAudioCaptureSelector slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=4 reverse=22 static
+            out string return
+    method get_audio_render_selector static
+        method GetAudioRenderSelector slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=4 reverse=43 static
+            out string return
+    method get_default_audio_capture_id static
+        method GetDefaultAudioCaptureId slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=100 static
+            in enum32 type=Windows.Media.Devices.AudioDeviceRole name=role
+            out string return
+    method get_default_audio_render_id static
+        method GetDefaultAudioRenderId slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=124 static
+            in enum32 type=Windows.Media.Devices.AudioDeviceRole name=role
+            out string return
+    method get_video_capture_selector static
+        method GetVideoCaptureSelector slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=4 reverse=62 static
+            out string return
+
+class Windows.Media.Devices.MediaDeviceControl python_type
+    py MediaDeviceControl
+    signature rc(Windows.Media.Devices.MediaDeviceControl;{efa8dfa9-6f75-4863-ba0b-583f3036b4de})
+    default Windows.Media.Devices.IMediaDeviceControl
+    requires Windows.Media.Devices.IMediaDeviceControl
+    property capabilities
+        get get_Capabilities slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControl shape=4 reverse=22
+            out class type=Windows.Media.Devices.MediaDeviceControlCapabilities return
+    method try_get_auto
+        method TryGetAuto slot=9 inputs=0 outputs=2 declaring=Windows.Media.Devices.IMediaDeviceControl shape=51 reverse=100
+            out boolean name=value
+            out boolean return
+    method try_get_value
+        method TryGetValue slot=7 inputs=0 outputs=2 declaring=Windows.Media.Devices.IMediaDeviceControl shape=51 reverse=44
+            out double name=value
+            out boolean return
+    method try_set_auto
+        method TrySetAuto slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControl shape=51 reverse=124
+            in boolean name=value
+            out boolean return
+    method try_set_value
+        method TrySetValue slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControl shape=46 reverse=58
+            in double name=value
+            out boolean return
+
+class Windows.Media.Devices.MediaDeviceControlCapabilities python_type
+    py MediaDeviceControlCapabilities
+    signature rc(Windows.Media.Devices.MediaDeviceControlCapabilities;{23005816-eb85-43e2-b92b-8240d5ee70ec})
+    default Windows.Media.Devices.IMediaDeviceControlCapabilities
+    requires Windows.Media.Devices.IMediaDeviceControlCapabilities
+    property auto_mode_supported
+        get get_AutoModeSupported slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=141
+            out boolean return
+    property default
+        get get_Default slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=121
+            out double return
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=62
+            out double return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=43
+            out double return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=99
+            out double return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceControlCapabilities shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Devices.ModuleCommandResult python_type
+    py ModuleCommandResult
+    signature rc(Windows.Media.Devices.ModuleCommandResult;{520d1eb4-1374-4c7d-b1e4-39dcdf3eae4e})
+    default Windows.Media.Devices.IModuleCommandResult
+    requires Windows.Media.Devices.IModuleCommandResult
+    property result
+        get get_Result slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IModuleCommandResult shape=4 reverse=43
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IModuleCommandResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.SendCommandStatus return
+
+class Windows.Media.Devices.OpticalImageStabilizationControl python_type
+    py OpticalImageStabilizationControl
+    signature rc(Windows.Media.Devices.OpticalImageStabilizationControl;{bfad9c1d-00bc-423b-8eb2-a0178ca94247})
+    default Windows.Media.Devices.IOpticalImageStabilizationControl
+    requires Windows.Media.Devices.IOpticalImageStabilizationControl
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IOpticalImageStabilizationControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode return
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IOpticalImageStabilizationControl shape=4 reverse=99
+            in enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=value
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IOpticalImageStabilizationControl shape=4 reverse=22
+            out boolean return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IOpticalImageStabilizationControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> return
+
+enum Windows.Media.Devices.OpticalImageStabilizationMode python_type
+    py OpticalImageStabilizationMode
+    signature enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4)
+
+class Windows.Media.Devices.PanelBasedOptimizationControl python_type
+    py PanelBasedOptimizationControl
+    signature rc(Windows.Media.Devices.PanelBasedOptimizationControl;{33323223-6247-5419-a5a4-3d808645d917})
+    default Windows.Media.Devices.IPanelBasedOptimizationControl
+    requires Windows.Media.Devices.IPanelBasedOptimizationControl
+    property panel
+        get get_Panel slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IPanelBasedOptimizationControl shape=4 reverse=43
+            out enum32 type=Windows.Devices.Enumeration.Panel return
+        put put_Panel slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IPanelBasedOptimizationControl shape=4 reverse=62
+            in enum32 type=Windows.Devices.Enumeration.Panel name=value
+    property is_supported
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IPanelBasedOptimizationControl shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Devices.PhotoConfirmationControl python_type
+    py PhotoConfirmationControl
+    signature rc(Windows.Media.Devices.PhotoConfirmationControl;{c8f3f363-ff5e-4582-a9a8-0550f85a4a76})
+    default Windows.Media.Devices.IPhotoConfirmationControl
+    requires Windows.Media.Devices.IPhotoConfirmationControl
+    property pixel_format
+        get get_PixelFormat slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IPhotoConfirmationControl shape=4 reverse=99
+            out enum32 type=Windows.Media.MediaProperties.MediaPixelFormat return
+        put put_PixelFormat slot=10 inputs=1 outputs=0 declaring=Windows.Media.Devices.IPhotoConfirmationControl shape=4 reverse=121
+            in enum32 type=Windows.Media.MediaProperties.MediaPixelFormat name=format
+    property enabled
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IPhotoConfirmationControl shape=4 reverse=43
+            out boolean return
+        put put_Enabled slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IPhotoConfirmationControl shape=4 reverse=62
+            in boolean name=value
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IPhotoConfirmationControl shape=4 reverse=22
+            out boolean return
+
+class Windows.Media.Devices.RedialRequestedEventArgs python_type
+    py RedialRequestedEventArgs
+    signature rc(Windows.Media.Devices.RedialRequestedEventArgs;{7eb55209-76ab-4c31-b40e-4b58379d580c})
+    default Windows.Media.Devices.IRedialRequestedEventArgs
+    requires Windows.Media.Devices.IRedialRequestedEventArgs
+    method handled
+        method Handled slot=6 inputs=0 outputs=0 declaring=Windows.Media.Devices.IRedialRequestedEventArgs shape=0 reverse=16
+
+delegate Windows.Media.Devices.RedialRequestedEventHandler python_type
+    py RedialRequestedEventHandler
+    guid baf257d1-4ebd-4b84-9f47-6ec43d75d8b1
+    signature delegate({baf257d1-4ebd-4b84-9f47-6ec43d75d8b1})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Devices.CallControl name=sender
+            in class type=Windows.Media.Devices.RedialRequestedEventArgs name=e
+
+class Windows.Media.Devices.RegionOfInterest activatable python_type
+    py RegionOfInterest
+    signature rc(Windows.Media.Devices.RegionOfInterest;{e5ecc834-ce66-4e05-a78f-cf391a5ec2d1})
+    default Windows.Media.Devices.IRegionOfInterest
+    requires Windows.Media.Devices.IRegionOfInterest
+    requires Windows.Media.Devices.IRegionOfInterest2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property bounds
+        get get_Bounds slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=162
+            out struct type=Windows.Foundation.Rect return
+        put put_Bounds slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property auto_white_balance_enabled
+        get get_AutoWhiteBalanceEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=62
+            out boolean return
+        put put_AutoWhiteBalanceEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=99
+            in boolean name=value
+    property auto_focus_enabled
+        get get_AutoFocusEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=22
+            out boolean return
+        put put_AutoFocusEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=43
+            in boolean name=value
+    property auto_exposure_enabled
+        get get_AutoExposureEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=121
+            out boolean return
+        put put_AutoExposureEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest shape=4 reverse=141
+            in boolean name=value
+    property weight
+        get get_Weight slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=121
+            out uint32 return
+        put put_Weight slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=141
+            in uint32 name=value
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.RegionOfInterestType return
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=43
+            in enum32 type=Windows.Media.Devices.RegionOfInterestType name=value
+    property bounds_normalized
+        get get_BoundsNormalized slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=62
+            out boolean return
+        put put_BoundsNormalized slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IRegionOfInterest2 shape=4 reverse=99
+            in boolean name=value
+
+enum Windows.Media.Devices.RegionOfInterestType python_type
+    py RegionOfInterestType
+    signature enum(Windows.Media.Devices.RegionOfInterestType;i4)
+
+class Windows.Media.Devices.RegionsOfInterestControl python_type
+    py RegionsOfInterestControl
+    signature rc(Windows.Media.Devices.RegionsOfInterestControl;{c323f527-ab0b-4558-8b5b-df5693db0378})
+    default Windows.Media.Devices.IRegionsOfInterestControl
+    requires Windows.Media.Devices.IRegionsOfInterestControl
+    property auto_exposure_supported
+        get get_AutoExposureSupported slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=4 reverse=162
+            out boolean return
+    property auto_focus_supported
+        get get_AutoFocusSupported slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=4 reverse=121
+            out boolean return
+    property auto_white_balance_supported
+        get get_AutoWhiteBalanceSupported slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=4 reverse=141
+            out boolean return
+    property max_regions
+        get get_MaxRegions slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=4 reverse=22
+            out uint32 return
+    method clear_regions_async
+        method ClearRegionsAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=4 reverse=99
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_regions_async
+        method SetRegionsAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=51 reverse=44
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> name=regions
+            out interface type=Windows.Foundation.IAsyncAction return
+        method SetRegionsAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Devices.IRegionsOfInterestControl shape=117 reverse=66
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> name=regions
+            in boolean name=lockValues
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Devices.SceneModeControl python_type
+    py SceneModeControl
+    signature rc(Windows.Media.Devices.SceneModeControl;{d48e5af7-8d59-4854-8c62-12c70ba89b7c})
+    default Windows.Media.Devices.ISceneModeControl
+    requires Windows.Media.Devices.ISceneModeControl
+    property supported_modes
+        get get_SupportedModes slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ISceneModeControl shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.ISceneModeControl shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.CaptureSceneMode return
+    method set_value_async
+        method SetValueAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.ISceneModeControl shape=51 reverse=65
+            in enum32 type=Windows.Media.Devices.CaptureSceneMode name=sceneMode
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Media.Devices.SendCommandStatus python_type
+    py SendCommandStatus
+    signature enum(Windows.Media.Devices.SendCommandStatus;i4)
+
+enum Windows.Media.Devices.TelephonyKey python_type
+    py TelephonyKey
+    signature enum(Windows.Media.Devices.TelephonyKey;i4)
+
+class Windows.Media.Devices.TorchControl python_type
+    py TorchControl
+    signature rc(Windows.Media.Devices.TorchControl;{a6053665-8250-416c-919a-724296afa306})
+    default Windows.Media.Devices.ITorchControl
+    requires Windows.Media.Devices.ITorchControl
+    property power_percent
+        get get_PowerPercent slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.ITorchControl shape=4 reverse=121
+            out single return
+        put put_PowerPercent slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.ITorchControl shape=1
+            in single name=value
+    property enabled
+        get get_Enabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.ITorchControl shape=4 reverse=62
+            out boolean return
+        put put_Enabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ITorchControl shape=4 reverse=99
+            in boolean name=value
+    property power_supported
+        get get_PowerSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.ITorchControl shape=4 reverse=43
+            out boolean return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ITorchControl shape=4 reverse=22
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs> concrete
+    guid 97d07327-2c78-57bc-98e6-a24cd024cf5b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab}))
+    argument System.Object
+    argument Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs> concrete
+    guid fd732aca-dafc-5b7d-bf72-b560b78d260c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab}))
+    argument System.Object
+    argument Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Devices.AudioDeviceModulesManager,Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs> concrete
+    guid b2f6b1fd-7092-5724-b2ce-91b1176e80e1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Devices.AudioDeviceModulesManager;{6aa40c4d-960a-4d1c-b318-0022604547ed});rc(Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs;{e3e3ccaf-224c-48be-956b-9a13134e96e8}))
+    argument Windows.Media.Devices.AudioDeviceModulesManager
+    argument Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo,Windows.Media.Devices.CameraOcclusionStateChangedEventArgs> concrete
+    guid 71561417-e06e-54e7-b25e-39213c4e65d6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Devices.CameraOcclusionInfo;{af6c4ad0-a84d-5db6-be58-a5da21cfe011});rc(Windows.Media.Devices.CameraOcclusionStateChangedEventArgs;{8512d848-c0de-57ca-a1ca-fb2c3d23df55}))
+    argument Windows.Media.Devices.CameraOcclusionInfo
+    argument Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+
+class Windows.Media.Devices.VideoDeviceController python_type
+    py VideoDeviceController
+    signature rc(Windows.Media.Devices.VideoDeviceController;{99555575-2e2e-40b8-b6c7-f82d10013210})
+    default Windows.Media.Devices.IVideoDeviceController
+    requires Windows.Media.Devices.IVideoDeviceController
+    requires Windows.Media.Devices.IMediaDeviceController
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
+    requires Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11
+    property camera_occlusion_info
+        get get_CameraOcclusionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10 shape=4 reverse=22
+            out class type=Windows.Media.Devices.CameraOcclusionInfo return
+    property primary_use
+        get get_PrimaryUse slot=17 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=210
+            out enum32 type=Windows.Media.Devices.CaptureUse return
+        put put_PrimaryUse slot=18 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=218
+            in enum32 type=Windows.Media.Devices.CaptureUse name=value
+    property focus_control
+        get get_FocusControl slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=173
+            out class type=Windows.Media.Devices.FocusControl return
+    property iso_speed_control
+        get get_IsoSpeedControl slot=15 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=194
+            out class type=Windows.Media.Devices.IsoSpeedControl return
+    property low_lag_photo
+        get get_LowLagPhoto slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=43
+            out class type=Windows.Media.Devices.LowLagPhotoControl return
+    property white_balance_control
+        get get_WhiteBalanceControl slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=141
+            out class type=Windows.Media.Devices.WhiteBalanceControl return
+    property torch_control
+        get get_TorchControl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=99
+            out class type=Windows.Media.Devices.TorchControl return
+    property scene_mode_control
+        get get_SceneModeControl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=62
+            out class type=Windows.Media.Devices.SceneModeControl return
+    property regions_of_interest_control
+        get get_RegionsOfInterestControl slot=16 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=202
+            out class type=Windows.Media.Devices.RegionsOfInterestControl return
+    property flash_control
+        get get_FlashControl slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=121
+            out class type=Windows.Media.Devices.FlashControl return
+    property low_lag_photo_sequence
+        get get_LowLagPhotoSequence slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=22
+            out class type=Windows.Media.Devices.LowLagPhotoSequenceControl return
+    property exposure_compensation_control
+        get get_ExposureCompensationControl slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=186
+            out class type=Windows.Media.Devices.ExposureCompensationControl return
+    property exposure_control
+        get get_ExposureControl slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2 shape=4 reverse=162
+            out class type=Windows.Media.Devices.ExposureControl return
+    property zoom_control
+        get get_ZoomControl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3 shape=4 reverse=62
+            out class type=Windows.Media.Devices.ZoomControl return
+    property photo_confirmation_control
+        get get_PhotoConfirmationControl slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3 shape=4 reverse=43
+            out class type=Windows.Media.Devices.PhotoConfirmationControl return
+    property variable_photo_sequence_controller
+        get get_VariablePhotoSequenceController slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3 shape=4 reverse=22
+            out class type=Windows.Media.Devices.Core.VariablePhotoSequenceController return
+    property desired_optimization
+        get get_DesiredOptimization slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.MediaCaptureOptimization return
+        put put_DesiredOptimization slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=62
+            in enum32 type=Windows.Media.Devices.MediaCaptureOptimization name=value
+    property advanced_photo_control
+        get get_AdvancedPhotoControl slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=141
+            out class type=Windows.Media.Devices.AdvancedPhotoControl return
+    property exposure_priority_video_control
+        get get_ExposurePriorityVideoControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=22
+            out class type=Windows.Media.Devices.ExposurePriorityVideoControl return
+    property hdr_video_control
+        get get_HdrVideoControl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=99
+            out class type=Windows.Media.Devices.HdrVideoControl return
+    property optical_image_stabilization_control
+        get get_OpticalImageStabilizationControl slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4 shape=4 reverse=121
+            out class type=Windows.Media.Devices.OpticalImageStabilizationControl return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 shape=4 reverse=22
+            out string return
+    property video_temporal_denoising_control
+        get get_VideoTemporalDenoisingControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6 shape=4 reverse=22
+            out class type=Windows.Media.Devices.VideoTemporalDenoisingControl return
+    property infrared_torch_control
+        get get_InfraredTorchControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7 shape=4 reverse=22
+            out class type=Windows.Media.Devices.InfraredTorchControl return
+    property panel_based_optimization_control
+        get get_PanelBasedOptimizationControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8 shape=4 reverse=22
+            out class type=Windows.Media.Devices.PanelBasedOptimizationControl return
+    property digital_window_control
+        get get_DigitalWindowControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9 shape=4 reverse=22
+            out class type=Windows.Media.Devices.DigitalWindowControl return
+    property zoom
+        get get_Zoom slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=173
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property contrast
+        get get_Contrast slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=43
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property backlight_compensation
+        get get_BacklightCompensation slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=121
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property white_balance
+        get get_WhiteBalance slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=99
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property brightness
+        get get_Brightness slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=22
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property exposure
+        get get_Exposure slot=15 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=194
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property tilt
+        get get_Tilt slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=162
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property roll
+        get get_Roll slot=14 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=186
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property hue
+        get get_Hue slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=62
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property pan
+        get get_Pan slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=141
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    property focus
+        get get_Focus slot=16 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=4 reverse=202
+            out class type=Windows.Media.Devices.MediaDeviceControl return
+    method get_available_media_stream_properties
+        method GetAvailableMediaStreamProperties slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=24
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> return
+    method get_device_property
+        method GetDeviceProperty slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController shape=51 reverse=44
+            in string name=propertyId
+            out object return
+    method get_device_property_by_extended_id
+        method GetDevicePropertyByExtendedId slot=9 inputs=2 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 shape=195 reverse=102
+            pass_array uint8 name=extendedPropertyId
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=maxPropertyValueSize
+            out class type=Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult return
+    method get_device_property_by_id
+        method GetDevicePropertyById slot=7 inputs=2 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 shape=117 reverse=45
+            in string name=propertyId
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=maxPropertyValueSize
+            out class type=Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult return
+    method get_media_stream_properties
+        method GetMediaStreamProperties slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=51 reverse=44
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            out interface type=Windows.Media.MediaProperties.IMediaEncodingProperties return
+    method set_device_property
+        method SetDeviceProperty slot=6 inputs=2 outputs=0 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController shape=51 reverse=24
+            in string name=propertyId
+            in object name=propertyValue
+    method set_device_property_by_extended_id
+        method SetDevicePropertyByExtendedId slot=10 inputs=2 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 shape=239
+            pass_array uint8 name=extendedPropertyId
+            pass_array uint8 name=propertyValue
+            out enum32 type=Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus return
+    method set_device_property_by_id
+        method SetDevicePropertyById slot=8 inputs=2 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5 shape=117 reverse=66
+            in string name=propertyId
+            in object name=propertyValue
+            out enum32 type=Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus return
+    method set_media_stream_properties_async
+        method SetMediaStreamPropertiesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceController shape=117 reverse=66
+            in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=mediaEncodingProperties
+            out interface type=Windows.Foundation.IAsyncAction return
+    method try_acquire_exclusive_control
+        method TryAcquireExclusiveControl slot=6 inputs=2 outputs=1 declaring=Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11 shape=117 reverse=25
+            in string name=deviceId
+            in enum32 type=Windows.Media.Capture.MediaCaptureDeviceExclusiveControlReleaseMode name=mode
+            out boolean return
+    method try_get_powerline_frequency
+        method TryGetPowerlineFrequency slot=18 inputs=0 outputs=2 declaring=Windows.Media.Devices.IVideoDeviceController shape=51 reverse=219
+            out enum32 type=Windows.Media.Capture.PowerlineFrequency name=value
+            out boolean return
+    method try_set_powerline_frequency
+        method TrySetPowerlineFrequency slot=17 inputs=1 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceController shape=51 reverse=211
+            in enum32 type=Windows.Media.Capture.PowerlineFrequency name=value
+            out boolean return
+
+class Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult python_type
+    py VideoDeviceControllerGetDevicePropertyResult
+    signature rc(Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult;{c5d88395-6ed5-4790-8b5d-0ef13935d0f8})
+    default Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult
+    requires Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoDeviceControllerGetDevicePropertyResult shape=4 reverse=43
+            out object return
+
+enum Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus python_type
+    py VideoDeviceControllerGetDevicePropertyStatus
+    signature enum(Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus;i4)
+
+enum Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus python_type
+    py VideoDeviceControllerSetDevicePropertyStatus
+    signature enum(Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus;i4)
+
+class Windows.Media.Devices.VideoTemporalDenoisingControl python_type
+    py VideoTemporalDenoisingControl
+    signature rc(Windows.Media.Devices.VideoTemporalDenoisingControl;{7ab34735-3e2a-4a32-baff-4358c4fbdd57})
+    default Windows.Media.Devices.IVideoTemporalDenoisingControl
+    requires Windows.Media.Devices.IVideoTemporalDenoisingControl
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoTemporalDenoisingControl shape=4 reverse=62
+            out enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode return
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IVideoTemporalDenoisingControl shape=4 reverse=99
+            in enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=value
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoTemporalDenoisingControl shape=4 reverse=22
+            out boolean return
+    property supported_modes
+        get get_SupportedModes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IVideoTemporalDenoisingControl shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> return
+
+enum Windows.Media.Devices.VideoTemporalDenoisingMode python_type
+    py VideoTemporalDenoisingMode
+    signature enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4)
+
+class Windows.Media.Devices.WhiteBalanceControl python_type
+    py WhiteBalanceControl
+    signature rc(Windows.Media.Devices.WhiteBalanceControl;{781f047e-7162-49c8-a8f9-9481c565363e})
+    default Windows.Media.Devices.IWhiteBalanceControl
+    requires Windows.Media.Devices.IWhiteBalanceControl
+    property max
+        get get_Max slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=121
+            out uint32 return
+    property min
+        get get_Min slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=99
+            out uint32 return
+    property preset
+        get get_Preset slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.ColorTemperaturePreset return
+    property step
+        get get_Step slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=141
+            out uint32 return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=22
+            out boolean return
+    property value
+        get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=4 reverse=162
+            out uint32 return
+    method set_preset_async
+        method SetPresetAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=51 reverse=65
+            in enum32 type=Windows.Media.Devices.ColorTemperaturePreset name=preset
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_value_async
+        method SetValueAsync slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.IWhiteBalanceControl shape=51 reverse=174
+            in uint32 name=temperature
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Media.Devices.ZoomControl python_type
+    py ZoomControl
+    signature rc(Windows.Media.Devices.ZoomControl;{3a1e0b12-32da-4c17-bfd7-8d0c73c8f5a5})
+    default Windows.Media.Devices.IZoomControl
+    requires Windows.Media.Devices.IZoomControl
+    requires Windows.Media.Devices.IZoomControl2
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl shape=4 reverse=121
+            out single return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.IZoomControl shape=1
+            in single name=value
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl shape=4 reverse=62
+            out single return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl shape=4 reverse=43
+            out single return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl shape=4 reverse=99
+            out single return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl shape=4 reverse=22
+            out boolean return
+    property mode
+        get get_Mode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl2 shape=4 reverse=43
+            out enum32 type=Windows.Media.Devices.ZoomTransitionMode return
+    property supported_modes
+        get get_SupportedModes slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomControl2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> return
+    method configure
+        method Configure slot=8 inputs=1 outputs=0 declaring=Windows.Media.Devices.IZoomControl2 shape=4 reverse=62
+            in class type=Windows.Media.Devices.ZoomSettings name=settings
+
+class Windows.Media.Devices.ZoomSettings activatable python_type
+    py ZoomSettings
+    signature rc(Windows.Media.Devices.ZoomSettings;{6ad66b24-14b4-4bfd-b18f-88fe24463b52})
+    default Windows.Media.Devices.IZoomSettings
+    requires Windows.Media.Devices.IZoomSettings
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomSettings shape=4 reverse=62
+            out single return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.IZoomSettings shape=1 reverse=94
+            in single name=value
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IZoomSettings shape=4 reverse=22
+            out enum32 type=Windows.Media.Devices.ZoomTransitionMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IZoomSettings shape=4 reverse=43
+            in enum32 type=Windows.Media.Devices.ZoomTransitionMode name=value
+
+enum Windows.Media.Devices.ZoomTransitionMode python_type
+    py ZoomTransitionMode
+    signature enum(Windows.Media.Devices.ZoomTransitionMode;i4)
+
+class System.Object external
+    py winrt.system.Object
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+enum Windows.Devices.Enumeration.Panel external
+    py winrt.windows.devices.enumeration.Panel
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+enum Windows.Media.Capture.MediaCaptureDeviceExclusiveControlReleaseMode external
+    py winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlReleaseMode
+
+enum Windows.Media.Capture.MediaStreamType external
+    py winrt.windows.media.capture.MediaStreamType
+
+enum Windows.Media.Capture.PowerlineFrequency external
+    py winrt.windows.media.capture.PowerlineFrequency
+
+class Windows.Media.Devices.Core.VariablePhotoSequenceController external
+    py winrt.windows.media.devices.core.VariablePhotoSequenceController
+
+class Windows.Media.Effects.AudioCaptureEffectsManager external
+    py winrt.windows.media.effects.AudioCaptureEffectsManager
+
+interface Windows.Media.MediaProperties.IMediaEncodingProperties external
+    py winrt.windows.media.mediaproperties._IMediaEncodingProperties
+    guid b4002af6-acd4-4e5a-a24b-5d7498a8b8c4
+
+enum Windows.Media.MediaProperties.MediaPixelFormat external
+    py winrt.windows.media.mediaproperties.MediaPixelFormat
+
+class Windows.Media.MediaProperties.MediaRatio external
+    py winrt.windows.media.mediaproperties.MediaRatio
+
+enum Windows.Media.MediaProperties.MediaThumbnailFormat external
+    py winrt.windows.media.mediaproperties.MediaThumbnailFormat
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

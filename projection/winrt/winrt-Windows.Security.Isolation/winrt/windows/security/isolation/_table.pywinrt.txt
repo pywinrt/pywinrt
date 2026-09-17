@@ -1,0 +1,701 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Security.Isolation
+
+delegate Windows.Security.Isolation.HostMessageReceivedCallback python_type
+    py HostMessageReceivedCallback
+    guid faf26ffa-8ce1-4cc1-b278-322d31a5e4a3
+    signature delegate({faf26ffa-8ce1-4cc1-b278-322d31a5e4a3})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=94 reverse=15
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> concrete
+    guid af891fa2-3f89-5e5b-a72b-df936bb1ad45
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult;{685d4176-f6e0-4569-b1aa-215c0ff5b257}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> concrete
+    guid 3e167db0-7983-5329-83a0-0477763cc4cb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult;{0dfa28fa-2ef0-4d8f-b341-3171b2df93b1}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> concrete
+    guid 76ce76bf-ec05-513d-843f-79af1766e490
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult;{aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> concrete
+    guid 89424ded-b21a-55ad-9d4a-8e53f15464a2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult;{556ba72e-ca9d-4211-b143-1cedc86eb2fe}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> concrete
+    guid 7ccbc39f-2baa-5747-a988-ffa38f14a446
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult;{8fa1dc2f-57da-4bb5-9c06-fa072d2032e2}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> concrete
+    guid 3342214c-85a9-5729-b0f1-fc667640078a
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};b1;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4))
+    argument System.Boolean
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> concrete
+    guid df32b4b4-4508-594a-830b-b46ced2a4ae0
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e});struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    guid 41d24597-c328-4467-b37f-4dfc6f60b6bc
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment2
+    guid 2d365f39-88bd-4ab4-93cf-7e2bcef337c0
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment3
+    guid cb7fc7d2-d06e-4c26-8ada-dacdaaad03f5
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment4
+    guid 11e3701a-dd9e-4f1b-812c-4020f307f93c
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    guid ef9a5e58-dcd7-45c2-9c85-ab642a715e8e
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2
+    guid a547dbc7-61d4-4fb8-ab5c-edefa3d388ad
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory
+    guid 1aca93e7-e804-454d-8466-f9897c20b0f6
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    guid 4d5ae1ef-029f-4101-8c35-fe91bf9cd5f0
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2
+    guid 4eeb8dec-ad5d-4b0a-b754-f36c3d46d684
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics
+    guid 2c0e22c7-05a0-517a-b81c-6ee8790c381f
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    guid 685d4176-f6e0-4569-b1aa-215c0ff5b257
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    guid b71d98f7-61f0-4008-b207-0bf9eb2d76f2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2
+    guid 10d7cc31-8b8f-4b9d-b22c-617103b55b08
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3
+    guid 98d5aa23-161f-4cd9-8a9c-269b30122b0d
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    guid f888ec22-e8cf-56c0-b1df-90af4ad80e84
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    guid 6dab9451-6169-55df-8f51-790e99d7277d
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics
+    guid 10951754-204b-5ec9-9de3-df792d074a61
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    guid 0dfa28fa-2ef0-4d8f-b341-3171b2df93b1
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    guid a858c3ef-8172-4f10-af93-cbe60af88d09
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    guid c9190ed8-0fd0-4946-bb88-117a60737b61
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    guid aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    guid c405eb7d-7053-4f6a-9b87-746846ed19b2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    guid 556ba72e-ca9d-4211-b143-1cedc86eb2fe
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    guid 8fa1dc2f-57da-4bb5-9c06-fa072d2032e2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    guid ebdb3cab-7a3a-4524-a0f4-f96e284d33cd
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    guid 8a9c75ae-69ba-4001-96fc-19a02703b340
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2
+    guid b0bdd5dd-91d7-481e-94f2-2a5a6bdf9383
+
+interface Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
+    guid 06e444bb-53c0-4889-8fa3-53592e37cf21
+
+interface Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
+    guid 55ef9ebc-0444-42ad-832d-1b89c089d1ca
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> concrete
+    guid 74f0ee08-295b-5b41-93cb-10c4b7a7a56c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc}))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironment
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> concrete
+    guid a830f621-a4ae-5f5c-a003-985fe3e01e51
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4))
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
+    py IsolatedWindowsEnvironment
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment2
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment3
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment4
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 reverse=22 deprecated
+            out string return
+    method change_priority deprecated
+        method ChangePriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment4 shape=4 reverse=22 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=Priority
+    method create_async static deprecated
+        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 reverse=24 static deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+        method CreateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=117 reverse=45 static deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+    method find_by_owner_id static deprecated
+        method FindByOwnerId slot=9 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 reverse=100 static deprecated
+            in string name=environmentOwnerId
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> return
+    method get_by_id static deprecated
+        method GetById slot=8 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 reverse=65 static deprecated
+            in string name=environmentId
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    method get_user_info deprecated
+        method GetUserInfo slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=4 reverse=22 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo return
+    method launch_file_with_ui_async deprecated
+        method LaunchFileWithUIAsync slot=11 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 reverse=146 deprecated
+            in string name=appExePath
+            in string name=argumentsTemplate
+            in string name=filePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
+        method LaunchFileWithUIAsync slot=12 inputs=4 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=239 reverse=166 deprecated
+            in string name=appExePath
+            in string name=argumentsTemplate
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
+    method post_message_to_receiver_async deprecated
+        method PostMessageToReceiverAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment2 shape=177 deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
+        method PostMessageToReceiverAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment2 shape=231 deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
+    method register_message_receiver deprecated
+        method RegisterMessageReceiver slot=15 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=94 deprecated
+            in guid name=receiverId
+            in delegate type=Windows.Security.Isolation.MessageReceivedCallback name=messageReceivedCallback
+    method share_file_async deprecated
+        method ShareFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=117 reverse=45 deprecated
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
+        method ShareFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=195 reverse=68 deprecated
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
+    method share_folder_async deprecated
+        method ShareFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=117 reverse=101 deprecated
+            in string name=hostFolder
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
+        method ShareFolderAsync slot=10 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 reverse=126 deprecated
+            in string name=hostFolder
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
+    method start_process_silently_async deprecated
+        method StartProcessSilentlyAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 reverse=46 deprecated
+            in string name=hostExePath
+            in string name=arguments
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator name=activator
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
+        method StartProcessSilentlyAsync slot=8 inputs=4 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=239 reverse=69 deprecated
+            in string name=hostExePath
+            in string name=arguments
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator name=activator
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
+    method terminate_async deprecated
+        method TerminateAsync slot=13 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 reverse=173 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+        method TerminateAsync slot=14 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=51 reverse=187 deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unregister_message_receiver deprecated
+        method UnregisterMessageReceiver slot=16 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=33 reverse=208 deprecated
+            in guid name=receiverId
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator python_type
+    py IsolatedWindowsEnvironmentActivator
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator;i4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats python_type
+    py IsolatedWindowsEnvironmentAllowedClipboardFormats
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats;u4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters python_type
+    py IsolatedWindowsEnvironmentAvailablePrinters
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters;u4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections python_type
+    py IsolatedWindowsEnvironmentClipboardCopyPasteDirections
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections;u4)
+
+struct Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress python_type
+    py IsolatedWindowsEnvironmentCreateProgress
+    signature struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4)
+    field state State enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState
+    field percent_complete PercentComplete uint32
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult python_type
+    py IsolatedWindowsEnvironmentCreateResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2
+    property environment
+        get get_Environment slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 reverse=62 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 reverse=43 deprecated
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus return
+    method change_creation_priority deprecated
+        method ChangeCreationPriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2 shape=4 reverse=22 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=priority
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus python_type
+    py IsolatedWindowsEnvironmentCreateStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus;i4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority python_type
+    py IsolatedWindowsEnvironmentCreationPriority
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentFile python_type
+    py IsolatedWindowsEnvironmentFile
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentFile;{4d5ae1ef-029f-4101-8c35-fe91bf9cd5f0})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2
+    property host_path
+        get get_HostPath slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=4 reverse=43 deprecated
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=4 reverse=22 deprecated
+            out guid return
+    property guest_path
+        get get_GuestPath slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 shape=4 reverse=22 deprecated
+            out string return
+    property is_read_only
+        get get_IsReadOnly slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 shape=4 reverse=43 deprecated
+            out boolean return
+    method close deprecated
+        method Close slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=0 reverse=55 deprecated
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentHost static python_type
+    py IsolatedWindowsEnvironmentHost
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics
+    property host_errors static
+        get get_HostErrors slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics shape=4 reverse=43 static deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> return
+    property is_ready static
+        get get_IsReady slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics shape=4 reverse=22 static deprecated
+            out boolean return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError python_type
+    py IsolatedWindowsEnvironmentHostError
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult python_type
+    py IsolatedWindowsEnvironmentLaunchFileResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult;{685d4176-f6e0-4569-b1aa-215c0ff5b257})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 reverse=43 deprecated
+            out hresult return
+    property file
+        get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 reverse=62 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus python_type
+    py IsolatedWindowsEnvironmentLaunchFileStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions activatable python_type
+    py IsolatedWindowsEnvironmentOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions;{b71d98f7-61f0-4008-b207-0bf9eb2d76f2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property persist_user_profile
+        get get_PersistUserProfile slot=17 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=210 deprecated
+            out boolean return
+        put put_PersistUserProfile slot=18 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=218 deprecated
+            in boolean name=value
+    property environment_owner_id
+        get get_EnvironmentOwnerId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=22 deprecated
+            out string return
+        put put_EnvironmentOwnerId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=43 deprecated
+            in string name=value
+    property clipboard_copy_paste_directions
+        get get_ClipboardCopyPasteDirections slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=121 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections return
+        put put_ClipboardCopyPasteDirections slot=11 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=141 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections name=value
+    property available_printers
+        get get_AvailablePrinters slot=12 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=162 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters return
+        put put_AvailablePrinters slot=13 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=173 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters name=value
+    property allowed_clipboard_formats
+        get get_AllowedClipboardFormats slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=62 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormats slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=99 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    property allow_graphics_hardware_acceleration
+        get get_AllowGraphicsHardwareAcceleration slot=19 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=223 deprecated
+            out boolean return
+        put put_AllowGraphicsHardwareAcceleration slot=20 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=228 deprecated
+            in boolean name=value
+    property allow_camera_and_microphone_access
+        get get_AllowCameraAndMicrophoneAccess slot=21 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=232 deprecated
+            out boolean return
+        put put_AllowCameraAndMicrophoneAccess slot=22 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=237 deprecated
+            in boolean name=value
+    property shared_folder_name_in_environment
+        get get_SharedFolderNameInEnvironment slot=15 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=194 deprecated
+            out string return
+    property shared_host_folder_path
+        get get_SharedHostFolderPath slot=14 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 reverse=186 deprecated
+            out string return
+    property window_annotation_override
+        get get_WindowAnnotationOverride slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2 shape=4 reverse=22 deprecated
+            out string return
+        put put_WindowAnnotationOverride slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2 shape=4 reverse=43 deprecated
+            in string name=value
+    property creation_priority
+        get get_CreationPriority slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=121 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority return
+        put put_CreationPriority slot=11 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=141 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=value
+    property allowed_clipboard_formats_to_host
+        get get_AllowedClipboardFormatsToHost slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=62 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormatsToHost slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=99 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    property allowed_clipboard_formats_to_environment
+        get get_AllowedClipboardFormatsToEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=22 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormatsToEnvironment slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 reverse=43 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    method share_host_folder_for_untrusted_items deprecated
+        method ShareHostFolderForUntrustedItems slot=16 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=51 reverse=203 deprecated
+            in string name=SharedHostFolderPath
+            in string name=ShareFolderNameInEnvironment
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration static python_type
+    py IsolatedWindowsEnvironmentOwnerRegistration
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics
+    method register static deprecated
+        method Register slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=117 reverse=25 static deprecated
+            in string name=ownerName
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData name=ownerRegistrationData
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult return
+    method unregister static deprecated
+        method Unregister slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=4 reverse=43 static deprecated
+            in string name=ownerName
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData activatable python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationData
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData;{f888ec22-e8cf-56c0-b1df-90af4ad80e84})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property activation_file_extensions
+        get get_ActivationFileExtensions slot=9 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 reverse=99 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property processes_runnable_as_system
+        get get_ProcessesRunnableAsSystem slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 reverse=43 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property processes_runnable_as_user
+        get get_ProcessesRunnableAsUser slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 reverse=62 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property shareable_folders
+        get get_ShareableFolders slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;{6dab9451-6169-55df-8f51-790e99d7277d})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 reverse=43 deprecated
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult python_type
+    py IsolatedWindowsEnvironmentPostMessageResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult;{0dfa28fa-2ef0-4d8f-b341-3171b2df93b1})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 reverse=43 deprecated
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus python_type
+    py IsolatedWindowsEnvironmentPostMessageStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess python_type
+    py IsolatedWindowsEnvironmentProcess
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess;{a858c3ef-8172-4f10-af93-cbe60af88d09})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    property exit_code
+        get get_ExitCode slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 reverse=43 deprecated
+            out uint32 return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState return
+    method wait_for_exit deprecated
+        method WaitForExit slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=0 reverse=55 deprecated
+    method wait_for_exit_async deprecated
+        method WaitForExitAsync slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 reverse=121 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+    method wait_for_exit_with_timeout deprecated
+        method WaitForExitWithTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 reverse=99 deprecated
+            in uint32 name=timeoutMilliseconds
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState python_type
+    py IsolatedWindowsEnvironmentProcessState
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState;i4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState python_type
+    py IsolatedWindowsEnvironmentProgressState
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions activatable python_type
+    py IsolatedWindowsEnvironmentShareFileRequestOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions;{c9190ed8-0fd0-4946-bb88-117a60737b61})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allow_write
+        get get_AllowWrite slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions shape=4 reverse=22 deprecated
+            out boolean return
+        put put_AllowWrite slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions shape=4 reverse=43 deprecated
+            in boolean name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult python_type
+    py IsolatedWindowsEnvironmentShareFileResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult;{aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 reverse=43 deprecated
+            out hresult return
+    property file
+        get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 reverse=62 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus python_type
+    py IsolatedWindowsEnvironmentShareFileStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions activatable python_type
+    py IsolatedWindowsEnvironmentShareFolderRequestOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions;{c405eb7d-7053-4f6a-9b87-746846ed19b2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allow_write
+        get get_AllowWrite slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions shape=4 reverse=22 deprecated
+            out boolean return
+        put put_AllowWrite slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions shape=4 reverse=43 deprecated
+            in boolean name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult python_type
+    py IsolatedWindowsEnvironmentShareFolderResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult;{556ba72e-ca9d-4211-b143-1cedc86eb2fe})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 reverse=43 deprecated
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus python_type
+    py IsolatedWindowsEnvironmentShareFolderStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus;i4)
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress python_type
+    py IsolatedWindowsEnvironmentSignInProgress
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult python_type
+    py IsolatedWindowsEnvironmentStartProcessResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult;{8fa1dc2f-57da-4bb5-9c06-fa072d2032e2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 reverse=43 deprecated
+            out hresult return
+    property process
+        get get_Process slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 reverse=62 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus python_type
+    py IsolatedWindowsEnvironmentStartProcessStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus;i4)
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters activatable python_type
+    py IsolatedWindowsEnvironmentTelemetryParameters
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters;{ebdb3cab-7a3a-4524-a0f4-f96e284d33cd})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property correlation_id
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters shape=4 reverse=22 deprecated
+            out guid return
+        put put_CorrelationId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters shape=33 deprecated
+            in guid name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo python_type
+    py IsolatedWindowsEnvironmentUserInfo
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo;{8a9c75ae-69ba-4001-96fc-19a02703b340})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2
+    property environment_user_name
+        get get_EnvironmentUserName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 reverse=43 deprecated
+            out string return
+    property environment_user_sid
+        get get_EnvironmentUserSid slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 reverse=22 deprecated
+            out string return
+    method try_wait_for_sign_in_async deprecated
+        method TryWaitForSignInAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 reverse=62 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_wait_for_sign_in_with_progress_async deprecated
+        method TryWaitForSignInWithProgressAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2 shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> return
+
+class Windows.Security.Isolation.IsolatedWindowsHostMessenger static python_type
+    py IsolatedWindowsHostMessenger
+    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
+    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
+    method get_file_id static deprecated
+        method GetFileId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=51 reverse=44 static deprecated
+            in string name=filePath
+            out guid return
+    method post_message_to_receiver static deprecated
+        method PostMessageToReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=94 reverse=35 static deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+    method register_host_message_receiver static deprecated
+        method RegisterHostMessageReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=94 reverse=35 static deprecated
+            in guid name=receiverId
+            in delegate type=Windows.Security.Isolation.HostMessageReceivedCallback name=hostMessageReceivedCallback
+    method unregister_host_message_receiver static deprecated
+        method UnregisterHostMessageReceiver slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=33 static deprecated
+            in guid name=receiverId
+
+delegate Windows.Security.Isolation.MessageReceivedCallback python_type
+    py MessageReceivedCallback
+    guid f5b4c8ff-1d9d-4995-9fea-4d15257c0757
+    signature delegate({f5b4c8ff-1d9d-4995-9fea-4d15257c0757})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=94 reverse=15
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

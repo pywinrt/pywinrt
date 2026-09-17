@@ -1,0 +1,792 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Composition.Interactions
+
+class Microsoft.UI.Composition.Interactions.CompositionConditionalValue python_type
+    py CompositionConditionalValue
+    signature rc(Microsoft.UI.Composition.Interactions.CompositionConditionalValue;{3743dda0-fbe2-5ecf-9e80-4638a011f707})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.ICompositionConditionalValue
+    requires Microsoft.UI.Composition.Interactions.ICompositionConditionalValue
+    factory Microsoft.UI.Composition.Interactions.ICompositionConditionalValueStatics
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.ICompositionConditionalValue shape=4 reverse=62
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.ICompositionConditionalValue shape=4 reverse=99
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    property condition
+        get get_Condition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.ICompositionConditionalValue shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Condition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.ICompositionConditionalValue shape=4 reverse=43
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.ICompositionConditionalValueStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.CompositionConditionalValue return
+
+class Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection python_type iterable
+    py CompositionInteractionSourceCollection
+    signature rc(Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection;{9aa1b86b-b002-5e2e-bb2b-0e2c547445e1})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection
+    requires Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource>
+    property count
+        get get_Count slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection shape=4 reverse=22
+            out int32 return
+    method add
+        method Add slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection shape=4 reverse=43
+            in interface type=Microsoft.UI.Composition.Interactions.ICompositionInteractionSource name=value
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> return
+    method remove
+        method Remove slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection shape=4 reverse=62
+            in interface type=Microsoft.UI.Composition.Interactions.ICompositionInteractionSource name=value
+    method remove_all
+        method RemoveAll slot=9 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection shape=0 reverse=93
+
+interface Microsoft.UI.Composition.Interactions.ICompositionConditionalValue
+    guid 3743dda0-fbe2-5ecf-9e80-4638a011f707
+
+interface Microsoft.UI.Composition.Interactions.ICompositionConditionalValueStatics
+    guid df133c1f-a185-536c-b54b-8f369212a581
+
+interface Microsoft.UI.Composition.Interactions.ICompositionInteractionSource python_type
+    py _ICompositionInteractionSource
+    guid 711c72c0-c406-4a12-859b-b44f651af046
+    signature {711c72c0-c406-4a12-859b-b44f651af046}
+
+interface Microsoft.UI.Composition.Interactions.ICompositionInteractionSourceCollection
+    guid 9aa1b86b-b002-5e2e-bb2b-0e2c547445e1
+
+interface Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration
+    guid 099e0124-dadf-5bc6-a895-90387657550f
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTracker
+    guid 02d8ec1f-8f04-505e-bd1e-47b2a204de51
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTracker2
+    guid 396d7fb1-2fad-5508-8591-4ff0dc5a7484
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTracker3
+    guid 239752cf-266c-5acb-acc3-b3e3ecaf4d3f
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTracker4
+    guid a9a9ce02-53c9-5690-a575-f340b7c2fdf2
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTracker5
+    guid dbfcd333-c3bf-5057-a45e-25edf06ebd8f
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs
+    guid 7464035c-cfce-56da-9472-420f276bd0a5
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
+    guid 06b99fbc-d6a8-5ae3-88b8-e91621becbd6
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs
+    guid 199094ab-15fd-539c-97b8-964a8196f777
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
+    guid 4eb213c0-931c-5164-8965-11c0186d3390
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaModifier
+    guid 4d3a0c6b-c508-5029-a47a-cbf64636f010
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaModifierFactory
+    guid 6dee5b33-0b5a-57b1-8537-93d4fd038f9f
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion
+    guid 91f662c0-3141-5b5e-862f-cfc60bee8cd6
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotionStatics
+    guid b0185a4f-0059-52c6-a660-9aed0c44ff7d
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion
+    guid 8c7482e0-185d-56b1-b67f-fca4fcd13cd2
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotionStatics
+    guid 860ec143-f165-5298-abf2-47369dd07f10
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue
+    guid 1a2b20cd-3371-53ff-a560-f4847b467d73
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics
+    guid cf0f0414-7fdf-5284-aeef-28b71b62aa4f
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs
+    guid 5b76c949-a4d0-5c9d-9292-7013ae9656c7
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2
+    guid c42d7e8f-7199-57a9-8aec-8727552b13e6
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
+    guid ce726ca0-1c04-531b-9951-4aec996952e4
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs
+    guid 70d29b84-0931-5f17-a8a1-82f8f8782532
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
+    guid 2f1ff38d-2f51-5ceb-8d09-bda1519f9342
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner python_type
+    py _IInteractionTrackerOwner
+    guid 8869779d-1d2a-5816-836a-68a910507d87
+    signature {8869779d-1d2a-5816-836a-68a910507d87}
+    method custom_animation_state_entered
+        method CustomAnimationStateEntered slot=6 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=24
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs name=args
+    method idle_state_entered
+        method IdleStateEntered slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=44
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs name=args
+    method inertia_state_entered
+        method InertiaStateEntered slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=65
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs name=args
+    method interacting_state_entered
+        method InteractingStateEntered slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=100
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs name=args
+    method request_ignored
+        method RequestIgnored slot=10 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=124
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs name=args
+    method values_changed
+        method ValuesChanged slot=11 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner shape=51 reverse=144
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=sender
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs name=args
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs
+    guid c276205e-f7a5-5ba2-ad45-d12c3c339149
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics
+    guid 7ac9867a-e16e-56ef-9809-f6e404240f50
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics2
+    guid 25658e4c-b99f-5108-aab7-1cc44f11508b
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs
+    guid 9b495bed-1cf7-55c1-82b9-8022cbf3c766
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifier
+    guid 4b8ed310-cb61-5f0a-b99a-940cdd2c42b1
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifierFactory
+    guid 1b3fd240-ba66-5296-b801-62a2a3606613
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion
+    guid 097ba1a6-e077-52d1-86d3-38e3f6619ddf
+
+interface Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotionStatics
+    guid cc24ab87-9131-5286-b3ce-1ef97e0974e6
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> concrete
+    guid bfe6e6f0-29d3-5d7b-ac52-9ff2f2faa5c1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Composition.Interactions.CompositionConditionalValue;{3743dda0-fbe2-5ecf-9e80-4638a011f707}))
+    argument Microsoft.UI.Composition.Interactions.CompositionConditionalValue
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> concrete
+    guid ef893131-12b4-5e2d-9a98-b083ab218918
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{711c72c0-c406-4a12-859b-b44f651af046})
+    argument Microsoft.UI.Composition.Interactions.ICompositionInteractionSource
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> concrete
+    guid c2ab0a9f-2518-5c81-9ada-72169f0f00a3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier;{4d3a0c6b-c508-5029-a47a-cbf64636f010}))
+    argument Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier> concrete
+    guid 6a242990-7db7-57bd-8d01-e20b6581320a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier;{4b8ed310-cb61-5f0a-b99a-940cdd2c42b1}))
+    argument Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> concrete
+    guid f21f2a85-e3f0-557c-8cff-6cfbc39754bb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{711c72c0-c406-4a12-859b-b44f651af046})
+    argument Microsoft.UI.Composition.Interactions.ICompositionInteractionSource
+
+interface Windows.Foundation.IReference<System.Single> concrete
+    guid 719cc2ba-3e76-5def-9f1a-38d85a145ea8
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f4)
+    argument System.Single
+
+interface Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> concrete
+    guid 1ee770ff-c954-59ca-a754-6199a9be282c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4))
+    argument Windows.Foundation.Numerics.Vector3
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSource
+    guid ea595c95-b9cb-5cd4-bb9c-4934ff329063
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSource2
+    guid ff1132ba-dc0d-519e-be49-be301e52306a
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSource3
+    guid d523bd66-a05d-5417-8e07-84ae3caf9752
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSourceObjectFactory
+    guid feb73102-238c-52aa-8e03-b68d5ecc44b3
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics
+    guid 5fc9c763-e2e5-530e-87cd-b93118ade8a3
+
+interface Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics2
+    guid a6b494fe-12a1-5a73-b87e-4c4ef58eac6c
+
+enum Microsoft.UI.Composition.Interactions.InteractionBindingAxisModes python_type
+    py InteractionBindingAxisModes
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionBindingAxisModes;u4)
+
+enum Microsoft.UI.Composition.Interactions.InteractionChainingMode python_type
+    py InteractionChainingMode
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionChainingMode;i4)
+
+class Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration python_type
+    py InteractionSourceConfiguration
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration;{099e0124-dadf-5bc6-a895-90387657550f})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration
+    requires Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration
+    property scale_source_mode
+        get get_ScaleSourceMode slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=121
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode return
+        put put_ScaleSourceMode slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=141
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode name=value
+    property position_y_source_mode
+        get get_PositionYSourceMode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=62
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode return
+        put put_PositionYSourceMode slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=99
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode name=value
+    property position_x_source_mode
+        get get_PositionXSourceMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode return
+        put put_PositionXSourceMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionSourceConfiguration shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode name=value
+
+enum Microsoft.UI.Composition.Interactions.InteractionSourceMode python_type
+    py InteractionSourceMode
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionSourceMode;i4)
+
+enum Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode python_type
+    py InteractionSourceRedirectionMode
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode;i4)
+
+class Microsoft.UI.Composition.Interactions.InteractionTracker python_type
+    py InteractionTracker
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTracker;{02d8ec1f-8f04-505e-bd1e-47b2a204de51})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.IInteractionTracker
+    requires Microsoft.UI.Composition.Interactions.IInteractionTracker
+    requires Microsoft.UI.Composition.Interactions.IInteractionTracker2
+    requires Microsoft.UI.Composition.Interactions.IInteractionTracker3
+    requires Microsoft.UI.Composition.Interactions.IInteractionTracker4
+    requires Microsoft.UI.Composition.Interactions.IInteractionTracker5
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics2
+    property scale_inertia_decay_rate
+        get get_ScaleInertiaDecayRate slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=247
+            out reference type=Windows.Foundation.IReference<System.Single> return
+        put put_ScaleInertiaDecayRate slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=252
+            in reference type=Windows.Foundation.IReference<System.Single> name=value
+    property position_inertia_decay_rate
+        get get_PositionInertiaDecayRate slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=228
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
+        put put_PositionInertiaDecayRate slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=232
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> name=value
+    property min_scale
+        get get_MinScale slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=186
+            out single return
+        put put_MinScale slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=1
+            in single name=value
+    property min_position
+        get get_MinPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=162
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+        put put_MinPosition slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=9
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+    property max_scale
+        get get_MaxScale slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=121
+            out single return
+        put put_MaxScale slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=1
+            in single name=value
+    property max_position
+        get get_MaxPosition slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+        put put_MaxPosition slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=9
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+    property interaction_sources
+        get get_InteractionSources slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection return
+    property is_position_rounding_suggested
+        get get_IsPositionRoundingSuggested slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=43
+            out boolean return
+    property natural_resting_position
+        get get_NaturalRestingPosition slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=202
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property natural_resting_scale
+        get get_NaturalRestingScale slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=210
+            out single return
+    property owner
+        get get_Owner slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=218
+            out interface type=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner return
+    property position
+        get get_Position slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=223
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property position_velocity_in_pixels_per_second
+        get get_PositionVelocityInPixelsPerSecond slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=237
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property scale
+        get get_Scale slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=242
+            out single return
+    property scale_velocity_in_percent_per_second
+        get get_ScaleVelocityInPercentPerSecond slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=255
+            out single return
+    property is_inertia_from_impulse
+        get get_IsInertiaFromImpulse slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker4 shape=4 reverse=62
+            out boolean return
+    method adjust_position_x_if_greater_than_threshold
+        method AdjustPositionXIfGreaterThanThreshold slot=27 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=39
+            in single name=adjustment
+            in single name=positionThreshold
+    method adjust_position_y_if_greater_than_threshold
+        method AdjustPositionYIfGreaterThanThreshold slot=28 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=39
+            in single name=adjustment
+            in single name=positionThreshold
+    method configure_center_point_x_inertia_modifiers
+        method ConfigureCenterPointXInertiaModifiers slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker2 shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_center_point_y_inertia_modifiers
+        method ConfigureCenterPointYInertiaModifiers slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker2 shape=4 reverse=43
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_position_x_inertia_modifiers
+        method ConfigurePositionXInertiaModifiers slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=266
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> name=modifiers
+    method configure_position_y_inertia_modifiers
+        method ConfigurePositionYInertiaModifiers slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=270
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> name=modifiers
+    method configure_scale_inertia_modifiers
+        method ConfigureScaleInertiaModifiers slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=273
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> name=modifiers
+    method configure_vector2_position_inertia_modifiers
+        method ConfigureVector2PositionInertiaModifiers slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker3 shape=4 reverse=22
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier> name=modifiers
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTracker return
+    method create_with_owner static
+        method CreateWithOwner slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics shape=117 reverse=45 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            in interface type=Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner name=owner
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTracker return
+    method get_binding_mode static
+        method GetBindingMode slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics2 shape=117 reverse=45 static
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=boundTracker1
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=boundTracker2
+            out enum_u32 type=Microsoft.UI.Composition.Interactions.InteractionBindingAxisModes return
+    method set_binding_mode static
+        method SetBindingMode slot=6 inputs=3 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerStatics2 shape=117 reverse=25 static
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=boundTracker1
+            in class type=Microsoft.UI.Composition.Interactions.InteractionTracker name=boundTracker2
+            in enum_u32 type=Microsoft.UI.Composition.Interactions.InteractionBindingAxisModes name=axisMode
+    method try_update_position
+        method TryUpdatePosition slot=32 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+            out int32 return
+        method TryUpdatePosition slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker4 shape=146
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption name=option
+            out int32 return
+        method TryUpdatePosition slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker5 shape=219
+            in struct type=Windows.Foundation.Numerics.Vector3 name=value
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption name=option
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption name=posUpdateOption
+            out int32 return
+    method try_update_position_by
+        method TryUpdatePositionBy slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=amount
+            out int32 return
+        method TryUpdatePositionBy slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker4 shape=146
+            in struct type=Windows.Foundation.Numerics.Vector3 name=amount
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption name=option
+            out int32 return
+    method try_update_position_with_additional_velocity
+        method TryUpdatePositionWithAdditionalVelocity slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=velocityInPixelsPerSecond
+            out int32 return
+    method try_update_position_with_animation
+        method TryUpdatePositionWithAnimation slot=34 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=51 reverse=289
+            in class type=Microsoft.UI.Composition.CompositionAnimation name=animation
+            out int32 return
+    method try_update_scale
+        method TryUpdateScale slot=36 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=102
+            in single name=value
+            in struct type=Windows.Foundation.Numerics.Vector3 name=centerPoint
+            out int32 return
+    method try_update_scale_with_additional_velocity
+        method TryUpdateScaleWithAdditionalVelocity slot=38 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=102
+            in single name=velocityInPercentPerSecond
+            in struct type=Windows.Foundation.Numerics.Vector3 name=centerPoint
+            out int32 return
+    method try_update_scale_with_animation
+        method TryUpdateScaleWithAnimation slot=37 inputs=2 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTracker shape=131
+            in class type=Microsoft.UI.Composition.CompositionAnimation name=animation
+            in struct type=Windows.Foundation.Numerics.Vector3 name=centerPoint
+            out int32 return
+
+enum Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption python_type
+    py InteractionTrackerClampingOption
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption;i4)
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs python_type
+    py InteractionTrackerCustomAnimationStateEnteredArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs;{7464035c-cfce-56da-9472-420f276bd0a5})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs shape=4 reverse=22
+            out int32 return
+    property is_from_binding
+        get get_IsFromBinding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs2 shape=4 reverse=22
+            out boolean return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs python_type
+    py InteractionTrackerIdleStateEnteredArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs;{199094ab-15fd-539c-97b8-964a8196f777})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs shape=4 reverse=22
+            out int32 return
+    property is_from_binding
+        get get_IsFromBinding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerIdleStateEnteredArgs2 shape=4 reverse=22
+            out boolean return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier composable python_type
+    py InteractionTrackerInertiaModifier
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier;{4d3a0c6b-c508-5029-a47a-cbf64636f010})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaModifier
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaModifier
+    composable Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaModifierFactory
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion python_type
+    py InteractionTrackerInertiaMotion
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion;{91f662c0-3141-5b5e-862f-cfc60bee8cd6})
+    base Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotionStatics
+    property motion
+        get get_Motion slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion shape=4 reverse=62
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Motion slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion shape=4 reverse=99
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    property condition
+        get get_Condition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Condition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotion shape=4 reverse=43
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaMotionStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion python_type
+    py InteractionTrackerInertiaNaturalMotion
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion;{8c7482e0-185d-56b1-b67f-fca4fcd13cd2})
+    base Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotionStatics
+    property natural_motion
+        get get_NaturalMotion slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion shape=4 reverse=62
+            out class type=Microsoft.UI.Composition.ScalarNaturalMotionAnimation return
+        put put_NaturalMotion slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion shape=4 reverse=99
+            in class type=Microsoft.UI.Composition.ScalarNaturalMotionAnimation name=value
+    property condition
+        get get_Condition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Condition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotion shape=4 reverse=43
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaNaturalMotionStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue python_type
+    py InteractionTrackerInertiaRestingValue
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue;{1a2b20cd-3371-53ff-a560-f4847b467d73})
+    base Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics
+    property resting_value
+        get get_RestingValue slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue shape=4 reverse=62
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_RestingValue slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue shape=4 reverse=99
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    property condition
+        get get_Condition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Condition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValue shape=4 reverse=43
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaRestingValueStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs python_type
+    py InteractionTrackerInertiaStateEnteredArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs;{5b76c949-a4d0-5c9d-9292-7013ae9656c7})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3
+    property modified_resting_position
+        get get_ModifiedRestingPosition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
+    property modified_resting_scale
+        get get_ModifiedRestingScale slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Single> return
+    property natural_resting_position
+        get get_NaturalRestingPosition slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property natural_resting_scale
+        get get_NaturalRestingScale slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=99
+            out single return
+    property position_velocity_in_pixels_per_second
+        get get_PositionVelocityInPixelsPerSecond slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=121
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property request_id
+        get get_RequestId slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=141
+            out int32 return
+    property scale_velocity_in_percent_per_second
+        get get_ScaleVelocityInPercentPerSecond slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs shape=4 reverse=162
+            out single return
+    property is_inertia_from_impulse
+        get get_IsInertiaFromImpulse slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs2 shape=4 reverse=22
+            out boolean return
+    property is_from_binding
+        get get_IsFromBinding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInertiaStateEnteredArgs3 shape=4 reverse=22
+            out boolean return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs python_type
+    py InteractionTrackerInteractingStateEnteredArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs;{70d29b84-0931-5f17-a8a1-82f8f8782532})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs shape=4 reverse=22
+            out int32 return
+    property is_from_binding
+        get get_IsFromBinding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerInteractingStateEnteredArgs2 shape=4 reverse=22
+            out boolean return
+
+enum Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption python_type
+    py InteractionTrackerPositionUpdateOption
+    signature enum(Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption;i4)
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs python_type
+    py InteractionTrackerRequestIgnoredArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs;{c276205e-f7a5-5ba2-ad45-d12c3c339149})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs
+    property request_id
+        get get_RequestId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerRequestIgnoredArgs shape=4 reverse=22
+            out int32 return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs python_type
+    py InteractionTrackerValuesChangedArgs
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs;{9b495bed-1cf7-55c1-82b9-8022cbf3c766})
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs
+    property position
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property request_id
+        get get_RequestId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs shape=4 reverse=43
+            out int32 return
+    property scale
+        get get_Scale slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerValuesChangedArgs shape=4 reverse=62
+            out single return
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier composable python_type
+    py InteractionTrackerVector2InertiaModifier
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier;{4b8ed310-cb61-5f0a-b99a-940cdd2c42b1})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifier
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifier
+    composable Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaModifierFactory
+
+class Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion python_type
+    py InteractionTrackerVector2InertiaNaturalMotion
+    signature rc(Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion;{097ba1a6-e077-52d1-86d3-38e3f6619ddf})
+    base Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier
+    default Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion
+    requires Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion
+    factory Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotionStatics
+    property natural_motion
+        get get_NaturalMotion slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion shape=4 reverse=62
+            out class type=Microsoft.UI.Composition.Vector2NaturalMotionAnimation return
+        put put_NaturalMotion slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion shape=4 reverse=99
+            in class type=Microsoft.UI.Composition.Vector2NaturalMotionAnimation name=value
+    property condition
+        get get_Condition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.ExpressionAnimation return
+        put put_Condition slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotion shape=4 reverse=43
+            in class type=Microsoft.UI.Composition.ExpressionAnimation name=value
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IInteractionTrackerVector2InertiaNaturalMotionStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Compositor name=compositor
+            out class type=Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion return
+
+class Microsoft.UI.Composition.Interactions.VisualInteractionSource composable python_type
+    py VisualInteractionSource
+    signature rc(Microsoft.UI.Composition.Interactions.VisualInteractionSource;{ea595c95-b9cb-5cd4-bb9c-4934ff329063})
+    base Microsoft.UI.Composition.CompositionObject
+    default Microsoft.UI.Composition.Interactions.IVisualInteractionSource
+    requires Microsoft.UI.Composition.Interactions.IVisualInteractionSource
+    requires Microsoft.UI.Composition.Interactions.IVisualInteractionSource2
+    requires Microsoft.UI.Composition.Interactions.IVisualInteractionSource3
+    requires Microsoft.UI.Composition.Interactions.ICompositionInteractionSource
+    factory Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics
+    factory Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics2
+    composable Microsoft.UI.Composition.Interactions.IVisualInteractionSourceObjectFactory
+    property scale_source_mode
+        get get_ScaleSourceMode slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=237
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode return
+        put put_ScaleSourceMode slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=242
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode name=value
+    property scale_chaining_mode
+        get get_ScaleChainingMode slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=228
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode return
+        put put_ScaleChainingMode slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=232
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode name=value
+    property position_y_source_mode
+        get get_PositionYSourceMode slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=218
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode return
+        put put_PositionYSourceMode slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=223
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode name=value
+    property position_y_chaining_mode
+        get get_PositionYChainingMode slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=202
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode return
+        put put_PositionYChainingMode slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=210
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode name=value
+    property position_x_source_mode
+        get get_PositionXSourceMode slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=186
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode return
+        put put_PositionXSourceMode slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=194
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionSourceMode name=value
+    property position_x_chaining_mode
+        get get_PositionXChainingMode slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=162
+            out enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode return
+        put put_PositionXChainingMode slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=173
+            in enum32 type=Microsoft.UI.Composition.Interactions.InteractionChainingMode name=value
+    property manipulation_redirection_mode
+        get get_ManipulationRedirectionMode slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=121
+            out enum32 type=Microsoft.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode return
+        put put_ManipulationRedirectionMode slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=141
+            in enum32 type=Microsoft.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode name=value
+    property is_position_y_rails_enabled
+        get get_IsPositionYRailsEnabled slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=62
+            out boolean return
+        put put_IsPositionYRailsEnabled slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=99
+            in boolean name=value
+    property is_position_x_rails_enabled
+        get get_IsPositionXRailsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=22
+            out boolean return
+        put put_IsPositionXRailsEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=43
+            in boolean name=value
+    property source
+        get get_Source slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=247
+            out class type=Microsoft.UI.Composition.Visual return
+    property delta_position
+        get get_DeltaPosition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=22
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property delta_scale
+        get get_DeltaScale slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=43
+            out single return
+    property position
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=62
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property position_velocity
+        get get_PositionVelocity slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=99
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property scale
+        get get_Scale slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=121
+            out single return
+    property scale_velocity
+        get get_ScaleVelocity slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=141
+            out single return
+    property pointer_wheel_config
+        get get_PointerWheelConfig slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource3 shape=4 reverse=22
+            out class type=Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration return
+    method configure_center_point_x_modifiers
+        method ConfigureCenterPointXModifiers slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=162
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_center_point_y_modifiers
+        method ConfigureCenterPointYModifiers slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=173
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_delta_position_x_modifiers
+        method ConfigureDeltaPositionXModifiers slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=186
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_delta_position_y_modifiers
+        method ConfigureDeltaPositionYModifiers slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=194
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method configure_delta_scale_modifiers
+        method ConfigureDeltaScaleModifiers slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource2 shape=4 reverse=202
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> name=conditionalValues
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics shape=51 reverse=24 static
+            in class type=Microsoft.UI.Composition.Visual name=source
+            out class type=Microsoft.UI.Composition.Interactions.VisualInteractionSource return
+    method create_from_ivisual_element static
+        method CreateFromIVisualElement slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSourceStatics2 shape=51 reverse=24 static
+            in interface type=Microsoft.UI.Composition.IVisualElement name=source
+            out class type=Microsoft.UI.Composition.Interactions.VisualInteractionSource return
+    method try_redirect_for_manipulation
+        method TryRedirectForManipulation slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Interactions.IVisualInteractionSource shape=4 reverse=252
+            in class type=Microsoft.UI.Input.PointerPoint name=pointerPoint
+
+enum Microsoft.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode python_type
+    py VisualInteractionSourceRedirectionMode
+    signature enum(Microsoft.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode;i4)
+
+class Microsoft.UI.Composition.CompositionAnimation external
+    py winui3.microsoft.ui.composition.CompositionAnimation
+
+class Microsoft.UI.Composition.CompositionObject external
+    py winui3.microsoft.ui.composition.CompositionObject
+
+class Microsoft.UI.Composition.Compositor external
+    py winui3.microsoft.ui.composition.Compositor
+
+class Microsoft.UI.Composition.ExpressionAnimation external
+    py winui3.microsoft.ui.composition.ExpressionAnimation
+
+interface Microsoft.UI.Composition.IVisualElement external
+    py winui3.microsoft.ui.composition._IVisualElement
+    guid 2180f1f5-b5d8-4bf6-920a-12006e63efef
+
+class Microsoft.UI.Composition.ScalarNaturalMotionAnimation external
+    py winui3.microsoft.ui.composition.ScalarNaturalMotionAnimation
+
+class Microsoft.UI.Composition.Vector2NaturalMotionAnimation external
+    py winui3.microsoft.ui.composition.Vector2NaturalMotionAnimation
+
+class Microsoft.UI.Composition.Visual external
+    py winui3.microsoft.ui.composition.Visual
+
+class Microsoft.UI.Input.PointerPoint external
+    py winui3.microsoft.ui.input.PointerPoint
+
+class System.Single external
+    py winrt.system.Single
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3

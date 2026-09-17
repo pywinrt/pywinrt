@@ -1,0 +1,1312 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Sms
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> concrete
+    guid 4e6c4c86-ebe6-55d9-adc0-fecc38c82aa2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    argument Windows.Devices.Sms.ISmsMessage
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> concrete
+    guid 44aa5484-43d0-5893-a4ee-7db00113ae60
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec}))
+    argument Windows.Devices.Sms.SmsDevice
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+    guid 3f9d1255-ebf8-569f-91c3-49740d5944ce
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
+    argument System.Int32
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+    guid c0454cfc-2f2f-5e0c-8de9-58b9e82a03ba
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
+    argument System.Int32
+
+enum Windows.Devices.Sms.CellularClass python_type
+    py CellularClass
+    signature enum(Windows.Devices.Sms.CellularClass;i4)
+
+class Windows.Devices.Sms.DeleteSmsMessageOperation python_type awaitable
+    py DeleteSmsMessageOperation
+    signature rc(Windows.Devices.Sms.DeleteSmsMessageOperation;{5a648006-843a-4da9-865b-9d26e5dfad7b})
+    default Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+
+class Windows.Devices.Sms.DeleteSmsMessagesOperation python_type awaitable
+    py DeleteSmsMessagesOperation
+    signature rc(Windows.Devices.Sms.DeleteSmsMessagesOperation;{5a648006-843a-4da9-865b-9d26e5dfad7b})
+    default Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+
+class Windows.Devices.Sms.GetSmsDeviceOperation python_type awaitable
+    py GetSmsDeviceOperation
+    signature rc(Windows.Devices.Sms.GetSmsDeviceOperation;pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec})))
+    default Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice>
+    requires Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice>
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=62
+            out class type=Windows.Devices.Sms.SmsDevice return
+
+class Windows.Devices.Sms.GetSmsMessageOperation python_type awaitable
+    py GetSmsMessageOperation
+    signature rc(Windows.Devices.Sms.GetSmsMessageOperation;pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{ed3c5e28-6984-4b07-811d-8d5906ed3cea}))
+    default Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage>
+    requires Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage>
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=62
+            out interface type=Windows.Devices.Sms.ISmsMessage return
+
+class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
+    py GetSmsMessagesOperation
+    signature rc(Windows.Devices.Sms.GetSmsMessagesOperation;pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4))
+    default Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32>
+    requires Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32>
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=99
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> concrete
+    guid abf9b459-48c3-5eac-9749-4c6db4d507e6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    argument Windows.Devices.Sms.ISmsMessage
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> concrete
+    guid ab710de1-fcbb-5bd6-9f2f-285fa9fb44e8
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec}))
+    argument Windows.Devices.Sms.SmsDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> concrete
+    guid fc0a0b0f-4dcc-5257-bc61-3435e302ce1f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sms.SmsSendMessageResult;{db139af2-78c9-4feb-9622-452328088d62}))
+    argument Windows.Devices.Sms.SmsSendMessageResult
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+    guid 12f85589-415d-5b5d-b0d0-fda3b0295adc
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    argument System.String
+    argument System.String
+
+interface Windows.Foundation.IReference<System.Int32> concrete
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    argument System.Int32
+
+interface Windows.Devices.Sms.ISmsAppMessage
+    guid e8bb8494-d3a0-4a0a-86d7-291033a8cf54
+
+interface Windows.Devices.Sms.ISmsBinaryMessage python_type
+    py _ISmsBinaryMessage
+    guid 5bf4e813-3b53-4c6e-b61a-d86a63755650
+    signature {5bf4e813-3b53-4c6e-b61a-d86a63755650}
+    requires Windows.Devices.Sms.ISmsMessage
+    property format
+        get get_Format slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsDataFormat return
+        put put_Format slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=4 reverse=43 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsDataFormat name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=22
+            out uint32 return
+    property message_class
+        get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    method get_data deprecated
+        method GetData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=65 deprecated
+            receive_array uint8 return
+    method set_data deprecated
+        method SetData slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=100 deprecated
+            pass_array uint8 name=value
+
+interface Windows.Devices.Sms.ISmsBroadcastMessage
+    guid 75aebbf1-e4b7-4874-a09c-2956e592f957
+
+interface Windows.Devices.Sms.ISmsDevice python_type
+    py _ISmsDevice
+    guid 091791ed-872b-4eec-9c72-ab11627b34ec
+    signature {091791ed-872b-4eec-9c72-ab11627b34ec}
+    property account_phone_number
+        get get_AccountPhoneNumber slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=62 deprecated
+            out string return
+    property cellular_class
+        get get_CellularClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=99 deprecated
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_status
+        get get_DeviceStatus slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=141 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsDeviceStatus return
+    property message_store
+        get get_MessageStore slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=121 deprecated
+            out class type=Windows.Devices.Sms.SmsDeviceMessageStore return
+    event sms_device_status_changed
+        add add_SmsDeviceStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=187 deprecated
+            in delegate type=Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler name=eventHandler
+            out event_token return
+        remove remove_SmsDeviceStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=200 deprecated
+            in event_token name=eventCookie
+    event sms_message_received
+        add add_SmsMessageReceived slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=163 deprecated
+            in delegate type=Windows.Devices.Sms.SmsMessageReceivedEventHandler name=eventHandler
+            out event_token return
+        remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
+            in event_token name=eventCookie
+    method calculate_length deprecated
+        method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
+            in class type=Windows.Devices.Sms.SmsTextMessage name=message
+            out struct type=Windows.Devices.Sms.SmsEncodedLength return
+    method send_message_async deprecated
+        method SendMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=24 deprecated
+            in interface type=Windows.Devices.Sms.ISmsMessage name=message
+            out class type=Windows.Devices.Sms.SendSmsMessageOperation return
+
+interface Windows.Devices.Sms.ISmsDevice2
+    guid bd8a5c13-e522-46cb-b8d5-9ead30fb6c47
+
+interface Windows.Devices.Sms.ISmsDevice2Statics
+    guid 65c78325-1031-491e-8fb6-ef9991afe363
+
+interface Windows.Devices.Sms.ISmsDeviceMessageStore
+    guid 9889f253-f188-4427-8d54-ce0c2423c5c1
+
+interface Windows.Devices.Sms.ISmsDeviceStatics
+    guid f88d07ea-d815-4dd1-a234-4520ce4604a4
+
+interface Windows.Devices.Sms.ISmsDeviceStatics2
+    guid 2ca11c87-0873-4caf-8a7d-bd471e8586d1
+
+interface Windows.Devices.Sms.ISmsFilterRule
+    guid 40e32fae-b049-4fbc-afe9-e2a610eff55c
+
+interface Windows.Devices.Sms.ISmsFilterRuleFactory
+    guid 00c36508-6296-4f29-9aad-8920ceba3ce8
+
+interface Windows.Devices.Sms.ISmsFilterRules
+    guid 4e47eafb-79cd-4881-9894-55a4135b23fa
+
+interface Windows.Devices.Sms.ISmsFilterRulesFactory
+    guid a09924ed-6e2e-4530-9fde-465d02eed00e
+
+interface Windows.Devices.Sms.ISmsMessage python_type
+    py _ISmsMessage
+    guid ed3c5e28-6984-4b07-811d-8d5906ed3cea
+    signature {ed3c5e28-6984-4b07-811d-8d5906ed3cea}
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=22
+            out uint32 return
+    property message_class
+        get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+
+interface Windows.Devices.Sms.ISmsMessageBase python_type
+    py _ISmsMessageBase
+    guid 2cf0fe30-fe50-4fc6-aa88-4ccfe27a29ea
+    signature {2cf0fe30-fe50-4fc6-aa88-4ccfe27a29ea}
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+
+interface Windows.Devices.Sms.ISmsMessageReceivedEventArgs
+    guid 08e80a98-b8e5-41c1-a3d8-d3abfae22675
+
+interface Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails
+    guid 2bcfcbd4-2657-4128-ad5f-e3877132bdb1
+
+interface Windows.Devices.Sms.ISmsMessageRegistration
+    guid 1720503e-f34f-446b-83b3-0ff19923b409
+
+interface Windows.Devices.Sms.ISmsMessageRegistrationStatics
+    guid 63a05464-2898-4778-a03c-6f994907d63a
+
+interface Windows.Devices.Sms.ISmsReceivedEventDetails
+    guid 5bb50f15-e46d-4c82-847d-5a0304c1d53d
+
+interface Windows.Devices.Sms.ISmsReceivedEventDetails2
+    guid 40e05c86-a7b4-4771-9ae7-0b5ffb12c03a
+
+interface Windows.Devices.Sms.ISmsSendMessageResult
+    guid db139af2-78c9-4feb-9622-452328088d62
+
+interface Windows.Devices.Sms.ISmsStatusMessage
+    guid e6d28342-b70b-4677-9379-c9783fdff8f4
+
+interface Windows.Devices.Sms.ISmsTextMessage python_type
+    py _ISmsTextMessage
+    guid d61c904c-a495-487f-9a6f-971548c5bc9f
+    signature {d61c904c-a495-487f-9a6f-971548c5bc9f}
+    requires Windows.Devices.Sms.ISmsMessage
+    property body
+        get get_Body slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=186 deprecated
+            out string return
+        put put_Body slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=194 deprecated
+            in string name=value
+    property encoding
+        get get_Encoding slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=202 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsEncoding return
+        put put_Encoding slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=210 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
+    property from_
+        get get_From slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=162 deprecated
+            out string return
+        put put_From slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=173 deprecated
+            in string name=value
+    property part_count
+        get get_PartCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=99 deprecated
+            out uint32 return
+    property part_number
+        get get_PartNumber slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=62 deprecated
+            out uint32 return
+    property part_reference_id
+        get get_PartReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=43 deprecated
+            out uint32 return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=22 deprecated
+            out datetime return
+    property to
+        get get_To slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=121 deprecated
+            out string return
+        put put_To slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=141 deprecated
+            in string name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=22
+            out uint32 return
+    property message_class
+        get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    method to_binary_messages deprecated
+        method ToBinaryMessages slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=51 reverse=219 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> return
+
+interface Windows.Devices.Sms.ISmsTextMessage2
+    guid 22a0d893-4555-4755-b5a1-e7fd84955f8d
+
+interface Windows.Devices.Sms.ISmsTextMessageStatics
+    guid 7f68c5ed-3ccc-47a3-8c55-380d3b010892
+
+interface Windows.Devices.Sms.ISmsVoicemailMessage
+    guid 271aa0a6-95b1-44ff-bcb8-b8fdd7e08bc3
+
+interface Windows.Devices.Sms.ISmsWapMessage
+    guid cd937743-7a55-4d3b-9021-f22e022d09c5
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVector<System.Int32> concrete
+    guid b939af5b-b45d-5489-9149-61442c1905fe
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> concrete
+    guid d76bef0b-1358-5895-bd42-f17f6f33eed1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sms.SmsBroadcastType;i4))
+    argument Windows.Devices.Sms.SmsBroadcastType
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> concrete
+    guid 8e72fa52-4867-5696-b4d9-4ca23f19e177
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c}))
+    argument Windows.Devices.Sms.SmsFilterRule
+
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+    guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    argument System.Int32
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> concrete
+    guid 6ea176ea-99ea-5c79-876a-f4c437b83df6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{5bf4e813-3b53-4c6e-b61a-d86a63755650})
+    argument Windows.Devices.Sms.ISmsBinaryMessage
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> concrete
+    guid d3acc5b1-6f85-507e-b40a-6950749b426f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    argument Windows.Devices.Sms.ISmsMessage
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> concrete
+    guid 23aaa815-24ef-57c4-b1bc-94d62c0a59a3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409}))
+    argument Windows.Devices.Sms.SmsMessageRegistration
+
+class Windows.Devices.Sms.SendSmsMessageOperation python_type awaitable
+    py SendSmsMessageOperation
+    signature rc(Windows.Devices.Sms.SendSmsMessageOperation;{5a648006-843a-4da9-865b-9d26e5dfad7b})
+    default Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncAction
+    requires Windows.Foundation.IAsyncInfo
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+
+class Windows.Devices.Sms.SmsAppMessage activatable python_type
+    py SmsAppMessage
+    signature rc(Windows.Devices.Sms.SmsAppMessage;{e8bb8494-d3a0-4a0a-86d7-291033a8cf54})
+    default Windows.Devices.Sms.ISmsAppMessage
+    requires Windows.Devices.Sms.ISmsAppMessage
+    requires Windows.Devices.Sms.ISmsMessageBase
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property protocol_id
+        get get_ProtocolId slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=247
+            out int32 return
+        put put_ProtocolId slot=25 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=252
+            in int32 name=value
+    property port_number
+        get get_PortNumber slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=228
+            out int32 return
+        put put_PortNumber slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=232
+            in int32 name=value
+    property is_delivery_notification_enabled
+        get get_IsDeliveryNotificationEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=186
+            out boolean return
+        put put_IsDeliveryNotificationEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=194
+            in boolean name=value
+    property retry_attempt_count
+        get get_RetryAttemptCount slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=202
+            out int32 return
+        put put_RetryAttemptCount slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=210
+            in int32 name=value
+    property encoding
+        get get_Encoding slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=218
+            out enum32 type=Windows.Devices.Sms.SmsEncoding return
+        put put_Encoding slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=223
+            in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
+    property body
+        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=121
+            out string return
+        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=141
+            in string name=value
+    property callback_number
+        get get_CallbackNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=162
+            out string return
+        put put_CallbackNumber slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=173
+            in string name=value
+    property binary_body
+        get get_BinaryBody slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=255
+            out interface type=Windows.Storage.Streams.IBuffer return
+        put put_BinaryBody slot=27 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=259
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    property to
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=43
+            out string return
+        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=62
+            in string name=value
+    property teleservice_id
+        get get_TeleserviceId slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=237
+            out int32 return
+        put put_TeleserviceId slot=23 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=242
+            in int32 name=value
+    property from_
+        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=99
+            out string return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=22
+            out datetime return
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+
+class Windows.Devices.Sms.SmsBinaryMessage activatable python_type
+    py SmsBinaryMessage
+    signature rc(Windows.Devices.Sms.SmsBinaryMessage;{5bf4e813-3b53-4c6e-b61a-d86a63755650})
+    default Windows.Devices.Sms.ISmsBinaryMessage
+    requires Windows.Devices.Sms.ISmsBinaryMessage
+    requires Windows.Devices.Sms.ISmsMessage
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property format
+        get get_Format slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsDataFormat return
+        put put_Format slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=4 reverse=43 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsDataFormat name=value
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=22
+            out uint32 return
+    property message_class
+        get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    method get_data deprecated
+        method GetData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=65 deprecated
+            receive_array uint8 return
+    method set_data deprecated
+        method SetData slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=100 deprecated
+            pass_array uint8 name=value
+
+class Windows.Devices.Sms.SmsBroadcastMessage python_type
+    py SmsBroadcastMessage
+    signature rc(Windows.Devices.Sms.SmsBroadcastMessage;{75aebbf1-e4b7-4874-a09c-2956e592f957})
+    default Windows.Devices.Sms.ISmsBroadcastMessage
+    requires Windows.Devices.Sms.ISmsBroadcastMessage
+    requires Windows.Devices.Sms.ISmsMessageBase
+    property body
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=62
+            out string return
+    property broadcast_type
+        get get_BroadcastType slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=173
+            out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
+    property channel
+        get get_Channel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=99
+            out int32 return
+    property geographical_scope
+        get get_GeographicalScope slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=121
+            out enum32 type=Windows.Devices.Sms.SmsGeographicalScope return
+    property is_emergency_alert
+        get get_IsEmergencyAlert slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=186
+            out boolean return
+    property is_user_popup_requested
+        get get_IsUserPopupRequested slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=194
+            out boolean return
+    property message_code
+        get get_MessageCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=141
+            out int32 return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=22
+            out datetime return
+    property to
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=43
+            out string return
+    property update_number
+        get get_UpdateNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=162
+            out int32 return
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+
+enum Windows.Devices.Sms.SmsBroadcastType python_type
+    py SmsBroadcastType
+    signature enum(Windows.Devices.Sms.SmsBroadcastType;i4)
+
+enum Windows.Devices.Sms.SmsDataFormat python_type
+    py SmsDataFormat
+    signature enum(Windows.Devices.Sms.SmsDataFormat;i4)
+
+class Windows.Devices.Sms.SmsDevice python_type
+    py SmsDevice
+    signature rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec})
+    default Windows.Devices.Sms.ISmsDevice
+    requires Windows.Devices.Sms.ISmsDevice
+    factory Windows.Devices.Sms.ISmsDeviceStatics2
+    factory Windows.Devices.Sms.ISmsDeviceStatics
+    property account_phone_number
+        get get_AccountPhoneNumber slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=62 deprecated
+            out string return
+    property cellular_class
+        get get_CellularClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=99 deprecated
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_status
+        get get_DeviceStatus slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=141 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsDeviceStatus return
+    property message_store
+        get get_MessageStore slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=121 deprecated
+            out class type=Windows.Devices.Sms.SmsDeviceMessageStore return
+    event sms_device_status_changed
+        add add_SmsDeviceStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=187 deprecated
+            in delegate type=Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler name=eventHandler
+            out event_token return
+        remove remove_SmsDeviceStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=200 deprecated
+            in event_token name=eventCookie
+    event sms_message_received
+        add add_SmsMessageReceived slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=163 deprecated
+            in delegate type=Windows.Devices.Sms.SmsMessageReceivedEventHandler name=eventHandler
+            out event_token return
+        remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
+            in event_token name=eventCookie
+    method calculate_length deprecated
+        method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
+            in class type=Windows.Devices.Sms.SmsTextMessage name=message
+            out struct type=Windows.Devices.Sms.SmsEncodedLength return
+    method from_id_async static deprecated
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=51 reverse=44 static deprecated
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
+    method from_network_account_id_async static deprecated
+        method FromNetworkAccountIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics2 shape=51 reverse=24 static deprecated
+            in string name=networkAccountId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
+    method get_default_async static deprecated
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 reverse=62 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
+    method get_device_selector static deprecated
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 reverse=22 static deprecated
+            out string return
+    method send_message_async deprecated
+        method SendMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=24 deprecated
+            in interface type=Windows.Devices.Sms.ISmsMessage name=message
+            out class type=Windows.Devices.Sms.SendSmsMessageOperation return
+
+class Windows.Devices.Sms.SmsDevice2 python_type
+    py SmsDevice2
+    signature rc(Windows.Devices.Sms.SmsDevice2;{bd8a5c13-e522-46cb-b8d5-9ead30fb6c47})
+    default Windows.Devices.Sms.ISmsDevice2
+    requires Windows.Devices.Sms.ISmsDevice2
+    factory Windows.Devices.Sms.ISmsDevice2Statics
+    property smsc_address
+        get get_SmscAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=22
+            out string return
+        put put_SmscAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=43
+            in string name=value
+    property account_phone_number
+        get get_AccountPhoneNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=121
+            out string return
+    property cellular_class
+        get get_CellularClass slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=141
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=62
+            out string return
+    property device_status
+        get get_DeviceStatus slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=162
+            out enum32 type=Windows.Devices.Sms.SmsDeviceStatus return
+    property parent_device_id
+        get get_ParentDeviceId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=99
+            out string return
+    event device_status_changed
+        add add_DeviceStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> name=eventHandler
+            out event_token return
+        remove remove_DeviceStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=26 reverse=397
+            in event_token name=eventCookie
+    method calculate_length
+        method CalculateLength slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=174
+            in interface type=Windows.Devices.Sms.ISmsMessageBase name=message
+            out struct type=Windows.Devices.Sms.SmsEncodedLength return
+    method from_id static
+        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 reverse=44 static
+            in string name=deviceId
+            out class type=Windows.Devices.Sms.SmsDevice2 return
+    method from_parent_id static
+        method FromParentId slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 reverse=100 static
+            in string name=parentDeviceId
+            out class type=Windows.Devices.Sms.SmsDevice2 return
+    method get_default static
+        method GetDefault slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 reverse=62 static
+            out class type=Windows.Devices.Sms.SmsDevice2 return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 reverse=22 static
+            out string return
+    method send_message_and_get_result_async
+        method SendMessageAndGetResultAsync slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=187
+            in interface type=Windows.Devices.Sms.ISmsMessageBase name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> return
+
+class Windows.Devices.Sms.SmsDeviceMessageStore python_type
+    py SmsDeviceMessageStore
+    signature rc(Windows.Devices.Sms.SmsDeviceMessageStore;{9889f253-f188-4427-8d54-ce0c2423c5c1})
+    default Windows.Devices.Sms.ISmsDeviceMessageStore
+    requires Windows.Devices.Sms.ISmsDeviceMessageStore
+    property max_messages
+        get get_MaxMessages slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=4 reverse=121 deprecated
+            out uint32 return
+    method delete_message_async deprecated
+        method DeleteMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=24 deprecated
+            in uint32 name=messageId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete_messages_async deprecated
+        method DeleteMessagesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=44 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
+            out interface type=Windows.Foundation.IAsyncAction return
+    method get_message_async deprecated
+        method GetMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=65 deprecated
+            in uint32 name=messageId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> return
+    method get_messages_async deprecated
+        method GetMessagesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=100 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
+
+enum Windows.Devices.Sms.SmsDeviceStatus python_type
+    py SmsDeviceStatus
+    signature enum(Windows.Devices.Sms.SmsDeviceStatus;i4)
+
+delegate Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler python_type
+    py SmsDeviceStatusChangedEventHandler
+    guid 982b1162-3dd7-4618-af89-0c272d5d06d8
+    signature delegate({982b1162-3dd7-4618-af89-0c272d5d06d8})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.Devices.Sms.SmsDevice name=sender
+
+struct Windows.Devices.Sms.SmsEncodedLength python_type
+    py SmsEncodedLength
+    signature struct(Windows.Devices.Sms.SmsEncodedLength;u4;u4;u4;u4;u4)
+    field segment_count SegmentCount uint32
+    field character_count_last_segment CharacterCountLastSegment uint32
+    field characters_per_segment CharactersPerSegment uint32
+    field byte_count_last_segment ByteCountLastSegment uint32
+    field bytes_per_segment BytesPerSegment uint32
+
+enum Windows.Devices.Sms.SmsEncoding python_type
+    py SmsEncoding
+    signature enum(Windows.Devices.Sms.SmsEncoding;i4)
+
+enum Windows.Devices.Sms.SmsFilterActionType python_type
+    py SmsFilterActionType
+    signature enum(Windows.Devices.Sms.SmsFilterActionType;i4)
+
+class Windows.Devices.Sms.SmsFilterRule python_type
+    py SmsFilterRule
+    signature rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c})
+    default Windows.Devices.Sms.ISmsFilterRule
+    requires Windows.Devices.Sms.ISmsFilterRule
+    factory Windows.Devices.Sms.ISmsFilterRuleFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRuleFactory shape=51 reverse=24
+            in enum32 type=Windows.Devices.Sms.SmsMessageType name=messageType
+            out class type=Windows.Devices.Sms.SmsFilterRule return
+    property cellular_class
+        get get_CellularClass slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=162
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+        put put_CellularClass slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=173
+            in enum32 type=Windows.Devices.Sms.CellularClass name=value
+    property broadcast_channels
+        get get_BroadcastChannels slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=223
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    property broadcast_types
+        get get_BroadcastTypes slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=218
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> return
+    property device_ids
+        get get_DeviceIds slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property imsi_prefixes
+        get get_ImsiPrefixes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property port_numbers
+        get get_PortNumbers slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=141
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    property protocol_ids
+        get get_ProtocolIds slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=186
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    property sender_numbers
+        get get_SenderNumbers slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property teleservice_ids
+        get get_TeleserviceIds slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=194
+            out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
+    property text_message_prefixes
+        get get_TextMessagePrefixes slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property wap_application_ids
+        get get_WapApplicationIds slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=202
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property wap_content_types
+        get get_WapContentTypes slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Devices.Sms.SmsFilterRules python_type
+    py SmsFilterRules
+    signature rc(Windows.Devices.Sms.SmsFilterRules;{4e47eafb-79cd-4881-9894-55a4135b23fa})
+    default Windows.Devices.Sms.ISmsFilterRules
+    requires Windows.Devices.Sms.ISmsFilterRules
+    factory Windows.Devices.Sms.ISmsFilterRulesFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRulesFactory shape=51 reverse=24
+            in enum32 type=Windows.Devices.Sms.SmsFilterActionType name=actionType
+            out class type=Windows.Devices.Sms.SmsFilterRules return
+    property action_type
+        get get_ActionType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsFilterActionType return
+    property rules
+        get get_Rules slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> return
+
+enum Windows.Devices.Sms.SmsGeographicalScope python_type
+    py SmsGeographicalScope
+    signature enum(Windows.Devices.Sms.SmsGeographicalScope;i4)
+
+enum Windows.Devices.Sms.SmsMessageClass python_type
+    py SmsMessageClass
+    signature enum(Windows.Devices.Sms.SmsMessageClass;i4)
+
+enum Windows.Devices.Sms.SmsMessageFilter python_type
+    py SmsMessageFilter
+    signature enum(Windows.Devices.Sms.SmsMessageFilter;i4)
+
+class Windows.Devices.Sms.SmsMessageReceivedEventArgs python_type
+    py SmsMessageReceivedEventArgs
+    signature rc(Windows.Devices.Sms.SmsMessageReceivedEventArgs;{08e80a98-b8e5-41c1-a3d8-d3abfae22675})
+    default Windows.Devices.Sms.ISmsMessageReceivedEventArgs
+    requires Windows.Devices.Sms.ISmsMessageReceivedEventArgs
+    property binary_message
+        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 reverse=43 deprecated
+            out class type=Windows.Devices.Sms.SmsBinaryMessage return
+    property text_message
+        get get_TextMessage slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.Devices.Sms.SmsTextMessage return
+
+delegate Windows.Devices.Sms.SmsMessageReceivedEventHandler python_type
+    py SmsMessageReceivedEventHandler
+    guid 0b7ad409-ec2d-47ce-a253-732beeebcacd
+    signature delegate({0b7ad409-ec2d-47ce-a253-732beeebcacd})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sms.SmsDevice name=sender
+            in class type=Windows.Devices.Sms.SmsMessageReceivedEventArgs name=e
+
+class Windows.Devices.Sms.SmsMessageReceivedTriggerDetails python_type
+    py SmsMessageReceivedTriggerDetails
+    signature rc(Windows.Devices.Sms.SmsMessageReceivedTriggerDetails;{2bcfcbd4-2657-4128-ad5f-e3877132bdb1})
+    default Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails
+    requires Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails
+    property app_message
+        get get_AppMessage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=99
+            out class type=Windows.Devices.Sms.SmsAppMessage return
+    property broadcast_message
+        get get_BroadcastMessage slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=121
+            out class type=Windows.Devices.Sms.SmsBroadcastMessage return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property status_message
+        get get_StatusMessage slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=162
+            out class type=Windows.Devices.Sms.SmsStatusMessage return
+    property text_message
+        get get_TextMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=43
+            out class type=Windows.Devices.Sms.SmsTextMessage2 return
+    property voicemail_message
+        get get_VoicemailMessage slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=141
+            out class type=Windows.Devices.Sms.SmsVoicemailMessage return
+    property wap_message
+        get get_WapMessage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=62
+            out class type=Windows.Devices.Sms.SmsWapMessage return
+    method accept
+        method Accept slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0 reverse=185
+    method drop
+        method Drop slot=13 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0 reverse=169
+
+class Windows.Devices.Sms.SmsMessageRegistration python_type
+    py SmsMessageRegistration
+    signature rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409})
+    default Windows.Devices.Sms.ISmsMessageRegistration
+    requires Windows.Devices.Sms.ISmsMessageRegistration
+    factory Windows.Devices.Sms.ISmsMessageRegistrationStatics
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=4 reverse=22
+            out string return
+    property all_registrations static
+        get get_AllRegistrations slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> return
+    event message_received
+        add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails> name=eventHandler
+            out event_token return
+        remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=26 reverse=110
+            in event_token name=eventCookie
+    method register static
+        method Register slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=117 reverse=45 static
+            in string name=id
+            in class type=Windows.Devices.Sms.SmsFilterRules name=filterRules
+            out class type=Windows.Devices.Sms.SmsMessageRegistration return
+    method unregister
+        method Unregister slot=7 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=0 reverse=37
+
+enum Windows.Devices.Sms.SmsMessageType python_type
+    py SmsMessageType
+    signature enum(Windows.Devices.Sms.SmsMessageType;i4)
+
+enum Windows.Devices.Sms.SmsModemErrorCode python_type
+    py SmsModemErrorCode
+    signature enum(Windows.Devices.Sms.SmsModemErrorCode;i4)
+
+class Windows.Devices.Sms.SmsReceivedEventDetails python_type
+    py SmsReceivedEventDetails
+    signature rc(Windows.Devices.Sms.SmsReceivedEventDetails;{5bb50f15-e46d-4c82-847d-5a0304c1d53d})
+    default Windows.Devices.Sms.ISmsReceivedEventDetails
+    requires Windows.Devices.Sms.ISmsReceivedEventDetails
+    requires Windows.Devices.Sms.ISmsReceivedEventDetails2
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 reverse=22 deprecated
+            out string return
+    property message_index
+        get get_MessageIndex slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 reverse=43 deprecated
+            out uint32 return
+    property binary_message
+        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 reverse=43 deprecated
+            out class type=Windows.Devices.Sms.SmsBinaryMessage return
+    property message_class
+        get get_MessageClass slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 reverse=22 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+
+class Windows.Devices.Sms.SmsSendMessageResult python_type
+    py SmsSendMessageResult
+    signature rc(Windows.Devices.Sms.SmsSendMessageResult;{db139af2-78c9-4feb-9622-452328088d62})
+    default Windows.Devices.Sms.ISmsSendMessageResult
+    requires Windows.Devices.Sms.ISmsSendMessageResult
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property is_error_transient
+        get get_IsErrorTransient slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=121
+            out boolean return
+    property is_successful
+        get get_IsSuccessful slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=22
+            out boolean return
+    property message_reference_numbers
+        get get_MessageReferenceNumbers slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
+    property modem_error_code
+        get get_ModemErrorCode slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsModemErrorCode return
+    property network_cause_code
+        get get_NetworkCauseCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=141
+            out int32 return
+    property transport_failure_cause
+        get get_TransportFailureCause slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=162
+            out int32 return
+
+class Windows.Devices.Sms.SmsStatusMessage python_type
+    py SmsStatusMessage
+    signature rc(Windows.Devices.Sms.SmsStatusMessage;{e6d28342-b70b-4677-9379-c9783fdff8f4})
+    default Windows.Devices.Sms.ISmsStatusMessage
+    requires Windows.Devices.Sms.ISmsStatusMessage
+    requires Windows.Devices.Sms.ISmsMessageBase
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+    property status
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=99
+            out int32 return
+    property body
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=62
+            out string return
+    property discharge_time
+        get get_DischargeTime slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=162
+            out datetime return
+    property from_
+        get get_From slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=43
+            out string return
+    property message_reference_number
+        get get_MessageReferenceNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=121
+            out int32 return
+    property service_center_timestamp
+        get get_ServiceCenterTimestamp slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=141
+            out datetime return
+    property to
+        get get_To slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=22
+            out string return
+
+class Windows.Devices.Sms.SmsTextMessage activatable python_type
+    py SmsTextMessage
+    signature rc(Windows.Devices.Sms.SmsTextMessage;{d61c904c-a495-487f-9a6f-971548c5bc9f})
+    default Windows.Devices.Sms.ISmsTextMessage
+    requires Windows.Devices.Sms.ISmsTextMessage
+    requires Windows.Devices.Sms.ISmsMessage
+    factory Windows.Devices.Sms.ISmsTextMessageStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=22
+            out uint32 return
+    property message_class
+        get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property to
+        get get_To slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=121 deprecated
+            out string return
+        put put_To slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=141 deprecated
+            in string name=value
+    property from_
+        get get_From slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=162 deprecated
+            out string return
+        put put_From slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=173 deprecated
+            in string name=value
+    property encoding
+        get get_Encoding slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=202 deprecated
+            out enum32 type=Windows.Devices.Sms.SmsEncoding return
+        put put_Encoding slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=210 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
+    property body
+        get get_Body slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=186 deprecated
+            out string return
+        put put_Body slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=194 deprecated
+            in string name=value
+    property part_count
+        get get_PartCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=99 deprecated
+            out uint32 return
+    property part_number
+        get get_PartNumber slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=62 deprecated
+            out uint32 return
+    property part_reference_id
+        get get_PartReferenceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=43 deprecated
+            out uint32 return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=22 deprecated
+            out datetime return
+    method from_binary_data static deprecated
+        method FromBinaryData slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=195 reverse=46 static deprecated
+            in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
+            pass_array uint8 name=value
+            out class type=Windows.Devices.Sms.SmsTextMessage return
+    method from_binary_message static deprecated
+        method FromBinaryMessage slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=51 reverse=24 static deprecated
+            in class type=Windows.Devices.Sms.SmsBinaryMessage name=binaryMessage
+            out class type=Windows.Devices.Sms.SmsTextMessage return
+    method to_binary_messages deprecated
+        method ToBinaryMessages slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=51 reverse=219 deprecated
+            in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> return
+
+class Windows.Devices.Sms.SmsTextMessage2 activatable python_type
+    py SmsTextMessage2
+    signature rc(Windows.Devices.Sms.SmsTextMessage2;{22a0d893-4555-4755-b5a1-e7fd84955f8d})
+    default Windows.Devices.Sms.ISmsTextMessage2
+    requires Windows.Devices.Sms.ISmsTextMessage2
+    requires Windows.Devices.Sms.ISmsMessageBase
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+    property retry_attempt_count
+        get get_RetryAttemptCount slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=218
+            out int32 return
+        put put_RetryAttemptCount slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=223
+            in int32 name=value
+    property to
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=43
+            out string return
+        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=62
+            in string name=value
+    property is_delivery_notification_enabled
+        get get_IsDeliveryNotificationEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=202
+            out boolean return
+        put put_IsDeliveryNotificationEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=210
+            in boolean name=value
+    property encoding
+        get get_Encoding slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=162
+            out enum32 type=Windows.Devices.Sms.SmsEncoding return
+        put put_Encoding slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=173
+            in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
+    property callback_number
+        get get_CallbackNumber slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=186
+            out string return
+        put put_CallbackNumber slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=194
+            in string name=value
+    property body
+        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=121
+            out string return
+        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=141
+            in string name=value
+    property protocol_id
+        get get_ProtocolId slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=232
+            out int32 return
+    property from_
+        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=99
+            out string return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=22
+            out datetime return
+    property teleservice_id
+        get get_TeleserviceId slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=228
+            out int32 return
+
+class Windows.Devices.Sms.SmsVoicemailMessage python_type
+    py SmsVoicemailMessage
+    signature rc(Windows.Devices.Sms.SmsVoicemailMessage;{271aa0a6-95b1-44ff-bcb8-b8fdd7e08bc3})
+    default Windows.Devices.Sms.ISmsVoicemailMessage
+    requires Windows.Devices.Sms.ISmsVoicemailMessage
+    requires Windows.Devices.Sms.ISmsMessageBase
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+    property body
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=62
+            out string return
+    property message_count
+        get get_MessageCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=22
+            out datetime return
+    property to
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=43
+            out string return
+
+class Windows.Devices.Sms.SmsWapMessage python_type
+    py SmsWapMessage
+    signature rc(Windows.Devices.Sms.SmsWapMessage;{cd937743-7a55-4d3b-9021-f22e022d09c5})
+    default Windows.Devices.Sms.ISmsWapMessage
+    requires Windows.Devices.Sms.ISmsWapMessage
+    requires Windows.Devices.Sms.ISmsMessageBase
+    property cellular_class
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
+            out enum32 type=Windows.Devices.Sms.CellularClass return
+    property device_id
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=43
+            out string return
+    property message_class
+        get get_MessageClass slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=99
+            out enum32 type=Windows.Devices.Sms.SmsMessageClass return
+    property message_type
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sms.SmsMessageType return
+    property sim_icc_id
+        get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
+            out string return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=22
+            out datetime return
+    property application_id
+        get get_ApplicationId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=99
+            out string return
+    property binary_body
+        get get_BinaryBody slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=141
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property content_type
+        get get_ContentType slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=121
+            out string return
+    property from_
+        get get_From slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=62
+            out string return
+    property headers
+        get get_Headers slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property to
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=43
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> concrete
+    guid 3f3808e6-3dee-57a6-a88d-bacfb066c7fb
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sms.SmsDevice2;{bd8a5c13-e522-46cb-b8d5-9ead30fb6c47});cinterface(IInspectable))
+    argument Windows.Devices.Sms.SmsDevice2
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails> concrete
+    guid 33f985c7-dcfa-531f-9cce-ee5e6c26b1e6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409});rc(Windows.Devices.Sms.SmsMessageReceivedTriggerDetails;{2bcfcbd4-2657-4128-ad5f-e3877132bdb1}))
+    argument Windows.Devices.Sms.SmsMessageRegistration
+    argument Windows.Devices.Sms.SmsMessageReceivedTriggerDetails
+
+class System.Int32 external
+    py winrt.system.Int32
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+delegate Windows.Foundation.AsyncActionCompletedHandler external
+    py winrt.windows.foundation.AsyncActionCompletedHandler
+    guid a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

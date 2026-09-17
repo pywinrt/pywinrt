@@ -14,6 +14,8 @@ on:
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
+      # except a namespace's table, which is what the tests read
+      - projection/**/_table.pywinrt.txt
       - '!projection/**/setup.py'
       - projection/CMakeLists.txt
       - interop/**
@@ -34,6 +36,8 @@ on:
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
+      # except a namespace's table, which is what the tests read
+      - projection/**/_table.pywinrt.txt
       - '!projection/**/setup.py'
       - projection/CMakeLists.txt
       - interop/**

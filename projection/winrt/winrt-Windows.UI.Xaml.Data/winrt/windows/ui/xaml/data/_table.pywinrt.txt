@@ -1,0 +1,667 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Data
+
+class Windows.UI.Xaml.Data.Binding composable python_type
+    py Binding
+    signature rc(Windows.UI.Xaml.Data.Binding;{3f7a0c6b-d00f-4730-8c1d-48e16c46f9ca})
+    base Windows.UI.Xaml.Data.BindingBase
+    default Windows.UI.Xaml.Data.IBinding
+    requires Windows.UI.Xaml.Data.IBinding
+    requires Windows.UI.Xaml.Data.IBinding2
+    composable Windows.UI.Xaml.Data.IBindingFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBindingFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.Binding return
+    property source
+        get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=121
+            out object return
+        put put_Source slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=141
+            in object name=value
+    property relative_source
+        get get_RelativeSource slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=162
+            out class type=Windows.UI.Xaml.Data.RelativeSource return
+        put put_RelativeSource slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Data.RelativeSource name=value
+    property path
+        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=22
+            out class type=Windows.UI.Xaml.PropertyPath return
+        put put_Path slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=43
+            in class type=Windows.UI.Xaml.PropertyPath name=value
+    property mode
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=62
+            out enum32 type=Windows.UI.Xaml.Data.BindingMode return
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=99
+            in enum32 type=Windows.UI.Xaml.Data.BindingMode name=value
+    property element_name
+        get get_ElementName slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=186
+            out string return
+        put put_ElementName slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=194
+            in string name=value
+    property converter_parameter
+        get get_ConverterParameter slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=218
+            out object return
+        put put_ConverterParameter slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=223
+            in object name=value
+    property converter_language
+        get get_ConverterLanguage slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=228
+            out string return
+        put put_ConverterLanguage slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=232
+            in string name=value
+    property converter
+        get get_Converter slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=202
+            out interface type=Windows.UI.Xaml.Data.IValueConverter return
+        put put_Converter slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding shape=4 reverse=210
+            in interface type=Windows.UI.Xaml.Data.IValueConverter name=value
+    property update_source_trigger
+        get get_UpdateSourceTrigger slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=121
+            out enum32 type=Windows.UI.Xaml.Data.UpdateSourceTrigger return
+        put put_UpdateSourceTrigger slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=141
+            in enum32 type=Windows.UI.Xaml.Data.UpdateSourceTrigger name=value
+    property target_null_value
+        get get_TargetNullValue slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=62
+            out object return
+        put put_TargetNullValue slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=99
+            in object name=value
+    property fallback_value
+        get get_FallbackValue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=22
+            out object return
+        put put_FallbackValue slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IBinding2 shape=4 reverse=43
+            in object name=value
+
+class Windows.UI.Xaml.Data.BindingBase composable python_type
+    py BindingBase
+    signature rc(Windows.UI.Xaml.Data.BindingBase;{1589a2ab-3d15-49bc-a447-8a5448e58870})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Data.IBindingBase
+    requires Windows.UI.Xaml.Data.IBindingBase
+    composable Windows.UI.Xaml.Data.IBindingBaseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBindingBaseFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.BindingBase return
+
+class Windows.UI.Xaml.Data.BindingExpression composable python_type
+    py BindingExpression
+    signature rc(Windows.UI.Xaml.Data.BindingExpression;{516a19a5-c2fd-4a9e-9fd3-9aa42f995a3c})
+    base Windows.UI.Xaml.Data.BindingExpressionBase
+    default Windows.UI.Xaml.Data.IBindingExpression
+    requires Windows.UI.Xaml.Data.IBindingExpression
+    composable Windows.UI.Xaml.Data.IBindingExpressionFactory
+    property data_item
+        get get_DataItem slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBindingExpression shape=4 reverse=22
+            out object return
+    property parent_binding
+        get get_ParentBinding slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IBindingExpression shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Data.Binding return
+    method update_source
+        method UpdateSource slot=8 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Data.IBindingExpression shape=0 reverse=55
+
+class Windows.UI.Xaml.Data.BindingExpressionBase composable python_type
+    py BindingExpressionBase
+    signature rc(Windows.UI.Xaml.Data.BindingExpressionBase;{fded3154-e954-4f67-8fb6-6ed79b3a1cb3})
+    default Windows.UI.Xaml.Data.IBindingExpressionBase
+    requires Windows.UI.Xaml.Data.IBindingExpressionBase
+    composable Windows.UI.Xaml.Data.IBindingExpressionBaseFactory
+
+enum Windows.UI.Xaml.Data.BindingMode python_type
+    py BindingMode
+    signature enum(Windows.UI.Xaml.Data.BindingMode;i4)
+
+class Windows.UI.Xaml.Data.BindingOperations python_type
+    py BindingOperations
+    signature rc(Windows.UI.Xaml.Data.BindingOperations;{6fffd738-9839-419c-a17a-4b3604e1524e})
+    default Windows.UI.Xaml.Data.IBindingOperations
+    requires Windows.UI.Xaml.Data.IBindingOperations
+    factory Windows.UI.Xaml.Data.IBindingOperationsStatics
+    method set_binding static
+        method SetBinding slot=6 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Data.IBindingOperationsStatics shape=117 reverse=25 static
+            in class type=Windows.UI.Xaml.DependencyObject name=target
+            in class type=Windows.UI.Xaml.DependencyProperty name=dp
+            in class type=Windows.UI.Xaml.Data.BindingBase name=binding
+
+class Windows.UI.Xaml.Data.CollectionViewSource activatable python_type
+    py CollectionViewSource
+    signature rc(Windows.UI.Xaml.Data.CollectionViewSource;{a66a1146-d2fb-4ead-be9f-3578a466dcfe})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Data.ICollectionViewSource
+    requires Windows.UI.Xaml.Data.ICollectionViewSource
+    factory Windows.UI.Xaml.Data.ICollectionViewSourceStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=22
+            out object return
+        put put_Source slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=43
+            in object name=value
+    property items_path
+        get get_ItemsPath slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=141
+            out class type=Windows.UI.Xaml.PropertyPath return
+        put put_ItemsPath slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=162
+            in class type=Windows.UI.Xaml.PropertyPath name=value
+    property is_source_grouped
+        get get_IsSourceGrouped slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=99
+            out boolean return
+        put put_IsSourceGrouped slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=121
+            in boolean name=value
+    property view
+        get get_View slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=62
+            out interface type=Windows.UI.Xaml.Data.ICollectionView return
+    property is_source_grouped_property static
+        get get_IsSourceGroupedProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property items_path_property static
+        get get_ItemsPathProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property source_property static
+        get get_SourceProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property view_property static
+        get get_ViewProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Data.CurrentChangingEventArgs composable python_type
+    py CurrentChangingEventArgs
+    signature rc(Windows.UI.Xaml.Data.CurrentChangingEventArgs;{f9891e29-51cc-47dd-a5b9-35dc4914af69})
+    default Windows.UI.Xaml.Data.ICurrentChangingEventArgs
+    requires Windows.UI.Xaml.Data.ICurrentChangingEventArgs
+    composable Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.CurrentChangingEventArgs return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=195 reverse=46
+            in boolean name=isCancelable
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.CurrentChangingEventArgs return
+    property cancel
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=22
+            out boolean return
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=43
+            in boolean name=value
+    property is_cancelable
+        get get_IsCancelable slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=62
+            out boolean return
+
+delegate Windows.UI.Xaml.Data.CurrentChangingEventHandler python_type
+    py CurrentChangingEventHandler
+    guid f3888db8-139f-4dce-8dc9-f7f1444d1185
+    signature delegate({f3888db8-139f-4dce-8dc9-f7f1444d1185})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Data.CurrentChangingEventArgs name=e
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Data.LoadMoreItemsResult> concrete
+    guid c788089d-37ab-5ba2-b865-5a309acdfc4d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};struct(Windows.UI.Xaml.Data.LoadMoreItemsResult;u4))
+    argument Windows.UI.Xaml.Data.LoadMoreItemsResult
+
+interface Windows.UI.Xaml.Data.IBinding
+    guid 3f7a0c6b-d00f-4730-8c1d-48e16c46f9ca
+
+interface Windows.UI.Xaml.Data.IBinding2
+    guid 34f96fcb-0406-48b3-9e82-f333ec4c6910
+
+interface Windows.UI.Xaml.Data.IBindingBase
+    guid 1589a2ab-3d15-49bc-a447-8a5448e58870
+
+interface Windows.UI.Xaml.Data.IBindingBaseFactory
+    guid 22dafc3a-7701-4666-a1ba-9859bdcfec34
+
+interface Windows.UI.Xaml.Data.IBindingExpression
+    guid 516a19a5-c2fd-4a9e-9fd3-9aa42f995a3c
+
+interface Windows.UI.Xaml.Data.IBindingExpressionBase
+    guid fded3154-e954-4f67-8fb6-6ed79b3a1cb3
+
+interface Windows.UI.Xaml.Data.IBindingExpressionBaseFactory
+    guid ea7116a7-c2d9-4375-b471-66b9c48c7930
+
+interface Windows.UI.Xaml.Data.IBindingExpressionFactory
+    guid 1cb55cd9-db72-40b3-a2b5-24ee6ea5c328
+
+interface Windows.UI.Xaml.Data.IBindingFactory
+    guid ff42bb08-c39e-4f7e-8434-a1569083883c
+
+interface Windows.UI.Xaml.Data.IBindingOperations
+    guid 6fffd738-9839-419c-a17a-4b3604e1524e
+
+interface Windows.UI.Xaml.Data.IBindingOperationsStatics
+    guid e155ef73-95a0-4aab-8c7d-2a47da073c79
+
+interface Windows.UI.Xaml.Data.ICollectionView python_type iterable sequence mutable_sequence
+    py _ICollectionView
+    guid 8be8bfe4-dbef-44df-8126-a31a89121ddc
+    signature {8be8bfe4-dbef-44df-8126-a31a89121ddc}
+    requires Windows.Foundation.Collections.IObservableVector<System.Object>
+    requires Windows.Foundation.Collections.IVector<T>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IVector<System.Object>
+    requires Windows.Foundation.Collections.IIterable<System.Object>
+    property collection_groups
+        get get_CollectionGroups slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IObservableVector<System.Object> return
+    property current_item
+        get get_CurrentItem slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=22
+            out object return
+    property current_position
+        get get_CurrentPosition slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=43
+            out int32 return
+    property has_more_items
+        get get_HasMoreItems slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=141
+            out boolean return
+    property is_current_after_last
+        get get_IsCurrentAfterLast slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=62
+            out boolean return
+    property is_current_before_first
+        get get_IsCurrentBeforeFirst slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=99
+            out boolean return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43
+            out uint32 return
+    event current_changed
+        add add_CurrentChanged slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=51 reverse=163
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_CurrentChanged slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICollectionView shape=26 reverse=181
+            in event_token name=token
+    event current_changing
+        add add_CurrentChanging slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=51 reverse=187
+            in delegate type=Windows.UI.Xaml.Data.CurrentChangingEventHandler name=handler
+            out event_token return
+        remove remove_CurrentChanging slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ICollectionView shape=26 reverse=200
+            in event_token name=token
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=51 reverse=24
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<T> name=vhnd
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<T> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<T> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144
+            in uint32 name=index
+            in object name=value
+    method load_more_items_async
+        method LoadMoreItemsAsync slot=22 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=51 reverse=238
+            in uint32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Data.LoadMoreItemsResult> return
+    method move_current_to
+        method MoveCurrentTo slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=51 reverse=203
+            in object name=item
+            out boolean return
+    method move_current_to_first
+        method MoveCurrentToFirst slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=218
+            out boolean return
+    method move_current_to_last
+        method MoveCurrentToLast slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=223
+            out boolean return
+    method move_current_to_next
+        method MoveCurrentToNext slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=228
+            out boolean return
+    method move_current_to_position
+        method MoveCurrentToPosition slot=17 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=51 reverse=211
+            in int32 name=index
+            out boolean return
+    method move_current_to_previous
+        method MoveCurrentToPrevious slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionView shape=4 reverse=232
+            out boolean return
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
+            pass_array object name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124
+            in uint32 name=index
+            in object name=value
+
+interface Windows.UI.Xaml.Data.ICollectionViewFactory python_type
+    py _ICollectionViewFactory
+    guid 34d4aaf4-8e72-4950-9192-ecd07d399d0a
+    signature {34d4aaf4-8e72-4950-9192-ecd07d399d0a}
+    method create_view
+        method CreateView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewFactory shape=4 reverse=22
+            out interface type=Windows.UI.Xaml.Data.ICollectionView return
+
+interface Windows.UI.Xaml.Data.ICollectionViewGroup python_type
+    py _ICollectionViewGroup
+    guid 7e01b9d8-d7b5-48b6-b31c-5bb5bdf5f09b
+    signature {7e01b9d8-d7b5-48b6-b31c-5bb5bdf5f09b}
+    property group
+        get get_Group slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewGroup shape=4 reverse=22
+            out object return
+    property group_items
+        get get_GroupItems slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICollectionViewGroup shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IObservableVector<System.Object> return
+
+interface Windows.UI.Xaml.Data.ICollectionViewSource
+    guid a66a1146-d2fb-4ead-be9f-3578a466dcfe
+
+interface Windows.UI.Xaml.Data.ICollectionViewSourceStatics
+    guid 173a0710-46af-4c0c-818b-21b6ef81bf65
+
+interface Windows.UI.Xaml.Data.ICurrentChangingEventArgs
+    guid f9891e29-51cc-47dd-a5b9-35dc4914af69
+
+interface Windows.UI.Xaml.Data.ICurrentChangingEventArgsFactory
+    guid 153bbeee-62f3-48cf-8183-8be26de3a66e
+
+interface Windows.UI.Xaml.Data.ICustomProperty python_type
+    py _ICustomProperty
+    guid 30da92c0-23e8-42a0-ae7c-734a0e5d2782
+    signature {30da92c0-23e8-42a0-ae7c-734a0e5d2782}
+    property can_read
+        get get_CanRead slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=4 reverse=173
+            out boolean return
+    property can_write
+        get get_CanWrite slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=4 reverse=162
+            out boolean return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=4 reverse=43
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=4 reverse=22
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+    method get_indexed_value
+        method GetIndexedValue slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=117 reverse=125
+            in object name=target
+            in object name=index
+            out object return
+    method get_value
+        method GetValue slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=51 reverse=65
+            in object name=target
+            out object return
+    method set_indexed_value
+        method SetIndexedValue slot=11 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=117 reverse=145
+            in object name=target
+            in object name=value
+            in object name=index
+    method set_value
+        method SetValue slot=9 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Data.ICustomProperty shape=51 reverse=100
+            in object name=target
+            in object name=value
+
+interface Windows.UI.Xaml.Data.ICustomPropertyProvider python_type
+    py _ICustomPropertyProvider
+    guid 7c925755-3e48-42b4-8677-76372267033f
+    signature {7c925755-3e48-42b4-8677-76372267033f}
+    property type
+        get get_Type slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomPropertyProvider shape=4 reverse=99
+            out struct type=Windows.UI.Xaml.Interop.TypeName return
+    method get_custom_property
+        method GetCustomProperty slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomPropertyProvider shape=51 reverse=24
+            in string name=name
+            out interface type=Windows.UI.Xaml.Data.ICustomProperty return
+    method get_indexed_property
+        method GetIndexedProperty slot=7 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomPropertyProvider shape=136 reverse=49
+            in string name=name
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=type
+            out interface type=Windows.UI.Xaml.Data.ICustomProperty return
+    method get_string_representation
+        method GetStringRepresentation slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ICustomPropertyProvider shape=4 reverse=62
+            out string return
+
+interface Windows.UI.Xaml.Data.IItemIndexRange
+    guid 83b834be-0583-4a26-9b64-8bf4a2f65704
+
+interface Windows.UI.Xaml.Data.IItemIndexRangeFactory
+    guid 86e2c440-2e7a-4c7d-a664-e8abf07bfc7e
+
+interface Windows.UI.Xaml.Data.IItemsRangeInfo python_type closeable
+    py _IItemsRangeInfo
+    guid f05f5665-71fd-45a2-be13-a081d294a68d
+    signature {f05f5665-71fd-45a2-be13-a081d294a68d}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method ranges_changed
+        method RangesChanged slot=6 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Data.IItemsRangeInfo shape=51 reverse=24
+            in class type=Windows.UI.Xaml.Data.ItemIndexRange name=visibleRange
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Data.ItemIndexRange> name=trackedItems
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterator<T> parameterized
+    argument T
+
+interface Windows.UI.Xaml.Data.INotifyPropertyChanged python_type
+    py _INotifyPropertyChanged
+    guid cf75d69c-f2f4-486b-b302-bb4c09baebfa
+    signature {cf75d69c-f2f4-486b-b302-bb4c09baebfa}
+    event property_changed
+        add add_PropertyChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.INotifyPropertyChanged shape=51 reverse=24
+            in delegate type=Windows.UI.Xaml.Data.PropertyChangedEventHandler name=handler
+            out event_token return
+        remove remove_PropertyChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.INotifyPropertyChanged shape=26 reverse=53
+            in event_token name=token
+
+interface Windows.Foundation.Collections.IObservableVector<System.Object> concrete
+    guid 7b81c56a-0985-518d-baa9-0da9ae009f65
+    signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.UI.Xaml.Data.IPropertyChangedEventArgs
+    guid 4f33a9a0-5cf4-47a4-b16f-d7faaf17457e
+
+interface Windows.UI.Xaml.Data.IPropertyChangedEventArgsFactory
+    guid 6dcc9c03-e0c7-4eee-8ea9-37e3406eeb1c
+
+interface Windows.UI.Xaml.Data.IRelativeSource
+    guid 2397ce84-2822-483a-b499-d0f031e06c6b
+
+interface Windows.UI.Xaml.Data.IRelativeSourceFactory
+    guid ef8392cd-446e-4f93-aacb-9b1255577460
+
+interface Windows.UI.Xaml.Data.ISelectionInfo python_type
+    py _ISelectionInfo
+    guid 2e12ca86-e1ed-4245-be49-207e42aec524
+    signature {2e12ca86-e1ed-4245-be49-207e42aec524}
+    method deselect_range
+        method DeselectRange slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ISelectionInfo shape=4 reverse=43
+            in class type=Windows.UI.Xaml.Data.ItemIndexRange name=itemIndexRange
+    method get_selected_ranges
+        method GetSelectedRanges slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ISelectionInfo shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Data.ItemIndexRange> return
+    method is_selected
+        method IsSelected slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ISelectionInfo shape=51 reverse=65
+            in int32 name=index
+            out boolean return
+    method select_range
+        method SelectRange slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.ISelectionInfo shape=4 reverse=22
+            in class type=Windows.UI.Xaml.Data.ItemIndexRange name=itemIndexRange
+
+interface Windows.UI.Xaml.Data.ISupportIncrementalLoading python_type
+    py _ISupportIncrementalLoading
+    guid 7f5ee992-7694-4e6c-a51b-e34bf43de743
+    signature {7f5ee992-7694-4e6c-a51b-e34bf43de743}
+    property has_more_items
+        get get_HasMoreItems slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.ISupportIncrementalLoading shape=4 reverse=43
+            out boolean return
+    method load_more_items_async
+        method LoadMoreItemsAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.ISupportIncrementalLoading shape=51 reverse=24
+            in uint32 name=count
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Data.LoadMoreItemsResult> return
+
+interface Windows.UI.Xaml.Data.IValueConverter python_type
+    py _IValueConverter
+    guid e6f2fef0-0712-487f-b313-f300b8d79aa1
+    signature {e6f2fef0-0712-487f-b313-f300b8d79aa1}
+    method convert
+        method Convert slot=6 inputs=4 outputs=1 declaring=Windows.UI.Xaml.Data.IValueConverter shape=253 reverse=29
+            in object name=value
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=targetType
+            in object name=parameter
+            in string name=language
+            out object return
+    method convert_back
+        method ConvertBack slot=7 inputs=4 outputs=1 declaring=Windows.UI.Xaml.Data.IValueConverter shape=253 reverse=50
+            in object name=value
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=targetType
+            in object name=parameter
+            in string name=language
+            out object return
+
+interface Windows.Foundation.Collections.IVector<System.Object> concrete
+    guid b32bdca4-5e52-5b27-bc5d-d66a1a268c2a
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Foundation.Collections.IVector<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IVectorView<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Data.ItemIndexRange> concrete
+    guid d0b26b06-16e8-5767-a60b-ee3e32e43dfb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Data.ItemIndexRange;{83b834be-0583-4a26-9b64-8bf4a2f65704}))
+    argument Windows.UI.Xaml.Data.ItemIndexRange
+
+class Windows.UI.Xaml.Data.ItemIndexRange composable python_type
+    py ItemIndexRange
+    signature rc(Windows.UI.Xaml.Data.ItemIndexRange;{83b834be-0583-4a26-9b64-8bf4a2f65704})
+    default Windows.UI.Xaml.Data.IItemIndexRange
+    requires Windows.UI.Xaml.Data.IItemIndexRange
+    composable Windows.UI.Xaml.Data.IItemIndexRangeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Data.IItemIndexRangeFactory shape=239 reverse=27
+            in int32 name=firstIndex
+            in uint32 name=length
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.ItemIndexRange return
+    property first_index
+        get get_FirstIndex slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IItemIndexRange shape=4 reverse=22
+            out int32 return
+    property last_index
+        get get_LastIndex slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IItemIndexRange shape=4 reverse=62
+            out int32 return
+    property length
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IItemIndexRange shape=4 reverse=43
+            out uint32 return
+
+struct Windows.UI.Xaml.Data.LoadMoreItemsResult python_type
+    py LoadMoreItemsResult
+    signature struct(Windows.UI.Xaml.Data.LoadMoreItemsResult;u4)
+    field count Count uint32
+
+class Windows.UI.Xaml.Data.PropertyChangedEventArgs composable python_type
+    py PropertyChangedEventArgs
+    signature rc(Windows.UI.Xaml.Data.PropertyChangedEventArgs;{4f33a9a0-5cf4-47a4-b16f-d7faaf17457e})
+    default Windows.UI.Xaml.Data.IPropertyChangedEventArgs
+    requires Windows.UI.Xaml.Data.IPropertyChangedEventArgs
+    composable Windows.UI.Xaml.Data.IPropertyChangedEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Data.IPropertyChangedEventArgsFactory shape=195 reverse=26
+            in string name=name
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.PropertyChangedEventArgs return
+    property property_name
+        get get_PropertyName slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IPropertyChangedEventArgs shape=4 reverse=22
+            out string return
+
+delegate Windows.UI.Xaml.Data.PropertyChangedEventHandler python_type
+    py PropertyChangedEventHandler
+    guid 50f19c16-0a22-4d8e-a089-1ea9951657d2
+    signature delegate({50f19c16-0a22-4d8e-a089-1ea9951657d2})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Data.PropertyChangedEventArgs name=e
+
+class Windows.UI.Xaml.Data.RelativeSource composable python_type
+    py RelativeSource
+    signature rc(Windows.UI.Xaml.Data.RelativeSource;{2397ce84-2822-483a-b499-d0f031e06c6b})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Data.IRelativeSource
+    requires Windows.UI.Xaml.Data.IRelativeSource
+    composable Windows.UI.Xaml.Data.IRelativeSourceFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IRelativeSourceFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Data.RelativeSource return
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Data.IRelativeSource shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Data.RelativeSourceMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Data.IRelativeSource shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.Data.RelativeSourceMode name=value
+
+enum Windows.UI.Xaml.Data.RelativeSourceMode python_type
+    py RelativeSourceMode
+    signature enum(Windows.UI.Xaml.Data.RelativeSourceMode;i4)
+
+enum T parameterized
+
+enum Windows.UI.Xaml.Data.UpdateSourceTrigger python_type
+    py UpdateSourceTrigger
+    signature enum(Windows.UI.Xaml.Data.UpdateSourceTrigger;i4)
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler<T> parameterized
+    argument T
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.UI.Xaml.DependencyObject external
+    py winrt.windows.ui.xaml.DependencyObject
+
+class Windows.UI.Xaml.DependencyProperty external
+    py winrt.windows.ui.xaml.DependencyProperty
+
+class Windows.UI.Xaml.PropertyPath external
+    py winrt.windows.ui.xaml.PropertyPath
+
+struct Windows.UI.Xaml.Interop.TypeName external
+    py winrt.windows.ui.xaml.interop.TypeName

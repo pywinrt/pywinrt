@@ -1,0 +1,311 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Gaming.Input.Custom
+
+class Windows.Gaming.Input.Custom.GameControllerFactoryManager static python_type
+    py GameControllerFactoryManager
+    factory Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics
+    factory Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics2
+    method register_custom_factory_for_gip_interface static
+        method RegisterCustomFactoryForGipInterface slot=6 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics shape=68 static
+            in interface type=Windows.Gaming.Input.Custom.ICustomGameControllerFactory name=factory
+            in guid name=interfaceId
+    method register_custom_factory_for_hardware_id static
+        method RegisterCustomFactoryForHardwareId slot=7 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics shape=117 reverse=45 static
+            in interface type=Windows.Gaming.Input.Custom.ICustomGameControllerFactory name=factory
+            in uint16 name=hardwareVendorId
+            in uint16 name=hardwareProductId
+    method register_custom_factory_for_xusb_type static
+        method RegisterCustomFactoryForXusbType slot=8 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics shape=117 reverse=66 static
+            in interface type=Windows.Gaming.Input.Custom.ICustomGameControllerFactory name=factory
+            in enum32 type=Windows.Gaming.Input.Custom.XusbDeviceType name=xusbType
+            in enum32 type=Windows.Gaming.Input.Custom.XusbDeviceSubtype name=xusbSubtype
+    method try_get_factory_controller_from_game_controller static
+        method TryGetFactoryControllerFromGameController slot=6 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics2 shape=117 reverse=25 static
+            in interface type=Windows.Gaming.Input.Custom.ICustomGameControllerFactory name=factory
+            in interface type=Windows.Gaming.Input.IGameController name=gameController
+            out interface type=Windows.Gaming.Input.IGameController return
+
+struct Windows.Gaming.Input.Custom.GameControllerVersionInfo python_type
+    py GameControllerVersionInfo
+    signature struct(Windows.Gaming.Input.Custom.GameControllerVersionInfo;u2;u2;u2;u2)
+    field major Major uint16
+    field minor Minor uint16
+    field build Build uint16
+    field revision Revision uint16
+
+struct Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress python_type
+    py GipFirmwareUpdateProgress
+    signature struct(Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress;f8;u4)
+    field percent_completed PercentCompleted double
+    field current_component_id CurrentComponentId uint32
+
+class Windows.Gaming.Input.Custom.GipFirmwareUpdateResult python_type
+    py GipFirmwareUpdateResult
+    signature rc(Windows.Gaming.Input.Custom.GipFirmwareUpdateResult;{6b794d32-8553-4292-8e03-e16651a2f8bc})
+    default Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult
+    requires Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult
+    property extended_error_code
+        get get_ExtendedErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult shape=4 reverse=22
+            out uint32 return
+    property final_component_id
+        get get_FinalComponentId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult shape=4 reverse=43
+            out uint32 return
+    property status
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus return
+
+enum Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus python_type
+    py GipFirmwareUpdateStatus
+    signature enum(Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus;i4)
+
+class Windows.Gaming.Input.Custom.GipGameControllerProvider python_type
+    py GipGameControllerProvider
+    signature rc(Windows.Gaming.Input.Custom.GipGameControllerProvider;{dbcf1e19-1af5-45a8-bf02-a0ee50c823fc})
+    default Windows.Gaming.Input.Custom.IGipGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IGipGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IGameControllerProvider
+    property firmware_version_info
+        get get_FirmwareVersionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=22
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property hardware_product_id
+        get get_HardwareProductId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=43
+            out uint16 return
+    property hardware_vendor_id
+        get get_HardwareVendorId slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=62
+            out uint16 return
+    property hardware_version_info
+        get get_HardwareVersionInfo slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=99
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property is_connected
+        get get_IsConnected slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=121
+            out boolean return
+    method send_message
+        method SendMessage slot=6 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IGipGameControllerProvider shape=195 reverse=26
+            in enum32 type=Windows.Gaming.Input.Custom.GipMessageClass name=messageClass
+            in uint8 name=messageId
+            pass_array uint8 name=messageBuffer
+    method send_receive_message
+        method SendReceiveMessage slot=7 inputs=4 outputs=0 declaring=Windows.Gaming.Input.Custom.IGipGameControllerProvider shape=267
+            in enum32 type=Windows.Gaming.Input.Custom.GipMessageClass name=messageClass
+            in uint8 name=messageId
+            pass_array uint8 name=requestMessageBuffer
+            fill_array uint8 name=responseMessageBuffer
+    method update_firmware_async
+        method UpdateFirmwareAsync slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Custom.IGipGameControllerProvider shape=51 reverse=65
+            in interface type=Windows.Storage.Streams.IInputStream name=firmwareImage
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> return
+
+enum Windows.Gaming.Input.Custom.GipMessageClass python_type
+    py GipMessageClass
+    signature enum(Windows.Gaming.Input.Custom.GipMessageClass;i4)
+
+class Windows.Gaming.Input.Custom.HidGameControllerProvider python_type
+    py HidGameControllerProvider
+    signature rc(Windows.Gaming.Input.Custom.HidGameControllerProvider;{95ce3af4-abf0-4b68-a081-3b7de73ff0e7})
+    default Windows.Gaming.Input.Custom.IHidGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IHidGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IGameControllerProvider
+    property firmware_version_info
+        get get_FirmwareVersionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=22
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property hardware_product_id
+        get get_HardwareProductId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=43
+            out uint16 return
+    property hardware_vendor_id
+        get get_HardwareVendorId slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=62
+            out uint16 return
+    property hardware_version_info
+        get get_HardwareVersionInfo slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=99
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property is_connected
+        get get_IsConnected slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=121
+            out boolean return
+    property usage_id
+        get get_UsageId slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IHidGameControllerProvider shape=4 reverse=22
+            out uint16 return
+    property usage_page
+        get get_UsagePage slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IHidGameControllerProvider shape=4 reverse=43
+            out uint16 return
+    method get_feature_report
+        method GetFeatureReport slot=8 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IHidGameControllerProvider shape=117 reverse=66
+            in uint8 name=reportId
+            fill_array uint8 name=reportBuffer
+    method send_feature_report
+        method SendFeatureReport slot=9 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IHidGameControllerProvider shape=117 reverse=101
+            in uint8 name=reportId
+            pass_array uint8 name=reportBuffer
+    method send_output_report
+        method SendOutputReport slot=10 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IHidGameControllerProvider shape=117 reverse=125
+            in uint8 name=reportId
+            pass_array uint8 name=reportBuffer
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> concrete
+    guid bfaa48bd-155f-5112-bd86-e01d6f7cd405
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Gaming.Input.Custom.GipFirmwareUpdateResult;{6b794d32-8553-4292-8e03-e16651a2f8bc});struct(Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress;f8;u4))
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateResult
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress
+
+interface Windows.Gaming.Input.Custom.ICustomGameControllerFactory python_type
+    py _ICustomGameControllerFactory
+    guid 69a0ae5e-758e-4cbe-ace6-62155fe9126f
+    signature {69a0ae5e-758e-4cbe-ace6-62155fe9126f}
+    method create_game_controller
+        method CreateGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Custom.ICustomGameControllerFactory shape=51 reverse=24
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out object return
+    method on_game_controller_added
+        method OnGameControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.ICustomGameControllerFactory shape=4 reverse=43
+            in interface type=Windows.Gaming.Input.IGameController name=value
+    method on_game_controller_removed
+        method OnGameControllerRemoved slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.ICustomGameControllerFactory shape=4 reverse=62
+            in interface type=Windows.Gaming.Input.IGameController name=value
+
+interface Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics
+    guid 36cb66e3-d0a1-4986-a24c-40b137deba9e
+
+interface Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics2
+    guid eace5644-19df-4115-b32a-2793e2aea3bb
+
+interface Windows.Gaming.Input.Custom.IGameControllerInputSink python_type
+    py _IGameControllerInputSink
+    guid 1ff6f922-c640-4c78-a820-9a715c558bcb
+    signature {1ff6f922-c640-4c78-a820-9a715c558bcb}
+    method on_input_resumed
+        method OnInputResumed slot=6 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=18
+            in uint64 name=timestamp
+    method on_input_suspended
+        method OnInputSuspended slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=40
+            in uint64 name=timestamp
+
+interface Windows.Gaming.Input.Custom.IGameControllerProvider python_type
+    py _IGameControllerProvider
+    guid e6d73982-2996-4559-b16c-3e57d46e58d6
+    signature {e6d73982-2996-4559-b16c-3e57d46e58d6}
+    property firmware_version_info
+        get get_FirmwareVersionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=22
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property hardware_product_id
+        get get_HardwareProductId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=43
+            out uint16 return
+    property hardware_vendor_id
+        get get_HardwareVendorId slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=62
+            out uint16 return
+    property hardware_version_info
+        get get_HardwareVersionInfo slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=99
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property is_connected
+        get get_IsConnected slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=121
+            out boolean return
+
+interface Windows.Gaming.Input.Custom.IGipFirmwareUpdateResult
+    guid 6b794d32-8553-4292-8e03-e16651a2f8bc
+
+interface Windows.Gaming.Input.Custom.IGipGameControllerInputSink python_type
+    py _IGipGameControllerInputSink
+    guid a2108abf-09f1-43bc-a140-80f899ec36fb
+    signature {a2108abf-09f1-43bc-a140-80f899ec36fb}
+    requires Windows.Gaming.Input.Custom.IGameControllerInputSink
+    method on_input_resumed
+        method OnInputResumed slot=6 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=18
+            in uint64 name=timestamp
+    method on_input_suspended
+        method OnInputSuspended slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=40
+            in uint64 name=timestamp
+    method on_key_received
+        method OnKeyReceived slot=6 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IGipGameControllerInputSink shape=108 reverse=20
+            in uint64 name=timestamp
+            in uint8 name=keyCode
+            in boolean name=isPressed
+    method on_message_received
+        method OnMessageReceived slot=7 inputs=5 outputs=0 declaring=Windows.Gaming.Input.Custom.IGipGameControllerInputSink shape=264 reverse=42
+            in uint64 name=timestamp
+            in enum32 type=Windows.Gaming.Input.Custom.GipMessageClass name=messageClass
+            in uint8 name=messageId
+            in uint8 name=sequenceId
+            pass_array uint8 name=messageBuffer
+
+interface Windows.Gaming.Input.Custom.IGipGameControllerProvider
+    guid dbcf1e19-1af5-45a8-bf02-a0ee50c823fc
+
+interface Windows.Gaming.Input.Custom.IHidGameControllerInputSink python_type
+    py _IHidGameControllerInputSink
+    guid f754c322-182d-40e4-a126-fcee4ffa1e31
+    signature {f754c322-182d-40e4-a126-fcee4ffa1e31}
+    requires Windows.Gaming.Input.Custom.IGameControllerInputSink
+    method on_input_report_received
+        method OnInputReportReceived slot=6 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IHidGameControllerInputSink shape=187 reverse=21
+            in uint64 name=timestamp
+            in uint8 name=reportId
+            pass_array uint8 name=reportBuffer
+    method on_input_resumed
+        method OnInputResumed slot=6 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=18
+            in uint64 name=timestamp
+    method on_input_suspended
+        method OnInputSuspended slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=40
+            in uint64 name=timestamp
+
+interface Windows.Gaming.Input.Custom.IHidGameControllerProvider
+    guid 95ce3af4-abf0-4b68-a081-3b7de73ff0e7
+
+interface Windows.Gaming.Input.Custom.IXusbGameControllerInputSink python_type
+    py _IXusbGameControllerInputSink
+    guid b2ac1d95-6ecb-42b3-8aab-025401ca4712
+    signature {b2ac1d95-6ecb-42b3-8aab-025401ca4712}
+    requires Windows.Gaming.Input.Custom.IGameControllerInputSink
+    method on_input_received
+        method OnInputReceived slot=6 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Custom.IXusbGameControllerInputSink shape=187 reverse=21
+            in uint64 name=timestamp
+            in uint8 name=reportId
+            pass_array uint8 name=inputBuffer
+    method on_input_resumed
+        method OnInputResumed slot=6 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=18
+            in uint64 name=timestamp
+    method on_input_suspended
+        method OnInputSuspended slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Custom.IGameControllerInputSink shape=3 reverse=40
+            in uint64 name=timestamp
+
+interface Windows.Gaming.Input.Custom.IXusbGameControllerProvider
+    guid 6e2971eb-0efb-48b4-808b-837643b2f216
+
+enum Windows.Gaming.Input.Custom.XusbDeviceSubtype python_type
+    py XusbDeviceSubtype
+    signature enum(Windows.Gaming.Input.Custom.XusbDeviceSubtype;i4)
+
+enum Windows.Gaming.Input.Custom.XusbDeviceType python_type
+    py XusbDeviceType
+    signature enum(Windows.Gaming.Input.Custom.XusbDeviceType;i4)
+
+class Windows.Gaming.Input.Custom.XusbGameControllerProvider python_type
+    py XusbGameControllerProvider
+    signature rc(Windows.Gaming.Input.Custom.XusbGameControllerProvider;{6e2971eb-0efb-48b4-808b-837643b2f216})
+    default Windows.Gaming.Input.Custom.IXusbGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IXusbGameControllerProvider
+    requires Windows.Gaming.Input.Custom.IGameControllerProvider
+    property firmware_version_info
+        get get_FirmwareVersionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=22
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property hardware_product_id
+        get get_HardwareProductId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=43
+            out uint16 return
+    property hardware_vendor_id
+        get get_HardwareVendorId slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=62
+            out uint16 return
+    property hardware_version_info
+        get get_HardwareVersionInfo slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=99
+            out struct type=Windows.Gaming.Input.Custom.GameControllerVersionInfo return
+    property is_connected
+        get get_IsConnected slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Custom.IGameControllerProvider shape=4 reverse=121
+            out boolean return
+    method set_vibration
+        method SetVibration slot=6 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IXusbGameControllerProvider shape=45 reverse=17
+            in double name=lowFrequencyMotorSpeed
+            in double name=highFrequencyMotorSpeed
+
+interface Windows.Gaming.Input.IGameController external
+    py winrt.windows.gaming.input._IGameController
+    guid 1baf6522-5f64-42c5-8267-b9fe2215bfbd
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da

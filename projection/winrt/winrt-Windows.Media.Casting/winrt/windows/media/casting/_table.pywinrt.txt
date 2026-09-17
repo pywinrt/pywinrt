@@ -1,0 +1,293 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.Casting
+
+class Windows.Media.Casting.CastingConnection python_type closeable
+    py CastingConnection
+    signature rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd})
+    default Windows.Media.Casting.ICastingConnection
+    requires Windows.Media.Casting.ICastingConnection
+    requires Windows.Foundation.IClosable
+    property source
+        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=62
+            out class type=Windows.Media.Casting.CastingSource return
+        put put_Source slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=99
+            in class type=Windows.Media.Casting.CastingSource name=value
+    property device
+        get get_Device slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=43
+            out class type=Windows.Media.Casting.CastingDevice return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=22
+            out enum32 type=Windows.Media.Casting.CastingConnectionState return
+    event error_occurred
+        add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs> name=handler
+            out event_token return
+        remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=181
+            in event_token name=token
+    event state_changed
+        add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,System.Object> name=handler
+            out event_token return
+        remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=156
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method disconnect_async
+        method DisconnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=194
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> return
+    method request_start_casting_async
+        method RequestStartCastingAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=187
+            in class type=Windows.Media.Casting.CastingSource name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> return
+
+class Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs python_type
+    py CastingConnectionErrorOccurredEventArgs
+    signature rc(Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs;{a7fb3c69-8719-4f00-81fb-961863c79a32})
+    default Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs
+    requires Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs
+    property error_status
+        get get_ErrorStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Media.Casting.CastingConnectionErrorStatus return
+    property message
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4 reverse=43
+            out string return
+
+enum Windows.Media.Casting.CastingConnectionErrorStatus python_type
+    py CastingConnectionErrorStatus
+    signature enum(Windows.Media.Casting.CastingConnectionErrorStatus;i4)
+
+enum Windows.Media.Casting.CastingConnectionState python_type
+    py CastingConnectionState
+    signature enum(Windows.Media.Casting.CastingConnectionState;i4)
+
+class Windows.Media.Casting.CastingDevice python_type
+    py CastingDevice
+    signature rc(Windows.Media.Casting.CastingDevice;{de721c83-4a43-4ad1-a6d2-2492a796c3f2})
+    default Windows.Media.Casting.ICastingDevice
+    requires Windows.Media.Casting.ICastingDevice
+    factory Windows.Media.Casting.ICastingDeviceStatics
+    property friendly_name
+        get get_FriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=43
+            out string return
+    property icon
+        get get_Icon slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=22
+            out string return
+    method create_casting_connection
+        method CreateCastingConnection slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=121
+            out class type=Windows.Media.Casting.CastingConnection return
+    method device_info_supports_casting_async static
+        method DeviceInfoSupportsCastingAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=100 static
+            in class type=Windows.Devices.Enumeration.DeviceInformation name=device
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=65 static
+            in string name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=24 static
+            in enum_u32 type=Windows.Media.Casting.CastingPlaybackTypes name=type
+            out string return
+    method get_device_selector_from_casting_source_async static
+        method GetDeviceSelectorFromCastingSourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=44 static
+            in class type=Windows.Media.Casting.CastingSource name=castingSource
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
+    method get_supported_casting_playback_types_async
+        method GetSupportedCastingPlaybackTypesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=99
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> return
+
+class Windows.Media.Casting.CastingDevicePicker activatable python_type
+    py CastingDevicePicker
+    signature rc(Windows.Media.Casting.CastingDevicePicker;{dcd39924-0591-49be-aacb-4b82ee756a95})
+    default Windows.Media.Casting.ICastingDevicePicker
+    requires Windows.Media.Casting.ICastingDevicePicker
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property appearance
+        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4 reverse=43
+            out class type=Windows.Devices.Enumeration.DevicePickerAppearance return
+    property filter
+        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4 reverse=22
+            out class type=Windows.Media.Casting.CastingDevicePickerFilter return
+    event casting_device_picker_dismissed
+        add add_CastingDevicePickerDismissed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,System.Object> name=handler
+            out event_token return
+        remove remove_CastingDevicePickerDismissed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=156
+            in event_token name=token
+    event casting_device_selected
+        add add_CastingDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,Windows.Media.Casting.CastingDeviceSelectedEventArgs> name=handler
+            out event_token return
+        remove remove_CastingDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=110
+            in event_token name=token
+    method hide
+        method Hide slot=14 inputs=0 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=0 reverse=185
+    method show
+        method Show slot=12 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=8
+            in struct type=Windows.Foundation.Rect name=selection
+        method Show slot=13 inputs=2 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=74
+            in struct type=Windows.Foundation.Rect name=selection
+            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
+
+class Windows.Media.Casting.CastingDevicePickerFilter python_type
+    py CastingDevicePickerFilter
+    signature rc(Windows.Media.Casting.CastingDevicePickerFilter;{be8c619c-b563-4354-ae33-9fdaad8c6291})
+    default Windows.Media.Casting.ICastingDevicePickerFilter
+    requires Windows.Media.Casting.ICastingDevicePickerFilter
+    property supports_video
+        get get_SupportsVideo slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=62
+            out boolean return
+        put put_SupportsVideo slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=99
+            in boolean name=value
+    property supports_pictures
+        get get_SupportsPictures slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=121
+            out boolean return
+        put put_SupportsPictures slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=141
+            in boolean name=value
+    property supports_audio
+        get get_SupportsAudio slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=22
+            out boolean return
+        put put_SupportsAudio slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=43
+            in boolean name=value
+    property supported_casting_sources
+        get get_SupportedCastingSources slot=12 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> return
+
+class Windows.Media.Casting.CastingDeviceSelectedEventArgs python_type
+    py CastingDeviceSelectedEventArgs
+    signature rc(Windows.Media.Casting.CastingDeviceSelectedEventArgs;{dc439e86-dd57-4d0d-9400-af45e4fb3663})
+    default Windows.Media.Casting.ICastingDeviceSelectedEventArgs
+    requires Windows.Media.Casting.ICastingDeviceSelectedEventArgs
+    property selected_casting_device
+        get get_SelectedCastingDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceSelectedEventArgs shape=4 reverse=22
+            out class type=Windows.Media.Casting.CastingDevice return
+
+enum Windows.Media.Casting.CastingPlaybackTypes python_type
+    py CastingPlaybackTypes
+    signature enum(Windows.Media.Casting.CastingPlaybackTypes;u4)
+
+class Windows.Media.Casting.CastingSource python_type
+    py CastingSource
+    signature rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727})
+    default Windows.Media.Casting.ICastingSource
+    requires Windows.Media.Casting.ICastingSource
+    property preferred_source_uri
+        get get_PreferredSourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingSource shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingSource shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    argument System.String
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> concrete
+    guid 25c821bc-deb8-5850-8af2-d3ac35426bd2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Casting.CastingConnectionErrorStatus;i4))
+    argument Windows.Media.Casting.CastingConnectionErrorStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> concrete
+    guid 1b4ee058-4c69-5e70-8834-c1d171cc1b22
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Casting.CastingDevice;{de721c83-4a43-4ad1-a6d2-2492a796c3f2}))
+    argument Windows.Media.Casting.CastingDevice
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> concrete
+    guid dff10e53-4c5e-5dba-9269-cd61881bb8b3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Casting.CastingPlaybackTypes;u4))
+    argument Windows.Media.Casting.CastingPlaybackTypes
+
+interface Windows.Media.Casting.ICastingConnection
+    guid cd951653-c2f1-4498-8b78-5fb4cd3640dd
+
+interface Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs
+    guid a7fb3c69-8719-4f00-81fb-961863c79a32
+
+interface Windows.Media.Casting.ICastingDevice
+    guid de721c83-4a43-4ad1-a6d2-2492a796c3f2
+
+interface Windows.Media.Casting.ICastingDevicePicker
+    guid dcd39924-0591-49be-aacb-4b82ee756a95
+
+interface Windows.Media.Casting.ICastingDevicePickerFilter
+    guid be8c619c-b563-4354-ae33-9fdaad8c6291
+
+interface Windows.Media.Casting.ICastingDeviceSelectedEventArgs
+    guid dc439e86-dd57-4d0d-9400-af45e4fb3663
+
+interface Windows.Media.Casting.ICastingDeviceStatics
+    guid e7d958d7-4d13-4237-a365-4c4f6a4cfd2f
+
+interface Windows.Media.Casting.ICastingSource
+    guid f429ea72-3467-47e6-a027-522923e9d727
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> concrete
+    guid c2e3dea8-92e0-50af-9c93-83b3e86b73b4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727}))
+    argument Windows.Media.Casting.CastingSource
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,System.Object> concrete
+    guid f1576170-9b08-5a9b-87d2-c1ac47bc6681
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd});cinterface(IInspectable))
+    argument Windows.Media.Casting.CastingConnection
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs> concrete
+    guid 78afbbd0-9811-5f0e-9566-47c3e8cdd929
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd});rc(Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs;{a7fb3c69-8719-4f00-81fb-961863c79a32}))
+    argument Windows.Media.Casting.CastingConnection
+    argument Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,System.Object> concrete
+    guid a64b972b-aa63-5c61-9cde-cd6ffea8a247
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingDevicePicker;{dcd39924-0591-49be-aacb-4b82ee756a95});cinterface(IInspectable))
+    argument Windows.Media.Casting.CastingDevicePicker
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,Windows.Media.Casting.CastingDeviceSelectedEventArgs> concrete
+    guid b3655b33-c4ad-5f4c-a187-b2e4c770a16b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingDevicePicker;{dcd39924-0591-49be-aacb-4b82ee756a95});rc(Windows.Media.Casting.CastingDeviceSelectedEventArgs;{dc439e86-dd57-4d0d-9400-af45e4fb3663}))
+    argument Windows.Media.Casting.CastingDevicePicker
+    argument Windows.Media.Casting.CastingDeviceSelectedEventArgs
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Devices.Enumeration.DeviceInformation external
+    py winrt.windows.devices.enumeration.DeviceInformation
+
+class Windows.Devices.Enumeration.DevicePickerAppearance external
+    py winrt.windows.devices.enumeration.DevicePickerAppearance
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
+    py winrt.windows.storage.streams._IRandomAccessStreamWithContentType
+    guid cc254827-4b3d-438f-9232-10c76bc7e038
+
+enum Windows.UI.Popups.Placement external
+    py winrt.windows.ui.popups.Placement

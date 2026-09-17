@@ -1,0 +1,1938 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.Xaml.Documents
+
+class Windows.UI.Xaml.Documents.Block composable python_type
+    py Block
+    signature rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896})
+    base Windows.UI.Xaml.Documents.TextElement
+    default Windows.UI.Xaml.Documents.IBlock
+    requires Windows.UI.Xaml.Documents.IBlock
+    requires Windows.UI.Xaml.Documents.IBlock2
+    factory Windows.UI.Xaml.Documents.IBlockStatics2
+    factory Windows.UI.Xaml.Documents.IBlockStatics
+    composable Windows.UI.Xaml.Documents.IBlockFactory
+    property text_alignment
+        get get_TextAlignment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.TextAlignment return
+        put put_TextAlignment slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.TextAlignment name=value
+    property margin
+        get get_Margin slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=162
+            out struct type=Windows.UI.Xaml.Thickness return
+        put put_Margin slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IBlock shape=14
+            in struct type=Windows.UI.Xaml.Thickness name=value
+    property line_stacking_strategy
+        get get_LineStackingStrategy slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=121
+            out enum32 type=Windows.UI.Xaml.LineStackingStrategy return
+        put put_LineStackingStrategy slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=141
+            in enum32 type=Windows.UI.Xaml.LineStackingStrategy name=value
+    property line_height
+        get get_LineHeight slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=62
+            out double return
+        put put_LineHeight slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IBlock shape=2
+            in double name=value
+    property horizontal_text_alignment
+        get get_HorizontalTextAlignment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock2 shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.TextAlignment return
+        put put_HorizontalTextAlignment slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IBlock2 shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.TextAlignment name=value
+    property line_height_property static
+        get get_LineHeightProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property line_stacking_strategy_property static
+        get get_LineStackingStrategyProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property margin_property static
+        get get_MarginProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property text_alignment_property static
+        get get_TextAlignmentProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property horizontal_text_alignment_property static
+        get get_HorizontalTextAlignmentProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Documents.BlockCollection python_type iterable sequence mutable_sequence
+    py BlockCollection
+    signature rc(Windows.UI.Xaml.Documents.BlockCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896})))
+    default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block>
+    requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Block return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Block name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.Block name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+
+class Windows.UI.Xaml.Documents.Bold activatable python_type
+    py Bold
+    signature rc(Windows.UI.Xaml.Documents.Bold;{ade73784-1b59-4da4-bb23-0f20e885b4bf})
+    base Windows.UI.Xaml.Documents.Span
+    default Windows.UI.Xaml.Documents.IBold
+    requires Windows.UI.Xaml.Documents.IBold
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.UI.Xaml.Documents.ContactContentLinkProvider activatable python_type
+    py ContactContentLinkProvider
+    signature rc(Windows.UI.Xaml.Documents.ContactContentLinkProvider;{f92fd29b-589b-4abd-9d37-35a1468f021e})
+    base Windows.UI.Xaml.Documents.ContentLinkProvider
+    default Windows.UI.Xaml.Documents.IContactContentLinkProvider
+    requires Windows.UI.Xaml.Documents.IContactContentLinkProvider
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.UI.Xaml.Documents.ContentLink activatable python_type
+    py ContentLink
+    signature rc(Windows.UI.Xaml.Documents.ContentLink;{6c60c3e1-528c-42f8-92be-34b8c68be304})
+    base Windows.UI.Xaml.Documents.Inline
+    default Windows.UI.Xaml.Documents.IContentLink
+    requires Windows.UI.Xaml.Documents.IContentLink
+    factory Windows.UI.Xaml.Documents.IContentLinkStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property x_y_focus_up_navigation_strategy
+        get get_XYFocusUpNavigationStrategy slot=23 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=242
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusUpNavigationStrategy slot=24 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=247
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_up
+        get get_XYFocusUp slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=202
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusUp slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=210
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_right_navigation_strategy
+        get get_XYFocusRightNavigationStrategy slot=29 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=266
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusRightNavigationStrategy slot=30 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=270
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_right
+        get get_XYFocusRight slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=186
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusRight slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=194
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_left_navigation_strategy
+        get get_XYFocusLeftNavigationStrategy slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=259
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusLeftNavigationStrategy slot=28 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=263
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_left
+        get get_XYFocusLeft slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=162
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusLeft slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=173
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_down_navigation_strategy
+        get get_XYFocusDownNavigationStrategy slot=25 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=252
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusDownNavigationStrategy slot=26 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=255
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_down
+        get get_XYFocusDown slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=218
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusDown slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=223
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property tab_index
+        get get_TabIndex slot=33 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=285
+            out int32 return
+        put put_TabIndex slot=34 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=288
+            in int32 name=value
+    property is_tab_stop
+        get get_IsTabStop slot=31 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=273
+            out boolean return
+        put put_IsTabStop slot=32 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=280
+            in boolean name=value
+    property info
+        get get_Info slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=22
+            out class type=Windows.UI.Text.ContentLinkInfo return
+        put put_Info slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=43
+            in class type=Windows.UI.Text.ContentLinkInfo name=value
+    property element_sound_mode
+        get get_ElementSoundMode slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=228
+            out enum32 type=Windows.UI.Xaml.ElementSoundMode return
+        put put_ElementSoundMode slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=232
+            in enum32 type=Windows.UI.Xaml.ElementSoundMode name=value
+    property cursor
+        get get_Cursor slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=121
+            out enum32 type=Windows.UI.Core.CoreCursorType return
+        put put_Cursor slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=141
+            in enum32 type=Windows.UI.Core.CoreCursorType name=value
+    property background
+        get get_Background slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=62
+            out class type=Windows.UI.Xaml.Media.Brush return
+        put put_Background slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=99
+            in class type=Windows.UI.Xaml.Media.Brush name=value
+    property focus_state
+        get get_FocusState slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=4 reverse=237
+            out enum32 type=Windows.UI.Xaml.FocusState return
+    property background_property static
+        get get_BackgroundProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property cursor_property static
+        get get_CursorProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property element_sound_mode_property static
+        get get_ElementSoundModeProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property focus_state_property static
+        get get_FocusStateProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=173 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_tab_stop_property static
+        get get_IsTabStopProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=218 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tab_index_property static
+        get get_TabIndexProperty slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=223 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_down_navigation_strategy_property static
+        get get_XYFocusDownNavigationStrategyProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_down_property static
+        get get_XYFocusDownProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_left_navigation_strategy_property static
+        get get_XYFocusLeftNavigationStrategyProperty slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=202 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_left_property static
+        get get_XYFocusLeftProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_right_navigation_strategy_property static
+        get get_XYFocusRightNavigationStrategyProperty slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=210 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_right_property static
+        get get_XYFocusRightProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_up_navigation_strategy_property static
+        get get_XYFocusUpNavigationStrategyProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=186 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_up_property static
+        get get_XYFocusUpProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    event got_focus
+        add add_GotFocus slot=37 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=51 reverse=300
+            in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
+            out event_token return
+        remove remove_GotFocus slot=38 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=26 reverse=305
+            in event_token name=token
+    event invoked
+        add add_Invoked slot=35 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=51 reverse=293
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.ContentLink,Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs> name=handler
+            out event_token return
+        remove remove_Invoked slot=36 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=26 reverse=298
+            in event_token name=token
+    event lost_focus
+        add add_LostFocus slot=39 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=51 reverse=308
+            in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
+            out event_token return
+        remove remove_LostFocus slot=40 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLink shape=26 reverse=314
+            in event_token name=token
+    method focus
+        method Focus slot=41 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLink shape=51 reverse=317
+            in enum32 type=Windows.UI.Xaml.FocusState name=value
+            out boolean return
+
+class Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs python_type
+    py ContentLinkInvokedEventArgs
+    signature rc(Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs;{546717c1-e8df-4593-9639-97595fdf8310})
+    default Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs
+    requires Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs
+    property handled
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs shape=4 reverse=43
+            out boolean return
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs shape=4 reverse=62
+            in boolean name=value
+    property content_link_info
+        get get_ContentLinkInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs shape=4 reverse=22
+            out class type=Windows.UI.Text.ContentLinkInfo return
+
+class Windows.UI.Xaml.Documents.ContentLinkProvider composable python_type
+    py ContentLinkProvider
+    signature rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Documents.IContentLinkProvider
+    requires Windows.UI.Xaml.Documents.IContentLinkProvider
+    composable Windows.UI.Xaml.Documents.IContentLinkProviderFactory
+
+class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python_type iterable sequence mutable_sequence
+    py ContentLinkProviderCollection
+    signature rc(Windows.UI.Xaml.Documents.ContentLinkProviderCollection;{f5b84d0c-a9f4-4d1a-a13c-10def1843734})
+    default Windows.UI.Xaml.Documents.IContentLinkProviderCollection
+    requires Windows.UI.Xaml.Documents.IContentLinkProviderCollection
+    requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider>
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+
+class Windows.UI.Xaml.Documents.Glyphs activatable python_type
+    py Glyphs
+    signature rc(Windows.UI.Xaml.Documents.Glyphs;{d079498b-f2b1-4281-99a2-e4d05932b2b5})
+    base Windows.UI.Xaml.FrameworkElement
+    default Windows.UI.Xaml.Documents.IGlyphs
+    requires Windows.UI.Xaml.Documents.IGlyphs
+    requires Windows.UI.Xaml.Documents.IGlyphs2
+    factory Windows.UI.Xaml.Documents.IGlyphsStatics2
+    factory Windows.UI.Xaml.Documents.IGlyphsStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property unicode_string
+        get get_UnicodeString slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=22
+            out string return
+        put put_UnicodeString slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=43
+            in string name=value
+    property style_simulations
+        get get_StyleSimulations slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=162
+            out enum32 type=Windows.UI.Xaml.Media.StyleSimulations return
+        put put_StyleSimulations slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=173
+            in enum32 type=Windows.UI.Xaml.Media.StyleSimulations name=value
+    property origin_y
+        get get_OriginY slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=218
+            out double return
+        put put_OriginY slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=2
+            in double name=value
+    property origin_x
+        get get_OriginX slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=202
+            out double return
+        put put_OriginX slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=2
+            in double name=value
+    property indices
+        get get_Indices slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=62
+            out string return
+        put put_Indices slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=99
+            in string name=value
+    property font_uri
+        get get_FontUri slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=121
+            out class type=Windows.Foundation.Uri return
+        put put_FontUri slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=141
+            in class type=Windows.Foundation.Uri name=value
+    property font_rendering_em_size
+        get get_FontRenderingEmSize slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=186
+            out double return
+        put put_FontRenderingEmSize slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=2
+            in double name=value
+    property fill
+        get get_Fill slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=228
+            out class type=Windows.UI.Xaml.Media.Brush return
+        put put_Fill slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs shape=4 reverse=232
+            in class type=Windows.UI.Xaml.Media.Brush name=value
+    property is_color_font_enabled
+        get get_IsColorFontEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs2 shape=4 reverse=22
+            out boolean return
+        put put_IsColorFontEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs2 shape=4 reverse=43
+            in boolean name=value
+    property color_font_palette_index
+        get get_ColorFontPaletteIndex slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphs2 shape=4 reverse=62
+            out int32 return
+        put put_ColorFontPaletteIndex slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IGlyphs2 shape=4 reverse=99
+            in int32 name=value
+    property fill_property static
+        get get_FillProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=173 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_rendering_em_size_property static
+        get get_FontRenderingEmSizeProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_uri_property static
+        get get_FontUriProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property indices_property static
+        get get_IndicesProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property origin_x_property static
+        get get_OriginXProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property origin_y_property static
+        get get_OriginYProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property style_simulations_property static
+        get get_StyleSimulationsProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property unicode_string_property static
+        get get_UnicodeStringProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property color_font_palette_index_property static
+        get get_ColorFontPaletteIndexProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics2 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_color_font_enabled_property static
+        get get_IsColorFontEnabledProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IGlyphsStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Documents.Hyperlink activatable python_type
+    py Hyperlink
+    signature rc(Windows.UI.Xaml.Documents.Hyperlink;{0fe2363b-14e9-4152-9e58-5aea5b21f08d})
+    base Windows.UI.Xaml.Documents.Span
+    default Windows.UI.Xaml.Documents.IHyperlink
+    requires Windows.UI.Xaml.Documents.IHyperlink
+    requires Windows.UI.Xaml.Documents.IHyperlink2
+    requires Windows.UI.Xaml.Documents.IHyperlink3
+    requires Windows.UI.Xaml.Documents.IHyperlink4
+    requires Windows.UI.Xaml.Documents.IHyperlink5
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics2
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics5
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics4
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property navigate_uri
+        get get_NavigateUri slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+        put put_NavigateUri slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink shape=4 reverse=43
+            in class type=Windows.Foundation.Uri name=value
+    property underline_style
+        get get_UnderlineStyle slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink2 shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.Documents.UnderlineStyle return
+        put put_UnderlineStyle slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink2 shape=4 reverse=43
+            in enum32 type=Windows.UI.Xaml.Documents.UnderlineStyle name=value
+    property x_y_focus_up
+        get get_XYFocusUp slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=121
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusUp slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=141
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_right
+        get get_XYFocusRight slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=62
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusRight slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=99
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_left
+        get get_XYFocusLeft slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=22
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusLeft slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=43
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property x_y_focus_down
+        get get_XYFocusDown slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=162
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_XYFocusDown slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=173
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property element_sound_mode
+        get get_ElementSoundMode slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=186
+            out enum32 type=Windows.UI.Xaml.ElementSoundMode return
+        put put_ElementSoundMode slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink3 shape=4 reverse=194
+            in enum32 type=Windows.UI.Xaml.ElementSoundMode name=value
+    property x_y_focus_up_navigation_strategy
+        get get_XYFocusUpNavigationStrategy slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=43
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusUpNavigationStrategy slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=62
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_right_navigation_strategy
+        get get_XYFocusRightNavigationStrategy slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=173
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusRightNavigationStrategy slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=186
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_left_navigation_strategy
+        get get_XYFocusLeftNavigationStrategy slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=141
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusLeftNavigationStrategy slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=162
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property x_y_focus_down_navigation_strategy
+        get get_XYFocusDownNavigationStrategy slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=99
+            out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
+        put put_XYFocusDownNavigationStrategy slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=121
+            in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
+    property focus_state
+        get get_FocusState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=4 reverse=22
+            out enum32 type=Windows.UI.Xaml.FocusState return
+    property tab_index
+        get get_TabIndex slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink5 shape=4 reverse=62
+            out int32 return
+        put put_TabIndex slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink5 shape=4 reverse=99
+            in int32 name=value
+    property is_tab_stop
+        get get_IsTabStop slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink5 shape=4 reverse=22
+            out boolean return
+        put put_IsTabStop slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink5 shape=4 reverse=43
+            in boolean name=value
+    property navigate_uri_property static
+        get get_NavigateUriProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property underline_style_property static
+        get get_UnderlineStyleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property element_sound_mode_property static
+        get get_ElementSoundModeProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics3 shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_down_property static
+        get get_XYFocusDownProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics3 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_left_property static
+        get get_XYFocusLeftProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics3 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_right_property static
+        get get_XYFocusRightProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics3 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_up_property static
+        get get_XYFocusUpProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics3 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property focus_state_property static
+        get get_FocusStateProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics4 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_down_navigation_strategy_property static
+        get get_XYFocusDownNavigationStrategyProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics4 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_left_navigation_strategy_property static
+        get get_XYFocusLeftNavigationStrategyProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics4 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_right_navigation_strategy_property static
+        get get_XYFocusRightNavigationStrategyProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics4 shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property x_y_focus_up_navigation_strategy_property static
+        get get_XYFocusUpNavigationStrategyProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics4 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_tab_stop_property static
+        get get_IsTabStopProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics5 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property tab_index_property static
+        get get_TabIndexProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlinkStatics5 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    event click
+        add add_Click slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.Hyperlink,Windows.UI.Xaml.Documents.HyperlinkClickEventArgs> name=handler
+            out event_token return
+        remove remove_Click slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink shape=26 reverse=110
+            in event_token name=token
+    event got_focus
+        add add_GotFocus slot=15 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=51 reverse=196
+            in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
+            out event_token return
+        remove remove_GotFocus slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=26 reverse=397
+            in event_token name=token
+    event lost_focus
+        add add_LostFocus slot=17 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=51 reverse=211
+            in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
+            out event_token return
+        remove remove_LostFocus slot=18 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=26 reverse=398
+            in event_token name=token
+    method focus
+        method Focus slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.IHyperlink4 shape=51 reverse=224
+            in enum32 type=Windows.UI.Xaml.FocusState name=value
+            out boolean return
+
+class Windows.UI.Xaml.Documents.HyperlinkClickEventArgs python_type
+    py HyperlinkClickEventArgs
+    signature rc(Windows.UI.Xaml.Documents.HyperlinkClickEventArgs;{c755916b-7bdc-4be7-b373-9240a503d870})
+    base Windows.UI.Xaml.RoutedEventArgs
+    default Windows.UI.Xaml.Documents.IHyperlinkClickEventArgs
+    requires Windows.UI.Xaml.Documents.IHyperlinkClickEventArgs
+
+interface Windows.UI.Xaml.Documents.IBlock
+    guid 4bce0016-dd47-4350-8cb0-e171600ac896
+
+interface Windows.UI.Xaml.Documents.IBlock2
+    guid 5ec7bdf3-1333-4a92-8318-6caedc12ef89
+
+interface Windows.UI.Xaml.Documents.IBlockFactory
+    guid 07110532-4f59-4f3b-9ce5-25784c430507
+
+interface Windows.UI.Xaml.Documents.IBlockStatics
+    guid f86a8c34-8d18-4c53-aebd-91e610a5e010
+
+interface Windows.UI.Xaml.Documents.IBlockStatics2
+    guid af01a4d6-03e3-4cee-9b02-2bfc308b27a9
+
+interface Windows.UI.Xaml.Documents.IBold
+    guid ade73784-1b59-4da4-bb23-0f20e885b4bf
+
+interface Windows.UI.Xaml.Documents.IContactContentLinkProvider
+    guid f92fd29b-589b-4abd-9d37-35a1468f021e
+
+interface Windows.UI.Xaml.Documents.IContentLink
+    guid 6c60c3e1-528c-42f8-92be-34b8c68be304
+
+interface Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs
+    guid 546717c1-e8df-4593-9639-97595fdf8310
+
+interface Windows.UI.Xaml.Documents.IContentLinkProvider
+    guid 730587fd-bfdc-4cb3-904d-b65ab339bbf5
+
+interface Windows.UI.Xaml.Documents.IContentLinkProviderCollection
+    guid f5b84d0c-a9f4-4d1a-a13c-10def1843734
+
+interface Windows.UI.Xaml.Documents.IContentLinkProviderFactory
+    guid 57d60d3b-ef1a-4e8e-839b-d36ef3a503e0
+
+interface Windows.UI.Xaml.Documents.IContentLinkStatics
+    guid a34e3063-eb16-484e-a3df-522b9a832e6e
+
+interface Windows.UI.Xaml.Documents.IGlyphs
+    guid d079498b-f2b1-4281-99a2-e4d05932b2b5
+
+interface Windows.UI.Xaml.Documents.IGlyphs2
+    guid aa8bfe5c-3754-4bee-bbe1-4403ee9b86f0
+
+interface Windows.UI.Xaml.Documents.IGlyphsStatics
+    guid 225cf4c5-fdf1-43ed-958f-414e86f103f2
+
+interface Windows.UI.Xaml.Documents.IGlyphsStatics2
+    guid 10489aa7-1615-4a33-aa02-d7ef2aefc739
+
+interface Windows.UI.Xaml.Documents.IHyperlink
+    guid 0fe2363b-14e9-4152-9e58-5aea5b21f08d
+
+interface Windows.UI.Xaml.Documents.IHyperlink2
+    guid 4ce9da5f-7cff-4291-b78f-dfec72490576
+
+interface Windows.UI.Xaml.Documents.IHyperlink3
+    guid c3f157d9-e5d3-4fb7-8702-4f6d85dd9e0a
+
+interface Windows.UI.Xaml.Documents.IHyperlink4
+    guid f7d02959-82fb-400a-a407-5a4ee677988a
+
+interface Windows.UI.Xaml.Documents.IHyperlink5
+    guid 607dd7d2-0945-4328-91ee-94ccec2ea6c3
+
+interface Windows.UI.Xaml.Documents.IHyperlinkClickEventArgs
+    guid c755916b-7bdc-4be7-b373-9240a503d870
+
+interface Windows.UI.Xaml.Documents.IHyperlinkStatics
+    guid 3a44d3d4-fd41-41db-8c72-3b790acd9fd3
+
+interface Windows.UI.Xaml.Documents.IHyperlinkStatics2
+    guid 5028d8b7-7adf-43ee-a4ae-9c925f755716
+
+interface Windows.UI.Xaml.Documents.IHyperlinkStatics3
+    guid 3e15dea0-205e-4947-99a5-74e757e8e1b4
+
+interface Windows.UI.Xaml.Documents.IHyperlinkStatics4
+    guid 0476b378-8faa-4e24-b3b6-e9de4d3c708c
+
+interface Windows.UI.Xaml.Documents.IHyperlinkStatics5
+    guid 59308cea-1e49-4921-bd88-a2878d07e30e
+
+interface Windows.UI.Xaml.Documents.IInline
+    guid 0c92712d-1bc9-4931-8cb1-1aeadf1cc685
+
+interface Windows.UI.Xaml.Documents.IInlineFactory
+    guid 4058acd1-2f90-4b8f-99dd-4218ef5f03de
+
+interface Windows.UI.Xaml.Documents.IInlineUIContainer
+    guid 1416ce81-28ee-452e-b121-5fc4f60b86a6
+
+interface Windows.UI.Xaml.Documents.IItalic
+    guid 91f4619c-fcbb-4157-802c-76f63b5fb657
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> concrete
+    guid f7023b9a-e6d1-5e2d-8f41-b28c33323e04
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    argument Windows.UI.Xaml.Documents.Block
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+    guid 193a81bb-d85c-5cd3-a130-a1d08eaaf4be
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    argument Windows.UI.Xaml.Documents.ContentLinkProvider
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> concrete
+    guid e1d2b910-18c2-5906-8f8a-d62a63f93f18
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    argument Windows.UI.Xaml.Documents.Inline
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> concrete
+    guid 798d518e-a9f8-5fc7-8ccc-2a49069aba05
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    argument Windows.UI.Xaml.Documents.Block
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+    guid 63e9b404-2fc1-59b1-ab76-cdb9a4530c0d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    argument Windows.UI.Xaml.Documents.ContentLinkProvider
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> concrete
+    guid f80dc964-2542-5c6a-ba65-b04824b5ed75
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    argument Windows.UI.Xaml.Documents.Inline
+
+interface Windows.UI.Xaml.Documents.ILineBreak
+    guid 645589c4-f769-41ed-895b-8a1b2fb31562
+
+interface Windows.UI.Xaml.Documents.IParagraph
+    guid f83ef59a-fa61-4bef-ae33-0b0ad756a84d
+
+interface Windows.UI.Xaml.Documents.IParagraphStatics
+    guid ef08889a-535b-4e4c-8d84-283b33e98a37
+
+interface Windows.UI.Xaml.Documents.IPlaceContentLinkProvider
+    guid 10348a4c-2366-41be-90c8-3258b53b5483
+
+interface Windows.UI.Xaml.Documents.IRun
+    guid 59553c83-0e14-49bd-b84b-c526f3034349
+
+interface Windows.UI.Xaml.Documents.IRunStatics
+    guid e9303cef-65a0-4b8d-a7f7-8fdb287b46f3
+
+interface Windows.UI.Xaml.Documents.ISpan
+    guid 9839d4a9-02af-4811-aa15-6bef3acac97a
+
+interface Windows.UI.Xaml.Documents.ISpanFactory
+    guid 5b916f5c-cd2d-40c0-956a-386448322f79
+
+interface Windows.UI.Xaml.Documents.ITextElement
+    guid e83b0062-d776-4f92-baea-40e77d4791d5
+
+interface Windows.UI.Xaml.Documents.ITextElement2
+    guid a8076aa8-f892-49f6-8cd2-89addaf06d2d
+
+interface Windows.UI.Xaml.Documents.ITextElement3
+    guid d1db340f-1bc4-4ca8-bcf7-770bff9b27ab
+
+interface Windows.UI.Xaml.Documents.ITextElement4
+    guid b196e222-ca0e-48a9-83bc-36ce50566ac7
+
+interface Windows.UI.Xaml.Documents.ITextElement5
+    guid bd9552f3-540d-58bf-b6a8-07556aeda2ea
+
+interface Windows.UI.Xaml.Documents.ITextElementFactory
+    guid 35007285-cf47-4bfe-b1bc-39c93af4ae80
+
+interface Windows.UI.Xaml.Documents.ITextElementOverrides
+    guid 0ce21ee7-4f76-4dd9-bf91-163beccf84bc
+
+interface Windows.UI.Xaml.Documents.ITextElementStatics
+    guid 0a2f9b98-6c03-4470-a79b-3298a10482ce
+
+interface Windows.UI.Xaml.Documents.ITextElementStatics2
+    guid 164297b2-982b-49e1-8c03-ca43bc4d5b6d
+
+interface Windows.UI.Xaml.Documents.ITextElementStatics3
+    guid cfefcfaf-0fa1-45ec-9a4e-9b33664dc8b1
+
+interface Windows.UI.Xaml.Documents.ITextElementStatics4
+    guid fd8f641e-6b12-40d5-b6ef-d1bd12ac9066
+
+interface Windows.UI.Xaml.Documents.ITextHighlighter
+    guid ba6cb54b-7d75-4535-b30d-a81a00b637a4
+
+interface Windows.UI.Xaml.Documents.ITextHighlighterBase
+    guid d957601a-5f0d-4cdf-9758-97e0eb95c8fa
+
+interface Windows.UI.Xaml.Documents.ITextHighlighterBaseFactory
+    guid 9592b2d0-eadc-4c74-92c8-6e896e22506d
+
+interface Windows.UI.Xaml.Documents.ITextHighlighterFactory
+    guid 70125461-9a8f-4fa0-b235-8ffaa507bef2
+
+interface Windows.UI.Xaml.Documents.ITextHighlighterStatics
+    guid b3b009c4-3a7e-49cc-ab84-29c405488765
+
+interface Windows.UI.Xaml.Documents.ITextPointer
+    guid ac687aa1-6a41-43ff-851e-45348aa2cf7b
+
+interface Windows.UI.Xaml.Documents.ITypography
+    guid 866f65d5-ea97-42ab-9288-9c01aebc7a97
+
+interface Windows.UI.Xaml.Documents.ITypographyStatics
+    guid 67b9ec88-6c57-4ce0-95f1-d4b9ed632fb4
+
+interface Windows.UI.Xaml.Documents.IUnderline
+    guid a5fa8202-61c0-47d7-93ef-bc0b577c5f26
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> concrete
+    guid 3ee78a34-160e-50ff-b5aa-09f263a669f8
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    argument Windows.UI.Xaml.Documents.Block
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+    guid e69ef1b6-2eb1-5e9c-bc41-b94d396281e4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    argument Windows.UI.Xaml.Documents.ContentLinkProvider
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> concrete
+    guid 92ec9252-8ee3-55d6-84b4-30b635077778
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    argument Windows.UI.Xaml.Documents.Inline
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> concrete
+    guid ee9d4cda-0750-5c1f-93aa-59add8c1421b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.UI.Xaml.Documents.TextRange;i4;i4))
+    argument Windows.UI.Xaml.Documents.TextRange
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> concrete
+    guid 995f73c4-7cf8-5b59-a0fb-7e0c6477172e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    argument Windows.UI.Xaml.Documents.Block
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+    guid 6548aa5f-3fd4-5bea-9bd5-138b5bd899fe
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    argument Windows.UI.Xaml.Documents.ContentLinkProvider
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> concrete
+    guid c2dd082f-8cb4-51d6-b91b-7e2377780cee
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    argument Windows.UI.Xaml.Documents.Inline
+
+class Windows.UI.Xaml.Documents.Inline composable python_type
+    py Inline
+    signature rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685})
+    base Windows.UI.Xaml.Documents.TextElement
+    default Windows.UI.Xaml.Documents.IInline
+    requires Windows.UI.Xaml.Documents.IInline
+    composable Windows.UI.Xaml.Documents.IInlineFactory
+
+class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence mutable_sequence
+    py InlineCollection
+    signature rc(Windows.UI.Xaml.Documents.InlineCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685})))
+    default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline>
+    requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=24
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Inline return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Inline name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=144
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=162
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.Inline name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=124
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+
+class Windows.UI.Xaml.Documents.InlineUIContainer activatable python_type
+    py InlineUIContainer
+    signature rc(Windows.UI.Xaml.Documents.InlineUIContainer;{1416ce81-28ee-452e-b121-5fc4f60b86a6})
+    base Windows.UI.Xaml.Documents.Inline
+    default Windows.UI.Xaml.Documents.IInlineUIContainer
+    requires Windows.UI.Xaml.Documents.IInlineUIContainer
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property child
+        get get_Child slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IInlineUIContainer shape=4 reverse=22
+            out class type=Windows.UI.Xaml.UIElement return
+        put put_Child slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IInlineUIContainer shape=4 reverse=43
+            in class type=Windows.UI.Xaml.UIElement name=value
+
+class Windows.UI.Xaml.Documents.Italic activatable python_type
+    py Italic
+    signature rc(Windows.UI.Xaml.Documents.Italic;{91f4619c-fcbb-4157-802c-76f63b5fb657})
+    base Windows.UI.Xaml.Documents.Span
+    default Windows.UI.Xaml.Documents.IItalic
+    requires Windows.UI.Xaml.Documents.IItalic
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.UI.Xaml.Documents.LineBreak activatable python_type
+    py LineBreak
+    signature rc(Windows.UI.Xaml.Documents.LineBreak;{645589c4-f769-41ed-895b-8a1b2fb31562})
+    base Windows.UI.Xaml.Documents.Inline
+    default Windows.UI.Xaml.Documents.ILineBreak
+    requires Windows.UI.Xaml.Documents.ILineBreak
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+enum Windows.UI.Xaml.Documents.LogicalDirection python_type
+    py LogicalDirection
+    signature enum(Windows.UI.Xaml.Documents.LogicalDirection;i4)
+
+class Windows.UI.Xaml.Documents.Paragraph activatable python_type
+    py Paragraph
+    signature rc(Windows.UI.Xaml.Documents.Paragraph;{f83ef59a-fa61-4bef-ae33-0b0ad756a84d})
+    base Windows.UI.Xaml.Documents.Block
+    default Windows.UI.Xaml.Documents.IParagraph
+    requires Windows.UI.Xaml.Documents.IParagraph
+    factory Windows.UI.Xaml.Documents.IParagraphStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property text_indent
+        get get_TextIndent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IParagraph shape=4 reverse=43
+            out double return
+        put put_TextIndent slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IParagraph shape=2
+            in double name=value
+    property inlines
+        get get_Inlines slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IParagraph shape=4 reverse=22
+            out class type=Windows.UI.Xaml.Documents.InlineCollection return
+    property text_indent_property static
+        get get_TextIndentProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IParagraphStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Documents.PlaceContentLinkProvider activatable python_type
+    py PlaceContentLinkProvider
+    signature rc(Windows.UI.Xaml.Documents.PlaceContentLinkProvider;{10348a4c-2366-41be-90c8-3258b53b5483})
+    base Windows.UI.Xaml.Documents.ContentLinkProvider
+    default Windows.UI.Xaml.Documents.IPlaceContentLinkProvider
+    requires Windows.UI.Xaml.Documents.IPlaceContentLinkProvider
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+class Windows.UI.Xaml.Documents.Run activatable python_type
+    py Run
+    signature rc(Windows.UI.Xaml.Documents.Run;{59553c83-0e14-49bd-b84b-c526f3034349})
+    base Windows.UI.Xaml.Documents.Inline
+    default Windows.UI.Xaml.Documents.IRun
+    requires Windows.UI.Xaml.Documents.IRun
+    factory Windows.UI.Xaml.Documents.IRunStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property text
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IRun shape=4 reverse=22
+            out string return
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IRun shape=4 reverse=43
+            in string name=value
+    property flow_direction
+        get get_FlowDirection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IRun shape=4 reverse=62
+            out enum32 type=Windows.UI.Xaml.FlowDirection return
+        put put_FlowDirection slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.IRun shape=4 reverse=99
+            in enum32 type=Windows.UI.Xaml.FlowDirection name=value
+    property flow_direction_property static
+        get get_FlowDirectionProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IRunStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Documents.Span composable python_type
+    py Span
+    signature rc(Windows.UI.Xaml.Documents.Span;{9839d4a9-02af-4811-aa15-6bef3acac97a})
+    base Windows.UI.Xaml.Documents.Inline
+    default Windows.UI.Xaml.Documents.ISpan
+    requires Windows.UI.Xaml.Documents.ISpan
+    composable Windows.UI.Xaml.Documents.ISpanFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ISpanFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Documents.Span return
+    property inlines
+        get get_Inlines slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ISpan shape=4 reverse=22
+            out class type=Windows.UI.Xaml.Documents.InlineCollection return
+        put put_Inlines slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ISpan shape=4 reverse=43
+            in class type=Windows.UI.Xaml.Documents.InlineCollection name=value
+
+enum T parameterized
+
+class Windows.UI.Xaml.Documents.TextElement composable python_type
+    py TextElement
+    signature rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Documents.ITextElement
+    requires Windows.UI.Xaml.Documents.ITextElement
+    requires Windows.UI.Xaml.Documents.ITextElement2
+    requires Windows.UI.Xaml.Documents.ITextElement3
+    requires Windows.UI.Xaml.Documents.ITextElement4
+    requires Windows.UI.Xaml.Documents.ITextElement5
+    requires Windows.UI.Xaml.Documents.ITextElementOverrides
+    factory Windows.UI.Xaml.Documents.ITextElementStatics3
+    factory Windows.UI.Xaml.Documents.ITextElementStatics
+    factory Windows.UI.Xaml.Documents.ITextElementStatics4
+    factory Windows.UI.Xaml.Documents.ITextElementStatics2
+    composable Windows.UI.Xaml.Documents.ITextElementFactory
+    overridable Windows.UI.Xaml.Documents.ITextElementOverrides
+    property language
+        get get_Language slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=232
+            out string return
+        put put_Language slot=22 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=237
+            in string name=value
+    property foreground
+        get get_Foreground slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=223
+            out class type=Windows.UI.Xaml.Media.Brush return
+        put put_Foreground slot=20 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=228
+            in class type=Windows.UI.Xaml.Media.Brush name=value
+    property font_weight
+        get get_FontWeight slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=141
+            out struct type=Windows.UI.Text.FontWeight return
+        put put_FontWeight slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=31
+            in struct type=Windows.UI.Text.FontWeight name=value
+    property font_style
+        get get_FontStyle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=173
+            out enum32 type=Windows.UI.Text.FontStyle return
+        put put_FontStyle slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=186
+            in enum32 type=Windows.UI.Text.FontStyle name=value
+    property font_stretch
+        get get_FontStretch slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=194
+            out enum32 type=Windows.UI.Text.FontStretch return
+        put put_FontStretch slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=202
+            in enum32 type=Windows.UI.Text.FontStretch name=value
+    property font_size
+        get get_FontSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=43
+            out double return
+        put put_FontSize slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=2
+            in double name=value
+    property font_family
+        get get_FontFamily slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=99
+            out class type=Windows.UI.Xaml.Media.FontFamily return
+        put put_FontFamily slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=121
+            in class type=Windows.UI.Xaml.Media.FontFamily name=value
+    property character_spacing
+        get get_CharacterSpacing slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=210
+            out int32 return
+        put put_CharacterSpacing slot=18 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=218
+            in int32 name=value
+    property content_end
+        get get_ContentEnd slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=247
+            out class type=Windows.UI.Xaml.Documents.TextPointer return
+    property content_start
+        get get_ContentStart slot=23 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=242
+            out class type=Windows.UI.Xaml.Documents.TextPointer return
+    property element_end
+        get get_ElementEnd slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=255
+            out class type=Windows.UI.Xaml.Documents.TextPointer return
+    property element_start
+        get get_ElementStart slot=25 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=252
+            out class type=Windows.UI.Xaml.Documents.TextPointer return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=4 reverse=22
+            out string return
+    property is_text_scale_factor_enabled
+        get get_IsTextScaleFactorEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement2 shape=4 reverse=22
+            out boolean return
+        put put_IsTextScaleFactorEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement2 shape=4 reverse=43
+            in boolean name=value
+    property exit_display_mode_on_access_key_invoked
+        get get_ExitDisplayModeOnAccessKeyInvoked slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=121
+            out boolean return
+        put put_ExitDisplayModeOnAccessKeyInvoked slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=141
+            in boolean name=value
+    property allow_focus_on_interaction
+        get get_AllowFocusOnInteraction slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=22
+            out boolean return
+        put put_AllowFocusOnInteraction slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=43
+            in boolean name=value
+    property access_key
+        get get_AccessKey slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=62
+            out string return
+        put put_AccessKey slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement3 shape=4 reverse=99
+            in string name=value
+    property text_decorations
+        get get_TextDecorations slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=22
+            out enum_u32 type=Windows.UI.Text.TextDecorations return
+        put put_TextDecorations slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=43
+            in enum_u32 type=Windows.UI.Text.TextDecorations name=value
+    property key_tip_vertical_offset
+        get get_KeyTipVerticalOffset slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=202
+            out double return
+        put put_KeyTipVerticalOffset slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=2
+            in double name=value
+    property key_tip_placement_mode
+        get get_KeyTipPlacementMode slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=162
+            out enum32 type=Windows.UI.Xaml.Input.KeyTipPlacementMode return
+        put put_KeyTipPlacementMode slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=173
+            in enum32 type=Windows.UI.Xaml.Input.KeyTipPlacementMode name=value
+    property key_tip_horizontal_offset
+        get get_KeyTipHorizontalOffset slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=186
+            out double return
+        put put_KeyTipHorizontalOffset slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=2
+            in double name=value
+    property is_access_key_scope
+        get get_IsAccessKeyScope slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=62
+            out boolean return
+        put put_IsAccessKeyScope slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=99
+            in boolean name=value
+    property access_key_scope_owner
+        get get_AccessKeyScopeOwner slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=121
+            out class type=Windows.UI.Xaml.DependencyObject return
+        put put_AccessKeyScopeOwner slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=4 reverse=141
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    property xaml_root
+        get get_XamlRoot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement5 shape=4 reverse=22
+            out class type=Windows.UI.Xaml.XamlRoot return
+        put put_XamlRoot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement5 shape=4 reverse=43
+            in class type=Windows.UI.Xaml.XamlRoot name=value
+    property character_spacing_property static
+        get get_CharacterSpacingProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_family_property static
+        get get_FontFamilyProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_size_property static
+        get get_FontSizeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_stretch_property static
+        get get_FontStretchProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_style_property static
+        get get_FontStyleProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property font_weight_property static
+        get get_FontWeightProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property foreground_property static
+        get get_ForegroundProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property language_property static
+        get get_LanguageProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics shape=4 reverse=173 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_text_scale_factor_enabled_property static
+        get get_IsTextScaleFactorEnabledProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics2 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property access_key_property static
+        get get_AccessKeyProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics3 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property allow_focus_on_interaction_property static
+        get get_AllowFocusOnInteractionProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics3 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property exit_display_mode_on_access_key_invoked_property static
+        get get_ExitDisplayModeOnAccessKeyInvokedProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics3 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property access_key_scope_owner_property static
+        get get_AccessKeyScopeOwnerProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=62 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property is_access_key_scope_property static
+        get get_IsAccessKeyScopeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property key_tip_horizontal_offset_property static
+        get get_KeyTipHorizontalOffsetProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=121 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property key_tip_placement_mode_property static
+        get get_KeyTipPlacementModeProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property key_tip_vertical_offset_property static
+        get get_KeyTipVerticalOffsetProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=141 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property text_decorations_property static
+        get get_TextDecorationsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElementStatics4 shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    event access_key_display_dismissed
+        add add_AccessKeyDisplayDismissed slot=20 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=51 reverse=229
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs> name=handler
+            out event_token return
+        remove remove_AccessKeyDisplayDismissed slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=26 reverse=234
+            in event_token name=token
+    event access_key_display_requested
+        add add_AccessKeyDisplayRequested slot=18 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=51 reverse=219
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_AccessKeyDisplayRequested slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=26 reverse=226
+            in event_token name=token
+    event access_key_invoked
+        add add_AccessKeyInvoked slot=22 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=51 reverse=238
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs> name=handler
+            out event_token return
+        remove remove_AccessKeyInvoked slot=23 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElement4 shape=26 reverse=245
+            in event_token name=token
+    method find_name
+        method FindName slot=27 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextElement shape=51 reverse=260
+            in string name=name
+            out object return
+    method _on_disconnect_visual_children
+        method OnDisconnectVisualChildren slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextElementOverrides shape=0 reverse=16 overridable
+
+class Windows.UI.Xaml.Documents.TextHighlighter composable python_type
+    py TextHighlighter
+    signature rc(Windows.UI.Xaml.Documents.TextHighlighter;{ba6cb54b-7d75-4535-b30d-a81a00b637a4})
+    default Windows.UI.Xaml.Documents.ITextHighlighter
+    requires Windows.UI.Xaml.Documents.ITextHighlighter
+    factory Windows.UI.Xaml.Documents.ITextHighlighterStatics
+    composable Windows.UI.Xaml.Documents.ITextHighlighterFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighterFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Documents.TextHighlighter return
+    property foreground
+        get get_Foreground slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighter shape=4 reverse=43
+            out class type=Windows.UI.Xaml.Media.Brush return
+        put put_Foreground slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextHighlighter shape=4 reverse=62
+            in class type=Windows.UI.Xaml.Media.Brush name=value
+    property background
+        get get_Background slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighter shape=4 reverse=99
+            out class type=Windows.UI.Xaml.Media.Brush return
+        put put_Background slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Documents.ITextHighlighter shape=4 reverse=121
+            in class type=Windows.UI.Xaml.Media.Brush name=value
+    property ranges
+        get get_Ranges slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighter shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> return
+    property background_property static
+        get get_BackgroundProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighterStatics shape=4 reverse=43 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property foreground_property static
+        get get_ForegroundProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextHighlighterStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+
+class Windows.UI.Xaml.Documents.TextHighlighterBase composable python_type
+    py TextHighlighterBase
+    signature rc(Windows.UI.Xaml.Documents.TextHighlighterBase;{d957601a-5f0d-4cdf-9758-97e0eb95c8fa})
+    base Windows.UI.Xaml.DependencyObject
+    default Windows.UI.Xaml.Documents.ITextHighlighterBase
+    requires Windows.UI.Xaml.Documents.ITextHighlighterBase
+    composable Windows.UI.Xaml.Documents.ITextHighlighterBaseFactory
+
+class Windows.UI.Xaml.Documents.TextPointer python_type
+    py TextPointer
+    signature rc(Windows.UI.Xaml.Documents.TextPointer;{ac687aa1-6a41-43ff-851e-45348aa2cf7b})
+    default Windows.UI.Xaml.Documents.ITextPointer
+    requires Windows.UI.Xaml.Documents.ITextPointer
+    property logical_direction
+        get get_LogicalDirection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=4 reverse=62
+            out enum32 type=Windows.UI.Xaml.Documents.LogicalDirection return
+    property offset
+        get get_Offset slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=4 reverse=99
+            out int32 return
+    property parent
+        get get_Parent slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=4 reverse=22
+            out class type=Windows.UI.Xaml.DependencyObject return
+    property visual_parent
+        get get_VisualParent slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=4 reverse=43
+            out class type=Windows.UI.Xaml.FrameworkElement return
+    method get_character_rect
+        method GetCharacterRect slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=51 reverse=124
+            in enum32 type=Windows.UI.Xaml.Documents.LogicalDirection name=direction
+            out struct type=Windows.Foundation.Rect return
+    method get_position_at_offset
+        method GetPositionAtOffset slot=11 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Documents.ITextPointer shape=117 reverse=145
+            in int32 name=offset
+            in enum32 type=Windows.UI.Xaml.Documents.LogicalDirection name=direction
+            out class type=Windows.UI.Xaml.Documents.TextPointer return
+
+struct Windows.UI.Xaml.Documents.TextRange python_type
+    py TextRange
+    signature struct(Windows.UI.Xaml.Documents.TextRange;i4;i4)
+    field start_index StartIndex int32
+    field length Length int32
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.ContentLink,Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs> concrete
+    guid 51ba1af0-354e-5868-b10b-8748e55a6370
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.ContentLink;{6c60c3e1-528c-42f8-92be-34b8c68be304});rc(Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs;{546717c1-e8df-4593-9639-97595fdf8310}))
+    argument Windows.UI.Xaml.Documents.ContentLink
+    argument Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.Hyperlink,Windows.UI.Xaml.Documents.HyperlinkClickEventArgs> concrete
+    guid 5fead0d2-e657-5aef-a91b-7f52ead17fe3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.Hyperlink;{0fe2363b-14e9-4152-9e58-5aea5b21f08d});rc(Windows.UI.Xaml.Documents.HyperlinkClickEventArgs;{c755916b-7bdc-4be7-b373-9240a503d870}))
+    argument Windows.UI.Xaml.Documents.Hyperlink
+    argument Windows.UI.Xaml.Documents.HyperlinkClickEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs> concrete
+    guid a8c9544b-7078-5316-beb6-d9ec916ab88a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs;{8a610dc6-d72d-4ca8-9f66-556f35b513da}))
+    argument Windows.UI.Xaml.Documents.TextElement
+    argument Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs> concrete
+    guid 39ad7708-254e-560a-9e2e-73b1db31f935
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs;{0c079e55-13fe-4d03-a61d-e12f06567286}))
+    argument Windows.UI.Xaml.Documents.TextElement
+    argument Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs> concrete
+    guid a72c6b01-2e3c-57b5-9ec4-948f6c6d930a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs;{cfe9cd97-c718-4091-b7dd-adf1c072b1e1}))
+    argument Windows.UI.Xaml.Documents.TextElement
+    argument Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs
+
+class Windows.UI.Xaml.Documents.Typography python_type
+    py Typography
+    signature rc(Windows.UI.Xaml.Documents.Typography;{866f65d5-ea97-42ab-9288-9c01aebc7a97})
+    default Windows.UI.Xaml.Documents.ITypography
+    requires Windows.UI.Xaml.Documents.ITypography
+    factory Windows.UI.Xaml.Documents.ITypographyStatics
+    property annotation_alternates_property static
+        get get_AnnotationAlternatesProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property capital_spacing_property static
+        get get_CapitalSpacingProperty slot=105 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property capitals_property static
+        get get_CapitalsProperty slot=102 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property case_sensitive_forms_property static
+        get get_CaseSensitiveFormsProperty slot=111 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property contextual_alternates_property static
+        get get_ContextualAlternatesProperty slot=36 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=296 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property contextual_ligatures_property static
+        get get_ContextualLigaturesProperty slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=232 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property contextual_swashes_property static
+        get get_ContextualSwashesProperty slot=33 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=285 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property discretionary_ligatures_property static
+        get get_DiscretionaryLigaturesProperty slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=247 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property east_asian_expert_forms_property static
+        get get_EastAsianExpertFormsProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=99 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property east_asian_language_property static
+        get get_EastAsianLanguageProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=162 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property east_asian_widths_property static
+        get get_EastAsianWidthsProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=194 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property fraction_property static
+        get get_FractionProperty slot=117 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property historical_forms_property static
+        get get_HistoricalFormsProperty slot=114 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property historical_ligatures_property static
+        get get_HistoricalLigaturesProperty slot=27 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=259 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property kerning_property static
+        get get_KerningProperty slot=108 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property mathematical_greek_property static
+        get get_MathematicalGreekProperty slot=129 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property numeral_alignment_property static
+        get get_NumeralAlignmentProperty slot=123 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property numeral_style_property static
+        get get_NumeralStyleProperty slot=120 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property slashed_zero_property static
+        get get_SlashedZeroProperty slot=126 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property standard_ligatures_property static
+        get get_StandardLigaturesProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=218 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property standard_swashes_property static
+        get get_StandardSwashesProperty slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=270 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_alternates_property static
+        get get_StylisticAlternatesProperty slot=39 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=307 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set10_property static
+        get get_StylisticSet10Property slot=69 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=454 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set11_property static
+        get get_StylisticSet11Property slot=72 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set12_property static
+        get get_StylisticSet12Property slot=75 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set13_property static
+        get get_StylisticSet13Property slot=78 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=463 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set14_property static
+        get get_StylisticSet14Property slot=81 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=466 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set15_property static
+        get get_StylisticSet15Property slot=84 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set16_property static
+        get get_StylisticSet16Property slot=87 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=472 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set17_property static
+        get get_StylisticSet17Property slot=90 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set18_property static
+        get get_StylisticSet18Property slot=93 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set19_property static
+        get get_StylisticSet19Property slot=96 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set1_property static
+        get get_StylisticSet1Property slot=42 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=319 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set20_property static
+        get get_StylisticSet20Property slot=99 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set2_property static
+        get get_StylisticSet2Property slot=45 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=330 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set3_property static
+        get get_StylisticSet3Property slot=48 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=343 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set4_property static
+        get get_StylisticSet4Property slot=51 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=355 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set5_property static
+        get get_StylisticSet5Property slot=54 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=368 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set6_property static
+        get get_StylisticSet6Property slot=57 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=442 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set7_property static
+        get get_StylisticSet7Property slot=60 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=445 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set8_property static
+        get get_StylisticSet8Property slot=63 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=448 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property stylistic_set9_property static
+        get get_StylisticSet9Property slot=66 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 reverse=451 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    property variants_property static
+        get get_VariantsProperty slot=132 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=4 static
+            out class type=Windows.UI.Xaml.DependencyProperty return
+    method get_annotation_alternates static
+        method GetAnnotationAlternates slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=44 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_capital_spacing static
+        method GetCapitalSpacing slot=106 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_capitals static
+        method GetCapitals slot=103 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontCapitals return
+    method get_case_sensitive_forms static
+        method GetCaseSensitiveForms slot=112 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_contextual_alternates static
+        method GetContextualAlternates slot=37 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=300 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_contextual_ligatures static
+        method GetContextualLigatures slot=22 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=238 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_contextual_swashes static
+        method GetContextualSwashes slot=34 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=289 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_discretionary_ligatures static
+        method GetDiscretionaryLigatures slot=25 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=253 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_east_asian_expert_forms static
+        method GetEastAsianExpertForms slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=124 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_east_asian_language static
+        method GetEastAsianLanguage slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=174 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontEastAsianLanguage return
+    method get_east_asian_widths static
+        method GetEastAsianWidths slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=203 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontEastAsianWidths return
+    method get_fraction static
+        method GetFraction slot=118 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontFraction return
+    method get_historical_forms static
+        method GetHistoricalForms slot=115 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_historical_ligatures static
+        method GetHistoricalLigatures slot=28 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=264 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_kerning static
+        method GetKerning slot=109 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_mathematical_greek static
+        method GetMathematicalGreek slot=130 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_numeral_alignment static
+        method GetNumeralAlignment slot=124 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontNumeralAlignment return
+    method get_numeral_style static
+        method GetNumeralStyle slot=121 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontNumeralStyle return
+    method get_slashed_zero static
+        method GetSlashedZero slot=127 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_standard_ligatures static
+        method GetStandardLigatures slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=224 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_standard_swashes static
+        method GetStandardSwashes slot=31 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=274 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_stylistic_alternates static
+        method GetStylisticAlternates slot=40 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=313 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out int32 return
+    method get_stylistic_set1 static
+        method GetStylisticSet1 slot=43 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=323 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set10 static
+        method GetStylisticSet10 slot=70 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set11 static
+        method GetStylisticSet11 slot=73 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set12 static
+        method GetStylisticSet12 slot=76 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set13 static
+        method GetStylisticSet13 slot=79 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set14 static
+        method GetStylisticSet14 slot=82 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set15 static
+        method GetStylisticSet15 slot=85 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set16 static
+        method GetStylisticSet16 slot=88 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set17 static
+        method GetStylisticSet17 slot=91 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set18 static
+        method GetStylisticSet18 slot=94 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set19 static
+        method GetStylisticSet19 slot=97 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set2 static
+        method GetStylisticSet2 slot=46 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=335 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set20 static
+        method GetStylisticSet20 slot=100 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set3 static
+        method GetStylisticSet3 slot=49 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=348 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set4 static
+        method GetStylisticSet4 slot=52 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=360 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set5 static
+        method GetStylisticSet5 slot=55 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=371 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set6 static
+        method GetStylisticSet6 slot=58 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set7 static
+        method GetStylisticSet7 slot=61 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=381 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set8 static
+        method GetStylisticSet8 slot=64 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_stylistic_set9 static
+        method GetStylisticSet9 slot=67 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out boolean return
+    method get_variants static
+        method GetVariants slot=133 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            out enum32 type=Windows.UI.Xaml.FontVariants return
+    method set_annotation_alternates static
+        method SetAnnotationAlternates slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=65 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_capital_spacing static
+        method SetCapitalSpacing slot=107 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_capitals static
+        method SetCapitals slot=104 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontCapitals name=value
+    method set_case_sensitive_forms static
+        method SetCaseSensitiveForms slot=113 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_contextual_alternates static
+        method SetContextualAlternates slot=38 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=303 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_contextual_ligatures static
+        method SetContextualLigatures slot=23 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=243 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_contextual_swashes static
+        method SetContextualSwashes slot=35 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=293 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_discretionary_ligatures static
+        method SetDiscretionaryLigatures slot=26 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=256 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_east_asian_expert_forms static
+        method SetEastAsianExpertForms slot=11 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=144 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_east_asian_language static
+        method SetEastAsianLanguage slot=14 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=187 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontEastAsianLanguage name=value
+    method set_east_asian_widths static
+        method SetEastAsianWidths slot=17 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=211 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontEastAsianWidths name=value
+    method set_fraction static
+        method SetFraction slot=119 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontFraction name=value
+    method set_historical_forms static
+        method SetHistoricalForms slot=116 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_historical_ligatures static
+        method SetHistoricalLigatures slot=29 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=267 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_kerning static
+        method SetKerning slot=110 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_mathematical_greek static
+        method SetMathematicalGreek slot=131 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_numeral_alignment static
+        method SetNumeralAlignment slot=125 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontNumeralAlignment name=value
+    method set_numeral_style static
+        method SetNumeralStyle slot=122 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontNumeralStyle name=value
+    method set_slashed_zero static
+        method SetSlashedZero slot=128 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_standard_ligatures static
+        method SetStandardLigatures slot=20 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=229 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_standard_swashes static
+        method SetStandardSwashes slot=32 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=281 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_stylistic_alternates static
+        method SetStylisticAlternates slot=41 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=317 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in int32 name=value
+    method set_stylistic_set1 static
+        method SetStylisticSet1 slot=44 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=327 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set10 static
+        method SetStylisticSet10 slot=71 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set11 static
+        method SetStylisticSet11 slot=74 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set12 static
+        method SetStylisticSet12 slot=77 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set13 static
+        method SetStylisticSet13 slot=80 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set14 static
+        method SetStylisticSet14 slot=83 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set15 static
+        method SetStylisticSet15 slot=86 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set16 static
+        method SetStylisticSet16 slot=89 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set17 static
+        method SetStylisticSet17 slot=92 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=477 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set18 static
+        method SetStylisticSet18 slot=95 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set19 static
+        method SetStylisticSet19 slot=98 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set2 static
+        method SetStylisticSet2 slot=47 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=340 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set20 static
+        method SetStylisticSet20 slot=101 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set3 static
+        method SetStylisticSet3 slot=50 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=352 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set4 static
+        method SetStylisticSet4 slot=53 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=365 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set5 static
+        method SetStylisticSet5 slot=56 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=373 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set6 static
+        method SetStylisticSet6 slot=59 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 reverse=379 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set7 static
+        method SetStylisticSet7 slot=62 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set8 static
+        method SetStylisticSet8 slot=65 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_stylistic_set9 static
+        method SetStylisticSet9 slot=68 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in boolean name=value
+    method set_variants static
+        method SetVariants slot=134 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Documents.ITypographyStatics shape=51 static
+            in class type=Windows.UI.Xaml.DependencyObject name=element
+            in enum32 type=Windows.UI.Xaml.FontVariants name=value
+
+class Windows.UI.Xaml.Documents.Underline activatable python_type
+    py Underline
+    signature rc(Windows.UI.Xaml.Documents.Underline;{a5fa8202-61c0-47d7-93ef-bc0b577c5f26})
+    base Windows.UI.Xaml.Documents.Span
+    default Windows.UI.Xaml.Documents.IUnderline
+    requires Windows.UI.Xaml.Documents.IUnderline
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+enum Windows.UI.Xaml.Documents.UnderlineStyle python_type
+    py UnderlineStyle
+    signature enum(Windows.UI.Xaml.Documents.UnderlineStyle;i4)
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+enum Windows.UI.Core.CoreCursorType external
+    py winrt.windows.ui.core.CoreCursorType
+
+class Windows.UI.Text.ContentLinkInfo external
+    py winrt.windows.ui.text.ContentLinkInfo
+
+enum Windows.UI.Text.FontStretch external
+    py winrt.windows.ui.text.FontStretch
+
+enum Windows.UI.Text.FontStyle external
+    py winrt.windows.ui.text.FontStyle
+
+struct Windows.UI.Text.FontWeight external
+    py winrt.windows.ui.text.FontWeight
+
+enum Windows.UI.Text.TextDecorations external
+    py winrt.windows.ui.text.TextDecorations
+
+class Windows.UI.Xaml.DependencyObject external
+    py winrt.windows.ui.xaml.DependencyObject
+
+class Windows.UI.Xaml.DependencyProperty external
+    py winrt.windows.ui.xaml.DependencyProperty
+
+enum Windows.UI.Xaml.ElementSoundMode external
+    py winrt.windows.ui.xaml.ElementSoundMode
+
+enum Windows.UI.Xaml.FlowDirection external
+    py winrt.windows.ui.xaml.FlowDirection
+
+enum Windows.UI.Xaml.FocusState external
+    py winrt.windows.ui.xaml.FocusState
+
+enum Windows.UI.Xaml.FontCapitals external
+    py winrt.windows.ui.xaml.FontCapitals
+
+enum Windows.UI.Xaml.FontEastAsianLanguage external
+    py winrt.windows.ui.xaml.FontEastAsianLanguage
+
+enum Windows.UI.Xaml.FontEastAsianWidths external
+    py winrt.windows.ui.xaml.FontEastAsianWidths
+
+enum Windows.UI.Xaml.FontFraction external
+    py winrt.windows.ui.xaml.FontFraction
+
+enum Windows.UI.Xaml.FontNumeralAlignment external
+    py winrt.windows.ui.xaml.FontNumeralAlignment
+
+enum Windows.UI.Xaml.FontNumeralStyle external
+    py winrt.windows.ui.xaml.FontNumeralStyle
+
+enum Windows.UI.Xaml.FontVariants external
+    py winrt.windows.ui.xaml.FontVariants
+
+class Windows.UI.Xaml.FrameworkElement external
+    py winrt.windows.ui.xaml.FrameworkElement
+
+enum Windows.UI.Xaml.LineStackingStrategy external
+    py winrt.windows.ui.xaml.LineStackingStrategy
+
+class Windows.UI.Xaml.RoutedEventArgs external
+    py winrt.windows.ui.xaml.RoutedEventArgs
+
+delegate Windows.UI.Xaml.RoutedEventHandler external
+    py winrt.windows.ui.xaml.RoutedEventHandler
+    guid a856e674-b0b6-4bc3-bba8-1ba06e40d4b5
+
+enum Windows.UI.Xaml.TextAlignment external
+    py winrt.windows.ui.xaml.TextAlignment
+
+struct Windows.UI.Xaml.Thickness external
+    py winrt.windows.ui.xaml.Thickness
+
+class Windows.UI.Xaml.UIElement external
+    py winrt.windows.ui.xaml.UIElement
+
+class Windows.UI.Xaml.XamlRoot external
+    py winrt.windows.ui.xaml.XamlRoot
+
+class Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs external
+    py winrt.windows.ui.xaml.input.AccessKeyDisplayDismissedEventArgs
+
+class Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs external
+    py winrt.windows.ui.xaml.input.AccessKeyDisplayRequestedEventArgs
+
+class Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs external
+    py winrt.windows.ui.xaml.input.AccessKeyInvokedEventArgs
+
+enum Windows.UI.Xaml.Input.KeyTipPlacementMode external
+    py winrt.windows.ui.xaml.input.KeyTipPlacementMode
+
+enum Windows.UI.Xaml.Input.XYFocusNavigationStrategy external
+    py winrt.windows.ui.xaml.input.XYFocusNavigationStrategy
+
+class Windows.UI.Xaml.Media.Brush external
+    py winrt.windows.ui.xaml.media.Brush
+
+class Windows.UI.Xaml.Media.FontFamily external
+    py winrt.windows.ui.xaml.media.FontFamily
+
+enum Windows.UI.Xaml.Media.StyleSimulations external
+    py winrt.windows.ui.xaml.media.StyleSimulations

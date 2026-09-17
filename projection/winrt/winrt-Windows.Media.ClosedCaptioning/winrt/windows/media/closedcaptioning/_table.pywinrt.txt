@@ -1,0 +1,87 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Media.ClosedCaptioning
+
+enum Windows.Media.ClosedCaptioning.ClosedCaptionColor python_type
+    py ClosedCaptionColor
+    signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionColor;i4)
+
+enum Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect python_type
+    py ClosedCaptionEdgeEffect
+    signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect;i4)
+
+enum Windows.Media.ClosedCaptioning.ClosedCaptionOpacity python_type
+    py ClosedCaptionOpacity
+    signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionOpacity;i4)
+
+class Windows.Media.ClosedCaptioning.ClosedCaptionProperties static python_type
+    py ClosedCaptionProperties
+    factory Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics
+    factory Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
+    property background_color static
+        get get_BackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=162 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property background_opacity static
+        get get_BackgroundOpacity slot=14 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=186 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    property computed_background_color static
+        get get_ComputedBackgroundColor slot=13 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=173 static
+            out struct type=Windows.UI.Color return
+    property computed_font_color static
+        get get_ComputedFontColor slot=7 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=43 static
+            out struct type=Windows.UI.Color return
+    property computed_region_color static
+        get get_ComputedRegionColor slot=16 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=202 static
+            out struct type=Windows.UI.Color return
+    property font_color static
+        get get_FontColor slot=6 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=22 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property font_effect static
+        get get_FontEffect slot=11 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=141 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect return
+    property font_opacity static
+        get get_FontOpacity slot=8 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=62 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    property font_size static
+        get get_FontSize slot=9 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=99 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionSize return
+    property font_style static
+        get get_FontStyle slot=10 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=121 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionStyle return
+    property region_color static
+        get get_RegionColor slot=15 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=194 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property region_opacity static
+        get get_RegionOpacity slot=17 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics shape=4 reverse=210 static
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    event properties_changed static
+        add add_PropertiesChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 shape=51 reverse=24 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token return
+        remove remove_PropertiesChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 shape=26 reverse=53 static
+            in event_token name=token
+
+enum Windows.Media.ClosedCaptioning.ClosedCaptionSize python_type
+    py ClosedCaptionSize
+    signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionSize;i4)
+
+enum Windows.Media.ClosedCaptioning.ClosedCaptionStyle python_type
+    py ClosedCaptionStyle
+    signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionStyle;i4)
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    argument System.Object
+
+interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics
+    guid 10aa1f84-cc30-4141-b503-5272289e0c20
+
+interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
+    guid 9de26870-37de-4197-8845-9a48dc5ac317
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

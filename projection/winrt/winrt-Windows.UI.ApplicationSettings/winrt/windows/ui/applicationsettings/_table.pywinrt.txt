@@ -1,0 +1,369 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.ApplicationSettings
+
+class Windows.UI.ApplicationSettings.AccountsSettingsPane python_type
+    py AccountsSettingsPane
+    signature rc(Windows.UI.ApplicationSettings.AccountsSettingsPane;{81ea942c-4f09-4406-a538-838d9b14b7e6})
+    default Windows.UI.ApplicationSettings.IAccountsSettingsPane
+    requires Windows.UI.ApplicationSettings.IAccountsSettingsPane
+    factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics
+    factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3
+    factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2
+    event account_commands_requested
+        add add_AccountCommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_AccountCommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=26 reverse=53
+            in event_token name=cookie
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=4 reverse=22 static
+            out class type=Windows.UI.ApplicationSettings.AccountsSettingsPane return
+    method show static
+        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=0 reverse=37 static
+    method show_add_account_async static
+        method ShowAddAccountAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 reverse=43 static
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_add_account_for_user_async static
+        method ShowAddAccountForUserAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 reverse=44 static
+            in class type=Windows.System.User name=user
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_manage_accounts_async static
+        method ShowManageAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 reverse=22 static
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show_manage_accounts_for_user_async static
+        method ShowManageAccountsForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 reverse=24 static
+            in class type=Windows.System.User name=user
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs python_type
+    py AccountsSettingsPaneCommandsRequestedEventArgs
+    signature rc(Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs;{3b68c099-db19-45d0-9abf-95d3773c9330})
+    default Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs
+    requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs
+    requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2
+    property header_text
+        get get_HeaderText slot=10 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=121
+            out string return
+        put put_HeaderText slot=11 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=141
+            in string name=value
+    property commands
+        get get_Commands slot=9 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> return
+    property credential_commands
+        get get_CredentialCommands slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> return
+    property web_account_commands
+        get get_WebAccountCommands slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> return
+    property web_account_provider_commands
+        get get_WebAccountProviderCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2 shape=4 reverse=22
+            out class type=Windows.System.User return
+    method get_deferral
+        method GetDeferral slot=12 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=162
+            out class type=Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral return
+
+class Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral python_type
+    py AccountsSettingsPaneEventDeferral
+    signature rc(Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral;{cbf25d3f-e5ba-40ef-93da-65e096e5fb04})
+    default Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral
+    requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral
+    method complete
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral shape=0 reverse=16
+
+class Windows.UI.ApplicationSettings.CredentialCommand python_type
+    py CredentialCommand
+    signature rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2})
+    default Windows.UI.ApplicationSettings.ICredentialCommand
+    requires Windows.UI.ApplicationSettings.ICredentialCommand
+    factory Windows.UI.ApplicationSettings.ICredentialCommandFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=51 reverse=24
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            out class type=Windows.UI.ApplicationSettings.CredentialCommand return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=117 reverse=45
+            in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
+            in delegate type=Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler name=deleted
+            out class type=Windows.UI.ApplicationSettings.CredentialCommand return
+    property credential_deleted
+        get get_CredentialDeleted slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4 reverse=43
+            out delegate type=Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler return
+    property password_credential
+        get get_PasswordCredential slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4 reverse=22
+            out class type=Windows.Security.Credentials.PasswordCredential return
+
+delegate Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler python_type
+    py CredentialCommandCredentialDeletedHandler
+    guid 61c0e185-0977-4678-b4e2-98727afbeed9
+    signature delegate({61c0e185-0977-4678-b4e2-98727afbeed9})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=command
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPane
+    guid 81ea942c-4f09-4406-a538-838d9b14b7e6
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs
+    guid 3b68c099-db19-45d0-9abf-95d3773c9330
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2
+    guid 362f7bad-4e37-4967-8c40-e78ee7a1e5bb
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral
+    guid cbf25d3f-e5ba-40ef-93da-65e096e5fb04
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics
+    guid 561f8b60-b0ec-4150-a8dc-208ee44b068a
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2
+    guid d21df7c2-ce0d-484f-b8e8-e823c215765e
+
+interface Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3
+    guid 08410458-a2ba-4c6f-b4ac-48f514331216
+
+interface Windows.UI.ApplicationSettings.ICredentialCommand
+    guid a5f665e6-6143-4a7a-a971-b017ba978ce2
+
+interface Windows.UI.ApplicationSettings.ICredentialCommandFactory
+    guid 27e88c17-bc3e-4b80-9495-4ed720e48a91
+
+interface Windows.UI.ApplicationSettings.ISettingsCommandFactory
+    guid 68e15b33-1c83-433a-aa5a-ceeea5bd4764
+
+interface Windows.UI.ApplicationSettings.ISettingsCommandStatics
+    guid 749ae954-2f69-4b17-8aba-d05ce5778e46
+
+interface Windows.UI.ApplicationSettings.ISettingsPane
+    guid b1cd0932-4570-4c69-8d38-89446561ace0
+
+interface Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest
+    guid 44df23ae-5d6e-4068-a168-f47643182114
+
+interface Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
+    guid 205f5d24-1b48-4629-a6ca-2fdfedafb75d
+
+interface Windows.UI.ApplicationSettings.ISettingsPaneStatics
+    guid 1c6a52c5-ff19-471b-ba6b-f8f35694ad9a
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> concrete
+    guid b6af1cb5-f60e-5b08-b312-2eb51135cfc6
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2}))
+    argument Windows.UI.ApplicationSettings.CredentialCommand
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> concrete
+    guid 10bd9cdd-3767-5e96-9022-f00f9cbd6241
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}))
+    argument Windows.UI.ApplicationSettings.SettingsCommand
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> concrete
+    guid 64e864c8-7fef-5df5-a624-50b577f48554
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541}))
+    argument Windows.UI.ApplicationSettings.WebAccountCommand
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete
+    guid d376abf3-f0c1-5233-9f42-de531884963e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501}))
+    argument Windows.UI.ApplicationSettings.WebAccountProviderCommand
+
+interface Windows.UI.ApplicationSettings.IWebAccountCommand
+    guid caa39398-9cfa-4246-b0c4-a913a3896541
+
+interface Windows.UI.ApplicationSettings.IWebAccountCommandFactory
+    guid bfa6cdff-2f2d-42f5-81de-1d56bafc496d
+
+interface Windows.UI.ApplicationSettings.IWebAccountInvokedArgs
+    guid e7abcc40-a1d8-4c5d-9a7f-1d34b2f90ad2
+
+interface Windows.UI.ApplicationSettings.IWebAccountProviderCommand
+    guid d69bdd9a-a0a6-4e9b-88dc-c71e757a3501
+
+interface Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory
+    guid d5658a1b-b176-4776-8469-a9d3ff0b3f59
+
+class Windows.UI.ApplicationSettings.SettingsCommand python_type
+    py SettingsCommand
+    signature rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    default Windows.UI.Popups.IUICommand
+    requires Windows.UI.Popups.IUICommand
+    factory Windows.UI.ApplicationSettings.ISettingsCommandFactory
+    factory Windows.UI.ApplicationSettings.ISettingsCommandStatics
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandFactory shape=195 reverse=26
+            in object name=settingsCommandId
+            in string name=label
+            in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=handler
+            out class type=Windows.UI.ApplicationSettings.SettingsCommand return
+    property label
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=22
+            out string return
+        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=43
+            in string name=value
+    property invoked
+        get get_Invoked slot=8 inputs=0 outputs=1 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=62
+            out delegate type=Windows.UI.Popups.UICommandInvokedHandler return
+        put put_Invoked slot=9 inputs=1 outputs=0 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=99
+            in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=value
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=121
+            out object return
+        put put_Id slot=11 inputs=1 outputs=0 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=141
+            in object name=value
+    property accounts_command static
+        get get_AccountsCommand slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandStatics shape=4 reverse=22 static
+            out class type=Windows.UI.ApplicationSettings.SettingsCommand return
+
+enum Windows.UI.ApplicationSettings.SettingsEdgeLocation python_type
+    py SettingsEdgeLocation
+    signature enum(Windows.UI.ApplicationSettings.SettingsEdgeLocation;i4)
+
+class Windows.UI.ApplicationSettings.SettingsPane python_type
+    py SettingsPane
+    signature rc(Windows.UI.ApplicationSettings.SettingsPane;{b1cd0932-4570-4c69-8d38-89446561ace0})
+    default Windows.UI.ApplicationSettings.ISettingsPane
+    requires Windows.UI.ApplicationSettings.ISettingsPane
+    factory Windows.UI.ApplicationSettings.ISettingsPaneStatics
+    property edge static
+        get get_Edge slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 reverse=62 static deprecated
+            out enum32 type=Windows.UI.ApplicationSettings.SettingsEdgeLocation return
+    event commands_requested
+        add add_CommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=51 reverse=24 deprecated
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_CommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=26 reverse=53 deprecated
+            in event_token name=cookie
+    method get_for_current_view static deprecated
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 reverse=22 static deprecated
+            out class type=Windows.UI.ApplicationSettings.SettingsPane return
+    method show static deprecated
+        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=0 reverse=37 static deprecated
+
+class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest python_type
+    py SettingsPaneCommandsRequest
+    signature rc(Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest;{44df23ae-5d6e-4068-a168-f47643182114})
+    default Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest
+    requires Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest
+    property application_commands
+        get get_ApplicationCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest shape=4 reverse=22 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> return
+
+class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs python_type
+    py SettingsPaneCommandsRequestedEventArgs
+    signature rc(Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs;{205f5d24-1b48-4629-a6ca-2fdfedafb75d})
+    default Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
+    requires Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs shape=4 reverse=22 deprecated
+            out class type=Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest return
+
+enum Windows.UI.ApplicationSettings.SupportedWebAccountActions python_type
+    py SupportedWebAccountActions
+    signature enum(Windows.UI.ApplicationSettings.SupportedWebAccountActions;u4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> concrete
+    guid 69b8847e-7d72-5a15-bc1c-4ca39c93b162
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.ApplicationSettings.AccountsSettingsPane;{81ea942c-4f09-4406-a538-838d9b14b7e6});rc(Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs;{3b68c099-db19-45d0-9abf-95d3773c9330}))
+    argument Windows.UI.ApplicationSettings.AccountsSettingsPane
+    argument Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs> concrete
+    guid f39a56a2-7db1-5c48-9e13-7dc485a4a99e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.ApplicationSettings.SettingsPane;{b1cd0932-4570-4c69-8d38-89446561ace0});rc(Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs;{205f5d24-1b48-4629-a6ca-2fdfedafb75d}))
+    argument Windows.UI.ApplicationSettings.SettingsPane
+    argument Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs
+
+enum Windows.UI.ApplicationSettings.WebAccountAction python_type
+    py WebAccountAction
+    signature enum(Windows.UI.ApplicationSettings.WebAccountAction;i4)
+
+class Windows.UI.ApplicationSettings.WebAccountCommand python_type
+    py WebAccountCommand
+    signature rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541})
+    default Windows.UI.ApplicationSettings.IWebAccountCommand
+    requires Windows.UI.ApplicationSettings.IWebAccountCommand
+    factory Windows.UI.ApplicationSettings.IWebAccountCommandFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommandFactory shape=195 reverse=26
+            in class type=Windows.Security.Credentials.WebAccount name=webAccount
+            in delegate type=Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler name=invoked
+            in enum_u32 type=Windows.UI.ApplicationSettings.SupportedWebAccountActions name=actions
+            out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
+    property actions
+        get get_Actions slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=62
+            out enum_u32 type=Windows.UI.ApplicationSettings.SupportedWebAccountActions return
+    property invoked
+        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=43
+            out delegate type=Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler return
+    property web_account
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccount return
+
+delegate Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler python_type
+    py WebAccountCommandInvokedHandler
+    guid 1ee6e459-1705-4a9a-b599-a0c3d6921973
+    signature delegate({1ee6e459-1705-4a9a-b599-a0c3d6921973})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=command
+            in class type=Windows.UI.ApplicationSettings.WebAccountInvokedArgs name=args
+
+class Windows.UI.ApplicationSettings.WebAccountInvokedArgs python_type
+    py WebAccountInvokedArgs
+    signature rc(Windows.UI.ApplicationSettings.WebAccountInvokedArgs;{e7abcc40-a1d8-4c5d-9a7f-1d34b2f90ad2})
+    default Windows.UI.ApplicationSettings.IWebAccountInvokedArgs
+    requires Windows.UI.ApplicationSettings.IWebAccountInvokedArgs
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountInvokedArgs shape=4 reverse=22
+            out enum32 type=Windows.UI.ApplicationSettings.WebAccountAction return
+
+class Windows.UI.ApplicationSettings.WebAccountProviderCommand python_type
+    py WebAccountProviderCommand
+    signature rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501})
+    default Windows.UI.ApplicationSettings.IWebAccountProviderCommand
+    requires Windows.UI.ApplicationSettings.IWebAccountProviderCommand
+    factory Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory shape=117 reverse=25
+            in class type=Windows.Security.Credentials.WebAccountProvider name=webAccountProvider
+            in delegate type=Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler name=invoked
+            out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
+    property invoked
+        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4 reverse=43
+            out delegate type=Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler return
+    property web_account_provider
+        get get_WebAccountProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4 reverse=22
+            out class type=Windows.Security.Credentials.WebAccountProvider return
+
+delegate Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler python_type
+    py WebAccountProviderCommandInvokedHandler
+    guid b7de5527-4c8f-42dd-84da-5ec493abdb9a
+    signature delegate({b7de5527-4c8f-42dd-84da-5ec493abdb9a})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=command
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+class Windows.Security.Credentials.WebAccount external
+    py winrt.windows.security.credentials.WebAccount
+
+class Windows.Security.Credentials.WebAccountProvider external
+    py winrt.windows.security.credentials.WebAccountProvider
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+interface Windows.UI.Popups.IUICommand external
+    py winrt.windows.ui.popups._IUICommand
+    guid 4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f
+
+delegate Windows.UI.Popups.UICommandInvokedHandler external
+    py winrt.windows.ui.popups.UICommandInvokedHandler
+    guid daf77a4f-c27a-4298-9ac6-2922c45e7da6

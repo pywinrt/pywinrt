@@ -1,0 +1,36 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Background
+
+class Windows.Devices.Background.DeviceServicingDetails python_type
+    py DeviceServicingDetails
+    signature rc(Windows.Devices.Background.DeviceServicingDetails;{4aabee29-2344-4ac4-8527-4a8ef6905645})
+    default Windows.Devices.Background.IDeviceServicingDetails
+    requires Windows.Devices.Background.IDeviceServicingDetails
+    property arguments
+        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=43
+            out string return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=22
+            out string return
+    property expected_duration
+        get get_ExpectedDuration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=62
+            out timespan return
+
+class Windows.Devices.Background.DeviceUseDetails python_type
+    py DeviceUseDetails
+    signature rc(Windows.Devices.Background.DeviceUseDetails;{7d565141-557e-4154-b994-e4f7a11fb323})
+    default Windows.Devices.Background.IDeviceUseDetails
+    requires Windows.Devices.Background.IDeviceUseDetails
+    property arguments
+        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4 reverse=43
+            out string return
+    property device_id
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4 reverse=22
+            out string return
+
+interface Windows.Devices.Background.IDeviceServicingDetails
+    guid 4aabee29-2344-4ac4-8527-4a8ef6905645
+
+interface Windows.Devices.Background.IDeviceUseDetails
+    guid 7d565141-557e-4154-b994-e4f7a11fb323

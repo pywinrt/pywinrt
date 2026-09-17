@@ -1,0 +1,343 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.Shapes
+
+class Microsoft.UI.Xaml.Shapes.Ellipse activatable python_type
+    py Ellipse
+    signature rc(Microsoft.UI.Xaml.Shapes.Ellipse;{805c39aa-fa8a-5e0b-9847-4ab81b42a3df})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.IEllipse
+    requires Microsoft.UI.Xaml.Shapes.IEllipse
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
+interface Microsoft.UI.Xaml.Shapes.IEllipse
+    guid 805c39aa-fa8a-5e0b-9847-4ab81b42a3df
+
+interface Microsoft.UI.Xaml.Shapes.ILine
+    guid 507b3858-af7e-559b-a87e-4cc6a5d8ba96
+
+interface Microsoft.UI.Xaml.Shapes.ILineStatics
+    guid a425bf93-f1f3-5dcb-997e-b6a26f7ae8c0
+
+interface Microsoft.UI.Xaml.Shapes.IPath
+    guid 757d1cd8-0ec0-55c5-b400-66657e493e78
+
+interface Microsoft.UI.Xaml.Shapes.IPathFactory
+    guid 5e82e4c9-7502-5b1f-b940-c3346a71362a
+
+interface Microsoft.UI.Xaml.Shapes.IPathStatics
+    guid 2146d36f-721c-5b54-af7d-60f3adc4fbca
+
+interface Microsoft.UI.Xaml.Shapes.IPolygon
+    guid fa126347-d1d4-54dd-b1a4-c35019397944
+
+interface Microsoft.UI.Xaml.Shapes.IPolygonStatics
+    guid 85ddbada-9e37-5971-a9aa-dce31f9cf67a
+
+interface Microsoft.UI.Xaml.Shapes.IPolyline
+    guid c7f0bec6-184c-5d96-8102-04dd211e100c
+
+interface Microsoft.UI.Xaml.Shapes.IPolylineStatics
+    guid 48840fe7-d735-5080-9c6d-2862665cdda0
+
+interface Microsoft.UI.Xaml.Shapes.IRectangle
+    guid bf7d30b9-152c-556e-9f10-d0b7eba4e52f
+
+interface Microsoft.UI.Xaml.Shapes.IRectangleStatics
+    guid 3cc3cc79-c332-5ad0-8743-1f1b1e670a86
+
+interface Microsoft.UI.Xaml.Shapes.IShape
+    guid 9941aad3-6af2-5ba2-9085-8506d5f2485e
+
+interface Microsoft.UI.Xaml.Shapes.IShapeFactory
+    guid 4fecafaf-8265-5252-ba5c-f43639f974a5
+
+interface Microsoft.UI.Xaml.Shapes.IShapeStatics
+    guid ea407c43-8a09-587a-958a-4dd17d217ce1
+
+class Microsoft.UI.Xaml.Shapes.Line activatable python_type
+    py Line
+    signature rc(Microsoft.UI.Xaml.Shapes.Line;{507b3858-af7e-559b-a87e-4cc6a5d8ba96})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.ILine
+    requires Microsoft.UI.Xaml.Shapes.ILine
+    factory Microsoft.UI.Xaml.Shapes.ILineStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property y2
+        get get_Y2 slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=4 reverse=162
+            out double return
+        put put_Y2 slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=2 reverse=171
+            in double name=value
+    property y1
+        get get_Y1 slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=4 reverse=62
+            out double return
+        put put_Y1 slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=2
+            in double name=value
+    property x2
+        get get_X2 slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=4 reverse=121
+            out double return
+        put put_X2 slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=2 reverse=138
+            in double name=value
+    property x1
+        get get_X1 slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=4 reverse=22
+            out double return
+        put put_X1 slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.ILine shape=2 reverse=38
+            in double name=value
+    property x1_property static
+        get get_X1Property slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILineStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property x2_property static
+        get get_X2Property slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILineStatics shape=4 reverse=62 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property y1_property static
+        get get_Y1Property slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILineStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property y2_property static
+        get get_Y2Property slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.ILineStatics shape=4 reverse=99 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Shapes.Path composable python_type
+    py Path
+    signature rc(Microsoft.UI.Xaml.Shapes.Path;{757d1cd8-0ec0-55c5-b400-66657e493e78})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.IPath
+    requires Microsoft.UI.Xaml.Shapes.IPath
+    factory Microsoft.UI.Xaml.Shapes.IPathStatics
+    composable Microsoft.UI.Xaml.Shapes.IPathFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPathFactory shape=117 reverse=25
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Shapes.Path return
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPath shape=4 reverse=22
+            out class type=Microsoft.UI.Xaml.Media.Geometry return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IPath shape=4 reverse=43
+            in class type=Microsoft.UI.Xaml.Media.Geometry name=value
+    property data_property static
+        get get_DataProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPathStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Shapes.Polygon activatable python_type
+    py Polygon
+    signature rc(Microsoft.UI.Xaml.Shapes.Polygon;{fa126347-d1d4-54dd-b1a4-c35019397944})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.IPolygon
+    requires Microsoft.UI.Xaml.Shapes.IPolygon
+    factory Microsoft.UI.Xaml.Shapes.IPolygonStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property points
+        get get_Points slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolygon shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.PointCollection return
+        put put_Points slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IPolygon shape=4 reverse=99
+            in class type=Microsoft.UI.Xaml.Media.PointCollection name=value
+    property fill_rule
+        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolygon shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Media.FillRule return
+        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IPolygon shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Xaml.Media.FillRule name=value
+    property fill_rule_property static
+        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolygonStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property points_property static
+        get get_PointsProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolygonStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Shapes.Polyline activatable python_type
+    py Polyline
+    signature rc(Microsoft.UI.Xaml.Shapes.Polyline;{c7f0bec6-184c-5d96-8102-04dd211e100c})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.IPolyline
+    requires Microsoft.UI.Xaml.Shapes.IPolyline
+    factory Microsoft.UI.Xaml.Shapes.IPolylineStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property points
+        get get_Points slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolyline shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.PointCollection return
+        put put_Points slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IPolyline shape=4 reverse=99
+            in class type=Microsoft.UI.Xaml.Media.PointCollection name=value
+    property fill_rule
+        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolyline shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Media.FillRule return
+        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IPolyline shape=4 reverse=43
+            in enum32 type=Microsoft.UI.Xaml.Media.FillRule name=value
+    property fill_rule_property static
+        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolylineStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property points_property static
+        get get_PointsProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IPolylineStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Shapes.Rectangle activatable python_type
+    py Rectangle
+    signature rc(Microsoft.UI.Xaml.Shapes.Rectangle;{bf7d30b9-152c-556e-9f10-d0b7eba4e52f})
+    base Microsoft.UI.Xaml.Shapes.Shape
+    default Microsoft.UI.Xaml.Shapes.IRectangle
+    requires Microsoft.UI.Xaml.Shapes.IRectangle
+    factory Microsoft.UI.Xaml.Shapes.IRectangleStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property radius_y
+        get get_RadiusY slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IRectangle shape=4 reverse=62
+            out double return
+        put put_RadiusY slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IRectangle shape=2
+            in double name=value
+    property radius_x
+        get get_RadiusX slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IRectangle shape=4 reverse=22
+            out double return
+        put put_RadiusX slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IRectangle shape=2 reverse=38
+            in double name=value
+    property radius_x_property static
+        get get_RadiusXProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IRectangleStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property radius_y_property static
+        get get_RadiusYProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IRectangleStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Shapes.Shape composable python_type
+    py Shape
+    signature rc(Microsoft.UI.Xaml.Shapes.Shape;{9941aad3-6af2-5ba2-9085-8506d5f2485e})
+    base Microsoft.UI.Xaml.FrameworkElement
+    default Microsoft.UI.Xaml.Shapes.IShape
+    requires Microsoft.UI.Xaml.Shapes.IShape
+    factory Microsoft.UI.Xaml.Shapes.IShapeStatics
+    composable Microsoft.UI.Xaml.Shapes.IShapeFactory
+    property stroke_thickness
+        get get_StrokeThickness slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=162
+            out double return
+        put put_StrokeThickness slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=2 reverse=171
+            in double name=value
+    property stroke_start_line_cap
+        get get_StrokeStartLineCap slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=186
+            out enum32 type=Microsoft.UI.Xaml.Media.PenLineCap return
+        put put_StrokeStartLineCap slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=194
+            in enum32 type=Microsoft.UI.Xaml.Media.PenLineCap name=value
+    property stroke_miter_limit
+        get get_StrokeMiterLimit slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=121
+            out double return
+        put put_StrokeMiterLimit slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=2 reverse=138
+            in double name=value
+    property stroke_line_join
+        get get_StrokeLineJoin slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=218
+            out enum32 type=Microsoft.UI.Xaml.Media.PenLineJoin return
+        put put_StrokeLineJoin slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=223
+            in enum32 type=Microsoft.UI.Xaml.Media.PenLineJoin name=value
+    property stroke_end_line_cap
+        get get_StrokeEndLineCap slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=202
+            out enum32 type=Microsoft.UI.Xaml.Media.PenLineCap return
+        put put_StrokeEndLineCap slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=210
+            in enum32 type=Microsoft.UI.Xaml.Media.PenLineCap name=value
+    property stroke_dash_offset
+        get get_StrokeDashOffset slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=228
+            out double return
+        put put_StrokeDashOffset slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=2
+            in double name=value
+    property stroke_dash_cap
+        get get_StrokeDashCap slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=237
+            out enum32 type=Microsoft.UI.Xaml.Media.PenLineCap return
+        put put_StrokeDashCap slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=242
+            in enum32 type=Microsoft.UI.Xaml.Media.PenLineCap name=value
+    property stroke_dash_array
+        get get_StrokeDashArray slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=247
+            out class type=Microsoft.UI.Xaml.Media.DoubleCollection return
+        put put_StrokeDashArray slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=252
+            in class type=Microsoft.UI.Xaml.Media.DoubleCollection name=value
+    property stroke
+        get get_Stroke slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=62
+            out class type=Microsoft.UI.Xaml.Media.Brush return
+        put put_Stroke slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=99
+            in class type=Microsoft.UI.Xaml.Media.Brush name=value
+    property stretch
+        get get_Stretch slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=255
+            out enum32 type=Microsoft.UI.Xaml.Media.Stretch return
+        put put_Stretch slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=259
+            in enum32 type=Microsoft.UI.Xaml.Media.Stretch name=value
+    property fill
+        get get_Fill slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=22
+            out class type=Microsoft.UI.Xaml.Media.Brush return
+        put put_Fill slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=43
+            in class type=Microsoft.UI.Xaml.Media.Brush name=value
+    property geometry_transform
+        get get_GeometryTransform slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=263
+            out class type=Microsoft.UI.Xaml.Media.Transform return
+    property fill_property static
+        get get_FillProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=22 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stretch_property static
+        get get_StretchProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=202 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_dash_array_property static
+        get get_StrokeDashArrayProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=194 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_dash_cap_property static
+        get get_StrokeDashCapProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=186 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_dash_offset_property static
+        get get_StrokeDashOffsetProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=173 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_end_line_cap_property static
+        get get_StrokeEndLineCapProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=141 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_line_join_property static
+        get get_StrokeLineJoinProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=162 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_miter_limit_property static
+        get get_StrokeMiterLimitProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=62 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_property static
+        get get_StrokeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=43 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_start_line_cap_property static
+        get get_StrokeStartLineCapProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=121 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property stroke_thickness_property static
+        get get_StrokeThicknessProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShapeStatics shape=4 reverse=99 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    method get_alpha_mask
+        method GetAlphaMask slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Shapes.IShape shape=4 reverse=266
+            out class type=Microsoft.UI.Composition.CompositionBrush return
+
+class Microsoft.UI.Composition.CompositionBrush external
+    py winui3.microsoft.ui.composition.CompositionBrush
+
+class Microsoft.UI.Xaml.DependencyProperty external
+    py winui3.microsoft.ui.xaml.DependencyProperty
+
+class Microsoft.UI.Xaml.FrameworkElement external
+    py winui3.microsoft.ui.xaml.FrameworkElement
+
+class Microsoft.UI.Xaml.Media.Brush external
+    py winui3.microsoft.ui.xaml.media.Brush
+
+class Microsoft.UI.Xaml.Media.DoubleCollection external
+    py winui3.microsoft.ui.xaml.media.DoubleCollection
+
+enum Microsoft.UI.Xaml.Media.FillRule external
+    py winui3.microsoft.ui.xaml.media.FillRule
+
+class Microsoft.UI.Xaml.Media.Geometry external
+    py winui3.microsoft.ui.xaml.media.Geometry
+
+enum Microsoft.UI.Xaml.Media.PenLineCap external
+    py winui3.microsoft.ui.xaml.media.PenLineCap
+
+enum Microsoft.UI.Xaml.Media.PenLineJoin external
+    py winui3.microsoft.ui.xaml.media.PenLineJoin
+
+class Microsoft.UI.Xaml.Media.PointCollection external
+    py winui3.microsoft.ui.xaml.media.PointCollection
+
+enum Microsoft.UI.Xaml.Media.Stretch external
+    py winui3.microsoft.ui.xaml.media.Stretch
+
+class Microsoft.UI.Xaml.Media.Transform external
+    py winui3.microsoft.ui.xaml.media.Transform

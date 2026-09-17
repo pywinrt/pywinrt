@@ -1,0 +1,67 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.Graphics.Imaging
+
+interface Microsoft.Graphics.Imaging.IImageBuffer
+    guid 3baabd0b-1854-51f1-bd2a-74c87858f461
+
+interface Microsoft.Graphics.Imaging.IImageBufferStatics
+    guid 35b17bd3-f346-529f-8c0f-3bf96c56eb13
+
+class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
+    py ImageBuffer
+    signature rc(Microsoft.Graphics.Imaging.ImageBuffer;{3baabd0b-1854-51f1-bd2a-74c87858f461})
+    default Microsoft.Graphics.Imaging.IImageBuffer
+    requires Microsoft.Graphics.Imaging.IImageBuffer
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Graphics.Imaging.IImageBufferStatics
+    property buffer
+        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=22
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property pixel_format
+        get get_PixelFormat slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=43
+            out enum32 type=Microsoft.Graphics.Imaging.ImageBufferPixelFormat return
+    property pixel_height
+        get get_PixelHeight slot=8 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=62
+            out int32 return
+    property pixel_width
+        get get_PixelWidth slot=9 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=99
+            out int32 return
+    property row_stride
+        get get_RowStride slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=121
+            out int32 return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method copy_to_byte_array
+        method CopyToByteArray slot=11 inputs=1 outputs=0 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=51 reverse=144
+            fill_array uint8 name=values
+    method copy_to_software_bitmap
+        method CopyToSoftwareBitmap slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=162
+            out class type=Windows.Graphics.Imaging.SoftwareBitmap return
+    method create_for_buffer static
+        method CreateForBuffer slot=6 inputs=5 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=267 static
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in enum32 type=Microsoft.Graphics.Imaging.ImageBufferPixelFormat name=pixelFormat
+            in int32 name=width
+            in int32 name=height
+            in int32 name=rowStride
+            out class type=Microsoft.Graphics.Imaging.ImageBuffer return
+    method create_for_software_bitmap static
+        method CreateForSoftwareBitmap slot=7 inputs=1 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=51 reverse=44 static
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            out class type=Microsoft.Graphics.Imaging.ImageBuffer return
+
+enum Microsoft.Graphics.Imaging.ImageBufferPixelFormat python_type
+    py ImageBufferPixelFormat
+    signature enum(Microsoft.Graphics.Imaging.ImageBufferPixelFormat;i4)
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+interface Windows.Storage.Streams.IBuffer external
+    py winrt.windows.storage.streams._IBuffer
+    guid 905a0fe0-bc53-11df-8c49-001e4fc686da

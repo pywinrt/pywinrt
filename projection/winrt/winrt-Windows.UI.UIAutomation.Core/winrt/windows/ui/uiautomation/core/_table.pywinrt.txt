@@ -1,0 +1,267 @@
+format 4.0
+generator 0.0.0
+namespace Windows.UI.UIAutomation.Core
+
+struct Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration python_type
+    py AutomationAnnotationTypeRegistration
+    signature struct(Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration;i4)
+    field local_id LocalId int32
+
+struct Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId python_type
+    py AutomationRemoteOperationOperandId
+    signature struct(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId;i4)
+    field value Value int32
+
+class Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult python_type
+    py AutomationRemoteOperationResult
+    signature rc(Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult;{e0f80c42-4a67-5534-bf5a-09e8a99b36b1})
+    default Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult
+    requires Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult
+    property error_location
+        get get_ErrorLocation slot=8 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=62
+            out int32 return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=43
+            out hresult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=22
+            out enum32 type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus return
+    method get_operand
+        method GetOperand slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+            out object return
+    method has_operand
+        method HasOperand slot=9 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+            out boolean return
+
+enum Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus python_type
+    py AutomationRemoteOperationStatus
+    signature enum(Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus;i4)
+
+class Windows.UI.UIAutomation.Core.CoreAutomationRegistrar static python_type
+    py CoreAutomationRegistrar
+    factory Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics
+    method register_annotation_type static
+        method RegisterAnnotationType slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics shape=94 reverse=35 static
+            in guid name=guid
+            out struct type=Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration return
+    method unregister_annotation_type static
+        method UnregisterAnnotationType slot=7 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics shape=24 static
+            in struct type=Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration name=registration
+
+class Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation activatable python_type
+    py CoreAutomationRemoteOperation
+    signature rc(Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation;{3ac656f4-e2bc-5c6e-b8e7-b224fb74b060})
+    default Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation
+    requires Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation
+    requires Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method add_to_results
+        method AddToResults slot=9 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=24
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+    method execute
+        method Execute slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=117 reverse=125
+            pass_array uint8 name=bytecodeBuffer
+            out class type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult return
+    method import_connection_bound_object
+        method ImportConnectionBoundObject slot=6 inputs=2 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation2 shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+            in class type=Windows.UI.UIAutomation.AutomationConnectionBoundObject name=connectionBoundObject
+    method import_element
+        method ImportElement slot=7 inputs=2 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+            in class type=Windows.UI.UIAutomation.AutomationElement name=element
+    method import_text_range
+        method ImportTextRange slot=8 inputs=2 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
+            in class type=Windows.UI.UIAutomation.AutomationTextRange name=textRange
+    method is_opcode_supported
+        method IsOpcodeSupported slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=51 reverse=24
+            in uint32 name=opcode
+            out boolean return
+
+class Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext python_type
+    py CoreAutomationRemoteOperationContext
+    signature rc(Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext;{b9af9cbb-3d3e-5918-a16b-7861626a3aeb})
+    default Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext
+    requires Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext
+    method get_operand
+        method GetOperand slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=id
+            out object return
+    method set_operand
+        method SetOperand slot=7 inputs=2 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext shape=87
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=id
+            in object name=operand
+        method SetOperand slot=8 inputs=3 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext shape=165
+            in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=id
+            in object name=operand
+            in guid name=operandInterfaceId
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.UIAutomation.Core.RemoteAutomationWindow> concrete
+    guid 3dc07f97-215c-5ad9-8f22-5c522d0f09ec
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.UIAutomation.Core.RemoteAutomationWindow;{7c607689-496d-512a-9bd5-c050cfaf1428}))
+    argument Windows.UI.UIAutomation.Core.RemoteAutomationWindow
+
+interface Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult
+    guid e0f80c42-4a67-5534-bf5a-09e8a99b36b1
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider python_type
+    py _ICoreAutomationConnectionBoundObjectProvider
+    guid 0620bb64-9616-5593-be3a-eb8e6daeb3fa
+    signature {0620bb64-9616-5593-be3a-eb8e6daeb3fa}
+    property is_com_threading_required
+        get get_IsComThreadingRequired slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider shape=4 reverse=22
+            out boolean return
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics
+    guid 3e50129b-d6dc-5680-b580-ffff78300304
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation
+    guid 3ac656f4-e2bc-5c6e-b8e7-b224fb74b060
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation2
+    guid eefaf86f-e953-5099-8ce9-dca813482ba0
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationContext
+    guid b9af9cbb-3d3e-5918-a16b-7861626a3aeb
+
+interface Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider python_type
+    py _ICoreAutomationRemoteOperationExtensionProvider
+    guid 88f53e67-dc69-553b-a0aa-70477e724da8
+    signature {88f53e67-dc69-553b-a0aa-70477e724da8}
+    method call_extension
+        method CallExtension slot=6 inputs=3 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider shape=231 reverse=36
+            in guid name=extensionId
+            in class type=Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext name=context
+            pass_array struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandIds
+    method is_extension_supported
+        method IsExtensionSupported slot=7 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider shape=94 reverse=54
+            in guid name=extensionId
+            out boolean return
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession
+    guid 5c8a091d-94cc-5b33-afdb-678cded2bd54
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory
+    guid f250263d-6057-5373-a5a5-ed7265fe0376
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs
+    guid ea3319a8-e3a8-5dc6-adf8-044e46b14af5
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs
+    guid bbb33a3d-5d90-5c38-9eb2-dd9dcc1b2e3f
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationServerStatics
+    guid e6e8945e-0c11-5028-9ae3-c2771288b6b7
+
+interface Windows.UI.UIAutomation.Core.IRemoteAutomationWindow
+    guid 7c607689-496d-512a-9bd5-c050cfaf1428
+
+class Windows.UI.UIAutomation.Core.RemoteAutomationClientSession python_type
+    py RemoteAutomationClientSession
+    signature rc(Windows.UI.UIAutomation.Core.RemoteAutomationClientSession;{5c8a091d-94cc-5b33-afdb-678cded2bd54})
+    default Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession
+    requires Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession
+    factory Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory shape=51 reverse=24
+            in string name=name
+            out class type=Windows.UI.UIAutomation.Core.RemoteAutomationClientSession return
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory shape=137
+            in string name=name
+            in guid name=sessionId
+            out class type=Windows.UI.UIAutomation.Core.RemoteAutomationClientSession return
+    property session_id
+        get get_SessionId slot=9 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=4 reverse=99
+            out guid return
+    event connection_requested
+        add add_ConnectionRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_ConnectionRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26 reverse=156
+            in event_token name=token
+    event disconnected
+        add add_Disconnected slot=12 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs> name=handler
+            out event_token return
+        remove remove_Disconnected slot=13 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26 reverse=181
+            in event_token name=token
+    method create_window_async
+        method CreateWindowAsync slot=8 inputs=3 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=187
+            in uint64 name=remoteWindowId
+            in uint32 name=remoteProcessId
+            in object name=parentAutomationElement
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.UIAutomation.Core.RemoteAutomationWindow> return
+    method start
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0 reverse=16
+    method stop
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0 reverse=37
+
+class Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs python_type
+    py RemoteAutomationConnectionRequestedEventArgs
+    signature rc(Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs;{ea3319a8-e3a8-5dc6-adf8-044e46b14af5})
+    default Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs
+    requires Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs
+    property local_pipe_name
+        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4 reverse=22
+            out string return
+    property remote_process_id
+        get get_RemoteProcessId slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4 reverse=43
+            out uint32 return
+
+class Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs python_type
+    py RemoteAutomationDisconnectedEventArgs
+    signature rc(Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs;{bbb33a3d-5d90-5c38-9eb2-dd9dcc1b2e3f})
+    default Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs
+    requires Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs
+    property local_pipe_name
+        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs shape=4 reverse=22
+            out string return
+
+class Windows.UI.UIAutomation.Core.RemoteAutomationServer static python_type
+    py RemoteAutomationServer
+    factory Windows.UI.UIAutomation.Core.IRemoteAutomationServerStatics
+    method report_session static
+        method ReportSession slot=6 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationServerStatics shape=33 static
+            in guid name=sessionId
+
+class Windows.UI.UIAutomation.Core.RemoteAutomationWindow python_type
+    py RemoteAutomationWindow
+    signature rc(Windows.UI.UIAutomation.Core.RemoteAutomationWindow;{7c607689-496d-512a-9bd5-c050cfaf1428})
+    default Windows.UI.UIAutomation.Core.IRemoteAutomationWindow
+    requires Windows.UI.UIAutomation.Core.IRemoteAutomationWindow
+    property automation_provider
+        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4 reverse=22
+            out object return
+    method unregister_async
+        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs> concrete
+    guid 1b0eb0d9-b29b-52f6-9d79-fffe5a280299
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.UIAutomation.Core.RemoteAutomationClientSession;{5c8a091d-94cc-5b33-afdb-678cded2bd54});rc(Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs;{ea3319a8-e3a8-5dc6-adf8-044e46b14af5}))
+    argument Windows.UI.UIAutomation.Core.RemoteAutomationClientSession
+    argument Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs> concrete
+    guid 7007e98a-48ed-52c8-a5b9-e1918b3f2709
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.UIAutomation.Core.RemoteAutomationClientSession;{5c8a091d-94cc-5b33-afdb-678cded2bd54});rc(Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs;{bbb33a3d-5d90-5c38-9eb2-dd9dcc1b2e3f}))
+    argument Windows.UI.UIAutomation.Core.RemoteAutomationClientSession
+    argument Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.UI.UIAutomation.AutomationConnectionBoundObject external
+    py winrt.windows.ui.uiautomation.AutomationConnectionBoundObject
+
+class Windows.UI.UIAutomation.AutomationElement external
+    py winrt.windows.ui.uiautomation.AutomationElement
+
+class Windows.UI.UIAutomation.AutomationTextRange external
+    py winrt.windows.ui.uiautomation.AutomationTextRange

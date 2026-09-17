@@ -1,0 +1,297 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Graphics.Capture
+
+class Windows.Graphics.Capture.Direct3D11CaptureFrame python_type closeable
+    py Direct3D11CaptureFrame
+    signature rc(Windows.Graphics.Capture.Direct3D11CaptureFrame;{fa50c623-38da-4b32-acf3-fa9734ad800e})
+    default Windows.Graphics.Capture.IDirect3D11CaptureFrame
+    requires Windows.Graphics.Capture.IDirect3D11CaptureFrame
+    requires Windows.Graphics.Capture.IDirect3D11CaptureFrame2
+    requires Windows.Foundation.IClosable
+    property content_size
+        get get_ContentSize slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=62
+            out struct type=Windows.Graphics.SizeInt32 return
+    property surface
+        get get_Surface slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=22
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    property system_relative_time
+        get get_SystemRelativeTime slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=43
+            out timespan return
+    property dirty_region_mode
+        get get_DirtyRegionMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4 reverse=43
+            out enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode return
+    property dirty_regions
+        get get_DirtyRegions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+
+class Windows.Graphics.Capture.Direct3D11CaptureFramePool python_type closeable
+    py Direct3D11CaptureFramePool
+    signature rc(Windows.Graphics.Capture.Direct3D11CaptureFramePool;{24eb6d22-1975-422e-82e7-780dbd8ddf24})
+    default Windows.Graphics.Capture.IDirect3D11CaptureFramePool
+    requires Windows.Graphics.Capture.IDirect3D11CaptureFramePool
+    requires Windows.Foundation.IClosable
+    factory Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics
+    factory Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2
+    property dispatcher_queue
+        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4 reverse=141
+            out class type=Windows.System.DispatcherQueue return
+    event frame_arrived
+        add add_FrameArrived slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.Direct3D11CaptureFramePool,System.Object> name=handler
+            out event_token return
+        remove remove_FrameArrived slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=26 reverse=110
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method create static
+        method Create slot=6 inputs=4 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics shape=240 static
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            in int32 name=numberOfBuffers
+            in struct type=Windows.Graphics.SizeInt32 name=size
+            out class type=Windows.Graphics.Capture.Direct3D11CaptureFramePool return
+    method create_capture_session
+        method CreateCaptureSession slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51 reverse=124
+            in class type=Windows.Graphics.Capture.GraphicsCaptureItem name=item
+            out class type=Windows.Graphics.Capture.GraphicsCaptureSession return
+    method create_free_threaded static
+        method CreateFreeThreaded slot=6 inputs=4 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2 shape=240 static
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            in int32 name=numberOfBuffers
+            in struct type=Windows.Graphics.SizeInt32 name=size
+            out class type=Windows.Graphics.Capture.Direct3D11CaptureFramePool return
+    method recreate
+        method Recreate slot=6 inputs=4 outputs=0 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=196
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=pixelFormat
+            in int32 name=numberOfBuffers
+            in struct type=Windows.Graphics.SizeInt32 name=size
+    method try_get_next_frame
+        method TryGetNextFrame slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4 reverse=43
+            out class type=Windows.Graphics.Capture.Direct3D11CaptureFrame return
+
+class Windows.Graphics.Capture.GraphicsCaptureAccess static python_type
+    py GraphicsCaptureAccess
+    factory Windows.Graphics.Capture.IGraphicsCaptureAccessStatics
+    method request_access_async static
+        method RequestAccessAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureAccessStatics shape=51 reverse=24 static
+            in enum32 type=Windows.Graphics.Capture.GraphicsCaptureAccessKind name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
+
+enum Windows.Graphics.Capture.GraphicsCaptureAccessKind python_type
+    py GraphicsCaptureAccessKind
+    signature enum(Windows.Graphics.Capture.GraphicsCaptureAccessKind;i4)
+
+enum Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode python_type
+    py GraphicsCaptureDirtyRegionMode
+    signature enum(Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode;i4)
+
+class Windows.Graphics.Capture.GraphicsCaptureItem python_type
+    py GraphicsCaptureItem
+    signature rc(Windows.Graphics.Capture.GraphicsCaptureItem;{79c3f95b-31f7-4ec2-a464-632ef5d30760})
+    default Windows.Graphics.Capture.IGraphicsCaptureItem
+    requires Windows.Graphics.Capture.IGraphicsCaptureItem
+    factory Windows.Graphics.Capture.IGraphicsCaptureItemStatics
+    factory Windows.Graphics.Capture.IGraphicsCaptureItemStatics2
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4 reverse=22
+            out string return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4 reverse=43
+            out struct type=Windows.Graphics.SizeInt32 return
+    event closed
+        add add_Closed slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.GraphicsCaptureItem,System.Object> name=handler
+            out event_token return
+        remove remove_Closed slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=26 reverse=110
+            in event_token name=token
+    method create_from_visual static
+        method CreateFromVisual slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItemStatics shape=51 reverse=24 static
+            in class type=Windows.UI.Composition.Visual name=visual
+            out class type=Windows.Graphics.Capture.GraphicsCaptureItem return
+    method try_create_from_display_id static
+        method TryCreateFromDisplayId slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItemStatics2 shape=97 static
+            in struct type=Windows.Graphics.DisplayId name=displayId
+            out class type=Windows.Graphics.Capture.GraphicsCaptureItem return
+    method try_create_from_window_id static
+        method TryCreateFromWindowId slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItemStatics2 shape=97 static
+            in struct type=Windows.UI.WindowId name=windowId
+            out class type=Windows.Graphics.Capture.GraphicsCaptureItem return
+
+class Windows.Graphics.Capture.GraphicsCapturePicker activatable python_type
+    py GraphicsCapturePicker
+    signature rc(Windows.Graphics.Capture.GraphicsCapturePicker;{5a1711b3-ad79-4b4a-9336-1318fdde3539})
+    default Windows.Graphics.Capture.IGraphicsCapturePicker
+    requires Windows.Graphics.Capture.IGraphicsCapturePicker
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method pick_single_item_async
+        method PickSingleItemAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCapturePicker shape=4 reverse=22
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Capture.GraphicsCaptureItem> return
+
+class Windows.Graphics.Capture.GraphicsCaptureSession python_type closeable
+    py GraphicsCaptureSession
+    signature rc(Windows.Graphics.Capture.GraphicsCaptureSession;{814e42a9-f70f-4ad7-939b-fddcc6eb880d})
+    default Windows.Graphics.Capture.IGraphicsCaptureSession
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession2
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession3
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession4
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession5
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession6
+    requires Windows.Foundation.IClosable
+    factory Windows.Graphics.Capture.IGraphicsCaptureSessionStatics
+    property is_cursor_capture_enabled
+        get get_IsCursorCaptureEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4 reverse=22
+            out boolean return
+        put put_IsCursorCaptureEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4 reverse=43
+            in boolean name=value
+    property is_border_required
+        get get_IsBorderRequired slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4 reverse=22
+            out boolean return
+        put put_IsBorderRequired slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4 reverse=43
+            in boolean name=value
+    property dirty_region_mode
+        get get_DirtyRegionMode slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4 reverse=22
+            out enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode return
+        put put_DirtyRegionMode slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4 reverse=43
+            in enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode name=value
+    property min_update_interval
+        get get_MinUpdateInterval slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=4 reverse=22
+            out timespan return
+        put put_MinUpdateInterval slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=26 reverse=53
+            in timespan name=value
+    property include_secondary_windows
+        get get_IncludeSecondaryWindows slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4 reverse=22
+            out boolean return
+        put put_IncludeSecondaryWindows slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4 reverse=43
+            in boolean name=value
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSessionStatics shape=4 reverse=22 static
+            out boolean return
+    method start_capture
+        method StartCapture slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession shape=0 reverse=16
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Capture.GraphicsCaptureItem> concrete
+    guid 01ccf2ae-1059-5d57-a805-0a1dfc54cab9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Capture.GraphicsCaptureItem;{79c3f95b-31f7-4ec2-a464-632ef5d30760}))
+    argument Windows.Graphics.Capture.GraphicsCaptureItem
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+    guid 827caf42-5fe6-5b5b-84ce-c44834134d3d
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+
+interface Windows.Graphics.Capture.IDirect3D11CaptureFrame
+    guid fa50c623-38da-4b32-acf3-fa9734ad800e
+
+interface Windows.Graphics.Capture.IDirect3D11CaptureFrame2
+    guid 37869cfa-2b48-5ebf-9afb-dffd805defdb
+
+interface Windows.Graphics.Capture.IDirect3D11CaptureFramePool
+    guid 24eb6d22-1975-422e-82e7-780dbd8ddf24
+
+interface Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics
+    guid 7784056a-67aa-4d53-ae54-1088d5a8ca21
+
+interface Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2
+    guid 589b103f-6bbc-5df5-a991-02e28b3b66d5
+
+interface Windows.Graphics.Capture.IGraphicsCaptureAccessStatics
+    guid 743ed370-06ec-5040-a58a-901f0f757095
+
+interface Windows.Graphics.Capture.IGraphicsCaptureItem
+    guid 79c3f95b-31f7-4ec2-a464-632ef5d30760
+
+interface Windows.Graphics.Capture.IGraphicsCaptureItemStatics
+    guid a87ebea5-457c-5788-ab47-0cf1d3637e74
+
+interface Windows.Graphics.Capture.IGraphicsCaptureItemStatics2
+    guid 3b92acc9-e584-5862-bf5c-9c316c6d2dbb
+
+interface Windows.Graphics.Capture.IGraphicsCapturePicker
+    guid 5a1711b3-ad79-4b4a-9336-1318fdde3539
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession
+    guid 814e42a9-f70f-4ad7-939b-fddcc6eb880d
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession2
+    guid 2c39ae40-7d2e-5044-804e-8b6799d4cf9e
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession3
+    guid f2cdd966-22ae-5ea1-9596-3a289344c3be
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession4
+    guid ae99813c-c257-5759-8ed0-668c9b557ed4
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession5
+    guid 67c0ea62-1f85-5061-925a-239be0ac09cb
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSession6
+    guid d7419236-be20-5e9f-bcd6-c4e98fd6afdc
+
+interface Windows.Graphics.Capture.IGraphicsCaptureSessionStatics
+    guid 2224a540-5974-49aa-b232-0882536f4cb5
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> concrete
+    guid 4f5e243f-3812-5200-b70c-30dcfc61717b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    argument Windows.Graphics.RectInt32
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.Direct3D11CaptureFramePool,System.Object> concrete
+    guid 51a947f7-79cf-5a3e-a3a5-1289cfa6dfe8
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Capture.Direct3D11CaptureFramePool;{24eb6d22-1975-422e-82e7-780dbd8ddf24});cinterface(IInspectable))
+    argument Windows.Graphics.Capture.Direct3D11CaptureFramePool
+    argument System.Object
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.GraphicsCaptureItem,System.Object> concrete
+    guid e9c610c0-a68c-5bd9-8021-8589346eeee2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Capture.GraphicsCaptureItem;{79c3f95b-31f7-4ec2-a464-632ef5d30760});cinterface(IInspectable))
+    argument Windows.Graphics.Capture.GraphicsCaptureItem
+    argument System.Object
+
+class System.Object external
+    py winrt.system.Object
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+struct Windows.Graphics.DisplayId external
+    py winrt.windows.graphics.DisplayId
+
+struct Windows.Graphics.RectInt32 external
+    py winrt.windows.graphics.RectInt32
+
+struct Windows.Graphics.SizeInt32 external
+    py winrt.windows.graphics.SizeInt32
+
+enum Windows.Graphics.DirectX.DirectXPixelFormat external
+    py winrt.windows.graphics.directx.DirectXPixelFormat
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DDevice
+    guid a37624ab-8d5f-4650-9d3e-9eae3d9bc670
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586
+
+enum Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus external
+    py winrt.windows.security.authorization.appcapabilityaccess.AppCapabilityAccessStatus
+
+class Windows.System.DispatcherQueue external
+    py winrt.windows.system.DispatcherQueue
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId
+
+class Windows.UI.Composition.Visual external
+    py winrt.windows.ui.composition.Visual

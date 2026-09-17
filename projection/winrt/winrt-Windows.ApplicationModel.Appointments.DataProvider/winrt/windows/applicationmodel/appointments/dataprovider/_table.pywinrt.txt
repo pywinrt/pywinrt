@@ -1,0 +1,412 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.Appointments.DataProvider
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest python_type
+    py AppointmentCalendarCancelMeetingRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest;{49460f8d-6434-40d7-ad46-6297419314d1})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=22
+            out string return
+    property appointment_local_id
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=43
+            out string return
+    property appointment_original_start_time
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property comment
+        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=121
+            out string return
+    property notify_invitees
+        get get_NotifyInvitees slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=141
+            out boolean return
+    property subject
+        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=99
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=162
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs python_type
+    py AppointmentCalendarCancelMeetingRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs;{1a79be16-7f30-4e35-beef-9d2c7b6dcae1})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest python_type
+    py AppointmentCalendarCreateOrUpdateAppointmentRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest;{2e62f2b2-ca96-48ac-9124-406b19fefa70})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest
+    property appointment
+        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Appointments.Appointment return
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=22
+            out string return
+    property changed_properties
+        get get_ChangedProperties slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property notify_invitees
+        get get_NotifyInvitees slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=62
+            out boolean return
+    method report_completed_async
+        method ReportCompletedAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=51 reverse=124
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=createdOrUpdatedAppointment
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=141
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs python_type
+    py AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs;{cf8ded28-002e-4bf7-8e9d-5e20d49aa3ba})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest python_type
+    py AppointmentCalendarForwardMeetingRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest;{82e5ee56-26b6-4253-8a8f-6cf5f2ff7884})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=22
+            out string return
+    property appointment_local_id
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=43
+            out string return
+    property appointment_original_start_time
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property comment
+        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=162
+            out string return
+    property forward_header
+        get get_ForwardHeader slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=141
+            out string return
+    property invitees
+        get get_Invitees slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentInvitee> return
+    property subject
+        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=121
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=186
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs python_type
+    py AppointmentCalendarForwardMeetingRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs;{3109151a-23a2-42fd-9c82-c9a60d59f8a8})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest python_type
+    py AppointmentCalendarProposeNewTimeForMeetingRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest;{ce1c63f5-edf6-43c3-82b7-be6b368c6900})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=22
+            out string return
+    property appointment_local_id
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=43
+            out string return
+    property appointment_original_start_time
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property comment
+        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=162
+            out string return
+    property new_duration
+        get get_NewDuration slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=121
+            out timespan return
+    property new_start_time
+        get get_NewStartTime slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=99
+            out datetime return
+    property subject
+        get get_Subject slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=141
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=186
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs python_type
+    py AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs;{d2d777d8-fed1-4280-a3ba-2e1f47609aa2})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest python_type
+    py AppointmentCalendarSyncManagerSyncRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest;{12ab382b-7163-4a56-9a4e-7223a84adf46})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=22
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=43
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=62
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs python_type
+    py AppointmentCalendarSyncManagerSyncRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs;{ca17c6f7-0284-4edd-87ba-4d8f69dcf5c0})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest python_type
+    py AppointmentCalendarUpdateMeetingResponseRequest
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest;{a36d608c-c29d-4b94-b086-7e9ff7bd84a0})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest
+    property appointment_calendar_local_id
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=22
+            out string return
+    property appointment_local_id
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=43
+            out string return
+    property appointment_original_start_time
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property comment
+        get get_Comment slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=141
+            out string return
+    property response
+        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse return
+    property send_update
+        get get_SendUpdate slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=162
+            out boolean return
+    property subject
+        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=121
+            out string return
+    method report_completed_async
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=173
+            out interface type=Windows.Foundation.IAsyncAction return
+    method report_failed_async
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=186
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs python_type
+    py AppointmentCalendarUpdateMeetingResponseRequestEventArgs
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs;{88759883-97bf-479d-aed5-0be8ce567d1e})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4 reverse=43
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection python_type
+    py AppointmentDataProviderConnection
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection
+    event cancel_meeting_requested
+        add add_CancelMeetingRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs> name=handler
+            out event_token return
+        remove remove_CancelMeetingRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=156
+            in event_token name=token
+    event create_or_update_appointment_requested
+        add add_CreateOrUpdateAppointmentRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs> name=handler
+            out event_token return
+        remove remove_CreateOrUpdateAppointmentRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=110
+            in event_token name=token
+    event forward_meeting_requested
+        add add_ForwardMeetingRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs> name=handler
+            out event_token return
+        remove remove_ForwardMeetingRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=181
+            in event_token name=token
+    event propose_new_time_for_meeting_requested
+        add add_ProposeNewTimeForMeetingRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=187
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs> name=handler
+            out event_token return
+        remove remove_ProposeNewTimeForMeetingRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=200
+            in event_token name=token
+    event sync_requested
+        add add_SyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs> name=handler
+            out event_token return
+        remove remove_SyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=53
+            in event_token name=token
+    event update_meeting_response_requested
+        add add_UpdateMeetingResponseRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=203
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs> name=handler
+            out event_token return
+        remove remove_UpdateMeetingResponseRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=215
+            in event_token name=token
+    method start
+        method Start slot=18 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=0 reverse=217
+
+class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails python_type
+    py AppointmentDataProviderTriggerDetails
+    signature rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails;{b3283c01-7e12-4e5e-b1ef-74fb68ac6f2a})
+    default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails
+    requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails
+    property connection
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails shape=4 reverse=22
+            out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection return
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest
+    guid 49460f8d-6434-40d7-ad46-6297419314d1
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs
+    guid 1a79be16-7f30-4e35-beef-9d2c7b6dcae1
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest
+    guid 2e62f2b2-ca96-48ac-9124-406b19fefa70
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
+    guid cf8ded28-002e-4bf7-8e9d-5e20d49aa3ba
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest
+    guid 82e5ee56-26b6-4253-8a8f-6cf5f2ff7884
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs
+    guid 3109151a-23a2-42fd-9c82-c9a60d59f8a8
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest
+    guid ce1c63f5-edf6-43c3-82b7-be6b368c6900
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
+    guid d2d777d8-fed1-4280-a3ba-2e1f47609aa2
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest
+    guid 12ab382b-7163-4a56-9a4e-7223a84adf46
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs
+    guid ca17c6f7-0284-4edd-87ba-4d8f69dcf5c0
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest
+    guid a36d608c-c29d-4b94-b086-7e9ff7bd84a0
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs
+    guid 88759883-97bf-479d-aed5-0be8ce567d1e
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection
+    guid f3dd9d83-3254-465f-abdb-928046552cf4
+
+interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails
+    guid b3283c01-7e12-4e5e-b1ef-74fb68ac6f2a
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    argument System.String
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentInvitee> concrete
+    guid ba2f633a-5182-5eda-8e2e-a66e55b320ce
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Appointments.AppointmentInvitee;{13bf0796-9842-495b-b0e7-ef8f79c0701d}))
+    argument Windows.ApplicationModel.Appointments.AppointmentInvitee
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs> concrete
+    guid 0e9cc1d8-0d26-5207-b7d9-9ad1bf66e1e6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs;{1a79be16-7f30-4e35-beef-9d2c7b6dcae1}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs> concrete
+    guid b45150b9-df09-5c86-b57d-3e6deff24767
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs;{cf8ded28-002e-4bf7-8e9d-5e20d49aa3ba}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs> concrete
+    guid 8961d738-ecdc-53c8-b0ec-e729d8109459
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs;{3109151a-23a2-42fd-9c82-c9a60d59f8a8}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs> concrete
+    guid 4fe460a4-e875-5836-9eec-273d52c86ab3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs;{d2d777d8-fed1-4280-a3ba-2e1f47609aa2}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs> concrete
+    guid 37f52677-5f3a-57e6-82f5-cbab2e4dbe8e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs;{ca17c6f7-0284-4edd-87ba-4d8f69dcf5c0}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs> concrete
+    guid 5370df2b-62cd-5133-93e6-fc80a502af64
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection;{f3dd9d83-3254-465f-abdb-928046552cf4});rc(Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs;{88759883-97bf-479d-aed5-0be8ce567d1e}))
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection
+    argument Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Appointments.Appointment external
+    py winrt.windows.applicationmodel.appointments.Appointment
+
+class Windows.ApplicationModel.Appointments.AppointmentInvitee external
+    py winrt.windows.applicationmodel.appointments.AppointmentInvitee
+
+enum Windows.ApplicationModel.Appointments.AppointmentParticipantResponse external
+    py winrt.windows.applicationmodel.appointments.AppointmentParticipantResponse
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b

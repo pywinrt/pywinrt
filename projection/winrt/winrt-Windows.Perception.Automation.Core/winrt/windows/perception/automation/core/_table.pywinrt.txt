@@ -1,0 +1,17 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Perception.Automation.Core
+
+class Windows.Perception.Automation.Core.CorePerceptionAutomation static python_type
+    py CorePerceptionAutomation
+    factory Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics
+    method set_activation_factory_provider static
+        method SetActivationFactoryProvider slot=6 inputs=1 outputs=0 declaring=Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics shape=4 reverse=22 static
+            in interface type=Windows.Foundation.IGetActivationFactory name=provider
+
+interface Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics
+    guid 0bb04541-4ce2-4923-9a76-8187ecc59112
+
+interface Windows.Foundation.IGetActivationFactory external
+    py winrt.windows.foundation._IGetActivationFactory
+    guid 4edb8ee2-96dd-49a7-94f7-4607ddab8e3c

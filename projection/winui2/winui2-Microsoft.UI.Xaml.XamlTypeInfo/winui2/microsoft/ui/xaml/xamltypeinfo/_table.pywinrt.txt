@@ -1,0 +1,47 @@
+format 4.0
+generator 0.0.0
+namespace Microsoft.UI.Xaml.XamlTypeInfo
+
+interface Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProvider
+    guid 17fa3f58-3472-5aa2-a0f8-1ab8a519573d
+
+interface Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProviderStatics
+    guid 2d7eb3fd-ecdb-5084-b7e0-12f9598381ef
+
+class Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider activatable python_type
+    py XamlControlsXamlMetaDataProvider
+    signature rc(Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider;{b3765d69-68a5-4b32-8861-fdb90c1f5836})
+    default Windows.UI.Xaml.Markup.IXamlMetadataProvider
+    requires Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProvider
+    requires Windows.UI.Xaml.Markup.IXamlMetadataProvider
+    factory Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProviderStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method get_xaml_type
+        method GetXamlType slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Markup.IXamlMetadataProvider shape=91 reverse=34 default_overload
+            in struct type=Windows.UI.Xaml.Interop.TypeName name=type
+            out interface type=Windows.UI.Xaml.Markup.IXamlType return
+    method get_xaml_type_by_full_name
+        method GetXamlType slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Markup.IXamlMetadataProvider shape=51 reverse=44
+            in string name=fullName
+            out interface type=Windows.UI.Xaml.Markup.IXamlType return
+    method get_xmlns_definitions
+        method GetXmlnsDefinitions slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Markup.IXamlMetadataProvider shape=51 reverse=65
+            receive_array struct type=Windows.UI.Xaml.Markup.XmlnsDefinition return
+    method initialize static
+        method Initialize slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProviderStatics shape=0 reverse=16 static
+
+struct Windows.UI.Xaml.Interop.TypeName external
+    py winrt.windows.ui.xaml.interop.TypeName
+
+interface Windows.UI.Xaml.Markup.IXamlMetadataProvider external
+    py winrt.windows.ui.xaml.markup._IXamlMetadataProvider
+    guid b3765d69-68a5-4b32-8861-fdb90c1f5836
+
+interface Windows.UI.Xaml.Markup.IXamlType external
+    py winrt.windows.ui.xaml.markup._IXamlType
+    guid 7920eab1-a2e5-479a-bd50-6cef3c0b4970
+
+struct Windows.UI.Xaml.Markup.XmlnsDefinition external
+    py winrt.windows.ui.xaml.markup.XmlnsDefinition

@@ -1,0 +1,121 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Pwm
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Pwm.PwmController> concrete
+    guid 0a288d41-1f20-5d16-85dd-52855b11569a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Pwm.PwmController;{c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7}))
+    argument Windows.Devices.Pwm.PwmController
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.PwmController>> concrete
+    guid e4151e8d-4688-5023-9f5d-008bbd904891
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Pwm.PwmController;{c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.PwmController>
+
+interface Windows.Devices.Pwm.IPwmController
+    guid c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7
+
+interface Windows.Devices.Pwm.IPwmControllerStatics
+    guid 4263bda1-8946-4404-bd48-81dd124af4d9
+
+interface Windows.Devices.Pwm.IPwmControllerStatics2
+    guid 44fc5b1f-f119-4bdd-97ad-f76ef986736d
+
+interface Windows.Devices.Pwm.IPwmControllerStatics3
+    guid b2581871-0229-4344-ae3f-9b7cd0e66b94
+
+interface Windows.Devices.Pwm.IPwmPin
+    guid 22972dc8-c6cf-4821-b7f9-c6454fb6af79
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.PwmController> concrete
+    guid 07cb8bac-3bac-5ea0-919a-9eaf620270ae
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Pwm.PwmController;{c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7}))
+    argument Windows.Devices.Pwm.PwmController
+
+class Windows.Devices.Pwm.PwmController python_type
+    py PwmController
+    signature rc(Windows.Devices.Pwm.PwmController;{c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7})
+    default Windows.Devices.Pwm.IPwmController
+    requires Windows.Devices.Pwm.IPwmController
+    factory Windows.Devices.Pwm.IPwmControllerStatics3
+    factory Windows.Devices.Pwm.IPwmControllerStatics2
+    factory Windows.Devices.Pwm.IPwmControllerStatics
+    property actual_frequency
+        get get_ActualFrequency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=4 reverse=43
+            out double return
+    property max_frequency
+        get get_MaxFrequency slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=4 reverse=121
+            out double return
+    property min_frequency
+        get get_MinFrequency slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=4 reverse=99
+            out double return
+    property pin_count
+        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=4 reverse=22
+            out int32 return
+    method from_id_async static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.IPwmControllerStatics3 shape=51 reverse=65 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Pwm.PwmController> return
+    method get_controllers_async static
+        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.IPwmControllerStatics shape=51 reverse=24 static
+            in interface type=Windows.Devices.Pwm.Provider.IPwmProvider name=provider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.PwmController>> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmControllerStatics2 shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Pwm.PwmController> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmControllerStatics3 shape=4 reverse=22 static
+            out string return
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.IPwmControllerStatics3 shape=51 reverse=44 static
+            in string name=friendlyName
+            out string return
+    method open_pin
+        method OpenPin slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=51 reverse=144
+            in int32 name=pinNumber
+            out class type=Windows.Devices.Pwm.PwmPin return
+    method set_desired_frequency
+        method SetDesiredFrequency slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=46 reverse=58
+            in double name=desiredFrequency
+            out double return
+
+class Windows.Devices.Pwm.PwmPin python_type closeable
+    py PwmPin
+    signature rc(Windows.Devices.Pwm.PwmPin;{22972dc8-c6cf-4821-b7f9-c6454fb6af79})
+    default Windows.Devices.Pwm.IPwmPin
+    requires Windows.Devices.Pwm.IPwmPin
+    requires Windows.Foundation.IClosable
+    property polarity
+        get get_Polarity slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmPin shape=4 reverse=99
+            out enum32 type=Windows.Devices.Pwm.PwmPulsePolarity return
+        put put_Polarity slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.IPwmPin shape=4 reverse=121
+            in enum32 type=Windows.Devices.Pwm.PwmPulsePolarity name=value
+    property controller
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmPin shape=4 reverse=22
+            out class type=Windows.Devices.Pwm.PwmController return
+    property is_started
+        get get_IsStarted slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmPin shape=4 reverse=173
+            out boolean return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method get_active_duty_cycle_percentage
+        method GetActiveDutyCyclePercentage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmPin shape=4 reverse=43
+            out double return
+    method set_active_duty_cycle_percentage
+        method SetActiveDutyCyclePercentage slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.IPwmPin shape=2
+            in double name=dutyCyclePercentage
+    method start
+        method Start slot=11 inputs=0 outputs=0 declaring=Windows.Devices.Pwm.IPwmPin shape=0 reverse=137
+    method stop
+        method Stop slot=12 inputs=0 outputs=0 declaring=Windows.Devices.Pwm.IPwmPin shape=0 reverse=159
+
+enum Windows.Devices.Pwm.PwmPulsePolarity python_type
+    py PwmPulsePolarity
+    signature enum(Windows.Devices.Pwm.PwmPulsePolarity;i4)
+
+interface Windows.Devices.Pwm.Provider.IPwmProvider external
+    py winrt.windows.devices.pwm.provider._IPwmProvider
+    guid a3301228-52f1-47b0-9349-66ba43d25902
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e

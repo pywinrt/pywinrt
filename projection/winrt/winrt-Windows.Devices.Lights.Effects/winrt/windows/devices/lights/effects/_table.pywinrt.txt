@@ -1,0 +1,431 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.Lights.Effects
+
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+    guid 3f108d37-6679-5590-aed2-033362fbf413
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{11d45590-57fb-4546-b1ce-863107f740df})
+    argument Windows.Devices.Lights.Effects.ILampArrayEffect
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> concrete
+    guid 2314acda-c5df-5051-977d-94d79d1312fb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Lights.Effects.LampArrayEffectPlaylist;{7de58bfe-6f61-4103-98c7-d6632f7b9169}))
+    argument Windows.Devices.Lights.Effects.LampArrayEffectPlaylist
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+    guid de51580c-48a6-50b5-976b-05894699015a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{11d45590-57fb-4546-b1ce-863107f740df})
+    argument Windows.Devices.Lights.Effects.ILampArrayEffect
+
+interface Windows.Devices.Lights.Effects.ILampArrayBitmapEffect
+    guid 3238e065-d877-4627-89e5-2a88f7052fa6
+
+interface Windows.Devices.Lights.Effects.ILampArrayBitmapEffectFactory
+    guid 13608090-e336-4c8f-9053-a92407ca7b1d
+
+interface Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs
+    guid c8b4af9e-fe63-4d51-babd-619defb454ba
+
+interface Windows.Devices.Lights.Effects.ILampArrayBlinkEffect
+    guid ebbf35f6-2fc5-4bb3-b3c3-6221a7680d13
+
+interface Windows.Devices.Lights.Effects.ILampArrayBlinkEffectFactory
+    guid 879f1d97-9f50-49b2-a56f-013aa08d55e0
+
+interface Windows.Devices.Lights.Effects.ILampArrayColorRampEffect
+    guid 2b004437-40a7-432e-a0b9-0d570c2153ff
+
+interface Windows.Devices.Lights.Effects.ILampArrayColorRampEffectFactory
+    guid 520bd133-0c74-4df5-bea7-4899e0266b0f
+
+interface Windows.Devices.Lights.Effects.ILampArrayCustomEffect
+    guid ec579170-3c34-4876-818b-5765f78b0ee4
+
+interface Windows.Devices.Lights.Effects.ILampArrayCustomEffectFactory
+    guid 68b4774d-63e5-4af0-a58b-3e535b94e8c9
+
+interface Windows.Devices.Lights.Effects.ILampArrayEffect python_type
+    py _ILampArrayEffect
+    guid 11d45590-57fb-4546-b1ce-863107f740df
+    signature {11d45590-57fb-4546-b1ce-863107f740df}
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+
+interface Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist
+    guid 7de58bfe-6f61-4103-98c7-d6632f7b9169
+
+interface Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics
+    guid fb15235c-ea35-4c7f-a016-f3bfc6a6c47d
+
+interface Windows.Devices.Lights.Effects.ILampArraySolidEffect
+    guid 441f8213-43cc-4b33-80eb-c6ddde7dc8ed
+
+interface Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory
+    guid f862a32c-5576-4341-961b-aee1f13cf9dd
+
+interface Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs
+    guid 73560d6a-576a-48af-8539-67ffa0ab3516
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+    guid 97159586-9fb0-56d4-9df4-8c36ea15100e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{11d45590-57fb-4546-b1ce-863107f740df})
+    argument Windows.Devices.Lights.Effects.ILampArrayEffect
+
+class Windows.Devices.Lights.Effects.LampArrayBitmapEffect python_type
+    py LampArrayBitmapEffect
+    signature rc(Windows.Devices.Lights.Effects.LampArrayBitmapEffect;{3238e065-d877-4627-89e5-2a88f7052fa6})
+    default Windows.Devices.Lights.Effects.ILampArrayBitmapEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayBitmapEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayEffect
+    factory Windows.Devices.Lights.Effects.ILampArrayBitmapEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffectFactory shape=195 reverse=26
+            in class type=Windows.Devices.Lights.LampArray name=lampArray
+            pass_array int32 name=lampIndexes
+            out class type=Windows.Devices.Lights.Effects.LampArrayBitmapEffect return
+    property update_interval
+        get get_UpdateInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=4 reverse=121
+            out timespan return
+        put put_UpdateInterval slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=26 reverse=156
+            in timespan name=value
+    property start_delay
+        get get_StartDelay slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=4 reverse=62
+            out timespan return
+        put put_StartDelay slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=26 reverse=110
+            in timespan name=value
+    property duration
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=4 reverse=22
+            out timespan return
+        put put_Duration slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=26 reverse=53
+            in timespan name=value
+    property suggested_bitmap_size
+        get get_SuggestedBitmapSize slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=4 reverse=162
+            out struct type=Windows.Foundation.Size return
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+    event bitmap_requested
+        add add_BitmapRequested slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayBitmapEffect,Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_BitmapRequested slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapEffect shape=26 reverse=192
+            in event_token name=token
+
+class Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs python_type
+    py LampArrayBitmapRequestedEventArgs
+    signature rc(Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs;{c8b4af9e-fe63-4d51-babd-619defb454ba})
+    default Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs
+    requires Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs
+    property since_started
+        get get_SinceStarted slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs shape=4 reverse=22
+            out timespan return
+    method update_bitmap
+        method UpdateBitmap slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBitmapRequestedEventArgs shape=4 reverse=43
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
+
+class Windows.Devices.Lights.Effects.LampArrayBlinkEffect python_type
+    py LampArrayBlinkEffect
+    signature rc(Windows.Devices.Lights.Effects.LampArrayBlinkEffect;{ebbf35f6-2fc5-4bb3-b3c3-6221a7680d13})
+    default Windows.Devices.Lights.Effects.ILampArrayBlinkEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayBlinkEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayEffect
+    factory Windows.Devices.Lights.Effects.ILampArrayBlinkEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffectFactory shape=195 reverse=26
+            in class type=Windows.Devices.Lights.LampArray name=lampArray
+            pass_array int32 name=lampIndexes
+            out class type=Windows.Devices.Lights.Effects.LampArrayBlinkEffect return
+    property sustain_duration
+        get get_SustainDuration slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=121
+            out timespan return
+        put put_SustainDuration slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=26 reverse=156
+            in timespan name=value
+    property start_delay
+        get get_StartDelay slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=202
+            out timespan return
+        put put_StartDelay slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=26 reverse=215
+            in timespan name=value
+    property repetition_mode
+        get get_RepetitionMode slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=228
+            out enum32 type=Windows.Devices.Lights.Effects.LampArrayRepetitionMode return
+        put put_RepetitionMode slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=232
+            in enum32 type=Windows.Devices.Lights.Effects.LampArrayRepetitionMode name=value
+    property repetition_delay
+        get get_RepetitionDelay slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=186
+            out timespan return
+        put put_RepetitionDelay slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=26 reverse=200
+            in timespan name=value
+    property occurrences
+        get get_Occurrences slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=218
+            out int32 return
+        put put_Occurrences slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=223
+            in int32 name=value
+    property decay_duration
+        get get_DecayDuration slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=162
+            out timespan return
+        put put_DecayDuration slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=26 reverse=181
+            in timespan name=value
+    property color
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=29
+            in struct type=Windows.UI.Color name=value
+    property attack_duration
+        get get_AttackDuration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=4 reverse=62
+            out timespan return
+        put put_AttackDuration slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayBlinkEffect shape=26 reverse=110
+            in timespan name=value
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+
+class Windows.Devices.Lights.Effects.LampArrayColorRampEffect python_type
+    py LampArrayColorRampEffect
+    signature rc(Windows.Devices.Lights.Effects.LampArrayColorRampEffect;{2b004437-40a7-432e-a0b9-0d570c2153ff})
+    default Windows.Devices.Lights.Effects.ILampArrayColorRampEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayColorRampEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayEffect
+    factory Windows.Devices.Lights.Effects.ILampArrayColorRampEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffectFactory shape=195 reverse=26
+            in class type=Windows.Devices.Lights.LampArray name=lampArray
+            pass_array int32 name=lampIndexes
+            out class type=Windows.Devices.Lights.Effects.LampArrayColorRampEffect return
+    property start_delay
+        get get_StartDelay slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=4 reverse=121
+            out timespan return
+        put put_StartDelay slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=26 reverse=156
+            in timespan name=value
+    property ramp_duration
+        get get_RampDuration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=4 reverse=62
+            out timespan return
+        put put_RampDuration slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=26 reverse=110
+            in timespan name=value
+    property completion_behavior
+        get get_CompletionBehavior slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=4 reverse=162
+            out enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior return
+        put put_CompletionBehavior slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=4 reverse=173
+            in enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior name=value
+    property color
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayColorRampEffect shape=29
+            in struct type=Windows.UI.Color name=value
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+
+class Windows.Devices.Lights.Effects.LampArrayCustomEffect python_type
+    py LampArrayCustomEffect
+    signature rc(Windows.Devices.Lights.Effects.LampArrayCustomEffect;{ec579170-3c34-4876-818b-5765f78b0ee4})
+    default Windows.Devices.Lights.Effects.ILampArrayCustomEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayCustomEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayEffect
+    factory Windows.Devices.Lights.Effects.ILampArrayCustomEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffectFactory shape=195 reverse=26
+            in class type=Windows.Devices.Lights.LampArray name=lampArray
+            pass_array int32 name=lampIndexes
+            out class type=Windows.Devices.Lights.Effects.LampArrayCustomEffect return
+    property update_interval
+        get get_UpdateInterval slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=4 reverse=62
+            out timespan return
+        put put_UpdateInterval slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=26 reverse=110
+            in timespan name=value
+    property duration
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=4 reverse=22
+            out timespan return
+        put put_Duration slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=26 reverse=53
+            in timespan name=value
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+    event update_requested
+        add add_UpdateRequested slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayCustomEffect,Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs> name=handler
+            out event_token return
+        remove remove_UpdateRequested slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayCustomEffect shape=26 reverse=156
+            in event_token name=token
+
+enum Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior python_type
+    py LampArrayEffectCompletionBehavior
+    signature enum(Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior;i4)
+
+class Windows.Devices.Lights.Effects.LampArrayEffectPlaylist activatable python_type iterable sequence
+    py LampArrayEffectPlaylist
+    signature rc(Windows.Devices.Lights.Effects.LampArrayEffectPlaylist;{7de58bfe-6f61-4103-98c7-d6632f7b9169})
+    default Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist
+    requires Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist
+    requires Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect>
+    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect>
+    factory Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property repetition_mode
+        get get_RepetitionMode slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=194
+            out enum32 type=Windows.Devices.Lights.Effects.LampArrayRepetitionMode return
+        put put_RepetitionMode slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=202
+            in enum32 type=Windows.Devices.Lights.Effects.LampArrayRepetitionMode name=value
+    property occurrences
+        get get_Occurrences slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=173
+            out int32 return
+        put put_Occurrences slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=186
+            in int32 name=value
+    property effect_start_mode
+        get get_EffectStartMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=141
+            out enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectStartMode return
+        put put_EffectStartMode slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=162
+            in enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectStartMode name=value
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=43
+            out uint32 return
+    method append
+        method Append slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=22
+            in interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=effect
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=51 reverse=24
+            in uint32 name=index
+            out interface type=Windows.Devices.Lights.Effects.ILampArrayEffect return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=117 reverse=66
+            in interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=value
+            out uint32 name=index
+            out boolean return
+    method override_z_index
+        method OverrideZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=43
+            in int32 name=zIndex
+    method pause
+        method Pause slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=0 reverse=117
+    method pause_all static
+        method PauseAll slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics shape=4 reverse=62 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> name=value
+    method start
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=0 reverse=55
+    method start_all static
+        method StartAll slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics shape=4 reverse=22 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> name=value
+    method stop
+        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=0 reverse=93
+    method stop_all static
+        method StopAll slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics shape=4 reverse=43 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> name=value
+
+enum Windows.Devices.Lights.Effects.LampArrayEffectStartMode python_type
+    py LampArrayEffectStartMode
+    signature enum(Windows.Devices.Lights.Effects.LampArrayEffectStartMode;i4)
+
+enum Windows.Devices.Lights.Effects.LampArrayRepetitionMode python_type
+    py LampArrayRepetitionMode
+    signature enum(Windows.Devices.Lights.Effects.LampArrayRepetitionMode;i4)
+
+class Windows.Devices.Lights.Effects.LampArraySolidEffect python_type
+    py LampArraySolidEffect
+    signature rc(Windows.Devices.Lights.Effects.LampArraySolidEffect;{441f8213-43cc-4b33-80eb-c6ddde7dc8ed})
+    default Windows.Devices.Lights.Effects.ILampArraySolidEffect
+    requires Windows.Devices.Lights.Effects.ILampArraySolidEffect
+    requires Windows.Devices.Lights.Effects.ILampArrayEffect
+    factory Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory shape=195 reverse=26
+            in class type=Windows.Devices.Lights.LampArray name=lampArray
+            pass_array int32 name=lampIndexes
+            out class type=Windows.Devices.Lights.Effects.LampArraySolidEffect return
+    property z_index
+        get get_ZIndex slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=22
+            out int32 return
+        put put_ZIndex slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffect shape=4 reverse=43
+            in int32 name=value
+    property start_delay
+        get get_StartDelay slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=4 reverse=121
+            out timespan return
+        put put_StartDelay slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=26 reverse=156
+            in timespan name=value
+    property duration
+        get get_Duration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=4 reverse=62
+            out timespan return
+        put put_Duration slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=26 reverse=110
+            in timespan name=value
+    property completion_behavior
+        get get_CompletionBehavior slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=4 reverse=162
+            out enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior return
+        put put_CompletionBehavior slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=4 reverse=173
+            in enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior name=value
+    property color
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=4 reverse=22
+            out struct type=Windows.UI.Color return
+        put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArraySolidEffect shape=29
+            in struct type=Windows.UI.Color name=value
+
+class Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs python_type
+    py LampArrayUpdateRequestedEventArgs
+    signature rc(Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs;{73560d6a-576a-48af-8539-67ffa0ab3516})
+    default Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs
+    requires Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs
+    property since_started
+        get get_SinceStarted slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=4 reverse=22
+            out timespan return
+    method set_color
+        method SetColor slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=29
+            in struct type=Windows.UI.Color name=desiredColor
+    method set_color_for_index
+        method SetColorForIndex slot=8 inputs=2 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=67
+            in int32 name=lampIndex
+            in struct type=Windows.UI.Color name=desiredColor
+    method set_colors_for_indices
+        method SetColorsForIndices slot=10 inputs=2 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=195 reverse=126
+            pass_array struct type=Windows.UI.Color name=desiredColors
+            pass_array int32 name=lampIndexes
+    method set_single_color_for_indices
+        method SetSingleColorForIndices slot=9 inputs=2 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=175
+            in struct type=Windows.UI.Color name=desiredColor
+            pass_array int32 name=lampIndexes
+
+enum T parameterized
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayBitmapEffect,Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs> concrete
+    guid 24b5818b-448e-53fa-ab4c-663008c5d4cf
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.Effects.LampArrayBitmapEffect;{3238e065-d877-4627-89e5-2a88f7052fa6});rc(Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs;{c8b4af9e-fe63-4d51-babd-619defb454ba}))
+    argument Windows.Devices.Lights.Effects.LampArrayBitmapEffect
+    argument Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayCustomEffect,Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs> concrete
+    guid 7d91af6e-ba44-5a0f-bc64-3901fd33661c
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.Effects.LampArrayCustomEffect;{ec579170-3c34-4876-818b-5765f78b0ee4});rc(Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs;{73560d6a-576a-48af-8539-67ffa0ab3516}))
+    argument Windows.Devices.Lights.Effects.LampArrayCustomEffect
+    argument Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs
+
+class Windows.Devices.Lights.LampArray external
+    py winrt.windows.devices.lights.LampArray
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color

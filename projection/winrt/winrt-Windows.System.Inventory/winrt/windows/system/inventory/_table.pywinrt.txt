@@ -1,0 +1,49 @@
+format 4.0
+generator 0.0.0
+namespace Windows.System.Inventory
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.Inventory.InstalledDesktopApp>> concrete
+    guid 9ffdaf80-6d25-5e34-9886-2b5d541d8324
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Inventory.InstalledDesktopApp;{75eab8ed-c0bc-5364-4c28-166e0545167a})))
+    argument Windows.Foundation.Collections.IVectorView<Windows.System.Inventory.InstalledDesktopApp>
+
+interface Windows.System.Inventory.IInstalledDesktopApp
+    guid 75eab8ed-c0bc-5364-4c28-166e0545167a
+
+interface Windows.System.Inventory.IInstalledDesktopAppStatics
+    guid 264cf74e-21cd-5f9b-6056-7866ad72489a
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Inventory.InstalledDesktopApp> concrete
+    guid ba3a2146-42dd-5fa8-a7f0-36b6973803b5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Inventory.InstalledDesktopApp;{75eab8ed-c0bc-5364-4c28-166e0545167a}))
+    argument Windows.System.Inventory.InstalledDesktopApp
+
+class Windows.System.Inventory.InstalledDesktopApp python_type stringable
+    py InstalledDesktopApp
+    signature rc(Windows.System.Inventory.InstalledDesktopApp;{75eab8ed-c0bc-5364-4c28-166e0545167a})
+    default Windows.System.Inventory.IInstalledDesktopApp
+    requires Windows.System.Inventory.IInstalledDesktopApp
+    requires Windows.Foundation.IStringable
+    factory Windows.System.Inventory.IInstalledDesktopAppStatics
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=43
+            out string return
+    property display_version
+        get get_DisplayVersion slot=9 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=99
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=22
+            out string return
+    property publisher
+        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=62
+            out string return
+    method get_inventory_async static
+        method GetInventoryAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopAppStatics shape=4 reverse=22 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.Inventory.InstalledDesktopApp>> return
+    method to_string
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+            out string return
+
+interface Windows.Foundation.IStringable external
+    py winrt.windows.foundation._IStringable
+    guid 96369f54-8eb6-48f0-abce-c1b211e627c3

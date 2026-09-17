@@ -1,0 +1,133 @@
+format 4.0
+generator 0.0.0
+namespace Windows.ApplicationModel.SocialInfo.Provider
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    argument System.Boolean
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater> concrete
+    guid 8bbca9a4-a4fc-5fe2-b6b1-0e5a75d05b07
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater;{3cde9dc9-4800-46cd-869b-1973ec685bde}))
+    argument Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater> concrete
+    guid 4efa4da9-c556-59f4-9d99-e7801c5b0f45
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater;{7a0c0aa7-ed89-4bd5-a8d9-15f4d9861c10}))
+    argument Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater
+
+interface Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater
+    guid 3cde9dc9-4800-46cd-869b-1973ec685bde
+
+interface Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater
+    guid 7a0c0aa7-ed89-4bd5-a8d9-15f4d9861c10
+
+interface Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics
+    guid 1b88e52b-7787-48d6-aa12-d8e8f47ab85a
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialFeedItem> concrete
+    guid 36cd5297-36c3-56a7-9656-ec9d5bde7aba
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.SocialInfo.SocialFeedItem;{4f1392ab-1f72-4d33-b695-de3e1db60317}))
+    argument Windows.ApplicationModel.SocialInfo.SocialFeedItem
+
+class Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater python_type
+    py SocialDashboardItemUpdater
+    signature rc(Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater;{3cde9dc9-4800-46cd-869b-1973ec685bde})
+    default Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater
+    requires Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater
+    property timestamp
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=62 deprecated
+            out datetime return
+        put put_Timestamp slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=26 reverse=110 deprecated
+            in datetime name=value
+    property thumbnail
+        get get_Thumbnail slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=141 deprecated
+            out class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail return
+        put put_Thumbnail slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=121 deprecated
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+    property target_uri
+        get get_TargetUri slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=173 deprecated
+            out class type=Windows.Foundation.Uri return
+        put put_TargetUri slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=186 deprecated
+            in class type=Windows.Foundation.Uri name=value
+    property content
+        get get_Content slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=43 deprecated
+            out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
+    property owner_remote_id
+        get get_OwnerRemoteId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=22 deprecated
+            out string return
+    method commit_async deprecated
+        method CommitAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 reverse=162 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater python_type
+    py SocialFeedUpdater
+    signature rc(Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater;{7a0c0aa7-ed89-4bd5-a8d9-15f4d9861c10})
+    default Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater
+    requires Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater
+    property items
+        get get_Items slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 reverse=62 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialFeedItem> return
+    property kind
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 reverse=43 deprecated
+            out enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedKind return
+    property owner_remote_id
+        get get_OwnerRemoteId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 reverse=22 deprecated
+            out string return
+    method commit_async deprecated
+        method CommitAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 reverse=99 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager static python_type
+    py SocialInfoProviderManager
+    factory Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics
+    method create_dashboard_item_updater_async static deprecated
+        method CreateDashboardItemUpdaterAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 reverse=44 static deprecated
+            in string name=ownerRemoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater> return
+    method create_social_feed_updater_async static deprecated
+        method CreateSocialFeedUpdaterAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=195 reverse=26 static deprecated
+            in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedKind name=kind
+            in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode name=mode
+            in string name=ownerRemoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater> return
+    method deprovision_async static deprecated
+        method DeprovisionAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=4 reverse=141 static deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+    method provision_async static deprecated
+        method ProvisionAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=4 reverse=121 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method report_new_content_available static deprecated
+        method ReportNewContentAvailable slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 reverse=100 static deprecated
+            in string name=contactRemoteId
+            in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedKind name=kind
+    method update_badge_count_value static deprecated
+        method UpdateBadgeCountValue slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 reverse=65 static deprecated
+            in string name=itemRemoteId
+            in int32 name=newCount
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class Windows.ApplicationModel.SocialInfo.SocialFeedContent external
+    py winrt.windows.applicationmodel.socialinfo.SocialFeedContent
+
+class Windows.ApplicationModel.SocialInfo.SocialFeedItem external
+    py winrt.windows.applicationmodel.socialinfo.SocialFeedItem
+
+enum Windows.ApplicationModel.SocialInfo.SocialFeedKind external
+    py winrt.windows.applicationmodel.socialinfo.SocialFeedKind
+
+enum Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode external
+    py winrt.windows.applicationmodel.socialinfo.SocialFeedUpdateMode
+
+class Windows.ApplicationModel.SocialInfo.SocialItemThumbnail external
+    py winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

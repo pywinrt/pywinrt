@@ -1,0 +1,221 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Web.Http.Diagnostics
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticProvider python_type
+    py HttpDiagnosticProvider
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProvider;{bd811501-a056-4d39-b174-833b7b03b02c})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider
+    factory Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics
+    event request_response_completed
+        add add_RequestResponseCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=163
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs> name=handler
+            out event_token return
+        remove remove_RequestResponseCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=181
+            in event_token name=token
+    event request_sent
+        add add_RequestSent slot=8 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=65
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs> name=handler
+            out event_token return
+        remove remove_RequestSent slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=110
+            in event_token name=token
+    event response_received
+        add add_ResponseReceived slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs> name=handler
+            out event_token return
+        remove remove_ResponseReceived slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=156
+            in event_token name=token
+    method create_from_process_diagnostic_info static
+        method CreateFromProcessDiagnosticInfo slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics shape=51 reverse=24 static
+            in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=processDiagnosticInfo
+            out class type=Windows.Web.Http.Diagnostics.HttpDiagnosticProvider return
+    method start
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=0 reverse=16
+    method stop
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=0 reverse=37
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs python_type
+    py HttpDiagnosticProviderRequestResponseCompletedEventArgs
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs;{735f98ee-94f6-4532-b26e-61e1b1e4efd4})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs
+    property activity_id
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=22
+            out guid return
+    property initiator
+        get get_Initiator slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=141
+            out enum32 type=Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator return
+    property process_id
+        get get_ProcessId slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=99
+            out uint32 return
+    property requested_uri
+        get get_RequestedUri slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+    property source_locations
+        get get_SourceLocations slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation> return
+    property thread_id
+        get get_ThreadId slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=121
+            out uint32 return
+    property timestamps
+        get get_Timestamps slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs shape=4 reverse=43
+            out class type=Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps return
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps python_type
+    py HttpDiagnosticProviderRequestResponseTimestamps
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps;{e0afde10-55cf-4c01-91d4-a20557d849f0})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps
+    property cache_checked_timestamp
+        get get_CacheCheckedTimestamp slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=22
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property connection_completed_timestamp
+        get get_ConnectionCompletedTimestamp slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property connection_initiated_timestamp
+        get get_ConnectionInitiatedTimestamp slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property name_resolved_timestamp
+        get get_NameResolvedTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property request_completed_timestamp
+        get get_RequestCompletedTimestamp slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=162
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property request_sent_timestamp
+        get get_RequestSentTimestamp slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=141
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property response_completed_timestamp
+        get get_ResponseCompletedTimestamp slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=186
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property response_received_timestamp
+        get get_ResponseReceivedTimestamp slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=173
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property ssl_negotiated_timestamp
+        get get_SslNegotiatedTimestamp slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs python_type
+    py HttpDiagnosticProviderRequestSentEventArgs
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs;{3f5196d0-4c1f-4ebe-a57a-06930771c50d})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs
+    property activity_id
+        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=43
+            out guid return
+    property initiator
+        get get_Initiator slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=141
+            out enum32 type=Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator return
+    property message
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=62
+            out class type=Windows.Web.Http.HttpRequestMessage return
+    property process_id
+        get get_ProcessId slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=99
+            out uint32 return
+    property source_locations
+        get get_SourceLocations slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=162
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation> return
+    property thread_id
+        get get_ThreadId slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=121
+            out uint32 return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs shape=4 reverse=22
+            out datetime return
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs python_type
+    py HttpDiagnosticProviderResponseReceivedEventArgs
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs;{a0a2566c-ab5f-4d66-bb2d-084cf41635d0})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs
+    property activity_id
+        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs shape=4 reverse=43
+            out guid return
+    property message
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs shape=4 reverse=62
+            out class type=Windows.Web.Http.HttpResponseMessage return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs shape=4 reverse=22
+            out datetime return
+
+enum Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator python_type
+    py HttpDiagnosticRequestInitiator
+    signature enum(Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator;i4)
+
+class Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation python_type
+    py HttpDiagnosticSourceLocation
+    signature rc(Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation;{54a9d260-8860-423f-b6fa-d77716f647a7})
+    default Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation
+    requires Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation
+    property column_number
+        get get_ColumnNumber slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation shape=4 reverse=62
+            out uint64 return
+    property line_number
+        get get_LineNumber slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation shape=4 reverse=43
+            out uint64 return
+    property source_uri
+        get get_SourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider
+    guid bd811501-a056-4d39-b174-833b7b03b02c
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseCompletedEventArgs
+    guid 735f98ee-94f6-4532-b26e-61e1b1e4efd4
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestResponseTimestamps
+    guid e0afde10-55cf-4c01-91d4-a20557d849f0
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderRequestSentEventArgs
+    guid 3f5196d0-4c1f-4ebe-a57a-06930771c50d
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderResponseReceivedEventArgs
+    guid a0a2566c-ab5f-4d66-bb2d-084cf41635d0
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics
+    guid 5b824ec1-6a6c-47cc-afec-1e86bc26053b
+
+interface Windows.Web.Http.Diagnostics.IHttpDiagnosticSourceLocation
+    guid 54a9d260-8860-423f-b6fa-d77716f647a7
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    argument Windows.Foundation.DateTime
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation> concrete
+    guid e9af27d3-80e8-5aff-a7e5-1b221787f096
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation;{54a9d260-8860-423f-b6fa-d77716f647a7}))
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs> concrete
+    guid 2281ad23-9c8d-5d82-9b20-bcf157b04fd9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProvider;{bd811501-a056-4d39-b174-833b7b03b02c});rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs;{735f98ee-94f6-4532-b26e-61e1b1e4efd4}))
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProvider
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs> concrete
+    guid f8e10321-47bd-526a-a9b2-3bf12f725f8b
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProvider;{bd811501-a056-4d39-b174-833b7b03b02c});rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs;{3f5196d0-4c1f-4ebe-a57a-06930771c50d}))
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProvider
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs> concrete
+    guid 2eef1846-8176-52af-8d2b-e0c932512e9f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProvider;{bd811501-a056-4d39-b174-833b7b03b02c});rc(Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs;{a0a2566c-ab5f-4d66-bb2d-084cf41635d0}))
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProvider
+    argument Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+class Windows.System.Diagnostics.ProcessDiagnosticInfo external
+    py winrt.windows.system.diagnostics.ProcessDiagnosticInfo
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

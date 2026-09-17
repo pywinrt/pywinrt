@@ -1,0 +1,196 @@
+format 4.0
+generator 0.0.0
+namespace Windows.Devices.SerialCommunication
+
+class Windows.Devices.SerialCommunication.ErrorReceivedEventArgs python_type
+    py ErrorReceivedEventArgs
+    signature rc(Windows.Devices.SerialCommunication.ErrorReceivedEventArgs;{fcc6bf59-1283-4d8a-bfdf-566b33ddb28f})
+    default Windows.Devices.SerialCommunication.IErrorReceivedEventArgs
+    requires Windows.Devices.SerialCommunication.IErrorReceivedEventArgs
+    property error
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.IErrorReceivedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.SerialCommunication.SerialError return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SerialCommunication.SerialDevice> concrete
+    guid 44ef26ed-c1ff-546a-a46b-6a37de9187fb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SerialCommunication.SerialDevice;{e187ccc6-2210-414f-b65a-f5553a03372a}))
+    argument Windows.Devices.SerialCommunication.SerialDevice
+
+interface Windows.Devices.SerialCommunication.IErrorReceivedEventArgs
+    guid fcc6bf59-1283-4d8a-bfdf-566b33ddb28f
+
+interface Windows.Devices.SerialCommunication.IPinChangedEventArgs
+    guid a2bf1db0-fc9c-4607-93d0-fa5e8343ee22
+
+interface Windows.Devices.SerialCommunication.ISerialDevice
+    guid e187ccc6-2210-414f-b65a-f5553a03372a
+
+interface Windows.Devices.SerialCommunication.ISerialDeviceStatics
+    guid 058c4a70-0836-4993-ae1a-b61ae3be056b
+
+class Windows.Devices.SerialCommunication.PinChangedEventArgs python_type
+    py PinChangedEventArgs
+    signature rc(Windows.Devices.SerialCommunication.PinChangedEventArgs;{a2bf1db0-fc9c-4607-93d0-fa5e8343ee22})
+    default Windows.Devices.SerialCommunication.IPinChangedEventArgs
+    requires Windows.Devices.SerialCommunication.IPinChangedEventArgs
+    property pin_change
+        get get_PinChange slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.IPinChangedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.Devices.SerialCommunication.SerialPinChange return
+
+class Windows.Devices.SerialCommunication.SerialDevice python_type closeable
+    py SerialDevice
+    signature rc(Windows.Devices.SerialCommunication.SerialDevice;{e187ccc6-2210-414f-b65a-f5553a03372a})
+    default Windows.Devices.SerialCommunication.ISerialDevice
+    requires Windows.Devices.SerialCommunication.ISerialDevice
+    requires Windows.Foundation.IClosable
+    factory Windows.Devices.SerialCommunication.ISerialDeviceStatics
+    property is_data_terminal_ready_enabled
+        get get_IsDataTerminalReadyEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=218
+            out boolean return
+        put put_IsDataTerminalReadyEnabled slot=19 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=223
+            in boolean name=value
+    property data_bits
+        get get_DataBits slot=13 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=173
+            out uint16 return
+        put put_DataBits slot=14 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=186
+            in uint16 name=value
+    property handshake
+        get get_Handshake slot=16 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=202
+            out enum32 type=Windows.Devices.SerialCommunication.SerialHandshake return
+        put put_Handshake slot=17 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=210
+            in enum32 type=Windows.Devices.SerialCommunication.SerialHandshake name=value
+    property break_signal_state
+        get get_BreakSignalState slot=8 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=62
+            out boolean return
+        put put_BreakSignalState slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=99
+            in boolean name=value
+    property baud_rate
+        get get_BaudRate slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=22
+            out uint32 return
+        put put_BaudRate slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=43
+            in uint32 name=value
+    property write_timeout
+        get get_WriteTimeout slot=31 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=273
+            out timespan return
+        put put_WriteTimeout slot=32 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=26 reverse=283
+            in timespan name=value
+    property stop_bits
+        get get_StopBits slot=27 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=259
+            out enum32 type=Windows.Devices.SerialCommunication.SerialStopBitCount return
+        put put_StopBits slot=28 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=263
+            in enum32 type=Windows.Devices.SerialCommunication.SerialStopBitCount name=value
+    property read_timeout
+        get get_ReadTimeout slot=25 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=252
+            out timespan return
+        put put_ReadTimeout slot=26 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=26 reverse=257
+            in timespan name=value
+    property parity
+        get get_Parity slot=22 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=237
+            out enum32 type=Windows.Devices.SerialCommunication.SerialParity return
+        put put_Parity slot=23 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=242
+            in enum32 type=Windows.Devices.SerialCommunication.SerialParity name=value
+    property is_request_to_send_enabled
+        get get_IsRequestToSendEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=228
+            out boolean return
+        put put_IsRequestToSendEnabled slot=21 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=232
+            in boolean name=value
+    property bytes_received
+        get get_BytesReceived slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=121
+            out uint32 return
+    property carrier_detect_state
+        get get_CarrierDetectState slot=11 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=141
+            out boolean return
+    property clear_to_send_state
+        get get_ClearToSendState slot=12 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=162
+            out boolean return
+    property data_set_ready_state
+        get get_DataSetReadyState slot=15 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=194
+            out boolean return
+    property input_stream
+        get get_InputStream slot=33 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=285
+            out interface type=Windows.Storage.Streams.IInputStream return
+    property output_stream
+        get get_OutputStream slot=34 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=288
+            out interface type=Windows.Storage.Streams.IOutputStream return
+    property port_name
+        get get_PortName slot=24 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=247
+            out string return
+    property usb_product_id
+        get get_UsbProductId slot=30 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=270
+            out uint16 return
+    property usb_vendor_id
+        get get_UsbVendorId slot=29 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=4 reverse=266
+            out uint16 return
+    event error_received
+        add add_ErrorReceived slot=35 inputs=1 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=51 reverse=293
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.ErrorReceivedEventArgs> name=reportHandler
+            out event_token return
+        remove remove_ErrorReceived slot=36 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=26 reverse=298
+            in event_token name=token
+    event pin_changed
+        add add_PinChanged slot=37 inputs=1 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=51 reverse=300
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.PinChangedEventArgs> name=reportHandler
+            out event_token return
+        remove remove_PinChanged slot=38 inputs=1 outputs=0 declaring=Windows.Devices.SerialCommunication.ISerialDevice shape=26 reverse=305
+            in event_token name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+    method from_id_async static
+        method FromIdAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDeviceStatics shape=51 reverse=100 static
+            in string name=deviceId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SerialCommunication.SerialDevice> return
+    method get_device_selector static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDeviceStatics shape=4 reverse=22 static
+            out string return
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDeviceStatics shape=51 reverse=44 static
+            in string name=portName
+            out string return
+    method get_device_selector_from_usb_vid_pid static
+        method GetDeviceSelectorFromUsbVidPid slot=8 inputs=2 outputs=1 declaring=Windows.Devices.SerialCommunication.ISerialDeviceStatics shape=117 reverse=66 static
+            in uint16 name=vendorId
+            in uint16 name=productId
+            out string return
+
+enum Windows.Devices.SerialCommunication.SerialError python_type
+    py SerialError
+    signature enum(Windows.Devices.SerialCommunication.SerialError;i4)
+
+enum Windows.Devices.SerialCommunication.SerialHandshake python_type
+    py SerialHandshake
+    signature enum(Windows.Devices.SerialCommunication.SerialHandshake;i4)
+
+enum Windows.Devices.SerialCommunication.SerialParity python_type
+    py SerialParity
+    signature enum(Windows.Devices.SerialCommunication.SerialParity;i4)
+
+enum Windows.Devices.SerialCommunication.SerialPinChange python_type
+    py SerialPinChange
+    signature enum(Windows.Devices.SerialCommunication.SerialPinChange;i4)
+
+enum Windows.Devices.SerialCommunication.SerialStopBitCount python_type
+    py SerialStopBitCount
+    signature enum(Windows.Devices.SerialCommunication.SerialStopBitCount;i4)
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.ErrorReceivedEventArgs> concrete
+    guid d92ea323-b7bf-5e02-b9fb-c61f97d080e9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SerialCommunication.SerialDevice;{e187ccc6-2210-414f-b65a-f5553a03372a});rc(Windows.Devices.SerialCommunication.ErrorReceivedEventArgs;{fcc6bf59-1283-4d8a-bfdf-566b33ddb28f}))
+    argument Windows.Devices.SerialCommunication.SerialDevice
+    argument Windows.Devices.SerialCommunication.ErrorReceivedEventArgs
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.PinChangedEventArgs> concrete
+    guid e496c3ef-5802-5ac4-ac2e-96bc23fa9447
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SerialCommunication.SerialDevice;{e187ccc6-2210-414f-b65a-f5553a03372a});rc(Windows.Devices.SerialCommunication.PinChangedEventArgs;{a2bf1db0-fc9c-4607-93d0-fa5e8343ee22}))
+    argument Windows.Devices.SerialCommunication.SerialDevice
+    argument Windows.Devices.SerialCommunication.PinChangedEventArgs
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
+
+interface Windows.Storage.Streams.IOutputStream external
+    py winrt.windows.storage.streams._IOutputStream
+    guid 905a0fe6-bc53-11df-8c49-001e4fc686da
