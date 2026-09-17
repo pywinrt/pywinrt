@@ -8,6 +8,7 @@
 #include <pywinrt/abi.h>
 #include <pywinrt/convert.h>
 #include <pywinrt/errors.h>
+#include <pywinrt/handles.h>
 #include <pywinrt/prelude.h>
 #include <pywinrt/traits.h>
 
@@ -79,18 +80,15 @@ namespace py
 
     template<typename T>
     inline constexpr const char*
-        buffer_format<T, std::enable_if_t<is_class_category_v<T>>>
-        = "P";
+        buffer_format<T, std::enable_if_t<is_class_category_v<T>>> = "P";
 
     template<typename T>
     inline constexpr const char*
-        buffer_format<T, std::enable_if_t<is_interface_category_v<T>>>
-        = "P";
+        buffer_format<T, std::enable_if_t<is_interface_category_v<T>>> = "P";
 
     template<typename T>
     constexpr const char*
-        buffer_format<T, std::enable_if_t<is_pinterface_category_v<T>>>
-        = "P";
+        buffer_format<T, std::enable_if_t<is_pinterface_category_v<T>>> = "P";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Foundation::DateTime>
@@ -125,27 +123,24 @@ namespace py
 
         pybuf_view() = delete;
 
+        // the flags assume pybuf_view is always treated as read-only
         pybuf_view(PyObject* obj)
+            : m_buffer{
+                  throw_if_pyobj_null(obj),
+                  PyBUF_C_CONTIGUOUS | PyBUF_FORMAT | (writeable ? PyBUF_WRITABLE : 0)}
         {
-            throw_if_pyobj_null(obj);
-
-            // this is assuming pybuf_view is always treated as read-only
-            if (PyObject_GetBuffer(
-                    obj,
-                    &view,
-                    PyBUF_C_CONTIGUOUS | PyBUF_FORMAT
-                        | (writeable ? PyBUF_WRITABLE : 0))
-                == -1)
+            if (!m_buffer)
             {
                 throw python_exception();
             }
+
+            auto const& view = m_buffer.view();
 
             // TODO: if view.format == "P", we should try to verify the pointer type
 
             if (!buffer<T>::is_compatible(view))
             {
-                PyBuffer_Release(&view);
-
+                // m_buffer is a constructed member, so it releases as this throws
                 throw python_exception();
             }
 
@@ -153,13 +148,8 @@ namespace py
             this->m_size = static_cast<size_type>(view.shape[0]);
         }
 
-        ~pybuf_view()
-        {
-            PyBuffer_Release(&view);
-        }
-
       private:
-        Py_buffer view;
+        buffer_view m_buffer;
     };
 
     template<typename T, bool writeable>

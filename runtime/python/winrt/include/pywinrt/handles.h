@@ -101,6 +101,59 @@ namespace py
 
     using pyobj_handle = winrt::handle_type<pyobj_ptr_traits>;
 
+    /**
+     * Holds a Py_buffer for as long as it is in scope.
+     *
+     * Like the GIL above, this one is not a winrt::handle_type: a Py_buffer is
+     * a struct the caller owns rather than a pointer with a spare value to
+     * stand for "holding nothing", and PyBuffer_Release() is given its address.
+     *
+     * The buffer is requested by the constructor, with the PyBUF_ @p flags, so
+     * check the object before reading anything from it: when it is false, the
+     * object could not supply one and a Python error is set.
+     */
+    struct buffer_view
+    {
+        buffer_view(PyObject* obj, int flags) noexcept
+            : m_valid{PyObject_GetBuffer(obj, &m_view, flags) == 0}
+        {
+        }
+
+        buffer_view(buffer_view const&) = delete;
+        buffer_view& operator=(buffer_view const&) = delete;
+
+        ~buffer_view() noexcept
+        {
+            // a no-op when the request failed, since the view is still zeroed
+            PyBuffer_Release(&m_view);
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return m_valid;
+        }
+
+        /** The view itself, for the fields the accessors below do not cover. */
+        Py_buffer const& view() const noexcept
+        {
+            return m_view;
+        }
+
+        void* data() const noexcept
+        {
+            return m_view.buf;
+        }
+
+        size_t size() const noexcept
+        {
+            return static_cast<size_t>(m_view.len);
+        }
+
+      private:
+        Py_buffer m_view{};
+        bool m_valid;
+    };
+
     struct pytype_ptr_traits
     {
         using type = PyTypeObject*;

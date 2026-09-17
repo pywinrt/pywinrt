@@ -176,7 +176,12 @@ namespace py
         }
     }
 
-    inline void throw_if_pyobj_null(PyObject* obj)
+    /**
+     * Throws if @p obj is null, and otherwise hands it back, so that the check
+     * can stand in front of something that takes the object - a member
+     * initializer, say - rather than only being a statement of its own.
+     */
+    inline PyObject* throw_if_pyobj_null(PyObject* obj)
     {
         if (!obj)
         {
@@ -186,6 +191,8 @@ namespace py
             }
             throw python_exception();
         }
+
+        return obj;
     }
 
     /**
