@@ -428,6 +428,7 @@ namespace py::cpp::_winrt
         .pymap_remove = py::pymap_remove,
         .pymap_clear = py::pymap_clear,
         .pymap_iter_next = py::pymap_iter_next,
+        .type_registry_epoch = &type_registry_epoch,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
@@ -616,6 +617,10 @@ namespace py::cpp::_winrt
             Py_XDECREF(value);
         }
 
+        // Modules memoize what they looked up here, and those memos are now
+        // pointers to types nothing holds any more.
+        type_registry_epoch++;
+
         return 0;
     }
 
@@ -638,6 +643,8 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->type_cache);
 
         std::destroy_at(&state->struct_from_tuple_cache);
+
+        type_registry_epoch++;
     }
 
     // Not using a header file for thes because setuptools doesn't have a nice
@@ -770,6 +777,8 @@ namespace py::cpp::_winrt
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
         std::construct_at(&state->type_cache);
         std::construct_at(&state->struct_from_tuple_cache);
+
+        type_registry_epoch++;
 
         py::pytype_handle inspectable_meta_type{py::register_python_type(
             module.get(), &IInspectable_Static_type_spec, nullptr, nullptr)};

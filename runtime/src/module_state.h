@@ -19,4 +19,14 @@ namespace py::cpp::_winrt
     };
 
     module_state* get_module_state() noexcept;
+
+    /**
+     * The counter behind py::get_type_registry_epoch().
+     *
+     * It is not part of the module state on purpose: what it tells a module is
+     * that the state it memoized something out of is gone, so it has to
+     * outlive every state, and it is bumped whenever one is created or torn
+     * down.
+     */
+    extern uint64_t type_registry_epoch;
 } // namespace py::cpp::_winrt

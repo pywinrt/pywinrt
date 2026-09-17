@@ -212,6 +212,9 @@ namespace py
     //    runtime. It is a captureless lambda in the generated code, so what
     //    crosses is a plain function pointer, but its signature is contract
     //    like everything else here.
+    //  - The type registry epoch, which crosses as an address rather than as a
+    //    call: the runtime owns the counter, every module holds a pointer to
+    //    it for the lifetime of the process, and only the runtime writes it.
     //
     // What does not cross, although it looks like it might: py::delegate_callable
     // is held inside a module's own delegate implementations and never handed to
@@ -339,7 +342,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 6;
+    const uint16_t runtime_abi_version_minor = 7;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -348,6 +351,27 @@ namespace py
         PyTypeObject* metaclass) noexcept;
     PyTypeObject* get_python_type(std::string_view qualified_name) noexcept;
     void* get_struct_from_tuple_func(std::string_view capsule_name) noexcept;
+
+    /**
+     * How many times the type registry that get_python_type() and
+     * get_struct_from_tuple_func() answer from has been created or torn down.
+     *
+     * Both of those look their argument up by string on every call, so
+     * <pywinrt/convert.h> remembers what they said. What a memo is good for is
+     * one registry: the values in it are borrowed from the registry, which
+     * builds its own set of wrapper types for each interpreter that imports
+     * the projection and drops them when that interpreter is finalized. A memo
+     * therefore names the interpreter it was taken in - two live interpreters
+     * have different wrapper types for the same WinRT type - and the value of
+     * this counter, which changes whenever a registry appears or goes away and
+     * so catches the interpreter that was finalized and replaced at the same
+     * address.
+     *
+     * This is a counter rather than a call because it is read on every
+     * conversion, which is what the memo exists to make cheap: the capsule
+     * carries its address and a module reads it directly.
+     */
+    uint64_t get_type_registry_epoch() noexcept;
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
     bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
@@ -493,6 +517,10 @@ namespace py
         decltype(pymap_remove)* pymap_remove;
         decltype(pymap_clear)* pymap_clear;
         decltype(pymap_iter_next)* pymap_iter_next;
+        /// The counter behind get_type_registry_epoch(), which a module reads
+        /// rather than calls. It lives in the runtime and is never written by
+        /// a module.
+        const uint64_t* type_registry_epoch;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -574,6 +602,12 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_struct_from_tuple_func);
         return (*PyWinRT_API->get_struct_from_tuple_func)(capsule_name);
+    }
+
+    inline uint64_t get_type_registry_epoch() noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->type_registry_epoch);
+        return *PyWinRT_API->type_registry_epoch;
     }
 
     inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
