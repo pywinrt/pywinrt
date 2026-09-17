@@ -320,7 +320,8 @@ synchronously (i.e. when not using ``asyncio``).
     whichever comes first.
 
     Args:
-        timeout: The timeout in seconds.
+        timeout: The timeout in seconds. A timeout that is not a positive
+            number of seconds returns the status as it stands, without waiting.
 
     Returns:
         The status of the operation. In case of a timeout, the status will be

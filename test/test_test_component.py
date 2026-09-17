@@ -652,6 +652,16 @@ class TestTestComponent(unittest.TestCase):
         status = tc.TestRunner.create_async_action(1000).wait(0.1)
         self.assertEqual(status, wf.AsyncStatus.STARTED)
 
+    def test_async_action_wait_not_a_duration(self):
+        # A timeout that is not a positive number of seconds asks for the
+        # status as it stands rather than for a wait. Each one gets its own
+        # operation because a WinRT async object accepts only one completed
+        # handler, so a second wait on a running one is an error.
+        for timeout in (0, -1, float("nan")):
+            with self.subTest(timeout=timeout):
+                op = tc.TestRunner.create_async_action(1000)
+                self.assertEqual(op.wait(timeout), wf.AsyncStatus.STARTED)
+
     def test_async_action_wait_cancel(self):
         op = tc.TestRunner.create_async_action(10)
         op.cancel()
@@ -666,6 +676,74 @@ class TestTestComponent(unittest.TestCase):
         expected = 1
         actual = tc.TestRunner.create_async_operation(10, expected).get()
         self.assertEqual(expected, actual)
+
+    def test_async_operation_get_sta(self):
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaises(RuntimeError):
+                tc.TestRunner.create_async_operation(10, 1).get()
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_operation_get_cancel(self):
+        op = tc.TestRunner.create_async_operation(10, 1)
+        op.cancel()
+        with self.assertRaises(OSError) as ctx:
+            op.get()
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+
+    def test_async_operation_get_error(self):
+        with self.assertRaises(OSError) as ctx:
+            tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).get()
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+
+    def test_async_operation_wait_sta(self):
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaises(RuntimeError):
+                tc.TestRunner.create_async_operation(10, 1).wait(1)
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_operation_wait(self):
+        status = tc.TestRunner.create_async_operation(10, 1).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_operation_wait_timeout(self):
+        status = tc.TestRunner.create_async_operation(1000, 1).wait(0.1)
+        self.assertEqual(status, wf.AsyncStatus.STARTED)
+
+    def test_async_operation_wait_cancel(self):
+        op = tc.TestRunner.create_async_operation(10, 1)
+        op.cancel()
+        status = op.wait(1)
+        self.assertEqual(status, wf.AsyncStatus.CANCELED)
+
+    def test_async_operation_wait_error(self):
+        status = tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.ERROR)
+
+    def test_async_action_with_progress_get(self):
+        tc.TestRunner.create_async_action_with_progress(10, [1, 2]).get()
+
+    def test_async_action_with_progress_wait(self):
+        status = tc.TestRunner.create_async_action_with_progress(10, [1, 2]).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_operation_with_progress_get(self):
+        expected = 3
+        actual = tc.TestRunner.create_async_operation_with_progress(
+            10, [1, 2], expected
+        ).get()
+        self.assertEqual(expected, actual)
+
+    def test_async_operation_with_progress_wait(self):
+        status = tc.TestRunner.create_async_operation_with_progress(10, [1, 2], 3).wait(
+            1
+        )
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
     @async_test
     async def test_async_action(self):

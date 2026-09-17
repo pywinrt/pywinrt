@@ -4,7 +4,7 @@
     },
     "runtime_abi": {
         "major": 4,
-        "minor": 4
+        "minor": 5
     },
     "required": [
         "winui3-Microsoft.UI.Xaml",

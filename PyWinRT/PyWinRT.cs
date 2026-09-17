@@ -30,7 +30,7 @@ static class PyWinRT
     /// one reached through an inline header, since the generated code carries
     /// those along.
     /// </remarks>
-    public const int RequiredAbiMinor = 4;
+    public const int RequiredAbiMinor = 5;
 
     private static string GetVersionString()
     {
