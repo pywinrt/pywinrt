@@ -66,11 +66,27 @@
   performs the same query on every such call anyway, so this costs nothing and
   answers the question the call actually depends on. Members declared by the
   default interface of a class are no longer checked at all, since an object
-  cannot exist without implementing it. Static members and constructors, which
-  have no object to query, keep the `ApiInformation` check. This removes 43,320
-  of the 52,777 checks and makes the projection 13.5 % smaller: 151.95 MB to
-  131.49 MB over all 424 modules, with the largest packages gaining the most
+  cannot exist without implementing it. This removes 43,320 of the 52,777
+  checks and makes the projection 13.5 % smaller: 151.95 MB to 131.49 MB over
+  all 424 modules, with the largest packages gaining the most
   (`winrt-Microsoft.UI.Xaml.Controls` 12.1 MB to 11.0 MB).
+- Static members are no longer checked against `ApiInformation` before they are
+  called either. There is no object to query for one, so the call is simply
+  made: reaching a static that this version of Windows does not have fails in
+  the activation factory, and the metadata is consulted only then, to say so.
+  That removes the remaining 9,457 checks and, with them, the metadata
+  machinery they linked into every module - 2.8 % of the compiled code across
+  the 35 modules of the reduced projection, and 19 % for a small package such
+  as `winrt-Windows.UI`, most of whose size was that machinery. Two things
+  change in what you see: the `AttributeError` now names the member, as in
+  `method 'Windows.Media.Ocr.OcrEngine.IsLanguageSupported' is not available in
+  this version of Windows`, and an argument that cannot be converted raises
+  `TypeError` before it, where the version error used to come first.
+- A projection generated with `--component-dlls` now gets that check as well.
+  It was left out because `ApiInformation` cannot always answer for a
+  third-party component; now that the question is only asked after a call has
+  failed, an unanswerable one costs nothing and falls back to reporting the
+  `HRESULT`.
 - The `winrt-runtime` C API now also exports the function that formats the error
   for a member an object does not implement, so that the metadata machinery it
   needs is linked into one module instead of all of them. This raises the minor

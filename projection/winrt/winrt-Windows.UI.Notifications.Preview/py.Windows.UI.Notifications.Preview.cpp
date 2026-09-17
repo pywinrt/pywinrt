@@ -19,21 +19,10 @@ namespace py::cpp::Windows::UI::Notifications::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview", "SetToastWindowMargin", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview", L"SetToastWindowMargin", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -46,7 +35,7 @@ namespace py::cpp::Windows::UI::Notifications::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

@@ -19,21 +19,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Gaming.Input.Custom.GameControllerFactoryManager", "RegisterCustomFactoryForGipInterface", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForGipInterface", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -46,7 +35,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -63,21 +52,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Gaming.Input.Custom.GameControllerFactoryManager", "RegisterCustomFactoryForHardwareId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForHardwareId", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
@@ -91,7 +69,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -108,21 +86,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Gaming.Input.Custom.GameControllerFactoryManager", "RegisterCustomFactoryForXusbType", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"RegisterCustomFactoryForXusbType", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>(args, 2);
@@ -136,7 +103,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -153,21 +120,10 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Gaming.Input.Custom.GameControllerFactoryManager", "TryGetFactoryControllerFromGameController", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Custom.GameControllerFactoryManager", L"TryGetFactoryControllerFromGameController", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 1);
 
@@ -179,7 +135,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

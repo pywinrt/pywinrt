@@ -45,23 +45,6 @@ namespace py
         set_call_error(call_error::cannot_instantiate, &site, 0);
     }
 
-    /**
-     * Reports that no overload of a versioned static member takes @p arg_count
-     * arguments on this version of Windows.
-     *
-     * Unlike the other errors here this one is not passed to the runtime,
-     * because it belongs to the @c ApiInformation probe that the generator
-     * emits around a versioned static overload rather than to the call itself.
-     */
-    inline WINRT_IMPL_NOINLINE void set_arg_count_version_error(
-        Py_ssize_t arg_count) noexcept
-    {
-        PyErr_Format(
-            PyExc_AttributeError,
-            "method overload with %zd arg(s) is not available in this version of Windows",
-            arg_count);
-    }
-
     inline WINRT_IMPL_NOINLINE void set_invalid_arg_count_error(
         Py_ssize_t arg_count) noexcept
     {

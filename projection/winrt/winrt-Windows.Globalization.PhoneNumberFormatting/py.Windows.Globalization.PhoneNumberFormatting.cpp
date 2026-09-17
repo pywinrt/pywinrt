@@ -184,21 +184,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", "GetCountryCodeForRegion", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetCountryCodeForRegion", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -209,7 +198,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -226,21 +215,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", "GetNationalDirectDialingPrefixForRegion", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetNationalDirectDialingPrefixForRegion", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -252,7 +230,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -269,21 +247,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", "TryCreate", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"TryCreate", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter param1{nullptr};
 
@@ -302,7 +269,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -319,21 +286,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", "WrapWithLeftToRightMarkers", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"WrapWithLeftToRightMarkers", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -344,7 +300,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -668,21 +624,10 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", "TryParse", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param1{nullptr};
 
@@ -707,27 +652,16 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", "TryParse", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param2{nullptr};
@@ -753,7 +687,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

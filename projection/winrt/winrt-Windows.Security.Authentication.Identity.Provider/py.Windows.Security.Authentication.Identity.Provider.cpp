@@ -86,21 +86,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", "GetAuthenticationStageInfoAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"GetAuthenticationStageInfoAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -109,7 +98,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -126,21 +115,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", "ShowNotificationMessageAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"ShowNotificationMessageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationMessage>(args, 1);
 
@@ -152,7 +130,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -169,21 +147,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", "StartAuthenticationAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"StartAuthenticationAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -195,7 +162,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -276,21 +243,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_add_AuthenticationStageChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::event, 0, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", "AuthenticationStageChanged", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"AuthenticationStageChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>>(arg);
 
             return py::convert([&]()
@@ -301,28 +257,17 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_remove_AuthenticationStageChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::event, 0, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", "AuthenticationStageChanged", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication", L"AuthenticationStageChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -334,7 +279,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -967,21 +912,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "FindAllRegisteredDeviceInfoAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"FindAllRegisteredDeviceInfoAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceFindScope>(args, 0);
 
                 return py::convert([&]()
@@ -992,7 +926,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1038,21 +972,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "IsDevicePresenceMonitoringSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"IsDevicePresenceMonitoringSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1061,7 +984,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1078,21 +1001,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "RegisterDevicePresenceMonitoringAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"RegisterDevicePresenceMonitoringAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringMode>(args, 2);
@@ -1105,27 +1017,16 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 6)
         {
+            static constexpr py::member_site site{py::member_kind::method, 6, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "RegisterDevicePresenceMonitoringAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"RegisterDevicePresenceMonitoringAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringMode>(args, 2);
@@ -1141,7 +1042,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1158,21 +1059,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 6)
         {
+            static constexpr py::member_site site{py::member_kind::method, 6, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "RequestStartRegisteringDeviceAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"RequestStartRegisteringDeviceAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceCapabilities>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1188,7 +1078,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1205,21 +1095,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "UnregisterDeviceAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"UnregisterDeviceAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1230,7 +1109,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1247,21 +1126,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "UnregisterDevicePresenceMonitoringAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"UnregisterDevicePresenceMonitoringAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1272,7 +1140,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1289,21 +1157,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", "UpdateDeviceConfigurationDataAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration", L"UpdateDeviceConfigurationDataAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1315,7 +1172,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

@@ -12,9 +12,8 @@ nothing but return, so what is left is the projection rather than the
 implementation behind it.  Two of them have to come from the Windows SDK:
 ``DataWriter.WriteBuffer()`` because it is one generated function with a
 one-argument and a three-argument branch, which is the only way to price an
-argument without also changing what is called, and ``JsonValue`` because only
-SDK statics carry the ``ApiInformation`` probe that guards a versioned
-overload.
+argument without also changing what is called, and ``JsonValue`` because
+``TestComponent`` has no static that returns a wrapped object.
 
 The numbers only mean anything from a Release build -- the Debug build of the
 same tree is several times slower and needs ``python_d.exe``::
@@ -101,9 +100,9 @@ CASES = (
         "writer.write_buffer(buffer, 0, 0)",
     ),
     Case("property get", 200_000, 1, TESTS, "tests.percentage"),
-    # CreateNumberValue(Double) is guarded by an ApiInformation.IsMethodPresent()
-    # call behind a function-local static. Unlike the rows above it also builds
-    # a wrapper for what it returns.
+    # a static goes through the activation factory rather than through an
+    # object the wrapper already holds, and unlike the rows above it also
+    # builds a wrapper for what it returns
     Case("static method", 200_000, 1, "", "wdj.JsonValue.create_number_value(1.0)"),
     # the subscript slot, which normalises the index before calling GetAt();
     # append() and the iterator are projected members with nothing in front of

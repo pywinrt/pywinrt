@@ -27,21 +27,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.CompositionConditionalValue", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.CompositionConditionalValue", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -52,7 +41,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -897,21 +886,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.InteractionTracker", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -922,7 +900,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -939,21 +917,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.UI.Composition.Interactions.InteractionTracker", "CreateWithOwner", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"CreateWithOwner", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner>(args, 1);
 
@@ -965,7 +932,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -982,21 +949,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.UI.Composition.Interactions.InteractionTracker", "GetBindingMode", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"GetBindingMode", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 1);
 
@@ -1008,7 +964,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1025,21 +981,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Microsoft.UI.Composition.Interactions.InteractionTracker", "SetBindingMode", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"SetBindingMode", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes>(args, 2);
@@ -1053,7 +998,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2163,21 +2108,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -2188,7 +2122,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2378,21 +2312,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -2403,7 +2326,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2593,21 +2516,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -2618,7 +2530,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3414,21 +3326,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -3439,7 +3340,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3779,21 +3680,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 return py::convert([&]()
@@ -3804,7 +3694,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3821,21 +3711,10 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.UI.Composition.Interactions.VisualInteractionSource", "CreateFromIVisualElement", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.VisualInteractionSource", L"CreateFromIVisualElement", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::IVisualElement>(args, 0);
 
                 return py::convert([&]()
@@ -3846,7 +3725,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

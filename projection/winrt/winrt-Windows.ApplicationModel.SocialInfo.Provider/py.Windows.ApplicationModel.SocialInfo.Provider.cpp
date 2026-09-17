@@ -423,21 +423,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "CreateDashboardItemUpdaterAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateDashboardItemUpdaterAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -448,7 +437,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -465,21 +454,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "CreateSocialFeedUpdaterAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"CreateSocialFeedUpdaterAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -492,7 +470,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -509,21 +487,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "DeprovisionAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"DeprovisionAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -532,7 +499,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -549,21 +516,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "ProvisionAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ProvisionAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -572,7 +528,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -589,21 +545,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "ReportNewContentAvailable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"ReportNewContentAvailable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>(args, 1);
 
@@ -616,7 +561,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -633,21 +578,10 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", "UpdateBadgeCountValue", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager", L"UpdateBadgeCountValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -660,7 +594,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

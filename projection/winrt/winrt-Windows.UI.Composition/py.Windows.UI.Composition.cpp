@@ -359,21 +359,10 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyObject* AnimationController_get_MaxPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Composition.AnimationController", "MaxPlaybackRate", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.AnimationController", L"MaxPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -382,28 +371,17 @@ namespace py::cpp::Windows::UI::Composition
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* AnimationController_get_MinPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Composition.AnimationController", "MinPlaybackRate", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.AnimationController", L"MinPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -412,7 +390,7 @@ namespace py::cpp::Windows::UI::Composition
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -2722,21 +2700,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.Composition.CompositionCapabilities", "GetForCurrentView", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionCapabilities", L"GetForCurrentView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2745,7 +2712,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4658,21 +4625,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Composition.CompositionEasingFunction", "CreateBackEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateBackEasingFunction", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -4685,7 +4641,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4702,21 +4658,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.UI.Composition.CompositionEasingFunction", "CreateBounceEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateBounceEasingFunction", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -4730,7 +4675,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4747,21 +4692,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Composition.CompositionEasingFunction", "CreateCircleEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateCircleEasingFunction", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
 
@@ -4773,7 +4707,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4790,21 +4724,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Composition.CompositionEasingFunction", "CreateCubicBezierEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateCubicBezierEasingFunction", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
@@ -4817,7 +4740,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4834,21 +4757,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.UI.Composition.CompositionEasingFunction", "CreateElasticEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateElasticEasingFunction", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -4862,7 +4774,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4879,21 +4791,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Composition.CompositionEasingFunction", "CreateExponentialEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateExponentialEasingFunction", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -4906,7 +4807,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4923,21 +4824,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Composition.CompositionEasingFunction", "CreateLinearEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateLinearEasingFunction", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -4948,7 +4838,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4965,21 +4855,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Composition.CompositionEasingFunction", "CreatePowerEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreatePowerEasingFunction", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -4992,7 +4871,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5009,21 +4888,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Composition.CompositionEasingFunction", "CreateSineEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateSineEasingFunction", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>(args, 1);
 
@@ -5035,7 +4903,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5052,21 +4920,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Composition.CompositionEasingFunction", "CreateStepEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -5077,27 +4934,16 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Composition.CompositionEasingFunction", "CreateStepEasingFunction", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -5109,7 +4955,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8464,21 +8310,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Composition.CompositionObject", "StartAnimationGroupWithIAnimationObject", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroupWithIAnimationObject", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::IAnimationObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -8491,7 +8326,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8508,21 +8343,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Composition.CompositionObject", "StartAnimationWithIAnimationObject", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationWithIAnimationObject", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::IAnimationObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 2);
@@ -8536,7 +8360,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -9760,21 +9584,10 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_get_MaxRespectedCasters(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Composition.CompositionProjectedShadowCasterCollection", "MaxRespectedCasters", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionProjectedShadowCasterCollection", L"MaxRespectedCasters");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -9783,7 +9596,7 @@ namespace py::cpp::Windows::UI::Composition
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -17718,21 +17531,10 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyObject* Compositor_get_MaxGlobalPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Composition.Compositor", "MaxGlobalPlaybackRate", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Compositor", L"MaxGlobalPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17741,28 +17543,17 @@ namespace py::cpp::Windows::UI::Composition
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* Compositor_get_MinGlobalPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Composition.Compositor", "MinGlobalPlaybackRate", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Compositor", L"MinGlobalPlaybackRate");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -17771,7 +17562,7 @@ namespace py::cpp::Windows::UI::Composition
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -18220,21 +18011,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Composition.DelegatedInkTrailVisual", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.DelegatedInkTrailVisual", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert([&]()
@@ -18245,7 +18025,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -18262,21 +18042,10 @@ namespace py::cpp::Windows::UI::Composition
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Composition.DelegatedInkTrailVisual", "CreateForSwapChain", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.DelegatedInkTrailVisual", L"CreateForSwapChain", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionSurface>(args, 1);
 
@@ -18288,7 +18057,7 @@ namespace py::cpp::Windows::UI::Composition
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

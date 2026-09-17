@@ -266,6 +266,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.Composable", "ExpectComposable", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Composable>(args, 0);
@@ -278,7 +280,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -295,6 +297,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.Composable", "ExpectRequiredFour", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredFour>(args, 0);
@@ -307,7 +311,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -324,6 +328,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.Composable", "ExpectRequiredOne", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredOne>(args, 0);
@@ -336,7 +342,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -353,6 +359,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.Composable", "ExpectRequiredThree", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredThree>(args, 0);
@@ -365,7 +373,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -382,6 +390,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.Composable", "ExpectRequiredTwo", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredTwo>(args, 0);
@@ -394,7 +404,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1586,6 +1596,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.TestRunner", "CreateAsyncAction", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1598,7 +1610,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1615,6 +1627,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "TestComponent.TestRunner", "CreateAsyncActionWithError", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1628,7 +1642,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1645,6 +1659,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "TestComponent.TestRunner", "CreateAsyncActionWithProgress", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1658,7 +1674,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1675,6 +1691,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "TestComponent.TestRunner", "CreateAsyncActionWithProgressWithError", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1689,7 +1707,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1706,6 +1724,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "TestComponent.TestRunner", "CreateAsyncOperation", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1719,7 +1739,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1736,6 +1756,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "TestComponent.TestRunner", "CreateAsyncOperationWithError", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1750,7 +1772,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1767,6 +1789,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "TestComponent.TestRunner", "CreateAsyncOperationWithProgress", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1781,7 +1805,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1798,6 +1822,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "TestComponent.TestRunner", "CreateAsyncOperationWithProgressWithError", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1813,7 +1839,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1830,6 +1856,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "TestComponent.TestRunner", "CreateInt32Vector", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -1840,7 +1868,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1857,6 +1885,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "TestComponent.TestRunner", "CreateStringVector", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -1867,7 +1897,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1884,6 +1914,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "TestComponent.TestRunner", "CreateStringableVector", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -1894,7 +1926,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1911,6 +1943,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.TestRunner", "CreateTimeSpan", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
@@ -1923,7 +1957,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1940,6 +1974,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.TestRunner", "ExpectObject", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
@@ -1952,7 +1988,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1969,6 +2005,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "TestComponent.TestRunner", "MakeTests", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -1979,7 +2017,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1996,6 +2034,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.TestRunner", "TestConsumer", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::TestHandler>(args, 0);
@@ -2008,7 +2048,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2025,6 +2065,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "TestComponent.TestRunner", "TestProducer", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::TestComponent::ITests>(args, 0);
@@ -2038,7 +2080,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2055,6 +2097,8 @@ namespace py::cpp::TestComponent
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "TestComponent.TestRunner", "TestSelf", nullptr, py::site_is_static};
+
             try
             {
                 {
@@ -2066,7 +2110,7 @@ namespace py::cpp::TestComponent
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

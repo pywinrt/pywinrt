@@ -1152,21 +1152,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "GetAppWindowContent", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"GetAppWindowContent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
                 return py::convert([&]()
@@ -1177,7 +1166,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1194,21 +1183,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "GetElementChildVisual", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"GetElementChildVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert([&]()
@@ -1219,7 +1197,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1236,21 +1214,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "GetElementVisual", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"GetElementVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert([&]()
@@ -1261,7 +1228,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1278,21 +1245,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "GetPointerPositionPropertySet", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"GetPointerPositionPropertySet", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert([&]()
@@ -1303,7 +1259,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1320,21 +1276,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "GetScrollViewerManipulationPropertySet", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"GetScrollViewerManipulationPropertySet", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ScrollViewer>(args, 0);
 
                 return py::convert([&]()
@@ -1345,7 +1290,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1362,21 +1307,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "SetAppWindowContent", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"SetAppWindowContent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
@@ -1389,7 +1323,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1406,21 +1340,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "SetElementChildVisual", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"SetElementChildVisual", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 1);
 
@@ -1433,7 +1356,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1450,21 +1373,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "SetImplicitHideAnimation", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"SetImplicitHideAnimation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -1477,7 +1389,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1494,21 +1406,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "SetImplicitShowAnimation", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"SetImplicitShowAnimation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -1521,7 +1422,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1538,21 +1439,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.ElementCompositionPreview", "SetIsTranslationEnabled", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.ElementCompositionPreview", L"SetIsTranslationEnabled", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1565,7 +1455,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1704,21 +1594,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.Xaml.Hosting.WindowsXamlManager", "InitializeForCurrentThread", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.WindowsXamlManager", L"InitializeForCurrentThread", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1727,7 +1606,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2134,21 +2013,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 6)
         {
+            static constexpr py::member_site site{py::member_kind::method, 6, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "GetFlyoutPlacement", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"GetFlyoutPlacement", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Size>(args, 2);
@@ -2178,7 +2046,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2195,21 +2063,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "GetFlyoutPlacementTargetInfo", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"GetFlyoutPlacementTargetInfo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(args, 1);
                 winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param2{};
@@ -2241,7 +2098,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2258,21 +2115,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "NotifyWindowSizeChanged", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"NotifyWindowSizeChanged", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::NotifyWindowSizeChanged();
@@ -2282,7 +2128,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2355,21 +2201,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "SetHost", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"SetHost", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>(args, 0);
 
                 {
@@ -2381,7 +2216,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2554,21 +2389,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* XamlUIPresenter_get_CompleteTimelinesAutomatically(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "CompleteTimelinesAutomatically", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"CompleteTimelinesAutomatically");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2577,7 +2401,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -2590,21 +2414,10 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             return -1;
         }
 
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Xaml.Hosting.XamlUIPresenter", "CompleteTimelinesAutomatically", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"CompleteTimelinesAutomatically");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<bool>(arg);
 
             {
@@ -2616,7 +2429,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return -1;
         }
     }

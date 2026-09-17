@@ -254,21 +254,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBinaryWriter", "Write", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBinaryWriter", L"Write", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Streams::IRandomAccessStream>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::Streams::IRandomAccessStream>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>(args, 2);
@@ -281,7 +270,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -383,21 +372,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Markup.XamlBindingHelper", "ConvertValue", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"ConvertValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -409,7 +387,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -426,21 +404,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlBindingHelper", "GetDataTemplateComponent", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"GetDataTemplateComponent", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
                 return py::convert([&]()
@@ -451,7 +418,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -468,21 +435,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlBindingHelper", "ResumeRendering", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"ResumeRendering", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 {
@@ -494,7 +450,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -511,21 +467,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetDataTemplateComponent", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetDataTemplateComponent", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>(args, 1);
 
@@ -538,7 +483,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -555,21 +500,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromBoolean", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromBoolean", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -583,7 +517,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -600,21 +534,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromByte", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromByte", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
@@ -628,7 +551,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -645,21 +568,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromChar16", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromChar16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<char16_t>(args, 2);
@@ -673,7 +585,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -690,21 +602,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromDateTime", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromDateTime", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
@@ -718,7 +619,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -735,21 +636,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromDouble", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromDouble", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -763,7 +653,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -780,21 +670,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromInt32", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -808,7 +687,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -825,21 +704,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromInt64", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<int64_t>(args, 2);
@@ -853,7 +721,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -870,21 +738,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromObject", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromObject", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -898,7 +755,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -915,21 +772,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromPoint", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Point>(args, 2);
@@ -943,7 +789,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -960,21 +806,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromRect", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromRect", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
@@ -988,7 +823,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1005,21 +840,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromSingle", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromSingle", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -1033,7 +857,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1050,21 +874,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromSize", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromSize", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Size>(args, 2);
@@ -1078,7 +891,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1095,21 +908,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromString", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromString", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1123,7 +925,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1140,21 +942,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromTimeSpan", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromTimeSpan", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
@@ -1168,7 +959,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1185,21 +976,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromUInt32", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromUInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -1213,7 +993,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1230,21 +1010,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromUInt64", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromUInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<uint64_t>(args, 2);
@@ -1258,7 +1027,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1275,21 +1044,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SetPropertyFromUri", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SetPropertyFromUri", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
@@ -1303,7 +1061,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1320,21 +1078,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlBindingHelper", "SuspendRendering", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"SuspendRendering", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 {
@@ -1346,7 +1093,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1359,21 +1106,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     static PyObject* XamlBindingHelper_get_DataTemplateComponentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.Xaml.Markup.XamlBindingHelper", "DataTemplateComponentProperty", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Markup.XamlBindingHelper", L"DataTemplateComponentProperty");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1382,7 +1118,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1500,21 +1236,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlMarkupHelper", "UnloadObject", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlMarkupHelper", L"UnloadObject", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
                 {
@@ -1526,7 +1251,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1628,21 +1353,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlReader", "Load", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlReader", L"Load", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1653,7 +1367,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1670,21 +1384,10 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.Xaml.Markup.XamlReader", "LoadWithInitialTemplateValidation", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.XamlReader", L"LoadWithInitialTemplateValidation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1695,7 +1398,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
