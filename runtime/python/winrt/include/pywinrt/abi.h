@@ -339,7 +339,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 5;
+    const uint16_t runtime_abi_version_minor = 6;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -370,6 +370,78 @@ namespace py
         uint32_t timeout_ms,
         winrt::guid const& handler_iid,
         async_set_completed_fn set_completed) noexcept;
+
+    // ----- the Python-backed collection callbacks -------------------------
+    //
+    // A Python list or dict passed to a WinRT method that takes an IVector<T>
+    // or an IMap<K, V> is wrapped rather than copied, so WinRT calls back into
+    // Python for every element operation it makes. The implementations of
+    // those callbacks are in <pywinrt/collections.h>, and everything in them
+    // that does not name T - the Python C API call, the error policy, the
+    // GetMany() loops - is one of the entries below, so that only the
+    // per-element conversion is left in the calling module.
+    //
+    // All of them:
+    //
+    //  - are called with the GIL held. The caller takes it once, because WinRT
+    //    may call on any thread, and nothing here takes it again.
+    //  - borrow the PyObject* they are given and return new references through
+    //    their out parameters, which are written on success only.
+    //  - return an HRESULT, because nothing throws across the boundary. A
+    //    Python IndexError or KeyError means the collection has no such index
+    //    or key and becomes E_BOUNDS, which is what WinRT expects from GetAt()
+    //    or Lookup(). Nothing on the WinRT side could catch any other Python
+    //    exception, so it is reported with report_unraisable() and returned as
+    //    that HRESULT.
+
+    /// Number of items in @p sequence, for IVector<T>::Size().
+    int32_t pyseq_size(PyObject* sequence, uint32_t* size) noexcept;
+    /// The item at @p index, for IVector<T>::GetAt().
+    int32_t pyseq_get_at(PyObject* sequence, uint32_t index, PyObject** item) noexcept;
+    /// Replaces the item at @p index, for IVector<T>::SetAt().
+    int32_t pyseq_set_at(PyObject* sequence, uint32_t index, PyObject* item) noexcept;
+    /// Inserts @p item before @p index, for IVector<T>::InsertAt().
+    int32_t pyseq_insert_at(
+        PyObject* sequence, uint32_t index, PyObject* item) noexcept;
+    /// Removes the item at @p index, for IVector<T>::RemoveAt().
+    int32_t pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept;
+    /// Adds @p item to the end, for IVector<T>::Append().
+    int32_t pyseq_append(PyObject* sequence, PyObject* item) noexcept;
+    /// Removes the last item, for IVector<T>::RemoveAtEnd().
+    int32_t pyseq_remove_at_end(PyObject* sequence) noexcept;
+    /// Finds @p item, for IVector<T>::IndexOf(). Not finding it is a success
+    /// with @p found false, since a WinRT IndexOf() reports it that way.
+    int32_t pyseq_index_of(
+        PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept;
+    /// Removes every item, for IVector<T>::Clear().
+    int32_t pyseq_clear(PyObject* sequence) noexcept;
+    /// Starts an iteration of @p iterable, for IIterable<T>::First().
+    int32_t pyiter_first(PyObject* iterable, PyObject** iterator) noexcept;
+    /// Advances @p iterator, for IIterator<T>::MoveNext(). The end of the
+    /// iteration is a success with a null @p item.
+    int32_t pyiter_next(PyObject* iterator, PyObject** item) noexcept;
+    /// Number of entries in @p mapping, for IMap<K, V>::Size().
+    int32_t pymap_size(PyObject* mapping, uint32_t* size) noexcept;
+    /// The value @p key maps to, for IMap<K, V>::Lookup().
+    int32_t pymap_lookup(PyObject* mapping, PyObject* key, PyObject** value) noexcept;
+    /// Whether @p key is in @p mapping, for IMap<K, V>::HasKey().
+    int32_t pymap_has_key(PyObject* mapping, PyObject* key, bool* has_key) noexcept;
+    /// Maps @p key to @p value, for IMap<K, V>::Insert(), which reports
+    /// through @p replaced whether the key was already there.
+    int32_t pymap_insert(
+        PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept;
+    /// Removes @p key, for IMap<K, V>::Remove().
+    int32_t pymap_remove(PyObject* mapping, PyObject* key) noexcept;
+    /// Removes every entry, for IMap<K, V>::Clear().
+    int32_t pymap_clear(PyObject* mapping) noexcept;
+    /// Advances @p iterator over the keys of @p mapping and looks the value
+    /// up, for the IKeyValuePair<K, V> iterator of a mapping. The end of the
+    /// iteration is a success with a null @p key and @p value.
+    int32_t pymap_iter_next(
+        PyObject* mapping,
+        PyObject* iterator,
+        PyObject** key,
+        PyObject** value) noexcept;
 
     namespace cpp::_winrt
     {
@@ -403,6 +475,24 @@ namespace py
         decltype(report_unraisable)* report_unraisable;
         decltype(toggle_python_reference)* toggle_python_reference;
         decltype(async_wait)* async_wait;
+        decltype(pyseq_size)* pyseq_size;
+        decltype(pyseq_get_at)* pyseq_get_at;
+        decltype(pyseq_set_at)* pyseq_set_at;
+        decltype(pyseq_insert_at)* pyseq_insert_at;
+        decltype(pyseq_remove_at)* pyseq_remove_at;
+        decltype(pyseq_append)* pyseq_append;
+        decltype(pyseq_remove_at_end)* pyseq_remove_at_end;
+        decltype(pyseq_index_of)* pyseq_index_of;
+        decltype(pyseq_clear)* pyseq_clear;
+        decltype(pyiter_first)* pyiter_first;
+        decltype(pyiter_next)* pyiter_next;
+        decltype(pymap_size)* pymap_size;
+        decltype(pymap_lookup)* pymap_lookup;
+        decltype(pymap_has_key)* pymap_has_key;
+        decltype(pymap_insert)* pymap_insert;
+        decltype(pymap_remove)* pymap_remove;
+        decltype(pymap_clear)* pymap_clear;
+        decltype(pymap_iter_next)* pymap_iter_next;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -589,6 +679,125 @@ namespace py
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->async_wait);
         return (*PyWinRT_API->async_wait)(
             async, timeout_ms, handler_iid, set_completed);
+    }
+
+    inline int32_t pyseq_size(PyObject* sequence, uint32_t* size) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_size);
+        return (*PyWinRT_API->pyseq_size)(sequence, size);
+    }
+
+    inline int32_t pyseq_get_at(
+        PyObject* sequence, uint32_t index, PyObject** item) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_get_at);
+        return (*PyWinRT_API->pyseq_get_at)(sequence, index, item);
+    }
+
+    inline int32_t pyseq_set_at(
+        PyObject* sequence, uint32_t index, PyObject* item) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_set_at);
+        return (*PyWinRT_API->pyseq_set_at)(sequence, index, item);
+    }
+
+    inline int32_t pyseq_insert_at(
+        PyObject* sequence, uint32_t index, PyObject* item) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_insert_at);
+        return (*PyWinRT_API->pyseq_insert_at)(sequence, index, item);
+    }
+
+    inline int32_t pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_remove_at);
+        return (*PyWinRT_API->pyseq_remove_at)(sequence, index);
+    }
+
+    inline int32_t pyseq_append(PyObject* sequence, PyObject* item) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_append);
+        return (*PyWinRT_API->pyseq_append)(sequence, item);
+    }
+
+    inline int32_t pyseq_remove_at_end(PyObject* sequence) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_remove_at_end);
+        return (*PyWinRT_API->pyseq_remove_at_end)(sequence);
+    }
+
+    inline int32_t pyseq_index_of(
+        PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_index_of);
+        return (*PyWinRT_API->pyseq_index_of)(sequence, item, index, found);
+    }
+
+    inline int32_t pyseq_clear(PyObject* sequence) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_clear);
+        return (*PyWinRT_API->pyseq_clear)(sequence);
+    }
+
+    inline int32_t pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyiter_first);
+        return (*PyWinRT_API->pyiter_first)(iterable, iterator);
+    }
+
+    inline int32_t pyiter_next(PyObject* iterator, PyObject** item) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyiter_next);
+        return (*PyWinRT_API->pyiter_next)(iterator, item);
+    }
+
+    inline int32_t pymap_size(PyObject* mapping, uint32_t* size) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_size);
+        return (*PyWinRT_API->pymap_size)(mapping, size);
+    }
+
+    inline int32_t pymap_lookup(
+        PyObject* mapping, PyObject* key, PyObject** value) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_lookup);
+        return (*PyWinRT_API->pymap_lookup)(mapping, key, value);
+    }
+
+    inline int32_t pymap_has_key(
+        PyObject* mapping, PyObject* key, bool* has_key) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_has_key);
+        return (*PyWinRT_API->pymap_has_key)(mapping, key, has_key);
+    }
+
+    inline int32_t pymap_insert(
+        PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_insert);
+        return (*PyWinRT_API->pymap_insert)(mapping, key, value, replaced);
+    }
+
+    inline int32_t pymap_remove(PyObject* mapping, PyObject* key) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_remove);
+        return (*PyWinRT_API->pymap_remove)(mapping, key);
+    }
+
+    inline int32_t pymap_clear(PyObject* mapping) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_clear);
+        return (*PyWinRT_API->pymap_clear)(mapping);
+    }
+
+    inline int32_t pymap_iter_next(
+        PyObject* mapping,
+        PyObject* iterator,
+        PyObject** key,
+        PyObject** value) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_iter_next);
+        return (*PyWinRT_API->pymap_iter_next)(mapping, iterator, key, value);
     }
 
     namespace cpp::_winrt

@@ -12,6 +12,7 @@ from uuid import UUID
 
 import test_winrt.testcomponent as tc
 from winrt.system.hresult import (
+    E_BOUNDS,
     E_FAIL,
     WIN32_ERROR_CANCELLED,
     PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION,
@@ -456,6 +457,28 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(list(result[1]), arg)
 
         # TODO: test wrong type in list. currently this will cause an abort
+
+    def test_list_to_vector_out_of_range(self):
+        class ShortSequence:
+            """A sequence that claims to have more items than it does."""
+
+            def __len__(self) -> int:
+                return 3
+
+            def __getitem__(self, index: int) -> str:
+                return ["1", "2"][index]
+
+        tests = tc.TestRunner.make_tests()
+
+        # An index the Python object does not have is the one failure WinRT has
+        # a name for, so it is reported as E_BOUNDS. Everything else a Python
+        # object can raise while WinRT is reading it still goes to the
+        # unraisable hook, as in the vector view test below.
+        with self.assertRaises(OSError) as ctx, catch_unraisable() as exceptions:
+            tests.collection5(ShortSequence())  # type: ignore
+
+        self.assertEqual(ctx.exception.winerror, E_BOUNDS)
+        self.assertEqual(exceptions, [])
 
     def test_list_to_vector_view(self):
         arg = ["1", "2", "3", "4"]

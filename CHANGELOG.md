@@ -150,6 +150,23 @@
 - The `PyWinRT` dotnet tool now targets .NET 10 and needs the .NET 10 runtime
   to run. This only affects generating your own projection with the tool; the
   published wheels are unchanged and have never needed .NET installed.
+- The `winrt-runtime` C API now also does the Python side of a collection that
+  a Python object backs. When a list or a dict is passed to a WinRT method that
+  takes an `IVector`, `IMap` or one of their relatives, it is wrapped rather
+  than copied, and WinRT then calls back into Python for every element it
+  reads; the projection package still converts the elements, but what it does
+  to the Python object, and what a Python exception raised while WinRT is
+  reading it means, now belong to `winrt-runtime`. This raises the minor ABI
+  version again. Iterating a `dict` from WinRT is also about 9 % faster per
+  entry, because the parts of an iteration that touch no Python object no
+  longer take the GIL.
+- An index that a Python sequence does not have is now reported to WinRT as
+  `E_BOUNDS`, which is what a WinRT collection raises for an index out of
+  range, instead of being written out as an unraisable `IndexError`. A WinRT
+  caller that reads past the end of a list therefore fails with a bounds error
+  rather than the generic "Unraisable Python exception". Everything else a
+  Python object can raise while WinRT is reading it still goes to
+  `sys.unraisablehook`, since WinRT has no way to report it.
 
 ### Deprecated
 - The method names that v3.x generated from the
@@ -180,6 +197,13 @@
   the member was present but the object was not, for example an object from an
   older version of a component, an object implemented in Python, or any object
   at all in a `--component-dlls` build, where the check was omitted entirely.
+- Fixed `GetMany()` raising `NotImplementedError` on every collection backed by
+  a Python object. WinRT code that reads a wrapped list or dict in batches -
+  which is what C++/WinRT's own `to_vector()` does - failed instead of getting
+  the items.
+- Fixed replacing an item of a Python list passed to WinRT as an `IVector`. The
+  value was released one time too many, which corrupts the interpreter, and it
+  only worked at all if the object was a `list` rather than any other sequence.
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.

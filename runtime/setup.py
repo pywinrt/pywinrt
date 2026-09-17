@@ -38,6 +38,7 @@ setup(
                 "src/_winrt_box.cpp",
                 "src/_winrt_buffer.cpp",
                 "src/async.cpp",
+                "src/collections.cpp",
                 "src/compose.cpp",
                 "src/errors.cpp",
                 "src/runtime.cpp",

@@ -188,9 +188,25 @@ namespace py
         }
     }
 
+    /**
+     * Throws what WinRT sees in place of a Python exception that has already
+     * been reported as unraisable, @p hr being what py::report_unraisable()
+     * returned for it.
+     *
+     * The message says no more than that there was one, because the exception
+     * itself has gone to sys.unraisablehook by the time this is thrown.
+     */
+    [[noreturn]] inline void throw_unraisable(winrt::hresult hr)
+    {
+        throw winrt::hresult_error(hr, L"Unraisable Python exception");
+    }
+
+    /**
+     * Reports the pending Python exception as unraisable and throws, for a
+     * callback that WinRT called and that therefore has nowhere to raise it.
+     */
     [[noreturn]] inline void write_unraisable_and_throw()
     {
-        throw winrt::hresult_error(
-            winrt::hresult{report_unraisable()}, L"Unraisable Python exception");
+        throw_unraisable(winrt::hresult{report_unraisable()});
     }
 } // namespace py
