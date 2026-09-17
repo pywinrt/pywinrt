@@ -167,6 +167,13 @@
   rather than the generic "Unraisable Python exception". Everything else a
   Python object can raise while WinRT is reading it still goes to
   `sys.unraisablehook`, since WinRT has no way to report it.
+- Calls that pass or return a WinRT object, interface or struct are faster.
+  Each such value used to be converted by looking its Python type up by name
+  in a table in `winrt-runtime` - once in each direction, and twice in each
+  direction for a struct - and the answer is now remembered after the first
+  time. Passing an interface to a method costs about 40 ns less, a method that
+  takes two structs and returns two is roughly twice as fast, and calls that
+  only pass numbers or strings are unchanged. Modules are about 1 % larger.
 
 ### Deprecated
 - The method names that v3.x generated from the

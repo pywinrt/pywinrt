@@ -250,6 +250,13 @@ static bool check_module_abi(PyObject* module, const char* module_name) noexcept
     return true;
 }
 
+uint64_t py::cpp::_winrt::type_registry_epoch = 0;
+
+uint64_t py::get_type_registry_epoch() noexcept
+{
+    return py::cpp::_winrt::type_registry_epoch;
+}
+
 PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
 {
     auto state = py::cpp::_winrt::get_module_state();

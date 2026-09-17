@@ -62,6 +62,17 @@ VECTOR = """
 vector = tc.TestRunner.create_string_vector()
 """
 
+# a struct and the tuple of the same fields, for the two ways a struct
+# argument can be given
+STRUCTS = (
+    TESTS
+    + """
+import uuid
+fields = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=0))
+blittable = tc.Blittable(*fields)
+"""
+)
+
 FULL_VECTOR = (
     VECTOR
     + f"""
@@ -137,6 +148,26 @@ CASES = (
         ITEMS,
         PY_COLLECTIONS,
         "tests.collection3(mapping)",
+    ),
+    # A struct is handed to WinRT as a blit of the wrapper's fields rather
+    # than converted one field at a time, so what a member taking one spends
+    # its time on is finding the wrapper type: Param13() takes two structs and
+    # returns two, and each direction asks for the type. Passing a tuple
+    # instead is the one struct path that does convert per field, and it goes
+    # to the type registry for the conversion function as well.
+    Case(
+        "two structs in, two out",
+        100_000,
+        1,
+        STRUCTS,
+        "tests.param13(blittable, blittable)",
+    ),
+    Case(
+        "the same, passing a tuple",
+        50_000,
+        1,
+        STRUCTS,
+        "tests.param13(fields, blittable)",
     ),
     # get() on an operation that completed before the timing started, so this
     # is the wait machinery and the result conversion without any waiting

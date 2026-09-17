@@ -26,6 +26,82 @@
 
 namespace py
 {
+    namespace impl
+    {
+        /**
+         * One answer from the type registry, remembered by the template that
+         * asked for it so that the same @c T is only looked up once.
+         *
+         * A memo is good for the registry that gave it and no other, which is
+         * what the interpreter and the epoch say; py::get_type_registry_epoch()
+         * in <pywinrt/abi.h> explains why it takes both. Static storage makes
+         * a memo that has never been filled in zero, and a null interpreter is
+         * not one that any thread runs in, so it never matches.
+         */
+        struct registry_memo
+        {
+            void* value;
+            PyInterpreterState* interpreter;
+            uint64_t epoch;
+
+            /// The remembered answer, or nullptr if it has to be looked up
+            /// again.
+            void* get() const noexcept
+            {
+                return epoch == get_type_registry_epoch()
+                               && interpreter == PyInterpreterState_Get()
+                           ? value
+                           : nullptr;
+            }
+
+            /// Remembers @p answer for the registry that is live now. A
+            /// lookup that failed is not remembered: it left a Python error
+            /// set, which the next caller has to be given as well.
+            void set(void* answer) noexcept
+            {
+                if (!answer)
+                {
+                    return;
+                }
+
+                value = answer;
+                interpreter = PyInterpreterState_Get();
+                epoch = get_type_registry_epoch();
+            }
+        };
+
+// The miss path of a memo, which every instantiation of the templates below
+// shares rather than carrying a copy of. It runs once per type per process, so
+// what matters about it is that it is not inlined into the hundreds of
+// get_python_type_for<T>() that the compiler emits per module: leaving it out
+// of them is 0.5 % of a projection build.
+#ifdef _MSC_VER
+#define PYWINRT_MEMO_MISS __declspec(noinline)
+#else
+#define PYWINRT_MEMO_MISS [[gnu::noinline]]
+#endif
+
+        PYWINRT_MEMO_MISS inline void* fill_type_memo(
+            registry_memo& memo, std::string_view qualified_name) noexcept
+        {
+            auto type = get_python_type(qualified_name);
+            memo.set(type);
+
+            return type;
+        }
+
+        PYWINRT_MEMO_MISS inline void* fill_func_memo(
+            registry_memo& memo, std::string_view capsule_name) noexcept
+        {
+            auto func = get_struct_from_tuple_func(capsule_name);
+            memo.set(func);
+
+            return func;
+        }
+
+#undef PYWINRT_MEMO_MISS
+    } // namespace impl
+
     /**
      * Gets the Python wrapper type object for @p T.
      *
@@ -43,7 +119,19 @@ namespace py
 
         static_assert(!std::empty(py_type<winrt_type>::qualified_name));
 
-        return get_python_type(py_type<winrt_type>::qualified_name);
+        // The registry looks the name up by string, and the generated code
+        // asks for the same type on every conversion - four times per struct
+        // argument that makes a round trip - so the answer is memoized.
+        static impl::registry_memo memo{};
+
+        auto type = memo.get();
+
+        if (!type)
+        {
+            type = impl::fill_type_memo(memo, py_type<winrt_type>::qualified_name);
+        }
+
+        return static_cast<PyTypeObject*>(type);
     }
 
     /**
@@ -59,8 +147,16 @@ namespace py
         using func_t = T (*)(PyObject*);
         static_assert(!std::empty(py_type<T>::from_tuple));
 
-        return reinterpret_cast<func_t>(
-            get_struct_from_tuple_func(py_type<T>::from_tuple));
+        static impl::registry_memo memo{};
+
+        auto func = memo.get();
+
+        if (!func)
+        {
+            func = impl::fill_func_memo(memo, py_type<T>::from_tuple);
+        }
+
+        return reinterpret_cast<func_t>(func);
     }
 
     /**
