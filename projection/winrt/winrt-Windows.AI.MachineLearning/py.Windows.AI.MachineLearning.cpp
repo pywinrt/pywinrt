@@ -252,21 +252,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.ImageFeatureValue", "CreateFromVideoFrame", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.ImageFeatureValue", L"CreateFromVideoFrame", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Media::VideoFrame>(args, 0);
 
                 return py::convert([&]()
@@ -277,7 +266,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -443,21 +432,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.LearningModel", "LoadFromFilePath", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -468,27 +446,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.LearningModel", "LoadFromFilePath", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromFilePath", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -500,7 +467,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -517,21 +484,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.LearningModel", "LoadFromStorageFileAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert([&]()
@@ -542,27 +498,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.LearningModel", "LoadFromStorageFileAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStorageFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -574,7 +519,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -591,21 +536,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.LearningModel", "LoadFromStream", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert([&]()
@@ -616,27 +550,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.LearningModel", "LoadFromStream", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -648,7 +571,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -665,21 +588,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.LearningModel", "LoadFromStreamAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert([&]()
@@ -690,27 +602,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.LearningModel", "LoadFromStreamAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStreamAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
 
@@ -722,7 +623,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1438,21 +1339,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.LearningModelDevice", "CreateFromDirect3D11Device", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModelDevice", L"CreateFromDirect3D11Device", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
 
                 return py::convert([&]()
@@ -1463,7 +1353,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2645,21 +2535,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorBoolean", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2668,27 +2547,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorBoolean", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -2699,7 +2567,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2716,21 +2584,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorBoolean", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -2742,7 +2599,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2759,21 +2616,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorBoolean", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -2785,7 +2631,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2802,21 +2648,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorBoolean", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<bool>>(args, 1);
 
@@ -2828,7 +2663,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2845,21 +2680,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorBoolean", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorBoolean", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -2871,7 +2695,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3141,21 +2965,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorDouble", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3164,27 +2977,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorDouble", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -3195,7 +2997,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3212,21 +3014,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorDouble", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -3238,7 +3029,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3255,21 +3046,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorDouble", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -3281,7 +3061,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3298,21 +3078,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorDouble", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<double>>(args, 1);
 
@@ -3324,7 +3093,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3341,21 +3110,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorDouble", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorDouble", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -3367,7 +3125,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3808,21 +3566,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorFloat", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3831,27 +3578,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorFloat", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -3862,7 +3598,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3879,21 +3615,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -3905,7 +3630,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3922,21 +3647,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -3948,7 +3662,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3965,21 +3679,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
@@ -3991,7 +3694,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4008,21 +3711,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4034,7 +3726,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4304,21 +3996,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorFloat16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4327,27 +4008,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorFloat16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -4358,7 +4028,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4375,21 +4045,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat16Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4401,7 +4060,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4418,21 +4077,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat16Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -4444,7 +4092,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4461,21 +4109,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat16Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<float>>(args, 1);
 
@@ -4487,7 +4124,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4504,21 +4141,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorFloat16Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorFloat16Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4530,7 +4156,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4800,21 +4426,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorInt16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -4823,27 +4438,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorInt16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -4854,7 +4458,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4871,21 +4475,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt16Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -4897,7 +4490,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4914,21 +4507,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt16Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -4940,7 +4522,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4957,21 +4539,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt16Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int16_t>>(args, 1);
 
@@ -4983,7 +4554,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5000,21 +4571,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt16Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt16Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -5026,7 +4586,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5296,21 +4856,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorInt32Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5319,27 +4868,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorInt32Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -5350,7 +4888,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5367,21 +4905,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt32Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -5393,7 +4920,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5410,21 +4937,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt32Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -5436,7 +4952,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5453,21 +4969,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt32Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int32_t>>(args, 1);
 
@@ -5479,7 +4984,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5496,21 +5001,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt32Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt32Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -5522,7 +5016,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5792,21 +5286,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorInt64Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -5815,27 +5298,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorInt64Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -5846,7 +5318,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5863,21 +5335,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt64Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -5889,7 +5350,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5906,21 +5367,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt64Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -5932,7 +5382,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5949,21 +5399,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt64Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 1);
 
@@ -5975,7 +5414,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -5992,21 +5431,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt64Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt64Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -6018,7 +5446,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6288,21 +5716,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorInt8Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6311,27 +5728,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorInt8Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -6342,7 +5748,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6359,21 +5765,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt8Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -6385,7 +5780,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6402,21 +5797,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt8Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -6428,7 +5812,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6445,21 +5829,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt8Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
@@ -6471,7 +5844,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6488,21 +5861,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorInt8Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorInt8Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -6514,7 +5876,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6784,21 +6146,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorString", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6807,27 +6158,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorString", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -6838,7 +6178,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6855,21 +6195,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorString", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -6881,7 +6210,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6898,21 +6227,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorString", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -6924,7 +6242,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6941,21 +6259,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorString", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorString", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -6967,7 +6274,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7236,21 +6543,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorUInt16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7259,27 +6555,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorUInt16Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -7290,7 +6575,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7307,21 +6592,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt16Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -7333,7 +6607,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7350,21 +6624,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt16Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7376,7 +6639,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7393,21 +6656,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt16Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint16_t>>(args, 1);
 
@@ -7419,7 +6671,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7436,21 +6688,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt16Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt16Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -7462,7 +6703,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7732,21 +6973,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorUInt32Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -7755,27 +6985,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorUInt32Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -7786,7 +7005,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7803,21 +7022,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt32Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -7829,7 +7037,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7846,21 +7054,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt32Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -7872,7 +7069,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7889,21 +7086,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt32Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 1);
 
@@ -7915,7 +7101,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7932,21 +7118,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt32Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt32Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -7958,7 +7133,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8228,21 +7403,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorUInt64Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8251,27 +7415,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorUInt64Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -8282,7 +7435,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8299,21 +7452,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt64Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -8325,7 +7467,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8342,21 +7484,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt64Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -8368,7 +7499,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8385,21 +7516,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt64Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint64_t>>(args, 1);
 
@@ -8411,7 +7531,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8428,21 +7548,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt64Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt64Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -8454,7 +7563,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8724,21 +7833,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.AI.MachineLearning.TensorUInt8Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -8747,27 +7845,16 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.AI.MachineLearning.TensorUInt8Bit", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"Create", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
 
                 return py::convert([&]()
@@ -8778,7 +7865,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8795,21 +7882,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt8Bit", "CreateFromArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -8821,7 +7897,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8838,21 +7914,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt8Bit", "CreateFromBuffer", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromBuffer", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -8864,7 +7929,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8881,21 +7946,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt8Bit", "CreateFromIterable", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromIterable", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<int64_t>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint8_t>>(args, 1);
 
@@ -8907,7 +7961,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -8924,21 +7978,10 @@ namespace py::cpp::Windows::AI::MachineLearning
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.AI.MachineLearning.TensorUInt8Bit", "CreateFromShapeArrayAndDataArray", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.TensorUInt8Bit", L"CreateFromShapeArrayAndDataArray", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -8950,7 +7993,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

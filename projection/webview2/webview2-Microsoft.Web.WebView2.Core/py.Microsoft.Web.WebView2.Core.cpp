@@ -7268,6 +7268,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", "CreateFromCoreWindow", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
@@ -7280,7 +7282,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -7297,6 +7299,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference", "CreateFromWindowHandle", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<uint64_t>(args, 0);
@@ -7309,7 +7313,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -9304,6 +9308,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "CompareBrowserVersionString", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
@@ -9317,7 +9323,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -9334,6 +9340,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "CreateAsync", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -9344,7 +9352,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -9722,6 +9730,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "CreateWithOptionsAsync", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
@@ -9736,7 +9746,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -9753,6 +9763,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "GetAvailableBrowserVersionString", nullptr, py::site_is_static};
+
             try
             {
                 return py::convert([&]()
@@ -9763,12 +9775,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "GetAvailableBrowserVersionString", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
@@ -9781,12 +9795,14 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.Web.WebView2.Core.CoreWebView2Environment", "GetAvailableBrowserVersionString", nullptr, py::site_is_static};
+
             try
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
@@ -9800,7 +9816,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

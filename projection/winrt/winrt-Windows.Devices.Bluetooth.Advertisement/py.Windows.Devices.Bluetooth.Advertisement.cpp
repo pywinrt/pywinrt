@@ -725,21 +725,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_AdvertisingInterval(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "AdvertisingInterval", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"AdvertisingInterval");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -748,28 +737,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_Appearance(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "Appearance", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"Appearance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -778,28 +756,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_CompleteLocalName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "CompleteLocalName", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"CompleteLocalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -808,28 +775,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_CompleteService128BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "CompleteService128BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"CompleteService128BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -838,28 +794,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_CompleteService16BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "CompleteService16BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"CompleteService16BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -868,28 +813,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_CompleteService32BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "CompleteService32BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"CompleteService32BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -898,28 +832,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_Flags(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "Flags", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"Flags");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -928,28 +851,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_IncompleteService128BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "IncompleteService128BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"IncompleteService128BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -958,28 +870,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_IncompleteService16BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "IncompleteService16BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"IncompleteService16BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -988,28 +889,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_IncompleteService32BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "IncompleteService32BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"IncompleteService32BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1018,28 +908,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ManufacturerSpecificData(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ManufacturerSpecificData", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ManufacturerSpecificData");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1048,28 +927,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_PeripheralConnectionIntervalRange(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "PeripheralConnectionIntervalRange", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"PeripheralConnectionIntervalRange");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1078,28 +946,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_PublicTargetAddress(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "PublicTargetAddress", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"PublicTargetAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1108,28 +965,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_RandomTargetAddress(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "RandomTargetAddress", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"RandomTargetAddress");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1138,28 +984,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceData128BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceData128BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceData128BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1168,28 +1003,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceData16BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceData16BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceData16BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1198,28 +1022,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceData32BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceData32BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceData32BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1228,28 +1041,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceSolicitation128BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceSolicitation128BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceSolicitation128BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1258,28 +1060,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceSolicitation16BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceSolicitation16BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceSolicitation16BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1288,28 +1079,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ServiceSolicitation32BitUuids(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ServiceSolicitation32BitUuids", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ServiceSolicitation32BitUuids");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1318,28 +1098,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_ShortenedLocalName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "ShortenedLocalName", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"ShortenedLocalName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1348,28 +1117,17 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* BluetoothLEAdvertisementDataTypes_get_TxPowerLevel(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", "TxPowerLevel", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes", L"TxPowerLevel");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1378,7 +1136,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -2546,21 +2304,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", "CoexistenceOptimized", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", L"CoexistenceOptimized", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2569,7 +2316,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2586,21 +2333,10 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", "LowLatency", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters", L"LowLatency", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2609,7 +2345,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

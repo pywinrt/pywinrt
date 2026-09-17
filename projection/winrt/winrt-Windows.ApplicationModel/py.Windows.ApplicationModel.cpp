@@ -156,21 +156,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.AppInfo", "GetFromAppUserModelId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInfo", L"GetFromAppUserModelId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -181,7 +170,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -198,21 +187,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.AppInfo", "GetFromAppUserModelIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInfo", L"GetFromAppUserModelIdForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -224,7 +202,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -356,21 +334,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* AppInfo_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.AppInfo", "Current", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInfo", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -379,7 +346,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -835,21 +802,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.AppInstance", "FindOrRegisterInstanceForKey", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInstance", L"FindOrRegisterInstanceForKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -860,7 +816,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -877,21 +833,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.AppInstance", "GetActivatedEventArgs", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInstance", L"GetActivatedEventArgs", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -900,7 +845,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -917,21 +862,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.AppInstance", "GetInstances", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInstance", L"GetInstances", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -940,7 +874,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -985,21 +919,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.AppInstance", "Unregister", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppInstance", L"Unregister", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::ApplicationModel::AppInstance::Unregister();
@@ -1009,7 +932,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1056,21 +979,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* AppInstance_get_RecommendedInstance(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.AppInstance", "RecommendedInstance", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.AppInstance", L"RecommendedInstance");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1079,7 +991,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1170,21 +1082,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* DesignMode_get_DesignModeEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.DesignMode", "DesignModeEnabled", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DesignMode", L"DesignModeEnabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1193,28 +1094,17 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* DesignMode_get_DesignMode2Enabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.DesignMode", "DesignMode2Enabled", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DesignMode", L"DesignMode2Enabled");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1223,7 +1113,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1782,21 +1672,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForAppAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1807,27 +1686,16 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForAppAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1839,7 +1707,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1856,21 +1724,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForAppWithArgumentsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForAppWithArgumentsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1882,7 +1739,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1899,21 +1756,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForCurrentAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForCurrentAppAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1922,27 +1768,16 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForCurrentAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForCurrentAppAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1953,7 +1788,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1970,21 +1805,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.FullTrustProcessLauncher", "LaunchFullTrustProcessForCurrentAppWithArgumentsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.FullTrustProcessLauncher", L"LaunchFullTrustProcessForCurrentAppWithArgumentsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1995,7 +1819,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2273,21 +2097,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.ApplicationModel.LimitedAccessFeatures", "TryUnlockFeature", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LimitedAccessFeatures", L"TryUnlockFeature", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2300,7 +2113,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3247,21 +3060,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* Package_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Package", "Current", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Package", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -3270,7 +3072,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -3468,21 +3270,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.PackageCatalog", "OpenForCurrentPackage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"OpenForCurrentPackage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3491,7 +3282,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3508,21 +3299,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.PackageCatalog", "OpenForCurrentUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"OpenForCurrentUser", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3531,7 +3311,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3548,21 +3328,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.PackageCatalog", "OpenForPackage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.PackageCatalog", L"OpenForPackage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Package>(args, 0);
 
                 return py::convert([&]()
@@ -3573,7 +3342,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -4463,21 +4232,10 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* PackageContentGroup_get_RequiredGroupName(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.PackageContentGroup", "RequiredGroupName", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.PackageContentGroup", L"RequiredGroupName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -4486,7 +4244,7 @@ namespace py::cpp::Windows::ApplicationModel
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -6163,21 +5921,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.StartupTask", "GetAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.StartupTask", L"GetAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -6188,7 +5935,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -6205,21 +5952,10 @@ namespace py::cpp::Windows::ApplicationModel
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.StartupTask", "GetForCurrentPackageAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.StartupTask", L"GetForCurrentPackageAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -6228,7 +5964,7 @@ namespace py::cpp::Windows::ApplicationModel
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

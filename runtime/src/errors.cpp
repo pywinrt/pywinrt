@@ -19,6 +19,119 @@ namespace
     {
         return what && *what ? what : fallback;
     }
+
+    /**
+     * The noun for a member of kind @p kind in a message.
+     */
+    const char* member_kind_name(py::member_kind kind) noexcept
+    {
+        switch (kind)
+        {
+        case py::member_kind::method:
+            return "method";
+        case py::member_kind::property:
+            return "property";
+        case py::member_kind::event:
+            return "event";
+        }
+
+        // The kind is read from another module, so it can hold a value this
+        // one does not know about, and calling that an event would be a
+        // guess rather than an answer.
+        return "member";
+    }
+
+    /**
+     * Asks the metadata whether this version of Windows has the named member
+     * at all.
+     *
+     * This is the only thing on either failure path that knows about
+     * @c ApiInformation. It is a cold query - it reads the @c .winmd files
+     * through @c WinTypes.dll - which is why it is made here, to choose the
+     * wording of an error, rather than before every call as the generated
+     * probes used to do.
+     *
+     * @returns whether the member is in the metadata, or no value when the
+     * question cannot be answered, which is not the same as "no". Metadata is
+     * resolved through the package graph and the app directory as well as the
+     * Windows metadata directory, so a type outside the Windows namespace is
+     * only found when the framework package that declares it is registered for
+     * this process. If the type itself is not found, the member being missing
+     * from the metadata says nothing about which versions have it.
+     */
+    std::optional<bool> is_in_metadata(
+        py::member_kind kind,
+        const char* type_name,
+        const char* member_name,
+        uint32_t arg_count) noexcept
+    {
+        if (!type_name || !member_name)
+        {
+            return {};
+        }
+
+        try
+        {
+            using winrt::Windows::Foundation::Metadata::ApiInformation;
+
+            const auto type = winrt::to_hstring(type_name);
+
+            if (!ApiInformation::IsTypePresent(type))
+            {
+                return {};
+            }
+
+            const auto member = winrt::to_hstring(member_name);
+
+            switch (kind)
+            {
+            case py::member_kind::method:
+                return ApiInformation::IsMethodPresent(type, member, arg_count);
+            case py::member_kind::property:
+                return ApiInformation::IsPropertyPresent(type, member);
+            case py::member_kind::event:
+                return ApiInformation::IsEventPresent(type, member);
+            }
+
+            return {};
+        }
+        catch (...)
+        {
+            // an unusable metadata resolver is not worth reporting instead
+            // of the error we were called to report
+            return {};
+        }
+    }
+
+    /**
+     * Raises the @c AttributeError that says this version of Windows does not
+     * have the named member.
+     */
+    void set_not_in_this_version_error(
+        py::member_kind kind, const char* type_name, const char* member_name) noexcept
+    {
+        PyErr_Format(
+            PyExc_AttributeError,
+            "%s '%s.%s' is not available in this version of Windows",
+            member_kind_name(kind),
+            type_name,
+            member_name);
+    }
+
+    /**
+     * Whether @p hresult is how activation reports that the class or the
+     * factory interface that declares a static member does not exist here.
+     *
+     * These are what C++/WinRT's static path throws when the member is not on
+     * this machine, and the only failures that are worth asking the metadata
+     * about: anything else came from inside the member and is a real error.
+     */
+    bool is_activation_failure(int32_t hresult) noexcept
+    {
+        return hresult == winrt::impl::error_no_interface
+               || hresult == winrt::impl::error_class_not_registered
+               || hresult == winrt::impl::error_class_not_available;
+    }
 } // namespace
 
 void py::set_error(py::error_info const& info) noexcept
@@ -27,6 +140,29 @@ void py::set_error(py::error_info const& info) noexcept
     {
     case error_kind::hresult:
     {
+        // A static member is reached through the activation factory, which is
+        // where a member this version of Windows does not have fails. The
+        // generated code used to ask ApiInformation before every such call to
+        // get a better message than the HRESULT; asking here instead keeps the
+        // message and costs nothing until something has already gone wrong.
+        if (info.site && (info.site->flags & site_is_static)
+            && is_activation_failure(info.hresult))
+        {
+            const auto in_metadata = is_in_metadata(
+                info.site->kind,
+                info.site->type_name,
+                info.site->member_name,
+                info.site->arg_count);
+
+            if (in_metadata.has_value() && !in_metadata.value())
+            {
+                set_not_in_this_version_error(
+                    info.site->kind, info.site->type_name, info.site->member_name);
+
+                return;
+            }
+        }
+
         // The message is an hstring owned by the exception the caller is
         // still handling, so it is not necessarily null-terminated and must
         // be copied before this returns.
@@ -83,6 +219,29 @@ void py::set_error(py::error_info const& info) noexcept
             PyExc_RuntimeError, "a C++ exception of an unknown type was thrown");
         break;
     }
+}
+
+void py::set_member_not_available_error(py::member_not_available const& info) noexcept
+{
+    // The interface query answers whether this object implements the member.
+    // ApiInformation answers whether this version of Windows has it at all,
+    // which is the more useful thing to say when it does not.
+    const auto in_metadata
+        = is_in_metadata(info.kind, info.type_name, info.member_name, info.arg_count);
+
+    if (in_metadata.has_value() && !in_metadata.value())
+    {
+        set_not_in_this_version_error(info.kind, info.type_name, info.member_name);
+
+        return;
+    }
+
+    PyErr_Format(
+        PyExc_AttributeError,
+        "%s '%s' requires '%s', which this object does not implement",
+        member_kind_name(info.kind),
+        info.member_name,
+        info.interface_name);
 }
 
 void py::set_call_error(

@@ -19,21 +19,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", "ComputeTotalEnergyUsage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", L"ComputeTotalEnergyUsage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -42,7 +31,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -59,21 +48,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", "ResetTotalEnergyUsage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", L"ResetTotalEnergyUsage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::ResetTotalEnergyUsage();
@@ -83,7 +61,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -96,21 +74,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* BackgroundEnergyDiagnostics_get_DeviceSpecificConversionFactor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", "DeviceSpecificConversionFactor", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics", L"DeviceSpecificConversionFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -119,7 +86,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -182,21 +149,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", "ComputeTotalEnergyUsage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", L"ComputeTotalEnergyUsage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -205,7 +161,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -222,21 +178,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", "ResetTotalEnergyUsage", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", L"ResetTotalEnergyUsage", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::ResetTotalEnergyUsage();
@@ -246,7 +191,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -259,21 +204,10 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* ForegroundEnergyDiagnostics_get_DeviceSpecificConversionFactor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", "DeviceSpecificConversionFactor", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics", L"DeviceSpecificConversionFactor");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -282,7 +216,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

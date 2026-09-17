@@ -402,11 +402,7 @@ static class InterfaceWriterExtensions
         );
     }
 
-    public static void WriteGenericInterfaceImpl(
-        this IndentedTextWriter w,
-        ProjectedType type,
-        bool componentDlls
-    )
+    public static void WriteGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine(
             $"template<{string.Join(", ", type.Type.GenericParameters.Select(p => $"typename {p.Name}"))}>"
@@ -420,7 +416,7 @@ static class InterfaceWriterExtensions
                 foreach (var group in type.MethodGroups)
                 {
                     w.WriteLine($"PyObject* {group.Name}(PyObject* args) noexcept override");
-                    w.WriteBlock(() => w.WriteMethodOverloads(type, group, componentDlls));
+                    w.WriteBlock(() => w.WriteMethodOverloads(type, group));
                 }
 
                 foreach (var prop in type.Properties)

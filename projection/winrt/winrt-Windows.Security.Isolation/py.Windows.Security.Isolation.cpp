@@ -57,21 +57,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsEnvironment", "CreateAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
 
                 return py::convert([&]()
@@ -82,27 +71,16 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Isolation.IsolatedWindowsEnvironment", "CreateAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"CreateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 1);
 
@@ -114,7 +92,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -131,21 +109,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsEnvironment", "FindByOwnerId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"FindByOwnerId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -156,7 +123,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -173,21 +140,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsEnvironment", "GetById", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"GetById", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -198,7 +154,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1017,21 +973,10 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentHost_get_HostErrors(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", "HostErrors", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"HostErrors");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1040,28 +985,17 @@ namespace py::cpp::Windows::Security::Isolation
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* IsolatedWindowsEnvironmentHost_get_IsReady(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", "IsReady", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHost", L"IsReady");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1070,7 +1004,7 @@ namespace py::cpp::Windows::Security::Isolation
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1886,21 +1820,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", "Register", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Register", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>(args, 1);
 
@@ -1912,7 +1835,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1929,21 +1852,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", "Unregister", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration", L"Unregister", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1955,7 +1867,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3440,21 +3352,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsHostMessenger", "GetFileId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"GetFileId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3465,7 +3366,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3482,21 +3383,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Isolation.IsolatedWindowsHostMessenger", "PostMessageToReceiver", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"PostMessageToReceiver", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
@@ -3509,7 +3399,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3526,21 +3416,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Isolation.IsolatedWindowsHostMessenger", "RegisterHostMessageReceiver", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"RegisterHostMessageReceiver", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Isolation::HostMessageReceivedCallback>(args, 1);
 
@@ -3553,7 +3432,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3570,21 +3449,10 @@ namespace py::cpp::Windows::Security::Isolation
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Isolation.IsolatedWindowsHostMessenger", "UnregisterHostMessageReceiver", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsHostMessenger", L"UnregisterHostMessageReceiver", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 {
@@ -3596,7 +3464,7 @@ namespace py::cpp::Windows::Security::Isolation
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

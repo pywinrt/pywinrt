@@ -1268,21 +1268,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Windows.Management.Deployment.PackageDeploymentManager", "GetDefault", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"GetDefault", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1291,7 +1280,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1308,21 +1297,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Windows.Management.Deployment.PackageDeploymentManager", "IsPackageDeploymentFeatureSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageDeploymentFeatureSupported", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>(args, 0);
 
                 return py::convert([&]()
@@ -1333,7 +1311,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2592,21 +2570,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Windows.Management.Deployment.PackageRuntimeManager", "GetDefault", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageRuntimeManager", L"GetDefault", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -2615,7 +2582,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3549,21 +3516,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Windows.Management.Deployment.PackageVolume", "FindPackageVolumeByName", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByName", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3574,7 +3530,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3591,21 +3547,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Windows.Management.Deployment.PackageVolume", "FindPackageVolumeByPath", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumeByPath", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -3616,7 +3561,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3633,21 +3578,10 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Windows.Management.Deployment.PackageVolume", "FindPackageVolumes", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageVolume", L"FindPackageVolumes", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3656,7 +3590,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

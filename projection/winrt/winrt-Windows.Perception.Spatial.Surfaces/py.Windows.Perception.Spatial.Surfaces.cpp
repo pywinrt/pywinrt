@@ -701,21 +701,10 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceMeshOptions_get_SupportedTriangleIndexFormats(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", "SupportedTriangleIndexFormats", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"SupportedTriangleIndexFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -724,28 +713,17 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* SpatialSurfaceMeshOptions_get_SupportedVertexNormalFormats(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", "SupportedVertexNormalFormats", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"SupportedVertexNormalFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -754,28 +732,17 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* SpatialSurfaceMeshOptions_get_SupportedVertexPositionFormats(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", "SupportedVertexPositionFormats", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions", L"SupportedVertexPositionFormats");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -784,7 +751,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -935,21 +902,10 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", "IsSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"IsSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -958,7 +914,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -975,21 +931,10 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", "RequestAccessAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver", L"RequestAccessAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -998,7 +943,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

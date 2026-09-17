@@ -27,21 +27,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", "GetCurrentSettings", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings", L"GetCurrentSettings", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -50,7 +39,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -180,21 +169,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "FilterUnsupportedSystemFeaturesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"FilterUnsupportedSystemFeaturesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>>(args, 0);
 
                 return py::convert([&]()
@@ -205,7 +183,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -222,21 +200,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetEnterpriseStoreWebAccountId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -245,7 +212,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -262,21 +229,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetEnterpriseStoreWebAccountIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetEnterpriseStoreWebAccountIdForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -287,7 +243,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -304,21 +260,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetPurchasePromptingPolicyForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetPurchasePromptingPolicyForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -329,7 +274,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -346,21 +291,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetStoreLogDataAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreLogDataAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions>(args, 0);
 
                 return py::convert([&]()
@@ -371,7 +305,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -388,21 +322,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetStoreWebAccountId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountId", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -411,7 +334,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -428,21 +351,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "GetStoreWebAccountIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"GetStoreWebAccountIdForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -453,7 +365,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -470,21 +382,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "HasStoreWebAccount", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccount", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -493,7 +394,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -510,21 +411,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "HasStoreWebAccountForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HasStoreWebAccountForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -535,7 +425,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -552,21 +442,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "IsPinToDesktopSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToDesktopSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -575,7 +454,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -592,21 +471,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "IsPinToStartSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToStartSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -615,7 +483,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -632,21 +500,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "IsPinToTaskbarSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsPinToTaskbarSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -655,7 +512,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -672,21 +529,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "IsStoreWebAccountId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -697,7 +543,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -714,21 +560,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "IsStoreWebAccountIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"IsStoreWebAccountIdForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -740,7 +575,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -757,21 +592,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "PinToDesktop", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktop", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -783,7 +607,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -800,21 +624,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "PinToDesktopForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PinToDesktopForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -827,7 +640,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -844,21 +657,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetEnterpriseStoreWebAccountId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -870,7 +672,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -887,21 +689,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetEnterpriseStoreWebAccountIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetEnterpriseStoreWebAccountIdForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -914,7 +705,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -931,21 +722,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetMobileOperatorConfiguration", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetMobileOperatorConfiguration", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -959,7 +739,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -976,21 +756,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetPurchasePromptingPolicyForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetPurchasePromptingPolicyForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
@@ -1003,7 +772,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1020,21 +789,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetStoreWebAccountId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 {
@@ -1046,7 +804,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1063,21 +821,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetStoreWebAccountIdForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetStoreWebAccountIdForUser", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1090,7 +837,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1107,21 +854,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "SetSystemConfiguration", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"SetSystemConfiguration", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
@@ -1136,7 +872,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1153,21 +889,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "ShouldRestrictToEnterpriseStoreOnly", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnly", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1176,7 +901,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1193,21 +918,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "ShouldRestrictToEnterpriseStoreOnlyForUser", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"ShouldRestrictToEnterpriseStoreOnlyForUser", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -1218,7 +932,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1231,21 +945,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_get_HardwareManufacturerInfo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "HardwareManufacturerInfo", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"HardwareManufacturerInfo");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1254,28 +957,17 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* StoreConfiguration_get_PurchasePromptingPolicy(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "PurchasePromptingPolicy", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1284,7 +976,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1297,21 +989,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             return -1;
         }
 
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Store.Preview.StoreConfiguration", "PurchasePromptingPolicy", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.StoreConfiguration", L"PurchasePromptingPolicy");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             {
@@ -1323,7 +1004,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return -1;
         }
     }
@@ -1545,21 +1226,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Store.Preview.StorePreview", "LoadAddOnProductInfosAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"LoadAddOnProductInfosAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1568,7 +1238,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1585,21 +1255,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.StorePreview", "RequestProductPurchaseByProductIdAndSkuIdAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.StorePreview", L"RequestProductPurchaseByProductIdAndSkuIdAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1611,7 +1270,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2138,21 +1797,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", "RequestTokenWithUIElementHostingAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
@@ -2164,27 +1812,16 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", "RequestTokenWithUIElementHostingAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 2);
@@ -2197,7 +1834,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

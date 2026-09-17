@@ -27,21 +27,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "GetForCurrentView", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"GetForCurrentView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -50,7 +39,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -67,21 +56,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "Show", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"Show", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::Show();
@@ -91,7 +69,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -108,21 +86,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "ShowAddAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -131,7 +98,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -148,21 +115,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "ShowAddAccountForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountForUserAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -173,7 +129,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -190,21 +146,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "ShowManageAccountsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -213,7 +158,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -230,21 +175,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.UI.ApplicationSettings.AccountsSettingsPane", "ShowManageAccountsForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsForUserAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -255,7 +189,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1010,21 +944,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsCommand_get_AccountsCommand(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.ApplicationSettings.SettingsCommand", "AccountsCommand", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"AccountsCommand");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1033,7 +956,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1132,21 +1055,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.SettingsPane", "GetForCurrentView", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"GetForCurrentView", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1155,7 +1067,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1172,21 +1084,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.UI.ApplicationSettings.SettingsPane", "Show", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Show", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::UI::ApplicationSettings::SettingsPane::Show();
@@ -1196,7 +1097,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1209,21 +1110,10 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_get_Edge(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.UI.ApplicationSettings.SettingsPane", "Edge", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Edge");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -1232,7 +1122,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

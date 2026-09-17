@@ -222,21 +222,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Security.Authentication.OAuth.AuthRequestParams", "CreateForAuthorizationCodeRequest", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.AuthRequestParams", L"CreateForAuthorizationCodeRequest", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -247,27 +236,16 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.Security.Authentication.OAuth.AuthRequestParams", "CreateForAuthorizationCodeRequest", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.AuthRequestParams", L"CreateForAuthorizationCodeRequest", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -279,7 +257,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1050,21 +1028,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.Security.Authentication.OAuth.ClientAuthentication", "CreateForBasicAuthorization", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.ClientAuthentication", L"CreateForBasicAuthorization", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1076,7 +1043,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1276,21 +1243,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Security.Authentication.OAuth.OAuth2Manager", "CompleteAuthRequest", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.OAuth2Manager", L"CompleteAuthRequest", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -1301,7 +1257,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1318,21 +1274,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Microsoft.Security.Authentication.OAuth.OAuth2Manager", "RequestAuthWithParamsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.OAuth2Manager", L"RequestAuthWithParamsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Security::Authentication::OAuth::AuthRequestParams>(args, 2);
@@ -1345,7 +1290,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1362,21 +1307,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Microsoft.Security.Authentication.OAuth.OAuth2Manager", "RequestTokenAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.OAuth2Manager", L"RequestTokenAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Security::Authentication::OAuth::TokenRequestParams>(args, 1);
 
@@ -1388,27 +1322,16 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Microsoft.Security.Authentication.OAuth.OAuth2Manager", "RequestTokenAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.OAuth2Manager", L"RequestTokenAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Security::Authentication::OAuth::TokenRequestParams>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Security::Authentication::OAuth::ClientAuthentication>(args, 2);
@@ -1421,7 +1344,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1693,21 +1616,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Security.Authentication.OAuth.TokenRequestParams", "CreateForAuthorizationCodeRequest", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.TokenRequestParams", L"CreateForAuthorizationCodeRequest", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Microsoft::Security::Authentication::OAuth::AuthResponse>(args, 0);
 
                 return py::convert([&]()
@@ -1718,7 +1630,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1735,21 +1647,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Microsoft.Security.Authentication.OAuth.TokenRequestParams", "CreateForClientCredentials", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.TokenRequestParams", L"CreateForClientCredentials", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1758,7 +1659,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1775,21 +1676,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Security.Authentication.OAuth.TokenRequestParams", "CreateForExtension", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.TokenRequestParams", L"CreateForExtension", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -1800,7 +1690,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1817,21 +1707,10 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Microsoft.Security.Authentication.OAuth.TokenRequestParams", "CreateForRefreshToken", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Security.Authentication.OAuth.TokenRequestParams", L"CreateForRefreshToken", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1842,7 +1721,7 @@ namespace py::cpp::Microsoft::Security::Authentication::OAuth
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

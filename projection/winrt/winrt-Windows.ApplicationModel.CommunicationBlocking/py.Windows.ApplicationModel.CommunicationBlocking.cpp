@@ -19,21 +19,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "IsBlockedNumberAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockedNumberAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -44,7 +33,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -61,21 +50,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "ShowBlockNumbersUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockNumbersUI", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -86,7 +64,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -103,21 +81,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "ShowBlockedCallsUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedCallsUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedCallsUI();
@@ -127,7 +94,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -144,21 +111,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "ShowBlockedMessagesUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowBlockedMessagesUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager::ShowBlockedMessagesUI();
@@ -168,7 +124,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -185,21 +141,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "ShowUnblockNumbersUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"ShowUnblockNumbersUI", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert([&]()
@@ -210,7 +155,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -223,21 +168,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_get_IsBlockingActive(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", "IsBlockingActive", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager", L"IsBlockingActive");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -246,7 +180,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -312,21 +246,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", "RequestSetAsActiveBlockingAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"RequestSetAsActiveBlockingAppAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -335,7 +258,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -352,21 +275,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", "ShowCommunicationBlockingSettingsUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"ShowCommunicationBlockingSettingsUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI();
@@ -376,7 +288,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -389,21 +301,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAppManager_get_IsCurrentAppActiveBlockingApp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", "IsCurrentAppActiveBlockingApp", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager", L"IsCurrentAppActiveBlockingApp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -412,7 +313,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

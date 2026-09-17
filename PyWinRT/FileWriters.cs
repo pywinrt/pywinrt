@@ -103,9 +103,9 @@ static class FileWriters
         // in parallel. This helps the largest namespaces, which would
         // otherwise be the last ones still running at the end.
         Parallel.Invoke(
-            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0),
-            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1),
-            () => WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls),
+            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, 0),
+            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, 1),
+            () => WriteNamespaceH(headerDir, ns, packageMap, members),
             () => WriteNamespaceTypesH(headerDir, ns, members),
             () =>
                 WriteNamespaceDunderInitPy(
@@ -688,8 +688,7 @@ static class FileWriters
         DirectoryInfo headerDir,
         QualifiedNamespace ns,
         IReadOnlyDictionary<string, string> packageMap,
-        Members members,
-        bool componentDlls
+        Members members
     )
     {
         using var sw = new StringWriter();
@@ -800,7 +799,7 @@ static class FileWriters
                     w.WriteBlankLine();
                 }
 
-                w.WriteGenericInterfaceImpl(iface, componentDlls);
+                w.WriteGenericInterfaceImpl(iface);
             }
         });
 
@@ -1090,7 +1089,6 @@ static class FileWriters
         QualifiedNamespace ns,
         IReadOnlyDictionary<string, string> packageMap,
         Members members,
-        bool componentDlls,
         int dependencyDepth
     )
     {
@@ -1123,7 +1121,7 @@ static class FileWriters
                         w.WriteBlankLine();
                     }
 
-                    w.WriteInspectableType(t, componentDlls, ns, moduleSuffix);
+                    w.WriteInspectableType(t, ns, moduleSuffix);
 
                     if (t.Category == Category.Interface)
                     {

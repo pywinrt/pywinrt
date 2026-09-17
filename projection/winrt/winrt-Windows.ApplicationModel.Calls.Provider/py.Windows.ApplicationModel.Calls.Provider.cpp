@@ -324,21 +324,10 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", "RequestSetAsActiveCallOriginAppAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"RequestSetAsActiveCallOriginAppAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -347,7 +336,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -364,21 +353,10 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", "SetCallOrigin", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"SetCallOrigin", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>(args, 1);
 
@@ -391,7 +369,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -408,21 +386,10 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", "ShowPhoneCallOriginSettingsUI", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"ShowPhoneCallOriginSettingsUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 {
                     auto _gil = release_gil();
                     winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager::ShowPhoneCallOriginSettingsUI();
@@ -432,7 +399,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -445,21 +412,10 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_get_IsCurrentAppActiveCallOriginApp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", "IsCurrentAppActiveCallOriginApp", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsCurrentAppActiveCallOriginApp");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -468,28 +424,17 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* PhoneCallOriginManager_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", "IsSupported", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager", L"IsSupported");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -498,7 +443,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

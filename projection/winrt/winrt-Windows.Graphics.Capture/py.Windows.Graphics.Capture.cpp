@@ -262,21 +262,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.Graphics.Capture.Direct3D11CaptureFramePool", "Create", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"Create", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -290,7 +279,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -336,21 +325,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.Graphics.Capture.Direct3D11CaptureFramePool", "CreateFreeThreaded", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFramePool", L"CreateFreeThreaded", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -364,7 +342,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -607,21 +585,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Graphics.Capture.GraphicsCaptureAccess", "RequestAccessAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureAccess", L"RequestAccessAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>(args, 0);
 
                 return py::convert([&]()
@@ -632,7 +599,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -707,21 +674,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Graphics.Capture.GraphicsCaptureItem", "CreateFromVisual", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"CreateFromVisual", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 0);
 
                 return py::convert([&]()
@@ -732,7 +688,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -749,21 +705,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Graphics.Capture.GraphicsCaptureItem", "TryCreateFromDisplayId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"TryCreateFromDisplayId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DisplayId>(args, 0);
 
                 return py::convert([&]()
@@ -774,7 +719,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -791,21 +736,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Graphics.Capture.GraphicsCaptureItem", "TryCreateFromWindowId", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureItem", L"TryCreateFromWindowId", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowId>(args, 0);
 
                 return py::convert([&]()
@@ -816,7 +750,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1138,21 +1072,10 @@ namespace py::cpp::Windows::Graphics::Capture
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Graphics.Capture.GraphicsCaptureSession", "IsSupported", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IsSupported", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1161,7 +1084,7 @@ namespace py::cpp::Windows::Graphics::Capture
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

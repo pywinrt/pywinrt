@@ -4,7 +4,7 @@
     },
     "runtime_abi": {
         "major": 4,
-        "minor": 3
+        "minor": 4
     },
     "required": [
         "winrt-Windows.UI.Xaml.Media"

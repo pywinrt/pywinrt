@@ -2082,21 +2082,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.Connectivity.ConnectivityManager", "AcquireConnectionAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AcquireConnectionAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::CellularApnContext>(args, 0);
 
                 return py::convert([&]()
@@ -2107,7 +2096,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2124,21 +2113,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.Connectivity.ConnectivityManager", "AddHttpRoutePolicy", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AddHttpRoutePolicy", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
                 {
@@ -2150,7 +2128,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2167,21 +2145,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.Connectivity.ConnectivityManager", "RemoveHttpRoutePolicy", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"RemoveHttpRoutePolicy", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
                 {
@@ -2193,7 +2160,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3127,21 +3094,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.Connectivity.NetworkInformation", "FindConnectionProfilesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"FindConnectionProfilesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>(args, 0);
 
                 return py::convert([&]()
@@ -3152,7 +3108,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3169,21 +3125,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.Connectivity.NetworkInformation", "GetConnectionProfiles", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetConnectionProfiles", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3192,7 +3137,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3209,21 +3154,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.Connectivity.NetworkInformation", "GetHostNames", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetHostNames", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3232,7 +3166,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3249,21 +3183,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.Connectivity.NetworkInformation", "GetInternetConnectionProfile", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetInternetConnectionProfile", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3272,7 +3195,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3289,21 +3212,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.Connectivity.NetworkInformation", "GetLanIdentifiers", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetLanIdentifiers", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -3312,7 +3224,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3329,21 +3241,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.Connectivity.NetworkInformation", "GetProxyConfigurationAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetProxyConfigurationAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert([&]()
@@ -3354,7 +3255,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3371,21 +3272,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Networking.Connectivity.NetworkInformation", "GetSortedEndpointPairs", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetSortedEndpointPairs", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::EndpointPair>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostNameSortOptions>(args, 1);
 
@@ -3397,7 +3287,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -3410,21 +3300,10 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_add_NetworkStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::event, 0, "Windows.Networking.Connectivity.NetworkInformation", "NetworkStatusChanged", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler>(arg);
 
             return py::convert([&]()
@@ -3435,28 +3314,17 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* NetworkInformation_remove_NetworkStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::event, 0, "Windows.Networking.Connectivity.NetworkInformation", "NetworkStatusChanged", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             {
@@ -3468,7 +3336,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

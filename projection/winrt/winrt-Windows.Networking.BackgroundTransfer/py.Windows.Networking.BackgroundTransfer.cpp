@@ -145,21 +145,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.BackgroundTransfer.BackgroundDownloader", "GetCurrentDownloadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -168,27 +157,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundDownloader", "GetCurrentDownloadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -199,7 +177,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -216,21 +194,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundDownloader", "GetCurrentDownloadsForTransferGroupAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsForTransferGroupAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
                 return py::convert([&]()
@@ -241,7 +208,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -258,21 +225,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundDownloader", "RequestUnconstrainedDownloadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"RequestUnconstrainedDownloadsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>(args, 0);
 
                 return py::convert([&]()
@@ -283,7 +239,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1330,21 +1286,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundTransferError", "GetStatus", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferError", L"GetStatus", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert([&]()
@@ -1355,7 +1300,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1430,21 +1375,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", "CreateGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"CreateGroup", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1455,7 +1389,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1914,21 +1848,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Networking.BackgroundTransfer.BackgroundUploader", "GetCurrentUploadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -1937,27 +1860,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundUploader", "GetCurrentUploadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert([&]()
@@ -1968,7 +1880,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1985,21 +1897,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundUploader", "GetCurrentUploadsForTransferGroupAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsForTransferGroupAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
                 return py::convert([&]()
@@ -2010,7 +1911,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2027,21 +1928,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Networking.BackgroundTransfer.BackgroundUploader", "RequestUnconstrainedUploadsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"RequestUnconstrainedUploadsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>(args, 0);
 
                 return py::convert([&]()
@@ -2052,7 +1942,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -2637,21 +2527,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ContentPrefetcher_get_IndirectContentUri(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Networking.BackgroundTransfer.ContentPrefetcher", "IndirectContentUri", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2660,7 +2539,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -2673,21 +2552,10 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return -1;
         }
 
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Networking.BackgroundTransfer.ContentPrefetcher", "IndirectContentUri", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             {
@@ -2699,28 +2567,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return -1;
         }
     }
 
     static PyObject* ContentPrefetcher_get_ContentUris(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Networking.BackgroundTransfer.ContentPrefetcher", "ContentUris", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"ContentUris");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2729,28 +2586,17 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* ContentPrefetcher_get_LastSuccessfulPrefetchTime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Networking.BackgroundTransfer.ContentPrefetcher", "LastSuccessfulPrefetchTime", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"LastSuccessfulPrefetchTime");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -2759,7 +2605,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

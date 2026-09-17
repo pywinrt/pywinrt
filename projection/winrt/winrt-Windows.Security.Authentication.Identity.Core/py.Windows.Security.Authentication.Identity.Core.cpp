@@ -301,21 +301,10 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", "Current", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"Current");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -324,7 +313,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }

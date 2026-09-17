@@ -178,21 +178,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -205,27 +194,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -239,27 +217,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 5)
         {
+            static constexpr py::member_site site{py::member_kind::method, 5, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -274,7 +241,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -291,21 +258,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 4)
         {
+            static constexpr py::member_site site{py::member_kind::method, 4, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -319,27 +275,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 5)
         {
+            static constexpr py::member_site site{py::member_kind::method, 5, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -354,27 +299,16 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 6)
         {
+            static constexpr py::member_site site{py::member_kind::method, 6, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "AddWebAccountForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -390,7 +324,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -407,21 +341,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "ClearPerUserFromPerAppAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearPerUserFromPerAppAccountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -432,7 +355,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -449,21 +372,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "ClearViewAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearViewAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
@@ -475,7 +387,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -492,21 +404,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "ClearWebAccountPictureAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"ClearWebAccountPictureAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -517,7 +418,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -534,21 +435,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "DeleteWebAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"DeleteWebAccountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -559,7 +449,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -576,21 +466,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "FindAllProviderWebAccountsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -599,7 +478,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -616,21 +495,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "FindAllProviderWebAccountsForUserAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"FindAllProviderWebAccountsForUserAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert([&]()
@@ -641,7 +509,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -658,21 +526,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "GetPerUserFromPerAppAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetPerUserFromPerAppAccountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -683,7 +540,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -700,21 +557,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "GetScope", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetScope", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -725,7 +571,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -742,21 +588,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "GetViewsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"GetViewsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -767,7 +602,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -784,21 +619,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "InvalidateAppCacheForAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAccountAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert([&]()
@@ -809,7 +633,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -826,21 +650,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 0)
         {
+            static constexpr py::member_site site{py::member_kind::method, 0, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "InvalidateAppCacheForAllAccountsAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"InvalidateAppCacheForAllAccountsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
@@ -849,7 +662,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -866,21 +679,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "PullCookiesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PullCookiesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -892,7 +694,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -909,21 +711,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "PushCookiesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"PushCookiesAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Web::Http::HttpCookie>>(args, 1);
 
@@ -935,7 +726,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -952,21 +743,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "SetPerAppToPerUserAccountAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetPerAppToPerUserAccountAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -978,7 +758,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -995,21 +775,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "SetScopeAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetScopeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 1);
 
@@ -1021,7 +790,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1038,21 +807,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "SetViewAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetViewAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>(args, 1);
 
@@ -1064,7 +822,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1081,21 +839,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "SetWebAccountPictureAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"SetWebAccountPictureAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -1107,7 +854,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1124,21 +871,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
         if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Security.Authentication.Web.Provider.WebAccountManager", "UpdateWebAccountPropertiesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"UpdateWebAccountPropertiesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
@@ -1151,7 +887,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

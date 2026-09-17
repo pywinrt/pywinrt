@@ -550,21 +550,10 @@ namespace py::cpp::Windows::Media::Effects
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Media.Effects.AudioEffectsManager", "CreateAudioCaptureEffectsManager", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffectsManager", L"CreateAudioCaptureEffectsManager", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 1);
 
@@ -576,27 +565,16 @@ namespace py::cpp::Windows::Media::Effects
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Media.Effects.AudioEffectsManager", "CreateAudioCaptureEffectsManager", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffectsManager", L"CreateAudioCaptureEffectsManager", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::AudioProcessing>(args, 2);
@@ -609,7 +587,7 @@ namespace py::cpp::Windows::Media::Effects
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -626,21 +604,10 @@ namespace py::cpp::Windows::Media::Effects
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Media.Effects.AudioEffectsManager", "CreateAudioRenderEffectsManager", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffectsManager", L"CreateAudioRenderEffectsManager", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 1);
 
@@ -652,27 +619,16 @@ namespace py::cpp::Windows::Media::Effects
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
         else if (arg_count == 3)
         {
+            static constexpr py::member_site site{py::member_kind::method, 3, "Windows.Media.Effects.AudioEffectsManager", "CreateAudioRenderEffectsManager", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffectsManager", L"CreateAudioRenderEffectsManager", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::AudioProcessing>(args, 2);
@@ -685,7 +641,7 @@ namespace py::cpp::Windows::Media::Effects
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

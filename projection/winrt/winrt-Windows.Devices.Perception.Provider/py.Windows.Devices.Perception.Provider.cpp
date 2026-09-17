@@ -15,21 +15,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* KnownPerceptionFrameKind_get_Color(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", "Color", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", L"Color");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -38,28 +27,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* KnownPerceptionFrameKind_get_Depth(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", "Depth", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", L"Depth");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -68,28 +46,17 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
 
     static PyObject* KnownPerceptionFrameKind_get_Infrared(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
+        static constexpr py::member_site site{py::member_kind::property, 0, "Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", "Infrared", nullptr, py::site_is_static};
+
         try
         {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.Provider.KnownPerceptionFrameKind", L"Infrared");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert([&]()
             {
                 auto _gil = release_gil();
@@ -98,7 +65,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
         catch (...)
         {
-            py::to_PyErr();
+            py::to_PyErr(&site);
             return nullptr;
         }
     }
@@ -1069,21 +1036,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "PublishFrameForProvider", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"PublishFrameForProvider", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>(args, 1);
 
@@ -1096,7 +1052,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1113,21 +1069,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "RegisterControlGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"RegisterControlGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>(args, 1);
 
@@ -1140,7 +1085,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1157,21 +1102,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "RegisterCorrelationGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"RegisterCorrelationGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>(args, 1);
 
@@ -1184,7 +1118,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1201,21 +1135,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "RegisterFaceAuthenticationGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"RegisterFaceAuthenticationGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>(args, 1);
 
@@ -1228,7 +1151,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1245,21 +1168,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "RegisterFrameProviderInfo", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"RegisterFrameProviderInfo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>(args, 1);
 
@@ -1272,7 +1184,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1289,21 +1201,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "UnregisterControlGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"UnregisterControlGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>(args, 1);
 
@@ -1316,7 +1217,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1333,21 +1234,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "UnregisterCorrelationGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"UnregisterCorrelationGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>(args, 1);
 
@@ -1360,7 +1250,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1377,21 +1267,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "UnregisterFaceAuthenticationGroup", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"UnregisterFaceAuthenticationGroup", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>(args, 1);
 
@@ -1404,7 +1283,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1421,21 +1300,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "UnregisterFrameProviderInfo", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"UnregisterFrameProviderInfo", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>(args, 1);
 
@@ -1448,7 +1316,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -1465,21 +1333,10 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
         if (arg_count == 2)
         {
+            static constexpr py::member_site site{py::member_kind::method, 2, "Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", "UpdateAvailabilityForProvider", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService", L"UpdateAvailabilityForProvider", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1492,7 +1349,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }

@@ -76,7 +76,6 @@ static class WriterExtensions
     public static void WriteInspectableType(
         this IndentedTextWriter w,
         ProjectedType type,
-        bool componentDlls,
         QualifiedNamespace ns,
         string moduleSuffix
     )
@@ -101,7 +100,7 @@ static class WriterExtensions
 
         w.WriteNewFunction(type);
         w.WriteDeallocFunction(type);
-        w.WriteMethodFunctions(type, componentDlls);
+        w.WriteMethodFunctions(type);
         w.WriteMethodTable(type);
         w.WriteGetSetTable(type);
         w.WriteTypeSlotTable(type);
@@ -519,11 +518,7 @@ static class WriterExtensions
         });
     }
 
-    static void WriteMethodFunctions(
-        this IndentedTextWriter w,
-        ProjectedType type,
-        bool componentDlls
-    )
+    static void WriteMethodFunctions(this IndentedTextWriter w, ProjectedType type)
     {
         foreach (var group in type.MethodGroups)
         {
@@ -541,25 +536,25 @@ static class WriterExtensions
                 }
                 else
                 {
-                    w.WriteMethodOverloads(type, group, componentDlls);
+                    w.WriteMethodOverloads(type, group);
                 }
             });
         }
 
         foreach (var prop in type.Properties)
         {
-            w.WritePropertyGetFunction(type, prop, componentDlls);
+            w.WritePropertyGetFunction(type, prop);
 
             if (prop.SetMethod is not null)
             {
-                w.WritePropertySetFunction(type, prop, componentDlls);
+                w.WritePropertySetFunction(type, prop);
             }
         }
 
         foreach (var evt in type.Events)
         {
-            w.WriteEventFunction(type, evt.AddMethod, evt.Name, componentDlls);
-            w.WriteEventFunction(type, evt.RemoveMethod, evt.Name, componentDlls);
+            w.WriteEventFunction(type, evt.AddMethod, evt.Name);
+            w.WriteEventFunction(type, evt.RemoveMethod, evt.Name);
         }
 
         if (type.Category != Category.Interface && !(type.IsGeneric || type.IsStatic))
@@ -727,12 +722,37 @@ static class WriterExtensions
         }
     }
 
+    /// <summary>
+    /// Writes the <c>py::member_site</c> that names a static member, for the
+    /// error path to report.
+    /// </summary>
+    /// <remarks>
+    /// An instance member is guarded by the query for the interface that
+    /// declares it, which carries its own names. A static member has no object
+    /// to query: it goes through the activation factory, which fails cleanly,
+    /// and the site is what lets the runtime turn that failure into the same
+    /// message the removed <c>ApiInformation</c> probe used to produce.
+    /// </remarks>
+    static void WriteStaticMemberSite(
+        this IndentedTextWriter w,
+        TypeReference declaringType,
+        string memberKind,
+        string memberName,
+        int argCount
+    )
+    {
+        w.WriteLine(
+            $"static constexpr py::member_site site{{py::member_kind::{memberKind}, {argCount}, "
+                + $"\"{declaringType.FullName}\", \"{memberName}\", nullptr, py::site_is_static}};"
+        );
+        w.WriteBlankLine();
+    }
+
     static void WriteEventFunction(
         this IndentedTextWriter w,
         ProjectedType type,
         ProjectedMethod method,
-        string evtName,
-        bool componentDlls
+        string evtName
     )
     {
         var self = method.IsStatic ? "PyObject* /*unused*/" : $"{type.CppPyWrapperType}* self";
@@ -740,50 +760,33 @@ static class WriterExtensions
         w.WriteBlankLine();
         w.WriteLine($"static PyObject* {type.Name}_{method.Name}({self}, PyObject* arg) noexcept");
         w.WriteBlock(() =>
-            w.WriteTryCatch(() =>
+        {
+            if (method.IsStatic)
             {
-                // An instance member is guarded by the query for the
-                // interface that declares it. A static member has no object
-                // to query, so it keeps the metadata probe.
-                if (!componentDlls && method.IsStatic)
-                {
-                    w.WriteLine("static std::optional<bool> is_event_present{};");
-                    w.WriteBlankLine();
-                    w.WriteLine("if (!is_event_present.has_value())");
-                    w.WriteBlock(() =>
-                        w.WriteLine(
-                            $"is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
-                        )
-                    );
-                    w.WriteBlankLine();
-                    w.WriteLine("if (!is_event_present.value())");
-                    w.WriteBlock(() =>
-                    {
-                        w.WriteLine(
-                            "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");"
-                        );
-                        w.WriteLine("return nullptr;");
-                    });
-                    w.WriteBlankLine();
-                }
+                w.WriteStaticMemberSite(method.Method.DeclaringType, "event", evtName, 0);
+            }
 
-                if (type.IsGeneric)
+            w.WriteTryCatch(
+                () =>
                 {
-                    w.WriteLine($"return self->impl->{method.Name}(arg);");
-                }
-                else
-                {
-                    w.WriteMethodBodyContents(type, method);
-                }
-            })
-        );
+                    if (type.IsGeneric)
+                    {
+                        w.WriteLine($"return self->impl->{method.Name}(arg);");
+                    }
+                    else
+                    {
+                        w.WriteMethodBodyContents(type, method);
+                    }
+                },
+                site: method.IsStatic ? "site" : null
+            );
+        });
     }
 
     static void WritePropertyGetFunction(
         this IndentedTextWriter w,
         ProjectedType type,
-        ProjectedProperty prop,
-        bool componentDlls
+        ProjectedProperty prop
     )
     {
         var self = type.GetMethodSelfParam(prop.IsStatic);
@@ -793,47 +796,33 @@ static class WriterExtensions
             $"static PyObject* {type.Name}_{prop.GetMethod.Name}({self}, void* /*unused*/) noexcept"
         );
         w.WriteBlock(() =>
-            w.WriteTryCatch(() =>
+        {
+            if (prop.IsStatic)
             {
-                if (!componentDlls && prop.IsStatic)
-                {
-                    w.WriteLine("static std::optional<bool> is_property_present{};");
-                    w.WriteBlankLine();
-                    w.WriteLine("if (!is_property_present.has_value())");
-                    w.WriteBlock(() =>
-                        w.WriteLine(
-                            $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
-                        )
-                    );
-                    w.WriteBlankLine();
-                    w.WriteLine("if (!is_property_present.value())");
-                    w.WriteBlock(() =>
-                    {
-                        w.WriteLine(
-                            "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
-                        );
-                        w.WriteLine("return nullptr;");
-                    });
-                    w.WriteBlankLine();
-                }
+                w.WriteStaticMemberSite(prop.Property.DeclaringType, "property", prop.Name, 0);
+            }
 
-                if (type.IsGeneric)
+            w.WriteTryCatch(
+                () =>
                 {
-                    w.WriteLine($"return self->impl->{prop.GetMethod.Name}();");
-                }
-                else
-                {
-                    w.WriteMethodBodyContents(type, prop.GetMethod);
-                }
-            })
-        );
+                    if (type.IsGeneric)
+                    {
+                        w.WriteLine($"return self->impl->{prop.GetMethod.Name}();");
+                    }
+                    else
+                    {
+                        w.WriteMethodBodyContents(type, prop.GetMethod);
+                    }
+                },
+                site: prop.IsStatic ? "site" : null
+            );
+        });
     }
 
     static void WritePropertySetFunction(
         this IndentedTextWriter w,
         ProjectedType type,
-        ProjectedProperty prop,
-        bool componentDlls
+        ProjectedProperty prop
     )
     {
         if (prop.SetMethod is null)
@@ -857,32 +846,14 @@ static class WriterExtensions
             });
             w.WriteBlankLine();
 
+            if (prop.IsStatic)
+            {
+                w.WriteStaticMemberSite(prop.Property.DeclaringType, "property", prop.Name, 0);
+            }
+
             w.WriteTryCatch(
                 () =>
                 {
-                    if (!componentDlls && prop.IsStatic)
-                    {
-                        w.WriteLine("static std::optional<bool> is_property_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.has_value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine(
-                                $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
-                            );
-                        });
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine(
-                                "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
-                            );
-                            w.WriteLine("return -1;");
-                        });
-                        w.WriteBlankLine();
-                    }
-
                     if (type.IsGeneric)
                     {
                         w.WriteLine($"return self->impl->{prop.SetMethod.Name}(arg);");
@@ -892,7 +863,8 @@ static class WriterExtensions
                         w.WriteMethodBodyContents(type, prop.SetMethod, isPropertySetter: true);
                     }
                 },
-                catchReturn: "-1"
+                catchReturn: "-1",
+                site: prop.IsStatic ? "site" : null
             );
         });
     }
@@ -954,8 +926,7 @@ static class WriterExtensions
     public static void WriteMethodOverloads(
         this IndentedTextWriter w,
         ProjectedType type,
-        ProjectedMethodGroup group,
-        bool componentDlls
+        ProjectedMethodGroup group
     )
     {
         w.WriteLine("auto arg_count = PyTuple_GET_SIZE(args);");
@@ -965,7 +936,6 @@ static class WriterExtensions
         {
             var pyInParamCount = method.PyInParamCount;
             var inParamCount = method.Method.Parameters.Count(p => p.IsInParam);
-            var ns = type.Namespace;
 
             if (i > 0)
             {
@@ -975,30 +945,22 @@ static class WriterExtensions
             w.WriteLine($"if (arg_count == {pyInParamCount})");
             w.WriteBlock(() =>
             {
-                w.WriteTryCatch(() =>
+                // the number of arguments is what distinguishes the overloads
+                // of a method from each other, so each one gets its own site
+                if (method.IsStatic)
                 {
-                    if (!componentDlls && method.IsStatic)
-                    {
-                        w.WriteLine("static std::optional<bool> is_overload_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_overload_present.has_value())");
-                        w.WriteBlock(() =>
-                            w.WriteLine(
-                                $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
-                            )
-                        );
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_overload_present.value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine($"py::set_arg_count_version_error({inParamCount});");
-                            w.WriteLine("return nullptr;");
-                        });
-                        w.WriteBlankLine();
-                    }
+                    w.WriteStaticMemberSite(
+                        method.Method.DeclaringType,
+                        "method",
+                        method.CppName,
+                        inParamCount
+                    );
+                }
 
-                    w.WriteMethodBodyContents(type, method);
-                });
+                w.WriteTryCatch(
+                    () => w.WriteMethodBodyContents(type, method),
+                    site: method.IsStatic ? "site" : null
+                );
             });
         }
 
@@ -1612,11 +1574,17 @@ static class WriterExtensions
         }
     }
 
+    /// <param name="site">
+    /// The name of a <c>py::member_site</c> in scope, passed to
+    /// <c>py::to_PyErr()</c> so that the runtime can say which member failed,
+    /// or <c>null</c> when the caller has not declared one.
+    /// </param>
     public static void WriteTryCatch(
         this IndentedTextWriter w,
         Action writeTryStatements,
         Action? writeCatchStatements = null,
-        string catchReturn = "nullptr"
+        string catchReturn = "nullptr",
+        string? site = null
     )
     {
         w.WriteLine("try");
@@ -1626,7 +1594,7 @@ static class WriterExtensions
         {
             if (writeCatchStatements is null)
             {
-                w.WriteLine("py::to_PyErr();");
+                w.WriteLine(site is null ? "py::to_PyErr();" : $"py::to_PyErr(&{site});");
             }
             else
             {

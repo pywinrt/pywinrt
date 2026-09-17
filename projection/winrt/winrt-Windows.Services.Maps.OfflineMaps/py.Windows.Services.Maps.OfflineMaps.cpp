@@ -27,21 +27,10 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Services.Maps.OfflineMaps.OfflineMapPackage", "FindPackagesAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert([&]()
@@ -52,7 +41,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -69,21 +58,10 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Services.Maps.OfflineMaps.OfflineMapPackage", "FindPackagesInBoundingBoxAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInBoundingBoxAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 0);
 
                 return py::convert([&]()
@@ -94,7 +72,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
@@ -111,21 +89,10 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
+            static constexpr py::member_site site{py::member_kind::method, 1, "Windows.Services.Maps.OfflineMaps.OfflineMapPackage", "FindPackagesInGeocircleAsync", nullptr, py::site_is_static};
+
             try
             {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInGeocircleAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocircle>(args, 0);
 
                 return py::convert([&]()
@@ -136,7 +103,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
             }
             catch (...)
             {
-                py::to_PyErr();
+                py::to_PyErr(&site);
                 return nullptr;
             }
         }
