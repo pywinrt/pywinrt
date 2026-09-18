@@ -9,6 +9,8 @@
 #include "module_state.h"
 #include "types.h"
 
+#include <atomic>
+
 // "backport" of Python 3.12 function.
 #if PY_VERSION_HEX < 0x030C0000
 static PyObject* PyType_FromMetaclass(
@@ -199,8 +201,48 @@ uint64_t py::cpp::_winrt::type_registry_epoch = 0;
 
 uint64_t py::get_type_registry_epoch() noexcept
 {
-    return py::cpp::_winrt::type_registry_epoch;
+    return std::atomic_ref{py::cpp::_winrt::type_registry_epoch}.load(
+        std::memory_order_relaxed);
 }
+
+namespace
+{
+    /**
+     * Records the Python type that @p qualified_name resolved to, and hands
+     * back the one the cache holds.
+     *
+     * That is not always the one passed in. The cache owns the only reference
+     * that keeps a type alive and every caller gets a borrowed pointer out of
+     * it, so when two threads resolve the same name at once, one of the two
+     * answers has to be the answer for both, and it is decided here rather
+     * than by whichever thread wrote last.
+     */
+    PyTypeObject* remember_python_type(
+        py::cpp::_winrt::module_state* state,
+        std::string_view qualified_name,
+        PyObject* type) noexcept
+    {
+        try
+        {
+            py::cpp::_winrt::state_guard guard{state->cache_lock};
+
+            auto const [it, inserted] = state->type_cache.try_emplace(
+                qualified_name, reinterpret_cast<PyTypeObject*>(type));
+
+            if (inserted)
+            {
+                Py_INCREF(type);
+            }
+
+            return it->second;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+} // namespace
 
 PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
 {
@@ -210,10 +252,14 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    auto it = state->type_cache.find(qualified_name);
-    if (it != state->type_cache.end())
     {
-        return it->second;
+        py::cpp::_winrt::state_guard guard{state->cache_lock};
+
+        auto it = state->type_cache.find(qualified_name);
+        if (it != state->type_cache.end())
+        {
+            return it->second;
+        }
     }
 
     // A projection package's types are built from its table rather than
@@ -223,18 +269,8 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
     // is still executing its __init__.py.
     if (auto from_table = py::interp::find_registered_type(qualified_name))
     {
-        try
-        {
-            state->type_cache[qualified_name]
-                = reinterpret_cast<PyTypeObject*>(Py_NewRef(from_table));
-        }
-        catch (...)
-        {
-            to_PyErr();
-            return nullptr;
-        }
-
-        return from_table;
+        return remember_python_type(
+            state, qualified_name, reinterpret_cast<PyObject*>(from_table));
     }
 
     if (PyErr_Occurred())
@@ -263,18 +299,8 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
     // type comes from.
     if (auto from_table = py::interp::find_registered_type(qualified_name))
     {
-        try
-        {
-            state->type_cache[qualified_name]
-                = reinterpret_cast<PyTypeObject*>(Py_NewRef(from_table));
-        }
-        catch (...)
-        {
-            to_PyErr();
-            return nullptr;
-        }
-
-        return from_table;
+        return remember_python_type(
+            state, qualified_name, reinterpret_cast<PyObject*>(from_table));
     }
 
     if (PyErr_Occurred())
@@ -304,18 +330,7 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
     // run, so they only disagree if the packages are mismatched, which the ABI
     // check does not catch.
 
-    try
-    {
-        state->type_cache[qualified_name]
-            = reinterpret_cast<PyTypeObject*>(Py_NewRef(type.get()));
-    }
-    catch (...)
-    {
-        to_PyErr();
-        return nullptr;
-    }
-
-    return reinterpret_cast<PyTypeObject*>(type.get());
+    return remember_python_type(state, qualified_name, type.get());
 }
 
 void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
@@ -326,10 +341,14 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
         return nullptr;
     }
 
-    auto it = state->struct_from_tuple_cache.find(capsule_name);
-    if (it != state->struct_from_tuple_cache.end())
     {
-        return it->second;
+        py::cpp::_winrt::state_guard guard{state->cache_lock};
+
+        auto it = state->struct_from_tuple_cache.find(capsule_name);
+        if (it != state->struct_from_tuple_cache.end())
+        {
+            return it->second;
+        }
     }
 
     // PyCapsule_Import() doesn't work if the module hasn't been imported yet,
@@ -359,6 +378,7 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
 
     try
     {
+        py::cpp::_winrt::state_guard guard{state->cache_lock};
         state->struct_from_tuple_cache[capsule_name] = func;
     }
     catch (...)

@@ -125,6 +125,8 @@ namespace py::interp
         {
             return py::cpp::_winrt::get_module_state();
         }
+
+        using py::cpp::_winrt::state_guard;
     } // namespace
 
     /**
@@ -186,7 +188,10 @@ namespace py::interp
             return false;
         }
 
-        s->type_entries[type] = &entry;
+        {
+            state_guard guard{s->cache_lock};
+            s->type_entries[type] = &entry;
+        }
 
         return true;
     }
@@ -203,6 +208,7 @@ namespace py::interp
             return nullptr;
         }
 
+        state_guard guard{s->cache_lock};
         auto const it = s->type_entries.find(type);
 
         return it == s->type_entries.end() ? nullptr : it->second;
@@ -326,22 +332,32 @@ namespace py::interp
             return nullptr;
         }
 
-        auto const found
-            = s->projections.find(std::string{qualified_name.substr(0, dot)});
+        // A loaded projection is never let go of before the state itself is,
+        // and what a table says never changes, so the lock is over finding it
+        // and nothing else. Building the type is not done holding a lock: it
+        // imports the modules of every type it names, which comes back here.
+        projection* proj{};
 
-        if (found == s->projections.end())
+        {
+            state_guard guard{s->cache_lock};
+            auto const found
+                = s->projections.find(std::string{qualified_name.substr(0, dot)});
+
+            if (found == s->projections.end())
+            {
+                return nullptr;
+            }
+
+            proj = found->second.get();
+        }
+
+        auto const index = proj->by_py_name.find(qualified_name.substr(dot + 1));
+        if (index == proj->by_py_name.end())
         {
             return nullptr;
         }
 
-        auto& proj = *found->second;
-        auto const index = proj.by_py_name.find(qualified_name.substr(dot + 1));
-        if (index == proj.by_py_name.end())
-        {
-            return nullptr;
-        }
-
-        return ensure_type(proj, index->second);
+        return ensure_type(*proj, index->second);
     }
 
     /**
@@ -373,11 +389,15 @@ namespace py::interp
             return nullptr;
         }
 
-        if (s->projections.find(module_name) != s->projections.end())
         {
-            // A reload re-runs __init__.py, and the types it made the first
-            // time are still the ones in it.
-            Py_RETURN_NONE;
+            state_guard guard{s->cache_lock};
+
+            if (s->projections.find(module_name) != s->projections.end())
+            {
+                // A reload re-runs __init__.py, and the types it made the
+                // first time are still the ones in it.
+                Py_RETURN_NONE;
+            }
         }
 
         table::file const* file{};
@@ -433,7 +453,14 @@ namespace py::interp
             }
 
             proj = owned.get();
-            s->projections.emplace(module_name, std::move(owned));
+
+            // Only the thread executing the module's __init__.py gets here,
+            // because the import system holds that module's lock, so the
+            // window above cannot be lost to another thread.
+            {
+                state_guard guard{s->cache_lock};
+                s->projections.emplace(module_name, std::move(owned));
+            }
         }
         catch (...)
         {
