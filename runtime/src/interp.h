@@ -67,8 +67,12 @@ namespace py::interp
         /// is what metadata spells @c ref on an input.
         bool by_reference;
         /// Where the value - or, for an output or a by-reference input, the
-        /// pointer to it - goes in the buffer the trampoline reads.
+        /// pointer to it - goes in the buffer the trampoline reads. An array
+        /// is two arguments, and this is the first of them: the count.
         uint16_t offset;
+        /// Where the elements of an array go, which is the argument after the
+        /// count. Meaningless for anything else.
+        uint16_t data_offset;
         /// Where an output is received, or a by-reference input is passed
         /// from, in the block of storage the call allocates beside the
         /// arguments.
@@ -155,6 +159,7 @@ namespace py::interp
         // which both count the same way
         member_desc* size;
         member_desc* get_at;
+        member_desc* get_many;
         member_desc* set_at;
         member_desc* remove_at;
         member_desc* insert_at;
@@ -335,16 +340,43 @@ namespace py::interp
         member_desc const& member, Py_ssize_t nargs) noexcept;
 
     /**
+     * Whether @p arg is one of the values a call hands back: an output, or an
+     * array the callee allocates.
+     */
+    inline bool is_output(arg_desc const& arg) noexcept
+    {
+        if (arg.category == table::param_category::out)
+        {
+            return true;
+        }
+
+        return arg.category == table::param_category::receive_array;
+    }
+
+    /**
      * Whether @p arg needs storage of its own in the block beside the argument
-     * buffer: an output is received into it, and a by-reference input is
-     * passed out of it.
+     * buffer: an output is received into it, a by-reference input is passed
+     * out of it, and an array output receives its count and its elements
+     * through an array_out that lives there.
      */
     inline bool needs_storage(arg_desc const& arg) noexcept
     {
-        return arg.category == table::param_category::out || arg.by_reference;
+        if (arg.category == table::param_category::out)
+        {
+            return true;
+        }
+
+        if (arg.category == table::param_category::receive_array)
+        {
+            return true;
+        }
+
+        return arg.by_reference;
     }
 
     PyObject* convert_out(projection& owner, arg_desc& arg, void* storage) noexcept;
+
+    void release_value(arg_desc const& arg, void* storage) noexcept;
 
     type_entry* resolve(projection& owner, uint32_t type, type_entry*& cache) noexcept;
 

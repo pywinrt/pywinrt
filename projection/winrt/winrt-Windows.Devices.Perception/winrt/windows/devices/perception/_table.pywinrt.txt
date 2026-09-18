@@ -734,7 +734,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.
             in uint32 name=index
             out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Perception.PerceptionColorFrameSource name=items
             out uint32 return
@@ -762,7 +762,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.
             in uint32 name=index
             out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=items
             out uint32 return
@@ -790,7 +790,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.
             in uint32 name=index
             out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=items
             out uint32 return
@@ -818,7 +818,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.
             in uint32 name=index
             out class type=Windows.Devices.Perception.PerceptionVideoProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Perception.PerceptionVideoProfile name=items
             out uint32 return

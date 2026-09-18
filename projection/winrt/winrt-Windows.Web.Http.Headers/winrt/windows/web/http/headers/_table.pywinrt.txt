@@ -47,7 +47,7 @@ class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_ty
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=items
             out uint32 return
@@ -149,7 +149,7 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection python_type it
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=items
             out uint32 return
@@ -241,7 +241,7 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection python_
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=items
             out uint32 return
@@ -333,7 +333,7 @@ class Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection python_typ
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=items
             out uint32 return
@@ -432,7 +432,7 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=items
             out uint32 return
@@ -732,7 +732,7 @@ class Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection python_type i
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=items
             out uint32 return
@@ -900,7 +900,7 @@ class Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection python_type 
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=items
             out uint32 return
@@ -964,7 +964,7 @@ class Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection python_type ite
             in uint32 name=index
             out class type=Windows.Globalization.Language return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
@@ -1063,7 +1063,7 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=items
             out uint32 return
@@ -1212,7 +1212,7 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection pyt
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=items
             out uint32 return
@@ -1276,7 +1276,7 @@ class Windows.Web.Http.Headers.HttpMethodHeaderValueCollection python_type itera
             in uint32 name=index
             out class type=Windows.Web.Http.HttpMethod return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpMethod name=items
             out uint32 return
@@ -1447,7 +1447,7 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection python_type 
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=items
             out uint32 return
@@ -1750,7 +1750,7 @@ class Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection python_ty
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=items
             out uint32 return
@@ -3157,7 +3157,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Globalization.Language>
             in uint32 name=index
             out class type=Windows.Globalization.Language return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
@@ -3209,7 +3209,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCh
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=items
             out uint32 return
@@ -3261,7 +3261,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCo
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=items
             out uint32 return
@@ -3313,7 +3313,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCo
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=items
             out uint32 return
@@ -3365,7 +3365,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCo
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=items
             out uint32 return
@@ -3417,7 +3417,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCo
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=items
             out uint32 return
@@ -3469,7 +3469,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpEx
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=items
             out uint32 return
@@ -3521,7 +3521,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLa
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=items
             out uint32 return
@@ -3573,7 +3573,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMe
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=items
             out uint32 return
@@ -3625,7 +3625,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNa
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=items
             out uint32 return
@@ -3677,7 +3677,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpPr
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=items
             out uint32 return
@@ -3729,7 +3729,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTr
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=items
             out uint32 return
@@ -3781,7 +3781,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> co
             in uint32 name=index
             out class type=Windows.Web.Http.HttpMethod return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpMethod name=items
             out uint32 return
@@ -3828,7 +3828,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Langu
             in uint32 name=index
             out class type=Windows.Globalization.Language return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
@@ -3856,7 +3856,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=items
             out uint32 return
@@ -3884,7 +3884,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=items
             out uint32 return
@@ -3912,7 +3912,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=items
             out uint32 return
@@ -3940,7 +3940,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=items
             out uint32 return
@@ -3968,7 +3968,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=items
             out uint32 return
@@ -3996,7 +3996,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=items
             out uint32 return
@@ -4024,7 +4024,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=items
             out uint32 return
@@ -4052,7 +4052,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=items
             out uint32 return
@@ -4080,7 +4080,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=items
             out uint32 return
@@ -4108,7 +4108,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=items
             out uint32 return
@@ -4136,7 +4136,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.Ht
             in uint32 name=index
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=items
             out uint32 return
@@ -4164,7 +4164,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod
             in uint32 name=index
             out class type=Windows.Web.Http.HttpMethod return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpMethod name=items
             out uint32 return

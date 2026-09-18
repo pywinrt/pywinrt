@@ -1,5 +1,6 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include src/arrays.h
 include src/async.h
 include src/callbacks.h
 include src/delegates.h

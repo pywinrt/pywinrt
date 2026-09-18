@@ -483,7 +483,7 @@ class Microsoft.UI.Composition.CompositionColorGradientStopCollection python_typ
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionColorGradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionColorGradientStop name=items
             out uint32 return
@@ -1524,7 +1524,7 @@ class Microsoft.UI.Composition.CompositionShapeCollection python_type iterable s
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionShape return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionShape name=items
             out uint32 return
@@ -1650,7 +1650,7 @@ class Microsoft.UI.Composition.CompositionStrokeDashArray python_type iterable s
             in uint32 name=index
             out single return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array single name=items
             out uint32 return
@@ -3644,7 +3644,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Compos
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionColorGradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionColorGradientStop name=items
             out uint32 return
@@ -3696,7 +3696,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Compos
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionShape return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionShape name=items
             out uint32 return
@@ -3748,7 +3748,7 @@ interface Windows.Foundation.Collections.IVector<System.Single> concrete iterabl
             in uint32 name=index
             out single return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array single name=items
             out uint32 return
@@ -3816,7 +3816,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Co
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionColorGradientStop return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.CompositionColorGradientStop> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionColorGradientStop name=items
             out uint32 return
@@ -3844,7 +3844,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Co
             in uint32 name=index
             out class type=Microsoft.UI.Composition.CompositionShape return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.CompositionShape> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.CompositionShape name=items
             out uint32 return
@@ -3872,7 +3872,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Single> concrete ite
             in uint32 name=index
             out single return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array single name=items
             out uint32 return

@@ -135,6 +135,7 @@ enum TableMemberRole : uint
     ToString = 17,
     Value = 18,
     Close = 19,
+    GetMany = 20,
 }
 
 enum TableParamFlags : uint
@@ -503,8 +504,10 @@ sealed class TableWriter
         ["Windows.Foundation.Collections.IVector`1.SetAt"] = TableMemberRole.SetAt,
         ["Windows.Foundation.Collections.IVector`1.InsertAt"] = TableMemberRole.InsertAt,
         ["Windows.Foundation.Collections.IVector`1.RemoveAt"] = TableMemberRole.RemoveAt,
+        ["Windows.Foundation.Collections.IVector`1.GetMany"] = TableMemberRole.GetMany,
         ["Windows.Foundation.Collections.IVectorView`1.get_Size"] = TableMemberRole.Size,
         ["Windows.Foundation.Collections.IVectorView`1.GetAt"] = TableMemberRole.GetAt,
+        ["Windows.Foundation.Collections.IVectorView`1.GetMany"] = TableMemberRole.GetMany,
         ["Windows.Foundation.Collections.IMap`2.get_Size"] = TableMemberRole.Size,
         ["Windows.Foundation.Collections.IMap`2.Lookup"] = TableMemberRole.Lookup,
         ["Windows.Foundation.Collections.IMap`2.HasKey"] = TableMemberRole.HasKey,
@@ -1451,6 +1454,7 @@ sealed class TableWriter
         "to_string",
         "value",
         "close",
+        "get_many",
     ];
 
     private static readonly string[] paramCategoryNames =

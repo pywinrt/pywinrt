@@ -706,7 +706,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.Sim
             in uint32 name=index
             out class type=Windows.Devices.Haptics.SimpleHapticsController return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Haptics.SimpleHapticsController name=items
             out uint32 return
@@ -734,7 +734,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Arcade
             in uint32 name=index
             out class type=Windows.Gaming.Input.ArcadeStick return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.ArcadeStick name=items
             out uint32 return
@@ -762,7 +762,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Flight
             in uint32 name=index
             out class type=Windows.Gaming.Input.FlightStick return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.FlightStick name=items
             out uint32 return
@@ -790,7 +790,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceF
             in uint32 name=index
             out class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=items
             out uint32 return
@@ -818,7 +818,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepa
             in uint32 name=index
             out class type=Windows.Gaming.Input.Gamepad return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.Gamepad name=items
             out uint32 return
@@ -846,7 +846,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Racing
             in uint32 name=index
             out class type=Windows.Gaming.Input.RacingWheel return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.RacingWheel name=items
             out uint32 return
@@ -874,7 +874,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGam
             in uint32 name=index
             out class type=Windows.Gaming.Input.RawGameController return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.RawGameController name=items
             out uint32 return
@@ -902,7 +902,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavi
             in uint32 name=index
             out class type=Windows.Gaming.Input.UINavigationController return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Gaming.Input.UINavigationController name=items
             out uint32 return

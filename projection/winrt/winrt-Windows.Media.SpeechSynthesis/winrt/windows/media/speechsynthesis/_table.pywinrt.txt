@@ -332,7 +332,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMet
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -360,7 +360,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker>
             in uint32 name=index
             out interface type=Windows.Media.IMediaMarker return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.IMediaMarker name=items
             out uint32 return
@@ -388,7 +388,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthes
             in uint32 name=index
             out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.SpeechSynthesis.VoiceInformation name=items
             out uint32 return

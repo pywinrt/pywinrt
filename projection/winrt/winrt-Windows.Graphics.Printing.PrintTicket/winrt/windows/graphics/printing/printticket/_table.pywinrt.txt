@@ -108,7 +108,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.P
             in uint32 name=index
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketOption return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.PrintTicket.PrintTicketOption> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.PrintTicket.PrintTicketOption> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing.PrintTicket.PrintTicketOption name=items
             out uint32 return

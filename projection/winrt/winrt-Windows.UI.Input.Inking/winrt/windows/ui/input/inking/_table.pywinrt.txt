@@ -889,7 +889,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -917,7 +917,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             in uint32 name=index
             out class type=Windows.UI.Input.Inking.InkPoint return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
             out uint32 return
@@ -945,7 +945,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             in uint32 name=index
             out class type=Windows.UI.Input.Inking.InkRecognitionResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Input.Inking.InkRecognitionResult name=items
             out uint32 return
@@ -973,7 +973,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             in uint32 name=index
             out class type=Windows.UI.Input.Inking.InkRecognizer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognizer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognizer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Input.Inking.InkRecognizer name=items
             out uint32 return
@@ -1001,7 +1001,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             in uint32 name=index
             out class type=Windows.UI.Input.Inking.InkStroke return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Input.Inking.InkStroke name=items
             out uint32 return
@@ -1029,7 +1029,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             in uint32 name=index
             out class type=Windows.UI.Input.Inking.InkStrokeRenderingSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Input.Inking.InkStrokeRenderingSegment name=items
             out uint32 return

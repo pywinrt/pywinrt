@@ -1,6 +1,5 @@
 from test._util import skip_without_projection
 
-skip_without_projection()
 
 import unittest
 from array import array

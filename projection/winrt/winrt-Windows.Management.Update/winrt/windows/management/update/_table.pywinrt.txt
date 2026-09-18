@@ -553,7 +553,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.W
             in uint32 name=index
             out class type=Windows.Management.Update.WindowsUpdate return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Update.WindowsUpdate name=items
             out uint32 return
@@ -581,7 +581,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.W
             in uint32 name=index
             out class type=Windows.Management.Update.WindowsUpdateItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Update.WindowsUpdateItem name=items
             out uint32 return

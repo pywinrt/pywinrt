@@ -832,7 +832,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Windowing.Disp
             in uint32 name=index
             out class type=Microsoft.UI.Windowing.DisplayArea return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Windowing.DisplayArea> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Windowing.DisplayArea> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Windowing.DisplayArea name=items
             out uint32 return

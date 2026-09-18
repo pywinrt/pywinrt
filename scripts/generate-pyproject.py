@@ -54,6 +54,7 @@ where = ["python"]
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include src/arrays.h
 include src/async.h
 include src/callbacks.h
 include src/delegates.h
@@ -668,6 +669,7 @@ write_project_files(
         "src/_winrt_array.cpp",
         "src/_winrt_box.cpp",
         "src/_winrt_buffer.cpp",
+        "src/arrays.cpp",
         "src/async.cpp",
         "src/callbacks.cpp",
         "src/collections.cpp",

@@ -1976,7 +1976,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete itera
             in uint32 name=index
             out guid return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array guid name=items
             out uint32 return
@@ -2004,7 +2004,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2032,7 +2032,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Byte> concrete itera
             in uint32 name=index
             out uint8 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint8 name=items
             out uint32 return
@@ -2060,7 +2060,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -2088,7 +2088,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.AttributedNetworkUsage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.AttributedNetworkUsage name=items
             out uint32 return
@@ -2116,7 +2116,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.ConnectionProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
@@ -2144,7 +2144,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.ConnectivityInterval return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectivityInterval> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectivityInterval> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.ConnectivityInterval name=items
             out uint32 return
@@ -2172,7 +2172,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.LanIdentifier return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.LanIdentifier name=items
             out uint32 return
@@ -2200,7 +2200,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.NetworkUsage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.NetworkUsage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.NetworkUsage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.NetworkUsage name=items
             out uint32 return
@@ -2228,7 +2228,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.ProviderNetworkUsage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.ProviderNetworkUsage name=items
             out uint32 return
@@ -2256,7 +2256,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Endpoint
             in uint32 name=index
             out class type=Windows.Networking.EndpointPair return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.EndpointPair name=items
             out uint32 return
@@ -2284,7 +2284,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName
             in uint32 name=index
             out class type=Windows.Networking.HostName return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return

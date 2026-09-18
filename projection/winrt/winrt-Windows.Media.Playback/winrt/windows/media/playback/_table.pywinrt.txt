@@ -500,7 +500,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Playbac
             in uint32 name=index
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
             out uint32 return
@@ -823,7 +823,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPla
             in uint32 name=index
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
             out uint32 return
@@ -870,7 +870,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTra
             in uint32 name=index
             out class type=Windows.Media.Core.AudioTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.AudioTrack name=items
             out uint32 return
@@ -898,7 +898,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMet
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -926,7 +926,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTra
             in uint32 name=index
             out class type=Windows.Media.Core.VideoTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.VideoTrack name=items
             out uint32 return
@@ -954,7 +954,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRang
             in uint32 name=index
             out struct type=Windows.Media.MediaTimeRange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Media.MediaTimeRange name=items
             out uint32 return
@@ -982,7 +982,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.Medi
             in uint32 name=index
             out class type=Windows.Media.Playback.MediaBreak return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Playback.MediaBreak name=items
             out uint32 return
@@ -1010,7 +1010,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.Medi
             in uint32 name=index
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
             out uint32 return
@@ -1231,7 +1231,7 @@ class Windows.Media.Playback.MediaPlaybackAudioTrackList python_type iterable se
             in uint32 name=index
             out class type=Windows.Media.Core.AudioTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.AudioTrack name=items
             out uint32 return
@@ -1987,7 +1987,7 @@ class Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList python_type ite
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -2035,7 +2035,7 @@ class Windows.Media.Playback.MediaPlaybackVideoTrackList python_type iterable se
             in uint32 name=index
             out class type=Windows.Media.Core.VideoTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.VideoTrack name=items
             out uint32 return

@@ -2156,7 +2156,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2208,7 +2208,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> c
             in uint32 name=index
             out interface type=Windows.Storage.IStorageItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
@@ -2260,7 +2260,7 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInf
             in uint32 name=index
             out class type=Windows.System.AppDiagnosticInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppDiagnosticInfo name=items
             out uint32 return
@@ -2312,7 +2312,7 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
             in uint32 name=index
             out class type=Windows.System.AppResourceGroupBackgroundTaskReport return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
             out uint32 return
@@ -2364,7 +2364,7 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
             in uint32 name=index
             out class type=Windows.System.AppResourceGroupInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppResourceGroupInfo name=items
             out uint32 return
@@ -2416,7 +2416,7 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHos
             in uint32 name=index
             out class type=Windows.System.AppUriHandlerHost return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppUriHandlerHost name=items
             out uint32 return
@@ -2468,7 +2468,7 @@ interface Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.Proc
             in uint32 name=index
             out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
             out uint32 return
@@ -2515,7 +2515,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2543,7 +2543,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ap
             in uint32 name=index
             out class type=Windows.ApplicationModel.AppInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.AppInfo name=items
             out uint32 return
@@ -2571,7 +2571,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             in uint32 name=index
             out interface type=Windows.Storage.IStorageItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
@@ -2599,7 +2599,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosti
             in uint32 name=index
             out class type=Windows.System.AppDiagnosticInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppDiagnosticInfo name=items
             out uint32 return
@@ -2627,7 +2627,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceG
             in uint32 name=index
             out class type=Windows.System.AppResourceGroupBackgroundTaskReport return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
             out uint32 return
@@ -2655,7 +2655,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceG
             in uint32 name=index
             out class type=Windows.System.AppResourceGroupInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppResourceGroupInfo name=items
             out uint32 return
@@ -2683,7 +2683,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandle
             in uint32 name=index
             out class type=Windows.System.AppUriHandlerHost return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.AppUriHandlerHost name=items
             out uint32 return
@@ -2711,7 +2711,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.
             in uint32 name=index
             out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
             out uint32 return
@@ -2739,7 +2739,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.User> concre
             in uint32 name=index
             out class type=Windows.System.User return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.User> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.User> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.User name=items
             out uint32 return
@@ -2767,7 +2767,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherU
             in uint32 name=index
             out enum32 type=Windows.System.UserWatcherUpdateKind return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.System.UserWatcherUpdateKind name=items
             out uint32 return

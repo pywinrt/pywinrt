@@ -638,7 +638,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -685,7 +685,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -713,7 +713,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete it
             in uint32 name=index
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array boolean name=items
             out uint32 return
@@ -741,7 +741,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -769,7 +769,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -797,7 +797,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             in uint32 name=index
             out class type=Windows.Services.TargetedContent.TargetedContentAction return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.TargetedContent.TargetedContentAction name=items
             out uint32 return
@@ -825,7 +825,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             in uint32 name=index
             out class type=Windows.Services.TargetedContent.TargetedContentCollection return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.TargetedContent.TargetedContentCollection name=items
             out uint32 return
@@ -853,7 +853,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             in uint32 name=index
             out class type=Windows.Services.TargetedContent.TargetedContentFile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.TargetedContent.TargetedContentFile name=items
             out uint32 return
@@ -881,7 +881,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             in uint32 name=index
             out class type=Windows.Services.TargetedContent.TargetedContentImage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.TargetedContent.TargetedContentImage name=items
             out uint32 return
@@ -909,7 +909,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             in uint32 name=index
             out class type=Windows.Services.TargetedContent.TargetedContentItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.TargetedContent.TargetedContentItem name=items
             out uint32 return

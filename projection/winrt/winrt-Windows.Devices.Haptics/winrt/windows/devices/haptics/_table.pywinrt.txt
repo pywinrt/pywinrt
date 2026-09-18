@@ -212,7 +212,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.Sim
             in uint32 name=index
             out class type=Windows.Devices.Haptics.SimpleHapticsControllerFeedback return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsControllerFeedback> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsControllerFeedback> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Haptics.SimpleHapticsControllerFeedback name=items
             out uint32 return
@@ -240,7 +240,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.Vib
             in uint32 name=index
             out class type=Windows.Devices.Haptics.VibrationDevice return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.VibrationDevice> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.VibrationDevice> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Haptics.VibrationDevice name=items
             out uint32 return

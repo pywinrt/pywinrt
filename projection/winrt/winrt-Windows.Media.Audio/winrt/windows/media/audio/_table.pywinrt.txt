@@ -2262,7 +2262,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
             in uint32 name=index
             out interface type=Windows.Media.Effects.IAudioEffectDefinition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
@@ -2309,7 +2309,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGr
             in uint32 name=index
             out class type=Windows.Media.Audio.AudioGraphConnection return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Audio.AudioGraphConnection name=items
             out uint32 return
@@ -2337,7 +2337,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.Equaliz
             in uint32 name=index
             out class type=Windows.Media.Audio.EqualizerBand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Audio.EqualizerBand name=items
             out uint32 return
@@ -2365,7 +2365,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudi
             in uint32 name=index
             out interface type=Windows.Media.Effects.IAudioEffectDefinition return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return

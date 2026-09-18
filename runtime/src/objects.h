@@ -33,8 +33,6 @@ namespace py::interp
 
     void* unwrap_abi(PyObject* obj, void const* iid);
 
-    PyObject* type_assign_array(PyObject* cls, PyObject* arg) noexcept;
-
     bool make_interface_type(
         projection& proj, type_entry& entry, table::type_view const& record);
 

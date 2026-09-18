@@ -44,6 +44,15 @@ interface Test.Sample.IThing python_type stringable
             in struct type=Test.Sample.Extent name=extent by_reference
             in string name=label
             out class type=Test.Sample.Thing name=result return
+    method get_many
+        method GetMany slot=10 inputs=2 outputs=1 declaring=Test.Sample.IThing shape=1 role=get_many
+            in uint32 name=start
+            fill_array string name=items
+            out uint32 return
+    method relabel
+        method Relabel slot=11 inputs=1 outputs=1 declaring=Test.Sample.IThing shape=1
+            pass_array string name=labels
+            receive_array string return
     event changed
         add add_Changed slot=8 inputs=1 outputs=1 declaring=Test.Sample.IThing shape=1
             in delegate type=Test.Sample.Changed name=handler
@@ -87,6 +96,13 @@ CATEGORY_INTERFACE = 2
 CATEGORY_CLASS = 3
 
 MEMBER_ROLE_SIZE = 1
+MEMBER_ROLE_GET_MANY = 20
+
+CATEGORY_IN = 0
+CATEGORY_OUT = 1
+CATEGORY_PASS_ARRAY = 2
+CATEGORY_FILL_ARRAY = 3
+CATEGORY_RECEIVE_ARRAY = 4
 
 TYPE_EXTERNAL = 1 << 3
 TYPE_CONCRETE = 1 << 7
@@ -204,6 +220,29 @@ class TestTextTable(unittest.TestCase):
         self.assertFalse(params[1]["is_by_reference"])
         self.assertTrue(params[2]["is_return_value"])
         self.assertEqual(params[1]["type"], NO_REF)
+
+    def test_an_array_parameter_keeps_its_category(self) -> None:
+        # An array is two ABI arguments and one parameter record, and which of
+        # the three array categories it is decides who owns the elements, so it
+        # is the one thing about a parameter that the code does not say.
+        groups = {g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]}
+
+        many = groups["get_many"]["members"][0]
+
+        self.assertEqual(many["role"], MEMBER_ROLE_GET_MANY)
+        self.assertEqual(
+            [p["category"] for p in many["params"]],
+            [CATEGORY_IN, CATEGORY_FILL_ARRAY, CATEGORY_OUT],
+        )
+
+        relabel = groups["relabel"]["members"][0]
+
+        self.assertEqual(
+            [p["category"] for p in relabel["params"]],
+            [CATEGORY_PASS_ARRAY, CATEGORY_RECEIVE_ARRAY],
+        )
+        self.assertEqual([p["code"] for p in relabel["params"]], [CODE_STRING] * 2)
+        self.assertTrue(relabel["params"][1]["is_return_value"])
 
     def test_a_constructor_group_is_bound_to_no_name(self) -> None:
         thing = types(read())["Test.Sample.Thing"]

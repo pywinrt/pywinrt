@@ -385,7 +385,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Di
             in uint32 name=index
             out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=items
             out uint32 return
@@ -413,7 +413,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.Audio
             in uint32 name=index
             out class type=Windows.Media.Effects.AudioEffect return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Effects.AudioEffect name=items
             out uint32 return
@@ -441,7 +441,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperti
             in uint32 name=index
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.MediaProperties.AudioEncodingProperties name=items
             out uint32 return
@@ -469,7 +469,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperti
             in uint32 name=index
             out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.MediaProperties.VideoEncodingProperties name=items
             out uint32 return

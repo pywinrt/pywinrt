@@ -730,7 +730,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.Ni
             in uint32 name=index
             out struct type=Windows.Graphics.Display.NitRange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Graphics.Display.NitRange name=items
             out uint32 return

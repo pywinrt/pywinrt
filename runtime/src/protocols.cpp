@@ -13,6 +13,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "async.h"
 #include "interp.h"
 #include "objects.h"
@@ -162,18 +163,131 @@ namespace py::interp
         }
 
         /**
-         * __getitem__ of a sequence, which is an index or a slice.
+         * The elements a slice names, which a WinRT vector reads with GetMany
+         * in one call into an array the caller lends it.
          *
-         * A WinRT vector reads a slice with GetMany, which fills an array, so
-         * that half waits for the step that interprets one.
+         * The answer is that array - a winrt.system.Array rather than a list -
+         * which is what a slice of a projected vector has always been.
+         */
+        PyObject* sequence_slice(
+            type_entry& info, PyObject* self, PyObject* key) noexcept
+        {
+            if (!info.protocol.get_many)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' does not support slicing",
+                    Py_TYPE(self)->tp_name);
+                return nullptr;
+            }
+
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return nullptr;
+            }
+
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+            Py_ssize_t length{};
+
+            if (PySlice_GetIndicesEx(key, size, &start, &stop, &step, &length) < 0)
+            {
+                return nullptr;
+            }
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return nullptr;
+            }
+
+            auto const overload = select_overload(*info.protocol.get_many, 2);
+            if (!overload)
+            {
+                return nullptr;
+            }
+
+            // The elements parameter is the one the caller lends, and its
+            // descriptor is what says what the array holds.
+            arg_desc* elements{};
+
+            for (uint16_t i = 0; i < overload->arg_count; i++)
+            {
+                if (overload->args[i].category == table::param_category::fill_array)
+                {
+                    elements = &overload->args[i];
+                    break;
+                }
+            }
+
+            if (!elements)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError, "GetMany does not take an array to fill");
+                return nullptr;
+            }
+
+            pyobj_handle items{new_array(
+                *info.protocol.get_many->owner,
+                *elements,
+                static_cast<uint32_t>(length))};
+            if (!items)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle first{PyLong_FromSsize_t(start)};
+            if (!first)
+            {
+                return nullptr;
+            }
+
+            PyObject* args[] = {first.get(), items.get()};
+
+            pyobj_handle count{
+                call_protocol(info.protocol.get_many, "slicing", self, args, 2)};
+            if (!count)
+            {
+                return nullptr;
+            }
+
+            auto const filled = PyLong_AsSsize_t(count.get());
+            if (filled == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            if (filled != length)
+            {
+                PyErr_Format(
+                    PyExc_RuntimeError,
+                    "GetMany filled %zd of the %zd elements the slice names",
+                    filled,
+                    length);
+                return nullptr;
+            }
+
+            return items.detach();
+        }
+
+        /**
+         * __getitem__ of a sequence, which is an index or a slice.
          */
         PyObject* sequence_subscript(PyObject* self, PyObject* key) noexcept
         {
             if (PySlice_Check(key))
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError, "arrays are not interpreted yet");
-                return nullptr;
+                auto const info = entry_of(self);
+                if (!info)
+                {
+                    return nullptr;
+                }
+
+                return sequence_slice(*info, self, key);
             }
 
             if (!PyIndex_Check(key))
@@ -684,6 +798,9 @@ namespace py::interp
                     break;
                 case table::member_role::get_at:
                     entry.protocol.get_at = &member;
+                    break;
+                case table::member_role::get_many:
+                    entry.protocol.get_many = &member;
                     break;
                 case table::member_role::set_at:
                     entry.protocol.set_at = &member;

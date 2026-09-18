@@ -1710,7 +1710,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Contr
             in uint32 name=index
             out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
             out uint32 return
@@ -2289,7 +2289,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Menu
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.MenuBarItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
             out uint32 return
@@ -2341,7 +2341,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Swip
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
             out uint32 return
@@ -2393,7 +2393,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Tree
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.TreeViewNode return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
             out uint32 return
@@ -2445,7 +2445,7 @@ interface Windows.Foundation.Collections.IVector<System.Object> concrete iterabl
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -2497,7 +2497,7 @@ interface Windows.Foundation.Collections.IVector<System.Int32> concrete iterable
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -2549,7 +2549,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.IComma
             in uint32 name=index
             out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
             out uint32 return
@@ -2601,7 +2601,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFl
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
             out uint32 return
@@ -2648,7 +2648,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.MenuBarItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
             out uint32 return
@@ -2676,7 +2676,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
             out uint32 return
@@ -2704,7 +2704,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.TreeViewNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
             out uint32 return
@@ -2732,7 +2732,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Object> concrete ite
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -2760,7 +2760,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iter
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -2788,7 +2788,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.IC
             in uint32 name=index
             out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
             out uint32 return
@@ -2816,7 +2816,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Me
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
             out uint32 return
@@ -2844,7 +2844,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> 
             in uint32 name=index
             out class type=Windows.UI.Xaml.UIElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.UIElement name=items
             out uint32 return
@@ -5776,7 +5776,7 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
             out uint32 return
