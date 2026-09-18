@@ -2,20 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_input_preview_injection import (
-    _abi_version_,
-    _generator_version_,
-    InjectedInputPoint,
-    InjectedInputPointerInfo,
-    InjectedInputRectangle,
-    InjectedInputGamepadInfo,
-    InjectedInputKeyboardInfo,
-    InjectedInputMouseInfo,
-    InjectedInputPenInfo,
-    InjectedInputTouchInfo,
-    InputInjector,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "InjectedInputButtonChangeKind",

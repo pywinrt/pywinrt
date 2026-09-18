@@ -4,41 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media import (
-    _abi_version_,
-    _generator_version_,
-    MediaTimeRange,
-    AudioBuffer,
-    AudioFrame,
-    AutoRepeatModeChangeRequestedEventArgs,
-    ImageDisplayProperties,
-    MediaControl,
-    MediaExtensionManager,
-    MediaMarkerTypes,
-    MediaProcessingTriggerDetails,
-    MediaTimelineController,
-    MediaTimelineControllerFailedEventArgs,
-    MusicDisplayProperties,
-    PlaybackPositionChangeRequestedEventArgs,
-    PlaybackRateChangeRequestedEventArgs,
-    ShuffleEnabledChangeRequestedEventArgs,
-    SystemMediaTransportControls,
-    SystemMediaTransportControlsButtonPressedEventArgs,
-    SystemMediaTransportControlsDisplayUpdater,
-    SystemMediaTransportControlsPropertyChangedEventArgs,
-    SystemMediaTransportControlsTimelineProperties,
-    VideoDisplayProperties,
-    VideoEffects,
-    VideoFrame,
-    _IMediaExtension,
-    IMediaExtension,
-    _IMediaFrame,
-    IMediaFrame,
-    _IMediaMarker,
-    IMediaMarker,
-    _IMediaMarkers,
-    IMediaMarkers,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AudioBufferAccessMode",

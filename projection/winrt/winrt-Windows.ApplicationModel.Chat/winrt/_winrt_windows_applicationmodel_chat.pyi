@@ -17,9 +17,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.applicationmodel.chat import ChatConversationThreadingKind, ChatItemKind, ChatMessageChangeType, ChatMessageKind, ChatMessageOperatorKind, ChatMessageStatus, ChatMessageTransportKind, ChatMessageValidationStatus, ChatRestoreHistorySpan, ChatStoreChangedEventKind, ChatTransportErrorCodeCategory, ChatTransportInterpretedErrorCode, RcsServiceKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

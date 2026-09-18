@@ -4,68 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_input import (
-    _abi_version_,
-    _generator_version_,
-    CrossSlideThresholds,
-    ManipulationDelta,
-    ManipulationVelocities,
-    PhysicalKeyStatus,
-    CharacterReceivedEventArgs,
-    ContextMenuKeyEventArgs,
-    CrossSlidingEventArgs,
-    DraggingEventArgs,
-    EnteredMoveSizeEventArgs,
-    EnteringMoveSizeEventArgs,
-    ExitedMoveSizeEventArgs,
-    FocusChangedEventArgs,
-    FocusNavigationRequest,
-    FocusNavigationRequestEventArgs,
-    GestureRecognizer,
-    HoldingEventArgs,
-    InputActivationListener,
-    InputActivationListenerActivationChangedEventArgs,
-    InputCursor,
-    InputCustomCursor,
-    InputDesktopNamedResourceCursor,
-    InputDesktopResourceCursor,
-    InputFocusController,
-    InputFocusNavigationHost,
-    InputKeyboardSource,
-    InputLightDismissAction,
-    InputLightDismissEventArgs,
-    InputNonClientPointerSource,
-    InputObject,
-    InputPointerSource,
-    InputPreTranslateKeyboardSource,
-    InputSystemCursor,
-    KeyEventArgs,
-    ManipulationCompletedEventArgs,
-    ManipulationInertiaStartingEventArgs,
-    ManipulationStartedEventArgs,
-    ManipulationUpdatedEventArgs,
-    MouseWheelParameters,
-    NonClientCaptionTappedEventArgs,
-    NonClientPointerEventArgs,
-    NonClientRegionsChangedEventArgs,
-    PointerEventArgs,
-    PointerPoint,
-    PointerPointProperties,
-    PointerPredictor,
-    RightTappedEventArgs,
-    TappedEventArgs,
-    WindowRectChangedEventArgs,
-    WindowRectChangingEventArgs,
-    _IPointerPointTransform,
-    IPointerPointTransform,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_input import (
-        InputCursor_Static,
-        InputCustomCursor_Static,
-        InputObject_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CrossSlidingState",

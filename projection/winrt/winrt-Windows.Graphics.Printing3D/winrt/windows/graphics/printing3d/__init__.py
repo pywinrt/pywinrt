@@ -5,38 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_printing3d import (
-    _abi_version_,
-    _generator_version_,
-    Printing3DBufferDescription,
-    Print3DManager,
-    Print3DTask,
-    Print3DTaskCompletedEventArgs,
-    Print3DTaskRequest,
-    Print3DTaskRequestedEventArgs,
-    Print3DTaskSourceChangedEventArgs,
-    Print3DTaskSourceRequestedArgs,
-    Printing3D3MFPackage,
-    Printing3DBaseMaterial,
-    Printing3DBaseMaterialGroup,
-    Printing3DColorMaterial,
-    Printing3DColorMaterialGroup,
-    Printing3DComponent,
-    Printing3DComponentWithMatrix,
-    Printing3DCompositeMaterial,
-    Printing3DCompositeMaterialGroup,
-    Printing3DFaceReductionOptions,
-    Printing3DMaterial,
-    Printing3DMesh,
-    Printing3DMeshVerificationResult,
-    Printing3DModel,
-    Printing3DModelTexture,
-    Printing3DMultiplePropertyMaterial,
-    Printing3DMultiplePropertyMaterialGroup,
-    Printing3DTexture2CoordMaterial,
-    Printing3DTexture2CoordMaterialGroup,
-    Printing3DTextureResource,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "Print3DTaskCompletion",

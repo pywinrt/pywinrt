@@ -14,9 +14,6 @@ import winrt.windows.system as windows_system
 
 from winui3.microsoft.windows.storage import ApplicationDataCreateDisposition, ApplicationDataLocality
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

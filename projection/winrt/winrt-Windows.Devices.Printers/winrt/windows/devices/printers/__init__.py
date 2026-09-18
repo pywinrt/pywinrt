@@ -4,26 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_printers import (
-    _abi_version_,
-    _generator_version_,
-    IppAttributeError,
-    IppAttributeValue,
-    IppIntegerRange,
-    IppPrintDevice,
-    IppResolution,
-    IppSetAttributesResult,
-    IppTextWithLanguage,
-    PageConfigurationSettings,
-    PdlPassthroughProvider,
-    PdlPassthroughTarget,
-    Print3DDevice,
-    PrintSchema,
-    VirtualPrinterInstallationParameters,
-    VirtualPrinterInstallationResult,
-    VirtualPrinterManager,
-    VirtualPrinterSupportedFormat,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "IppAttributeErrorReason",

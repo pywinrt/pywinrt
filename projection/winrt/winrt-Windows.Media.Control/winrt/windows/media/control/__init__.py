@@ -2,22 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_control import (
-    _abi_version_,
-    _generator_version_,
-    CurrentSessionChangedEventArgs,
-    GlobalSystemMediaTransportControlsSession,
-    GlobalSystemMediaTransportControlsSessionManager,
-    GlobalSystemMediaTransportControlsSessionMediaProperties,
-    GlobalSystemMediaTransportControlsSessionPlaybackControls,
-    GlobalSystemMediaTransportControlsSessionPlaybackInfo,
-    GlobalSystemMediaTransportControlsSessionTimelineProperties,
-    MediaPropertiesChangedEventArgs,
-    PlaybackInfoChangedEventArgs,
-    SessionsChangedEventArgs,
-    TimelinePropertiesChangedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "GlobalSystemMediaTransportControlsSessionPlaybackStatus",

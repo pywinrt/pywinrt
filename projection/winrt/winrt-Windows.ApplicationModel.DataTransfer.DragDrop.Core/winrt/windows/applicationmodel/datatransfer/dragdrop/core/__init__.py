@@ -4,17 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
-    _abi_version_,
-    _generator_version_,
-    CoreDragDropManager,
-    CoreDragInfo,
-    CoreDragOperation,
-    CoreDragUIOverride,
-    CoreDropOperationTargetRequestedEventArgs,
-    _ICoreDropOperationTarget,
-    ICoreDropOperationTarget,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CoreDragUIContentMode",

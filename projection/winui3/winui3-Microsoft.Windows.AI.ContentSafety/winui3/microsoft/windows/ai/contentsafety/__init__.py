@@ -2,14 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_windows_ai_contentsafety import (
-    _abi_version_,
-    _generator_version_,
-    ContentFilterOptions,
-    ImageContentFilterSeverity,
-    TextContentFilterSeverity,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SeverityLevel",

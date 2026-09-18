@@ -20,9 +20,6 @@ import winrt.windows.ui.composition as windows_ui_composition
 
 from winrt.windows.graphics.capture import GraphicsCaptureAccessKind, GraphicsCaptureDirtyRegionMode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -5,56 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_xaml_data import (
-    _abi_version_,
-    _generator_version_,
-    LoadMoreItemsResult,
-    Binding,
-    BindingBase,
-    BindingExpression,
-    BindingExpressionBase,
-    BindingOperations,
-    CollectionViewSource,
-    CurrentChangingEventArgs,
-    DataErrorsChangedEventArgs,
-    ItemIndexRange,
-    PropertyChangedEventArgs,
-    RelativeSource,
-    _ICollectionView,
-    ICollectionView,
-    _ICollectionViewFactory,
-    ICollectionViewFactory,
-    _ICollectionViewGroup,
-    ICollectionViewGroup,
-    _ICustomProperty,
-    ICustomProperty,
-    _ICustomPropertyProvider,
-    ICustomPropertyProvider,
-    _IItemsRangeInfo,
-    IItemsRangeInfo,
-    _INotifyDataErrorInfo,
-    INotifyDataErrorInfo,
-    _INotifyPropertyChanged,
-    INotifyPropertyChanged,
-    _ISelectionInfo,
-    ISelectionInfo,
-    _ISupportIncrementalLoading,
-    ISupportIncrementalLoading,
-    _IValueConverter,
-    IValueConverter,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_xaml_data import (
-        Binding_Static,
-        BindingBase_Static,
-        BindingExpression_Static,
-        BindingExpressionBase_Static,
-        CurrentChangingEventArgs_Static,
-        ItemIndexRange_Static,
-        PropertyChangedEventArgs_Static,
-        RelativeSource_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BindingMode",

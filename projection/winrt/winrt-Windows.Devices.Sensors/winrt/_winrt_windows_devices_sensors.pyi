@@ -16,9 +16,6 @@ import winrt.windows.graphics.display as windows_graphics_display
 
 from winrt.windows.devices.sensors import AccelerometerReadingType, ActivitySensorReadingConfidence, ActivityType, HumanEngagement, HumanPresence, MagnetometerAccuracy, OnlookerDetectionAction, OnlookerDetectionBackOnMode, PedometerStepKind, SensorOptimizationGoal, SensorReadingType, SensorType, SimpleOrientation
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,36 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_midi import (
-    _abi_version_,
-    _generator_version_,
-    MidiActiveSensingMessage,
-    MidiChannelPressureMessage,
-    MidiContinueMessage,
-    MidiControlChangeMessage,
-    MidiInPort,
-    MidiMessageReceivedEventArgs,
-    MidiNoteOffMessage,
-    MidiNoteOnMessage,
-    MidiOutPort,
-    MidiPitchBendChangeMessage,
-    MidiPolyphonicKeyPressureMessage,
-    MidiProgramChangeMessage,
-    MidiSongPositionPointerMessage,
-    MidiSongSelectMessage,
-    MidiStartMessage,
-    MidiStopMessage,
-    MidiSynthesizer,
-    MidiSystemExclusiveMessage,
-    MidiSystemResetMessage,
-    MidiTimeCodeMessage,
-    MidiTimingClockMessage,
-    MidiTuneRequestMessage,
-    _IMidiMessage,
-    IMidiMessage,
-    _IMidiOutPort,
-    IMidiOutPort,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "MidiMessageType",

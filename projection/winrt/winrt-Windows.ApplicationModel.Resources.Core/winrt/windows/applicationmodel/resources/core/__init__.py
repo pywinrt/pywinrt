@@ -4,25 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_resources_core import (
-    _abi_version_,
-    _generator_version_,
-    ResourceLayoutInfo,
-    NamedResource,
-    ResourceCandidate,
-    ResourceCandidateVectorView,
-    ResourceContext,
-    ResourceContextLanguagesVectorView,
-    ResourceManager,
-    ResourceMap,
-    ResourceMapIterator,
-    ResourceMapMapView,
-    ResourceMapMapViewIterator,
-    ResourceQualifier,
-    ResourceQualifierMapView,
-    ResourceQualifierObservableMap,
-    ResourceQualifierVectorView,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ResourceCandidateKind",

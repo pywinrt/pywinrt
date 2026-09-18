@@ -3,34 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_printing import (
-    _abi_version_,
-    _generator_version_,
-    PrintPageDescription,
-    PrintManager,
-    PrintPageInfo,
-    PrintPageRange,
-    PrintPageRangeOptions,
-    PrintTask,
-    PrintTaskCompletedEventArgs,
-    PrintTaskOptions,
-    PrintTaskProgressingEventArgs,
-    PrintTaskRequest,
-    PrintTaskRequestedDeferral,
-    PrintTaskRequestedEventArgs,
-    PrintTaskSourceRequestedArgs,
-    PrintTaskSourceRequestedDeferral,
-    StandardPrintTaskOptions,
-    _IPrintDocumentSource,
-    IPrintDocumentSource,
-    _IPrintTaskOptionsCore,
-    IPrintTaskOptionsCore,
-    _IPrintTaskOptionsCoreProperties,
-    IPrintTaskOptionsCoreProperties,
-    _IPrintTaskOptionsCoreUIConfiguration,
-    IPrintTaskOptionsCoreUIConfiguration,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PrintBinding",

@@ -4,29 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_geolocation import (
-    _abi_version_,
-    _generator_version_,
-    BasicGeoposition,
-    CivicAddress,
-    GeoboundingBox,
-    Geocircle,
-    Geocoordinate,
-    GeocoordinateSatelliteData,
-    Geolocator,
-    Geopath,
-    Geopoint,
-    Geoposition,
-    Geovisit,
-    GeovisitMonitor,
-    GeovisitStateChangedEventArgs,
-    GeovisitTriggerDetails,
-    PositionChangedEventArgs,
-    StatusChangedEventArgs,
-    VenueData,
-    _IGeoshape,
-    IGeoshape,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AltitudeReferenceSystem",

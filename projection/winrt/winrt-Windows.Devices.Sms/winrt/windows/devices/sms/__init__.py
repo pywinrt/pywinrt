@@ -3,46 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_sms import (
-    _abi_version_,
-    _generator_version_,
-    SmsEncodedLength,
-    DeleteSmsMessageOperation,
-    DeleteSmsMessagesOperation,
-    GetSmsDeviceOperation,
-    GetSmsMessageOperation,
-    GetSmsMessagesOperation,
-    SendSmsMessageOperation,
-    SmsAppMessage,
-    SmsBinaryMessage,
-    SmsBroadcastMessage,
-    SmsDevice,
-    SmsDevice2,
-    SmsDeviceMessageStore,
-    SmsFilterRule,
-    SmsFilterRules,
-    SmsMessageReceivedEventArgs,
-    SmsMessageReceivedTriggerDetails,
-    SmsMessageRegistration,
-    SmsReceivedEventDetails,
-    SmsSendMessageResult,
-    SmsStatusMessage,
-    SmsTextMessage,
-    SmsTextMessage2,
-    SmsVoicemailMessage,
-    SmsWapMessage,
-    _ISmsBinaryMessage,
-    ISmsBinaryMessage,
-    _ISmsDevice,
-    ISmsDevice,
-    _ISmsMessage,
-    ISmsMessage,
-    _ISmsMessageBase,
-    ISmsMessageBase,
-    _ISmsTextMessage,
-    ISmsTextMessage,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CellularClass",

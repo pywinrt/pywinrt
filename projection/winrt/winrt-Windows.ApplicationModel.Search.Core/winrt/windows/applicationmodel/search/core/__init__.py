@@ -4,14 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_search_core import (
-    _abi_version_,
-    _generator_version_,
-    RequestingFocusOnKeyboardInputEventArgs,
-    SearchSuggestion,
-    SearchSuggestionManager,
-    SearchSuggestionsRequestedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SearchSuggestionKind",

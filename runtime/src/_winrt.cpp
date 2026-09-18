@@ -5,6 +5,8 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 #include "module_state.h"
+#include "members.h"
+#include "types.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt
@@ -588,6 +590,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->object_type);
         Py_VISIT(state->array_type);
         Py_VISIT(state->mapping_iter_type);
+        Py_VISIT(state->projected_method_type);
         Py_VISIT(state->to_uuid_func);
         Py_VISIT(state->wrap_async_func);
 
@@ -607,8 +610,20 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->object_type);
         Py_CLEAR(state->array_type);
         Py_CLEAR(state->mapping_iter_type);
+        Py_CLEAR(state->projected_method_type);
         Py_CLEAR(state->to_uuid_func);
         Py_CLEAR(state->wrap_async_func);
+
+        // The types a projection built hold descriptors that point back at it,
+        // so letting go of them here is what breaks the cycle. The descriptors
+        // themselves are freed with the state, below, because a type that
+        // outlives this call still has them bound.
+        state->type_entries.clear();
+
+        for (auto& [name, projection] : state->projections)
+        {
+            projection->release_types();
+        }
 
         auto type_cache = std::move(state->type_cache);
 
@@ -632,6 +647,7 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->object_type);
         Py_XDECREF(state->array_type);
         Py_XDECREF(state->mapping_iter_type);
+        Py_XDECREF(state->projected_method_type);
         Py_XDECREF(state->to_uuid_func);
         Py_XDECREF(state->wrap_async_func);
 
@@ -643,6 +659,10 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->type_cache);
 
         std::destroy_at(&state->struct_from_tuple_cache);
+
+        std::destroy_at(&state->type_entries);
+
+        std::destroy_at(&state->projections);
 
         type_registry_epoch++;
     }
@@ -747,6 +767,13 @@ namespace py::cpp::_winrt
          unbox_time_span,
          METH_O,
          PyDoc_STR("Unbox a Windows.Foundation.TimeSpan value")},
+        {"load_projection",
+         py::interp::load_projection,
+         METH_VARARGS,
+         PyDoc_STR(
+             "Builds the Python types of one WinRT namespace from its projection table. "
+             "Called by winrt.runtime._internals.load_projection(), which is the first "
+             "statement of a projection package's __init__.py.")},
         {"read_table",
          read_table,
          METH_O,
@@ -785,6 +812,8 @@ namespace py::cpp::_winrt
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
         std::construct_at(&state->type_cache);
         std::construct_at(&state->struct_from_tuple_cache);
+        std::construct_at(&state->projections);
+        std::construct_at(&state->type_entries);
 
         type_registry_epoch++;
 
@@ -812,6 +841,15 @@ namespace py::cpp::_winrt
         py::pytype_handle mapping_iter_type{py::register_python_type(
             module.get(), &MappingIter_type_spec, nullptr, nullptr)};
         if (!mapping_iter_type)
+        {
+            return nullptr;
+        }
+
+        // Not added to the module: it is what a projected method is bound as,
+        // and nothing constructs one from Python.
+        py::pytype_handle projected_method_type{reinterpret_cast<PyTypeObject*>(
+            PyType_FromSpec(&py::interp::projected_method_type_spec))};
+        if (!projected_method_type)
         {
             return nullptr;
         }
@@ -868,6 +906,7 @@ namespace py::cpp::_winrt
         state->object_type = object_type.detach();
         state->array_type = array_type.detach();
         state->mapping_iter_type = mapping_iter_type.detach();
+        state->projected_method_type = projected_method_type.detach();
         state->to_uuid_func = to_uuid_func.detach();
         state->wrap_async_func = nullptr; // lazy-initialized
 

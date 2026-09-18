@@ -10,9 +10,6 @@ import winrt.windows.system as windows_system
 import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.input as windows_ui_input
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

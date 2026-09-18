@@ -4,61 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_input import (
-    _abi_version_,
-    _generator_version_,
-    CrossSlideThresholds,
-    ManipulationDelta,
-    ManipulationVelocities,
-    AttachableInputObject,
-    CrossSlidingEventArgs,
-    DraggingEventArgs,
-    EdgeGesture,
-    EdgeGestureEventArgs,
-    GestureRecognizer,
-    HoldingEventArgs,
-    InputActivationListener,
-    InputActivationListenerActivationChangedEventArgs,
-    KeyboardDeliveryInterceptor,
-    ManipulationCompletedEventArgs,
-    ManipulationInertiaStartingEventArgs,
-    ManipulationStartedEventArgs,
-    ManipulationUpdatedEventArgs,
-    MouseWheelParameters,
-    PhysicalGestureRecognizer,
-    PointerPoint,
-    PointerPointProperties,
-    PointerVisualizationSettings,
-    RadialController,
-    RadialControllerButtonClickedEventArgs,
-    RadialControllerButtonHoldingEventArgs,
-    RadialControllerButtonPressedEventArgs,
-    RadialControllerButtonReleasedEventArgs,
-    RadialControllerConfiguration,
-    RadialControllerControlAcquiredEventArgs,
-    RadialControllerMenu,
-    RadialControllerMenuItem,
-    RadialControllerRotationChangedEventArgs,
-    RadialControllerScreenContact,
-    RadialControllerScreenContactContinuedEventArgs,
-    RadialControllerScreenContactEndedEventArgs,
-    RadialControllerScreenContactStartedEventArgs,
-    RightTappedEventArgs,
-    SystemButtonEventController,
-    SystemFunctionButtonEventArgs,
-    SystemFunctionLockChangedEventArgs,
-    SystemFunctionLockIndicatorChangedEventArgs,
-    TappedEventArgs,
-    TouchpadGesturesController,
-    TouchpadGlobalActionEventArgs,
-    _IPointerPointTransform,
-    IPointerPointTransform,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_input import (
-        AttachableInputObject_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CrossSlidingState",

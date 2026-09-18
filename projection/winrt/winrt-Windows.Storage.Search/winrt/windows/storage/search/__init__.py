@@ -4,28 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_search import (
-    _abi_version_,
-    _generator_version_,
-    SortEntry,
-    ContentIndexer,
-    ContentIndexerQuery,
-    IndexableContent,
-    QueryOptions,
-    SortEntryVector,
-    StorageFileQueryResult,
-    StorageFolderQueryResult,
-    StorageItemQueryResult,
-    StorageLibraryChangeTrackerTriggerDetails,
-    StorageLibraryContentChangedTriggerDetails,
-    ValueAndLanguage,
-    _IIndexableContent,
-    IIndexableContent,
-    _IStorageFolderQueryOperations,
-    IStorageFolderQueryOperations,
-    _IStorageQueryResultBase,
-    IStorageQueryResultBase,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CommonFileQuery",

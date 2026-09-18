@@ -14,9 +14,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.security.authentication.web.core import FindAllWebAccountsStatus, WebAuthenticationAddAccountStatus, WebTokenRequestPromptType, WebTokenRequestStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

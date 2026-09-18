@@ -17,9 +17,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.graphics.printing.workflow import PdlConversionHostBasedProcessingOperations, PrintWorkflowAttributesMergePolicy, PrintWorkflowJobAbortReason, PrintWorkflowJobIssueKind, PrintWorkflowPdlConversionType, PrintWorkflowPrinterJobStatus, PrintWorkflowSessionStatus, PrintWorkflowSubmittedStatus, PrintWorkflowUICompletionStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

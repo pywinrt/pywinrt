@@ -12,9 +12,6 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.devices.spi.provider import ProviderSpiMode, ProviderSpiSharingMode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

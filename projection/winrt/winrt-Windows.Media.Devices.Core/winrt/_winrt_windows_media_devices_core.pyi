@@ -16,9 +16,6 @@ import winrt.windows.perception.spatial as windows_perception_spatial
 
 from winrt.windows.media.devices.core import FrameFlashMode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

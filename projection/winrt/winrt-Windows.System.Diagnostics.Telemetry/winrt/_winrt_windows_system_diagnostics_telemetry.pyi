@@ -9,9 +9,6 @@ import winrt.system
 
 from winrt.windows.system.diagnostics.telemetry import PlatformTelemetryRegistrationStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

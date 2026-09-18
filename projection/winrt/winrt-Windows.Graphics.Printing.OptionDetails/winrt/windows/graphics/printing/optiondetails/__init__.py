@@ -2,40 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_printing_optiondetails import (
-    _abi_version_,
-    _generator_version_,
-    PrintBindingOptionDetails,
-    PrintBorderingOptionDetails,
-    PrintCollationOptionDetails,
-    PrintColorModeOptionDetails,
-    PrintCopiesOptionDetails,
-    PrintCustomItemDetails,
-    PrintCustomItemListOptionDetails,
-    PrintCustomTextOptionDetails,
-    PrintCustomToggleOptionDetails,
-    PrintDuplexOptionDetails,
-    PrintHolePunchOptionDetails,
-    PrintMediaSizeOptionDetails,
-    PrintMediaTypeOptionDetails,
-    PrintOrientationOptionDetails,
-    PrintPageRangeOptionDetails,
-    PrintQualityOptionDetails,
-    PrintStapleOptionDetails,
-    PrintTaskOptionChangedEventArgs,
-    PrintTaskOptionDetails,
-    _IPrintCustomOptionDetails,
-    IPrintCustomOptionDetails,
-    _IPrintItemListOptionDetails,
-    IPrintItemListOptionDetails,
-    _IPrintNumberOptionDetails,
-    IPrintNumberOptionDetails,
-    _IPrintOptionDetails,
-    IPrintOptionDetails,
-    _IPrintTextOptionDetails,
-    IPrintTextOptionDetails,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PrintOptionStates",

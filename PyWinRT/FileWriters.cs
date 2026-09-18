@@ -233,11 +233,6 @@ static class FileWriters
             w.WriteBlankLine();
         }
 
-        // Written by the module init function, not by anything below.
-        w.WriteLine("_abi_version_: tuple[int, int]");
-        w.WriteLine("_generator_version_: str");
-        w.WriteBlankLine();
-
         w.WriteLine("Self = typing.TypeVar('Self')");
 
         foreach (
@@ -392,80 +387,8 @@ static class FileWriters
             .Concat(members.Classes)
             .Concat(members.Interfaces);
 
-        if (
-            componentDlls
-            || allExtensionTypes.Any(t =>
-                t.IsPySequence || t.IsPyMapping || t.MethodGroups.Any(g => g.Aliases.Count != 0)
-            )
-        )
-        {
-            w.WriteLine("import winrt.runtime._internals");
-        }
-
+        w.WriteLine("import winrt.runtime._internals");
         w.WriteLine("import winrt.system");
-
-        for (int depth = 0; depth < 2; depth++)
-        {
-            var dependencyModuleTypes = allExtensionTypes.Where(t =>
-                t.CircularDependencyDepth == depth
-            );
-            var suffix = depth == 0 ? "" : $"_{depth + 1}";
-
-            // The versions the extension module was built with are re-exported
-            // here so that the runtime and winrt.doctor can read them off the
-            // package without knowing the extension module's name. The depth 0
-            // module is always built, even for a namespace that projects
-            // nothing but enums, so this is the one that carries them.
-            string[] versionNames = depth == 0 ? ["_abi_version_", "_generator_version_"] : [];
-
-            if (versionNames.Length != 0 || dependencyModuleTypes.Any())
-            {
-                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
-                w.Indent++;
-
-                foreach (var name in versionNames)
-                {
-                    w.WriteLine($"{name},");
-                }
-
-                foreach (var type in dependencyModuleTypes)
-                {
-                    w.WriteLine($"{type.PyWrapperTypeName},");
-
-                    if (type.Category == Category.Interface)
-                    {
-                        w.WriteLine($"{type.Name},");
-                    }
-                }
-
-                w.Indent--;
-                w.WriteLine(")");
-            }
-
-            // REVISIT: Composable classes also have to inherit metaclass, so we need to
-            // make these accessible. For now though, they are only available as type
-            // hints and can't actually be imported at runtime. In the future, if we
-            // allow subclassing in Python, we can change this.
-
-            var composableTypes = dependencyModuleTypes.Where(t => t.IsComposable);
-            if (composableTypes.Any())
-            {
-                w.WriteLine("from typing import TYPE_CHECKING");
-                w.WriteLine("if TYPE_CHECKING:");
-                w.Indent++;
-                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
-                w.Indent++;
-
-                foreach (var type in composableTypes)
-                {
-                    w.WriteLine($"{type.Name}_Static,");
-                }
-
-                w.Indent--;
-                w.WriteLine(")");
-                w.Indent--;
-            }
-        }
 
         // Since not all packages may be installed, delegates can't safely
         // import their parameter types at runtime. So we conditionally import
@@ -505,6 +428,12 @@ static class FileWriters
 
             w.Indent--;
         }
+
+        // The classes, interfaces and structs of this namespace are built from
+        // the table beside this file rather than imported from an extension
+        // module, so this has to come before anything below that names one.
+        w.WriteBlankLine();
+        w.WriteLine("winrt.runtime._internals.load_projection(__spec__)");
 
         if (componentDlls)
         {

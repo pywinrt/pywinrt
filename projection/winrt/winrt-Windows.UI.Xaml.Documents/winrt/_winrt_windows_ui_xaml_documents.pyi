@@ -16,9 +16,6 @@ import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 
 from winrt.windows.ui.xaml.documents import LogicalDirection, UnderlineStyle
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

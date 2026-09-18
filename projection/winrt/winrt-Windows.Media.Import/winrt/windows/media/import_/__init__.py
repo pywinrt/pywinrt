@@ -2,25 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_import_ import (
-    _abi_version_,
-    _generator_version_,
-    PhotoImportProgress,
-    PhotoImportDeleteImportedItemsFromSourceResult,
-    PhotoImportFindItemsResult,
-    PhotoImportImportItemsResult,
-    PhotoImportItem,
-    PhotoImportItemImportedEventArgs,
-    PhotoImportManager,
-    PhotoImportOperation,
-    PhotoImportSelectionChangedEventArgs,
-    PhotoImportSession,
-    PhotoImportSidecar,
-    PhotoImportSource,
-    PhotoImportStorageMedium,
-    PhotoImportVideoSegment,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PhotoImportAccessMode",

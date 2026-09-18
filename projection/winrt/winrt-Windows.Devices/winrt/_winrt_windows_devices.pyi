@@ -12,9 +12,6 @@ import winrt.windows.devices.i2c.provider as windows_devices_i2c_provider
 import winrt.windows.devices.pwm.provider as windows_devices_pwm_provider
 import winrt.windows.devices.spi.provider as windows_devices_spi_provider
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

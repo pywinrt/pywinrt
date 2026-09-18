@@ -4,31 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_holographic import (
-    _abi_version_,
-    _generator_version_,
-    HolographicAdapterId,
-    HolographicFrameId,
-    HolographicStereoTransform,
-    HolographicCamera,
-    HolographicCameraPose,
-    HolographicCameraRenderingParameters,
-    HolographicCameraViewportParameters,
-    HolographicDisplay,
-    HolographicFrame,
-    HolographicFramePrediction,
-    HolographicFramePresentationMonitor,
-    HolographicFramePresentationReport,
-    HolographicFrameRenderingReport,
-    HolographicFrameScanoutMonitor,
-    HolographicFrameScanoutReport,
-    HolographicQuadLayer,
-    HolographicQuadLayerUpdateParameters,
-    HolographicSpace,
-    HolographicSpaceCameraAddedEventArgs,
-    HolographicSpaceCameraRemovedEventArgs,
-    HolographicViewConfiguration,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "HolographicDepthReprojectionMethod",

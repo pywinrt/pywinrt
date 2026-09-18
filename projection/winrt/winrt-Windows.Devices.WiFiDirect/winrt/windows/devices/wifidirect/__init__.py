@@ -2,21 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_wifidirect import (
-    _abi_version_,
-    _generator_version_,
-    WiFiDirectAdvertisement,
-    WiFiDirectAdvertisementPublisher,
-    WiFiDirectAdvertisementPublisherStatusChangedEventArgs,
-    WiFiDirectConnectionListener,
-    WiFiDirectConnectionParameters,
-    WiFiDirectConnectionRequest,
-    WiFiDirectConnectionRequestedEventArgs,
-    WiFiDirectDevice,
-    WiFiDirectInformationElement,
-    WiFiDirectLegacySettings,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "WiFiDirectAdvertisementListenStateDiscoverability",

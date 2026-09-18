@@ -4,25 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_windowing import (
-    _abi_version_,
-    _generator_version_,
-    AppWindow,
-    AppWindowChangedEventArgs,
-    AppWindowClosingEventArgs,
-    AppWindowPresenter,
-    AppWindowTitleBar,
-    CompactOverlayPresenter,
-    DisplayArea,
-    DisplayAreaWatcher,
-    FullScreenPresenter,
-    OverlappedPresenter,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_windowing import (
-        AppWindowPresenter_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AppWindowPresenterKind",

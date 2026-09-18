@@ -1,4 +1,5 @@
 import asyncio
+from importlib.machinery import ModuleSpec
 import os
 from collections.abc import (
     Awaitable,
@@ -14,11 +15,44 @@ from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING
 import warnings
 
 # NB: have to import Object from here instead of winrt.system to avoid circular import issues.
-from winrt._winrt import add_dll_directory, remove_dll_directory, Object
+from winrt._winrt import (
+    add_dll_directory,
+    load_projection as _load_projection,
+    remove_dll_directory,
+    Object,
+)
 
 # Unfortunately, we can't import at runtime because of circular imports.
 if TYPE_CHECKING:
     from winrt.windows.foundation import HResult, AsyncStatus
+
+
+#: The file a projection package keeps its namespace's table in, beside the
+#: ``__init__.py`` that loads it.
+TABLE_NAME = "_table.pywinrt"
+
+
+def load_projection(spec: ModuleSpec) -> None:
+    """
+    Creates the Python types of one WinRT namespace from its projection table.
+
+    A projection package ships a table rather than an extension module, so this
+    is what its ``__init__.py`` calls before anything else: the runtime reads
+    the table beside it and builds the classes, interfaces and structs straight
+    into the module. Everything after that line - the enums, the delegate
+    aliases, the protocol mixins - is ordinary Python that expects them to be
+    there.
+
+    Args:
+        spec: The module's own ``__spec__``, which says where it was loaded
+            from and therefore where its table is.
+    """
+    if not spec.origin:
+        raise ImportError(f"{spec.name} was not loaded from a file")
+
+    _load_projection(
+        sys.modules[spec.name], os.fspath(Path(spec.origin).parent / TABLE_NAME)
+    )
 
 
 class _DllCookie:

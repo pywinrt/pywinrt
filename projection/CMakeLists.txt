@@ -122,8 +122,14 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/collections.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/compose.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/errors.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/interp.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/members.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/objects.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/runtime.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/shapes.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/structs.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/table.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/types.cpp"
 )
 pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")
 

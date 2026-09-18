@@ -5,50 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_foundation import (
-    _abi_version_,
-    _generator_version_,
-    EventRegistrationToken,
-    HResult,
-    Point,
-    Rect,
-    Size,
-    Deferral,
-    GuidHelper,
-    MemoryBuffer,
-    PropertyValue,
-    Uri,
-    WwwFormUrlDecoder,
-    WwwFormUrlDecoderEntry,
-    _IAsyncAction,
-    IAsyncAction,
-    _IAsyncActionWithProgress,
-    IAsyncActionWithProgress,
-    _IAsyncInfo,
-    IAsyncInfo,
-    _IAsyncOperationWithProgress,
-    IAsyncOperationWithProgress,
-    _IAsyncOperation,
-    IAsyncOperation,
-    _IClosable,
-    IClosable,
-    _IGetActivationFactory,
-    IGetActivationFactory,
-    _IMemoryBuffer,
-    IMemoryBuffer,
-    _IMemoryBufferReference,
-    IMemoryBufferReference,
-    _IPropertyValue,
-    IPropertyValue,
-    _IReferenceArray,
-    IReferenceArray,
-    _IReference,
-    IReference,
-    _IStringable,
-    IStringable,
-    _IWwwFormUrlDecoderEntry,
-    IWwwFormUrlDecoderEntry,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AsyncStatus",

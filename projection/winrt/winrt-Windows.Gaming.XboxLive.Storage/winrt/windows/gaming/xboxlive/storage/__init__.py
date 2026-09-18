@@ -4,21 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_gaming_xboxlive_storage import (
-    _abi_version_,
-    _generator_version_,
-    GameSaveBlobGetResult,
-    GameSaveBlobInfo,
-    GameSaveBlobInfoGetResult,
-    GameSaveBlobInfoQuery,
-    GameSaveContainer,
-    GameSaveContainerInfo,
-    GameSaveContainerInfoGetResult,
-    GameSaveContainerInfoQuery,
-    GameSaveOperationResult,
-    GameSaveProvider,
-    GameSaveProviderGetResult,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "GameSaveErrorStatus",

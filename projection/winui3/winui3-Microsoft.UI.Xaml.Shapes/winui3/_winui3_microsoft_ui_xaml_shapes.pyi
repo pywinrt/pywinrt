@@ -9,9 +9,6 @@ import winui3.microsoft.ui.composition as microsoft_ui_composition
 import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 import winui3.microsoft.ui.xaml.media as microsoft_ui_xaml_media
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

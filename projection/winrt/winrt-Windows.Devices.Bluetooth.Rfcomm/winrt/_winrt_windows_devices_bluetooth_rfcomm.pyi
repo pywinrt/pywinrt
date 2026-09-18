@@ -17,9 +17,6 @@ import winrt.windows.networking as windows_networking
 import winrt.windows.networking.sockets as windows_networking_sockets
 import winrt.windows.storage.streams as windows_storage_streams
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

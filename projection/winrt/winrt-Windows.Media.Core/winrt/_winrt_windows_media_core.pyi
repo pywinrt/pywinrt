@@ -35,9 +35,6 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.media.core import AudioDecoderDegradation, AudioDecoderDegradationReason, CodecCategory, CodecKind, FaceDetectionMode, MediaDecoderStatus, MediaSourceState, MediaSourceStatus, MediaStreamSourceClosedReason, MediaStreamSourceErrorStatus, MediaTrackKind, MseAppendMode, MseEndOfStreamStatus, MseReadyState, SceneAnalysisRecommendation, TimedMetadataKind, TimedMetadataTrackErrorCode, TimedTextBoutenPosition, TimedTextBoutenType, TimedTextDisplayAlignment, TimedTextFlowDirection, TimedTextFontStyle, TimedTextLineAlignment, TimedTextRubyAlign, TimedTextRubyPosition, TimedTextRubyReserve, TimedTextScrollMode, TimedTextUnit, TimedTextWeight, TimedTextWrapping, TimedTextWritingMode, VideoStabilizationEffectEnabledChangedReason
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

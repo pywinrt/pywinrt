@@ -2,43 +2,8 @@
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_web_http_headers import (
-    _abi_version_,
-    _generator_version_,
-    HttpCacheDirectiveHeaderValueCollection,
-    HttpChallengeHeaderValue,
-    HttpChallengeHeaderValueCollection,
-    HttpConnectionOptionHeaderValue,
-    HttpConnectionOptionHeaderValueCollection,
-    HttpContentCodingHeaderValue,
-    HttpContentCodingHeaderValueCollection,
-    HttpContentCodingWithQualityHeaderValue,
-    HttpContentCodingWithQualityHeaderValueCollection,
-    HttpContentDispositionHeaderValue,
-    HttpContentHeaderCollection,
-    HttpContentRangeHeaderValue,
-    HttpCookiePairHeaderValue,
-    HttpCookiePairHeaderValueCollection,
-    HttpCredentialsHeaderValue,
-    HttpDateOrDeltaHeaderValue,
-    HttpExpectationHeaderValue,
-    HttpExpectationHeaderValueCollection,
-    HttpLanguageHeaderValueCollection,
-    HttpLanguageRangeWithQualityHeaderValue,
-    HttpLanguageRangeWithQualityHeaderValueCollection,
-    HttpMediaTypeHeaderValue,
-    HttpMediaTypeWithQualityHeaderValue,
-    HttpMediaTypeWithQualityHeaderValueCollection,
-    HttpMethodHeaderValueCollection,
-    HttpNameValueHeaderValue,
-    HttpProductHeaderValue,
-    HttpProductInfoHeaderValue,
-    HttpProductInfoHeaderValueCollection,
-    HttpRequestHeaderCollection,
-    HttpResponseHeaderCollection,
-    HttpTransferCodingHeaderValue,
-    HttpTransferCodingHeaderValueCollection,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "HttpCacheDirectiveHeaderValueCollection",

@@ -9,9 +9,6 @@ import winrt.windows.graphics.effects as windows_graphics_effects
 
 from winrt.windows.ui.composition.effects import SceneLightingEffectReflectanceModel
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

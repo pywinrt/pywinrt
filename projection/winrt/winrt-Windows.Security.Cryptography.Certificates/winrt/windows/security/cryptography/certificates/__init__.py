@@ -4,33 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_cryptography_certificates import (
-    _abi_version_,
-    _generator_version_,
-    Certificate,
-    CertificateChain,
-    CertificateEnrollmentManager,
-    CertificateExtension,
-    CertificateKeyUsages,
-    CertificateQuery,
-    CertificateRequestProperties,
-    CertificateStore,
-    CertificateStores,
-    ChainBuildingParameters,
-    ChainValidationParameters,
-    CmsAttachedSignature,
-    CmsDetachedSignature,
-    CmsSignerInfo,
-    CmsTimestampInfo,
-    KeyAlgorithmNames,
-    KeyAttestationHelper,
-    KeyStorageProviderNames,
-    PfxImportParameters,
-    StandardCertificateStoreNames,
-    SubjectAlternativeNameInfo,
-    UserCertificateEnrollmentManager,
-    UserCertificateStore,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CertificateChainPolicy",

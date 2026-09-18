@@ -15,9 +15,6 @@ import winrt.windows.ui.popups as windows_ui_popups
 from winrt.windows.ui.applicationsettings import SettingsEdgeLocation, SupportedWebAccountActions, WebAccountAction
 from winrt.windows.ui.applicationsettings import CredentialCommandCredentialDeletedHandler, WebAccountCommandInvokedHandler, WebAccountProviderCommandInvokedHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

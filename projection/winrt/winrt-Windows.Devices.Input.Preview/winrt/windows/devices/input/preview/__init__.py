@@ -2,21 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_input_preview import (
-    _abi_version_,
-    _generator_version_,
-    GazeDevicePreview,
-    GazeDeviceWatcherAddedPreviewEventArgs,
-    GazeDeviceWatcherPreview,
-    GazeDeviceWatcherRemovedPreviewEventArgs,
-    GazeDeviceWatcherUpdatedPreviewEventArgs,
-    GazeEnteredPreviewEventArgs,
-    GazeExitedPreviewEventArgs,
-    GazeInputSourcePreview,
-    GazeMovedPreviewEventArgs,
-    GazePointPreview,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "GazeDeviceConfigurationStatePreview",

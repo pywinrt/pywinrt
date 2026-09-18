@@ -8,9 +8,6 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui as windows_ui
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

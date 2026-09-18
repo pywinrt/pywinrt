@@ -4,43 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_input_inking import (
-    _abi_version_,
-    _generator_version_,
-    InkDrawingAttributes,
-    InkDrawingAttributesPencilProperties,
-    InkInputConfiguration,
-    InkInputProcessingConfiguration,
-    InkManager,
-    InkModelerAttributes,
-    InkPoint,
-    InkPresenter,
-    InkPresenterProtractor,
-    InkPresenterRuler,
-    InkRecognitionResult,
-    InkRecognizer,
-    InkRecognizerContainer,
-    InkStroke,
-    InkStrokeBuilder,
-    InkStrokeContainer,
-    InkStrokeInput,
-    InkStrokeRenderingSegment,
-    InkStrokesCollectedEventArgs,
-    InkStrokesErasedEventArgs,
-    InkSynchronizer,
-    InkUnprocessedInput,
-    PenAndInkSettings,
-    _IInkPointFactory,
-    IInkPointFactory,
-    _IInkPresenterRulerFactory,
-    IInkPresenterRulerFactory,
-    _IInkPresenterStencil,
-    IInkPresenterStencil,
-    _IInkRecognizerContainer,
-    IInkRecognizerContainer,
-    _IInkStrokeContainer,
-    IInkStrokeContainer,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "HandwritingLineHeight",

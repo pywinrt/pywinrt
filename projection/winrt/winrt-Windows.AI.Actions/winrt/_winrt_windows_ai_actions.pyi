@@ -14,9 +14,6 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.ai.actions import ActionEntityKind, ActionEntityTextFormat, ActionFeedbackKind, ActionInvocationHelpKind, ActionInvocationResult, RemoteFileKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 class ActionEntity_Static(winrt._winrt.IInspectable_Static):

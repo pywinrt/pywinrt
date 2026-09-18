@@ -20,9 +20,6 @@ import winrt.windows.ui.shell as windows_ui_shell
 
 from winrt.windows.graphics.printing.printsupport import IppCommunicationErrorKind, IppPrinterCommunicationKind, SettingsLaunchKind, WorkflowPrintTicketValidationStatus, XpsImageQuality
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final
