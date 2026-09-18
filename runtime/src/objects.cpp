@@ -11,6 +11,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "implements.h"
 #include "interp.h"
 #include "members.h"
 #include "objects.h"
@@ -76,6 +77,14 @@ namespace py::interp
 
         if (!PyObject_TypeCheck(obj, object_type))
         {
+            // A Python class that derives from the public name of a projected
+            // interface is saying it implements it, so what WinRT is given is
+            // a COM object that stands for the Python one.
+            if (implements_interfaces(Py_TYPE(obj)))
+            {
+                return make_implements_object(obj, iid);
+            }
+
             PyErr_Format(
                 PyExc_TypeError,
                 "expected a WinRT object, not '%s'",
@@ -213,11 +222,17 @@ namespace py::interp
             return nullptr;
         }
 
+        /**
+         * _make_(): the tearoff for this interface on a Python subclass of a
+         * composable class, which is the one thing implements.cpp does not
+         * stand one up for yet, because there is no composable object for it
+         * to hang off.
+         */
         PyObject* type_make(PyObject* /*cls*/, PyObject* /*args*/) noexcept
         {
             PyErr_SetString(
                 PyExc_NotImplementedError,
-                "implementing a WinRT interface in Python is not interpreted yet");
+                "a Python subclass of a composable class is not interpreted yet");
             return nullptr;
         }
 

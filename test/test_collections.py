@@ -6,7 +6,7 @@ from typing import cast
 import winrt.windows.foundation.collections as wfc
 from winrt.system import Object, box_string, unbox_string
 
-from ._util import async_test, skip_without_delegates
+from ._util import async_test
 
 
 class TestCollectionsStringMap(unittest.TestCase):
@@ -82,8 +82,6 @@ class TestCollectionsStringMap(unittest.TestCase):
 
     @async_test
     async def test_string_map_changed_event(self):
-        skip_without_delegates()
-
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 

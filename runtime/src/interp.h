@@ -182,6 +182,52 @@ namespace py::interp
     };
 
     /**
+     * What a member reached from WinRT comes down to on the Python side.
+     */
+    enum class python_op
+    {
+        /// Call the object itself, which is what a delegate does.
+        invoke,
+        /// Call the method the member is named after.
+        call_method,
+        /// Read the attribute it is named after, which is the one output of a
+        /// property getter.
+        get_attribute,
+        /// Write it, which is the one input of a property setter.
+        set_attribute,
+    };
+
+    /**
+     * What one entry of a vtable that WinRT calls a Python object through
+     * stands for.
+     */
+    struct reverse_slot
+    {
+        member_desc* member;
+        overload_desc* overload;
+        python_op op;
+    };
+
+    /**
+     * The WinRT side of a Python object that stands in for a value of one
+     * type: the vtable a caller enters through, and what each of its entries
+     * means.
+     *
+     * Nothing in it depends on which Python object is behind it, so it is
+     * built once per type and shared by every object of that type. The two
+     * arrays are never resized once built, because a WinRT caller holds a
+     * pointer into the first of them.
+     */
+    struct reverse_vtable
+    {
+        std::vector<shapes::vtable_entry> entries;
+        /// By vtable slot, so that a trampoline's slot indexes it directly.
+        /// A slot with no member - one this runtime cannot answer - holds
+        /// nulls.
+        std::vector<reverse_slot> slots;
+    };
+
+    /**
      * What the runtime knows about one type in a table beyond what the table
      * says: the Python types built for it and the layout of its values.
      */
@@ -216,6 +262,11 @@ namespace py::interp
         /// What the table's protocol flags come to: the members that the
         /// Python slots of this type call.
         protocol_members protocol;
+        /// What a Python object passed where a value of this type is expected
+        /// is given to WinRT as, built the first time one is. A delegate has
+        /// nothing else: no Python type stands for one, because the module
+        /// binds a typing alias to its name.
+        std::unique_ptr<reverse_vtable> reverse;
 
         // structs only
         uint32_t size;
@@ -300,6 +351,8 @@ namespace py::interp
     // ----- shapes.cpp -----------------------------------------------------
 
     shapes::shape_desc const* get_forward_shape(uint32_t id) noexcept;
+
+    shapes::reverse_desc const* get_reverse_shape(uint32_t id) noexcept;
 
     uint32_t forward_shape_count() noexcept;
 

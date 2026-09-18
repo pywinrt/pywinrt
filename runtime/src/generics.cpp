@@ -144,15 +144,6 @@ namespace py::interp
         entry.winrt_name = keep(proj, qualified(record));
         entry.tp_name = record.py_name();
 
-        if (entry.category == table::category::delegate)
-        {
-            // A delegate is a callable rather than a wrapper, so an instance of
-            // one has no Python type of its own. What the table says about it -
-            // its IID - is all that anything needs until Python can implement
-            // one.
-            return true;
-        }
-
         if (auto const built = find_instance_type(record.signature()))
         {
             entry.py_type = reinterpret_cast<PyTypeObject*>(Py_NewRef(built));

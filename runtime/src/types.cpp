@@ -21,6 +21,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "delegates.h"
 #include "interp.h"
 #include "module_state.h"
 #include "objects.h"
@@ -228,15 +229,20 @@ namespace py::interp
     }
 
     /**
-     * Builds the Python type of one record of this namespace's table, and
-     * of everything it derives from, on the first call.
+     * Builds everything one record of this namespace's table stands for, and
+     * everything it derives from, on the first call.
+     *
+     * For all but a delegate that is a Python type. A delegate has none - the
+     * module binds a typing alias to its name - so what it gets is the vtable
+     * a Python callable is handed to WinRT behind, which is why this rather
+     * than ensure_type() is what the call path asks for.
      */
-    PyTypeObject* ensure_type(projection& proj, uint32_t index) noexcept
+    type_entry* ensure_entry(projection& proj, uint32_t index) noexcept
     {
         auto& entry = proj.types[index];
-        if (entry.py_type)
+        if (entry.py_type || entry.reverse)
         {
-            return entry.py_type;
+            return &entry;
         }
 
         auto const record = proj.table->type(index);
@@ -253,11 +259,9 @@ namespace py::interp
             switch (entry.category)
             {
             case table::category::enum_:
-            case table::category::delegate:
             {
-                // An enum is an ordinary Python class and a delegate is a
-                // typing alias, so __init__.py writes both and this only
-                // has to find what it wrote.
+                // An enum is an ordinary Python class that __init__.py writes,
+                // so this only has to find what it wrote.
                 pyobj_handle written{
                     PyObject_GetAttrString(proj.module, record.py_name().data())};
                 if (!written)
@@ -275,6 +279,13 @@ namespace py::interp
                 entry.py_type = reinterpret_cast<PyTypeObject*>(written.detach());
                 break;
             }
+            case table::category::delegate:
+                if (!make_delegate_type(proj, entry, record))
+                {
+                    return nullptr;
+                }
+
+                break;
             case table::category::struct_:
                 if (!make_struct_type(proj, entry, record))
                 {
@@ -304,21 +315,32 @@ namespace py::interp
             return nullptr;
         }
 
-        return entry.py_type;
+        return &entry;
     }
 
     /**
-     * Builds the type @p qualified_name names from the table of the package
+     * The Python type of one record of this namespace's table, built on the
+     * first call.
+     */
+    PyTypeObject* ensure_type(projection& proj, uint32_t index) noexcept
+    {
+        auto const entry = ensure_entry(proj, index);
+
+        return entry ? entry->py_type : nullptr;
+    }
+
+    /**
+     * Builds whatever @p qualified_name names from the table of the package
      * that defines it, if that table is registered.
      *
      * This is what makes a namespace that refers to itself through another one
      * work: the table is registered before a single type is built, so a type
      * can be reached whatever state its module's __init__.py is in.
      *
-     * @returns A borrowed reference, @c nullptr without a Python error set if
-     * no table claims the name, or @c nullptr with one if building it failed.
+     * @returns @c nullptr without a Python error set if no table claims the
+     * name, or @c nullptr with one if building it failed.
      */
-    PyTypeObject* find_registered_type(std::string_view qualified_name) noexcept
+    type_entry* find_registered_entry(std::string_view qualified_name) noexcept
     {
         auto const s = state();
         if (!s)
@@ -357,7 +379,77 @@ namespace py::interp
             return nullptr;
         }
 
-        return ensure_type(*proj, index->second);
+        return ensure_entry(*proj, index->second);
+    }
+
+    /**
+     * The Python type @p qualified_name names, from the table of the package
+     * that defines it.
+     *
+     * @returns A borrowed reference, or @c nullptr as
+     * find_registered_entry() does.
+     */
+    PyTypeObject* find_registered_type(std::string_view qualified_name) noexcept
+    {
+        auto const entry = find_registered_entry(qualified_name);
+
+        return entry ? entry->py_type : nullptr;
+    }
+
+    /**
+     * The entry for @p qualified_name, importing the package that defines it
+     * if nothing has yet.
+     *
+     * A type reaches the same place through py::get_python_type(), which
+     * imports and then caches the Python type it finds. A delegate has no
+     * Python type to cache, so it comes here instead.
+     *
+     * @returns @c nullptr with a Python error set if the name cannot be
+     * resolved.
+     */
+    type_entry* find_defining_entry(std::string_view qualified_name) noexcept
+    {
+        if (auto const entry = find_registered_entry(qualified_name))
+        {
+            return entry;
+        }
+
+        if (PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        auto const dot = qualified_name.find_last_of('.');
+        if (dot == std::string_view::npos)
+        {
+            PyErr_Format(
+                PyExc_ValueError,
+                "invalid qualified name: %s",
+                std::string{qualified_name}.c_str());
+            return nullptr;
+        }
+
+        pyobj_handle module{
+            PyImport_ImportModule(std::string{qualified_name.substr(0, dot)}.c_str())};
+        if (!module)
+        {
+            return nullptr;
+        }
+
+        if (auto const entry = find_registered_entry(qualified_name))
+        {
+            return entry;
+        }
+
+        if (!PyErr_Occurred())
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' is not something a projection table describes",
+                std::string{qualified_name}.c_str());
+        }
+
+        return nullptr;
     }
 
     /**

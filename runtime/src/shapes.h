@@ -147,6 +147,37 @@ namespace py::shapes
     }
 
     /**
+     * What a call that arrives from WinRT is sent on to.
+     *
+     * Every COM object the runtime assembles - the delegate a Python callable
+     * becomes, the tearoff of an interface a Python object implements - puts
+     * one of these behind the vtable pointer WinRT sees, because the shared
+     * dispatcher below has nothing else to go on: a vtable entry knows the
+     * slot it stands for and the address it was called with, and that address
+     * is the object.
+     */
+    struct reverse_target
+    {
+        virtual int32_t invoke(uint16_t slot, void* args) noexcept = 0;
+
+      protected:
+        ~reverse_target() = default;
+    };
+
+    /**
+     * The first two words of every COM object the runtime assembles.
+     *
+     * A COM interface pointer is a pointer to a vtable pointer, so this is
+     * what a WinRT caller holds, and everything else about the object is
+     * reached from the second word.
+     */
+    struct com_head
+    {
+        vtable_entry const* vtable;
+        reverse_target* target;
+    };
+
+    /**
      * Where a call from WinRT into Python arrives, after the arguments have been
      * spilled into @p args.
      *
