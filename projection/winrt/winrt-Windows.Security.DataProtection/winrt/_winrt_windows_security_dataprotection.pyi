@@ -12,9 +12,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.security.dataprotection import UserDataAvailability, UserDataBufferUnprotectStatus, UserDataStorageItemProtectionStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

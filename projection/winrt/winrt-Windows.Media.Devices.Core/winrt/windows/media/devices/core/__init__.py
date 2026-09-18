@@ -2,26 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_devices_core import (
-    _abi_version_,
-    _generator_version_,
-    CameraIntrinsics,
-    DepthCorrelatedCoordinateMapper,
-    FrameControlCapabilities,
-    FrameController,
-    FrameExposureCapabilities,
-    FrameExposureCompensationCapabilities,
-    FrameExposureCompensationControl,
-    FrameExposureControl,
-    FrameFlashCapabilities,
-    FrameFlashControl,
-    FrameFocusCapabilities,
-    FrameFocusControl,
-    FrameIsoSpeedCapabilities,
-    FrameIsoSpeedControl,
-    VariablePhotoSequenceController,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "FrameFlashMode",

@@ -10,9 +10,6 @@ import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.devices.geolocation.provider import LocationOverrideStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

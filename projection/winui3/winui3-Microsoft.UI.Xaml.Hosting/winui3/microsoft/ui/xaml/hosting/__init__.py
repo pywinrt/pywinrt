@@ -2,24 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_xaml_hosting import (
-    _abi_version_,
-    _generator_version_,
-    DesktopWindowXamlSource,
-    DesktopWindowXamlSourceGotFocusEventArgs,
-    DesktopWindowXamlSourceTakeFocusRequestedEventArgs,
-    ElementCompositionPreview,
-    WindowsXamlManager,
-    XamlShutdownCompletedOnThreadEventArgs,
-    XamlSourceFocusNavigationRequest,
-    XamlSourceFocusNavigationResult,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_xaml_hosting import (
-        DesktopWindowXamlSource_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "XamlSourceFocusNavigationReason",

@@ -15,9 +15,6 @@ import winrt.windows.networking.sockets as windows_networking_sockets
 
 from winrt.windows.networking.servicediscovery.dnssd import DnssdRegistrationStatus, DnssdServiceWatcherStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

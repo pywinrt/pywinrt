@@ -2,36 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_xaml_automation import (
-    _abi_version_,
-    _generator_version_,
-    AnnotationPatternIdentifiers,
-    AutomationAnnotation,
-    AutomationElementIdentifiers,
-    AutomationProperties,
-    AutomationProperty,
-    DockPatternIdentifiers,
-    DragPatternIdentifiers,
-    DropTargetPatternIdentifiers,
-    ExpandCollapsePatternIdentifiers,
-    GridItemPatternIdentifiers,
-    GridPatternIdentifiers,
-    MultipleViewPatternIdentifiers,
-    RangeValuePatternIdentifiers,
-    ScrollPatternIdentifiers,
-    SelectionItemPatternIdentifiers,
-    SelectionPatternIdentifiers,
-    SpreadsheetItemPatternIdentifiers,
-    StylesPatternIdentifiers,
-    TableItemPatternIdentifiers,
-    TablePatternIdentifiers,
-    TogglePatternIdentifiers,
-    TransformPattern2Identifiers,
-    TransformPatternIdentifiers,
-    ValuePatternIdentifiers,
-    WindowPatternIdentifiers,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AnnotationType",

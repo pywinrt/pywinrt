@@ -2,25 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_services_targetedcontent import (
-    _abi_version_,
-    _generator_version_,
-    TargetedContentAction,
-    TargetedContentAvailabilityChangedEventArgs,
-    TargetedContentChangedEventArgs,
-    TargetedContentCollection,
-    TargetedContentContainer,
-    TargetedContentFile,
-    TargetedContentImage,
-    TargetedContentItem,
-    TargetedContentItemState,
-    TargetedContentObject,
-    TargetedContentStateChangedEventArgs,
-    TargetedContentSubscription,
-    TargetedContentSubscriptionOptions,
-    TargetedContentValue,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "TargetedContentAppInstallationState",

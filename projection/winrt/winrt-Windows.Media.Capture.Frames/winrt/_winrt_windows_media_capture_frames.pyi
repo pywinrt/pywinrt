@@ -25,9 +25,6 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 
 from winrt.windows.media.capture.frames import MediaFrameReaderAcquisitionMode, MediaFrameReaderStartStatus, MediaFrameSourceGetPropertyStatus, MediaFrameSourceKind, MediaFrameSourceSetPropertyStatus, MultiSourceMediaFrameReaderStartStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

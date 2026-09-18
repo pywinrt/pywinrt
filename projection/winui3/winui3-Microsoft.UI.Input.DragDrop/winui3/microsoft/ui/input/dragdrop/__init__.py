@@ -4,17 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_input_dragdrop import (
-    _abi_version_,
-    _generator_version_,
-    DragDropManager,
-    DragInfo,
-    DragOperation,
-    DragUIOverride,
-    DropOperationTargetRequestedEventArgs,
-    _IDropOperationTarget,
-    IDropOperationTarget,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DragDropModifiers",

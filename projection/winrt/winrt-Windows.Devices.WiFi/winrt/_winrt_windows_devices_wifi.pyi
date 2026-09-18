@@ -16,9 +16,6 @@ import winrt.windows.security.credentials as windows_security_credentials
 
 from winrt.windows.devices.wifi import WiFiAccessStatus, WiFiConnectionMethod, WiFiConnectionStatus, WiFiNetworkKind, WiFiOnDemandHotspotAvailability, WiFiOnDemandHotspotCellularBars, WiFiOnDemandHotspotConnectStatus, WiFiPhyKind, WiFiReconnectionKind, WiFiWpsConfigurationStatus, WiFiWpsKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

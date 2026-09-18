@@ -2,23 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_text import (
-    _abi_version_,
-    _generator_version_,
-    FontWeights,
-    RichEditTextDocument,
-    RichEditTextRange,
-    TextConstants,
-    _ITextCharacterFormat,
-    ITextCharacterFormat,
-    _ITextParagraphFormat,
-    ITextParagraphFormat,
-    _ITextRange,
-    ITextRange,
-    _ITextSelection,
-    ITextSelection,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CaretType",

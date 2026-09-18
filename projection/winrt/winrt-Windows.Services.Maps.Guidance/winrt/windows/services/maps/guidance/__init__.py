@@ -4,21 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_services_maps_guidance import (
-    _abi_version_,
-    _generator_version_,
-    GuidanceAudioNotificationRequestedEventArgs,
-    GuidanceLaneInfo,
-    GuidanceManeuver,
-    GuidanceMapMatchedCoordinate,
-    GuidanceNavigator,
-    GuidanceReroutedEventArgs,
-    GuidanceRoadSegment,
-    GuidanceRoadSignpost,
-    GuidanceRoute,
-    GuidanceTelemetryCollector,
-    GuidanceUpdatedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "GuidanceAudioMeasurementSystem",

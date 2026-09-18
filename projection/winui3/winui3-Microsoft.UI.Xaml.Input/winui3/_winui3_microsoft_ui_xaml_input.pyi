@@ -20,9 +20,6 @@ import winui3.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls
 from winui3.microsoft.ui.xaml.input import FocusInputDeviceKind, FocusNavigationDirection, InputScopeNameValue, KeyTipPlacementMode, KeyboardAcceleratorPlacementMode, KeyboardNavigationMode, ManipulationModes, StandardUICommandKind, XYFocusKeyboardNavigationMode, XYFocusNavigationStrategy, XYFocusNavigationStrategyOverride
 from winui3.microsoft.ui.xaml.input import DoubleTappedEventHandler, HoldingEventHandler, KeyEventHandler, ManipulationCompletedEventHandler, ManipulationDeltaEventHandler, ManipulationInertiaStartingEventHandler, ManipulationStartedEventHandler, ManipulationStartingEventHandler, PointerEventHandler, RightTappedEventHandler, TappedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

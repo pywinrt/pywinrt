@@ -2,18 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_gaming_input_forcefeedback import (
-    _abi_version_,
-    _generator_version_,
-    ConditionForceEffect,
-    ConstantForceEffect,
-    ForceFeedbackMotor,
-    PeriodicForceEffect,
-    RampForceEffect,
-    _IForceFeedbackEffect,
-    IForceFeedbackEffect,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ConditionForceEffectKind",

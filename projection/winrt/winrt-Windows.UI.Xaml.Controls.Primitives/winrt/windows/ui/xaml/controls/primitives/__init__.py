@@ -3,100 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_xaml_controls_primitives import (
-    _abi_version_,
-    _generator_version_,
-    GeneratorPosition,
-    AppBarButtonTemplateSettings,
-    AppBarTemplateSettings,
-    AppBarToggleButtonTemplateSettings,
-    ButtonBase,
-    CalendarPanel,
-    CalendarViewTemplateSettings,
-    CarouselPanel,
-    ColorSpectrum,
-    ComboBoxTemplateSettings,
-    CommandBarFlyoutCommandBar,
-    CommandBarFlyoutCommandBarTemplateSettings,
-    CommandBarTemplateSettings,
-    DragCompletedEventArgs,
-    DragDeltaEventArgs,
-    DragStartedEventArgs,
-    FlyoutBase,
-    FlyoutBaseClosingEventArgs,
-    FlyoutShowOptions,
-    GeneratorPositionHelper,
-    GridViewItemPresenter,
-    GridViewItemTemplateSettings,
-    ItemsChangedEventArgs,
-    JumpListItemBackgroundConverter,
-    JumpListItemForegroundConverter,
-    LayoutInformation,
-    ListViewItemPresenter,
-    ListViewItemTemplateSettings,
-    LoopingSelector,
-    LoopingSelectorItem,
-    LoopingSelectorPanel,
-    MenuFlyoutItemTemplateSettings,
-    MenuFlyoutPresenterTemplateSettings,
-    NavigationViewItemPresenter,
-    OrientedVirtualizingPanel,
-    PickerFlyoutBase,
-    PivotHeaderItem,
-    PivotHeaderPanel,
-    PivotPanel,
-    Popup,
-    ProgressBarTemplateSettings,
-    ProgressRingTemplateSettings,
-    RangeBase,
-    RangeBaseValueChangedEventArgs,
-    RepeatButton,
-    ScrollBar,
-    ScrollEventArgs,
-    Selector,
-    SelectorItem,
-    SettingsFlyoutTemplateSettings,
-    SplitViewTemplateSettings,
-    Thumb,
-    TickBar,
-    ToggleButton,
-    ToggleSwitchTemplateSettings,
-    ToolTipTemplateSettings,
-    _IScrollSnapPointsInfo,
-    IScrollSnapPointsInfo,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_controls_primitives import (
-        ButtonBase_Static,
-        CarouselPanel_Static,
-        ColorSpectrum_Static,
-        CommandBarFlyoutCommandBar_Static,
-        DragCompletedEventArgs_Static,
-        DragDeltaEventArgs_Static,
-        DragStartedEventArgs_Static,
-        FlyoutBase_Static,
-        FlyoutShowOptions_Static,
-        GridViewItemPresenter_Static,
-        ListViewItemPresenter_Static,
-        NavigationViewItemPresenter_Static,
-        OrientedVirtualizingPanel_Static,
-        PickerFlyoutBase_Static,
-        PivotHeaderItem_Static,
-        RangeBase_Static,
-        Selector_Static,
-        SelectorItem_Static,
-        ToggleButton_Static,
-    )
-from winrt._winrt_windows_ui_xaml_controls_primitives_2 import (
-    ColorPickerSlider,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_controls_primitives_2 import (
-        ColorPickerSlider_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AnimationDirection",

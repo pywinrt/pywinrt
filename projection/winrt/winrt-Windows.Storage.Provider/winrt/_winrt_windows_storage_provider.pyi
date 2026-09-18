@@ -19,9 +19,6 @@ import winrt.windows.ui as windows_ui
 from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, FileUpdateStatus, ReadActivationMode, StorageProviderHardlinkPolicy, StorageProviderHydrationPolicy, StorageProviderHydrationPolicyModifier, StorageProviderInSyncPolicy, StorageProviderKnownFolderSyncStatus, StorageProviderPopulationPolicy, StorageProviderProtectionMode, StorageProviderResultKind, StorageProviderResultUsageKind, StorageProviderSearchMatchKind, StorageProviderSearchQueryStatus, StorageProviderShareLinkState, StorageProviderState, StorageProviderUICommandState, StorageProviderUriSourceStatus, UIStatus, WriteActivationMode
 from winrt.windows.storage.provider import StorageProviderKnownFolderSyncRequestedHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -2,18 +2,10 @@
 
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui import (
-    _abi_version_,
-    _generator_version_,
-    DisplayId,
-    IconId,
-    WindowId,
-    ColorHelper,
-    Colors,
-    _IClosableNotifier,
-    IClosableNotifier,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DisplayId",

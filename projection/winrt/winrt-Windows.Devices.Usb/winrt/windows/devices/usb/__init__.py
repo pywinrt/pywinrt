@@ -4,32 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_usb import (
-    _abi_version_,
-    _generator_version_,
-    UsbBulkInEndpointDescriptor,
-    UsbBulkInPipe,
-    UsbBulkOutEndpointDescriptor,
-    UsbBulkOutPipe,
-    UsbConfiguration,
-    UsbConfigurationDescriptor,
-    UsbControlRequestType,
-    UsbDescriptor,
-    UsbDevice,
-    UsbDeviceClass,
-    UsbDeviceClasses,
-    UsbDeviceDescriptor,
-    UsbEndpointDescriptor,
-    UsbInterface,
-    UsbInterfaceDescriptor,
-    UsbInterfaceSetting,
-    UsbInterruptInEndpointDescriptor,
-    UsbInterruptInEventArgs,
-    UsbInterruptInPipe,
-    UsbInterruptOutEndpointDescriptor,
-    UsbInterruptOutPipe,
-    UsbSetupPacket,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "UsbControlRecipient",

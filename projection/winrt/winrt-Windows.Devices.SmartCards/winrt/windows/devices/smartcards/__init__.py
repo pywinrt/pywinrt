@@ -5,39 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_smartcards import (
-    _abi_version_,
-    _generator_version_,
-    CardAddedEventArgs,
-    CardRemovedEventArgs,
-    KnownSmartCardAppletIds,
-    SmartCard,
-    SmartCardAppletIdGroup,
-    SmartCardAppletIdGroupRegistration,
-    SmartCardAutomaticResponseApdu,
-    SmartCardChallengeContext,
-    SmartCardConnection,
-    SmartCardCryptogramGenerator,
-    SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult,
-    SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult,
-    SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult,
-    SmartCardCryptogramMaterialCharacteristics,
-    SmartCardCryptogramMaterialPackageCharacteristics,
-    SmartCardCryptogramMaterialPossessionProof,
-    SmartCardCryptogramPlacementStep,
-    SmartCardCryptogramStorageKeyCharacteristics,
-    SmartCardCryptogramStorageKeyInfo,
-    SmartCardEmulator,
-    SmartCardEmulatorApduReceivedEventArgs,
-    SmartCardEmulatorConnectionDeactivatedEventArgs,
-    SmartCardEmulatorConnectionProperties,
-    SmartCardPinPolicy,
-    SmartCardPinResetDeferral,
-    SmartCardPinResetRequest,
-    SmartCardProvisioning,
-    SmartCardReader,
-    SmartCardTriggerDetails,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SmartCardActivationPolicyChangeResult",

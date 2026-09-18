@@ -2,33 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_xaml_hosting import (
-    _abi_version_,
-    _generator_version_,
-    DesignerAppExitedEventArgs,
-    DesignerAppManager,
-    DesignerAppView,
-    DesktopWindowXamlSource,
-    DesktopWindowXamlSourceGotFocusEventArgs,
-    DesktopWindowXamlSourceTakeFocusRequestedEventArgs,
-    ElementCompositionPreview,
-    WindowsXamlManager,
-    XamlSourceFocusNavigationRequest,
-    XamlSourceFocusNavigationResult,
-    XamlUIPresenter,
-    _IXamlUIPresenterHost,
-    IXamlUIPresenterHost,
-    _IXamlUIPresenterHost2,
-    IXamlUIPresenterHost2,
-    _IXamlUIPresenterHost3,
-    IXamlUIPresenterHost3,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_hosting import (
-        DesktopWindowXamlSource_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DesignerAppViewState",

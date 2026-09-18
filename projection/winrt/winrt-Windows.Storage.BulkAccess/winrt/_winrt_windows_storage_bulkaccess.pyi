@@ -16,9 +16,6 @@ import winrt.windows.storage.fileproperties as windows_storage_fileproperties
 import winrt.windows.storage.search as windows_storage_search
 import winrt.windows.storage.streams as windows_storage_streams
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

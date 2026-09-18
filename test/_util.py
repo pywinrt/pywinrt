@@ -13,16 +13,19 @@ from collections.abc import Callable, Generator
 
 def skip_without_projection() -> None:
     """
-    Skips the calling test module because it needs a projection package.
+    Skips the calling test module because it needs more of the interpreter than
+    there is.
 
-    The generator emits a table per namespace instead of a compiled extension
-    module, and ``winrt-runtime`` does not interpret one yet, so importing any
-    projection package fails. Calling this before those imports keeps the suite
-    reporting skips rather than a wall of import errors while the interpreter is
-    being built. Delete the call from a module once the interpreter covers what
-    it tests.
+    A projection package is a table that ``winrt-runtime`` interprets, and the
+    interpreter is being built a piece at a time: it makes the types and calls
+    their non-generic members today, so what is still missing is parameterized
+    interfaces, arrays, delegates and events, and Python subclasses of
+    composable classes. Calling this before a module's imports keeps the suite
+    reporting skips rather than a wall of errors. Delete the call from a module
+    once the interpreter covers what it tests; ``test_projection.py`` is what
+    covers the part that is already there.
     """
-    raise unittest.SkipTest("winrt-runtime does not interpret projection tables yet")
+    raise unittest.SkipTest("winrt-runtime does not interpret this part of a table yet")
 
 
 def async_test(test: Callable[..., Any]) -> Callable[..., None]:

@@ -2,6 +2,8 @@
 
 #include <Python.h>
 
+#include "interp.h"
+
 // internal implementation details for the winrt-runtime module
 
 namespace py::cpp::_winrt
@@ -12,8 +14,20 @@ namespace py::cpp::_winrt
         PyTypeObject* object_type;
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;
+        /// The descriptor that a projected method is bound as.
+        PyTypeObject* projected_method_type;
         std::unordered_map<std::string_view, PyTypeObject*> type_cache;
         std::unordered_map<std::string_view, void*> struct_from_tuple_cache;
+        /// The projection tables that have been loaded, by the name of the
+        /// module each was loaded into.
+        std::unordered_map<std::string, std::unique_ptr<py::interp::projection>>
+            projections;
+        /// The descriptor a projected type was built from, which is how the
+        /// call path gets from the type of a value back to what the table said
+        /// about it. One descriptor can be here more than once: an interface
+        /// registers both its wrapper and its abstract type, and a class with
+        /// statics registers its metaclass as well.
+        std::unordered_map<PyTypeObject*, py::interp::type_entry*> type_entries;
         PyObject* to_uuid_func;
         PyObject* wrap_async_func;
     };

@@ -13,9 +13,6 @@ import winrt.windows.security.credentials as windows_security_credentials
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.web.syndication as windows_web_syndication
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

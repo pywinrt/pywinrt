@@ -10,9 +10,6 @@ import winrt.windows.applicationmodel as windows_applicationmodel
 
 from winui3.microsoft.windows.applicationmodel.dynamicdependency import PackageDependencyLifetimeArtifactKind, PackageDependencyProcessorArchitectures
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

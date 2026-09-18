@@ -22,9 +22,6 @@ import winrt.windows.ui.xaml.media.media3d as windows_ui_xaml_media_media3d
 from winrt.windows.ui.xaml.media import AcrylicBackgroundSource, AlignmentX, AlignmentY, AudioCategory, AudioDeviceType, BrushMappingMode, ColorInterpolationMode, ElementCompositeMode, FastPlayFallbackBehaviour, FillRule, GradientSpreadMethod, LoadedImageSourceLoadStatus, MediaCanPlayResponse, MediaElementState, PenLineCap, PenLineJoin, RevealBrushState, Stereo3DVideoPackingMode, Stereo3DVideoRenderMode, Stretch, StyleSimulations, SweepDirection
 from winrt.windows.ui.xaml.media import RateChangedRoutedEventHandler, TimelineMarkerRoutedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

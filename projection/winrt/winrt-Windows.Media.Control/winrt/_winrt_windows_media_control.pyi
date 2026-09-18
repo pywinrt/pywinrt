@@ -14,9 +14,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.media.control import GlobalSystemMediaTransportControlsSessionPlaybackStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

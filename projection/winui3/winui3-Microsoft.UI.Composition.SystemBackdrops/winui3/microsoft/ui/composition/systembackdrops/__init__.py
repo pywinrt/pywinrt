@@ -4,17 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_composition_systembackdrops import (
-    _abi_version_,
-    _generator_version_,
-    DesktopAcrylicController,
-    MicaController,
-    SystemBackdropConfiguration,
-    _ISystemBackdropController,
-    ISystemBackdropController,
-    _ISystemBackdropControllerWithTargets,
-    ISystemBackdropControllerWithTargets,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DesktopAcrylicKind",

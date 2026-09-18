@@ -2,39 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui2._winui2_microsoft_ui_xaml_controls_primitives import (
-    _abi_version_,
-    _generator_version_,
-    AutoSuggestBoxHelper,
-    ColorPickerSlider,
-    ColorSpectrum,
-    ColumnMajorUniformToLargestGridLayout,
-    ComboBoxHelper,
-    CommandBarFlyoutCommandBar,
-    CommandBarFlyoutCommandBarAutomationProperties,
-    CommandBarFlyoutCommandBarTemplateSettings,
-    CornerRadiusFilterConverter,
-    CornerRadiusToThicknessConverter,
-    InfoBarPanel,
-    MonochromaticOverlayPresenter,
-    NavigationViewItemPresenter,
-    NavigationViewItemPresenterTemplateSettings,
-    TabViewListView,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui2._winui2_microsoft_ui_xaml_controls_primitives import (
-        ColorPickerSlider_Static,
-        ColorSpectrum_Static,
-        ColumnMajorUniformToLargestGridLayout_Static,
-        CommandBarFlyoutCommandBar_Static,
-        InfoBarPanel_Static,
-        MonochromaticOverlayPresenter_Static,
-        NavigationViewItemPresenter_Static,
-        NavigationViewItemPresenterTemplateSettings_Static,
-        TabViewListView_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CornerRadiusFilterKind",

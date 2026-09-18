@@ -2,16 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_custom import (
-    _abi_version_,
-    _generator_version_,
-    CustomDevice,
-    IOControlCode,
-    KnownDeviceTypes,
-    _IIOControlCode,
-    IIOControlCode,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DeviceAccessMode",

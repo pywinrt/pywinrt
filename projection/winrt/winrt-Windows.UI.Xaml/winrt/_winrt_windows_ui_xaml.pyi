@@ -35,9 +35,6 @@ import winrt.windows.ui.xaml.media.media3d as windows_ui_xaml_media_media3d
 from winrt.windows.ui.xaml import ApplicationHighContrastAdjustment, ApplicationRequiresPointerMode, ApplicationTheme, AutomationTextAttributesEnum, DurationType, ElementHighContrastAdjustment, ElementSoundKind, ElementSoundMode, ElementSoundPlayerState, ElementSpatialAudioMode, ElementTheme, FlowDirection, FocusState, FocusVisualKind, FontCapitals, FontEastAsianLanguage, FontEastAsianWidths, FontFraction, FontNumeralAlignment, FontNumeralStyle, FontVariants, GridUnitType, HorizontalAlignment, LineStackingStrategy, OpticalMarginAlignment, TextAlignment, TextLineBounds, TextReadingOrder, TextTrimming, TextWrapping, Vector3TransitionComponents, VerticalAlignment, Visibility
 from winrt.windows.ui.xaml import ApplicationInitializationCallback, BindingFailedEventHandler, CreateDefaultValueCallback, DependencyPropertyChangedCallback, DependencyPropertyChangedEventHandler, DragEventHandler, EnteredBackgroundEventHandler, ExceptionRoutedEventHandler, LeavingBackgroundEventHandler, PropertyChangedCallback, RoutedEventHandler, SizeChangedEventHandler, SuspendingEventHandler, UnhandledExceptionEventHandler, VisualStateChangedEventHandler, WindowActivatedEventHandler, WindowClosedEventHandler, WindowSizeChangedEventHandler, WindowVisibilityChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

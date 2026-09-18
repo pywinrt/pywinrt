@@ -13,9 +13,6 @@ import winui3.microsoft.ui.xaml.automation as microsoft_ui_xaml_automation
 import winui3.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winui3.microsoft.ui.xaml.automation.text as microsoft_ui_xaml_automation_text
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

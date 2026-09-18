@@ -14,9 +14,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.applicationmodel.userdatatasks import UserDataTaskDaysOfWeek, UserDataTaskDetailsKind, UserDataTaskKind, UserDataTaskListOtherAppReadAccess, UserDataTaskListOtherAppWriteAccess, UserDataTaskListSyncStatus, UserDataTaskPriority, UserDataTaskQueryKind, UserDataTaskQuerySortProperty, UserDataTaskRecurrenceUnit, UserDataTaskRegenerationUnit, UserDataTaskSensitivity, UserDataTaskStoreAccessType, UserDataTaskWeekOfMonth
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,35 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_display_core import (
-    _abi_version_,
-    _generator_version_,
-    DisplayPresentationRate,
-    DisplayAdapter,
-    DisplayDevice,
-    DisplayFence,
-    DisplayManager,
-    DisplayManagerChangedEventArgs,
-    DisplayManagerDisabledEventArgs,
-    DisplayManagerEnabledEventArgs,
-    DisplayManagerPathsFailedOrInvalidatedEventArgs,
-    DisplayManagerResultWithState,
-    DisplayModeInfo,
-    DisplayMuxDevice,
-    DisplayPath,
-    DisplayPrimaryDescription,
-    DisplayScanout,
-    DisplaySource,
-    DisplayState,
-    DisplayStateOperationResult,
-    DisplaySurface,
-    DisplayTarget,
-    DisplayTask,
-    DisplayTaskPool,
-    DisplayTaskResult,
-    DisplayView,
-    DisplayWireFormat,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DisplayBitsPerChannel",

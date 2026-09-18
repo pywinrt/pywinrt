@@ -2,29 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_web_ui import (
-    _abi_version_,
-    _generator_version_,
-    WebViewControlContentLoadingEventArgs,
-    WebViewControlDOMContentLoadedEventArgs,
-    WebViewControlDeferredPermissionRequest,
-    WebViewControlLongRunningScriptDetectedEventArgs,
-    WebViewControlNavigationCompletedEventArgs,
-    WebViewControlNavigationStartingEventArgs,
-    WebViewControlNewWindowRequestedEventArgs,
-    WebViewControlPermissionRequest,
-    WebViewControlPermissionRequestedEventArgs,
-    WebViewControlScriptNotifyEventArgs,
-    WebViewControlSettings,
-    WebViewControlUnsupportedUriSchemeIdentifiedEventArgs,
-    WebViewControlUnviewableContentIdentifiedEventArgs,
-    WebViewControlWebResourceRequestedEventArgs,
-    _IWebViewControl,
-    IWebViewControl,
-    _IWebViewControl2,
-    IWebViewControl2,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "WebViewControlPermissionState",

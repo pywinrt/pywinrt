@@ -4,43 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_email import (
-    _abi_version_,
-    _generator_version_,
-    EmailAttachment,
-    EmailConversation,
-    EmailConversationBatch,
-    EmailConversationReader,
-    EmailFolder,
-    EmailIrmInfo,
-    EmailIrmTemplate,
-    EmailItemCounts,
-    EmailMailbox,
-    EmailMailboxAction,
-    EmailMailboxAutoReply,
-    EmailMailboxAutoReplySettings,
-    EmailMailboxCapabilities,
-    EmailMailboxChange,
-    EmailMailboxChangeReader,
-    EmailMailboxChangeTracker,
-    EmailMailboxChangedDeferral,
-    EmailMailboxChangedEventArgs,
-    EmailMailboxCreateFolderResult,
-    EmailMailboxPolicies,
-    EmailMailboxSyncManager,
-    EmailManager,
-    EmailManagerForUser,
-    EmailMeetingInfo,
-    EmailMessage,
-    EmailMessageBatch,
-    EmailMessageReader,
-    EmailQueryOptions,
-    EmailQueryTextSearch,
-    EmailRecipient,
-    EmailRecipientResolutionResult,
-    EmailStore,
-    EmailStoreNotificationTriggerDetails,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "EmailAttachmentDownloadState",

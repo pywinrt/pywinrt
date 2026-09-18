@@ -2,27 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_management_update import (
-    _abi_version_,
-    _generator_version_,
-    PreviewBuildsManager,
-    PreviewBuildsState,
-    WindowsUpdate,
-    WindowsUpdateActionCompletedEventArgs,
-    WindowsUpdateActionProgress,
-    WindowsUpdateActionResult,
-    WindowsUpdateAdministrator,
-    WindowsUpdateApprovalData,
-    WindowsUpdateAttentionRequiredInfo,
-    WindowsUpdateAttentionRequiredReasonChangedEventArgs,
-    WindowsUpdateGetAdministratorResult,
-    WindowsUpdateItem,
-    WindowsUpdateManager,
-    WindowsUpdateProgressChangedEventArgs,
-    WindowsUpdateRestartRequestOptions,
-    WindowsUpdateScanCompletedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "WindowsUpdateAdministratorOptions",

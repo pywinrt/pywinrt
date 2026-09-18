@@ -20,9 +20,6 @@ import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
 from winui3.microsoft.ui.content import ContentAutomationOptions, ContentCoordinateRoundingMode, ContentLayoutDirection, ContentSizePolicy
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

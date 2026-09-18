@@ -18,9 +18,6 @@ import winrt.windows.ui as windows_ui
 from winrt.windows.applicationmodel.datatransfer import ClipboardHistoryItemsResultStatus, DataPackageOperation, SetHistoryItemAsContentStatus, ShareUITheme
 from winrt.windows.applicationmodel.datatransfer import DataProviderHandler, ShareProviderHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

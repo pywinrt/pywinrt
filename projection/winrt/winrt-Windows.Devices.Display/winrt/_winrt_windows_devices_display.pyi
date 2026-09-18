@@ -10,9 +10,6 @@ import winrt.windows.graphics as windows_graphics
 
 from winrt.windows.devices.display import DisplayMonitorConnectionKind, DisplayMonitorDescriptorKind, DisplayMonitorPhysicalConnectorKind, DisplayMonitorUsageKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

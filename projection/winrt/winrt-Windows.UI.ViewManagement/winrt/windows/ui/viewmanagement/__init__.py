@@ -4,27 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_viewmanagement import (
-    _abi_version_,
-    _generator_version_,
-    AccessibilitySettings,
-    ActivationViewSwitcher,
-    ApplicationView,
-    ApplicationViewConsolidatedEventArgs,
-    ApplicationViewScaling,
-    ApplicationViewSwitcher,
-    ApplicationViewTitleBar,
-    ApplicationViewTransferContext,
-    InputPane,
-    InputPaneVisibilityEventArgs,
-    ProjectionManager,
-    UISettings,
-    UISettingsAnimationsEnabledChangedEventArgs,
-    UISettingsAutoHideScrollBarsChangedEventArgs,
-    UISettingsMessageDurationChangedEventArgs,
-    UIViewSettings,
-    ViewModePreferences,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ApplicationViewBoundsMode",

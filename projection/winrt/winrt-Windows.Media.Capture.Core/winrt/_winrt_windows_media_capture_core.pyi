@@ -9,9 +9,6 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.media.capture as windows_media_capture
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

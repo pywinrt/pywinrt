@@ -4,42 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ai_machinelearning import (
-    _abi_version_,
-    _generator_version_,
-    ImageFeatureDescriptor,
-    ImageFeatureValue,
-    LearningModel,
-    LearningModelBinding,
-    LearningModelDevice,
-    LearningModelEvaluationResult,
-    LearningModelSession,
-    LearningModelSessionOptions,
-    MapFeatureDescriptor,
-    SequenceFeatureDescriptor,
-    TensorBoolean,
-    TensorDouble,
-    TensorFeatureDescriptor,
-    TensorFloat,
-    TensorFloat16Bit,
-    TensorInt16Bit,
-    TensorInt32Bit,
-    TensorInt64Bit,
-    TensorInt8Bit,
-    TensorString,
-    TensorUInt16Bit,
-    TensorUInt32Bit,
-    TensorUInt64Bit,
-    TensorUInt8Bit,
-    _ILearningModelFeatureDescriptor,
-    ILearningModelFeatureDescriptor,
-    _ILearningModelFeatureValue,
-    ILearningModelFeatureValue,
-    _ILearningModelOperatorProvider,
-    ILearningModelOperatorProvider,
-    _ITensor,
-    ITensor,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "LearningModelDeviceKind",

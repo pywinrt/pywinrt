@@ -16,9 +16,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.security.credentials import KeyCredentialAttestationStatus, KeyCredentialCreationOption, KeyCredentialStatus, WebAccountPictureSize, WebAccountState
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

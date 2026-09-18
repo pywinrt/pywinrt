@@ -4,36 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_enumeration import (
-    _abi_version_,
-    _generator_version_,
-    DeviceAccessChangedEventArgs,
-    DeviceAccessInformation,
-    DeviceConnectionChangeTriggerDetails,
-    DeviceDisconnectButtonClickedEventArgs,
-    DeviceInformation,
-    DeviceInformationCollection,
-    DeviceInformationCustomPairing,
-    DeviceInformationPairing,
-    DeviceInformationUpdate,
-    DevicePairingRequestedEventArgs,
-    DevicePairingResult,
-    DevicePairingSetMembersRequestedEventArgs,
-    DevicePicker,
-    DevicePickerAppearance,
-    DevicePickerFilter,
-    DeviceSelectedEventArgs,
-    DeviceThumbnail,
-    DeviceUnpairingResult,
-    DeviceWatcher,
-    DeviceWatcherEvent,
-    DeviceWatcherTriggerDetails,
-    EnclosureLocation,
-    _IDeviceEnumerationSettings,
-    IDeviceEnumerationSettings,
-    _IDevicePairingSettings,
-    IDevicePairingSettings,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DeviceAccessStatus",

@@ -5,41 +5,12 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from test_winrt._test_winrt_testcomponent import (
-    _abi_version_,
-    _generator_version_,
-    Blittable,
-    Nested,
-    NonBlittable,
-    Class,
-    Composable,
-    Derived,
-    OverloadClass,
-    Override,
-    TestRunner,
-    _IRequiredFour,
-    IRequiredFour,
-    _IRequiredOne,
-    IRequiredOne,
-    _IRequiredThree,
-    IRequiredThree,
-    _IRequiredTwo,
-    IRequiredTwo,
-    _ITests,
-    ITests,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from test_winrt._test_winrt_testcomponent import (
-        Composable_Static,
-        Derived_Static,
-        OverloadClass_Static,
-        Override_Static,
-    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
     import winrt.windows.foundation.collections as windows_foundation_collections
+
+winrt.runtime._internals.load_projection(__spec__)
 
 _dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)
 

@@ -16,9 +16,6 @@ import winrt.windows.system.remotesystems as windows_system_remotesystems
 
 from winrt.windows.perception.spatial import SpatialAnchorExportPurpose, SpatialEntityWatcherStatus, SpatialLocatability, SpatialLookDirectionRange, SpatialMovementRange, SpatialPerceptionAccessStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

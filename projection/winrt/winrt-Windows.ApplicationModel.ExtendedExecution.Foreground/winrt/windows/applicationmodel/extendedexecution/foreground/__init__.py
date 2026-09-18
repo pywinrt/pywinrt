@@ -2,13 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_extendedexecution_foreground import (
-    _abi_version_,
-    _generator_version_,
-    ExtendedExecutionForegroundRevokedEventArgs,
-    ExtendedExecutionForegroundSession,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ExtendedExecutionForegroundReason",

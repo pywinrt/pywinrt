@@ -2,45 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_perception import (
-    _abi_version_,
-    _generator_version_,
-    KnownCameraIntrinsicsProperties,
-    KnownPerceptionColorFrameSourceProperties,
-    KnownPerceptionDepthFrameSourceProperties,
-    KnownPerceptionFrameSourceProperties,
-    KnownPerceptionInfraredFrameSourceProperties,
-    KnownPerceptionVideoFrameSourceProperties,
-    KnownPerceptionVideoProfileProperties,
-    PerceptionColorFrame,
-    PerceptionColorFrameArrivedEventArgs,
-    PerceptionColorFrameReader,
-    PerceptionColorFrameSource,
-    PerceptionColorFrameSourceAddedEventArgs,
-    PerceptionColorFrameSourceRemovedEventArgs,
-    PerceptionColorFrameSourceWatcher,
-    PerceptionControlSession,
-    PerceptionDepthCorrelatedCameraIntrinsics,
-    PerceptionDepthCorrelatedCoordinateMapper,
-    PerceptionDepthFrame,
-    PerceptionDepthFrameArrivedEventArgs,
-    PerceptionDepthFrameReader,
-    PerceptionDepthFrameSource,
-    PerceptionDepthFrameSourceAddedEventArgs,
-    PerceptionDepthFrameSourceRemovedEventArgs,
-    PerceptionDepthFrameSourceWatcher,
-    PerceptionFrameSourcePropertiesChangedEventArgs,
-    PerceptionFrameSourcePropertyChangeResult,
-    PerceptionInfraredFrame,
-    PerceptionInfraredFrameArrivedEventArgs,
-    PerceptionInfraredFrameReader,
-    PerceptionInfraredFrameSource,
-    PerceptionInfraredFrameSourceAddedEventArgs,
-    PerceptionInfraredFrameSourceRemovedEventArgs,
-    PerceptionInfraredFrameSourceWatcher,
-    PerceptionVideoProfile,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PerceptionFrameSourceAccessStatus",

@@ -4,26 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_enterprisedata import (
-    _abi_version_,
-    _generator_version_,
-    BufferProtectUnprotectResult,
-    DataProtectionInfo,
-    DataProtectionManager,
-    FileProtectionInfo,
-    FileProtectionManager,
-    FileRevocationManager,
-    FileUnprotectOptions,
-    ProtectedAccessResumedEventArgs,
-    ProtectedAccessSuspendingEventArgs,
-    ProtectedContainerExportResult,
-    ProtectedContainerImportResult,
-    ProtectedContentRevokedEventArgs,
-    ProtectedFileCreateResult,
-    ProtectionPolicyAuditInfo,
-    ProtectionPolicyManager,
-    ThreadNetworkContext,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DataProtectionStatus",

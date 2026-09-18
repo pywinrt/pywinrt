@@ -24,9 +24,6 @@ import winrt.windows.ui.viewmanagement as windows_ui_viewmanagement
 from winrt.windows.system import AppDiagnosticInfoWatcherStatus, AppMemoryUsageLevel, AppResourceGroupEnergyQuotaState, AppResourceGroupExecutionState, AppResourceGroupInfoWatcherStatus, AutoUpdateTimeZoneStatus, DiagnosticAccessStatus, DispatcherQueuePriority, LaunchFileStatus, LaunchQuerySupportStatus, LaunchQuerySupportType, LaunchUriStatus, PowerState, ProcessorArchitecture, RemoteLaunchUriStatus, ShutdownKind, UserAgeConsentGroup, UserAgeConsentResult, UserAuthenticationStatus, UserPictureSize, UserType, UserWatcherStatus, UserWatcherUpdateKind, VirtualKey, VirtualKeyModifiers
 from winrt.windows.system import DispatcherQueueHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -2,23 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_bluetooth_advertisement import (
-    _abi_version_,
-    _generator_version_,
-    BluetoothLEAdvertisement,
-    BluetoothLEAdvertisementBytePattern,
-    BluetoothLEAdvertisementDataSection,
-    BluetoothLEAdvertisementDataTypes,
-    BluetoothLEAdvertisementFilter,
-    BluetoothLEAdvertisementPublisher,
-    BluetoothLEAdvertisementPublisherStatusChangedEventArgs,
-    BluetoothLEAdvertisementReceivedEventArgs,
-    BluetoothLEAdvertisementScanParameters,
-    BluetoothLEAdvertisementWatcher,
-    BluetoothLEAdvertisementWatcherStoppedEventArgs,
-    BluetoothLEManufacturerData,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BluetoothLEAdvertisementFlags",

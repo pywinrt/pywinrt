@@ -18,9 +18,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 from winrt.windows.networking.connectivity import CellularApnAuthenticationType, ConnectionProfileDeleteStatus, DataUsageGranularity, DomainAuthenticationKind, DomainConnectivityLevel, NetworkAuthenticationType, NetworkConnectivityLevel, NetworkCostType, NetworkEncryptionType, NetworkTypes, RoamingStates, TriStates, WwanDataClass, WwanNetworkIPKind, WwanNetworkRegistrationState
 from winrt.windows.networking.connectivity import NetworkStatusChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

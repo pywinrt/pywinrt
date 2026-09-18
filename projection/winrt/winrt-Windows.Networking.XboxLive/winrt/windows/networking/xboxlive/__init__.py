@@ -4,19 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_networking_xboxlive import (
-    _abi_version_,
-    _generator_version_,
-    XboxLiveDeviceAddress,
-    XboxLiveEndpointPair,
-    XboxLiveEndpointPairCreationResult,
-    XboxLiveEndpointPairStateChangedEventArgs,
-    XboxLiveEndpointPairTemplate,
-    XboxLiveInboundEndpointPairCreatedEventArgs,
-    XboxLiveQualityOfServiceMeasurement,
-    XboxLiveQualityOfServiceMetricResult,
-    XboxLiveQualityOfServicePrivatePayloadResult,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "XboxLiveEndpointPairCreationBehaviors",

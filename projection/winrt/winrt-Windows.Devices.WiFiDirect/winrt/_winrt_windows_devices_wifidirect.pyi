@@ -16,9 +16,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.devices.wifidirect import WiFiDirectAdvertisementListenStateDiscoverability, WiFiDirectAdvertisementPublisherStatus, WiFiDirectConfigurationMethod, WiFiDirectConnectionStatus, WiFiDirectDeviceSelectorType, WiFiDirectError, WiFiDirectPairingProcedure
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

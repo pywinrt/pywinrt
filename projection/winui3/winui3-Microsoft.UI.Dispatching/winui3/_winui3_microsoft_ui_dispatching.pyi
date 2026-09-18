@@ -12,9 +12,6 @@ import winrt.windows.foundation as windows_foundation
 from winui3.microsoft.ui.dispatching import DispatcherQueuePriority, DispatcherRunOptions
 from winui3.microsoft.ui.dispatching import DispatcherQueueHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

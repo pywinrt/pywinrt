@@ -11,9 +11,6 @@ import winrt.windows.foundation as windows_foundation
 from winrt.windows.ui.xaml.interop import NotifyCollectionChangedAction, TypeKind
 from winrt.windows.ui.xaml.interop import BindableVectorChangedEventHandler, NotifyCollectionChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

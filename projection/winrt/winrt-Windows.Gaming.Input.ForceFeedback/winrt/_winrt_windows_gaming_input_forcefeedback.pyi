@@ -12,9 +12,6 @@ import winrt.windows.foundation.numerics as windows_foundation_numerics
 
 from winrt.windows.gaming.input.forcefeedback import ConditionForceEffectKind, ForceFeedbackEffectAxes, ForceFeedbackEffectState, ForceFeedbackLoadEffectResult, PeriodicForceEffectKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

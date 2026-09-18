@@ -4,38 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_composition_interactions import (
-    _abi_version_,
-    _generator_version_,
-    CompositionConditionalValue,
-    CompositionInteractionSourceCollection,
-    InteractionSourceConfiguration,
-    InteractionTracker,
-    InteractionTrackerCustomAnimationStateEnteredArgs,
-    InteractionTrackerIdleStateEnteredArgs,
-    InteractionTrackerInertiaModifier,
-    InteractionTrackerInertiaMotion,
-    InteractionTrackerInertiaNaturalMotion,
-    InteractionTrackerInertiaRestingValue,
-    InteractionTrackerInertiaStateEnteredArgs,
-    InteractionTrackerInteractingStateEnteredArgs,
-    InteractionTrackerRequestIgnoredArgs,
-    InteractionTrackerValuesChangedArgs,
-    InteractionTrackerVector2InertiaModifier,
-    InteractionTrackerVector2InertiaNaturalMotion,
-    VisualInteractionSource,
-    _ICompositionInteractionSource,
-    ICompositionInteractionSource,
-    _IInteractionTrackerOwner,
-    IInteractionTrackerOwner,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_composition_interactions import (
-        InteractionTrackerInertiaModifier_Static,
-        InteractionTrackerVector2InertiaModifier_Static,
-        VisualInteractionSource_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "InteractionBindingAxisModes",

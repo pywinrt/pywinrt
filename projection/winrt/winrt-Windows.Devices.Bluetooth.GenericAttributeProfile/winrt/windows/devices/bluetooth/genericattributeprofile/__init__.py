@@ -4,47 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_bluetooth_genericattributeprofile import (
-    _abi_version_,
-    _generator_version_,
-    GattCharacteristic,
-    GattCharacteristicUuids,
-    GattCharacteristicsResult,
-    GattClientNotificationResult,
-    GattDescriptor,
-    GattDescriptorUuids,
-    GattDescriptorsResult,
-    GattDeviceService,
-    GattDeviceServicesResult,
-    GattLocalCharacteristic,
-    GattLocalCharacteristicParameters,
-    GattLocalCharacteristicResult,
-    GattLocalDescriptor,
-    GattLocalDescriptorParameters,
-    GattLocalDescriptorResult,
-    GattLocalService,
-    GattPresentationFormat,
-    GattPresentationFormatTypes,
-    GattProtocolError,
-    GattReadClientCharacteristicConfigurationDescriptorResult,
-    GattReadRequest,
-    GattReadRequestedEventArgs,
-    GattReadResult,
-    GattReliableWriteTransaction,
-    GattRequestStateChangedEventArgs,
-    GattServiceProvider,
-    GattServiceProviderAdvertisementStatusChangedEventArgs,
-    GattServiceProviderAdvertisingParameters,
-    GattServiceProviderResult,
-    GattServiceUuids,
-    GattSession,
-    GattSessionStatusChangedEventArgs,
-    GattSubscribedClient,
-    GattValueChangedEventArgs,
-    GattWriteRequest,
-    GattWriteRequestedEventArgs,
-    GattWriteResult,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "GattCharacteristicProperties",

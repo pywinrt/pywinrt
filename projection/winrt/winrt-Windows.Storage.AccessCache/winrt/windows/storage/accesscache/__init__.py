@@ -4,18 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_accesscache import (
-    _abi_version_,
-    _generator_version_,
-    AccessListEntry,
-    AccessListEntryView,
-    ItemRemovedEventArgs,
-    StorageApplicationPermissions,
-    StorageItemAccessList,
-    StorageItemMostRecentlyUsedList,
-    _IStorageItemAccessList,
-    IStorageItemAccessList,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AccessCacheOptions",

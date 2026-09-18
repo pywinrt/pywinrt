@@ -14,9 +14,6 @@ import winui3.microsoft.windows.appnotifications as microsoft_windows_appnotific
 
 from winui3.microsoft.windows.appnotifications.builder import AppNotificationAudioLooping, AppNotificationButtonStyle, AppNotificationDuration, AppNotificationImageCrop, AppNotificationScenario, AppNotificationSoundEvent
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

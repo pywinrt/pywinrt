@@ -2,18 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_core_animationmetrics import (
-    _abi_version_,
-    _generator_version_,
-    AnimationDescription,
-    OpacityAnimation,
-    PropertyAnimation,
-    ScaleAnimation,
-    TranslationAnimation,
-    _IPropertyAnimation,
-    IPropertyAnimation,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AnimationEffect",

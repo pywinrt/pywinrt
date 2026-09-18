@@ -19,9 +19,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.networking.networkoperators import DataClasses, ESimAuthenticationPreference, ESimDiscoverResultKind, ESimOperationStatus, ESimProfileClass, ESimProfileMetadataState, ESimProfileState, ESimState, ESimWatcherStatus, HotspotAuthenticationResponseCode, MobileBroadbandAccountWatcherStatus, MobileBroadbandDeviceType, MobileBroadbandModemStatus, MobileBroadbandPinFormat, MobileBroadbandPinLockState, MobileBroadbandPinType, MobileBroadbandRadioState, MobileBroadbandSlotState, MobileBroadbandUiccAppOperationStatus, NetworkDeviceStatus, NetworkOperatorDataUsageNotificationKind, NetworkOperatorEventMessageType, NetworkRegistrationState, ProfileMediaType, TetheringCapability, TetheringOperationStatus, TetheringOperationalState, TetheringWiFiAuthenticationKind, TetheringWiFiBand, TetheringWiFiPerformancePriority, UiccAccessCondition, UiccAppKind, UiccAppRecordKind, UssdResultCode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -17,9 +17,6 @@ import winui3.microsoft.ui.composition as microsoft_ui_composition
 
 from winui3.microsoft.ui.composition.systembackdrops import DesktopAcrylicKind, MicaKind, SystemBackdropState, SystemBackdropTheme
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

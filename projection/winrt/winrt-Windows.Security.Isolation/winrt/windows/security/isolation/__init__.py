@@ -7,33 +7,11 @@ import uuid as _uuid
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_isolation import (
-    _abi_version_,
-    _generator_version_,
-    IsolatedWindowsEnvironmentCreateProgress,
-    IsolatedWindowsEnvironment,
-    IsolatedWindowsEnvironmentCreateResult,
-    IsolatedWindowsEnvironmentFile,
-    IsolatedWindowsEnvironmentHost,
-    IsolatedWindowsEnvironmentLaunchFileResult,
-    IsolatedWindowsEnvironmentOptions,
-    IsolatedWindowsEnvironmentOwnerRegistration,
-    IsolatedWindowsEnvironmentOwnerRegistrationData,
-    IsolatedWindowsEnvironmentOwnerRegistrationResult,
-    IsolatedWindowsEnvironmentPostMessageResult,
-    IsolatedWindowsEnvironmentProcess,
-    IsolatedWindowsEnvironmentShareFileRequestOptions,
-    IsolatedWindowsEnvironmentShareFileResult,
-    IsolatedWindowsEnvironmentShareFolderRequestOptions,
-    IsolatedWindowsEnvironmentShareFolderResult,
-    IsolatedWindowsEnvironmentStartProcessResult,
-    IsolatedWindowsEnvironmentTelemetryParameters,
-    IsolatedWindowsEnvironmentUserInfo,
-    IsolatedWindowsHostMessenger,
-)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation.collections as windows_foundation_collections
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "IsolatedWindowsEnvironmentActivator",

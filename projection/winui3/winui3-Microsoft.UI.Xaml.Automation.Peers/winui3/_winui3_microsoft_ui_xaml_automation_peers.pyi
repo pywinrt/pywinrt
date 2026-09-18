@@ -16,9 +16,6 @@ import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_control
 
 from winui3.microsoft.ui.xaml.automation.peers import AccessibilityView, AutomationControlType, AutomationEvents, AutomationHeadingLevel, AutomationLandmarkType, AutomationLiveSetting, AutomationNavigationDirection, AutomationNotificationKind, AutomationNotificationProcessing, AutomationOrientation, AutomationStructureChangeType, PatternInterface
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

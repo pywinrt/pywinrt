@@ -3,20 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_xaml_printing import (
-    _abi_version_,
-    _generator_version_,
-    AddPagesEventArgs,
-    GetPreviewPageEventArgs,
-    PaginateEventArgs,
-    PrintDocument,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_xaml_printing import (
-        PrintDocument_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PreviewPageCountType",

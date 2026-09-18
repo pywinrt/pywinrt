@@ -4,20 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_fileproperties import (
-    _abi_version_,
-    _generator_version_,
-    BasicProperties,
-    DocumentProperties,
-    GeotagHelper,
-    ImageProperties,
-    MusicProperties,
-    StorageItemContentProperties,
-    StorageItemThumbnail,
-    VideoProperties,
-    _IStorageItemExtraProperties,
-    IStorageItemExtraProperties,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PhotoOrientation",

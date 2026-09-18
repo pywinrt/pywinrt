@@ -4,14 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_data_pdf import (
-    _abi_version_,
-    _generator_version_,
-    PdfDocument,
-    PdfPage,
-    PdfPageDimensions,
-    PdfPageRenderOptions,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PdfPageRotation",

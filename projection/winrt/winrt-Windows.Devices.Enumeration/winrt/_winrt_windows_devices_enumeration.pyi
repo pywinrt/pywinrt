@@ -20,9 +20,6 @@ import winrt.windows.ui.popups as windows_ui_popups
 
 from winrt.windows.devices.enumeration import DeviceAccessStatus, DeviceClass, DeviceInformationKind, DevicePairingAddPairingSetMemberStatus, DevicePairingKinds, DevicePairingProtectionLevel, DevicePairingResultStatus, DevicePickerDisplayStatusOptions, DeviceUnpairingResultStatus, DeviceWatcherEventKind, DeviceWatcherStatus, Panel
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,36 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_data_xml_dom import (
-    _abi_version_,
-    _generator_version_,
-    DtdEntity,
-    DtdNotation,
-    XmlAttribute,
-    XmlCDataSection,
-    XmlComment,
-    XmlDocument,
-    XmlDocumentFragment,
-    XmlDocumentType,
-    XmlDomImplementation,
-    XmlElement,
-    XmlEntityReference,
-    XmlLoadSettings,
-    XmlNamedNodeMap,
-    XmlNodeList,
-    XmlProcessingInstruction,
-    XmlText,
-    _IXmlCharacterData,
-    IXmlCharacterData,
-    _IXmlNode,
-    IXmlNode,
-    _IXmlNodeSelector,
-    IXmlNodeSelector,
-    _IXmlNodeSerializer,
-    IXmlNodeSerializer,
-    _IXmlText,
-    IXmlText,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "NodeType",

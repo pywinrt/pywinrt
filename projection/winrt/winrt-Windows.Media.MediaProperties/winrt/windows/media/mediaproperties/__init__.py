@@ -4,26 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_mediaproperties import (
-    _abi_version_,
-    _generator_version_,
-    AudioEncodingProperties,
-    Av1ProfileIds,
-    ContainerEncodingProperties,
-    H264ProfileIds,
-    HevcProfileIds,
-    ImageEncodingProperties,
-    MediaEncodingProfile,
-    MediaEncodingSubtypes,
-    MediaPropertySet,
-    MediaRatio,
-    Mpeg2ProfileIds,
-    TimedMetadataEncodingProperties,
-    VideoEncodingProperties,
-    Vp9ProfileIds,
-    _IMediaEncodingProperties,
-    IMediaEncodingProperties,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AudioEncodingQuality",

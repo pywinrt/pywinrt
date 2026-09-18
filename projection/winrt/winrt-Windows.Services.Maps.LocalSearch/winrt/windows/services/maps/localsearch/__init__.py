@@ -2,18 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_services_maps_localsearch import (
-    _abi_version_,
-    _generator_version_,
-    LocalCategories,
-    LocalLocation,
-    LocalLocationFinder,
-    LocalLocationFinderResult,
-    LocalLocationHoursOfOperationItem,
-    LocalLocationRatingInfo,
-    PlaceInfoHelper,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "LocalLocationFinderStatus",

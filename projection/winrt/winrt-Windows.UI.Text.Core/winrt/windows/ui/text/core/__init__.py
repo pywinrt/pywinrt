@@ -2,28 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_text_core import (
-    _abi_version_,
-    _generator_version_,
-    CoreTextRange,
-    CoreTextCompositionCompletedEventArgs,
-    CoreTextCompositionSegment,
-    CoreTextCompositionStartedEventArgs,
-    CoreTextEditContext,
-    CoreTextFormatUpdatingEventArgs,
-    CoreTextLayoutBounds,
-    CoreTextLayoutRequest,
-    CoreTextLayoutRequestedEventArgs,
-    CoreTextSelectionRequest,
-    CoreTextSelectionRequestedEventArgs,
-    CoreTextSelectionUpdatingEventArgs,
-    CoreTextServicesConstants,
-    CoreTextServicesManager,
-    CoreTextTextRequest,
-    CoreTextTextRequestedEventArgs,
-    CoreTextTextUpdatingEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CoreTextFormatUpdatingReason",

@@ -4,22 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_credentials import (
-    _abi_version_,
-    _generator_version_,
-    KeyCredential,
-    KeyCredentialAttestationResult,
-    KeyCredentialManager,
-    KeyCredentialOperationResult,
-    KeyCredentialRetrievalResult,
-    PasswordCredential,
-    PasswordCredentialPropertyStore,
-    PasswordVault,
-    WebAccount,
-    WebAccountProvider,
-    _IWebAccount,
-    IWebAccount,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "KeyCredentialAttestationStatus",

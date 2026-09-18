@@ -2,15 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_lights import (
-    _abi_version_,
-    _generator_version_,
-    Lamp,
-    LampArray,
-    LampAvailabilityChangedEventArgs,
-    LampInfo,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "LampArrayKind",

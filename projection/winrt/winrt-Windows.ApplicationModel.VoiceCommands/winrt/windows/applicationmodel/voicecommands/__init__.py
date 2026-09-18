@@ -4,20 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_voicecommands import (
-    _abi_version_,
-    _generator_version_,
-    VoiceCommand,
-    VoiceCommandCompletedEventArgs,
-    VoiceCommandConfirmationResult,
-    VoiceCommandContentTile,
-    VoiceCommandDefinition,
-    VoiceCommandDefinitionManager,
-    VoiceCommandDisambiguationResult,
-    VoiceCommandResponse,
-    VoiceCommandServiceConnection,
-    VoiceCommandUserMessage,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "VoiceCommandCompletionReason",

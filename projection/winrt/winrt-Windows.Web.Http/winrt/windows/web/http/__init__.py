@@ -4,31 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_web_http import (
-    _abi_version_,
-    _generator_version_,
-    HttpProgress,
-    HttpBufferContent,
-    HttpClient,
-    HttpCookie,
-    HttpCookieCollection,
-    HttpCookieManager,
-    HttpFormUrlEncodedContent,
-    HttpGetBufferResult,
-    HttpGetInputStreamResult,
-    HttpGetStringResult,
-    HttpMethod,
-    HttpMultipartContent,
-    HttpMultipartFormDataContent,
-    HttpRequestMessage,
-    HttpRequestResult,
-    HttpResponseMessage,
-    HttpStreamContent,
-    HttpStringContent,
-    HttpTransportInformation,
-    _IHttpContent,
-    IHttpContent,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "HttpCompletionOption",

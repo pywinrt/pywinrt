@@ -2,45 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_printing_workflow import (
-    _abi_version_,
-    _generator_version_,
-    PrintWorkflowBackgroundSession,
-    PrintWorkflowBackgroundSetupRequestedEventArgs,
-    PrintWorkflowConfiguration,
-    PrintWorkflowForegroundSession,
-    PrintWorkflowForegroundSetupRequestedEventArgs,
-    PrintWorkflowJobActivatedEventArgs,
-    PrintWorkflowJobBackgroundSession,
-    PrintWorkflowJobIssueDetectedEventArgs,
-    PrintWorkflowJobNotificationEventArgs,
-    PrintWorkflowJobStartingEventArgs,
-    PrintWorkflowJobTriggerDetails,
-    PrintWorkflowJobUISession,
-    PrintWorkflowObjectModelSourceFileContent,
-    PrintWorkflowObjectModelTargetPackage,
-    PrintWorkflowPdlConverter,
-    PrintWorkflowPdlDataAvailableEventArgs,
-    PrintWorkflowPdlModificationRequestedEventArgs,
-    PrintWorkflowPdlSourceContent,
-    PrintWorkflowPdlTargetStream,
-    PrintWorkflowPrinterJob,
-    PrintWorkflowSourceContent,
-    PrintWorkflowSpoolStreamContent,
-    PrintWorkflowStreamTarget,
-    PrintWorkflowSubmittedEventArgs,
-    PrintWorkflowSubmittedOperation,
-    PrintWorkflowTarget,
-    PrintWorkflowTriggerDetails,
-    PrintWorkflowUIActivatedEventArgs,
-    PrintWorkflowUILauncher,
-    PrintWorkflowVirtualPrinterDataAvailableEventArgs,
-    PrintWorkflowVirtualPrinterSession,
-    PrintWorkflowVirtualPrinterTriggerDetails,
-    PrintWorkflowVirtualPrinterUIEventArgs,
-    PrintWorkflowXpsDataAvailableEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PdlConversionHostBasedProcessingOperations",

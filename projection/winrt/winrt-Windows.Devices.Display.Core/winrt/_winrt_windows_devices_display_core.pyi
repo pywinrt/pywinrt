@@ -21,9 +21,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.devices.display.core import DisplayBitsPerChannel, DisplayDeviceCapability, DisplayManagerOptions, DisplayManagerResult, DisplayModeQueryOptions, DisplayPathScaling, DisplayPathStatus, DisplayPresentStatus, DisplayRotation, DisplayScanoutOptions, DisplaySourceStatus, DisplayStateApplyOptions, DisplayStateFunctionalizeOptions, DisplayStateOperationStatus, DisplayTargetPersistence, DisplayTaskSignalKind, DisplayWireFormatColorSpace, DisplayWireFormatEotf, DisplayWireFormatHdrMetadata, DisplayWireFormatPixelEncoding
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,33 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_globalization_numberformatting import (
-    _abi_version_,
-    _generator_version_,
-    CurrencyFormatter,
-    DecimalFormatter,
-    IncrementNumberRounder,
-    NumeralSystemTranslator,
-    PercentFormatter,
-    PermilleFormatter,
-    SignificantDigitsNumberRounder,
-    _INumberFormatter,
-    INumberFormatter,
-    _INumberFormatter2,
-    INumberFormatter2,
-    _INumberFormatterOptions,
-    INumberFormatterOptions,
-    _INumberParser,
-    INumberParser,
-    _INumberRounder,
-    INumberRounder,
-    _INumberRounderOption,
-    INumberRounderOption,
-    _ISignedZeroOption,
-    ISignedZeroOption,
-    _ISignificantDigitsOption,
-    ISignificantDigitsOption,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CurrencyFormatterMode",

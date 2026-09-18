@@ -4,31 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_appointments import (
-    _abi_version_,
-    _generator_version_,
-    Appointment,
-    AppointmentCalendar,
-    AppointmentCalendarSyncManager,
-    AppointmentConflictResult,
-    AppointmentException,
-    AppointmentInvitee,
-    AppointmentManager,
-    AppointmentManagerForUser,
-    AppointmentOrganizer,
-    AppointmentProperties,
-    AppointmentRecurrence,
-    AppointmentStore,
-    AppointmentStoreChange,
-    AppointmentStoreChangeReader,
-    AppointmentStoreChangeTracker,
-    AppointmentStoreChangedDeferral,
-    AppointmentStoreChangedEventArgs,
-    AppointmentStoreNotificationTriggerDetails,
-    FindAppointmentsOptions,
-    _IAppointmentParticipant,
-    IAppointmentParticipant,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AppointmentBusyStatus",

@@ -20,9 +20,6 @@ import winrt.windows.ui.input as windows_ui_input
 
 from winrt.windows.ui.input.inking import HandwritingLineHeight, InkDrawingAttributesKind, InkHighContrastAdjustment, InkInputProcessingMode, InkInputRightDragAction, InkManipulationMode, InkPersistenceFormat, InkPresenterPredefinedConfiguration, InkPresenterStencilKind, InkRecognitionTarget, PenHandedness, PenTipShape
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

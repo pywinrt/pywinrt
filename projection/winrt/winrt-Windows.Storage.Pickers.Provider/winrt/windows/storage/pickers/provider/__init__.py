@@ -2,20 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_pickers_provider import (
-    _abi_version_,
-    _generator_version_,
-    FileOpenPickerUI,
-    FileRemovedEventArgs,
-    FileSavePickerUI,
-    PickerClosingDeferral,
-    PickerClosingEventArgs,
-    PickerClosingOperation,
-    TargetFileRequest,
-    TargetFileRequestDeferral,
-    TargetFileRequestedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AddFileResult",

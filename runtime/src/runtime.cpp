@@ -7,6 +7,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 #include "module_state.h"
+#include "types.h"
 
 // "backport" of Python 3.12 function.
 #if PY_VERSION_HEX < 0x030C0000
@@ -194,62 +195,6 @@ PyTypeObject* py::register_python_type(
     return type_object.detach();
 }
 
-/**
- * Checks that a projection module was built against a compatible runtime ABI.
- *
- * A module that was imported has already made this check from the other side,
- * in import_winrt_runtime(), so this is here for the module that never made it:
- * the name we resolved may belong to something else entirely - another package
- * that happens to sit at winrt.windows.foundation on sys.path, a stub, a mock -
- * and we are about to reinterpret_cast the objects it hands us. Refusing with a
- * message that names the module beats reading a wrapper that was never one.
- *
- * @param module        The imported module.
- * @param module_name   The module's name, for the error message.
- * @returns @c true if the module is compatible, otherwise sets a Python error
- * and returns @c false.
- */
-static bool check_module_abi(PyObject* module, const char* module_name) noexcept
-{
-    py::pyobj_handle abi_version{};
-
-    auto found
-        = PyObject_GetOptionalAttrString(module, "_abi_version_", abi_version.put());
-
-    if (found == -1)
-    {
-        return false;
-    }
-
-    unsigned short major{};
-    unsigned short minor{};
-
-    if (found == 0 || !PyArg_ParseTuple(abi_version.get(), "HH", &major, &minor))
-    {
-        PyErr_Clear();
-        PyErr_Format(
-            PyExc_ImportError,
-            "'%s' is not a PyWinRT projection module (no usable _abi_version_)",
-            module_name);
-        return false;
-    }
-
-    if (major != py::runtime_abi_version_major || minor > py::runtime_abi_version_minor)
-    {
-        PyErr_Format(
-            PyExc_ImportError,
-            "'%s' was built for winrt-runtime ABI %d.%d, but this is %d.%d",
-            module_name,
-            major,
-            minor,
-            py::runtime_abi_version_major,
-            py::runtime_abi_version_minor);
-        return false;
-    }
-
-    return true;
-}
-
 uint64_t py::cpp::_winrt::type_registry_epoch = 0;
 
 uint64_t py::get_type_registry_epoch() noexcept
@@ -271,6 +216,32 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return it->second;
     }
 
+    // A projection package's types are built from its table rather than
+    // imported from an extension module, so the table is asked first. It is
+    // registered before a single type is built, which is what lets a namespace
+    // that two packages refer to each other through resolve while one of them
+    // is still executing its __init__.py.
+    if (auto from_table = py::interp::find_registered_type(qualified_name))
+    {
+        try
+        {
+            state->type_cache[qualified_name]
+                = reinterpret_cast<PyTypeObject*>(Py_NewRef(from_table));
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+
+        return from_table;
+    }
+
+    if (PyErr_Occurred())
+    {
+        return nullptr;
+    }
+
     auto pos = qualified_name.find_last_of('.');
     if (pos == std::string_view::npos)
     {
@@ -288,7 +259,25 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    if (!check_module_abi(module.get(), module_name.c_str()))
+    // Importing it may have registered a table, which is where a projected
+    // type comes from.
+    if (auto from_table = py::interp::find_registered_type(qualified_name))
+    {
+        try
+        {
+            state->type_cache[qualified_name]
+                = reinterpret_cast<PyTypeObject*>(Py_NewRef(from_table));
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+
+        return from_table;
+    }
+
+    if (PyErr_Occurred())
     {
         return nullptr;
     }
@@ -352,11 +341,6 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
 
     pyobj_handle module{PyImport_ImportModule(module_name.c_str())};
     if (!module)
-    {
-        return nullptr;
-    }
-
-    if (!check_module_abi(module.get(), module_name.c_str()))
     {
         return nullptr;
     }

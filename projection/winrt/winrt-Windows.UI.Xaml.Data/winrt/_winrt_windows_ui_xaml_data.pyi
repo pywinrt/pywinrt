@@ -15,9 +15,6 @@ import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 from winrt.windows.ui.xaml.data import BindingMode, RelativeSourceMode, UpdateSourceTrigger
 from winrt.windows.ui.xaml.data import CurrentChangingEventHandler, PropertyChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

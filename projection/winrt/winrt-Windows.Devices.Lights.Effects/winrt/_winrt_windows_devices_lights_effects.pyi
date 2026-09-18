@@ -16,9 +16,6 @@ import winrt.windows.ui as windows_ui
 
 from winrt.windows.devices.lights.effects import LampArrayEffectCompletionBehavior, LampArrayEffectStartMode, LampArrayRepetitionMode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

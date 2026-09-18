@@ -14,9 +14,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

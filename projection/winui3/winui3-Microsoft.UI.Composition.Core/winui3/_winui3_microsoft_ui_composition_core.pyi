@@ -9,9 +9,6 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winui3.microsoft.ui.composition as microsoft_ui_composition
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

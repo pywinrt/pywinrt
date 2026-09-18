@@ -15,9 +15,6 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 
 from test_winrt.testcomponent import Array10Handler, Array11Handler, Array12Handler, Array13Handler, Array14Handler, Array15Handler, Array16Handler, Array1Handler, Array2Handler, Array3Handler, Array4Handler, Array5Handler, Array6Handler, Array7Handler, Array8Handler, Array9Handler, Async1Handler, Async2Handler, Async3Handler, Async4Handler, Collection1Handler, Collection2Handler, Collection3Handler, Collection4Handler, Collection5Handler, Collection6Handler, Param10Handler, Param11Handler, Param12Handler, Param13Handler, Param14Handler, Param15Handler, Param1Handler, Param2Handler, Param3Handler, Param4Handler, Param5Handler, Param6Handler, Param7Handler, Param8Handler, Param9Handler, TestHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

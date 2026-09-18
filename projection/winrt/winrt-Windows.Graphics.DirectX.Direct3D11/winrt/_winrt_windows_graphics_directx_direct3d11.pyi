@@ -11,9 +11,6 @@ import winrt.windows.graphics.directx as windows_graphics_directx
 
 from winrt.windows.graphics.directx.direct3d11 import Direct3DBindings, Direct3DUsage
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

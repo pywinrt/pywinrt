@@ -4,32 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_imaging import (
-    _abi_version_,
-    _generator_version_,
-    BitmapBounds,
-    BitmapPlaneDescription,
-    BitmapSize,
-    BitmapBuffer,
-    BitmapCodecInformation,
-    BitmapDecoder,
-    BitmapEncoder,
-    BitmapFrame,
-    BitmapProperties,
-    BitmapPropertiesView,
-    BitmapPropertySet,
-    BitmapTransform,
-    BitmapTypedValue,
-    ImageStream,
-    PixelDataProvider,
-    SoftwareBitmap,
-    _IBitmapFrame,
-    IBitmapFrame,
-    _IBitmapFrameWithSoftwareBitmap,
-    IBitmapFrameWithSoftwareBitmap,
-    _IBitmapPropertiesView,
-    IBitmapPropertiesView,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BitmapAlphaMode",

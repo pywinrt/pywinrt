@@ -2,26 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_input_inking_analysis import (
-    _abi_version_,
-    _generator_version_,
-    InkAnalysisInkBullet,
-    InkAnalysisInkDrawing,
-    InkAnalysisInkWord,
-    InkAnalysisLine,
-    InkAnalysisListItem,
-    InkAnalysisNode,
-    InkAnalysisParagraph,
-    InkAnalysisResult,
-    InkAnalysisRoot,
-    InkAnalysisWritingRegion,
-    InkAnalyzer,
-    _IInkAnalysisNode,
-    IInkAnalysisNode,
-    _IInkAnalyzerFactory,
-    IInkAnalyzerFactory,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "InkAnalysisDrawingKind",

@@ -4,35 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ai_actions import (
-    _abi_version_,
-    _generator_version_,
-    ActionEntity,
-    ActionEntityDisplayInfo,
-    ActionEntityFactory,
-    ActionFeedback,
-    ActionInvocationContext,
-    ActionInvocationHelpDetails,
-    ActionRuntime,
-    ContactActionEntity,
-    DocumentActionEntity,
-    FileActionEntity,
-    NamedActionEntity,
-    PhotoActionEntity,
-    RemoteFileActionEntity,
-    StreamingTextActionEntity,
-    StreamingTextActionEntityTextChangedArgs,
-    StreamingTextActionEntityWriter,
-    TableActionEntity,
-    TextActionEntity,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ai_actions import (
-        ActionEntity_Static,
-        ActionEntityFactory_Static,
-        ActionRuntime_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ActionEntityKind",

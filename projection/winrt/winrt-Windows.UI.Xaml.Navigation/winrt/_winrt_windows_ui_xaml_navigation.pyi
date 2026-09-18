@@ -13,9 +13,6 @@ import winrt.windows.ui.xaml.media.animation as windows_ui_xaml_media_animation
 from winrt.windows.ui.xaml.navigation import NavigationCacheMode, NavigationMode
 from winrt.windows.ui.xaml.navigation import LoadCompletedEventHandler, NavigatedEventHandler, NavigatingCancelEventHandler, NavigationFailedEventHandler, NavigationStoppedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 class FrameNavigationOptions_Static(winrt._winrt.IInspectable_Static):

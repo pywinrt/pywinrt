@@ -4,20 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_system_userprofile import (
-    _abi_version_,
-    _generator_version_,
-    AdvertisingManager,
-    AdvertisingManagerForUser,
-    AssignedAccessSettings,
-    DiagnosticsSettings,
-    FirstSignInSettings,
-    GlobalizationPreferences,
-    GlobalizationPreferencesForUser,
-    LockScreen,
-    UserInformation,
-    UserProfilePersonalizationSettings,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AccountPictureKind",

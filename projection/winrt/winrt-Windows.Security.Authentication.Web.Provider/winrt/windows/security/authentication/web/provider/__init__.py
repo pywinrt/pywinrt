@@ -4,36 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_authentication_web_provider import (
-    _abi_version_,
-    _generator_version_,
-    WebAccountClientView,
-    WebAccountManager,
-    WebAccountProviderAddAccountOperation,
-    WebAccountProviderDeleteAccountOperation,
-    WebAccountProviderGetTokenSilentOperation,
-    WebAccountProviderManageAccountOperation,
-    WebAccountProviderRequestTokenOperation,
-    WebAccountProviderRetrieveCookiesOperation,
-    WebAccountProviderSignOutAccountOperation,
-    WebAccountProviderTriggerDetails,
-    WebProviderTokenRequest,
-    WebProviderTokenResponse,
-    _IWebAccountProviderBaseReportOperation,
-    IWebAccountProviderBaseReportOperation,
-    _IWebAccountProviderOperation,
-    IWebAccountProviderOperation,
-    _IWebAccountProviderSilentReportOperation,
-    IWebAccountProviderSilentReportOperation,
-    _IWebAccountProviderTokenObjects,
-    IWebAccountProviderTokenObjects,
-    _IWebAccountProviderTokenObjects2,
-    IWebAccountProviderTokenObjects2,
-    _IWebAccountProviderTokenOperation,
-    IWebAccountProviderTokenOperation,
-    _IWebAccountProviderUIReportOperation,
-    IWebAccountProviderUIReportOperation,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "WebAccountClientViewType",

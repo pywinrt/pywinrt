@@ -5,59 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_xaml_input import (
-    _abi_version_,
-    _generator_version_,
-    AccessKeyDisplayDismissedEventArgs,
-    AccessKeyDisplayRequestedEventArgs,
-    AccessKeyInvokedEventArgs,
-    AccessKeyManager,
-    CanExecuteRequestedEventArgs,
-    CharacterReceivedRoutedEventArgs,
-    ContextRequestedEventArgs,
-    DoubleTappedRoutedEventArgs,
-    ExecuteRequestedEventArgs,
-    FindNextElementOptions,
-    FocusManager,
-    FocusManagerGotFocusEventArgs,
-    FocusManagerLostFocusEventArgs,
-    FocusMovementResult,
-    GettingFocusEventArgs,
-    HoldingRoutedEventArgs,
-    InertiaExpansionBehavior,
-    InertiaRotationBehavior,
-    InertiaTranslationBehavior,
-    InputScope,
-    InputScopeName,
-    KeyRoutedEventArgs,
-    KeyboardAccelerator,
-    KeyboardAcceleratorInvokedEventArgs,
-    LosingFocusEventArgs,
-    ManipulationCompletedRoutedEventArgs,
-    ManipulationDeltaRoutedEventArgs,
-    ManipulationInertiaStartingRoutedEventArgs,
-    ManipulationPivot,
-    ManipulationStartedRoutedEventArgs,
-    ManipulationStartingRoutedEventArgs,
-    NoFocusCandidateFoundEventArgs,
-    Pointer,
-    PointerRoutedEventArgs,
-    ProcessKeyboardAcceleratorEventArgs,
-    RightTappedRoutedEventArgs,
-    StandardUICommand,
-    TappedRoutedEventArgs,
-    XamlUICommand,
-    _ICommand,
-    ICommand,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_input import (
-        KeyboardAccelerator_Static,
-        ManipulationStartedRoutedEventArgs_Static,
-        StandardUICommand_Static,
-        XamlUICommand_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "FocusInputDeviceKind",

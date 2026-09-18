@@ -21,9 +21,6 @@ import winrt.windows.ui.viewmanagement as windows_ui_viewmanagement
 
 from winrt.windows.applicationmodel.contacts import ContactAddressKind, ContactAnnotationOperations, ContactAnnotationStoreAccessType, ContactBatchStatus, ContactCardHeaderKind, ContactCardTabKind, ContactChangeType, ContactDateKind, ContactEmailKind, ContactFieldCategory, ContactFieldType, ContactListOtherAppReadAccess, ContactListOtherAppWriteAccess, ContactListSyncStatus, ContactMatchReasonKind, ContactNameOrder, ContactPhoneKind, ContactQueryDesiredFields, ContactQuerySearchFields, ContactQuerySearchScope, ContactRelationship, ContactSelectionMode, ContactStoreAccessType, PinnedContactSurface
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,20 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_security_authentication_oauth import (
-    _abi_version_,
-    _generator_version_,
-    AuthFailure,
-    AuthRequestParams,
-    AuthRequestResult,
-    AuthResponse,
-    ClientAuthentication,
-    OAuth2Manager,
-    TokenFailure,
-    TokenRequestParams,
-    TokenRequestResult,
-    TokenResponse,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CodeChallengeMethodKind",

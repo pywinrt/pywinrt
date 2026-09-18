@@ -4,49 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_notifications import (
-    _abi_version_,
-    _generator_version_,
-    AdaptiveNotificationText,
-    BadgeNotification,
-    BadgeUpdateManager,
-    BadgeUpdateManagerForUser,
-    BadgeUpdater,
-    KnownAdaptiveNotificationHints,
-    KnownAdaptiveNotificationTextStyles,
-    KnownNotificationBindings,
-    Notification,
-    NotificationBinding,
-    NotificationData,
-    NotificationVisual,
-    ScheduledTileNotification,
-    ScheduledToastNotification,
-    ScheduledToastNotificationShowingEventArgs,
-    ShownTileNotification,
-    TileFlyoutNotification,
-    TileFlyoutUpdateManager,
-    TileFlyoutUpdater,
-    TileNotification,
-    TileUpdateManager,
-    TileUpdateManagerForUser,
-    TileUpdater,
-    ToastActivatedEventArgs,
-    ToastCollection,
-    ToastCollectionManager,
-    ToastDismissedEventArgs,
-    ToastFailedEventArgs,
-    ToastNotification,
-    ToastNotificationActionTriggerDetail,
-    ToastNotificationHistory,
-    ToastNotificationHistoryChangedTriggerDetail,
-    ToastNotificationManager,
-    ToastNotificationManagerForUser,
-    ToastNotifier,
-    UserNotification,
-    UserNotificationChangedEventArgs,
-    _IAdaptiveNotificationContent,
-    IAdaptiveNotificationContent,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AdaptiveNotificationContentKind",

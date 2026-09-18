@@ -4,37 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_composition_scenes import (
-    _abi_version_,
-    _generator_version_,
-    SceneBoundingBox,
-    SceneComponent,
-    SceneComponentCollection,
-    SceneMaterial,
-    SceneMaterialInput,
-    SceneMesh,
-    SceneMeshMaterialAttributeMap,
-    SceneMeshRendererComponent,
-    SceneMetallicRoughnessMaterial,
-    SceneModelTransform,
-    SceneNode,
-    SceneNodeCollection,
-    SceneObject,
-    ScenePbrMaterial,
-    SceneRendererComponent,
-    SceneSurfaceMaterialInput,
-    SceneVisual,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_composition_scenes import (
-        SceneComponent_Static,
-        SceneMaterial_Static,
-        SceneMaterialInput_Static,
-        SceneObject_Static,
-        ScenePbrMaterial_Static,
-        SceneRendererComponent_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SceneAlphaMode",

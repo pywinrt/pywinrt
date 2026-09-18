@@ -40,9 +40,6 @@ import winui3.microsoft.windows.applicationmodel.resources as microsoft_windows_
 from winui3.microsoft.ui.xaml import ApplicationHighContrastAdjustment, ApplicationRequiresPointerMode, ApplicationTheme, AutomationTextAttributesEnum, DispatcherShutdownMode, DurationType, ElementHighContrastAdjustment, ElementSoundKind, ElementSoundMode, ElementSoundPlayerState, ElementSpatialAudioMode, ElementTheme, FlowDirection, FocusState, FocusVisualKind, FontCapitals, FontEastAsianLanguage, FontEastAsianWidths, FontFraction, FontNumeralAlignment, FontNumeralStyle, FontVariants, GridUnitType, HorizontalAlignment, LayoutCycleDebugBreakLevel, LayoutCycleTracingLevel, LineStackingStrategy, OpticalMarginAlignment, TextAlignment, TextLineBounds, TextReadingOrder, TextTrimming, TextWrapping, Vector3TransitionComponents, VerticalAlignment, Visibility, WindowActivationState
 from winui3.microsoft.ui.xaml import ApplicationInitializationCallback, BindingFailedEventHandler, CreateDefaultValueCallback, DependencyPropertyChangedCallback, DependencyPropertyChangedEventHandler, DragEventHandler, EnteredBackgroundEventHandler, ExceptionRoutedEventHandler, LeavingBackgroundEventHandler, PropertyChangedCallback, RoutedEventHandler, SizeChangedEventHandler, SuspendingEventHandler, UnhandledExceptionEventHandler, VisualStateChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

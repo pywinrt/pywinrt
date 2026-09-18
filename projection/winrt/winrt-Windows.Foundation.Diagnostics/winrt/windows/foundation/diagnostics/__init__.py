@@ -4,32 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_foundation_diagnostics import (
-    _abi_version_,
-    _generator_version_,
-    AsyncCausalityTracer,
-    ErrorDetails,
-    FileLoggingSession,
-    LogFileGeneratedEventArgs,
-    LoggingActivity,
-    LoggingChannel,
-    LoggingChannelOptions,
-    LoggingFields,
-    LoggingOptions,
-    LoggingSession,
-    RuntimeBrokerErrorSettings,
-    TracingStatusChangedEventArgs,
-    _IErrorReportingSettings,
-    IErrorReportingSettings,
-    _IFileLoggingSession,
-    IFileLoggingSession,
-    _ILoggingChannel,
-    ILoggingChannel,
-    _ILoggingSession,
-    ILoggingSession,
-    _ILoggingTarget,
-    ILoggingTarget,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CausalityRelation",

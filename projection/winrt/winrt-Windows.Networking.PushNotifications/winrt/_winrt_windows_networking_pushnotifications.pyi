@@ -16,9 +16,6 @@ import winrt.windows.ui.notifications as windows_ui_notifications
 
 from winrt.windows.networking.pushnotifications import PushNotificationType
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

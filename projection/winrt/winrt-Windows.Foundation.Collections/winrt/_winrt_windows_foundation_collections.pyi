@@ -12,9 +12,6 @@ import winrt.windows.foundation as windows_foundation
 from winrt.windows.foundation.collections import CollectionChange
 from winrt.windows.foundation.collections import MapChangedEventHandler, VectorChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 K = typing.TypeVar('K')
 T = typing.TypeVar('T')

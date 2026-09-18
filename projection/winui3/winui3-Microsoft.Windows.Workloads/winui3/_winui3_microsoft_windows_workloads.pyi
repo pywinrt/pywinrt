@@ -7,8 +7,5 @@ import winrt.system
 
 from winui3.microsoft.windows.workloads import WorkloadPriority
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 

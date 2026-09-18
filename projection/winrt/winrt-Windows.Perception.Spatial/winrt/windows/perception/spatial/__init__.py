@@ -4,36 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_perception_spatial import (
-    _abi_version_,
-    _generator_version_,
-    SpatialBoundingBox,
-    SpatialBoundingFrustum,
-    SpatialBoundingOrientedBox,
-    SpatialBoundingSphere,
-    SpatialRay,
-    SpatialAnchor,
-    SpatialAnchorExportSufficiency,
-    SpatialAnchorExporter,
-    SpatialAnchorManager,
-    SpatialAnchorRawCoordinateSystemAdjustedEventArgs,
-    SpatialAnchorStore,
-    SpatialAnchorTransferManager,
-    SpatialBoundingVolume,
-    SpatialCoordinateSystem,
-    SpatialEntity,
-    SpatialEntityAddedEventArgs,
-    SpatialEntityRemovedEventArgs,
-    SpatialEntityStore,
-    SpatialEntityUpdatedEventArgs,
-    SpatialEntityWatcher,
-    SpatialLocation,
-    SpatialLocator,
-    SpatialLocatorAttachedFrameOfReference,
-    SpatialLocatorPositionalTrackingDeactivatingEventArgs,
-    SpatialStageFrameOfReference,
-    SpatialStationaryFrameOfReference,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SpatialAnchorExportPurpose",

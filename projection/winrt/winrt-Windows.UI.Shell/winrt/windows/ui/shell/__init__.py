@@ -4,30 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_shell import (
-    _abi_version_,
-    _generator_version_,
-    AdaptiveCardBuilder,
-    FocusSession,
-    FocusSessionManager,
-    SecurityAppManager,
-    ShareWindowCommandEventArgs,
-    ShareWindowCommandSource,
-    TaskbarManager,
-    WindowTab,
-    WindowTabCloseRequestedEventArgs,
-    WindowTabCollection,
-    WindowTabGroup,
-    WindowTabIcon,
-    WindowTabManager,
-    WindowTabSwitchRequestedEventArgs,
-    WindowTabTearOutRequestedEventArgs,
-    WindowTabThumbnailRequestedEventArgs,
-    _IAdaptiveCard,
-    IAdaptiveCard,
-    _IAdaptiveCardBuilderStatics,
-    IAdaptiveCardBuilderStatics,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SecurityAppKind",

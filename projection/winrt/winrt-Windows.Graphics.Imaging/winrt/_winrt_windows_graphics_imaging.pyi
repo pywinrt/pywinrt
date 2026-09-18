@@ -17,9 +17,6 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.graphics.imaging import BitmapAlphaMode, BitmapBufferAccessMode, BitmapFlip, BitmapInterpolationMode, BitmapPixelFormat, BitmapRotation, ColorManagementMode, ExifOrientationMode, JpegSubsamplingMode, PngFilterMode, TiffCompressionMode
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

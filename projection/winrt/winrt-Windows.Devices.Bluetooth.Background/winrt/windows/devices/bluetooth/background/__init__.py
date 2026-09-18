@@ -2,19 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_bluetooth_background import (
-    _abi_version_,
-    _generator_version_,
-    BluetoothLEAdvertisementPublisherTriggerDetails,
-    BluetoothLEAdvertisementWatcherTriggerDetails,
-    GattCharacteristicNotificationTriggerDetails,
-    GattServiceProviderConnection,
-    GattServiceProviderTriggerDetails,
-    RfcommConnectionTriggerDetails,
-    RfcommInboundConnectionInformation,
-    RfcommOutboundConnectionInformation,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BluetoothEventTriggeringMode",

@@ -3,22 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_applicationsettings import (
-    _abi_version_,
-    _generator_version_,
-    AccountsSettingsPane,
-    AccountsSettingsPaneCommandsRequestedEventArgs,
-    AccountsSettingsPaneEventDeferral,
-    CredentialCommand,
-    SettingsCommand,
-    SettingsPane,
-    SettingsPaneCommandsRequest,
-    SettingsPaneCommandsRequestedEventArgs,
-    WebAccountCommand,
-    WebAccountInvokedArgs,
-    WebAccountProviderCommand,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SettingsEdgeLocation",

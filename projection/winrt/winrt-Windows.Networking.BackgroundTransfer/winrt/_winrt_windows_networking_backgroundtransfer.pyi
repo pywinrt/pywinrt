@@ -21,9 +21,6 @@ import winrt.windows.web as windows_web
 
 from winrt.windows.networking.backgroundtransfer import BackgroundTransferBehavior, BackgroundTransferCostPolicy, BackgroundTransferPriority, BackgroundTransferStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

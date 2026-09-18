@@ -4,16 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_networking_pushnotifications import (
-    _abi_version_,
-    _generator_version_,
-    PushNotificationChannel,
-    PushNotificationChannelManager,
-    PushNotificationChannelManagerForUser,
-    PushNotificationChannelsRevokedEventArgs,
-    PushNotificationReceivedEventArgs,
-    RawNotification,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PushNotificationType",

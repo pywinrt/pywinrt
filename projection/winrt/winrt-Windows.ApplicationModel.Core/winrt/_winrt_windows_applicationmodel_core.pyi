@@ -17,9 +17,6 @@ import winrt.windows.ui.core as windows_ui_core
 
 from winrt.windows.applicationmodel.core import AppRestartFailureReason
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

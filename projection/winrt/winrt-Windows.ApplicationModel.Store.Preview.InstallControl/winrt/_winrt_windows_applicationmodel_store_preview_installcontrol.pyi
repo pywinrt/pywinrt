@@ -14,9 +14,6 @@ import winrt.windows.system as windows_system
 
 from winrt.windows.applicationmodel.store.preview.installcontrol import AppInstallState, AppInstallType, AppInstallationToastNotificationMode, AutoUpdateSetting, GetEntitlementStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final
