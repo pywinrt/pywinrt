@@ -28,16 +28,43 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
+            // Ordinary type checking is the answer for a Python class that
+            // derives from this one, which is how an implementation of the
+            // interface says so.
+            py::pyobj_handle derived{PyObject_CallMethod(
+                reinterpret_cast<PyObject*>(&PyType_Type),
+                "__instancecheck__",
+                "OO",
+                cls,
+                obj)};
+            if (!derived)
+            {
+                return nullptr;
+            }
+
             if (ret == 0)
             {
-                // target class doesn't have a _guid_ attribute, so fall back to
-                // base class implementation
-                return PyObject_CallMethod(
-                    reinterpret_cast<PyObject*>(&PyType_Type),
-                    "__instancecheck__",
-                    "OO",
-                    cls,
-                    obj);
+                // The class says nothing about an interface, so there is
+                // nothing else to ask.
+                return derived.detach();
+            }
+
+            if (PyObject_IsTrue(derived.get()))
+            {
+                return derived.detach();
+            }
+
+            auto const object_type = py::get_object_type();
+            if (!object_type)
+            {
+                return nullptr;
+            }
+
+            if (!PyObject_TypeCheck(obj, object_type))
+            {
+                // The query below asks a WinRT object what it holds, which
+                // only something that holds a WinRT object can answer.
+                return derived.detach();
             }
 
             py::pyobj_handle guid_obj{PyObject_CallNoArgs(guid_method.get())};

@@ -55,7 +55,10 @@ RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 include src/async.h
+include src/callbacks.h
+include src/delegates.h
 include src/generics.h
+include src/implements.h
 include src/interp.h
 include src/members.h
 include src/module_state.h
@@ -666,10 +669,13 @@ write_project_files(
         "src/_winrt_box.cpp",
         "src/_winrt_buffer.cpp",
         "src/async.cpp",
+        "src/callbacks.cpp",
         "src/collections.cpp",
         "src/compose.cpp",
+        "src/delegates.cpp",
         "src/errors.cpp",
         "src/generics.cpp",
+        "src/implements.cpp",
         "src/interp.cpp",
         "src/members.cpp",
         "src/objects.cpp",

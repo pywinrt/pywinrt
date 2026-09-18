@@ -41,6 +41,27 @@ namespace py::interp
         return static_cast<uint32_t>(std::size(shapes::forward_shapes));
     }
 
+    /**
+     * The vtable entry a WinRT caller enters for a (shape, slot) pair, or
+     * @c nullptr with a Python error set if this runtime's census does not
+     * have it.
+     */
+    shapes::reverse_desc const* get_reverse_shape(uint32_t id) noexcept
+    {
+        if (id >= std::size(shapes::reverse_shapes))
+        {
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "this winrt-runtime was built with %zu callback shapes and the table asks for number %u; "
+                "the projection package needs a newer winrt-runtime",
+                std::size(shapes::reverse_shapes),
+                id);
+            return nullptr;
+        }
+
+        return &shapes::reverse_shapes[id];
+    }
+
     /// One past the highest reverse shape id this runtime was built with.
     uint32_t reverse_shape_count() noexcept
     {
@@ -53,14 +74,13 @@ namespace py::shapes
     /**
      * Where a call from WinRT into Python arrives.
      *
-     * Nothing implements a WinRT interface in Python yet - delegates, events and
-     * implemented interfaces are the next step - so every reverse trampoline
-     * that the census instantiated lands here and says so. The entries exist
-     * already because they are what makes a vtable, and a vtable is built
-     * before anything can be called through it.
+     * Every reverse trampoline the census instantiated lands here, whatever
+     * its shape and whatever object it was called on, so all this does is find
+     * that object and hand the call to it. What the object makes of the slot
+     * and the spilled arguments is delegates.cpp's business.
      */
-    int32_t reverse_dispatch(void* /*self*/, uint16_t /*slot*/, void* /*args*/) noexcept
+    int32_t reverse_dispatch(void* self, uint16_t slot, void* args) noexcept
     {
-        return winrt::impl::error_not_implemented;
+        return static_cast<com_head*>(self)->target->invoke(slot, args);
     }
 } // namespace py::shapes

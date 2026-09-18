@@ -16,6 +16,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "delegates.h"
 #include "generics.h"
 #include "interp.h"
 #include "objects.h"
@@ -243,13 +244,27 @@ namespace py::interp
         }
 
         auto& entry = owner.types[type];
-        if (entry.py_type)
+        if (entry.py_type || entry.reverse)
         {
             cache = definition_of(entry);
             return cache;
         }
 
         auto const record = owner.table->type(type);
+
+        if (record.get_category() == table::category::delegate)
+        {
+            // A delegate is the one record that no Python type stands for -
+            // the module binds a typing alias to its name - so the type
+            // registry cannot answer for it and the entry itself is the
+            // answer. A reference to a delegate of another namespace carries
+            // only the name, so it is the defining table that has the Invoke
+            // to call.
+            cache = record.is_external() ? find_defining_entry(record.py_name())
+                                         : ensure_entry(owner, type);
+
+            return cache;
+        }
 
         if (record.flags() & table::type_flags::concrete)
         {
@@ -534,9 +549,33 @@ namespace py::interp
             return;
         }
         case table::type_code::delegate:
-            PyErr_SetString(
-                PyExc_NotImplementedError, "delegates are not interpreted yet");
-            throw python_exception();
+        {
+            void* abi{};
+
+            if (!Py_IsNone(value))
+            {
+                auto const info = resolve(owner, arg.type, arg.info);
+                if (!info)
+                {
+                    throw python_exception();
+                }
+
+                // One that came out of WinRT goes back as itself rather than
+                // as a Python callable wrapped in a second delegate.
+                abi = Py_IS_TYPE(value, info->py_type) ? unwrap_abi(value, info->guid)
+                                                       : make_delegate(*info, value);
+
+                if (!abi)
+                {
+                    throw python_exception();
+                }
+
+                frame.add(cleanup_entry::kind::interface_, abi, nullptr);
+            }
+
+            store_widened(frame.args, arg.offset, reinterpret_cast<uintptr_t>(abi));
+            return;
+        }
         default:
             PyErr_Format(
                 PyExc_NotImplementedError,
@@ -627,6 +666,7 @@ namespace py::interp
             }
             case table::type_code::interface_:
             case table::type_code::class_:
+            case table::type_code::delegate:
             case table::type_code::generic:
             {
                 auto const abi = load<void*>(storage);
@@ -682,10 +722,6 @@ namespace py::interp
                 // original.
                 return struct_take_python(*info, storage);
             }
-            case table::type_code::delegate:
-                PyErr_SetString(
-                    PyExc_NotImplementedError, "delegates are not interpreted yet");
-                return nullptr;
             default:
                 PyErr_Format(
                     PyExc_NotImplementedError,

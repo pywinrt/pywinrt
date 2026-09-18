@@ -299,9 +299,8 @@ namespace py
         }
         else
         {
-            if constexpr (std::is_same_v<
-                              typename pinterface_python_type<T>::abstract,
-                              void>)
+            if constexpr (
+                std::is_same_v<typename pinterface_python_type<T>::abstract, void>)
             {
                 PyErr_Format(
                     PyExc_NotImplementedError,
@@ -765,8 +764,24 @@ namespace py
 
             if (result == 0)
             {
-                PyErr_SetString(PyExc_TypeError, "not a System.Object");
-                throw python_exception();
+                // Not a wrapper, but a Python class that derives from the
+                // public name of a projected interface is an implementation
+                // of it, and the runtime knows how to stand one up. Anything
+                // else fails there with a message of its own.
+                void* abi{};
+
+                if (!unwrap_object(
+                        obj,
+                        winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+                        &abi))
+                {
+                    throw python_exception();
+                }
+
+                winrt::Windows::Foundation::IInspectable value;
+                winrt::attach_abi(value, abi);
+
+                return value;
             }
 
             return reinterpret_cast<

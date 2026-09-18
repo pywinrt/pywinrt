@@ -494,6 +494,12 @@ and code 27 is an `IReference<T>`.
 | 26 | parameterized | pointer | pointer |
 | 27 | reference | pointer | pointer |
 
+An instance of a parameterized delegate - `TypedEventHandler<S, R>` - is code
+25 and not 26, because what a caller passes where one is expected is a
+callable and not an interface. Its type arguments change the signature of its
+`Invoke` and nothing else, and the record for the instance is what says what
+that signature is.
+
 A struct's layout is **computed by the reader**, never written down, because the
 width of a pointer is not the same on every architecture the table serves. The
 rule is the ordinary one: each field starts at the next offset that is a

@@ -21,7 +21,13 @@ namespace py::interp
 
     PyTypeObject* find_registered_type(std::string_view qualified_name) noexcept;
 
+    type_entry* find_registered_entry(std::string_view qualified_name) noexcept;
+
+    type_entry* find_defining_entry(std::string_view qualified_name) noexcept;
+
     type_entry* get_type_entry(PyTypeObject* type) noexcept;
+
+    type_entry* ensure_entry(projection& proj, uint32_t index) noexcept;
 
     PyTypeObject* ensure_type(projection& proj, uint32_t index) noexcept;
 
