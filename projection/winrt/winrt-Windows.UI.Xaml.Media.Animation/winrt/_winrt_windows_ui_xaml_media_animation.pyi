@@ -18,9 +18,6 @@ import winrt.windows.ui.xaml.controls.primitives as windows_ui_xaml_controls_pri
 
 from winrt.windows.ui.xaml.media.animation import ClockState, ConnectedAnimationComponent, EasingMode, FillBehavior, RepeatBehaviorType, SlideNavigationTransitionEffect
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

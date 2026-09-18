@@ -5,15 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_dispatching import (
-    _abi_version_,
-    _generator_version_,
-    DispatcherExitDeferral,
-    DispatcherQueue,
-    DispatcherQueueController,
-    DispatcherQueueShutdownStartingEventArgs,
-    DispatcherQueueTimer,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "DispatcherQueuePriority",

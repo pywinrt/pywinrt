@@ -4,20 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_lights_effects import (
-    _abi_version_,
-    _generator_version_,
-    LampArrayBitmapEffect,
-    LampArrayBitmapRequestedEventArgs,
-    LampArrayBlinkEffect,
-    LampArrayColorRampEffect,
-    LampArrayCustomEffect,
-    LampArrayEffectPlaylist,
-    LampArraySolidEffect,
-    LampArrayUpdateRequestedEventArgs,
-    _ILampArrayEffect,
-    ILampArrayEffect,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "LampArrayEffectCompletionBehavior",

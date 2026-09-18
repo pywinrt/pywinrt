@@ -14,9 +14,6 @@ import winrt.windows.ui.viewmanagement as windows_ui_viewmanagement
 
 from winrt.windows.ui.text.core import CoreTextFormatUpdatingReason, CoreTextFormatUpdatingResult, CoreTextInputPaneDisplayPolicy, CoreTextInputScope, CoreTextSelectionUpdatingResult, CoreTextTextUpdatingResult
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

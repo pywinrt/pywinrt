@@ -4,24 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_streaming_adaptive import (
-    _abi_version_,
-    _generator_version_,
-    AdaptiveMediaSource,
-    AdaptiveMediaSourceAdvancedSettings,
-    AdaptiveMediaSourceCorrelatedTimes,
-    AdaptiveMediaSourceCreationResult,
-    AdaptiveMediaSourceDiagnosticAvailableEventArgs,
-    AdaptiveMediaSourceDiagnostics,
-    AdaptiveMediaSourceDownloadBitrateChangedEventArgs,
-    AdaptiveMediaSourceDownloadCompletedEventArgs,
-    AdaptiveMediaSourceDownloadFailedEventArgs,
-    AdaptiveMediaSourceDownloadRequestedDeferral,
-    AdaptiveMediaSourceDownloadRequestedEventArgs,
-    AdaptiveMediaSourceDownloadResult,
-    AdaptiveMediaSourceDownloadStatistics,
-    AdaptiveMediaSourcePlaybackBitrateChangedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AdaptiveMediaSourceCreationStatus",

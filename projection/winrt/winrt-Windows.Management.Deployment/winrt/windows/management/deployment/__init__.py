@@ -4,33 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_management_deployment import (
-    _abi_version_,
-    _generator_version_,
-    DeploymentProgress,
-    AddPackageOptions,
-    AppInstallerManager,
-    AutoUpdateSettingsOptions,
-    CreateSharedPackageContainerOptions,
-    CreateSharedPackageContainerResult,
-    DeleteSharedPackageContainerOptions,
-    DeleteSharedPackageContainerResult,
-    DeploymentResult,
-    FindSharedPackageContainerOptions,
-    PackageAllUserProvisioningOptions,
-    PackageManager,
-    PackageManagerDebugSettings,
-    PackageUserInformation,
-    PackageVolume,
-    RegisterPackageOptions,
-    RemovePackageOptions,
-    SharedPackageContainer,
-    SharedPackageContainerManager,
-    SharedPackageContainerMember,
-    StagePackageOptions,
-    UpdateSharedPackageContainerOptions,
-    UpdateSharedPackageContainerResult,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AddPackageByAppInstallerOptions",

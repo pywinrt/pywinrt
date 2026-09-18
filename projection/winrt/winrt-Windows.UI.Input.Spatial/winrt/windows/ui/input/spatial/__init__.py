@@ -2,39 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_input_spatial import (
-    _abi_version_,
-    _generator_version_,
-    SpatialGestureRecognizer,
-    SpatialHoldCanceledEventArgs,
-    SpatialHoldCompletedEventArgs,
-    SpatialHoldStartedEventArgs,
-    SpatialInteraction,
-    SpatialInteractionController,
-    SpatialInteractionControllerProperties,
-    SpatialInteractionDetectedEventArgs,
-    SpatialInteractionManager,
-    SpatialInteractionSource,
-    SpatialInteractionSourceEventArgs,
-    SpatialInteractionSourceLocation,
-    SpatialInteractionSourceProperties,
-    SpatialInteractionSourceState,
-    SpatialManipulationCanceledEventArgs,
-    SpatialManipulationCompletedEventArgs,
-    SpatialManipulationDelta,
-    SpatialManipulationStartedEventArgs,
-    SpatialManipulationUpdatedEventArgs,
-    SpatialNavigationCanceledEventArgs,
-    SpatialNavigationCompletedEventArgs,
-    SpatialNavigationStartedEventArgs,
-    SpatialNavigationUpdatedEventArgs,
-    SpatialPointerInteractionSourcePose,
-    SpatialPointerPose,
-    SpatialRecognitionEndedEventArgs,
-    SpatialRecognitionStartedEventArgs,
-    SpatialTappedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SpatialGestureSettings",

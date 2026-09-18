@@ -15,9 +15,6 @@ import winrt.windows.ui.popups as windows_ui_popups
 
 from winrt.windows.media.dialprotocol import DialAppLaunchResult, DialAppState, DialAppStopResult, DialDeviceDisplayStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

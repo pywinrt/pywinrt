@@ -18,9 +18,6 @@ import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_control
 
 from winui3.microsoft.ui.xaml.media.animation import ClockState, ConnectedAnimationComponent, EasingMode, FillBehavior, RepeatBehaviorType, SlideNavigationTransitionEffect
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -5,36 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_datatransfer import (
-    _abi_version_,
-    _generator_version_,
-    Clipboard,
-    ClipboardContentOptions,
-    ClipboardHistoryChangedEventArgs,
-    ClipboardHistoryItem,
-    ClipboardHistoryItemsResult,
-    DataPackage,
-    DataPackagePropertySet,
-    DataPackagePropertySetView,
-    DataPackageView,
-    DataProviderDeferral,
-    DataProviderRequest,
-    DataRequest,
-    DataRequestDeferral,
-    DataRequestedEventArgs,
-    DataTransferManager,
-    HtmlFormatHelper,
-    OperationCompletedEventArgs,
-    ShareCompletedEventArgs,
-    ShareProvider,
-    ShareProviderOperation,
-    ShareProvidersRequestedEventArgs,
-    ShareTargetInfo,
-    ShareUIOptions,
-    SharedStorageAccessManager,
-    StandardDataFormats,
-    TargetApplicationChosenEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ClipboardHistoryItemsResultStatus",

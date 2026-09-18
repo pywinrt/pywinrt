@@ -4,46 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_streams import (
-    _abi_version_,
-    _generator_version_,
-    Buffer,
-    DataReader,
-    DataReaderLoadOperation,
-    DataWriter,
-    DataWriterStoreOperation,
-    FileInputStream,
-    FileOutputStream,
-    FileRandomAccessStream,
-    InMemoryRandomAccessStream,
-    InputStreamOverStream,
-    OutputStreamOverStream,
-    RandomAccessStream,
-    RandomAccessStreamOverStream,
-    RandomAccessStreamReference,
-    _IBuffer,
-    IBuffer,
-    _IContentTypeProvider,
-    IContentTypeProvider,
-    _IDataReader,
-    IDataReader,
-    _IDataWriter,
-    IDataWriter,
-    _IInputStream,
-    IInputStream,
-    _IInputStreamReference,
-    IInputStreamReference,
-    _IOutputStream,
-    IOutputStream,
-    _IPropertySetSerializer,
-    IPropertySetSerializer,
-    _IRandomAccessStream,
-    IRandomAccessStream,
-    _IRandomAccessStreamReference,
-    IRandomAccessStreamReference,
-    _IRandomAccessStreamWithContentType,
-    IRandomAccessStreamWithContentType,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ByteOrder",

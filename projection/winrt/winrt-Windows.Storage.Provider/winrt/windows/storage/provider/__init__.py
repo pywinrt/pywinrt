@@ -3,57 +3,10 @@
 import enum
 import typing
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_provider import (
-    _abi_version_,
-    _generator_version_,
-    CachedFileUpdater,
-    CachedFileUpdaterUI,
-    FileUpdateRequest,
-    FileUpdateRequestDeferral,
-    FileUpdateRequestedEventArgs,
-    StorageProviderFileTypeInfo,
-    StorageProviderGetContentInfoForPathResult,
-    StorageProviderGetPathForContentUriResult,
-    StorageProviderItemProperties,
-    StorageProviderItemProperty,
-    StorageProviderItemPropertyDefinition,
-    StorageProviderKnownFolderEntry,
-    StorageProviderKnownFolderSyncInfo,
-    StorageProviderKnownFolderSyncRequestArgs,
-    StorageProviderMoreInfoUI,
-    StorageProviderQueryResultSet,
-    StorageProviderQuotaUI,
-    StorageProviderSearchQueryOptions,
-    StorageProviderSearchResult,
-    StorageProviderStatusUI,
-    StorageProviderSyncRootInfo,
-    StorageProviderSyncRootManager,
-    _IStorageProviderItemPropertySource,
-    IStorageProviderItemPropertySource,
-    _IStorageProviderKnownFolderSyncInfoSource,
-    IStorageProviderKnownFolderSyncInfoSource,
-    _IStorageProviderKnownFolderSyncInfoSourceFactory,
-    IStorageProviderKnownFolderSyncInfoSourceFactory,
-    _IStorageProviderPropertyCapabilities,
-    IStorageProviderPropertyCapabilities,
-    _IStorageProviderQueryResult,
-    IStorageProviderQueryResult,
-    _IStorageProviderSearchHandler,
-    IStorageProviderSearchHandler,
-    _IStorageProviderSearchHandlerFactory,
-    IStorageProviderSearchHandlerFactory,
-    _IStorageProviderShareLinkSource,
-    IStorageProviderShareLinkSource,
-    _IStorageProviderStatusUISource,
-    IStorageProviderStatusUISource,
-    _IStorageProviderStatusUISourceFactory,
-    IStorageProviderStatusUISourceFactory,
-    _IStorageProviderUICommand,
-    IStorageProviderUICommand,
-    _IStorageProviderUriSource,
-    IStorageProviderUriSource,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CachedFileOptions",

@@ -4,25 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_windows_management_deployment import (
-    _abi_version_,
-    _generator_version_,
-    PackageDeploymentProgress,
-    AddPackageOptions,
-    EnsureReadyOptions,
-    PackageDeploymentManager,
-    PackageDeploymentResult,
-    PackageRuntimeManager,
-    PackageSet,
-    PackageSetItem,
-    PackageSetItemRuntimeDisposition,
-    PackageSetRuntimeDisposition,
-    PackageVolume,
-    ProvisionPackageOptions,
-    RegisterPackageOptions,
-    RemovePackageOptions,
-    StagePackageOptions,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PackageDeploymentFeature",

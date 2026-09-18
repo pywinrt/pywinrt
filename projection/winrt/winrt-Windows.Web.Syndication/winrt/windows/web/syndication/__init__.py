@@ -2,31 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_web_syndication import (
-    _abi_version_,
-    _generator_version_,
-    RetrievalProgress,
-    TransferProgress,
-    SyndicationAttribute,
-    SyndicationCategory,
-    SyndicationClient,
-    SyndicationContent,
-    SyndicationError,
-    SyndicationFeed,
-    SyndicationGenerator,
-    SyndicationItem,
-    SyndicationLink,
-    SyndicationNode,
-    SyndicationPerson,
-    SyndicationText,
-    _ISyndicationClient,
-    ISyndicationClient,
-    _ISyndicationNode,
-    ISyndicationNode,
-    _ISyndicationText,
-    ISyndicationText,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SyndicationErrorStatus",

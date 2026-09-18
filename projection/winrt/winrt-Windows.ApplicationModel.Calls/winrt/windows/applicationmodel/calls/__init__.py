@@ -4,47 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_calls import (
-    _abi_version_,
-    _generator_version_,
-    AcceptedVoipPhoneCallOptions,
-    AppInitiatedVoipPhoneCallOptions,
-    CallAnswerEventArgs,
-    CallRejectEventArgs,
-    CallStateChangeEventArgs,
-    IncomingVoipPhoneCallOptions,
-    LockScreenCallEndCallDeferral,
-    LockScreenCallEndRequestedEventArgs,
-    LockScreenCallUI,
-    MuteChangeEventArgs,
-    OutgoingVoipPhoneCallOptions,
-    PhoneCall,
-    PhoneCallBlocking,
-    PhoneCallHistoryEntry,
-    PhoneCallHistoryEntryAddress,
-    PhoneCallHistoryEntryQueryOptions,
-    PhoneCallHistoryEntryReader,
-    PhoneCallHistoryManager,
-    PhoneCallHistoryManagerForUser,
-    PhoneCallHistoryStore,
-    PhoneCallInfo,
-    PhoneCallManager,
-    PhoneCallStore,
-    PhoneCallVideoCapabilities,
-    PhoneCallVideoCapabilitiesManager,
-    PhoneCallsResult,
-    PhoneDialOptions,
-    PhoneLine,
-    PhoneLineCellularDetails,
-    PhoneLineConfiguration,
-    PhoneLineDialResult,
-    PhoneLineTransportDevice,
-    PhoneLineWatcher,
-    PhoneLineWatcherEventArgs,
-    PhoneVoicemail,
-    VoipCallCoordinator,
-    VoipPhoneCall,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CellularDtmfMode",

@@ -2,25 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui2._winui2_microsoft_ui_xaml_media import (
-    _abi_version_,
-    _generator_version_,
-    AcrylicBrush,
-    RadialGradientBrush,
-    RevealBackgroundBrush,
-    RevealBorderBrush,
-    RevealBrush,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui2._winui2_microsoft_ui_xaml_media import (
-        AcrylicBrush_Static,
-        RadialGradientBrush_Static,
-        RevealBackgroundBrush_Static,
-        RevealBorderBrush_Static,
-        RevealBrush_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AcrylicBackgroundSource",

@@ -6,9 +6,6 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.data.xml.dom as windows_data_xml_dom
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

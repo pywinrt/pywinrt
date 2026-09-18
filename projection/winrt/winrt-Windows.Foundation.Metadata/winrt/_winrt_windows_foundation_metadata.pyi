@@ -9,9 +9,6 @@ import winrt.system
 
 from winrt.windows.foundation.metadata import AttributeTargets, CompositionType, DeprecationType, FeatureStage, GCPressureAmount, MarshalingType, Platform, ThreadingModel
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

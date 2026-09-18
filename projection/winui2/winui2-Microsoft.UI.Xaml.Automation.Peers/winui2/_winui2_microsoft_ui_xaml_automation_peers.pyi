@@ -11,9 +11,6 @@ import winrt.windows.ui.xaml.automation.provider as windows_ui_xaml_automation_p
 import winui2.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls
 import winui2.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_controls_primitives
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 class AnimatedVisualPlayerAutomationPeer_Static(windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static):

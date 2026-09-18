@@ -18,9 +18,6 @@ import winrt.windows.media.devices.core as windows_media_devices_core
 
 from winrt.windows.devices.perception import PerceptionFrameSourceAccessStatus, PerceptionFrameSourcePropertyChangeStatus
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

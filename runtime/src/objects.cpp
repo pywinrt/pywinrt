@@ -1,0 +1,500 @@
+// A WinRT object as a Python object: the wrapper, and the types it has.
+//
+// A class or an interface is projected as a subclass of _winrt.Object holding
+// one ABI pointer - the interface itself, or a class's default interface - and
+// that pointer is all a wrapper is. Everything else about one of these types is
+// here: how it is created from an activation factory, how it is seen as another
+// interface, and the handful of attributes every one of them carries.
+
+#include <Python.h>
+
+#define PYWINRT_RUNTIME_MODULE
+#include <pywinrt/base.h>
+
+#include "interp.h"
+#include "members.h"
+#include "objects.h"
+#include "types.h"
+
+namespace py::interp
+{
+    // The one thing objects.h assumes, asserted where the type it is about is
+    // in scope.
+    static_assert(
+        abi_offset
+        == offsetof(winrt_wrapper<winrt::Windows::Foundation::IInspectable>, obj));
+
+    /**
+     * Wraps an ABI pointer that the caller owns in @p type, which must be a
+     * wrapper type built from a table. Ownership moves to the wrapper.
+     */
+    PyObject* wrap_abi(PyTypeObject* type, void* abi) noexcept
+    {
+        if (!abi)
+        {
+            Py_RETURN_NONE;
+        }
+
+        auto const self = type->tp_alloc(type, 0);
+        if (!self)
+        {
+            static_cast<::IUnknown*>(abi)->Release();
+            return nullptr;
+        }
+
+        abi_of(self) = abi;
+
+        return self;
+    }
+
+    /**
+     * The ABI pointer an @c _winrt.Object holds, queried for @p iid.
+     *
+     * @param iid The interface to query for, or @c nullptr for IInspectable.
+     * @returns A pointer the caller owns a reference to, or @c nullptr when
+     * @p obj is None.
+     * @throws python_exception if @p obj is not a wrapped WinRT object or does
+     * not implement @p iid.
+     */
+    void* unwrap_abi(PyObject* obj, void const* iid)
+    {
+        throw_if_pyobj_null(obj);
+
+        if (Py_IsNone(obj))
+        {
+            return nullptr;
+        }
+
+        auto const object_type = get_object_type();
+        if (!object_type)
+        {
+            throw python_exception();
+        }
+
+        if (!PyObject_TypeCheck(obj, object_type))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "expected a WinRT object, not '%s'",
+                Py_TYPE(obj)->tp_name);
+            throw python_exception();
+        }
+
+        auto const abi = abi_of(obj);
+        if (!abi)
+        {
+            PyErr_SetString(PyExc_RuntimeError, "the object holds nothing");
+            throw python_exception();
+        }
+
+        void* result{};
+        auto const hr = static_cast<::IUnknown*>(abi)->QueryInterface(
+            iid ? *static_cast<winrt::guid const*>(iid)
+                : winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+            &result);
+        if (hr != 0)
+        {
+            winrt::check_hresult(hr);
+        }
+
+        return result;
+    }
+
+    /**
+     * _assign_array_(): says what a winrt.system.Array holds. Every projected
+     * type carries it, a struct as much as a class, because an array of any of
+     * them can be made. Nothing interprets an array yet, so for now it says so,
+     * and it moves to the file that does when there is one.
+     */
+    PyObject* type_assign_array(PyObject* /*cls*/, PyObject* /*arg*/) noexcept
+    {
+        PyErr_SetString(PyExc_NotImplementedError, "arrays are not interpreted yet");
+        return nullptr;
+    }
+
+    namespace
+    {
+        /**
+         * The Python arguments of a call, as a fastcall array.
+         */
+        PyObject* const* tuple_items(PyObject* args) noexcept
+        {
+            return PyTuple_GET_SIZE(args) == 0 ? nullptr : &PyTuple_GET_ITEM(args, 0);
+        }
+
+        PyObject* class_new(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+        {
+            if (kwds && PyDict_GET_SIZE(kwds) != 0)
+            {
+                set_invalid_kwd_args_error();
+                return nullptr;
+            }
+
+            auto const info = get_type_entry(type);
+            if (!info || !info->constructor)
+            {
+                set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
+                return nullptr;
+            }
+
+            if (type != info->py_type)
+            {
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "'%s' cannot be subclassed in Python yet",
+                    info->py_type->tp_name);
+                return nullptr;
+            }
+
+            auto const overload
+                = select_overload(*info->constructor, PyTuple_GET_SIZE(args));
+
+            if (!overload)
+            {
+                return nullptr;
+            }
+
+            return call_member(
+                *info->constructor,
+                *overload,
+                nullptr,
+                tuple_items(args),
+                PyTuple_GET_SIZE(args));
+        }
+
+        /**
+         * _from(): the object seen as this type, which is what as_() calls.
+         */
+        PyObject* type_from(PyObject* cls, PyObject* arg) noexcept
+        {
+            auto const info = get_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            if (!info || !info->guid)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' is not an interface a WinRT object can be seen as",
+                    reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+                return nullptr;
+            }
+
+            try
+            {
+                return wrap_abi(info->py_type, unwrap_abi(arg, info->guid));
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+        }
+
+        PyObject* type_guid(PyObject* cls, PyObject* /*unused*/) noexcept
+        {
+            auto const info = get_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            if (!info || !info->guid)
+            {
+                PyErr_Format(
+                    PyExc_AttributeError,
+                    "'%s' has no IID",
+                    reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+                return nullptr;
+            }
+
+            return convert_guid(*static_cast<winrt::guid const*>(info->guid));
+        }
+
+        PyObject* type_assign_array(PyObject* /*cls*/, PyObject* /*arg*/) noexcept
+        {
+            PyErr_SetString(
+                PyExc_NotImplementedError, "arrays are not interpreted yet");
+            return nullptr;
+        }
+
+        PyObject* type_make(PyObject* /*cls*/, PyObject* /*args*/) noexcept
+        {
+            PyErr_SetString(
+                PyExc_NotImplementedError,
+                "implementing a WinRT interface in Python is not interpreted yet");
+            return nullptr;
+        }
+
+        PyMethodDef class_methods[]
+            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+               {}};
+
+        PyMethodDef implements_methods[]
+            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+               {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
+               {"_make_", type_make, METH_VARARGS | METH_CLASS, nullptr},
+               {}};
+
+        // A parameterized interface is only ever named with its type arguments
+        // - IAsyncOperation[int] - so both the type the projection binds it to
+        // and the one a Python implementation would derive from have to be
+        // subscriptable. PEP 585 says what that means.
+        PyMethodDef generic_wrapper_methods[]
+            = {{"__class_getitem__",
+                Py_GenericAlias,
+                METH_O | METH_CLASS,
+                PyDoc_STR("See PEP 585")},
+               {}};
+
+        PyMethodDef generic_implements_methods[]
+            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+               {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
+               {"_make_", type_make, METH_VARARGS | METH_CLASS, nullptr},
+               {"__class_getitem__",
+                Py_GenericAlias,
+                METH_O | METH_CLASS,
+                PyDoc_STR("See PEP 585")},
+               {}};
+    } // namespace
+
+    /**
+     * Creates the Python type of an interface, and the abstract type its public
+     * name is bound to.
+     */
+    bool make_interface_type(
+        projection& proj, type_entry& entry, table::type_view const& record)
+    {
+        auto const generic = (record.flags() & table::type_flags::parameterized) != 0;
+
+        // The IID of a parameterized interface is not an IID at all: it is
+        // the seed a concrete instance's IID is hashed from, so it must not
+        // be handed to QueryInterface.
+        if (!generic)
+        {
+            entry.guid = record.guid();
+        }
+
+        type_members collected;
+
+        if (!collect_members(proj, entry, record, collected))
+        {
+            return false;
+        }
+
+        auto const object_type = get_object_type();
+        if (!object_type)
+        {
+            return false;
+        }
+
+        pyobj_handle bases{PyTuple_Pack(1, object_type)};
+        if (!bases)
+        {
+            return false;
+        }
+
+        PyType_Slot slots[] = {
+            {Py_tp_methods, reinterpret_cast<void*>(generic_wrapper_methods)},
+            {Py_tp_getset,
+             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))},
+            {}};
+
+        PyType_Spec spec{
+            entry.tp_name.c_str(),
+            static_cast<int>(object_basicsize),
+            0,
+            Py_TPFLAGS_DEFAULT,
+            generic ? slots : slots + 1};
+
+        pytype_handle type{
+            register_python_type(proj.module, &spec, bases.get(), nullptr)};
+        if (!type)
+        {
+            return false;
+        }
+
+        entry.py_type = type.detach();
+
+        if (!remember(entry, entry.py_type))
+        {
+            return false;
+        }
+
+        // The public name of an interface is the abstract type a Python
+        // implementation of it derives from, which also carries the IID
+        // that isinstance() asks for.
+        auto const implements_name
+            = keep(proj, proj.module_name + "." + std::string{record.name()});
+
+        PyType_Slot implements_slots[]
+            = {{Py_tp_methods,
+                reinterpret_cast<void*>(
+                    generic ? generic_implements_methods : implements_methods)},
+               {}};
+
+        PyType_Spec implements_spec{
+            implements_name,
+            0,
+            0,
+            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+            implements_slots};
+
+        pytype_handle implements{register_python_type(
+            proj.module, &implements_spec, nullptr, get_inspectable_meta_type())};
+        if (!implements)
+        {
+            return false;
+        }
+
+        entry.implements = implements.detach();
+
+        if (!remember(entry, entry.implements))
+        {
+            return false;
+        }
+
+        return bind_methods(collected, entry.py_type, nullptr);
+    }
+
+    /**
+     * Creates the Python type of a class, with the metaclass its statics sit on
+     * when it has any.
+     */
+    bool make_class_type(
+        projection& proj, type_entry& entry, table::type_view const& record)
+    {
+        if (auto const default_interface = record.default_interface();
+            default_interface != table::no_ref)
+        {
+            entry.guid = proj.table->type(default_interface).guid();
+        }
+
+        entry.class_name = winrt::to_hstring(qualified(record));
+
+        PyTypeObject* base_type{};
+
+        if (auto const base = record.base_type(); base != table::no_ref)
+        {
+            base_type = ensure_referenced_type(proj, base);
+            if (!base_type)
+            {
+                return false;
+            }
+        }
+
+        type_members collected;
+
+        if (!collect_members(proj, entry, record, collected))
+        {
+            return false;
+        }
+
+        // A class's statics live on a metaclass of its own, which has to
+        // derive from the metaclass of its base for Python to accept the
+        // pair. A class with no statics simply reuses one.
+        auto* metaclass = base_type ? Py_TYPE(base_type) : get_inspectable_meta_type();
+        if (!metaclass)
+        {
+            return false;
+        }
+
+        pytype_handle statics{};
+
+        if (!collected.static_getsets.empty()
+            || std::any_of(
+                collected.methods.begin(),
+                collected.methods.end(),
+                [](auto const& entry)
+                {
+                    return entry.second;
+                }))
+        {
+            auto const statics_name = keep(proj, entry.tp_name + "_Static");
+
+            PyType_Slot statics_slots[] = {
+                {Py_tp_getset,
+                 reinterpret_cast<void*>(keep_getsets(proj, collected.static_getsets))},
+                {}};
+
+            PyType_Spec statics_spec{
+                statics_name,
+                static_cast<int>(PyType_Type.tp_basicsize),
+                static_cast<int>(PyType_Type.tp_itemsize),
+                Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+                statics_slots};
+
+            pyobj_handle statics_bases{
+                PyTuple_Pack(1, reinterpret_cast<PyObject*>(metaclass))};
+            if (!statics_bases)
+            {
+                return false;
+            }
+
+            statics.attach(
+                reinterpret_cast<PyTypeObject*>(
+                    PyType_FromSpecWithBases(&statics_spec, statics_bases.get())));
+
+            if (!statics)
+            {
+                return false;
+            }
+
+            metaclass = statics.get();
+        }
+
+        auto const object_type = get_object_type();
+        if (!object_type)
+        {
+            return false;
+        }
+
+        pyobj_handle bases{PyTuple_Pack(
+            1,
+            base_type ? reinterpret_cast<PyObject*>(base_type)
+                      : reinterpret_cast<PyObject*>(object_type))};
+        if (!bases)
+        {
+            return false;
+        }
+
+        auto const composable = (record.flags() & table::type_flags::composable) != 0;
+        auto const is_static = (record.flags() & table::type_flags::static_class) != 0;
+
+        // _from() and _assign_array_() say what to do with an instance,
+        // so a static class, which has none, does not get them. The slot
+        // is first so that it can be skipped by starting one along.
+        PyType_Slot slots[] = {
+            {Py_tp_methods, reinterpret_cast<void*>(class_methods)},
+            {Py_tp_new, reinterpret_cast<void*>(class_new)},
+            {Py_tp_getset,
+             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))},
+            {}};
+
+        // A static class has no instances at all, and a composable one has
+        // to be derivable because the projection derives from it.
+        PyType_Spec spec{
+            entry.tp_name.c_str(),
+            is_static ? 0 : static_cast<int>(object_basicsize),
+            0,
+            Py_TPFLAGS_DEFAULT | (composable ? Py_TPFLAGS_BASETYPE : 0),
+            entry.guid ? slots : slots + 1};
+
+        pytype_handle type{register_python_type(
+            proj.module, &spec, is_static ? nullptr : bases.get(), metaclass)};
+        if (!type)
+        {
+            return false;
+        }
+
+        entry.py_type = type.detach();
+        entry.statics = statics.detach();
+
+        if (!remember(entry, entry.py_type))
+        {
+            return false;
+        }
+
+        if (entry.statics && !remember(entry, entry.statics))
+        {
+            return false;
+        }
+
+        return bind_methods(collected, entry.py_type, metaclass);
+    }
+} // namespace py::interp

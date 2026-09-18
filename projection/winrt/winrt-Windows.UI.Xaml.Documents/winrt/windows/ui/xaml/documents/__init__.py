@@ -4,48 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_xaml_documents import (
-    _abi_version_,
-    _generator_version_,
-    TextRange,
-    Block,
-    BlockCollection,
-    Bold,
-    ContactContentLinkProvider,
-    ContentLink,
-    ContentLinkInvokedEventArgs,
-    ContentLinkProvider,
-    ContentLinkProviderCollection,
-    Glyphs,
-    Hyperlink,
-    HyperlinkClickEventArgs,
-    Inline,
-    InlineCollection,
-    InlineUIContainer,
-    Italic,
-    LineBreak,
-    Paragraph,
-    PlaceContentLinkProvider,
-    Run,
-    Span,
-    TextElement,
-    TextHighlighter,
-    TextHighlighterBase,
-    TextPointer,
-    Typography,
-    Underline,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_xaml_documents import (
-        Block_Static,
-        ContentLinkProvider_Static,
-        Inline_Static,
-        Span_Static,
-        TextElement_Static,
-        TextHighlighter_Static,
-        TextHighlighterBase_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "LogicalDirection",

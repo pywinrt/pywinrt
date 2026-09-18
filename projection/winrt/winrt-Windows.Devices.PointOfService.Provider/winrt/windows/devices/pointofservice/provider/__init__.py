@@ -4,32 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_pointofservice_provider import (
-    _abi_version_,
-    _generator_version_,
-    BarcodeScannerDisableScannerRequest,
-    BarcodeScannerDisableScannerRequestEventArgs,
-    BarcodeScannerEnableScannerRequest,
-    BarcodeScannerEnableScannerRequestEventArgs,
-    BarcodeScannerFrameReader,
-    BarcodeScannerFrameReaderFrameArrivedEventArgs,
-    BarcodeScannerGetSymbologyAttributesRequest,
-    BarcodeScannerGetSymbologyAttributesRequestEventArgs,
-    BarcodeScannerHideVideoPreviewRequest,
-    BarcodeScannerHideVideoPreviewRequestEventArgs,
-    BarcodeScannerProviderConnection,
-    BarcodeScannerProviderTriggerDetails,
-    BarcodeScannerSetActiveSymbologiesRequest,
-    BarcodeScannerSetActiveSymbologiesRequestEventArgs,
-    BarcodeScannerSetSymbologyAttributesRequest,
-    BarcodeScannerSetSymbologyAttributesRequestEventArgs,
-    BarcodeScannerStartSoftwareTriggerRequest,
-    BarcodeScannerStartSoftwareTriggerRequestEventArgs,
-    BarcodeScannerStopSoftwareTriggerRequest,
-    BarcodeScannerStopSoftwareTriggerRequestEventArgs,
-    BarcodeScannerVideoFrame,
-    BarcodeSymbologyAttributesBuilder,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BarcodeScannerTriggerState",

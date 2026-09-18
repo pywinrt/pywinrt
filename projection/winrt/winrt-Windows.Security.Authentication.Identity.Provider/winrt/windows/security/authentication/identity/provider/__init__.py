@@ -4,17 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_security_authentication_identity_provider import (
-    _abi_version_,
-    _generator_version_,
-    SecondaryAuthenticationFactorAuthentication,
-    SecondaryAuthenticationFactorAuthenticationResult,
-    SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs,
-    SecondaryAuthenticationFactorAuthenticationStageInfo,
-    SecondaryAuthenticationFactorInfo,
-    SecondaryAuthenticationFactorRegistration,
-    SecondaryAuthenticationFactorRegistrationResult,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "SecondaryAuthenticationFactorAuthenticationMessage",

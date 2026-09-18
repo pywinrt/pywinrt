@@ -2,27 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_playto import (
-    _abi_version_,
-    _generator_version_,
-    CurrentTimeChangeRequestedEventArgs,
-    MuteChangeRequestedEventArgs,
-    PlayToConnection,
-    PlayToConnectionErrorEventArgs,
-    PlayToConnectionStateChangedEventArgs,
-    PlayToConnectionTransferredEventArgs,
-    PlayToManager,
-    PlayToReceiver,
-    PlayToSource,
-    PlayToSourceDeferral,
-    PlayToSourceRequest,
-    PlayToSourceRequestedEventArgs,
-    PlayToSourceSelectedEventArgs,
-    PlaybackRateChangeRequestedEventArgs,
-    SourceChangeRequestedEventArgs,
-    VolumeChangeRequestedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PlayToConnectionError",

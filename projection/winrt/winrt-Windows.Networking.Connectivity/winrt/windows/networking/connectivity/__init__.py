@@ -5,36 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_networking_connectivity import (
-    _abi_version_,
-    _generator_version_,
-    NetworkUsageStates,
-    AttributedNetworkUsage,
-    CellularApnContext,
-    ConnectionCost,
-    ConnectionProfile,
-    ConnectionProfileFilter,
-    ConnectionSession,
-    ConnectivityInterval,
-    ConnectivityManager,
-    DataPlanStatus,
-    DataPlanUsage,
-    DataUsage,
-    IPInformation,
-    LanIdentifier,
-    LanIdentifierData,
-    NetworkAdapter,
-    NetworkInformation,
-    NetworkItem,
-    NetworkSecuritySettings,
-    NetworkStateChangeEventDetails,
-    NetworkUsage,
-    ProviderNetworkUsage,
-    ProxyConfiguration,
-    RoutePolicy,
-    WlanConnectionProfileDetails,
-    WwanConnectionProfileDetails,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CellularApnAuthenticationType",

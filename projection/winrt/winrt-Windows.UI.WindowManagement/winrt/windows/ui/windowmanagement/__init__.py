@@ -4,34 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_ui_windowmanagement import (
-    _abi_version_,
-    _generator_version_,
-    AppWindow,
-    AppWindowChangedEventArgs,
-    AppWindowCloseRequestedEventArgs,
-    AppWindowClosedEventArgs,
-    AppWindowFrame,
-    AppWindowPlacement,
-    AppWindowPresentationConfiguration,
-    AppWindowPresenter,
-    AppWindowTitleBar,
-    AppWindowTitleBarOcclusion,
-    CompactOverlayPresentationConfiguration,
-    DefaultPresentationConfiguration,
-    DisplayRegion,
-    FullScreenPresentationConfiguration,
-    WindowServices,
-    WindowingEnvironment,
-    WindowingEnvironmentAddedEventArgs,
-    WindowingEnvironmentChangedEventArgs,
-    WindowingEnvironmentRemovedEventArgs,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winrt._winrt_windows_ui_windowmanagement import (
-        AppWindowPresentationConfiguration_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AppWindowClosedReason",

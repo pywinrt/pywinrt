@@ -5,37 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_foundation_collections import (
-    _abi_version_,
-    _generator_version_,
-    PropertySet,
-    StringMap,
-    ValueSet,
-    _IIterable,
-    IIterable,
-    _IIterator,
-    IIterator,
-    _IKeyValuePair,
-    IKeyValuePair,
-    _IMapChangedEventArgs,
-    IMapChangedEventArgs,
-    _IMapView,
-    IMapView,
-    _IMap,
-    IMap,
-    _IObservableMap,
-    IObservableMap,
-    _IObservableVector,
-    IObservableVector,
-    _IPropertySet,
-    IPropertySet,
-    _IVectorChangedEventArgs,
-    IVectorChangedEventArgs,
-    _IVectorView,
-    IVectorView,
-    _IVector,
-    IVector,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CollectionChange",

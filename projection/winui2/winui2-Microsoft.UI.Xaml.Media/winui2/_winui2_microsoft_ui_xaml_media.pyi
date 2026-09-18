@@ -15,9 +15,6 @@ import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 
 from winui2.microsoft.ui.xaml.media import AcrylicBackgroundSource, RevealBrushState
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 class AcrylicBrush_Static(windows_ui_xaml_media.XamlCompositionBrushBase_Static):

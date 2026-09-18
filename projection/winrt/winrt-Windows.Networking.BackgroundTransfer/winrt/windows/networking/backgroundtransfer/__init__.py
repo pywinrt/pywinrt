@@ -4,34 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_networking_backgroundtransfer import (
-    _abi_version_,
-    _generator_version_,
-    BackgroundDownloadProgress,
-    BackgroundTransferFileRange,
-    BackgroundUploadProgress,
-    BackgroundDownloader,
-    BackgroundTransferCompletionGroup,
-    BackgroundTransferCompletionGroupTriggerDetails,
-    BackgroundTransferContentPart,
-    BackgroundTransferError,
-    BackgroundTransferGroup,
-    BackgroundTransferRangesDownloadedEventArgs,
-    BackgroundUploader,
-    ContentPrefetcher,
-    DownloadOperation,
-    ResponseInformation,
-    UnconstrainedTransferRequestResult,
-    UploadOperation,
-    _IBackgroundTransferBase,
-    IBackgroundTransferBase,
-    _IBackgroundTransferContentPartFactory,
-    IBackgroundTransferContentPartFactory,
-    _IBackgroundTransferOperation,
-    IBackgroundTransferOperation,
-    _IBackgroundTransferOperationPriority,
-    IBackgroundTransferOperationPriority,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BackgroundTransferBehavior",

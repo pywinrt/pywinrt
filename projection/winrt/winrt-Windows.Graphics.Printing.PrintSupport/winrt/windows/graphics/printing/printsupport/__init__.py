@@ -2,25 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_graphics_printing_printsupport import (
-    _abi_version_,
-    _generator_version_,
-    PrintSupportCommunicationErrorDetectedEventArgs,
-    PrintSupportExtensionSession,
-    PrintSupportExtensionTriggerDetails,
-    PrintSupportIppCommunicationConfiguration,
-    PrintSupportIppCommunicationTimeouts,
-    PrintSupportMxdcImageQualityConfiguration,
-    PrintSupportPrintDeviceCapabilitiesChangedEventArgs,
-    PrintSupportPrintDeviceCapabilitiesUpdatePolicy,
-    PrintSupportPrintTicketElement,
-    PrintSupportPrintTicketValidationRequestedEventArgs,
-    PrintSupportPrinterSelectedEventArgs,
-    PrintSupportSessionInfo,
-    PrintSupportSettingsActivatedEventArgs,
-    PrintSupportSettingsUISession,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "IppCommunicationErrorKind",

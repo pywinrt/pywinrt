@@ -4,25 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_bluetooth import (
-    _abi_version_,
-    _generator_version_,
-    BluetoothAdapter,
-    BluetoothClassOfDevice,
-    BluetoothDevice,
-    BluetoothDeviceId,
-    BluetoothLEAppearance,
-    BluetoothLEAppearanceCategories,
-    BluetoothLEAppearanceSubcategories,
-    BluetoothLEConnectionParameters,
-    BluetoothLEConnectionPhy,
-    BluetoothLEConnectionPhyInfo,
-    BluetoothLEDevice,
-    BluetoothLEPreferredConnectionParameters,
-    BluetoothLEPreferredConnectionParametersRequest,
-    BluetoothSignalStrengthFilter,
-    BluetoothUuidHelper,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BluetoothAddressType",

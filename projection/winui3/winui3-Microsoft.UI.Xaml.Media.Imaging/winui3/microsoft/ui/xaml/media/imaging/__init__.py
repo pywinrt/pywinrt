@@ -5,30 +5,8 @@ import typing
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_xaml_media_imaging import (
-    _abi_version_,
-    _generator_version_,
-    BitmapImage,
-    BitmapSource,
-    DownloadProgressEventArgs,
-    RenderTargetBitmap,
-    SoftwareBitmapSource,
-    SurfaceImageSource,
-    SvgImageSource,
-    SvgImageSourceFailedEventArgs,
-    SvgImageSourceOpenedEventArgs,
-    VirtualSurfaceImageSource,
-    WriteableBitmap,
-    XamlRenderingBackgroundTask,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_xaml_media_imaging import (
-        BitmapSource_Static,
-        SurfaceImageSource_Static,
-        SvgImageSource_Static,
-        XamlRenderingBackgroundTask_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "BitmapCreateOptions",

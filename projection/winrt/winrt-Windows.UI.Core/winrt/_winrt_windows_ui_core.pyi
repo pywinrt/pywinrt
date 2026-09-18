@@ -20,9 +20,6 @@ import winrt.windows.ui.popups as windows_ui_popups
 from winrt.windows.ui.core import AppViewBackButtonVisibility, CoreAcceleratorKeyEventType, CoreCursorType, CoreDispatcherPriority, CoreIndependentInputFilters, CoreInputDeviceTypes, CoreProcessEventsOption, CoreProximityEvaluationScore, CoreVirtualKeyStates, CoreWindowActivationMode, CoreWindowActivationState, CoreWindowFlowDirection
 from winrt.windows.ui.core import DispatchedHandler, IdleDispatchedHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

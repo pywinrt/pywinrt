@@ -17,9 +17,6 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 
 from winrt.windows.ui.viewmanagement import ApplicationViewBoundsMode, ApplicationViewMode, ApplicationViewOrientation, ApplicationViewState, ApplicationViewSwitchingOptions, ApplicationViewWindowingMode, FullScreenSystemOverlayMode, HandPreference, ScreenCaptureDisabledBehavior, UIColorType, UIElementType, UserInteractionMode, ViewSizePreference
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

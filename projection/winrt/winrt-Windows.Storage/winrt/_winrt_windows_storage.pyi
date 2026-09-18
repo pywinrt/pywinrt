@@ -21,9 +21,6 @@ import winrt.windows.system as windows_system
 from winrt.windows.storage import ApplicationDataCreateDisposition, ApplicationDataLocality, CreationCollisionOption, FileAccessMode, FileAttributes, KnownFolderId, KnownFoldersAccessStatus, KnownLibraryId, NameCollisionOption, StorageDeleteOption, StorageItemTypes, StorageLibraryChangeType, StorageOpenOptions, StreamedFileFailureMode
 from winrt.windows.storage import ApplicationDataSetVersionHandler, StreamedFileDataRequestedHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

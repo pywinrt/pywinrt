@@ -21,9 +21,6 @@ import winrt.windows.ui.xaml.controls as windows_ui_xaml_controls
 from winrt.windows.ui.xaml.input import FocusInputDeviceKind, FocusNavigationDirection, InputScopeNameValue, KeyTipPlacementMode, KeyboardAcceleratorPlacementMode, KeyboardNavigationMode, ManipulationModes, StandardUICommandKind, XYFocusKeyboardNavigationMode, XYFocusNavigationStrategy, XYFocusNavigationStrategyOverride
 from winrt.windows.ui.xaml.input import DoubleTappedEventHandler, HoldingEventHandler, KeyEventHandler, ManipulationCompletedEventHandler, ManipulationDeltaEventHandler, ManipulationInertiaStartingEventHandler, ManipulationStartedEventHandler, ManipulationStartingEventHandler, PointerEventHandler, RightTappedEventHandler, TappedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

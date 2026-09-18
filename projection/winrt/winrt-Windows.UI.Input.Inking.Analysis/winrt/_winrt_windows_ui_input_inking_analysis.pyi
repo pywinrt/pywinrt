@@ -13,9 +13,6 @@ import winrt.windows.ui.input.inking as windows_ui_input_inking
 
 from winrt.windows.ui.input.inking.analysis import InkAnalysisDrawingKind, InkAnalysisNodeKind, InkAnalysisStatus, InkAnalysisStrokeKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,28 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_miracast import (
-    _abi_version_,
-    _generator_version_,
-    MiracastReceiver,
-    MiracastReceiverApplySettingsResult,
-    MiracastReceiverConnection,
-    MiracastReceiverConnectionCreatedEventArgs,
-    MiracastReceiverCursorImageChannel,
-    MiracastReceiverCursorImageChannelSettings,
-    MiracastReceiverDisconnectedEventArgs,
-    MiracastReceiverGameControllerDevice,
-    MiracastReceiverInputDevices,
-    MiracastReceiverKeyboardDevice,
-    MiracastReceiverMediaSourceCreatedEventArgs,
-    MiracastReceiverSession,
-    MiracastReceiverSessionStartResult,
-    MiracastReceiverSettings,
-    MiracastReceiverStatus,
-    MiracastReceiverStreamControl,
-    MiracastReceiverVideoStreamSettings,
-    MiracastTransmitter,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "MiracastReceiverApplySettingsStatus",

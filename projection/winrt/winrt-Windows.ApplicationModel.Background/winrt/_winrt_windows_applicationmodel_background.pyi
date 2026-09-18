@@ -32,9 +32,6 @@ import winrt.windows.ui.notifications as windows_ui_notifications
 from winrt.windows.applicationmodel.background import AlarmAccessStatus, ApplicationTriggerResult, BackgroundAccessRequestKind, BackgroundAccessStatus, BackgroundTaskCancellationReason, BackgroundTaskThrottleCounter, BackgroundWorkCostValue, CustomSystemEventTriggerRecurrence, DeviceTriggerResult, EnergyUseLevel, LocationTriggerType, MediaProcessingTriggerResult, SystemConditionType, SystemTriggerType
 from winrt.windows.applicationmodel.background import BackgroundTaskCanceledEventHandler, BackgroundTaskCompletedEventHandler, BackgroundTaskProgressEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

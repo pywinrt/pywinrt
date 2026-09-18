@@ -4,35 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_effects import (
-    _abi_version_,
-    _generator_version_,
-    AcousticEchoCancellationConfiguration,
-    AudioCaptureEffectsManager,
-    AudioEffect,
-    AudioEffectDefinition,
-    AudioEffectsManager,
-    AudioRenderEffectsManager,
-    CompositeVideoFrameContext,
-    ProcessAudioFrameContext,
-    ProcessVideoFrameContext,
-    VideoCompositorDefinition,
-    VideoEffectDefinition,
-    VideoTransformEffectDefinition,
-    VideoTransformSphericalProjection,
-    _IAudioEffectDefinition,
-    IAudioEffectDefinition,
-    _IBasicAudioEffect,
-    IBasicAudioEffect,
-    _IBasicVideoEffect,
-    IBasicVideoEffect,
-    _IVideoCompositor,
-    IVideoCompositor,
-    _IVideoCompositorDefinition,
-    IVideoCompositorDefinition,
-    _IVideoEffectDefinition,
-    IVideoEffectDefinition,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "AudioEffectState",

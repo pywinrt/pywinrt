@@ -5,9 +5,6 @@ import typing
 import winrt._winrt
 import winrt.system
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

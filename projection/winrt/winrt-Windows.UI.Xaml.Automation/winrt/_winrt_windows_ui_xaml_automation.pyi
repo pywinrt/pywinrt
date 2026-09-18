@@ -12,9 +12,6 @@ import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peer
 
 from winrt.windows.ui.xaml.automation import AnnotationType, AutomationActiveEnd, AutomationAnimationStyle, AutomationBulletStyle, AutomationCaretBidiMode, AutomationCaretPosition, AutomationFlowDirections, AutomationOutlineStyles, AutomationStyleId, AutomationTextDecorationLineStyle, AutomationTextEditChangeType, DockPosition, ExpandCollapseState, RowOrColumnMajor, ScrollAmount, SupportedTextSelection, SynchronizedInputType, ToggleState, WindowInteractionState, WindowVisualState, ZoomUnit
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

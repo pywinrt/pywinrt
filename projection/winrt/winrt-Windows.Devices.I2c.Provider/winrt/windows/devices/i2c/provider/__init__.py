@@ -2,19 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_devices_i2c_provider import (
-    _abi_version_,
-    _generator_version_,
-    ProviderI2cTransferResult,
-    ProviderI2cConnectionSettings,
-    _II2cControllerProvider,
-    II2cControllerProvider,
-    _II2cDeviceProvider,
-    II2cDeviceProvider,
-    _II2cProvider,
-    II2cProvider,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ProviderI2cBusSpeed",

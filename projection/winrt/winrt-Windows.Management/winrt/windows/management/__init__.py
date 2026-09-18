@@ -4,13 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_management import (
-    _abi_version_,
-    _generator_version_,
-    MdmAlert,
-    MdmSession,
-    MdmSessionManager,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "MdmAlertDataType",

@@ -15,9 +15,6 @@ import winrt.windows.ui.composition as windows_ui_composition
 
 from winrt.windows.ui.windowmanagement import AppWindowClosedReason, AppWindowFrameStyle, AppWindowPresentationKind, AppWindowTitleBarVisibility, WindowingEnvironmentKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

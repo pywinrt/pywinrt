@@ -11,9 +11,6 @@ import winrt.windows.foundation as windows_foundation
 from winui3.microsoft.ui.xaml.interop import NotifyCollectionChangedAction
 from winui3.microsoft.ui.xaml.interop import BindableVectorChangedEventHandler, NotifyCollectionChangedEventHandler
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 class NotifyCollectionChangedEventArgs_Static(winrt._winrt.IInspectable_Static):

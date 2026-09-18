@@ -4,17 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_media_casting import (
-    _abi_version_,
-    _generator_version_,
-    CastingConnection,
-    CastingConnectionErrorOccurredEventArgs,
-    CastingDevice,
-    CastingDevicePicker,
-    CastingDevicePickerFilter,
-    CastingDeviceSelectedEventArgs,
-    CastingSource,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "CastingConnectionErrorStatus",

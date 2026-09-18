@@ -2,21 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_windows_ai_imaging import (
-    _abi_version_,
-    _generator_version_,
-    RecognizedTextBoundingBox,
-    ImageDescriptionGenerator,
-    ImageDescriptionResult,
-    ImageObjectExtractor,
-    ImageObjectExtractorHint,
-    ImageScaler,
-    RecognizedLine,
-    RecognizedText,
-    RecognizedWord,
-    TextRecognizer,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ImageDescriptionKind",

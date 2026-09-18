@@ -4,15 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_applicationmodel_userdataaccounts import (
-    _abi_version_,
-    _generator_version_,
-    UserDataAccount,
-    UserDataAccountManager,
-    UserDataAccountManagerForUser,
-    UserDataAccountStore,
-    UserDataAccountStoreChangedEventArgs,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "UserDataAccountContentKinds",

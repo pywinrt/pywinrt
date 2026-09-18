@@ -4,42 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_services_store import (
-    _abi_version_,
-    _generator_version_,
-    StorePackageUpdateStatus,
-    StoreAcquireLicenseResult,
-    StoreAppLicense,
-    StoreAvailability,
-    StoreCanAcquireLicenseResult,
-    StoreCollectionData,
-    StoreConsumableResult,
-    StoreContext,
-    StoreImage,
-    StoreLicense,
-    StorePackageInstallOptions,
-    StorePackageLicense,
-    StorePackageUpdate,
-    StorePackageUpdateResult,
-    StorePrice,
-    StoreProduct,
-    StoreProductOptions,
-    StoreProductPagedQueryResult,
-    StoreProductQueryResult,
-    StoreProductResult,
-    StorePurchaseProperties,
-    StorePurchaseResult,
-    StoreQueueItem,
-    StoreQueueItemCompletedEventArgs,
-    StoreQueueItemStatus,
-    StoreRateAndReviewResult,
-    StoreRequestHelper,
-    StoreSendRequestResult,
-    StoreSku,
-    StoreSubscriptionInfo,
-    StoreUninstallStorePackageResult,
-    StoreVideo,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "StoreCanLicenseStatus",

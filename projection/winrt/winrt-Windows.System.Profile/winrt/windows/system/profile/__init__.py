@@ -2,28 +2,10 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_system_profile import (
-    _abi_version_,
-    _generator_version_,
-    AnalyticsInfo,
-    AnalyticsVersionInfo,
-    AppApplicability,
-    EducationSettings,
-    HardwareIdentification,
-    HardwareToken,
-    KnownRetailInfoProperties,
-    PlatformAutomaticAppSignInManager,
-    PlatformDiagnosticsAndUsageDataSettings,
-    RetailInfo,
-    SharedModeSettings,
-    SmartAppControlPolicy,
-    SystemIdentification,
-    SystemIdentificationInfo,
-    SystemSetupInfo,
-    UnsupportedAppRequirement,
-    WindowsIntegrityPolicy,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PlatformAutomaticAppSignInPolicy",

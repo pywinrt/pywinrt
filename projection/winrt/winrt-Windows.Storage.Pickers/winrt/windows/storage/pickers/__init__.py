@@ -4,16 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winrt._winrt_windows_storage_pickers import (
-    _abi_version_,
-    _generator_version_,
-    FileExtensionVector,
-    FileOpenPicker,
-    FilePickerFileTypesOrderedMap,
-    FilePickerSelectedFilesArray,
-    FileSavePicker,
-    FolderPicker,
-)
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "PickerLocationId",

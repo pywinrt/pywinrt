@@ -16,9 +16,6 @@ import winrt.windows.ui.xaml.media.media3d as windows_ui_xaml_media_media3d
 
 from winrt.windows.ui.xaml.core.direct import XamlEventIndex, XamlPropertyIndex, XamlTypeIndex
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -4,49 +4,8 @@ import enum
 
 import winrt.runtime._internals
 import winrt.system
-from winui3._winui3_microsoft_ui_content import (
-    _abi_version_,
-    _generator_version_,
-    ChildSiteLink,
-    ContentCoordinateConverter,
-    ContentDeferral,
-    ContentEnvironmentSettingChangedEventArgs,
-    ContentEnvironmentStateChangedEventArgs,
-    ContentIsland,
-    ContentIslandAutomationProviderRequestedEventArgs,
-    ContentIslandEnvironment,
-    ContentIslandStateChangedEventArgs,
-    ContentSite,
-    ContentSiteAutomationProviderRequestedEventArgs,
-    ContentSiteEnvironment,
-    ContentSiteEnvironmentView,
-    ContentSiteRequestedStateChangedEventArgs,
-    ContentSiteView,
-    DesktopAttachedSiteBridge,
-    DesktopChildSiteBridge,
-    DesktopPopupSiteBridge,
-    DesktopSiteBridge,
-    _IContentSiteAutomation,
-    IContentSiteAutomation,
-    _IContentSiteBridge,
-    IContentSiteBridge,
-    _IContentSiteInput,
-    IContentSiteInput,
-    _IContentSiteLink,
-    IContentSiteLink,
-)
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from winui3._winui3_microsoft_ui_content import (
-        ContentCoordinateConverter_Static,
-        ContentIsland_Static,
-        ContentIslandEnvironment_Static,
-        ContentSite_Static,
-        ContentSiteEnvironment_Static,
-        ContentSiteEnvironmentView_Static,
-        ContentSiteView_Static,
-        DesktopSiteBridge_Static,
-    )
+
+winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
     "ContentAutomationOptions",

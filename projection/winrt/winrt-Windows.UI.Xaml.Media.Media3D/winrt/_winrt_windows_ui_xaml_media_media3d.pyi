@@ -7,9 +7,6 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.ui.xaml as windows_ui_xaml
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final

@@ -16,9 +16,6 @@ import winui3.microsoft.ui as microsoft_ui
 
 from winui3.microsoft.security.authentication.oauth import CodeChallengeMethodKind, TokenFailureKind
 
-_abi_version_: tuple[int, int]
-_generator_version_: str
-
 Self = typing.TypeVar('Self')
 
 @typing.final
