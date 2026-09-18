@@ -86,6 +86,18 @@ namespace py::interp
                 return make_implements_object(obj, iid);
             }
 
+            if (iid
+                && *static_cast<winrt::guid const*>(iid)
+                       == winrt::guid_of<winrt::Windows::Storage::Streams::IBuffer>())
+            {
+                // Anything that exports a Python buffer stands in for an
+                // IBuffer, which is what DataWriter.write_buffer(b"...")
+                // passes. The IBuffer holds the buffer for as long as WinRT
+                // holds the IBuffer.
+                auto buffer = convert_to_ibuffer(obj);
+                return winrt::detach_abi(buffer);
+            }
+
             PyErr_Format(
                 PyExc_TypeError,
                 "expected a WinRT object, not '%s'",
