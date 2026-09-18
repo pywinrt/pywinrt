@@ -2,6 +2,116 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.EnterpriseData
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[BufferProtectUnprotectResult]
+    guid 73d780cb-ad38-59e6-a236-cc0df69f15a8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.BufferProtectUnprotectResult;{47995edc-6cec-4e3a-b251-9e7485d79e7a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.BufferProtectUnprotectResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.DataProtectionInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DataProtectionInfo]
+    guid e12bb475-3f2b-51c9-83c6-a5661086b6c3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.DataProtectionInfo;{8420b0c1-5e31-4405-9540-3f943af0cb26}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.DataProtectionInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FileProtectionInfo]
+    guid 2918ffea-e091-53e2-bde5-617c9bb3d8fe
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.FileProtectionInfo;{4ee96486-147e-4dd0-8faf-5253ed91ad0c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.FileProtectionInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FileProtectionStatus]
+    guid e104f25b-b957-5ed4-b1c5-1993604cfeae
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.EnterpriseData.FileProtectionStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.FileProtectionStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerExportResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ProtectedContainerExportResult]
+    guid 560c5521-5008-5272-a766-941f70718bc6
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.ProtectedContainerExportResult;{3948ef95-f7fb-4b42-afb0-df70b41543c1}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.ProtectedContainerExportResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerImportResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ProtectedContainerImportResult]
+    guid cfea00f8-d2ad-5ad2-a396-e4f71b9a7c3f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.ProtectedContainerImportResult;{cdb780d1-e7bb-4d1a-9339-34dc41149f9b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.ProtectedContainerImportResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedFileCreateResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ProtectedFileCreateResult]
+    guid 6c44a868-7c80-5187-a08d-379be41909f6
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.EnterpriseData.ProtectedFileCreateResult;{28e3ed6a-e9e7-4a03-9f53-bdb16172699b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.ProtectedFileCreateResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ProtectionPolicyEvaluationResult]
+    guid 2833ba54-a4e1-5c2d-8a7a-136e8510c78b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Security.EnterpriseData.BufferProtectUnprotectResult python_type
     py BufferProtectUnprotectResult
     signature rc(Windows.Security.EnterpriseData.BufferProtectUnprotectResult;{47995edc-6cec-4e3a-b251-9e7485d79e7a})
@@ -67,24 +177,48 @@ enum Windows.Security.EnterpriseData.EnforcementLevel python_type
     signature enum(Windows.Security.EnterpriseData.EnforcementLevel;i4)
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[ProtectedAccessResumedEventArgs]
     guid 9efe4d36-6549-5222-9bc2-4d5d929d005c
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs;{ac4dca59-5d80-4e95-8c5f-8539450eebe0}))
+    base Windows.Foundation.EventHandler
     argument Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[ProtectedAccessSuspendingEventArgs]
     guid fe8bb4d8-0d3d-5416-b390-9ead5dd9b384
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs;{75a193e0-a344-429f-b975-04fc1f88c185}))
+    base Windows.Foundation.EventHandler
     argument Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[ProtectedContentRevokedEventArgs]
     guid 4ff76357-6805-573e-a67d-2c594f5004b7
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs;{63686821-58b9-47ee-93d9-f0f741cf43f0}))
+    base Windows.Foundation.EventHandler
     argument Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs name=args
 
 class Windows.Security.EnterpriseData.FileProtectionInfo python_type
     py FileProtectionInfo
@@ -210,55 +344,295 @@ class Windows.Security.EnterpriseData.FileUnprotectOptions python_type
         put put_Audit slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptions shape=4 reverse=22
             in boolean name=value
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[BufferProtectUnprotectResult]
     guid 11f95a2e-2e87-5449-bca3-dcdf2ae6e17a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.BufferProtectUnprotectResult;{47995edc-6cec-4e3a-b251-9e7485d79e7a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.BufferProtectUnprotectResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.BufferProtectUnprotectResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DataProtectionInfo]
     guid c8ef3f16-dd70-5e88-9323-85ddddcd2ca5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.DataProtectionInfo;{8420b0c1-5e31-4405-9540-3f943af0cb26}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.DataProtectionInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.DataProtectionInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.DataProtectionInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.DataProtectionInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FileProtectionInfo]
     guid 67e04591-2d11-5018-9ff0-0b85520b888b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.FileProtectionInfo;{4ee96486-147e-4dd0-8faf-5253ed91ad0c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.FileProtectionInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.FileProtectionInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FileProtectionStatus]
     guid 033efe7c-709e-53a8-8e64-cdab6bd1ed59
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.EnterpriseData.FileProtectionStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.FileProtectionStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.EnterpriseData.FileProtectionStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ProtectedContainerExportResult]
     guid c99f0b2e-67ad-518a-866f-e39b4567b110
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.ProtectedContainerExportResult;{3948ef95-f7fb-4b42-afb0-df70b41543c1}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.ProtectedContainerExportResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerExportResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerExportResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.ProtectedContainerExportResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ProtectedContainerImportResult]
     guid 384e9499-d491-5297-beba-b33a3d67f207
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.ProtectedContainerImportResult;{cdb780d1-e7bb-4d1a-9339-34dc41149f9b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.ProtectedContainerImportResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerImportResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerImportResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.ProtectedContainerImportResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ProtectedFileCreateResult]
     guid d7f98a9c-738e-50f6-93e3-2608baf54be9
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.EnterpriseData.ProtectedFileCreateResult;{28e3ed6a-e9e7-4a03-9f53-bdb16172699b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.ProtectedFileCreateResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedFileCreateResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedFileCreateResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.EnterpriseData.ProtectedFileCreateResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ProtectionPolicyEvaluationResult]
     guid e8d81715-c56c-5a6b-b738-5df6c2775b7b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult return
 
 interface Windows.Security.EnterpriseData.IBufferProtectUnprotectResult
     guid 47995edc-6cec-4e3a-b251-9e7485d79e7a
@@ -293,15 +667,65 @@ interface Windows.Security.EnterpriseData.IFileUnprotectOptions
 interface Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory
     guid 51aeb39c-da8c-4c3f-9bfb-cb73a7cce0dd
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IStorageItem]
     guid bb8b8418-65d1-544b-b083-6d172f568c73
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Storage.IStorageItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IStorageItem]
+    guid 05b487c2-3830-5d3c-98da-25fa11542dbd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.IStorageItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=22 role=current
+            out interface type=Windows.Storage.IStorageItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101
+            fill_array interface type=Windows.Storage.IStorageItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs
     guid ac4dca59-5d80-4e95-8c5f-8539450eebe0
@@ -348,10 +772,33 @@ interface Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4
 interface Windows.Security.EnterpriseData.IThreadNetworkContext
     guid fa4ea8e9-ef13-405a-b12c-d7348c6f41fc
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs python_type
     py ProtectedAccessResumedEventArgs
@@ -698,7 +1145,7 @@ class Windows.Security.EnterpriseData.ThreadNetworkContext python_type closeable
     requires Windows.Security.EnterpriseData.IThreadNetworkContext
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -709,12 +1156,43 @@ class System.Object external
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Networking.HostName external
     py winrt.windows.networking.HostName

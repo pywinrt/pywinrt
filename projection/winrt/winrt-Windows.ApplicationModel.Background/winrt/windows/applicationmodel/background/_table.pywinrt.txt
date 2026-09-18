@@ -132,6 +132,94 @@ class Windows.ApplicationModel.Background.AppointmentStoreNotificationTrigger ac
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.AlarmAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AlarmAccessStatus]
+    guid 84108017-a8e7-5449-b713-df48503a953e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Background.AlarmAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.AlarmAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.ApplicationTriggerResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ApplicationTriggerResult]
+    guid d0065ef6-ee9d-55f8-ac2b-53a91ff96d2e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Background.ApplicationTriggerResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.ApplicationTriggerResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.BackgroundAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[BackgroundAccessStatus]
+    guid 26dd26e3-3f47-5709-b2f2-d6d0ad3288f0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Background.BackgroundAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.BackgroundAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DeviceConnectionChangeTrigger]
+    guid 3fd5a57e-47e4-5921-b148-5cb586166ca8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger;{90875e64-3cdd-4efb-ab1c-5b3b6a60ce34}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceTriggerResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DeviceTriggerResult]
+    guid d5aa9506-1464-57d4-859d-7ee9b26cb1f9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Background.DeviceTriggerResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.DeviceTriggerResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattServiceProviderTriggerResult]
+    guid 39d8105f-a505-5f88-91a9-b0fc6d628699
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Background.GattServiceProviderTriggerResult;{3c4691b1-b198-4e84-bad4-cf4ad299ed3a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.GattServiceProviderTriggerResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaProcessingTriggerResult]
+    guid 3814c6a5-2ad1-5875-bed5-5031cd1f50a2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Background.MediaProcessingTriggerResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Background.MediaProcessingTriggerResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.ApplicationModel.Background.BackgroundAccessRequestKind python_type
     py BackgroundAccessRequestKind
     signature enum(Windows.ApplicationModel.Background.BackgroundAccessRequestKind;i4)
@@ -837,45 +925,237 @@ interface Windows.ApplicationModel.Background.IApplicationTriggerDetails
 interface Windows.ApplicationModel.Background.IAppointmentStoreNotificationTrigger
     guid 64d4040c-c201-42ad-aa2a-e21ba3425b6d
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AlarmAccessStatus]
     guid a55a747d-59f6-5cb6-b439-c8aad670905c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.AlarmAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.AlarmAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.AlarmAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.AlarmAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.AlarmAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Background.AlarmAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ApplicationTriggerResult]
     guid 47cbd985-0f08-5a3d-92cf-b27960506ed6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.ApplicationTriggerResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.ApplicationTriggerResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.ApplicationTriggerResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.ApplicationTriggerResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.ApplicationTriggerResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Background.ApplicationTriggerResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[BackgroundAccessStatus]
     guid 7b44e581-cfa9-5763-bed7-6a65739f0dbf
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.BackgroundAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.BackgroundAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.BackgroundAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.BackgroundAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.BackgroundAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Background.BackgroundAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DeviceConnectionChangeTrigger]
     guid 9d01424d-5653-59f8-ba6b-d0c077346d2d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger;{90875e64-3cdd-4efb-ab1c-5b3b6a60ce34}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DeviceTriggerResult]
     guid b5136c46-2f2e-511d-9e8e-5ef4decb1da7
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.DeviceTriggerResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.DeviceTriggerResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceTriggerResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceTriggerResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.DeviceTriggerResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Background.DeviceTriggerResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattServiceProviderTriggerResult]
     guid f402ec9f-84b2-57c3-9543-01fbda05219b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Background.GattServiceProviderTriggerResult;{3c4691b1-b198-4e84-bad4-cf4ad299ed3a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.GattServiceProviderTriggerResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Background.GattServiceProviderTriggerResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaProcessingTriggerResult]
     guid 2595482c-1cbf-5691-a30d-2164909c6712
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Background.MediaProcessingTriggerResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Background.MediaProcessingTriggerResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Background.MediaProcessingTriggerResult return
 
 interface Windows.ApplicationModel.Background.IBackgroundCondition python_type
     py _IBackgroundCondition
@@ -1239,10 +1519,197 @@ interface Windows.ApplicationModel.Background.IGattServiceProviderTriggerStatics
 interface Windows.ApplicationModel.Background.IGeovisitTrigger
     guid 4818edaa-04e1-4127-9a4c-19351b8a80a4
 
-interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageLibrary> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivityType]
+    guid 2a04cdfa-5dfd-5178-8731-ade998e4a7f6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.ActivityType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, BackgroundTaskRegistration]]
+    guid 62ae0fda-b238-554f-a275-1dc16d6ca03a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, IBackgroundTaskRegistration]]
+    guid 80fb0327-5a00-55cc-85db-a852719981b9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, BackgroundTaskRegistrationGroup]]
+    guid 04428524-7d54-59b4-bf17-ac57c4ce6b40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageLibrary> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorageLibrary]
     guid 851e3cfd-306b-5c8e-ae3c-a8d83c623604
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageLibrary;{1edd7103-0e5e-4d6c-b5e8-9318983d6a03}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Storage.StorageLibrary
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageLibrary> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivityType]
+    guid 40524281-a7c6-50b1-b6f5-0baa95d902c2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.ActivityType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, BackgroundTaskRegistration]]
+    guid 8445d2ae-dd03-5b98-95e4-82b43a3f0d64
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, IBackgroundTaskRegistration]]
+    guid 2001aea5-1a86-517e-8be5-11d7fb5935b2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, BackgroundTaskRegistrationGroup]]
+    guid 4c21744b-b583-559d-89f7-d4138cffffbc
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorageLibrary]
+    guid 0a1c6409-fbd3-58c8-9af3-6262cc56e5b3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Storage.StorageLibrary;{1edd7103-0e5e-4d6c-b5e8-9318983d6a03}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.StorageLibrary
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=4 reverse=22 role=current
+            out class type=Windows.Storage.StorageLibrary return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=117 reverse=101
+            fill_array class type=Windows.Storage.StorageLibrary name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, BackgroundTaskRegistration]
+    guid 9bcb843b-221b-5fbe-9b20-7028bc4e8653
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.Guid
+    argument Windows.ApplicationModel.Background.BackgroundTaskRegistration
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, IBackgroundTaskRegistration]
+    guid 5a1f6d75-8678-547c-8fd7-fbceb6ebf968
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.Guid
+    argument Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=43
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTaskRegistration return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, BackgroundTaskRegistrationGroup]
+    guid 67a07f76-20b0-573b-9d74-ed0fc4f653c7
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
 
 interface Windows.ApplicationModel.Background.ILocationTrigger
     guid 47666a1c-6877-481e-8026-ff7e14a811a0
@@ -1256,23 +1723,86 @@ interface Windows.ApplicationModel.Background.IMaintenanceTrigger
 interface Windows.ApplicationModel.Background.IMaintenanceTriggerFactory
     guid 4b3ddb2e-97dd-4629-88b0-b06cf9482ae5
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> concrete
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, BackgroundTaskRegistration]
     guid 2c08602f-40b1-5e97-ae21-5c04d7fb829c
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistration;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>>
     argument System.Guid
     argument Windows.ApplicationModel.Background.BackgroundTaskRegistration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=second
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> concrete
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, IBackgroundTaskRegistration]
     guid 78c880f6-a7dc-5172-89da-7749fc82aa82
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;{10654cc2-a26e-43bf-8c12-1fb40dbfbfa0})
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>>
     argument System.Guid
     argument Windows.ApplicationModel.Background.IBackgroundTaskRegistration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out interface type=Windows.ApplicationModel.Background.IBackgroundTaskRegistration return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=second
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, BackgroundTaskRegistrationGroup]
     guid f6a9dc12-01f7-54f0-a257-c404815b9c1c
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>>
     argument System.String
     argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=second
 
 interface Windows.ApplicationModel.Background.IMediaProcessingTrigger
     guid 9a95be65-8a52-4b30-9011-cf38040ea8b0
@@ -1299,9 +1829,132 @@ interface Windows.ApplicationModel.Background.IRcsEndUserMessageAvailableTrigger
     guid 986d0d6a-b2f6-467f-a978-a44091c11a66
 
 interface Windows.Foundation.IReference<System.Int16> concrete
+    py winrt.windows.foundation._IReference[Int16]
     guid 6ec9e41b-6709-5647-9918-a1270110fc4e
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i2)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Int16
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int16> shape=4 reverse=22 role=value
+            out int16 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.ApplicationModel.Background.IRfcommConnectionTrigger
     guid e8c4cae2-0b53-4464-9394-fd875654de64
@@ -1363,15 +2016,85 @@ interface Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTr
 interface Windows.ApplicationModel.Background.IUserNotificationChangedTriggerFactory
     guid cad4436c-69ab-4e18-a48a-5ed2ac435957
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ActivityType]
     guid e3e660d6-d041-5ecd-b18b-fa254e4a860f
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType>
     argument Windows.Devices.Sensors.ActivityType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211
+            pass_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivityType]
     guid fc7a0488-2803-505c-9e62-9200afe416c6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType>
     argument Windows.Devices.Sensors.ActivityType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.Background.LocationTrigger python_type
     py LocationTrigger
@@ -1780,10 +2503,16 @@ class Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger
             out class type=Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup,Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BackgroundTaskRegistrationGroup, BackgroundActivatedEventArgs]
     guid d4f89768-688f-59ec-bf24-c2af6a310fa4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup;{2ab1919a-871b-4167-8a76-055cd67b5b23});rc(Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs;{ab14bee0-e760-440e-a91c-44796de3a92d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
     argument Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup name=sender
+            in class type=Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs name=args
 
 class Windows.ApplicationModel.Background.UserNotificationChangedTrigger python_type
     py UserNotificationChangedTrigger
@@ -1883,6 +2612,69 @@ enum Windows.Devices.SmartCards.SmartCardTriggerType external
 
 class Windows.Devices.Sms.SmsFilterRules external
     py winrt.windows.devices.sms.SmsFilterRules
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

@@ -2,6 +2,131 @@ format 4.0
 generator 0.0.0
 namespace Windows.Storage.FileProperties
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Geolocation.Geopoint> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Geopoint]
+    guid 4b5f2f60-19b1-5566-9df6-92a42235cbf9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Geolocation.Geopoint
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMap<System.String,System.Object>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IMap[String, Object]]
+    guid 7344f356-8399-5756-a2f8-abd50c4146ff
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable)))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IMap<System.String,System.Object>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.DocumentProperties> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DocumentProperties]
+    guid 4452ed4c-642b-501b-9617-7d68b4ac3c66
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.FileProperties.DocumentProperties;{7eab19bc-1821-4923-b4a9-0aea404d0070}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.FileProperties.DocumentProperties
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.ImageProperties> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ImageProperties]
+    guid c63729bc-e4c3-564c-b137-2cb4f5966a83
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.FileProperties.ImageProperties;{523c9424-fcff-4275-afee-ecdb9ab47973}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.FileProperties.ImageProperties
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.MusicProperties> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MusicProperties]
+    guid d84e1312-d661-5b7f-9566-7421bdedc1ea
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.FileProperties.MusicProperties;{bc8aab62-66ec-419a-bc5d-ca65a4cb46da}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.FileProperties.MusicProperties
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.VideoProperties> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VideoProperties]
+    guid 43401d34-61ab-5cf2-921f-55b616631d1d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.FileProperties.VideoProperties;{719ae507-68de-4db8-97de-49998c059f2f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.FileProperties.VideoProperties
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[UInt32, UInt32]
+    guid ea0fe405-d432-5ac7-9ef8-5a65e1f97d7e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};u4;u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.UInt32
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IBuffer, UInt32]
+    guid bf666554-7605-5d9a-b14e-18d8c8472afe
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[UInt32, UInt32]
+    guid 1e466dc5-840f-54f9-b877-5e3a9f4b6c74
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};u4;u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.UInt32
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IBuffer, UInt32]
+    guid 06386a7a-e009-5b0b-ab68-a8e48b516647
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Storage.FileProperties.BasicProperties python_type
     py BasicProperties
     signature rc(Windows.Storage.FileProperties.BasicProperties;{d05d55db-785e-4a66-be02-9beec58aea81})
@@ -79,52 +204,278 @@ class Windows.Storage.FileProperties.GeotagHelper static python_type
             in class type=Windows.Devices.Geolocation.Geolocator name=geolocator
             out interface type=Windows.Foundation.IAsyncAction return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Geopoint]
     guid 3723e070-c2ae-538f-846e-0f9d280310c0
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Geolocation.Geopoint
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Geolocation.Geopoint> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Geolocation.Geopoint> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Geolocation.Geopoint return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IMap[String, Object]]
     guid 127e39c7-07c1-58e5-b48e-3a4729839fec
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable)))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IMap<System.String,System.Object>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMap<System.String,System.Object>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMap<System.String,System.Object>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.Object>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DocumentProperties]
     guid 6c86e97c-5699-5700-8d35-d350ad3e4df2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.DocumentProperties;{7eab19bc-1821-4923-b4a9-0aea404d0070}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.FileProperties.DocumentProperties
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.DocumentProperties> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.DocumentProperties> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.FileProperties.DocumentProperties return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ImageProperties]
     guid fcd07511-e7f8-5bda-8c04-795a639dae8f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.ImageProperties;{523c9424-fcff-4275-afee-ecdb9ab47973}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.FileProperties.ImageProperties
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.ImageProperties> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.ImageProperties> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.FileProperties.ImageProperties return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MusicProperties]
     guid 0d023b76-20a7-56f3-84ab-ce31e6544b71
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.MusicProperties;{bc8aab62-66ec-419a-bc5d-ca65a4cb46da}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.FileProperties.MusicProperties
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.MusicProperties> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.MusicProperties> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.FileProperties.MusicProperties return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VideoProperties]
     guid 447d4590-d3f9-58bf-ac58-6f9a50839efe
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.FileProperties.VideoProperties;{719ae507-68de-4db8-97de-49998c059f2f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.FileProperties.VideoProperties
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.VideoProperties> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.FileProperties.VideoProperties> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.FileProperties.VideoProperties return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[UInt32, UInt32]
     guid eccb574a-c684-5572-a679-6b0842cfb57f
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
     argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=121 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IBuffer, UInt32]
     guid d26b2819-897f-5c7d-84d6-56d796561431
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
     argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Storage.FileProperties.IBasicProperties
     guid d05d55db-785e-4a66-be02-9beec58aea81
@@ -138,35 +489,273 @@ interface Windows.Storage.FileProperties.IGeotagHelperStatics
 interface Windows.Storage.FileProperties.IImageProperties
     guid 523c9424-fcff-4275-afee-ecdb9ab47973
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
     guid 09335560-6c6b-5a26-9348-97b781132b20
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, Object]
     guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=117 reverse=125 role=insert
+            in string name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
 interface Windows.Storage.FileProperties.IMusicProperties
     guid bc8aab62-66ec-419a-bc5d-ca65a4cb46da
 
 interface Windows.Foundation.IReference<System.Double> concrete
+    py winrt.windows.foundation._IReference[Double]
     guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Double
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Double> shape=4 reverse=22 role=value
+            out double return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Storage.FileProperties.IStorageItemContentProperties
     guid 05294bad-bc38-48bf-85d7-770e0e2ae0ba
@@ -189,15 +778,85 @@ interface Windows.Storage.FileProperties.IStorageItemExtraProperties python_type
 interface Windows.Storage.FileProperties.IThumbnailProperties
     guid 693dd42f-dbe7-49b5-b3b3-2893ac5d3423
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Storage.FileProperties.IVideoProperties
     guid 719ae507-68de-4db8-97de-49998c059f2f
@@ -429,7 +1088,7 @@ class Windows.Storage.FileProperties.StorageItemThumbnail python_type closeable
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -567,13 +1226,88 @@ class Windows.Devices.Geolocation.Geolocator external
 class Windows.Devices.Geolocation.Geopoint external
     py winrt.windows.devices.geolocation.Geopoint
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.IStorageFile external
     py winrt.windows.storage._IStorageFile

@@ -68,7 +68,7 @@ GROUP_FLAGS = {"static": 1 << 3, "deprecated": 1 << 4}
 MEMBER_KINDS = ("method", "get", "put", "add", "remove", "ctor")
 
 #: The ``name=value`` tokens a member's line can carry.
-MEMBER_VALUES = ("slot", "inputs", "outputs", "declaring", "shape", "reverse")
+MEMBER_VALUES = ("slot", "inputs", "outputs", "declaring", "shape", "reverse", "role")
 
 MEMBER_FLAGS = {
     "static": 1 << 3,
@@ -77,6 +77,32 @@ MEMBER_FLAGS = {
     "deprecated": 1 << 6,
     "default_overload": 1 << 7,
 }
+
+#: Where the member's protocol role sits in its flags.
+MEMBER_ROLE_SHIFT = 8
+
+ROLES = (
+    "none",
+    "size",
+    "get_at",
+    "set_at",
+    "remove_at",
+    "insert_at",
+    "first",
+    "current",
+    "has_current",
+    "move_next",
+    "lookup",
+    "has_key",
+    "insert",
+    "remove",
+    "status",
+    "completed",
+    "get_results",
+    "to_string",
+    "value",
+    "close",
+)
 
 PARAM_CATEGORIES = ("in", "out", "pass_array", "fill_array", "receive_array")
 
@@ -156,6 +182,7 @@ class Member:
     declaring: str | None = None
     shape: int = NO_REF
     reverse: int = NO_REF
+    role: int = 0
     flags: int = 0
     params: list[Param] = field(default_factory=list)
 
@@ -412,6 +439,7 @@ class _Parser:
             declaring=values.get("declaring"),
             shape=self._number_value(values, "shape", NO_REF),
             reverse=self._number_value(values, "reverse", NO_REF),
+            role=self._role(values.get("role")),
             flags=flags,
         )
 
@@ -485,6 +513,15 @@ class _Parser:
             self._fail(f"'{name}' is not a type code")
 
         return TYPE_CODES.index(name)
+
+    def _role(self, name: str | None) -> int:
+        if name is None:
+            return 0
+
+        if name not in ROLES:
+            self._fail(f"'{name}' is not a protocol role")
+
+        return ROLES.index(name)
 
     def _flags(self, names: list[str], flags: dict[str, int], what: str) -> int:
         value = 0
@@ -710,7 +747,7 @@ def build(table: Table) -> bytes:
             data,
             offsets["MEMB"] + position * MEMBER_RECORD_WORDS * 4,
             [
-                member.flags | member.kind,
+                member.flags | member.kind | (member.role << MEMBER_ROLE_SHIFT),
                 strings.add(member.winrt),
                 ref(member.declaring),
                 member.slot,

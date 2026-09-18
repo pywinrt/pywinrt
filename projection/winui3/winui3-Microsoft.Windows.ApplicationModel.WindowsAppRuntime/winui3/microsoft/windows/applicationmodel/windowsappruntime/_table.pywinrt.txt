@@ -77,6 +77,36 @@ interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult
 interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResultFactory
     guid acd7bdae-4ae6-5cac-8205-1e8c305f953b
 
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RuntimeCompatibilityChange]
+    guid 79fffbf6-dc39-59e3-a684-fa55fb49238f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RuntimeCompatibilityChange]
+    guid 25abd83a-a7d6-5c3a-94a4-674fd9cec6b4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=current
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=101
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics
     guid ed9be8ff-073c-5c66-bf97-ef0ce67405c3
 
@@ -86,10 +116,85 @@ interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibi
 interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics
     guid e5cb9549-8951-590e-a753-8f281cd77ab5
 
-interface Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[RuntimeCompatibilityChange]
     guid b2d54673-319a-5cef-9997-2aa95cae7d4b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>
     argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=173
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=101
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=211
+            pass_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RuntimeCompatibilityChange]
+    guid b3675e71-9db8-5b51-986a-1223964c6f52
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=66
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+            out uint32 name=index
+            out boolean return
 
 class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo static python_type
     py ReleaseInfo
@@ -157,3 +262,19 @@ struct Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVer
 
 struct Windows.ApplicationModel.PackageVersion external
     py winrt.windows.applicationmodel.PackageVersion
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

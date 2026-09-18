@@ -201,30 +201,162 @@ interface Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource
 interface Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics
     guid 3dad9cba-1d3d-46ae-ab9d-8647486c6f90
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InkPoint]
     guid 0630c0ef-a4e2-5af6-b2e9-8e042e294e17
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Inking.InkPoint;{9f87272b-858c-46a5-9b41-d195970459fd}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.Inking.InkPoint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> return
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InkPoint]
+    guid 47415452-db79-567e-84d5-e9912330f944
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Inking.InkPoint;{9f87272b-858c-46a5-9b41-d195970459fd}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Inking.InkPoint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Inking.InkPoint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[InkPoint]
     guid 10c47202-47ab-58bc-91de-d5000f1a74c0
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.Inking.InkPoint;{9f87272b-858c-46a5-9b41-d195970459fd}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint>
     argument Windows.UI.Input.Inking.InkPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=173
+            in class type=Windows.UI.Input.Inking.InkPoint name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.Inking.InkPoint return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=101
+            in class type=Windows.UI.Input.Inking.InkPoint name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.Inking.InkPoint name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=51 reverse=211
+            pass_array class type=Windows.UI.Input.Inking.InkPoint name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.Inking.InkPoint name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[InkPoint]
+    guid d1ac414b-c87d-540f-8ab1-4e0d09d9d283
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.Inking.InkPoint;{9f87272b-858c-46a5-9b41-d195970459fd}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint>
+    argument Windows.UI.Input.Inking.InkPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.Inking.InkPoint return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=66
+            in class type=Windows.UI.Input.Inking.InkPoint name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreInkIndependentInputSource, PointerEventArgs]
     guid b83fbe98-882a-5b69-bd1c-c66690707fef
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource;{39b38da9-7639-4499-a5b5-191d00e35b16});rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource
     argument Windows.UI.Core.PointerEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource name=sender
+            in class type=Windows.UI.Core.PointerEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWetStrokeUpdateSource, CoreWetStrokeUpdateEventArgs]
     guid 67ff75e8-02a4-5254-a965-0b254c7d0788
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource;{1f718e22-ee52-4e00-8209-4c3e5b21a3cc});rc(Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs;{fb07d14c-3380-457a-a987-991357896c1b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource
     argument Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource name=sender
+            in class type=Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs name=args
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Matrix3x2 external
     py winrt.windows.foundation.numerics.Matrix3x2

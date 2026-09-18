@@ -54,22 +54,140 @@ enum Windows.Gaming.Input.Preview.HeadsetOperation python_type
 interface Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
     guid 0be1e6c5-d9bd-44ee-8362-488b2e464bfb
 
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[RemappingButtonCategory, Object]]
+    guid da1c35a5-5993-56ce-9d1d-4f1e22433034
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[RemappingButtonCategory, Object]]
+    guid 2f396834-b86a-5cd3-9e25-92d36931f0e2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[RemappingButtonCategory, Object]
+    guid bfb7672c-b8eb-5a83-bb57-c37ebcc053e6
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Gaming.Input.Preview.RemappingButtonCategory
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=22
+            out enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=43
+            out object return
+
 interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
     guid 2da3ed52-ffd9-43e2-825c-1d2790e04d14
 
 interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics
     guid d40dda17-b1f4-499a-874c-7095aac15291
 
-interface Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[RemappingButtonCategory, Object]
     guid a73dd129-3e15-5afc-ba2b-18ecabbdb6fb
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>>
     argument Windows.Gaming.Input.Preview.RemappingButtonCategory
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=65 role=has_key
+            in enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=24 role=lookup
+            in enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=second
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider python_type
     py LegacyGipGameControllerProvider
@@ -169,6 +287,26 @@ class System.Object external
 
 class System.String external
     py winrt.system.String
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Gaming.Input.IGameController external
     py winrt.windows.gaming.input._IGameController

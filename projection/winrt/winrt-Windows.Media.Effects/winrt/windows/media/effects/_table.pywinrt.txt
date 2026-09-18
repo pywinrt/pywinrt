@@ -241,31 +241,243 @@ interface Windows.Media.Effects.IBasicVideoEffect python_type
 interface Windows.Media.Effects.ICompositeVideoFrameContext
     guid 6c30024b-f514-4278-a5f7-b9188049d110
 
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IDirect3DSurface]
+    guid cc63bf9c-e16a-5a75-a5aa-2b53f975b0b0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{0bf4a146-13c1-4694-bee3-7abf15eaf586})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Effects.AudioEffect> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioEffect]
+    guid 07af9afd-25b8-579d-be7e-8acc03418d0b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Effects.AudioEffect;{34aafa51-9207-4055-be93-6e5734a86ae4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Effects.AudioEffect
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.AudioEffect> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.AudioEncodingProperties> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioEncodingProperties]
+    guid 00939468-25d8-533f-854e-4f20f36c51dc
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.MediaProperties.AudioEncodingProperties
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.VideoEncodingProperties> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VideoEncodingProperties]
+    guid 73c7317c-8682-5f81-84a2-30c425fa2d24
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.MediaProperties.VideoEncodingProperties;{76ee6c9a-37c2-4f2a-880a-1282bbb4373d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.MediaProperties.VideoEncodingProperties
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IDirect3DSurface]
+    guid bdfb6d0b-e785-5d5a-abd2-fe1b18c43257
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{0bf4a146-13c1-4694-bee3-7abf15eaf586})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=22 role=current
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=117 reverse=101
+            fill_array interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioEffect]
+    guid 673ce717-a3cf-5d68-a80b-5ed3e7b93fed
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Effects.AudioEffect;{34aafa51-9207-4055-be93-6e5734a86ae4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Effects.AudioEffect
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Effects.AudioEffect return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> shape=117 reverse=101
+            fill_array class type=Windows.Media.Effects.AudioEffect name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioEncodingProperties]
+    guid 064b6aef-3bd0-5463-8450-72c6169af5d4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.MediaProperties.AudioEncodingProperties
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=22 role=current
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> shape=117 reverse=101
+            fill_array class type=Windows.Media.MediaProperties.AudioEncodingProperties name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VideoEncodingProperties]
+    guid 094166ef-ae5f-5315-a3bf-fe54e8c35fcd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.MediaProperties.VideoEncodingProperties;{76ee6c9a-37c2-4f2a-880a-1282bbb4373d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.MediaProperties.VideoEncodingProperties
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=22 role=current
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> shape=117 reverse=101
+            fill_array class type=Windows.Media.MediaProperties.VideoEncodingProperties name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Media.Effects.IProcessAudioFrameContext
     guid 4cd92946-1222-4a27-a586-fb3e20273255
 
 interface Windows.Media.Effects.IProcessVideoFrameContext
     guid 276f0e2b-6461-401e-ba78-0fdad6114eec
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IDirect3DSurface]
     guid 1a81ec3e-5afb-5e10-92bb-c843fec70887
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{0bf4a146-13c1-4694-bee3-7abf15eaf586})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface>
     argument Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface> shape=117 reverse=66
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioEffect]
     guid cdcbc9e7-53d8-5e66-9e45-31d5a23fd01d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Effects.AudioEffect;{34aafa51-9207-4055-be93-6e5734a86ae4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.AudioEffect>
     argument Windows.Media.Effects.AudioEffect
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.AudioEffect> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.AudioEffect> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Effects.AudioEffect return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Effects.AudioEffect name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> shape=117 reverse=66
+            in class type=Windows.Media.Effects.AudioEffect name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioEncodingProperties]
     guid 64ac506c-ccd0-56cb-b088-b1a36e8755df
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.AudioEncodingProperties>
     argument Windows.Media.MediaProperties.AudioEncodingProperties
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.AudioEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.AudioEncodingProperties> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.MediaProperties.AudioEncodingProperties name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.AudioEncodingProperties> shape=117 reverse=66
+            in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VideoEncodingProperties]
     guid 04c7baba-04d7-51db-a4e3-5147963ec5ff
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.MediaProperties.VideoEncodingProperties;{76ee6c9a-37c2-4f2a-880a-1282bbb4373d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.VideoEncodingProperties>
     argument Windows.Media.MediaProperties.VideoEncodingProperties
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.VideoEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.VideoEncodingProperties> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.MediaProperties.VideoEncodingProperties name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.VideoEncodingProperties> shape=117 reverse=66
+            in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Media.Effects.IVideoCompositor python_type
     py _IVideoCompositor
@@ -361,16 +573,28 @@ class Windows.Media.Effects.ProcessVideoFrameContext python_type
             out class type=Windows.Media.VideoFrame return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioCaptureEffectsManager,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioCaptureEffectsManager, Object]
     guid a1c5e803-a275-5bb1-9d44-2ac8ae9ffb89
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Effects.AudioCaptureEffectsManager;{8f85c271-038d-4393-8298-540110608eef});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Effects.AudioCaptureEffectsManager
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Effects.AudioCaptureEffectsManager name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioRenderEffectsManager,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioRenderEffectsManager, Object]
     guid 4be29c7e-449c-576e-a7b8-3a40f2f01dc8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Effects.AudioRenderEffectsManager;{4dc98966-8751-42b2-bfcb-39ca7864bd47});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Effects.AudioRenderEffectsManager
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Effects.AudioRenderEffectsManager name=sender
+            in object name=args
 
 class Windows.Media.Effects.VideoCompositorDefinition python_type
     py VideoCompositorDefinition
@@ -504,9 +728,25 @@ struct Windows.Foundation.Rect external
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Quaternion external
     py winrt.windows.foundation.numerics.Quaternion

@@ -3,9 +3,15 @@ generator 0.0.0
 namespace Windows.Gaming.UI
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Windows.Gaming.UI.GameBar static python_type
     py GameBar
@@ -137,10 +143,16 @@ interface Windows.Gaming.UI.IGameUIProviderActivatedEventArgs
     guid a7b3203e-caf7-4ded-bbd2-47de43bb6dd5
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Gaming.UI.GameChatOverlayMessageSource,Windows.Gaming.UI.GameChatMessageReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GameChatOverlayMessageSource, GameChatMessageReceivedEventArgs]
     guid fe4f13bf-689c-5fe3-b7ad-55bc57f92466
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.UI.GameChatOverlayMessageSource;{1e177397-59fb-4f4f-8e9a-80acf817743c});rc(Windows.Gaming.UI.GameChatMessageReceivedEventArgs;{a28201f1-3fb9-4e42-a403-7afce2023b1e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Gaming.UI.GameChatOverlayMessageSource
     argument Windows.Gaming.UI.GameChatMessageReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Gaming.UI.GameChatOverlayMessageSource name=sender
+            in class type=Windows.Gaming.UI.GameChatMessageReceivedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -157,6 +169,14 @@ interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
 
 class Windows.ApplicationModel.Activation.SplashScreen external
     py winrt.windows.applicationmodel.activation.SplashScreen
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

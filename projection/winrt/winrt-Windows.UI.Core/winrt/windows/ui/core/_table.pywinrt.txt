@@ -31,6 +31,28 @@ enum Windows.UI.Core.AppViewBackButtonVisibility python_type
     py AppViewBackButtonVisibility
     signature enum(Windows.UI.Core.AppViewBackButtonVisibility;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IUICommand]
+    guid dd33fd5b-a24d-5a44-91fe-dd6441770103
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Popups.IUICommand
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.UI.Core.AutomationProviderRequestedEventArgs python_type
     py AutomationProviderRequestedEventArgs
     signature rc(Windows.UI.Core.AutomationProviderRequestedEventArgs;{961ff258-21bf-4b42-a298-fa479d4c52e2})
@@ -453,7 +475,7 @@ class Windows.UI.Core.CoreIndependentInputSourceController python_type closeable
         get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=121
             out class type=Windows.UI.Core.CoreIndependentInputSource return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_for_ivisual_element static
         method CreateForIVisualElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceControllerStatics shape=51 reverse=44 static
             in interface type=Windows.UI.Composition.IVisualElement name=visualElement
@@ -887,9 +909,15 @@ delegate Windows.UI.Core.DispatchedHandler python_type
         method Invoke slot=3 inputs=0 outputs=0 shape=0 reverse=0
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Core.BackRequestedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[BackRequestedEventArgs]
     guid ca821060-002b-526d-8122-982630d7cdbe
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.BackRequestedEventArgs;{d603d28a-e411-4a4e-ba41-6a327a8675bc}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Core.BackRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.BackRequestedEventArgs name=args
 
 interface Windows.UI.Core.IAcceleratorKeyEventArgs
     guid ff1c4c4a-9287-470b-836e-9086e3126ade
@@ -897,15 +925,63 @@ interface Windows.UI.Core.IAcceleratorKeyEventArgs
 interface Windows.UI.Core.IAcceleratorKeyEventArgs2
     guid d300a9f6-2f7e-4873-a555-166e596ee1c5
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IUICommand]
     guid b8770535-6a4b-52b1-b578-f3cdc5007a1f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Popups.IUICommand
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=62 role=get_results
+            out interface type=Windows.UI.Popups.IUICommand return
 
 interface Windows.UI.Core.IAutomationProviderRequestedEventArgs
     guid 961ff258-21bf-4b42-a298-fa479d4c52e2
@@ -1358,6 +1434,66 @@ interface Windows.UI.Core.IInitializeWithCoreWindow python_type
 interface Windows.UI.Core.IInputEnabledEventArgs
     guid 80371d4f-2fd8-4c24-aa86-3163a87b4e5a
 
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointerPoint]
+    guid f6f2cba6-7076-5b59-9631-f6ac32b57695
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.PointerPoint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IUICommand]
+    guid e63de42b-53c3-5e07-90d3-98172d545412
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Popups.IUICommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointerPoint]
+    guid 721fe01c-5ad4-5262-b078-3ab345105db8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.PointerPoint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.PointerPoint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IUICommand]
+    guid f45db3d3-7299-57ce-a73e-297cf0af3083
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Popups.IUICommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=current
+            out interface type=Windows.UI.Popups.IUICommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=117 reverse=101
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.UI.Core.IKeyEventArgs
     guid 5ff5e930-2544-4a17-bd78-1f2fdebb106b
 
@@ -1379,15 +1515,165 @@ interface Windows.UI.Core.ISystemNavigationManagerStatics
 interface Windows.UI.Core.ITouchHitTestingEventArgs
     guid 22f3b823-0b7c-424e-9df7-33d4f962931b
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PointerPoint]
     guid dfa655cf-fde7-5048-b4bf-c909231b7edb
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
     argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=173
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=211
+            pass_array class type=Windows.UI.Input.PointerPoint name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IUICommand]
     guid 105139a1-dcb8-5f65-97ef-cb1bf0b75f9d
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand>
     argument Windows.UI.Popups.IUICommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=173
+            in interface type=Windows.UI.Popups.IUICommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Popups.IUICommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=117 reverse=101
+            in interface type=Windows.UI.Popups.IUICommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.UI.Popups.IUICommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=211
+            pass_array interface type=Windows.UI.Popups.IUICommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.UI.Popups.IUICommand name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointerPoint]
+    guid f0f57411-7786-5174-8752-4c5e834b6da2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
+    argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=117 reverse=66
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IUICommand]
+    guid ed1165e6-f377-5b00-8172-93c1bd04deb4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand>
+    argument Windows.UI.Popups.IUICommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Popups.IUICommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=117 reverse=66
+            in interface type=Windows.UI.Popups.IUICommand name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.UI.Core.IVisibilityChangedEventArgs
     guid bf9918ea-d801-4564-a495-b1e84f8ad085
@@ -1527,136 +1813,268 @@ class Windows.UI.Core.TouchHitTestingEventArgs python_type
             out struct type=Windows.UI.Core.CoreProximityEvaluation return
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.CharacterReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, CharacterReceivedEventArgs]
     guid 5aa4a848-86b2-506b-89ab-5eb5786420c6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.CharacterReceivedEventArgs;{c584659f-99b2-4bcc-bd33-04e63f42902e}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.CharacterReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.CharacterReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.CoreWindowEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, CoreWindowEventArgs]
     guid 1a8ac270-a777-50f7-88a1-e34e56c09449
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.CoreWindowEventArgs;{272b1ef3-c633-4da5-a26c-c6d0f56b29da}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.CoreWindowEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.CoreWindowEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.InputEnabledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, InputEnabledEventArgs]
     guid c9965f1c-3641-51b6-b823-048ec3628fb0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.InputEnabledEventArgs;{80371d4f-2fd8-4c24-aa86-3163a87b4e5a}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.InputEnabledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.InputEnabledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.KeyEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, KeyEventArgs]
     guid eadffdf7-d70e-5688-906c-c2b1229ea16d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.KeyEventArgs;{5ff5e930-2544-4a17-bd78-1f2fdebb106b}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.KeyEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.KeyEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.PointerEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, PointerEventArgs]
     guid 26aabf41-a0fd-5e66-b188-6c74182d00cd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.PointerEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.PointerEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.TouchHitTestingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, TouchHitTestingEventArgs]
     guid c76e9d25-6a96-58fd-874f-ae52bd603af8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.UI.Core.TouchHitTestingEventArgs;{22f3b823-0b7c-424e-9df7-33d4f962931b}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.UI.Core.TouchHitTestingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.TouchHitTestingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreComponentInputSource,Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreComponentInputSource, ClosestInteractiveBoundsRequestedEventArgs]
     guid e2c62d42-0577-5112-9e59-eae159bf39e9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreComponentInputSource;{9f488807-4580-4be8-be68-92a9311713bb});rc(Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs;{347c11d7-f6f8-40e3-b29f-ae50d3e86486}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreComponentInputSource
     argument Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreComponentInputSource name=sender
+            in class type=Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs]
     guid 136dff0d-f7e8-5153-b31c-86390c701880
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreDispatcher;{60db2fa8-b705-4fde-a7d6-ebbb1891d39e});rc(Windows.UI.Core.AcceleratorKeyEventArgs;{ff1c4c4a-9287-470b-836e-9086e3126ade}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreDispatcher
     argument Windows.UI.Core.AcceleratorKeyEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreDispatcher name=sender
+            in class type=Windows.UI.Core.AcceleratorKeyEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, Object]
     guid 6368ae3d-52d4-5290-b936-717a9acf5bea
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.AutomationProviderRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, AutomationProviderRequestedEventArgs]
     guid 54db5c04-81f7-5f46-9fb8-e49beec70a24
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.AutomationProviderRequestedEventArgs;{961ff258-21bf-4b42-a298-fa479d4c52e2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.AutomationProviderRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.AutomationProviderRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.CharacterReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, CharacterReceivedEventArgs]
     guid 73f846a8-0af6-5872-8fb8-ae2f56d8553e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.CharacterReceivedEventArgs;{c584659f-99b2-4bcc-bd33-04e63f42902e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.CharacterReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.CharacterReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, ClosestInteractiveBoundsRequestedEventArgs]
     guid 21a652d2-bfe2-5b2e-a2ab-ca45253be8b0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs;{347c11d7-f6f8-40e3-b29f-ae50d3e86486}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.CoreWindowEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, CoreWindowEventArgs]
     guid d08e4f66-3457-57f2-ba0c-cb347133bd15
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.CoreWindowEventArgs;{272b1ef3-c633-4da5-a26c-c6d0f56b29da}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.CoreWindowEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.CoreWindowEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.CoreWindowPopupShowingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, CoreWindowPopupShowingEventArgs]
     guid b32d6422-78b2-5e00-84a8-6e3167aaabde
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.CoreWindowPopupShowingEventArgs;{26155fa2-5ba5-4ea4-a3b4-2dc7d63c8e26}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.CoreWindowPopupShowingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.CoreWindowPopupShowingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.InputEnabledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, InputEnabledEventArgs]
     guid e230a64a-506a-59c3-bb61-5559ff995663
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.InputEnabledEventArgs;{80371d4f-2fd8-4c24-aa86-3163a87b4e5a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.InputEnabledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.InputEnabledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.KeyEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, KeyEventArgs]
     guid a3ec0774-55ac-5d61-8232-b35c5d35c93c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.KeyEventArgs;{5ff5e930-2544-4a17-bd78-1f2fdebb106b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.KeyEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.KeyEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.PointerEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, PointerEventArgs]
     guid 420e1bb6-e99d-5e64-8e25-07467e3cae9e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.PointerEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.PointerEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.TouchHitTestingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, TouchHitTestingEventArgs]
     guid 197654c9-0c47-502b-9aa1-0deb03ed9702
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.TouchHitTestingEventArgs;{22f3b823-0b7c-424e-9df7-33d4f962931b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.TouchHitTestingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.TouchHitTestingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.VisibilityChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, VisibilityChangedEventArgs]
     guid 14b7f692-5583-52a1-aa42-fc1843c0f748
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.VisibilityChangedEventArgs;{bf9918ea-d801-4564-a495-b1e84f8ad085}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.VisibilityChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.VisibilityChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.WindowActivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, WindowActivatedEventArgs]
     guid 26a73b35-a7f9-52db-88d6-15726deb2523
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.WindowActivatedEventArgs;{179d65e7-4658-4cb6-aa13-41d094ea255e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.WindowActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.WindowActivatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.WindowSizeChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWindow, WindowSizeChangedEventArgs]
     guid 318dbb67-4089-5690-9040-1d454fb2f686
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.CoreWindow;{79b9d5f2-879e-4b89-b798-79e47598030c});rc(Windows.UI.Core.WindowSizeChangedEventArgs;{5a200ec7-0426-47dc-b86c-6f475915e451}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.CoreWindow
     argument Windows.UI.Core.WindowSizeChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Core.CoreWindow name=sender
+            in class type=Windows.UI.Core.WindowSizeChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs]
     guid 29742d27-177d-54c3-b974-616fc45a2b0c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{8f9d0c94-5688-4b0c-a9f1-f931f7fa3dc3};rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Core.ICorePointerRedirector
     argument Windows.UI.Core.PointerEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.UI.Core.ICorePointerRedirector name=sender
+            in class type=Windows.UI.Core.PointerEventArgs name=args
 
 class Windows.UI.Core.VisibilityChangedEventArgs python_type
     py VisibilityChangedEventArgs
@@ -1709,9 +2127,28 @@ class System.Boolean external
 class System.Object external
     py winrt.system.Object
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
@@ -1726,9 +2163,29 @@ struct Windows.Foundation.Rect external
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.System.DispatcherQueue external
     py winrt.windows.system.DispatcherQueue

@@ -106,7 +106,7 @@ class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo python_type st
         method PredictNumberKind slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=141
             out enum32 type=Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
         method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics shape=117 reverse=25 static

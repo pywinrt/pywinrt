@@ -2,6 +2,28 @@ format 4.0
 generator 0.0.0
 namespace Windows.UI.Xaml.Media.Imaging
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IBuffer]
+    guid 51c3d2fd-b8a1-5620-b746-7ee6d533aca3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SvgImageSourceLoadStatus]
+    guid 7c8bc668-4e0b-5924-b7e7-234a11d63d61
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.UI.Xaml.Media.Imaging.BitmapCreateOptions python_type
     py BitmapCreateOptions
     signature enum(Windows.UI.Xaml.Media.Imaging.BitmapCreateOptions;u4)
@@ -160,15 +182,63 @@ delegate Windows.UI.Xaml.Media.Imaging.DownloadProgressEventHandler python_type
             in object name=sender
             in class type=Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs name=e
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IBuffer]
     guid 3bee8834-b9a7-5a80-a746-5ef097227878
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SvgImageSourceLoadStatus]
     guid f19df5c2-2b78-53a9-8d38-5ca8dbb5dbc6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus return
 
 interface Windows.UI.Xaml.Media.Imaging.IBitmapImage
     guid 31af3271-e3b4-442d-a341-4c0226b2725b
@@ -300,7 +370,7 @@ class Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method set_bitmap_async
         method SetBitmapAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.Imaging.ISoftwareBitmapSource shape=51 reverse=24
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
@@ -407,16 +477,28 @@ class Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs python_type
     requires Windows.UI.Xaml.Media.Imaging.ISvgImageSourceOpenedEventArgs
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Media.Imaging.SvgImageSource,Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SvgImageSource, SvgImageSourceFailedEventArgs]
     guid d723938d-efee-5a0c-ab3e-1e1db3c9a216
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Media.Imaging.SvgImageSource;{03e1cec3-0ca8-4a4e-8d7c-c808a0838586});rc(Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs;{68bb3170-3ccc-4035-ac01-9834543d744e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Media.Imaging.SvgImageSource
     argument Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Media.Imaging.SvgImageSource name=sender
+            in class type=Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Media.Imaging.SvgImageSource,Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SvgImageSource, SvgImageSourceOpenedEventArgs]
     guid 9e321151-8b27-5e18-9ea3-50520aceb7ef
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Media.Imaging.SvgImageSource;{03e1cec3-0ca8-4a4e-8d7c-c808a0838586});rc(Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs;{85ef4c16-748e-4008-95c7-6a23dd7316db}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Media.Imaging.SvgImageSource
     argument Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Media.Imaging.SvgImageSource name=sender
+            in class type=Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs name=args
 
 class Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource python_type
     py VirtualSurfaceImageSource
@@ -470,13 +552,32 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskInstance external
     py winrt.windows.applicationmodel.background._IBackgroundTaskInstance
     guid 865bda7a-21d8-4573-8f32-928a1b0641f6
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

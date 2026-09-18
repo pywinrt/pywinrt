@@ -14,7 +14,10 @@
 #include "interp.h"
 #include "members.h"
 #include "objects.h"
+#include "protocols.h"
 #include "types.h"
+
+#include <vector>
 
 namespace py::interp
 {
@@ -289,18 +292,30 @@ namespace py::interp
             return false;
         }
 
-        PyType_Slot slots[] = {
-            {Py_tp_methods, reinterpret_cast<void*>(generic_wrapper_methods)},
-            {Py_tp_getset,
-             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))},
-            {}};
+        std::vector<PyType_Slot> slots;
 
+        if (generic)
+        {
+            slots.push_back(
+                {Py_tp_methods, reinterpret_cast<void*>(generic_wrapper_methods)});
+        }
+
+        slots.push_back(
+            {Py_tp_getset,
+             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))});
+
+        add_protocol_slots(record, slots);
+
+        slots.push_back({});
+
+        // The Python type of a parameterized interface is what each instance of
+        // it derives from, so unlike every other wrapper this one is a base.
         PyType_Spec spec{
             entry.tp_name.c_str(),
             static_cast<int>(object_basicsize),
             0,
-            Py_TPFLAGS_DEFAULT,
-            generic ? slots : slots + 1};
+            Py_TPFLAGS_DEFAULT | (generic ? Py_TPFLAGS_BASETYPE : 0),
+            slots.data()};
 
         pytype_handle type{
             register_python_type(proj.module, &spec, bases.get(), nullptr)};
@@ -349,7 +364,12 @@ namespace py::interp
             return false;
         }
 
-        return bind_methods(collected, entry.py_type, nullptr);
+        if (!bind_methods(collected, entry.py_type, nullptr))
+        {
+            return false;
+        }
+
+        return bind_protocol_methods(record, entry.py_type);
     }
 
     /**
@@ -456,15 +476,23 @@ namespace py::interp
         auto const composable = (record.flags() & table::type_flags::composable) != 0;
         auto const is_static = (record.flags() & table::type_flags::static_class) != 0;
 
-        // _from() and _assign_array_() say what to do with an instance,
-        // so a static class, which has none, does not get them. The slot
-        // is first so that it can be skipped by starting one along.
-        PyType_Slot slots[] = {
-            {Py_tp_methods, reinterpret_cast<void*>(class_methods)},
-            {Py_tp_new, reinterpret_cast<void*>(class_new)},
+        std::vector<PyType_Slot> slots;
+
+        // _from() and _assign_array_() say what to do with an instance, so a
+        // static class, which has none, does not get them.
+        if (entry.guid)
+        {
+            slots.push_back({Py_tp_methods, reinterpret_cast<void*>(class_methods)});
+        }
+
+        slots.push_back({Py_tp_new, reinterpret_cast<void*>(class_new)});
+        slots.push_back(
             {Py_tp_getset,
-             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))},
-            {}};
+             reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))});
+
+        add_protocol_slots(record, slots);
+
+        slots.push_back({});
 
         // A static class has no instances at all, and a composable one has
         // to be derivable because the projection derives from it.
@@ -473,7 +501,7 @@ namespace py::interp
             is_static ? 0 : static_cast<int>(object_basicsize),
             0,
             Py_TPFLAGS_DEFAULT | (composable ? Py_TPFLAGS_BASETYPE : 0),
-            entry.guid ? slots : slots + 1};
+            slots.data()};
 
         pytype_handle type{register_python_type(
             proj.module, &spec, is_static ? nullptr : bases.get(), metaclass)};
@@ -495,6 +523,86 @@ namespace py::interp
             return false;
         }
 
-        return bind_methods(collected, entry.py_type, metaclass);
+        if (!bind_methods(collected, entry.py_type, metaclass))
+        {
+            return false;
+        }
+
+        return bind_protocol_methods(record, entry.py_type);
     }
 } // namespace py::interp
+
+/**
+ * Wraps @p value as the type that @p qualified_name is bound to.
+ *
+ * This and py::unwrap_object() are how a compiled module hands a WinRT object
+ * to Python and takes one back now that it shares no generated code with the
+ * package that projects the type: it names the type and the runtime, which
+ * built that type from a table, does the rest.
+ */
+PyObject* py::wrap_object(
+    winrt::Windows::Foundation::IInspectable const& value,
+    char const* qualified_name) noexcept
+{
+    if (!value)
+    {
+        Py_RETURN_NONE;
+    }
+
+    auto const type = get_python_type(qualified_name);
+    if (!type)
+    {
+        return nullptr;
+    }
+
+    auto const info = py::interp::get_type_entry(type);
+    if (!info || !info->guid)
+    {
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s' is not a type a projection table gives values of",
+            qualified_name);
+        return nullptr;
+    }
+
+    void* abi{};
+
+    auto const hr
+        = static_cast<::IUnknown*>(winrt::get_abi(value))
+              ->QueryInterface(*static_cast<winrt::guid const*>(info->guid), &abi);
+    if (hr != 0)
+    {
+        try
+        {
+            winrt::check_hresult(hr);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+    }
+
+    return py::interp::wrap_abi(info->py_type, abi);
+}
+
+/**
+ * The @p iid interface of the WinRT object @p obj wraps.
+ *
+ * @returns @c false with a Python error set. A null @p result with a @c true
+ * return is None, which is the empty interface.
+ */
+bool py::unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noexcept
+{
+    try
+    {
+        *result = py::interp::unwrap_abi(obj, &iid);
+
+        return true;
+    }
+    catch (...)
+    {
+        to_PyErr();
+        return false;
+    }
+}

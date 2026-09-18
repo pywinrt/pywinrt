@@ -2,6 +2,28 @@ format 4.0
 generator 0.0.0
 namespace Windows.Gaming.Input.ForceFeedback
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ForceFeedbackLoadEffectResult]
+    guid f8220a41-f738-51e8-89ba-76bbd66158cb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Gaming.Input.ForceFeedback.ConditionForceEffect python_type
     py ConditionForceEffect
     signature rc(Windows.Gaming.Input.ForceFeedback.ConditionForceEffect;{a17fba0c-2ae4-48c2-8063-eabd0777cb89})
@@ -134,15 +156,63 @@ class Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor python_type
             in interface type=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect name=effect
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ForceFeedbackLoadEffectResult]
     guid 21f834fc-e845-5ab9-bf85-9534e2397798
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult return
 
 interface Windows.Gaming.Input.ForceFeedback.IConditionForceEffect
     guid 32d1ea68-3695-4e69-85c0-cd1944189140
@@ -275,6 +345,21 @@ class Windows.Gaming.Input.ForceFeedback.RampForceEffect activatable python_type
 
 class System.Boolean external
     py winrt.system.Boolean
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 struct Windows.Foundation.Numerics.Vector3 external
     py winrt.windows.foundation.numerics.Vector3

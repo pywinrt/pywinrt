@@ -2,15 +2,65 @@ format 4.0
 generator 0.0.0
 namespace Windows.Graphics.Printing.PrintSupport
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PrintSupportPrintTicketElement]
     guid 8e4a9120-da3e-5f31-8739-405a3b2dbfb5
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement;{4b2a4489-730d-5be7-80e6-8332941abf13}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PrintSupportPrintTicketElement]
+    guid 33a97a91-9bf9-59a7-9da7-b639e45f0647
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement;{4b2a4489-730d-5be7-80e6-8332941abf13}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
     guid 9c90151e-ad1b-5081-a491-4a2d94244f2d
@@ -412,28 +462,52 @@ enum Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind python_type
     signature enum(Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintSupportExtensionSession, PrintSupportCommunicationErrorDetectedEventArgs]
     guid cee7c5ea-81e8-54a0-93c6-9f926e1eeb3d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs;{9c90151e-ad1b-5081-a491-4a2d94244f2d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession name=sender
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintSupportExtensionSession, PrintSupportPrintDeviceCapabilitiesChangedEventArgs]
     guid f9203731-8ec4-5001-a5b7-b67fee4ca00b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs;{15969bf0-9028-5722-8a37-7d7c34b41dd6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession name=sender
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintSupportExtensionSession, PrintSupportPrintTicketValidationRequestedEventArgs]
     guid ad13135a-1c8f-5ebd-a426-eb7434639d11
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs;{338e4e69-db55-55c7-8338-ef64680a8f90}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession name=sender
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintSupportExtensionSession, PrintSupportPrinterSelectedEventArgs]
     guid 0cff2f5c-9b0d-56d5-afe8-c213f2b3793d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession;{eea45f1a-f4c6-54b3-a0b8-a559839aa4c3});rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs;{7b1cb7d9-a8a4-5c09-adb2-66165f817977}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
     argument Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession name=sender
+            in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs name=args
 
 enum Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus python_type
     py WorkflowPrintTicketValidationStatus
@@ -474,6 +548,18 @@ class Windows.Devices.Printers.IppPrintDevice external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
 
 class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket external
     py winrt.windows.graphics.printing.printticket.WorkflowPrintTicket

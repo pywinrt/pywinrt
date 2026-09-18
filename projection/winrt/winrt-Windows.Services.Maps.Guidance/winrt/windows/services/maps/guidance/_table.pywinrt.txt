@@ -450,49 +450,285 @@ interface Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics
 interface Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs
     guid fdac160b-9e8d-4de3-a9fa-b06321d18db9
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceLaneInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GuidanceLaneInfo]
+    guid 45960d72-1bf6-5a1d-a17f-e83f56f1ab57
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.Guidance.GuidanceLaneInfo;{8404d114-6581-43b7-ac15-c9079bf90df1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Maps.Guidance.GuidanceLaneInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceManeuver> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GuidanceManeuver]
+    guid b5780d67-8a8b-558f-a4b6-c4531ef32ec8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.Guidance.GuidanceManeuver;{fc09326c-ecc9-4928-a2a1-7232b99b94a1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Maps.Guidance.GuidanceManeuver
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceRoadSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GuidanceRoadSegment]
+    guid f7c614c4-0fca-5eda-804c-85c829956334
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.Guidance.GuidanceRoadSegment;{b32758a6-be78-4c63-afe7-6c2957479b3e}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Maps.Guidance.GuidanceRoadSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GuidanceLaneInfo]
+    guid 4d4ce4d8-7ce0-5168-ab29-6bcf7f198a58
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Maps.Guidance.GuidanceLaneInfo;{8404d114-6581-43b7-ac15-c9079bf90df1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Maps.Guidance.GuidanceLaneInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Maps.Guidance.GuidanceLaneInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=117 reverse=101
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceLaneInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GuidanceManeuver]
+    guid 74a37092-2641-5c3d-b3cb-689dc8aba22e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Maps.Guidance.GuidanceManeuver;{fc09326c-ecc9-4928-a2a1-7232b99b94a1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Maps.Guidance.GuidanceManeuver
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Maps.Guidance.GuidanceManeuver return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=117 reverse=101
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceManeuver name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GuidanceRoadSegment]
+    guid 148cb8ff-3ab9-53ab-8824-256a62047b43
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Maps.Guidance.GuidanceRoadSegment;{b32758a6-be78-4c63-afe7-6c2957479b3e}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Maps.Guidance.GuidanceRoadSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=117 reverse=101
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GuidanceLaneInfo]
     guid 81493670-e515-5c62-b34c-6e3d996cad31
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceLaneInfo;{8404d114-6581-43b7-ac15-c9079bf90df1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceLaneInfo>
     argument Windows.Services.Maps.Guidance.GuidanceLaneInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceLaneInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Maps.Guidance.GuidanceLaneInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceLaneInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceLaneInfo> shape=117 reverse=66
+            in class type=Windows.Services.Maps.Guidance.GuidanceLaneInfo name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GuidanceManeuver]
     guid 875644d8-57a4-59d6-9d2c-5d450d39d2f6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceManeuver;{fc09326c-ecc9-4928-a2a1-7232b99b94a1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceManeuver>
     argument Windows.Services.Maps.Guidance.GuidanceManeuver
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceManeuver> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Maps.Guidance.GuidanceManeuver return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceManeuver name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceManeuver> shape=117 reverse=66
+            in class type=Windows.Services.Maps.Guidance.GuidanceManeuver name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GuidanceRoadSegment]
     guid f04c7cc2-4d54-5244-beb2-8f4f05c184e6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.Guidance.GuidanceRoadSegment;{b32758a6-be78-4c63-afe7-6c2957479b3e}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceRoadSegment>
     argument Windows.Services.Maps.Guidance.GuidanceRoadSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.Guidance.GuidanceRoadSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Guidance.GuidanceRoadSegment> shape=117 reverse=66
+            in class type=Windows.Services.Maps.Guidance.GuidanceRoadSegment name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[GuidanceNavigator, Object]
     guid 3f496c35-3dca-5e91-8730-6ef77e9d70bd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Maps.Guidance.GuidanceNavigator
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Maps.Guidance.GuidanceNavigator name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GuidanceNavigator, GuidanceAudioNotificationRequestedEventArgs]
     guid 743db36f-e9aa-557a-9fd7-304c9b0499df
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs;{ca2aa24a-c7c2-4d4c-9d7c-499576bceddb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Maps.Guidance.GuidanceNavigator
     argument Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Maps.Guidance.GuidanceNavigator name=sender
+            in class type=Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GuidanceNavigator, GuidanceReroutedEventArgs]
     guid 61b92b1b-f22f-581b-bfa0-4868c314c63a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs;{115d4008-d528-454e-bb94-a50341d2c9f1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Maps.Guidance.GuidanceNavigator
     argument Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Maps.Guidance.GuidanceNavigator name=sender
+            in class type=Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.Guidance.GuidanceNavigator,Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GuidanceNavigator, GuidanceUpdatedEventArgs]
     guid 82b3f7df-bf13-5445-aadc-ec61b50fbb46
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.Guidance.GuidanceNavigator;{08f17ef7-8e3f-4d9a-be8a-108f9a012c67});rc(Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs;{fdac160b-9e8d-4de3-a9fa-b06321d18db9}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Maps.Guidance.GuidanceNavigator
     argument Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Maps.Guidance.GuidanceNavigator name=sender
+            in class type=Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -514,6 +750,22 @@ class Windows.Devices.Geolocation.Geopath external
 
 class Windows.Devices.Geolocation.Geopoint external
     py winrt.windows.devices.geolocation.Geopoint
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Services.Maps.MapRoute external
     py winrt.windows.services.maps.MapRoute

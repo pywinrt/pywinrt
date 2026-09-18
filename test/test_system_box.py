@@ -1,7 +1,3 @@
-from test._util import skip_without_projection
-
-skip_without_projection()
-
 import datetime
 import unittest
 import uuid

@@ -2,6 +2,17 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Display.Core
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Display.Core.DisplayMuxDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DisplayMuxDevice]
+    guid 61c7b405-e1e1-53b9-a440-4bae01636d23
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Display.Core.DisplayMuxDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Devices.Display.Core.DisplayAdapter python_type
     py DisplayAdapter
     signature rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5})
@@ -143,7 +154,7 @@ class Windows.Devices.Display.Core.DisplayManager python_type closeable
         remove remove_PathsFailedOrInvalidated slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=400
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create static
         method Create slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerStatics shape=51 reverse=24 static
             in enum_u32 type=Windows.Devices.Display.Core.DisplayManagerOptions name=options
@@ -345,7 +356,7 @@ class Windows.Devices.Display.Core.DisplayMuxDevice python_type closeable
         remove remove_Changed slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=26 reverse=200
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDeviceStatics shape=51 reverse=44 static
             in string name=deviceInterfaceId
@@ -823,10 +834,34 @@ enum Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding python_type
     py DisplayWireFormatPixelEncoding
     signature enum(Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding;i4)
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DisplayMuxDevice]
     guid 066c3b59-099b-5f37-89eb-1d54fd93e9b3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Display.Core.DisplayMuxDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Display.Core.DisplayMuxDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Display.Core.DisplayMuxDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Display.Core.DisplayMuxDevice return
 
 interface Windows.Devices.Display.Core.IDisplayAdapter
     guid a56f5287-f000-5f2e-b5ac-3783a2b69af5
@@ -951,114 +986,888 @@ interface Windows.Devices.Display.Core.IDisplayWireFormatFactory
 interface Windows.Devices.Display.Core.IDisplayWireFormatStatics
     guid c575a22d-c3e6-5f7a-bdfb-87c6ab8661d5
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayAdapter> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DisplayAdapter]
+    guid db889bc5-3fd5-5b02-a2ea-d8daab6c33f2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Display.Core.DisplayAdapter
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayModeInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DisplayModeInfo]
+    guid dabee849-f1c8-5dab-abe5-effa5110894c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayModeInfo;{48d513a0-f79b-5a74-a05e-da821f470868}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Display.Core.DisplayModeInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayPath> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DisplayPath]
+    guid 4c0352b3-bb9e-52a7-afa7-c946928c12c9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayPath;{b3dfd64a-7460-5cde-811b-d5ae9f3d9f84}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Display.Core.DisplayPath
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DisplayTarget]
     guid ccb2e527-3a37-50fd-8d28-59e9db8cf9d9
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.Display.Core.DisplayTarget
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayView> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DisplayView]
+    guid 8b18679f-3a2d-5d78-8409-2af682e7433c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Display.Core.DisplayView;{b0c98ca1-b759-5b59-b1ad-f0786aa9e53d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Display.Core.DisplayView
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, Object]]
     guid f3b20528-e3b3-5331-b2d0-0c2623aee785
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RectInt32]
     guid d6222360-b82e-5eed-9eab-2e275b36e47e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Graphics.RectInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DisplayAdapter]
+    guid eeaa87f4-4128-5f75-9eab-d7c8a2e9e14d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Display.Core.DisplayAdapter
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Display.Core.DisplayAdapter return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Display.Core.DisplayAdapter name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DisplayModeInfo]
+    guid eda19941-13b1-5745-b866-4eb39d0ad62c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Display.Core.DisplayModeInfo;{48d513a0-f79b-5a74-a05e-da821f470868}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Display.Core.DisplayModeInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Display.Core.DisplayModeInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Display.Core.DisplayModeInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DisplayPath]
+    guid 957cdd72-e861-5fe4-9748-216eeb59a9b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Display.Core.DisplayPath;{b3dfd64a-7460-5cde-811b-d5ae9f3d9f84}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Display.Core.DisplayPath
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Display.Core.DisplayPath return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Display.Core.DisplayPath name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DisplayTarget]
+    guid 069f9407-81b5-526b-8c63-cdf8ed207ede
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Display.Core.DisplayTarget
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Display.Core.DisplayTarget return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Display.Core.DisplayTarget name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DisplayView]
+    guid a6fbd467-44c0-5ab4-9ad1-25c6eac704d3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Display.Core.DisplayView;{b0c98ca1-b759-5b59-b1ad-f0786aa9e53d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Display.Core.DisplayView
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Display.Core.DisplayView return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Display.Core.DisplayView name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, Object]]
+    guid 4f25059a-0b9a-5f25-9b9e-4b9f1d22ff65
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RectInt32]
+    guid 1abdf3f6-23f1-55ad-babd-f4cd908406e7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.RectInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=22 role=current
+            out struct type=Windows.Graphics.RectInt32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101
+            fill_array struct type=Windows.Graphics.RectInt32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, Object]
     guid 3bda1540-d089-5a1a-8f0d-94eba8068e58
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.Guid
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43
+            out object return
 
-interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete
+interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[Guid, Object]
     guid 5ee3189c-7dbf-5998-ad07-5414fb82567c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     argument System.Guid
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=177 reverse=136 role=insert
+            in guid name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=33 reverse=158 role=remove
+            in guid name=key
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, Object]
     guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     argument System.Guid
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=second
 
 interface Windows.Foundation.IReference<System.Boolean> concrete
+    py winrt.windows.foundation._IReference[Boolean]
     guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Boolean
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Boolean> shape=4 reverse=22 role=value
+            out boolean return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> concrete
+    py winrt.windows.foundation._IReference[DisplayPresentationRate]
     guid 08882ddb-a981-5887-b751-106993d66229
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Devices.Display.Core.DisplayPresentationRate;struct(Windows.Foundation.Numerics.Rational;u4;u4);i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Devices.Display.Core.DisplayPresentationRate
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate> shape=4 reverse=22 role=value
+            out struct type=Windows.Devices.Display.Core.DisplayPresentationRate return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Graphics.SizeInt32> concrete
+    py winrt.windows.foundation._IReference[SizeInt32]
     guid b77aa86d-2d6e-55f1-8f99-64ac5c05328b
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Graphics.SizeInt32;i4;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Graphics.SizeInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Graphics.SizeInt32> shape=4 reverse=22 role=value
+            out struct type=Windows.Graphics.SizeInt32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DisplayAdapter]
     guid b491b91f-2107-5c1c-aa64-07f39803e64c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayAdapter;{a56f5287-f000-5f2e-b5ac-3783a2b69af5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayAdapter>
     argument Windows.Devices.Display.Core.DisplayAdapter
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayAdapter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayAdapter> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Display.Core.DisplayAdapter return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Display.Core.DisplayAdapter name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=117 reverse=66
+            in class type=Windows.Devices.Display.Core.DisplayAdapter name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DisplayModeInfo]
     guid 339be624-f7dc-562c-b5d2-1b4405bdb7e2
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayModeInfo;{48d513a0-f79b-5a74-a05e-da821f470868}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayModeInfo>
     argument Windows.Devices.Display.Core.DisplayModeInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayModeInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayModeInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Display.Core.DisplayModeInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Display.Core.DisplayModeInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=117 reverse=66
+            in class type=Windows.Devices.Display.Core.DisplayModeInfo name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DisplayPath]
     guid eb9b91c4-3d7a-52f6-882b-4b850156e12b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayPath;{b3dfd64a-7460-5cde-811b-d5ae9f3d9f84}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayPath>
     argument Windows.Devices.Display.Core.DisplayPath
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayPath> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayPath> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Display.Core.DisplayPath return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Display.Core.DisplayPath name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=117 reverse=66
+            in class type=Windows.Devices.Display.Core.DisplayPath name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DisplayTarget]
     guid 5011224d-182d-5d88-a56b-d543c6be3621
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayTarget;{aec57c6f-47b4-546b-987c-e73fa791fe3a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget>
     argument Windows.Devices.Display.Core.DisplayTarget
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayTarget> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayTarget> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Display.Core.DisplayTarget return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Display.Core.DisplayTarget name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=117 reverse=66
+            in class type=Windows.Devices.Display.Core.DisplayTarget name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DisplayView]
     guid 442a33f9-7b39-5c9e-84d7-b43cf55171d4
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Display.Core.DisplayView;{b0c98ca1-b759-5b59-b1ad-f0786aa9e53d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayView>
     argument Windows.Devices.Display.Core.DisplayView
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Display.Core.DisplayView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Display.Core.DisplayView> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Display.Core.DisplayView return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Display.Core.DisplayView name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=117 reverse=66
+            in class type=Windows.Devices.Display.Core.DisplayView name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayManager, DisplayManagerChangedEventArgs]
     guid 04d7559d-5bbd-5b73-8782-c2ceea70bd5d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerChangedEventArgs;{6abfa285-6cca-5731-bcdc-42e5d2f5c50f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplayManager
     argument Windows.Devices.Display.Core.DisplayManagerChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplayManager name=sender
+            in class type=Windows.Devices.Display.Core.DisplayManagerChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayManager, DisplayManagerDisabledEventArgs]
     guid d836ed01-b36e-574c-92d8-86a1b80ba56d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs;{8726dde4-6793-5973-a11f-5ffbc93fdb90}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplayManager
     argument Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplayManager name=sender
+            in class type=Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayManager, DisplayManagerEnabledEventArgs]
     guid a92a0c2b-f309-5bc8-bf69-47c844d6da41
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs;{f0cf3f6f-42fa-59a2-b297-26e1713de848}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplayManager
     argument Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplayManager name=sender
+            in class type=Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayManager, DisplayManagerPathsFailedOrInvalidatedEventArgs]
     guid 28c6cddb-754f-574d-ac7d-be8d773dd4dd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayManager;{4ed9245b-15ec-56e2-9072-7fe5084a31a7});rc(Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs;{03a65659-1dec-5c15-b2a2-8fe9129869fe}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplayManager
     argument Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplayManager name=sender
+            in class type=Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayMuxDevice,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayMuxDevice, Object]
     guid f63ed5f6-c9fb-5876-9e02-a31a9fee1157
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplayMuxDevice;{d81c4925-83dd-52c9-ab4e-e0833fc75068});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplayMuxDevice
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplayMuxDevice name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplaySource, Object]
     guid 65f431e8-efc4-552f-8404-321531583839
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Display.Core.DisplaySource;{ecd15fc1-eadc-51bc-971d-3bc628db2dd4});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Display.Core.DisplaySource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Display.Core.DisplaySource name=sender
+            in object name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -1075,6 +1884,13 @@ class Windows.Devices.Display.DisplayMonitor external
 enum Windows.Devices.Display.DisplayMonitorUsageKind external
     py winrt.windows.devices.display.DisplayMonitorUsageKind
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
@@ -1082,9 +1898,65 @@ interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Rational external
     py winrt.windows.foundation.numerics.Rational

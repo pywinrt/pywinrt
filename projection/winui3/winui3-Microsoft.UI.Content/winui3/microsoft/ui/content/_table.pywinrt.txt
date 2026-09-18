@@ -90,7 +90,7 @@ class Microsoft.UI.Content.ChildSiteLink python_type closeable
         remove remove_PreviousSiblingAutomationProviderRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=397
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
         method Connect slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=162
             in class type=Microsoft.UI.Content.ContentIsland name=content
@@ -318,7 +318,7 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create static
         method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 reverse=24 static
             in class type=Microsoft.UI.Composition.Visual name=Root
@@ -548,7 +548,7 @@ class Microsoft.UI.Content.ContentSite composable python_type closeable
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_island_state_change_deferral
         method GetIslandStateChangeDeferral slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=266
             out class type=Microsoft.UI.Content.ContentDeferral return
@@ -749,7 +749,7 @@ class Microsoft.UI.Content.DesktopAttachedSiteBridge python_type closeable
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
         method Connect slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4 reverse=62
             in class type=Microsoft.UI.Content.ContentIsland name=content
@@ -873,7 +873,7 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
         remove remove_PreviousSiblingAutomationProviderRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=397
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
         method Connect slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=121
             in class type=Microsoft.UI.Content.ContentIsland name=content
@@ -948,7 +948,7 @@ class Microsoft.UI.Content.DesktopSiteBridge composable python_type closeable
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
         method Connect slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4 reverse=99
             in class type=Microsoft.UI.Content.ContentIsland name=content
@@ -1102,7 +1102,7 @@ interface Microsoft.UI.Content.IContentSiteBridge python_type closeable
         put put_OverrideScale slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteBridge shape=1 reverse=391
             in single name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 interface Microsoft.UI.Content.IContentSiteEnvironment
     guid 685d085d-be53-55d1-aec4-ba2273d5468b
@@ -1193,56 +1193,265 @@ interface Microsoft.UI.Content.IDesktopSiteBridgeFactory
 interface Microsoft.UI.Content.IDesktopSiteBridgeStatics
     guid e0b38daf-9cd4-50c5-83ee-c76e3cf34eba
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.ChildSiteLink> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.ChildSiteLink> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ChildSiteLink]
     guid 20eed339-c583-5027-91cc-a3eee3919004
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Content.ChildSiteLink;{b5a64814-608b-5fb7-a7cb-eb628fd588cd}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Content.ChildSiteLink
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.ChildSiteLink> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.DesktopPopupSiteBridge> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.DesktopPopupSiteBridge> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DesktopPopupSiteBridge]
     guid 63e787bb-0f05-5896-84ce-a63268343fd8
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Content.DesktopPopupSiteBridge;{84eaab23-f716-5ad8-ac00-3d77c01d42cc}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Content.DesktopPopupSiteBridge
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.DesktopPopupSiteBridge> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ChildSiteLink]
+    guid 95e02266-15a8-59ae-8a00-06d24fa34e40
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Content.ChildSiteLink;{b5a64814-608b-5fb7-a7cb-eb628fd588cd}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Content.ChildSiteLink
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Content.ChildSiteLink return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Content.ChildSiteLink name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.ChildSiteLink> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DesktopPopupSiteBridge]
+    guid cc9ed456-5402-5d3e-86b9-d3f25708e44d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Content.DesktopPopupSiteBridge;{84eaab23-f716-5ad8-ac00-3d77c01d42cc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Content.DesktopPopupSiteBridge
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Content.DesktopPopupSiteBridge return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Content.DesktopPopupSiteBridge name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Content.DesktopPopupSiteBridge> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.IReference<Microsoft.UI.Content.ContentLayoutDirection> concrete
+    py winrt.windows.foundation._IReference[ContentLayoutDirection]
     guid 76e53eed-3539-540b-8d51-4206bca63f5f
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Microsoft.UI.Content.ContentLayoutDirection;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Microsoft.UI.Content.ContentLayoutDirection
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Microsoft.UI.Content.ContentLayoutDirection> shape=4 reverse=22 role=value
+            out enum32 type=Microsoft.UI.Content.ContentLayoutDirection return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentIsland, ContentIslandAutomationProviderRequestedEventArgs]
     guid 3b44f287-f0ef-5d10-ab5f-1b324f45f7da
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Content.ContentIsland;{5b2504ba-361c-50aa-bd6e-4122c6d93889});rc(Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs;{9fe24bed-2b9c-5137-887f-403c94841824}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.ContentIsland
     argument Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Content.ContentIsland name=sender
+            in class type=Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentIsland, ContentIslandStateChangedEventArgs]
     guid ceb771a4-bf66-529d-883a-602d592f390c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Content.ContentIsland;{5b2504ba-361c-50aa-bd6e-4122c6d93889});rc(Microsoft.UI.Content.ContentIslandStateChangedEventArgs;{c828eeb2-0c62-5b40-9d48-77c06083c278}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.ContentIsland
     argument Microsoft.UI.Content.ContentIslandStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Content.ContentIsland name=sender
+            in class type=Microsoft.UI.Content.ContentIslandStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentSettingChangedEventArgs]
     guid 1ad20c79-1495-5501-ac8a-a38845e8f218
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Content.ContentIslandEnvironment;{c334236d-da88-566d-811d-74aef2eba978});rc(Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs;{76478051-fc80-5eec-a3f3-62606abe06b7}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.ContentIslandEnvironment
     argument Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Content.ContentIslandEnvironment name=sender
+            in class type=Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentStateChangedEventArgs]
     guid c7742341-cfd5-5ef6-ab2a-d38c65b780b5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Content.ContentIslandEnvironment;{c334236d-da88-566d-811d-74aef2eba978});rc(Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs;{8970fa4f-10ba-5f67-970b-8c72bc009b67}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.ContentIslandEnvironment
     argument Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Content.ContentIslandEnvironment name=sender
+            in class type=Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentSite,Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentSite, ContentSiteRequestedStateChangedEventArgs]
     guid b34e5337-73e6-5227-8921-6321eea32a9b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Content.ContentSite;{996c60c4-02b2-5eef-93b0-dd6b1ec2fd7b});rc(Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs;{1b55fd1d-7292-562b-b4a1-d4de7972e684}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.ContentSite
     argument Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Content.ContentSite name=sender
+            in class type=Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IContentSiteAutomation, ContentSiteAutomationProviderRequestedEventArgs]
     guid ee3f9952-86b4-5871-b8f2-b5826fe3d123
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{db4f4683-cd76-50d0-9ae1-044ceb3d3c7a};rc(Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs;{73a093b9-55d4-5598-b70e-6250b732f821}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Content.IContentSiteAutomation
     argument Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Content.IContentSiteAutomation name=sender
+            in class type=Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs name=args
 
 delegate Microsoft.UI.ClosableNotifierHandler external
     py winui3.microsoft.ui.ClosableNotifierHandler
@@ -1278,11 +1487,37 @@ interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
 
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet

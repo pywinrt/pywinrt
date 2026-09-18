@@ -2,6 +2,30 @@ format 4.0
 generator 0.0.0
 namespace Windows.Gaming.Input.Custom
 
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[GipFirmwareUpdateResult, GipFirmwareUpdateProgress]
+    guid 065c16af-49dc-5c94-afe2-9385937facc9
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Gaming.Input.Custom.GipFirmwareUpdateResult;{6b794d32-8553-4292-8e03-e16651a2f8bc});struct(Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress;f8;u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateResult
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=59 reverse=6
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> name=asyncInfo
+            in struct type=Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[GipFirmwareUpdateResult, GipFirmwareUpdateProgress]
+    guid 61b95949-a027-51d8-9f33-37927451502b
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Gaming.Input.Custom.GipFirmwareUpdateResult;{6b794d32-8553-4292-8e03-e16651a2f8bc});struct(Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress;f8;u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateResult
+    argument Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Gaming.Input.Custom.GameControllerFactoryManager static python_type
     py GameControllerFactoryManager
     factory Windows.Gaming.Input.Custom.IGameControllerFactoryManagerStatics
@@ -140,11 +164,40 @@ class Windows.Gaming.Input.Custom.HidGameControllerProvider python_type
             in uint8 name=reportId
             pass_array uint8 name=reportBuffer
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[GipFirmwareUpdateResult, GipFirmwareUpdateProgress]
     guid bfaa48bd-155f-5112-bd86-e01d6f7cd405
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Gaming.Input.Custom.GipFirmwareUpdateResult;{6b794d32-8553-4292-8e03-e16651a2f8bc});struct(Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress;f8;u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Gaming.Input.Custom.GipFirmwareUpdateResult
     argument Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Gaming.Input.Custom.GipFirmwareUpdateResult return
 
 interface Windows.Gaming.Input.Custom.ICustomGameControllerFactory python_type
     py _ICustomGameControllerFactory
@@ -301,6 +354,25 @@ class Windows.Gaming.Input.Custom.XusbGameControllerProvider python_type
         method SetVibration slot=6 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Custom.IXusbGameControllerProvider shape=45 reverse=17
             in double name=lowFrequencyMotorSpeed
             in double name=highFrequencyMotorSpeed
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Gaming.Input.IGameController external
     py winrt.windows.gaming.input._IGameController

@@ -724,120 +724,419 @@ interface Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCerti
 interface Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs
     guid 2583bf17-02ff-49fe-a73c-03f37566c691
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EmailCertificateValidationStatus]
     guid 7e326530-7449-51a7-b1bc-c43533a78e06
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Email.EmailCertificateValidationStatus
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EmailRecipient]
+    guid 5f18cab2-236d-5ec5-bc64-e3e63d29e774
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Email.EmailRecipient
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EmailRecipientResolutionResult]
     guid cae3c1c4-c689-5787-976f-1a158ffdd16b
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Email.EmailRecipientResolutionResult;{918338fa-8d8d-4573-80d1-07172a34b98d}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Email.EmailRecipientResolutionResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> return
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Certificate]
+    guid 0c7d1423-e8fd-5a91-b55c-8bfbe7ac2d40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EmailCertificateValidationStatus]
+    guid 1cfe3d41-16a5-5026-a6fe-2cb0a303a605
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Email.EmailCertificateValidationStatus
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.Email.EmailCertificateValidationStatus return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.Email.EmailCertificateValidationStatus name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EmailRecipient]
+    guid 12238d88-1a2f-5e7a-89b1-8dc140536bac
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Email.EmailRecipient
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Email.EmailRecipient name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EmailRecipientResolutionResult]
+    guid 5c040cd6-9593-5e74-9a5e-7284cd1b7200
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Email.EmailRecipientResolutionResult;{918338fa-8d8d-4573-80d1-07172a34b98d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Email.EmailRecipientResolutionResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Email.EmailRecipientResolutionResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Email.EmailRecipientResolutionResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Certificate]
+    guid 676fc159-f15c-58bd-91a7-28f7e795c756
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=101
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[EmailRecipient]
     guid f6d6af60-f11a-5c03-80cc-473407a5aabf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Email.EmailRecipient;{cae825b3-4478-4814-b900-c902b5e19b53}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient>
     argument Windows.ApplicationModel.Email.EmailRecipient
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipient> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Email.EmailRecipient> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Email.EmailRecipient name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Email.EmailRecipient name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Certificate]
     guid 963f7013-77c2-51c5-8038-b5bcef633edb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate>
     argument Windows.Security.Cryptography.Certificates.Certificate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=66
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxCreateFolderRequestEventArgs]
     guid 8c7db52d-496e-5419-bd78-b8b657cf4e66
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs;{03e4c02c-241c-4ea9-a68f-ff20bc5afc85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxDeleteFolderRequestEventArgs]
     guid d962a9b6-bbb4-5d82-84b4-8f703bf3086f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs;{b4d32d06-2332-4678-8378-28b579336846}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxDownloadAttachmentRequestEventArgs]
     guid d2e92019-b997-5cd6-8f88-4dbc6f969f15
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs;{ccddc46d-ffa8-4877-9f9d-fed7bcaf4104}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxDownloadMessageRequestEventArgs]
     guid e1b59b2f-ddd5-5159-ae9a-14a866912095
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs;{470409ad-d0a0-4a5b-bb2a-37621039c53e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxEmptyFolderRequestEventArgs]
     guid 9a851b84-bcb1-5121-ab61-3efe568f683d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs;{7183f484-985a-4ac0-b33f-ee0e2627a3c0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxForwardMeetingRequestEventArgs]
     guid 9d6a017f-5a70-5d83-a680-d2806748ca0b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs;{2bd8f33a-2974-4759-a5a5-58f44d3c0275}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxGetAutoReplySettingsRequestEventArgs]
     guid 587c6f92-a969-57b3-895f-9a06b3650d3a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs;{d79f55c2-fd45-4004-8a91-9bacf38b7022}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxMoveFolderRequestEventArgs]
     guid 2c6bf2c8-42f3-523d-80db-170e4fb1567f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs;{38623020-14ba-4c88-8698-7239e3c8aaa7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxProposeNewTimeForMeetingRequestEventArgs]
     guid 309d8bde-1e60-524b-828c-5a3d64a672aa
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs;{fb480b98-33ad-4a67-8251-0f9c249b6a20}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxResolveRecipientsRequestEventArgs]
     guid ec14e586-e4fb-5fc0-91fc-931ce17a3fc3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs;{260f9e02-b2cf-40f8-8c28-e3ed43b1e89a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxServerSearchReadBatchRequestEventArgs]
     guid f8bf9067-7d11-56a0-a303-163435c14016
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs;{14101b4e-ed9e-45d1-ad7a-cc9b7f643ae2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxSetAutoReplySettingsRequestEventArgs]
     guid aa4f8fb3-05e0-54e6-afac-a28e853e756e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs;{09da11ad-d7ca-4087-ac86-53fa67f76246}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxSyncManagerSyncRequestEventArgs]
     guid b65fc3ec-9476-51c4-ba70-1505d79826b9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs;{439a031a-8fcc-4ae5-b9b5-d434e0a65aa8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxUpdateMeetingResponseRequestEventArgs]
     guid 3274fbfd-c10a-5b30-adea-2b4b860b4a0d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs;{6898d761-56c9-4f17-be31-66fda94ba159}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxValidateCertificatesRequestEventArgs]
     guid de2625f7-e16f-512e-a8c6-b7445532bcc6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection;{3b9c9dc7-37b2-4bf0-ae30-7b644a1c96e1});rc(Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs;{2583bf17-02ff-49fe-a73c-03f37566c691}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection
     argument Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs name=args
 
 class System.String external
     py winrt.system.String
@@ -890,6 +1189,22 @@ class Windows.Foundation.Deferral external
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Security.Cryptography.Certificates.Certificate external
     py winrt.windows.security.cryptography.certificates.Certificate

@@ -3,26 +3,61 @@ generator 0.0.0
 namespace Windows.Devices.Sms
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ISmsMessage]
     guid 4e6c4c86-ebe6-55d9-adc0-fecc38c82aa2
     signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Devices.Sms.ISmsMessage
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmsDevice]
     guid 44aa5484-43d0-5893-a4ee-7db00113ae60
     signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Devices.Sms.SmsDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsSendMessageResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmsSendMessageResult]
+    guid c7d5c6fe-9206-5eb1-abc1-c1bc21804eeb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sms.SmsSendMessageResult;{db139af2-78c9-4feb-9622-452328088d62}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sms.SmsSendMessageResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IVectorView[ISmsMessage], Int32]
     guid 3f9d1255-ebf8-569f-91c3-49740d5944ce
     signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
     argument System.Int32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=asyncInfo
+            in int32 name=progressInfo
 
 delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IVectorView[ISmsMessage], Int32]
     guid c0454cfc-2f2f-5e0c-8de9-58b9e82a03ba
     signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
     argument System.Int32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 enum Windows.Devices.Sms.CellularClass python_type
     py CellularClass
@@ -41,10 +76,10 @@ class Windows.Devices.Sms.DeleteSmsMessageOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
@@ -53,7 +88,7 @@ class Windows.Devices.Sms.DeleteSmsMessageOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55 role=get_results
 
 class Windows.Devices.Sms.DeleteSmsMessagesOperation python_type awaitable
     py DeleteSmsMessagesOperation
@@ -68,10 +103,10 @@ class Windows.Devices.Sms.DeleteSmsMessagesOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
@@ -80,7 +115,7 @@ class Windows.Devices.Sms.DeleteSmsMessagesOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55 role=get_results
 
 class Windows.Devices.Sms.GetSmsDeviceOperation python_type awaitable
     py GetSmsDeviceOperation
@@ -95,10 +130,10 @@ class Windows.Devices.Sms.GetSmsDeviceOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> name=handler
@@ -107,7 +142,7 @@ class Windows.Devices.Sms.GetSmsDeviceOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=62
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=62 role=get_results
             out class type=Windows.Devices.Sms.SmsDevice return
 
 class Windows.Devices.Sms.GetSmsMessageOperation python_type awaitable
@@ -123,10 +158,10 @@ class Windows.Devices.Sms.GetSmsMessageOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> name=handler
@@ -135,7 +170,7 @@ class Windows.Devices.Sms.GetSmsMessageOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=62
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=62 role=get_results
             out interface type=Windows.Devices.Sms.ISmsMessage return
 
 class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
@@ -151,7 +186,7 @@ class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property progress
         get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=43
@@ -159,7 +194,7 @@ class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
         put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
     property completed
-        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=99
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=99 role=completed
             out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
         put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=62
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
@@ -168,40 +203,575 @@ class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=121
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=121 role=get_results
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ISmsMessage]
     guid abf9b459-48c3-5eac-9749-4c6db4d507e6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sms.ISmsMessage
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Devices.Sms.ISmsMessage return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmsDevice]
     guid ab710de1-fcbb-5bd6-9f2f-285fa9fb44e8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sms.SmsDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sms.SmsDevice return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmsSendMessageResult]
     guid fc0a0b0f-4dcc-5257-bc61-3435e302ce1f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sms.SmsSendMessageResult;{db139af2-78c9-4feb-9622-452328088d62}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sms.SmsSendMessageResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsSendMessageResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsSendMessageResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sms.SmsSendMessageResult return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IVectorView[ISmsMessage], Int32]
     guid 12f85589-415d-5b5d-b0d0-fda3b0295adc
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea});i4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>
     argument System.Int32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> shape=4 reverse=121 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Int32]
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Int32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsBinaryMessage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ISmsBinaryMessage]
+    guid 5678a6a5-4d5a-51c2-a133-4b83bf25d987
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{5bf4e813-3b53-4c6e-b61a-d86a63755650})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sms.ISmsBinaryMessage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsMessage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ISmsMessage]
+    guid ecabfd70-9601-5e38-83cf-b1046022a244
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sms.ISmsMessage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmsBroadcastType]
+    guid 12276b75-173e-514b-98f0-8a7927a9206c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.Sms.SmsBroadcastType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sms.SmsBroadcastType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmsFilterRule]
+    guid 03ed8267-9c90-5260-8bc0-6c3e3306c964
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sms.SmsFilterRule
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsMessageRegistration> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmsMessageRegistration]
+    guid f836fa0a-770d-5e8f-8664-01c43f959eea
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sms.SmsMessageRegistration
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Int32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Int32]
+    guid bfea7f78-50c2-5f1d-a6ea-9e978d2699ff
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};i4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Int32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=22 role=current
+            out int32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=117 reverse=101
+            fill_array int32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ISmsBinaryMessage]
+    guid 13e60d89-ea0a-5b01-9c2f-0e5b435058e0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{5bf4e813-3b53-4c6e-b61a-d86a63755650})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sms.ISmsBinaryMessage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=22 role=current
+            out interface type=Windows.Devices.Sms.ISmsBinaryMessage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> shape=117 reverse=101
+            fill_array interface type=Windows.Devices.Sms.ISmsBinaryMessage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ISmsMessage]
+    guid eed04f5c-b2b2-5c83-8b13-c78af6ca3a18
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sms.ISmsMessage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22 role=current
+            out interface type=Windows.Devices.Sms.ISmsMessage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> shape=117 reverse=101
+            fill_array interface type=Windows.Devices.Sms.ISmsMessage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmsBroadcastType]
+    guid 6448ddea-c1cd-5143-a422-5fe4f008cc92
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.Sms.SmsBroadcastType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sms.SmsBroadcastType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmsFilterRule]
+    guid fec7cae6-97f5-5a19-b32a-d8f0ba276f34
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sms.SmsFilterRule
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sms.SmsFilterRule return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sms.SmsFilterRule name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmsMessageRegistration]
+    guid ee1a0675-f3c9-5c12-93e0-f2b01bdce611
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sms.SmsMessageRegistration
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sms.SmsMessageRegistration return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sms.SmsMessageRegistration name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
     guid f6d1f700-49c2-52ae-8154-826f9908773c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.Foundation.IReference<System.Int32> concrete
+    py winrt.windows.foundation._IReference[Int32]
     guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Int32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int32> shape=4 reverse=22 role=value
+            out int32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Devices.Sms.ISmsAppMessage
     guid e8bb8494-d3a0-4a0a-86d7-291033a8cf54
@@ -411,45 +981,409 @@ interface Windows.Devices.Sms.ISmsVoicemailMessage
 interface Windows.Devices.Sms.ISmsWapMessage
     guid cd937743-7a55-4d3b-9021-f22e022d09c5
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVector<System.Int32> concrete
+interface Windows.Foundation.Collections.IVector<System.Int32> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Int32]
     guid b939af5b-b45d-5489-9149-61442c1905fe
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};i4)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
     argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=173
+            in int32 name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=117 reverse=101
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in int32 name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=211
+            pass_array int32 name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in int32 name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SmsBroadcastType]
     guid d76bef0b-1358-5895-bd42-f17f6f33eed1
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sms.SmsBroadcastType;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType>
     argument Windows.Devices.Sms.SmsBroadcastType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=173
+            in enum32 type=Windows.Devices.Sms.SmsBroadcastType name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=117 reverse=101
+            in enum32 type=Windows.Devices.Sms.SmsBroadcastType name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sms.SmsBroadcastType name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=51 reverse=211
+            pass_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sms.SmsBroadcastType name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SmsFilterRule]
     guid 8e72fa52-4867-5696-b4d9-4ca23f19e177
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule>
     argument Windows.Devices.Sms.SmsFilterRule
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=173
+            in class type=Windows.Devices.Sms.SmsFilterRule name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sms.SmsFilterRule return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sms.SmsFilterRule name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=117 reverse=101
+            in class type=Windows.Devices.Sms.SmsFilterRule name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Sms.SmsFilterRule name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Sms.SmsFilterRule name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Sms.SmsFilterRule name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Int32]
     guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
     argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=117 reverse=66
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ISmsBinaryMessage]
     guid 6ea176ea-99ea-5c79-876a-f4c437b83df6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{5bf4e813-3b53-4c6e-b61a-d86a63755650})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsBinaryMessage>
     argument Windows.Devices.Sms.ISmsBinaryMessage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsBinaryMessage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsBinaryMessage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Devices.Sms.ISmsBinaryMessage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Sms.ISmsBinaryMessage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=117 reverse=66
+            in interface type=Windows.Devices.Sms.ISmsBinaryMessage name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ISmsMessage]
     guid d3acc5b1-6f85-507e-b40a-6950749b426f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ed3c5e28-6984-4b07-811d-8d5906ed3cea})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsMessage>
     argument Windows.Devices.Sms.ISmsMessage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.ISmsMessage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.ISmsMessage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Devices.Sms.ISmsMessage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Sms.ISmsMessage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=117 reverse=66
+            in interface type=Windows.Devices.Sms.ISmsMessage name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmsBroadcastType]
+    guid 4063e791-da2d-5e4c-9113-5b6ba0a7c595
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.Sms.SmsBroadcastType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType>
+    argument Windows.Devices.Sms.SmsBroadcastType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsBroadcastType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsBroadcastType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=117 reverse=66
+            in enum32 type=Windows.Devices.Sms.SmsBroadcastType name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmsFilterRule]
+    guid f3ed4299-de36-5d82-993f-35fc677d8b72
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sms.SmsFilterRule;{40e32fae-b049-4fbc-afe9-e2a610eff55c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule>
+    argument Windows.Devices.Sms.SmsFilterRule
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsFilterRule> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsFilterRule> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sms.SmsFilterRule return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sms.SmsFilterRule name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=117 reverse=66
+            in class type=Windows.Devices.Sms.SmsFilterRule name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmsMessageRegistration]
     guid 23aaa815-24ef-57c4-b1bc-94d62c0a59a3
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsMessageRegistration>
     argument Windows.Devices.Sms.SmsMessageRegistration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sms.SmsMessageRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sms.SmsMessageRegistration> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sms.SmsMessageRegistration return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sms.SmsMessageRegistration name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=117 reverse=66
+            in class type=Windows.Devices.Sms.SmsMessageRegistration name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Sms.SendSmsMessageOperation python_type awaitable
     py SendSmsMessageOperation
@@ -464,10 +1398,10 @@ class Windows.Devices.Sms.SendSmsMessageOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
@@ -476,7 +1410,7 @@ class Windows.Devices.Sms.SendSmsMessageOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55 role=get_results
 
 class Windows.Devices.Sms.SmsAppMessage activatable python_type
     py SmsAppMessage
@@ -1272,16 +2206,28 @@ class Windows.Devices.Sms.SmsWapMessage python_type
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmsDevice2, Object]
     guid 3f3808e6-3dee-57a6-a88d-bacfb066c7fb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sms.SmsDevice2;{bd8a5c13-e522-46cb-b8d5-9ead30fb6c47});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sms.SmsDevice2
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sms.SmsDevice2 name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmsMessageRegistration, SmsMessageReceivedTriggerDetails]
     guid 33f985c7-dcfa-531f-9cce-ee5e6c26b1e6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sms.SmsMessageRegistration;{1720503e-f34f-446b-83b3-0ff19923b409});rc(Windows.Devices.Sms.SmsMessageReceivedTriggerDetails;{2bcfcbd4-2657-4128-ad5f-e3877132bdb1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sms.SmsMessageRegistration
     argument Windows.Devices.Sms.SmsMessageReceivedTriggerDetails
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sms.SmsMessageRegistration name=sender
+            in class type=Windows.Devices.Sms.SmsMessageReceivedTriggerDetails name=args
 
 class System.Int32 external
     py winrt.system.Int32
@@ -1296,6 +2242,18 @@ delegate Windows.Foundation.AsyncActionCompletedHandler external
     py winrt.windows.foundation.AsyncActionCompletedHandler
     guid a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
 
@@ -1306,6 +2264,66 @@ interface Windows.Foundation.IAsyncAction external
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo
     guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

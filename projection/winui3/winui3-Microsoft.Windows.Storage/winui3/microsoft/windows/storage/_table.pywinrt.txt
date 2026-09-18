@@ -54,7 +54,7 @@ class Microsoft.Windows.Storage.ApplicationData python_type closeable
             in string name=folderName
             out interface type=Windows.Foundation.IAsyncAction return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_default static
         method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=4 reverse=22 static
             out class type=Microsoft.Windows.Storage.ApplicationData return
@@ -94,7 +94,7 @@ class Microsoft.Windows.Storage.ApplicationDataContainer python_type closeable
         get get_Values slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=99
             out interface type=Windows.Foundation.Collections.IPropertySet return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_container
         method CreateContainer slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=117 reverse=125
             in string name=name
@@ -121,11 +121,112 @@ interface Microsoft.Windows.Storage.IApplicationDataContainer
 interface Microsoft.Windows.Storage.IApplicationDataStatics
     guid 6a8b41f8-5560-56fb-86b0-d59e897d4d95
 
-interface Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> concrete
-    guid bd32b940-93ee-53e5-9637-f9d3b3a32fb0
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9}))
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, ApplicationDataContainer]]
+    guid e7030f31-6eb1-5a96-a63c-285edbad7ce9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, ApplicationDataContainer]]
+    guid 025639f8-aa0e-57a9-8a5d-412b8afc0646
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, ApplicationDataContainer]
+    guid b6a85d01-ee6a-500f-879f-3cce5723ecd4
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Microsoft.Windows.Storage.ApplicationDataContainer
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=43
+            out class type=Microsoft.Windows.Storage.ApplicationDataContainer return
+
+interface Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, ApplicationDataContainer]
+    guid bd32b940-93ee-53e5-9637-f9d3b3a32fb0
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9}))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>>
+    argument System.String
+    argument Microsoft.Windows.Storage.ApplicationDataContainer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=117 reverse=125 role=insert
+            in string name=key
+            in class type=Microsoft.Windows.Storage.ApplicationDataContainer name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Microsoft.Windows.Storage.ApplicationDataContainer return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, ApplicationDataContainer]
+    guid 9f95d2db-8cfe-5ef4-ae51-4d42ccc21929
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Microsoft.Windows.Storage.ApplicationDataContainer;{d1fa9c23-2e59-55d8-bd86-88c2fdc9e7c9}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>>
+    argument System.String
+    argument Microsoft.Windows.Storage.ApplicationDataContainer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Microsoft.Windows.Storage.ApplicationDataContainer return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> name=second
 
 class System.String external
     py winrt.system.String
@@ -137,6 +238,26 @@ interface Windows.Foundation.IAsyncAction external
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet

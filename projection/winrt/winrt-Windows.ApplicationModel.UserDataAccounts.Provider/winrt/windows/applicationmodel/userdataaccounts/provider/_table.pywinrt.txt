@@ -2,6 +2,36 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.UserDataAccounts.Provider
 
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UserDataAccountPartnerAccountInfo]
+    guid 5cdb425e-da5a-55fa-b349-5467996cab32
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo;{5f200037-f6ef-4ec3-8630-012c59c1149f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UserDataAccountPartnerAccountInfo]
+    guid ac401b26-3ebf-5cbf-9643-c96a40ab40a2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo;{5f200037-f6ef-4ec3-8630-012c59c1149f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo
     guid 5f200037-f6ef-4ec3-8630-012c59c1149f
 
@@ -22,10 +52,33 @@ interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPro
 interface Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation
     guid 92034db7-8648-4f30-acfa-3002658ca80d
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UserDataAccountPartnerAccountInfo]
     guid b730f093-e2fb-5b20-9d9e-4f9defe647b0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo;{5f200037-f6ef-4ec3-8630-012c59c1149f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo>
     argument Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo python_type
     py UserDataAccountPartnerAccountInfo
@@ -101,3 +154,15 @@ class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProvider
 
 enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds external
     py winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

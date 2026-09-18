@@ -2,25 +2,195 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.PackageExtensions
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IPropertySet> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IPropertySet]
+    guid 5075a55f-68ba-56f2-97e6-9b1cbfa2c5f2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{8a43ed9f-f4e6-4421-acf9-1dab2986820c})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IPropertySet
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PackageExtension]]
+    guid 0fbafc98-e944-55e5-89bc-20a2ab19f09e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.PackageExtensions.PackageExtension;{da70c957-7ead-5c3b-9cf0-cc43faf474b4})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFolder> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorageFolder]
+    guid c211026e-9e63-5452-ba54-3a07d6a96874
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.StorageFolder
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IPropertySet]
     guid 490b0686-afd7-5037-9647-d8fe248f182c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{8a43ed9f-f4e6-4421-acf9-1dab2986820c})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IPropertySet
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IPropertySet> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IPropertySet> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Foundation.Collections.IPropertySet return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PackageExtension]]
     guid 89631036-91d7-505b-bbfd-4df6d97b6641
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.PackageExtensions.PackageExtension;{da70c957-7ead-5c3b-9cf0-cc43faf474b4})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorageFolder]
     guid 6be9e7d7-e83a-5cbc-802c-1768960b52c3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.StorageFolder
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFolder> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFolder> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.StorageFolder return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageExtensions.PackageExtension> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageExtension]
+    guid ed0a489a-437c-5629-b0ef-91bbad5bae59
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.PackageExtensions.PackageExtension;{da70c957-7ead-5c3b-9cf0-cc43faf474b4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.PackageExtensions.PackageExtension
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageExtension]
+    guid 6124c984-5e57-5a3a-810c-0a04ca9fa471
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.PackageExtensions.PackageExtension;{da70c957-7ead-5c3b-9cf0-cc43faf474b4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.PackageExtensions.PackageExtension
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.PackageExtensions.PackageExtension return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.PackageExtensions.PackageExtension name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.ApplicationModel.PackageExtensions.IPackageExtension
     guid da70c957-7ead-5c3b-9cf0-cc43faf474b4
@@ -46,10 +216,33 @@ interface Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpd
 interface Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs
     guid 27ae2ce1-a1d3-532e-8e7e-8b43782fce09
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageExtension]
     guid 6b8001c9-1f6d-593f-a163-2b78b20a65a3
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.PackageExtensions.PackageExtension;{da70c957-7ead-5c3b-9cf0-cc43faf474b4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageExtensions.PackageExtension>
     argument Windows.ApplicationModel.PackageExtensions.PackageExtension
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.PackageExtensions.PackageExtension return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.PackageExtensions.PackageExtension name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtension name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtension python_type
     py PackageExtension
@@ -202,34 +395,64 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdating
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageExtensionCatalog, PackageExtensionPackageInstalledEventArgs]
     guid f0d4b2dd-52de-5f3a-93e3-3a04966b4cb3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog;{0879dfe6-ac30-58b2-97f9-480b07e75bfa});rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs;{3c9b0067-083c-5fe3-bdfb-9feb156b4118}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageExtensionCatalog, PackageExtensionPackageStatusChangedEventArgs]
     guid 6a2f2758-898a-5622-8a97-bb2fc8a2d7db
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog;{0879dfe6-ac30-58b2-97f9-480b07e75bfa});rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs;{b8fee20a-680d-5942-876c-5de12df1083c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageExtensionCatalog, PackageExtensionPackageUninstallingEventArgs]
     guid d3c3aa82-8fea-56e6-b02c-75689b3c6cf4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog;{0879dfe6-ac30-58b2-97f9-480b07e75bfa});rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs;{3b8e9cb7-c539-554d-bb33-a84c0bfa3f50}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageExtensionCatalog, PackageExtensionPackageUpdatedEventArgs]
     guid 3451288e-8d64-5204-b06b-0bb1b2537b4e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog;{0879dfe6-ac30-58b2-97f9-480b07e75bfa});rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs;{fdc31add-16a7-509d-8bc4-fde22e856d2d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageExtensionCatalog, PackageExtensionPackageUpdatingEventArgs]
     guid a5b1fde1-c415-5459-abb7-3271e06320c4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog;{0879dfe6-ac30-58b2-97f9-480b07e75bfa});rc(Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs;{27ae2ce1-a1d3-532e-8e7e-8b43782fce09}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog
     argument Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -237,9 +460,40 @@ class System.Boolean external
 class Windows.ApplicationModel.Package external
     py winrt.windows.applicationmodel.Package
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Storage.StorageFolder external
     py winrt.windows.storage.StorageFolder

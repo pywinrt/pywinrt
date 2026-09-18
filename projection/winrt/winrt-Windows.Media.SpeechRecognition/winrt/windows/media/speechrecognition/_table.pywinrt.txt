@@ -2,31 +2,316 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.SpeechRecognition
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpeechRecognitionCompilationResult]
+    guid 78c859bd-14d4-5c40-abff-490616d5e92d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult;{407e6c5d-6ac7-4da4-9cc1-2fce32cf7489}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpeechRecognitionResult]
+    guid c2195c7d-dcc2-5c6d-9162-c8df66528762
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpeechRecognitionCompilationResult]
     guid a392249a-e28a-564a-9e73-1dda63ca643c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult;{407e6c5d-6ac7-4da4-9cc1-2fce32cf7489}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpeechRecognitionResult]
     guid ba3eebe8-8d7c-51f2-9ed4-ebafe3674db4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
-    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IVectorView[String]]]
+    guid a4cd6151-2cc1-56f1-9014-df6ba3410beb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Globalization.Language> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Language]
+    guid 48409a10-61b6-5db1-a69d-8abc46ac608a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Globalization.Language
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Language> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ISpeechRecognitionConstraint]
+    guid 88e6436c-3253-520b-9ed8-a63b178c44a2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{79ac1628-4d68-43c4-8911-40dc4101b55b})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SpeechRecognitionResult]
+    guid 0d9b7b48-98a1-5b22-9a66-6f812f5947aa
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IVectorView[String]]]
+    guid 643b6d83-457e-5a43-800f-b0449f91d96b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Language]
+    guid 30e99ae6-f414-5243-8db2-aab38ea3f1f1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Globalization.Language
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=4 reverse=22 role=current
+            out class type=Windows.Globalization.Language return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=117 reverse=101
+            fill_array class type=Windows.Globalization.Language name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ISpeechRecognitionConstraint]
+    guid 738f00b1-e18c-5140-a53a-f1788d10c93d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{79ac1628-4d68-43c4-8911-40dc4101b55b})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=117 reverse=101
+            fill_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SpeechRecognitionResult]
+    guid 20756dd2-6d3f-5409-846a-0f0f01d7bf9a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=22 role=current
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=117 reverse=101
+            fill_array class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IVectorView[String]]
+    guid bcde03ad-ea71-5077-a961-1c0ecff57202
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Foundation.Collections.IVectorView<System.String>
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IVectorView[String]]
+    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>>
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=24 role=lookup
+            in string name=key
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=second
 
 interface Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionCompletedEventArgs
     guid e3d069bb-e30c-5e18-424b-7fbe81f8fbd0
@@ -126,30 +411,221 @@ interface Windows.Media.SpeechRecognition.ISpeechRecognizerTimeouts
 interface Windows.Media.SpeechRecognition.ISpeechRecognizerUIOptions
     guid 7888d641-b92b-44ba-a25f-d1864630641f
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ISpeechRecognitionConstraint]
     guid 2691d763-561e-5060-bbc9-7b07361acc95
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{79ac1628-4d68-43c4-8911-40dc4101b55b})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint>
     argument Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=173
+            in interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=117 reverse=101
+            in interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=51 reverse=211
+            pass_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Language]
     guid 144b0f3d-2d59-5dd2-b012-908ec3e06435
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Globalization.Language;{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Language>
     argument Windows.Globalization.Language
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Language> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Globalization.Language return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Globalization.Language name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=117 reverse=66
+            in class type=Windows.Globalization.Language name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ISpeechRecognitionConstraint]
+    guid 341dee1d-6ac2-5d06-9026-b30ada205665
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{79ac1628-4d68-43c4-8911-40dc4101b55b})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint>
+    argument Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=117 reverse=66
+            in interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SpeechRecognitionResult]
     guid 0e37810f-1de6-5199-833f-5a6b0bd91e23
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.SpeechRecognition.SpeechRecognitionResult;{4e303157-034e-4652-857e-d0454cc4beec}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.SpeechRecognitionResult>
     argument Windows.Media.SpeechRecognition.SpeechRecognitionResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechRecognition.SpeechRecognitionResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=117 reverse=66
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs python_type
     py SpeechContinuousRecognitionCompletedEventArgs
@@ -524,7 +1000,7 @@ class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type c
         remove remove_HypothesisGenerated slot=10 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=26 reverse=134
             in event_token name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method compile_constraints_async
         method CompileConstraintsAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> return
@@ -603,34 +1079,64 @@ class Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions python_type
             in string name=value
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpeechContinuousRecognitionSession, SpeechContinuousRecognitionCompletedEventArgs]
     guid 8103c018-7952-59f9-9f41-23b17d6e452d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession;{6a213c04-6614-49f8-99a2-b5e9b3a085c8});rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs;{e3d069bb-e30c-5e18-424b-7fbe81f8fbd0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession
     argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession name=sender
+            in class type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpeechContinuousRecognitionSession, SpeechContinuousRecognitionResultGeneratedEventArgs]
     guid 26192073-a2c9-527d-9bd3-911c05e0011e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession;{6a213c04-6614-49f8-99a2-b5e9b3a085c8});rc(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs;{19091e1e-6e7e-5a46-40fb-76594f786504}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession
     argument Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession name=sender
+            in class type=Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpeechRecognizer, SpeechRecognitionHypothesisGeneratedEventArgs]
     guid 4cb45aba-7573-545a-b29a-e9be35bd4682
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs;{55161a7a-8023-5866-411d-1213bb271476}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.SpeechRecognition.SpeechRecognizer
     argument Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognizer name=sender
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpeechRecognizer, SpeechRecognitionQualityDegradingEventArgs]
     guid 15ca7918-61d2-57b2-b933-44063e8bb662
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs;{4fe24105-8c3a-4c7e-8d0a-5bd4f5b14ad8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.SpeechRecognition.SpeechRecognizer
     argument Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognizer name=sender
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpeechRecognizer, SpeechRecognizerStateChangedEventArgs]
     guid d1185e92-5c30-5561-b3e2-e82ddbd872c3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.SpeechRecognition.SpeechRecognizer;{0bc3c9cb-c26a-40f2-aeb5-8096b2e48073});rc(Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs;{563d4f09-ba03-4bad-ad81-ddc6c4dab0c3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.SpeechRecognition.SpeechRecognizer
     argument Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognizer name=sender
+            in class type=Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -638,13 +1144,56 @@ class System.Boolean external
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Globalization.Language external
     py winrt.windows.globalization.Language

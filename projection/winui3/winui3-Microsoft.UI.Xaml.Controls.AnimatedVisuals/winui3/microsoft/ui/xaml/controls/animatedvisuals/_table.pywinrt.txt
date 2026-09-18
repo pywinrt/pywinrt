@@ -178,11 +178,76 @@ class Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource ac
             out object name=diagnostics
             out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual return
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Double> concrete
-    guid d18743cf-94d6-54ac-9da2-f4755fa8e4f2
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;f8)
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Double]]
+    guid 822b22ef-209f-56aa-a4c3-dc0113b25e4c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Double]]
+    guid 4e32fe35-df21-5ef4-ba75-7e351d69cf7e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Double]
+    guid f3f8b9b7-456e-5a34-93a8-fbc5c63e9f0a
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8)
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.Double
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> shape=4 reverse=43
+            out double return
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Double> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Double]
+    guid d18743cf-94d6-54ac-9da2-f4755fa8e4f2
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;f8)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>>
+    argument System.String
+    argument System.Double
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=24 role=lookup
+            in string name=key
+            out double return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> name=second
 
 class Microsoft.UI.Composition.Compositor external
     py winui3.microsoft.ui.composition.Compositor
@@ -204,6 +269,22 @@ class System.Double external
 
 class System.String external
     py winrt.system.String
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color

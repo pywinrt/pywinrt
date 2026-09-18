@@ -41,6 +41,17 @@ class Windows.System.Profile.AppApplicability static python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilities
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.String>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IMapView[String, String]]
+    guid 75e3182c-e6e1-589c-ab73-e8644bc285bf
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IMapView<System.String,System.String>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.System.Profile.EducationSettings static python_type
     py EducationSettings
     factory Windows.System.Profile.IEducationSettingsStatics
@@ -49,9 +60,15 @@ class Windows.System.Profile.EducationSettings static python_type
             out boolean return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Windows.System.Profile.HardwareIdentification static python_type
     py HardwareIdentification
@@ -91,10 +108,34 @@ interface Windows.System.Profile.IAnalyticsVersionInfo2
 interface Windows.System.Profile.IAppApplicabilityStatics
     guid 1664a082-0f38-5c99-83e4-48995970861c
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IMapView[String, String]]
     guid 817944b6-f046-5391-bb0b-4cc34d8040f3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IMapView<System.String,System.String>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.String>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.String>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.String>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
 
 interface Windows.System.Profile.IEducationSettingsStatics
     guid fc53f0ef-4d3e-4e13-9b23-505f4d091e92
@@ -105,25 +146,210 @@ interface Windows.System.Profile.IHardwareIdentificationStatics
 interface Windows.System.Profile.IHardwareToken
     guid 28f6d4c0-fb12-40a4-8167-7f4e03d2724c
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.Profile.UnsupportedAppRequirement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UnsupportedAppRequirement]
+    guid bd9ded1d-0379-5143-a490-168b6b8413a3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.Profile.UnsupportedAppRequirement;{6182445c-894b-5cbc-8976-a98e0a9b998d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.System.Profile.UnsupportedAppRequirement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UnsupportedAppRequirement]
+    guid 10956160-6437-5430-9322-df0d6ab2ebe6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.Profile.UnsupportedAppRequirement;{6182445c-894b-5cbc-8976-a98e0a9b998d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.Profile.UnsupportedAppRequirement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=22 role=current
+            out class type=Windows.System.Profile.UnsupportedAppRequirement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> shape=117 reverse=101
+            fill_array class type=Windows.System.Profile.UnsupportedAppRequirement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
 
 interface Windows.System.Profile.IKnownRetailInfoPropertiesStatics
     guid 99571178-500f-487e-8e75-29e551728712
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
     guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
     guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.System.Profile.IPlatformAutomaticAppSignInManagerStatics
     guid 1ac9afce-8dd5-5c2d-b420-767d1f3b7d03
@@ -155,10 +381,33 @@ interface Windows.System.Profile.ISystemSetupInfoStatics
 interface Windows.System.Profile.IUnsupportedAppRequirement
     guid 6182445c-894b-5cbc-8976-a98e0a9b998d
 
-interface Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UnsupportedAppRequirement]
     guid 5b638c58-9d04-5d1a-92fb-860852c3e4d0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Profile.UnsupportedAppRequirement;{6182445c-894b-5cbc-8976-a98e0a9b998d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.System.Profile.UnsupportedAppRequirement>
     argument Windows.System.Profile.UnsupportedAppRequirement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Profile.UnsupportedAppRequirement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Profile.UnsupportedAppRequirement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.Profile.UnsupportedAppRequirement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.Profile.UnsupportedAppRequirement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement> shape=117 reverse=66
+            in class type=Windows.System.Profile.UnsupportedAppRequirement name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.System.Profile.IWindowsIntegrityPolicyStatics
     guid 7d1d81db-8d63-4789-9ea5-ddcf65a94f3c
@@ -386,6 +635,45 @@ class System.Object external
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

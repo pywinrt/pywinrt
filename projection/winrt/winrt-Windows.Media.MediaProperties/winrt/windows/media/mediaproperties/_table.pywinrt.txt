@@ -2,6 +2,17 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.MediaProperties
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.MediaProperties.MediaEncodingProfile> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaEncodingProfile]
+    guid 37296fc1-86da-58a0-90c0-c807bd94395e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.MediaProperties.MediaEncodingProfile;{e7dbf5a8-1db9-4783-876b-3dfe12acfdb3}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.MediaProperties.MediaEncodingProfile
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.MediaProperties.AudioEncodingProperties activatable python_type
     py AudioEncodingProperties
     signature rc(Windows.Media.MediaProperties.AudioEncodingProperties;{62bc7a16-005c-4b3b-8a0b-0a090e9687f3})
@@ -275,10 +286,34 @@ class Windows.Media.MediaProperties.HevcProfileIds static python_type
         get get_MonochromeBitDepth16 slot=15 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IHevcProfileIdsStatics shape=4 reverse=194 static
             out int32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaEncodingProfile]
     guid d4f86f16-c6cf-57c8-9743-5ec20c31ab79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.MediaProperties.MediaEncodingProfile;{e7dbf5a8-1db9-4783-876b-3dfe12acfdb3}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.MediaProperties.MediaEncodingProfile
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.MediaProperties.MediaEncodingProfile> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.MediaProperties.MediaEncodingProfile> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.MediaProperties.MediaEncodingProfile> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
 
 interface Windows.Media.MediaProperties.IAudioEncodingProperties
     guid 62bc7a16-005c-4b3b-8a0b-0a090e9687f3
@@ -328,55 +363,209 @@ interface Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2
 interface Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3
     guid 48f4814d-a2ff-48dc-8ea0-e90680663656
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, Object]]
     guid f3b20528-e3b3-5331-b2d0-0c2623aee785
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
     argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioStreamDescriptor]
     guid a3e2c972-a171-5b94-8389-e983ebc3f3b9
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.AudioStreamDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TimedMetadataStreamDescriptor]
     guid f3d07841-3852-509d-a12b-a9f2ac89da93
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.TimedMetadataStreamDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VideoStreamDescriptor]
     guid 3acbf03c-0a79-5823-aaa9-d88bc3f8f594
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.VideoStreamDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, Object]]
     guid 4f25059a-0b9a-5f25-9b9e-4b9f1d22ff65
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioStreamDescriptor]
+    guid a61a11cd-b32e-518b-a6a7-5472cbe00e83
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Core.AudioStreamDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.AudioStreamDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TimedMetadataStreamDescriptor]
+    guid 68475671-f53b-57ff-92ac-28bfd46573d7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Core.TimedMetadataStreamDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.TimedMetadataStreamDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VideoStreamDescriptor]
+    guid da51ab3c-3c64-545c-a3f4-f9b055aaf7d9
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Core.VideoStreamDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.VideoStreamDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, Object]
     guid 3bda1540-d089-5a1a-8f0d-94eba8068e58
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.Guid
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43
+            out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
     argument K
     argument V
 
-interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete
+interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[Guid, Object]
     guid 5ee3189c-7dbf-5998-ad07-5414fb82567c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     argument System.Guid
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=177 reverse=136 role=insert
+            in guid name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=33 reverse=158 role=remove
+            in guid name=key
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, Object]
     guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     argument System.Guid
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=second
 
 interface Windows.Media.MediaProperties.IMediaEncodingProfile
     guid e7dbf5a8-1db9-4783-876b-3dfe12acfdb3
@@ -448,20 +637,245 @@ interface Windows.Media.MediaProperties.ITimedMetadataEncodingProperties
 interface Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics
     guid 6629bb67-6e55-5643-89a0-7a7e8d85b52c
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AudioStreamDescriptor]
     guid 45afc129-988c-5f1e-9c17-6e34b917cd1b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor>
     argument Windows.Media.Core.AudioStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=173
+            in class type=Windows.Media.Core.AudioStreamDescriptor name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.AudioStreamDescriptor return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101
+            in class type=Windows.Media.Core.AudioStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.AudioStreamDescriptor name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=211
+            pass_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.AudioStreamDescriptor name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[TimedMetadataStreamDescriptor]
     guid 1ebdbbcf-4f75-5645-b8bc-31a716978bcc
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor>
     argument Windows.Media.Core.TimedMetadataStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=173
+            in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.TimedMetadataStreamDescriptor return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101
+            in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=211
+            pass_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VideoStreamDescriptor]
     guid 1fb064b3-636c-5988-9c97-02a9b76150f6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor>
     argument Windows.Media.Core.VideoStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=173
+            in class type=Windows.Media.Core.VideoStreamDescriptor name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.VideoStreamDescriptor return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101
+            in class type=Windows.Media.Core.VideoStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.VideoStreamDescriptor name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=211
+            pass_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Core.VideoStreamDescriptor name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioStreamDescriptor]
+    guid 340f4fed-1288-5b89-be7c-c355fe1ce4d9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.AudioStreamDescriptor;{1e3692e4-4027-4847-a70b-df1d9a2a7b04}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor>
+    argument Windows.Media.Core.AudioStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.AudioStreamDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=66
+            in class type=Windows.Media.Core.AudioStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TimedMetadataStreamDescriptor]
+    guid 62e7b4ed-0c95-5743-a142-054f4bdea0a4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataStreamDescriptor;{80f16e6e-92f7-451e-97d2-afd80742da70}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor>
+    argument Windows.Media.Core.TimedMetadataStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.TimedMetadataStreamDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=66
+            in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VideoStreamDescriptor]
+    guid e965c8af-d211-52f0-838b-4637469da7af
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.VideoStreamDescriptor;{12ee0d55-9c2b-4440-8057-2c7a90f0cbec}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor>
+    argument Windows.Media.Core.VideoStreamDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.VideoStreamDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=66
+            in class type=Windows.Media.Core.VideoStreamDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Media.MediaProperties.IVideoEncodingProperties
     guid 76ee6c9a-37c2-4f2a-880a-1282bbb4373d
@@ -841,31 +1255,31 @@ class Windows.Media.MediaProperties.MediaPropertySet activatable python_type ite
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
     method get_view
         method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
     method has_key
-        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key
             in guid name=key
             out boolean return
     method insert
-        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=177 reverse=136
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=177 reverse=136 role=insert
             in guid name=key
             in object name=value
             out boolean return
     method lookup
-        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=35
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=35 role=lookup
             in guid name=key
             out object return
     method remove
-        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=33 reverse=158
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=33 reverse=158 role=remove
             in guid name=key
 
 class Windows.Media.MediaProperties.MediaRatio python_type
@@ -1078,6 +1492,49 @@ class System.Guid external
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Media.Core.AudioStreamDescriptor external
     py winrt.windows.media.core.AudioStreamDescriptor

@@ -320,6 +320,215 @@ class Windows.Devices.Sensors.AltimeterReadingChangedEventArgs python_type
         get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs shape=4 reverse=22
             out class type=Windows.Devices.Sensors.AltimeterReading return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Accelerometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Accelerometer]
+    guid c7c339b6-7527-502a-8a4c-cb9befe15840
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Accelerometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivitySensor]
+    guid fb0594f4-93d9-5c2f-b8eb-90f1e9258fdc
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.ActivitySensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensorReading> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivitySensorReading]
+    guid adc48d5d-b343-5a58-8454-6e2bc2e0475c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.ActivitySensorReading
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Barometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Barometer]
+    guid a15e21d6-5467-590c-afe1-9c8132dcd8a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Barometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Compass> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Compass]
+    guid 0cf1e460-bc2c-587c-9822-420ba04d0551
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Compass
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Gyrometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Gyrometer]
+    guid 15799501-958e-5315-a24a-0d7d7acbc79c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Gyrometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleReading> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HingeAngleReading]
+    guid e0b8b19e-9472-5ffd-9bde-eee64def7c4f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.HingeAngleReading;{a3cd45b9-1bf1-4f65-a704-e2da04f182c0}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.HingeAngleReading
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleSensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HingeAngleSensor]
+    guid ac3218c1-3ab8-5c26-936c-00be405ac68b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.HingeAngleSensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceFeatures> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HumanPresenceFeatures]
+    guid 2f6b31a3-3d97-5327-afbf-75e45fdd69f8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.HumanPresenceFeatures;{bdb09fda-3244-557a-bd29-8b004f59f2cc}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.HumanPresenceFeatures
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HumanPresenceSensor]
+    guid c0b6a4b5-b9ed-55b7-aeec-f9cfeff4381c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.HumanPresenceSensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSettings> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HumanPresenceSettings]
+    guid ab6a031b-43a8-5e3c-bcc1-04244635bda7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.HumanPresenceSettings;{ef4daf5b-07b7-5eb6-86bb-b7ff49ce44fb}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.HumanPresenceSettings
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Inclinometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Inclinometer]
+    guid 8f0ede2a-2d0f-55f6-9566-3c21385fae64
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Inclinometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.LightSensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LightSensor]
+    guid 5d04e2bf-5163-5238-8f23-ce470b30340d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.LightSensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Magnetometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Magnetometer]
+    guid 46e0a768-9645-51a6-b6a7-1e5f4b40e1f3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Magnetometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.OrientationSensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[OrientationSensor]
+    guid 8330b323-6695-53d4-acd7-b60c24c1b879
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.OrientationSensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Pedometer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Pedometer]
+    guid a62dbe4e-51de-5a13-ba21-e76df3bc1396
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.Pedometer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.SimpleOrientationSensor> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SimpleOrientationSensor]
+    guid 69be8a44-2ccb-5375-a8f8-f894efba33eb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Sensors.SimpleOrientationSensor
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[ActivitySensorReading]]
+    guid 179fb953-2d58-5991-8f5b-ac64219a1101
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PedometerReading]]
+    guid 5bbff840-59f2-5108-9205-a0bbf8f9ba68
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Devices.Sensors.Barometer python_type
     py Barometer
     signature rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4})
@@ -536,9 +745,15 @@ class Windows.Devices.Sensors.DetectedPerson python_type
             out reference type=Windows.Foundation.IReference<System.Int32> return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Windows.Devices.Sensors.Gyrometer python_type
     py Gyrometer
@@ -1099,100 +1314,556 @@ interface Windows.Devices.Sensors.IAltimeterReadingChangedEventArgs
 interface Windows.Devices.Sensors.IAltimeterStatics
     guid 9eb4d7c3-e5ac-47ce-8eef-d3718168c01f
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Accelerometer]
     guid fc761d3b-5e4d-5148-a618-7b677059d0b8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Accelerometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Accelerometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Accelerometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Accelerometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Accelerometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivitySensor]
     guid c33003ae-e7ae-572b-8d55-7db197356c30
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.ActivitySensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.ActivitySensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivitySensorReading]
     guid 79a87969-327f-5b7a-a0d3-73eab16de21c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.ActivitySensorReading
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensorReading> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensorReading> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.ActivitySensorReading return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Barometer]
     guid 51876037-9f36-5c86-855d-3ddd251df9a8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Barometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Barometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Barometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Barometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Compass]
     guid 5297c24c-a6fb-5e03-a4f8-ee143c435df8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Compass
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Compass> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Compass> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Compass return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Gyrometer]
     guid fcee7abf-1dcf-50cc-b91b-7a1f59e0c28b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Gyrometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Gyrometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Gyrometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Gyrometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HingeAngleReading]
     guid 70c4c5a0-bcca-5227-96f0-17fa53539be8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HingeAngleReading;{a3cd45b9-1bf1-4f65-a704-e2da04f182c0}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.HingeAngleReading
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleReading> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleReading> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleReading> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.HingeAngleReading return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HingeAngleSensor]
     guid 4f998177-4080-56d8-a96f-9d5b55944e55
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.HingeAngleSensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleSensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleSensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.HingeAngleSensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HumanPresenceFeatures]
     guid 00972df9-560b-5523-a611-a78ff72f919a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceFeatures;{bdb09fda-3244-557a-bd29-8b004f59f2cc}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.HumanPresenceFeatures
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceFeatures> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceFeatures> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.HumanPresenceFeatures return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HumanPresenceSensor]
     guid 2d73352e-05a7-5a04-8d54-c95566932419
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.HumanPresenceSensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.HumanPresenceSensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HumanPresenceSettings]
     guid 0188393f-c6b5-5f2e-a2c5-8009113126e8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.HumanPresenceSettings;{ef4daf5b-07b7-5eb6-86bb-b7ff49ce44fb}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.HumanPresenceSettings
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSettings> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSettings> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.HumanPresenceSettings return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Inclinometer]
     guid 84ebb496-b69a-53cd-b690-a46189822b01
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Inclinometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Inclinometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Inclinometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Inclinometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LightSensor]
     guid 380e592c-47a0-5df4-8de2-b2eefa9db8ad
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.LightSensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.LightSensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.LightSensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.LightSensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Magnetometer]
     guid b0455443-e790-5aa3-8767-4932032274ee
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Magnetometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Magnetometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Magnetometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Magnetometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[OrientationSensor]
     guid 8ef36aa8-6f6d-538b-a42b-37af7369049e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.OrientationSensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.OrientationSensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.OrientationSensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.OrientationSensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.OrientationSensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Pedometer]
     guid 9414388f-1b3e-55f5-819b-ab3833646055
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.Pedometer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Pedometer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Pedometer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.Pedometer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SimpleOrientationSensor]
     guid 6b77c9f9-dcf7-5647-adc7-f70cf9927044
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Sensors.SimpleOrientationSensor
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.SimpleOrientationSensor> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.SimpleOrientationSensor> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Sensors.SimpleOrientationSensor return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[ActivitySensorReading]]
     guid cd781b82-7900-51a3-80ce-903e2e0a4f0e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PedometerReading]]
     guid 2aeac503-a3a8-57b3-a8a9-e16b0cd4c0a4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> return
 
 interface Windows.Devices.Sensors.IBarometer
     guid 934475a8-78bf-452f-b017-f0209ce6dab4
@@ -1430,6 +2101,334 @@ interface Windows.Devices.Sensors.IInclinometerStatics3
 interface Windows.Devices.Sensors.IInclinometerStatics4
     guid e8ba96f9-6e85-4a83-aed0-d7cdcc9856c8
 
+interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UInt32]
+    guid 421d4b91-b13b-5f37-ae54-b5249bd80539
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.UInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReading> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivitySensorReading]
+    guid 9a34ce03-8c6d-5994-907f-d5c2d19148cb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.ActivitySensorReading
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivitySensorReadingChangeReport]
+    guid 551a4962-9e96-5e6b-8b8a-65ee3d0046f3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sensors.ActivitySensorReadingChangeReport;{4f3c2915-d93b-47bd-960a-f20fb2f322b9}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.ActivitySensorReadingChangeReport
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivityType]
+    guid 2a04cdfa-5dfd-5178-8731-ade998e4a7f6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.ActivityType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.DetectedPerson> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DetectedPerson]
+    guid d14fdfaf-79f0-50bc-9ce4-1ed76c937c22
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sensors.DetectedPerson;{168cc0d9-3f05-5029-a0bf-cdcab4be3f9e}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.DetectedPerson
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.PedometerReading> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PedometerReading]
+    guid bbb61a5c-98c3-5718-88fe-5392a7451e2d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.PedometerReading
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ProximitySensorReading> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ProximitySensorReading]
+    guid 301ebccf-11ab-5e90-98ee-bd99c0e3bb76
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Sensors.ProximitySensorReading;{71228d59-132d-4d5f-8ff9-2f0db8751ced}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Sensors.ProximitySensorReading
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[PedometerStepKind, PedometerReading]]
+    guid 098f29cb-bc91-5639-a541-d5a4811ec35b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Sensors.PedometerStepKind;i4);rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TimeSpan]
+    guid e9f78726-829a-5f67-8d19-95ef154b7742
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.TimeSpan
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> return
+
+interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UInt32]
+    guid f06a2739-9443-5ef0-b284-dc5aff3e7d10
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};u4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.UInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=22 role=current
+            out uint32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+            fill_array uint32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivitySensorReading]
+    guid d2dab535-0c94-547e-afe3-5527bcbeb9cc
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.ActivitySensorReading
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sensors.ActivitySensorReading return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sensors.ActivitySensorReading name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivitySensorReadingChangeReport]
+    guid 9c07034e-8333-59d5-8d60-0e3f0438ac12
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sensors.ActivitySensorReadingChangeReport;{4f3c2915-d93b-47bd-960a-f20fb2f322b9}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.ActivitySensorReadingChangeReport
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivityType]
+    guid 40524281-a7c6-50b1-b6f5-0baa95d902c2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.ActivityType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DetectedPerson]
+    guid 5fe9e61c-ee82-5698-bffd-5f1ca33f4e85
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sensors.DetectedPerson;{168cc0d9-3f05-5029-a0bf-cdcab4be3f9e}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.DetectedPerson
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sensors.DetectedPerson return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sensors.DetectedPerson name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PedometerReading]
+    guid 0ac70ed3-8553-5ef3-92f8-438609623087
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.PedometerReading
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sensors.PedometerReading return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sensors.PedometerReading name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ProximitySensorReading]
+    guid 1d4f08df-7f49-573b-936a-6d4d4e610930
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Sensors.ProximitySensorReading;{71228d59-132d-4d5f-8ff9-2f0db8751ced}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Sensors.ProximitySensorReading
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Sensors.ProximitySensorReading return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Sensors.ProximitySensorReading name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[PedometerStepKind, PedometerReading]]
+    guid 3e88fe66-d4a7-5658-b5cf-1a39e1fc4165
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Sensors.PedometerStepKind;i4);rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TimeSpan]
+    guid 67e9eadb-324b-5661-a405-ded8445b1eea
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.TimeSpan
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=current
+            out timespan return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101
+            fill_array timespan name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[PedometerStepKind, PedometerReading]
+    guid b270d3b8-3dd2-599f-a671-2de5035503da
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Sensors.PedometerStepKind;i4);rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Devices.Sensors.PedometerStepKind
+    argument Windows.Devices.Sensors.PedometerReading
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22
+            out enum32 type=Windows.Devices.Sensors.PedometerStepKind return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43
+            out class type=Windows.Devices.Sensors.PedometerReading return
+
 interface Windows.Devices.Sensors.ILightSensor
     guid f84c0718-0c54-47ae-922e-789f57fb03a0
 
@@ -1505,17 +2504,59 @@ interface Windows.Devices.Sensors.IMagnetometerStatics
 interface Windows.Devices.Sensors.IMagnetometerStatics2
     guid 2c0819f0-ffc6-4f89-a06f-18fa10792933
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
     guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
-interface Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> concrete
+interface Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[PedometerStepKind, PedometerReading]
     guid 64f0c54c-4865-56bd-ac98-64a98451e362
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Devices.Sensors.PedometerStepKind;i4);rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>>
     argument Windows.Devices.Sensors.PedometerStepKind
     argument Windows.Devices.Sensors.PedometerReading
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=51 reverse=65 role=has_key
+            in enum32 type=Windows.Devices.Sensors.PedometerStepKind name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=51 reverse=24 role=lookup
+            in enum32 type=Windows.Devices.Sensors.PedometerStepKind name=key
+            out class type=Windows.Devices.Sensors.PedometerReading return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=second
 
 interface Windows.Devices.Sensors.IOnlookerDetectionOptions
     guid 0412b36f-36e6-51e2-876e-65197cc53c12
@@ -1596,39 +2637,900 @@ interface Windows.Devices.Sensors.IProximitySensorStatics2
     guid cbf473ae-e9ca-422f-ad67-4c3d25df350c
 
 interface Windows.Foundation.IReference<System.Double> concrete
+    py winrt.windows.foundation._IReference[Double]
     guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Double
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Double> shape=4 reverse=22 role=value
+            out double return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<System.Int32> concrete
+    py winrt.windows.foundation._IReference[Int32]
     guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Int32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int32> shape=4 reverse=22 role=value
+            out int32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement> concrete
+    py winrt.windows.foundation._IReference[HumanEngagement]
     guid 148adf95-eb2c-5912-9c40-6dcec31357bd
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.Sensors.HumanEngagement;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Devices.Sensors.HumanEngagement
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement> shape=4 reverse=22 role=value
+            out enum32 type=Windows.Devices.Sensors.HumanEngagement return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> concrete
+    py winrt.windows.foundation._IReference[HumanPresence]
     guid bacd473d-348f-54d0-95c0-ffd5379f8b7f
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.Sensors.HumanPresence;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Devices.Sensors.HumanPresence
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence> shape=4 reverse=22 role=value
+            out enum32 type=Windows.Devices.Sensors.HumanPresence return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    py winrt.windows.foundation._IReference[DateTime]
     guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.DateTime
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.DateTime> shape=4 reverse=22 role=value
+            out datetime return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
     guid 604d0c4c-91de-5c2a-935f-362f13eaf800
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Devices.Sensors.ISensorDataThreshold python_type
     py _ISensorDataThreshold
@@ -1662,50 +3564,281 @@ interface Windows.Devices.Sensors.ISimpleOrientationSensorStatics
 interface Windows.Devices.Sensors.ISimpleOrientationSensorStatics2
     guid 848f9c7f-b138-4e11-8910-a2a2a3b56d83
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ActivityType]
     guid e3e660d6-d041-5ecd-b18b-fa254e4a860f
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType>
     argument Windows.Devices.Sensors.ActivityType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211
+            pass_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UInt32]
     guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.UInt32>
     argument System.UInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out uint32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array uint32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+            in uint32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivitySensorReading]
     guid 726234a9-7137-55c4-a444-352dcdc30d77
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReading;{85125a96-1472-40a2-b2ae-e1ef29226c78}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReading>
     argument Windows.Devices.Sensors.ActivitySensorReading
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sensors.ActivitySensorReading return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sensors.ActivitySensorReading name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=66
+            in class type=Windows.Devices.Sensors.ActivitySensorReading name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivitySensorReadingChangeReport]
     guid 10e48a80-dd6a-5704-8f3d-3d46111f391e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ActivitySensorReadingChangeReport;{4f3c2915-d93b-47bd-960a-f20fb2f322b9}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReadingChangeReport>
     argument Windows.Devices.Sensors.ActivitySensorReadingChangeReport
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=66
+            in class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivityType]
     guid fc7a0488-2803-505c-9e62-9200afe416c6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.Sensors.ActivityType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType>
     argument Windows.Devices.Sensors.ActivityType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.Sensors.ActivityType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66
+            in enum32 type=Windows.Devices.Sensors.ActivityType name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DetectedPerson]
     guid 1de993d5-739b-5f05-9985-c36376df9f39
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.DetectedPerson;{168cc0d9-3f05-5029-a0bf-cdcab4be3f9e}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.DetectedPerson>
     argument Windows.Devices.Sensors.DetectedPerson
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sensors.DetectedPerson return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sensors.DetectedPerson name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=66
+            in class type=Windows.Devices.Sensors.DetectedPerson name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PedometerReading]
     guid 52076f5c-7838-54d9-9517-5511eb627952
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.PedometerReading;{2245dcf4-a8e1-432f-896a-be0dd9b02d24}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.PedometerReading>
     argument Windows.Devices.Sensors.PedometerReading
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sensors.PedometerReading return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sensors.PedometerReading name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=66
+            in class type=Windows.Devices.Sensors.PedometerReading name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ProximitySensorReading]
     guid 7a09d76c-8ced-5e30-b7fe-1ff74d4d9814
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Sensors.ProximitySensorReading;{71228d59-132d-4d5f-8ff9-2f0db8751ced}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ProximitySensorReading>
     argument Windows.Devices.Sensors.ProximitySensorReading
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Sensors.ProximitySensorReading return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Sensors.ProximitySensorReading name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=66
+            in class type=Windows.Devices.Sensors.ProximitySensorReading name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TimeSpan]
     guid 6b5828d7-6b8d-58c4-ba3a-9f796710f53c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan>
     argument Windows.Foundation.TimeSpan
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out timespan return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array timespan name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=169 reverse=83
+            in timespan name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Devices.Sensors.IWakeOnApproachOptions
     guid f0b87ae7-7e1f-5ea5-814d-6b7e07defc2b
@@ -2374,7 +4507,7 @@ class Windows.Devices.Sensors.ProximitySensorDisplayOnOffController python_type 
     default Windows.Foundation.IClosable
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Devices.Sensors.ProximitySensorReading python_type
     py ProximitySensorReading
@@ -2529,100 +4662,196 @@ class Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs
             out datetime return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Accelerometer, AccelerometerReadingChangedEventArgs]
     guid a5e83e40-b597-5b83-92f5-5bed3926ca80
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d});rc(Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs;{0095c65b-b6ac-475a-9f44-8b32d35a3f25}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Accelerometer
     argument Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Accelerometer name=sender
+            in class type=Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerShakenEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Accelerometer, AccelerometerShakenEventArgs]
     guid 3e5d6eaf-f169-5d60-92b0-98cd6bd8f808
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Accelerometer;{df184548-2711-4da7-8098-4b82205d3c7d});rc(Windows.Devices.Sensors.AccelerometerShakenEventArgs;{95ff01d1-4a28-4f35-98e8-8178aae4084a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Accelerometer
     argument Windows.Devices.Sensors.AccelerometerShakenEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Accelerometer name=sender
+            in class type=Windows.Devices.Sensors.AccelerometerShakenEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ActivitySensor,Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ActivitySensor, ActivitySensorReadingChangedEventArgs]
     guid a5b72e01-546c-5fbb-b847-49200aaaaac5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.ActivitySensor;{cd7a630c-fb5f-48eb-b09b-a2708d1c61ef});rc(Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs;{de386717-aeb6-4ec7-946a-d9cc19b951ec}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.ActivitySensor
     argument Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.ActivitySensor name=sender
+            in class type=Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Altimeter,Windows.Devices.Sensors.AltimeterReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Altimeter, AltimeterReadingChangedEventArgs]
     guid d775d699-9d74-5473-9c1b-d51a89db6642
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Altimeter;{72f057fd-8f04-49f1-b4a7-f4e363b701a2});rc(Windows.Devices.Sensors.AltimeterReadingChangedEventArgs;{7069d077-446d-47f7-998c-ebc23b45e4a2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Altimeter
     argument Windows.Devices.Sensors.AltimeterReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Altimeter name=sender
+            in class type=Windows.Devices.Sensors.AltimeterReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Barometer,Windows.Devices.Sensors.BarometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Barometer, BarometerReadingChangedEventArgs]
     guid e4caf459-d101-5ca5-a4ea-deb0917ae27e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Barometer;{934475a8-78bf-452f-b017-f0209ce6dab4});rc(Windows.Devices.Sensors.BarometerReadingChangedEventArgs;{3d84945f-037b-404f-9bbb-6232d69543c3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Barometer
     argument Windows.Devices.Sensors.BarometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Barometer name=sender
+            in class type=Windows.Devices.Sensors.BarometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Compass,Windows.Devices.Sensors.CompassReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Compass, CompassReadingChangedEventArgs]
     guid e787d73d-a121-5ae6-b497-ab934837e57f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Compass;{292ffa94-1b45-403c-ba06-b106dba69a64});rc(Windows.Devices.Sensors.CompassReadingChangedEventArgs;{8f1549b0-e8bc-4c7e-b009-4e41df137072}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Compass
     argument Windows.Devices.Sensors.CompassReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Compass name=sender
+            in class type=Windows.Devices.Sensors.CompassReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Gyrometer,Windows.Devices.Sensors.GyrometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Gyrometer, GyrometerReadingChangedEventArgs]
     guid 15171524-5786-59a5-af5b-a01245726c44
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Gyrometer;{fdb9a9c4-84b1-4ca2-9763-9b589506c70c});rc(Windows.Devices.Sensors.GyrometerReadingChangedEventArgs;{0fdf1895-6f9e-42ce-8d58-388c0ab8356d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Gyrometer
     argument Windows.Devices.Sensors.GyrometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Gyrometer name=sender
+            in class type=Windows.Devices.Sensors.GyrometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HingeAngleSensor,Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HingeAngleSensor, HingeAngleSensorReadingChangedEventArgs]
     guid 68de2bf4-243c-5aee-9dd9-d2e5e3165866
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.HingeAngleSensor;{e9d3be02-bfdf-437f-8c29-88c77393d309});rc(Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs;{24d9558b-fad0-42b8-a854-78923049a1ba}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.HingeAngleSensor
     argument Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.HingeAngleSensor name=sender
+            in class type=Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor,Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HumanPresenceSensor, HumanPresenceSensorReadingChangedEventArgs]
     guid 329678bc-3d7c-5ff3-87cb-4fc5e9fecf72
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.HumanPresenceSensor;{2116788b-e389-5cc3-9a97-cb17be1008bd});rc(Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs;{a9dc4583-fd69-5c5e-ab1f-942204eae2db}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.HumanPresenceSensor
     argument Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.HumanPresenceSensor name=sender
+            in class type=Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Inclinometer,Windows.Devices.Sensors.InclinometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Inclinometer, InclinometerReadingChangedEventArgs]
     guid 6f3b411f-d147-59f1-bbe4-7bec396c7b6e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Inclinometer;{2648ca6f-2286-406f-9161-f0c4bd806ebf});rc(Windows.Devices.Sensors.InclinometerReadingChangedEventArgs;{4ae91dc1-e7eb-4938-8511-ae0d6b440438}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Inclinometer
     argument Windows.Devices.Sensors.InclinometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Inclinometer name=sender
+            in class type=Windows.Devices.Sensors.InclinometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.LightSensor,Windows.Devices.Sensors.LightSensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[LightSensor, LightSensorReadingChangedEventArgs]
     guid 1ecf183a-9f0a-5f73-9225-5a33eab5594f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.LightSensor;{f84c0718-0c54-47ae-922e-789f57fb03a0});rc(Windows.Devices.Sensors.LightSensorReadingChangedEventArgs;{a3a2f4cf-258b-420c-b8ab-8edd601ecf50}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.LightSensor
     argument Windows.Devices.Sensors.LightSensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.LightSensor name=sender
+            in class type=Windows.Devices.Sensors.LightSensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Magnetometer,Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Magnetometer, MagnetometerReadingChangedEventArgs]
     guid f9a0da76-c4fd-50ab-98b6-bfd26d6d3d82
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Magnetometer;{484f626e-d3c9-4111-b3f6-2cf1faa418d5});rc(Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs;{17eae872-2eb9-4ee7-8ad0-3127537d949b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Magnetometer
     argument Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Magnetometer name=sender
+            in class type=Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.OrientationSensor,Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[OrientationSensor, OrientationSensorReadingChangedEventArgs]
     guid 91ae0c43-e1f7-577d-a161-8aaf275eb927
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.OrientationSensor;{5e354635-cf6b-4c63-abd8-10252b0bf6ec});rc(Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs;{012c1186-c3ba-46bc-ae65-7a98996cbfb8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.OrientationSensor
     argument Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.OrientationSensor name=sender
+            in class type=Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Pedometer,Windows.Devices.Sensors.PedometerReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Pedometer, PedometerReadingChangedEventArgs]
     guid dcd47693-aad5-5b3c-9c8d-140b8bc2122b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.Pedometer;{9a1e013d-3d98-45f8-8920-8e4ecaca5f97});rc(Windows.Devices.Sensors.PedometerReadingChangedEventArgs;{f855e47e-abbc-4456-86a8-25cf2b333742}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.Pedometer
     argument Windows.Devices.Sensors.PedometerReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.Pedometer name=sender
+            in class type=Windows.Devices.Sensors.PedometerReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ProximitySensor,Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ProximitySensor, ProximitySensorReadingChangedEventArgs]
     guid 9f7e222b-892a-5e68-b08a-10384b5f92b9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.ProximitySensor;{54c076b8-ecfb-4944-b928-74fc504d47ee});rc(Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs;{cfc2f366-c3e8-40fd-8cc3-67e289004938}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.ProximitySensor
     argument Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.ProximitySensor name=sender
+            in class type=Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.SimpleOrientationSensor,Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SimpleOrientationSensor, SimpleOrientationSensorOrientationChangedEventArgs]
     guid 92437fa7-ea7b-5fc5-8ecf-1b911bea2bfc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Sensors.SimpleOrientationSensor;{5ff53856-214a-4dee-a3f9-616f1ab06ffd});rc(Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs;{bcd5c660-23d4-4b4c-a22e-ba81ade0c601}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Sensors.SimpleOrientationSensor
     argument Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Sensors.SimpleOrientationSensor name=sender
+            in class type=Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs name=args
 
 class Windows.Devices.Sensors.WakeOnApproachOptions python_type
     py WakeOnApproachOptions
@@ -2655,19 +4884,86 @@ class System.String external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.Graphics.Display.DisplayOrientations external
     py winrt.windows.graphics.display.DisplayOrientations

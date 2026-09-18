@@ -2,6 +2,105 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Audio
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AudioPlaybackConnectionOpenResult]
+    guid 56ddb54d-eb8d-5ffb-a54b-8faf918c8031
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.AudioPlaybackConnectionOpenResult;{4e656aef-39f9-5fc9-a519-a5bbfd9fe921}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.AudioPlaybackConnectionOpenResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateAudioDeviceInputNodeResult]
+    guid 6cc56450-e4e8-59c9-83d8-63e46eacb20b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateAudioDeviceInputNodeResult;{16eec7a8-1ca7-40ef-91a4-d346e0aa1bba}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateAudioDeviceInputNodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateAudioDeviceOutputNodeResult]
+    guid edbc9b59-7cae-513f-b0dc-17666d37ba77
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateAudioDeviceOutputNodeResult;{f7776d27-1d9a-47f7-9cd4-2859cc1b7bff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateAudioDeviceOutputNodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileInputNodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateAudioFileInputNodeResult]
+    guid 504d1efd-c11c-506e-b8c9-af17c771efb5
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateAudioFileInputNodeResult;{ce83d61c-e297-4c50-9ce7-1c7a69d6bd09}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateAudioFileInputNodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileOutputNodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateAudioFileOutputNodeResult]
+    guid a7a95713-a08f-5fdf-89c6-9627bcf5d80a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateAudioFileOutputNodeResult;{47d6ba7b-e909-453f-866e-5540cda734ff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateAudioFileOutputNodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioGraphResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateAudioGraphResult]
+    guid 4e660bda-d438-5741-8b66-85fe72574aab
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateAudioGraphResult;{5453ef7e-7bde-4b76-bb5d-48f79cfc8c0b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateAudioGraphResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CreateMediaSourceAudioInputNodeResult]
+    guid e471b446-3a01-5190-89c9-15e740374cfc
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult;{46a658a3-53c0-4d59-9e51-cc1d1044a4c4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SetDefaultSpatialAudioFormatResult]
+    guid b059d94d-0c13-5e6b-9cda-b3cfa15b5be8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.SetDefaultSpatialAudioFormatResult;{1c2aa511-1400-5e70-9ea9-ae151241e8ea}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.SetDefaultSpatialAudioFormatResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[TranscodeFailureReason]
+    guid c42ae2bf-e194-5179-b8ad-03b51c04e1da
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Transcoding.TranscodeFailureReason
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.Audio.AudioDeviceInputNode python_type closeable
     py AudioDeviceInputNode
     signature rc(Windows.Media.Audio.AudioDeviceInputNode;{b01b6be1-6f4e-49e2-ac01-559d62beb3a9})
@@ -43,7 +142,7 @@ class Windows.Media.Audio.AudioDeviceInputNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -97,7 +196,7 @@ class Windows.Media.Audio.AudioDeviceOutputNode python_type closeable
         put put_Listener slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeWithListener shape=4 reverse=22
             in class type=Windows.Media.Audio.AudioNodeListener name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -220,7 +319,7 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -274,7 +373,7 @@ class Windows.Media.Audio.AudioFileOutputNode python_type closeable
         get get_EncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=99
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -361,7 +460,7 @@ class Windows.Media.Audio.AudioFrameInputNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -404,7 +503,7 @@ class Windows.Media.Audio.AudioFrameOutputNode python_type closeable
         get get_EncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=99
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -467,7 +566,7 @@ class Windows.Media.Audio.AudioGraph python_type closeable
         remove remove_UnrecoverableErrorOccurred slot=27 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=262
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
         method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraphStatics shape=51 reverse=24 static
             in class type=Windows.Media.Audio.AudioGraphSettings name=settings
@@ -560,7 +659,7 @@ class Windows.Media.Audio.AudioGraphBatchUpdater python_type closeable
     default Windows.Foundation.IClosable
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Media.Audio.AudioGraphConnection python_type
     py AudioGraphConnection
@@ -844,7 +943,7 @@ class Windows.Media.Audio.AudioPlaybackConnection python_type closeable
         remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=26 reverse=181
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_device_selector static
         method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionStatics shape=4 reverse=22 static
             out string return
@@ -967,7 +1066,7 @@ class Windows.Media.Audio.AudioSubmixNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1164,50 +1263,266 @@ class Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs python_type
         get get_RequiredSamples slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs shape=4 reverse=22
             out int32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AudioPlaybackConnectionOpenResult]
     guid f5245f8a-3dd1-56b2-829b-9888251d689c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.AudioPlaybackConnectionOpenResult;{4e656aef-39f9-5fc9-a519-a5bbfd9fe921}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.AudioPlaybackConnectionOpenResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.AudioPlaybackConnectionOpenResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateAudioDeviceInputNodeResult]
     guid 71ab4481-ec4a-5ee9-a342-3a31747829b8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateAudioDeviceInputNodeResult;{16eec7a8-1ca7-40ef-91a4-d346e0aa1bba}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateAudioDeviceInputNodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateAudioDeviceInputNodeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateAudioDeviceOutputNodeResult]
     guid f810d730-de15-58e0-a5f4-c159f73669ed
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateAudioDeviceOutputNodeResult;{f7776d27-1d9a-47f7-9cd4-2859cc1b7bff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateAudioDeviceOutputNodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateAudioDeviceOutputNodeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateAudioFileInputNodeResult]
     guid 473b06bf-387b-56ca-bee1-527480272b0f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateAudioFileInputNodeResult;{ce83d61c-e297-4c50-9ce7-1c7a69d6bd09}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateAudioFileInputNodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileInputNodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileInputNodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateAudioFileInputNodeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateAudioFileOutputNodeResult]
     guid 1164517d-e953-5415-a5b3-4249a969be7b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateAudioFileOutputNodeResult;{47d6ba7b-e909-453f-866e-5540cda734ff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateAudioFileOutputNodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileOutputNodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileOutputNodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateAudioFileOutputNodeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateAudioGraphResult]
     guid 3e13b431-65ce-5bfb-b0aa-fac8df958b95
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateAudioGraphResult;{5453ef7e-7bde-4b76-bb5d-48f79cfc8c0b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateAudioGraphResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioGraphResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioGraphResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateAudioGraphResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CreateMediaSourceAudioInputNodeResult]
     guid c69c20f3-88fc-5f3a-95d0-2816eae45968
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult;{46a658a3-53c0-4d59-9e51-cc1d1044a4c4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SetDefaultSpatialAudioFormatResult]
     guid 49e3b522-42d9-5909-80f1-33f9dae69bc1
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.SetDefaultSpatialAudioFormatResult;{1c2aa511-1400-5e70-9ea9-ae151241e8ea}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.SetDefaultSpatialAudioFormatResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.SetDefaultSpatialAudioFormatResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[TranscodeFailureReason]
     guid 02132510-3899-5257-bed9-a43e5149d28c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Transcoding.TranscodeFailureReason
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Media.Transcoding.TranscodeFailureReason return
 
 interface Windows.Media.Audio.IAudioDeviceInputNode
     guid b01b6be1-6f4e-49e2-ac01-559d62beb3a9
@@ -1295,7 +1610,7 @@ interface Windows.Media.Audio.IAudioInputNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1348,7 +1663,7 @@ interface Windows.Media.Audio.IAudioInputNode2 python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1387,7 +1702,7 @@ interface Windows.Media.Audio.IAudioNode python_type closeable
         put put_OutgoingGain slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=2 reverse=38
             in double name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1459,7 +1774,7 @@ interface Windows.Media.Audio.IAudioNodeWithListener python_type closeable
         put put_OutgoingGain slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=2 reverse=38
             in double name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1542,6 +1857,96 @@ interface Windows.Media.Audio.IEqualizerEffectDefinitionFactory
 interface Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs
     guid 3d9bd498-a306-4f06-bd9f-e9efc8226304
 
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Audio.AudioGraphConnection> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioGraphConnection]
+    guid 96168d06-a51a-5480-9403-fbd7631e3b3c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Audio.AudioGraphConnection;{763070ed-d04e-4fac-b233-600b42edd469}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Audio.AudioGraphConnection
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Audio.EqualizerBand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EqualizerBand]
+    guid 6f76d148-023e-565a-9f09-4ad4a32ad74f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Audio.EqualizerBand;{c00a5a6a-262d-4b85-9bb7-43280b62ed0c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Audio.EqualizerBand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Audio.EqualizerBand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IAudioEffectDefinition]
+    guid 607a20bf-32b4-5b8e-a793-3024f8d3582a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioGraphConnection]
+    guid 4af6a8fc-e7fb-5957-91c1-2df9600b22eb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Audio.AudioGraphConnection;{763070ed-d04e-4fac-b233-600b42edd469}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Audio.AudioGraphConnection
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Audio.AudioGraphConnection return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=101
+            fill_array class type=Windows.Media.Audio.AudioGraphConnection name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EqualizerBand]
+    guid eb4f8b6a-7928-5f2f-b7f2-7b90c084356f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Audio.EqualizerBand;{c00a5a6a-262d-4b85-9bb7-43280b62ed0c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Audio.EqualizerBand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Audio.EqualizerBand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=117 reverse=101
+            fill_array class type=Windows.Media.Audio.EqualizerBand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IAudioEffectDefinition]
+    guid ec0f39fc-6959-5423-9e1a-f7cb8e845ca1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Media.Audio.ILimiterEffectDefinition
     guid 6b755d19-2603-47ba-bdeb-39055e3486dc
 
@@ -1552,14 +1957,260 @@ interface Windows.Media.Audio.IMediaSourceAudioInputNode
     guid 99d8983b-a88a-4041-8e4f-ddbac0c91fd3
 
 interface Windows.Foundation.IReference<System.Int32> concrete
+    py winrt.windows.foundation._IReference[Int32]
     guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Int32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int32> shape=4 reverse=22 role=value
+            out int32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
     guid 604d0c4c-91de-5c2a-935f-362f13eaf800
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Media.Audio.IReverbEffectDefinition
     guid 4606aa89-f563-4d0a-8f6e-f0cddff35d84
@@ -1588,20 +2239,141 @@ interface Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics
 interface Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2
     guid 4565e6cb-d95b-5621-b6af-0e8849c57c80
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IAudioEffectDefinition]
     guid 2828a982-d849-5fc9-84ce-f9a4b3b4d341
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition>
     argument Windows.Media.Effects.IAudioEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211
+            pass_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioGraphConnection]
     guid 8485aed1-9b0c-59d2-a206-699bf746c3ff
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Audio.AudioGraphConnection;{763070ed-d04e-4fac-b233-600b42edd469}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Audio.AudioGraphConnection>
     argument Windows.Media.Audio.AudioGraphConnection
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Audio.AudioGraphConnection return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Audio.AudioGraphConnection name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=66
+            in class type=Windows.Media.Audio.AudioGraphConnection name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[EqualizerBand]
     guid 48f26053-ea7d-59e1-952b-fb78af42d2e2
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Audio.EqualizerBand;{c00a5a6a-262d-4b85-9bb7-43280b62ed0c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Audio.EqualizerBand>
     argument Windows.Media.Audio.EqualizerBand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Audio.EqualizerBand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Audio.EqualizerBand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Audio.EqualizerBand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=117 reverse=66
+            in class type=Windows.Media.Audio.EqualizerBand name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IAudioEffectDefinition]
+    guid de9e6a7f-d28e-5ef1-916a-efa880b489d1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition>
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Media.Audio.LimiterEffectDefinition python_type
     py LimiterEffectDefinition
@@ -1704,7 +2476,7 @@ class Windows.Media.Audio.MediaSourceAudioInputNode python_type closeable
             in interface type=Windows.Media.Audio.IAudioNode name=destination
             in double name=gain
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_effects_by_definition
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -1973,64 +2745,124 @@ enum Windows.Media.Audio.SpatialAudioModel python_type
     signature enum(Windows.Media.Audio.SpatialAudioModel;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioEffectsPackConfiguration, Object]
     guid 41cdcf69-8822-5062-af8b-68e32ef9884d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioEffectsPackConfiguration;{71d7627d-70c1-536c-a8f8-6f98015a7f06});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioEffectsPackConfiguration
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioEffectsPackConfiguration name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFileInputNode,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioFileInputNode, Object]
     guid 4481085b-8b8b-5520-9825-e9671da2a89f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioFileInputNode;{905b67c8-6f65-4cd4-8890-4694843c276d});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioFileInputNode
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioFileInputNode name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.AudioFrameCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioFrameInputNode, AudioFrameCompletedEventArgs]
     guid ad59dcfe-71b0-5e16-99c2-cd90644d8ee8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioFrameInputNode;{01b266c7-fd96-4ff5-a3c5-d27a9bf44237});rc(Windows.Media.Audio.AudioFrameCompletedEventArgs;{dc7c829e-0208-4504-a5a8-f0f268920a65}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioFrameInputNode
     argument Windows.Media.Audio.AudioFrameCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioFrameInputNode name=sender
+            in class type=Windows.Media.Audio.AudioFrameCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioFrameInputNode, FrameInputNodeQuantumStartedEventArgs]
     guid 4530d121-bb9a-57fe-922f-a98eeedf59af
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioFrameInputNode;{01b266c7-fd96-4ff5-a3c5-d27a9bf44237});rc(Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs;{3d9bd498-a306-4f06-bd9f-e9efc8226304}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioFrameInputNode
     argument Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioFrameInputNode name=sender
+            in class type=Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioGraph, Object]
     guid e1407134-09e7-53de-b54c-8a0659397b88
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioGraph;{1ad46eed-e48c-4e14-9660-2c4f83e9cdd8});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioGraph
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioGraph name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioGraph, AudioGraphUnrecoverableErrorOccurredEventArgs]
     guid 899670c9-dd7f-5f12-98cb-8b17fe80a47f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioGraph;{1ad46eed-e48c-4e14-9660-2c4f83e9cdd8});rc(Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs;{c3d9cbe0-3ff6-4fb3-b262-50d435c55423}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioGraph
     argument Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioGraph name=sender
+            in class type=Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioPlaybackConnection,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioPlaybackConnection, Object]
     guid 0e389b05-31a6-58f1-9ea4-0c1e4d70a7b8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioPlaybackConnection;{1a4c1dea-cafc-50e7-8718-ea3f81cbfa51});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioPlaybackConnection
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioPlaybackConnection name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioStateMonitor,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioStateMonitor, Object]
     guid 1333df3f-c55b-5a23-9596-34657c2a3406
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.AudioStateMonitor;{1d13d136-0199-4cdc-b84e-e72c2b581ece});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.AudioStateMonitor
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.AudioStateMonitor name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.MediaSourceAudioInputNode,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaSourceAudioInputNode, Object]
     guid b78980bf-7acf-5dc8-9fcd-31d6ab2f92f1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.MediaSourceAudioInputNode;{99d8983b-a88a-4041-8e4f-ddbac0c91fd3});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.MediaSourceAudioInputNode
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.MediaSourceAudioInputNode name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.SpatialAudioDeviceConfiguration,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialAudioDeviceConfiguration, Object]
     guid 34cb725d-d620-5c8d-97f6-a3ebdff1f964
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Audio.SpatialAudioDeviceConfiguration;{ee830034-61cf-5749-9da4-10f0fe028199});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Audio.SpatialAudioDeviceConfiguration
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Audio.SpatialAudioDeviceConfiguration name=sender
+            in object name=args
 
 class System.Int32 external
     py winrt.system.Int32
@@ -2041,20 +2873,75 @@ class System.Object external
 class Windows.Devices.Enumeration.DeviceInformation external
     py winrt.windows.devices.enumeration.DeviceInformation
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
 
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Quaternion external
     py winrt.windows.foundation.numerics.Quaternion

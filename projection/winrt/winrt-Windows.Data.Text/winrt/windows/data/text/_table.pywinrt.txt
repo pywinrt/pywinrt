@@ -21,38 +21,308 @@ class Windows.Data.Text.AlternateWordForm python_type
         get get_SourceTextSegment slot=6 inputs=0 outputs=1 declaring=Windows.Data.Text.IAlternateWordForm shape=4 reverse=22
             out struct type=Windows.Data.Text.TextSegment return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[String]]
+    guid 7c7899be-5f2e-5bf3-ade5-ad98b772c7cd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[TextPhoneme]]
+    guid 83e14307-0be1-5560-8bfc-291095cf6d30
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 interface Windows.Data.Text.IAlternateWordForm
     guid 47396c1e-51b9-4207-9146-248e636a1d1d
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[String]]
     guid 2f92b529-119b-575a-a419-3904b4e41af2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<System.String>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[TextPhoneme]]
     guid 6bc3019d-dd10-5510-b164-808c232b7d64
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.AlternateWordForm> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AlternateWordForm]
+    guid ae838c29-60c1-5093-ae61-0ed22857db05
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.AlternateWordForm;{47396c1e-51b9-4207-9146-248e636a1d1d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Data.Text.AlternateWordForm
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.AlternateWordForm> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SelectableWordSegment]
     guid 784b0cec-1348-5334-91e5-2e013294e211
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Data.Text.SelectableWordSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextPhoneme> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TextPhoneme]
+    guid 2017f561-8162-55f8-b056-656636935815
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Data.Text.TextPhoneme
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextPhoneme> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TextSegment]
+    guid 5498f4f3-cee4-5b72-9729-815c4ad7b9dc
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Data.Text.TextSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WordSegment]
     guid d14dc94a-a311-5ddc-bf8b-d58795d87d6d
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Data.Text.WordSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AlternateWordForm]
+    guid 7f463f8a-e08f-516e-b4b8-81b5417bfb58
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Data.Text.AlternateWordForm;{47396c1e-51b9-4207-9146-248e636a1d1d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.AlternateWordForm
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=4 reverse=22 role=current
+            out class type=Windows.Data.Text.AlternateWordForm return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=117 reverse=101
+            fill_array class type=Windows.Data.Text.AlternateWordForm name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SelectableWordSegment]
+    guid a5842459-147d-5a88-8f23-a3398afd8a85
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.SelectableWordSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=22 role=current
+            out class type=Windows.Data.Text.SelectableWordSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=101
+            fill_array class type=Windows.Data.Text.SelectableWordSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TextPhoneme]
+    guid 36426c36-b5c4-5d1b-a468-aff3b48b7c3a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.TextPhoneme
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=4 reverse=22 role=current
+            out class type=Windows.Data.Text.TextPhoneme return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=117 reverse=101
+            fill_array class type=Windows.Data.Text.TextPhoneme name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TextSegment]
+    guid 645a39b4-f001-5272-9015-fb4a327179ae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.TextSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=current
+            out struct type=Windows.Data.Text.TextSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101
+            fill_array struct type=Windows.Data.Text.TextSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WordSegment]
+    guid aeb846b3-664b-545e-ab93-f5fc66d24e32
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.WordSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=4 reverse=22 role=current
+            out class type=Windows.Data.Text.WordSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=117 reverse=101
+            fill_array class type=Windows.Data.Text.WordSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Data.Text.ISelectableWordSegment
     guid 916a4cb7-8aa7-4c78-b374-5dedb752e60b
@@ -99,35 +369,173 @@ interface Windows.Data.Text.ITextReverseConversionGeneratorFactory
 interface Windows.Data.Text.IUnicodeCharactersStatics
     guid 97909e87-9291-4f91-b6c8-b6e359d7a7fb
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AlternateWordForm]
     guid 6b742ff2-746a-5545-a6ed-3bba453cf5d9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.AlternateWordForm;{47396c1e-51b9-4207-9146-248e636a1d1d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.AlternateWordForm>
     argument Windows.Data.Text.AlternateWordForm
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.AlternateWordForm> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Data.Text.AlternateWordForm return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Data.Text.AlternateWordForm name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=117 reverse=66
+            in class type=Windows.Data.Text.AlternateWordForm name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SelectableWordSegment]
     guid 33f90a72-86f4-5027-b50a-6939a1f9d560
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.SelectableWordSegment;{916a4cb7-8aa7-4c78-b374-5dedb752e60b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment>
     argument Windows.Data.Text.SelectableWordSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Data.Text.SelectableWordSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Data.Text.SelectableWordSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=66
+            in class type=Windows.Data.Text.SelectableWordSegment name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TextPhoneme]
     guid cfc6e66d-5e2a-582d-8b6d-fbf71cf3d0eb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.TextPhoneme;{9362a40a-9b7a-4569-94cf-d84f2f38cf9b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextPhoneme>
     argument Windows.Data.Text.TextPhoneme
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextPhoneme> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Data.Text.TextPhoneme return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Data.Text.TextPhoneme name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=117 reverse=66
+            in class type=Windows.Data.Text.TextPhoneme name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TextSegment]
     guid 2f245f9d-eb5f-5641-9dcc-6ab1946cc7e6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment>
     argument Windows.Data.Text.TextSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Data.Text.TextSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Data.Text.TextSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90
+            in struct type=Windows.Data.Text.TextSegment name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WordSegment]
     guid c706749a-e11d-5e07-8534-2bd23ec210f9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Data.Text.WordSegment;{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment>
     argument Windows.Data.Text.WordSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.WordSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Data.Text.WordSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Data.Text.WordSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=117 reverse=66
+            in class type=Windows.Data.Text.WordSegment name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Data.Text.IWordSegment
     guid d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a
@@ -462,6 +870,33 @@ class Windows.Data.Text.WordsSegmenter python_type
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.UI.Text.Core.CoreTextInputScope external
     py winrt.windows.ui.text.core.CoreTextInputScope

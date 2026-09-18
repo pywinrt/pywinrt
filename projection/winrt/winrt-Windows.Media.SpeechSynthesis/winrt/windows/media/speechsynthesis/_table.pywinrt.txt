@@ -2,33 +2,299 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.SpeechSynthesis
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
-    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> concrete
-    guid df9d48ad-9cea-560c-9edc-cb8852cb55e3
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechSynthesis.SpeechSynthesisStream;{83e46e93-244c-4622-ba0b-6229c4d0d65d}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpeechSynthesisStream]
+    guid c972b996-6165-50d4-af60-a8c3df51d092
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.SpeechSynthesis.SpeechSynthesisStream;{83e46e93-244c-4622-ba0b-6229c4d0d65d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Media.SpeechSynthesis.SpeechSynthesisStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
-    guid eccb574a-c684-5572-a679-6b0842cfb57f
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[UInt32, UInt32]
+    guid ea0fe405-d432-5ac7-9ef8-5a65e1f97d7e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};u4;u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument System.UInt32
     argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
-    guid d26b2819-897f-5c7d-84d6-56d796561431
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IBuffer, UInt32]
+    guid bf666554-7605-5d9a-b14e-18d8c8472afe
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Windows.Storage.Streams.IBuffer
     argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[UInt32, UInt32]
+    guid 1e466dc5-840f-54f9-b877-5e3a9f4b6c74
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};u4;u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.UInt32
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IBuffer, UInt32]
+    guid 06386a7a-e009-5b0b-ab68-a8e48b516647
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpeechSynthesisStream]
+    guid df9d48ad-9cea-560c-9edc-cb8852cb55e3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.SpeechSynthesis.SpeechSynthesisStream;{83e46e93-244c-4622-ba0b-6229c4d0d65d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Media.SpeechSynthesis.SpeechSynthesisStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.SpeechSynthesis.SpeechSynthesisStream return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[UInt32, UInt32]
+    guid eccb574a-c684-5572-a679-6b0842cfb57f
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument System.UInt32
+    argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=121 role=get_results
+            out uint32 return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IBuffer, UInt32]
+    guid d26b2819-897f-5c7d-84d6-56d796561431
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Media.SpeechSynthesis.IInstalledVoicesStatic
     guid 7d526ecc-7533-4c3f-85be-888c2baeebdc
 
 interface Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2
     guid 64255f2e-358d-4058-be9a-fd3fcb423530
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TimedMetadataTrack]
+    guid 150a4454-03bb-5dd1-8153-6a600e851f71
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Core.TimedMetadataTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.IMediaMarker> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IMediaMarker]
+    guid a1c0a397-0364-5e4c-9dca-7cd7011bd114
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{1803def8-dca5-4b6f-9c20-e3d3c0643625})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.IMediaMarker
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.IMediaMarker> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.SpeechSynthesis.VoiceInformation> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VoiceInformation]
+    guid 3c33bb52-bd98-5c8c-adee-ee8da0628efc
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.SpeechSynthesis.VoiceInformation;{b127d6a4-1291-4604-aa9c-83134083352c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.SpeechSynthesis.VoiceInformation
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TimedMetadataTrack]
+    guid 859354e5-077b-5d53-b297-1a07b97f09c3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Core.TimedMetadataTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IMediaMarker]
+    guid f464661e-88bc-5cea-93cd-0c123f17d258
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{1803def8-dca5-4b6f-9c20-e3d3c0643625})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.IMediaMarker
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.IMediaMarker return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> shape=117 reverse=101
+            fill_array interface type=Windows.Media.IMediaMarker name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VoiceInformation]
+    guid 12d40a27-ae8d-5fb0-8fed-00165d59c6ab
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.SpeechSynthesis.VoiceInformation;{b127d6a4-1291-4604-aa9c-83134083352c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.SpeechSynthesis.VoiceInformation
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=22 role=current
+            out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> shape=117 reverse=101
+            fill_array class type=Windows.Media.SpeechSynthesis.VoiceInformation name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Media.SpeechSynthesis.ISpeechSynthesisStream
     guid 83e46e93-244c-4622-ba0b-6229c4d0d65d
@@ -48,20 +314,89 @@ interface Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2
 interface Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3
     guid 401ed877-902c-4814-a582-a5d0c0769fa8
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TimedMetadataTrack]
     guid 0313ae7a-2803-5d45-b5a1-a0fc5cd55e7c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>
     argument Windows.Media.Core.TimedMetadataTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.TimedMetadataTrack name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IMediaMarker]
     guid b543562c-02b1-5824-80a8-9854130cdadd
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{1803def8-dca5-4b6f-9c20-e3d3c0643625})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.IMediaMarker>
     argument Windows.Media.IMediaMarker
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.IMediaMarker> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.IMediaMarker> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.IMediaMarker return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.IMediaMarker name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> shape=117 reverse=66
+            in interface type=Windows.Media.IMediaMarker name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VoiceInformation]
     guid ee8d63ce-51ac-5984-891b-d232fa7f6453
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.SpeechSynthesis.VoiceInformation;{b127d6a4-1291-4604-aa9c-83134083352c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.SpeechSynthesis.VoiceInformation>
     argument Windows.Media.SpeechSynthesis.VoiceInformation
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.SpeechSynthesis.VoiceInformation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.SpeechSynthesis.VoiceInformation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.SpeechSynthesis.VoiceInformation name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> shape=117 reverse=66
+            in class type=Windows.Media.SpeechSynthesis.VoiceInformation name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Media.SpeechSynthesis.IVoiceInformation
     guid b127d6a4-1291-4604-aa9c-83134083352c
@@ -113,7 +448,7 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesisStream python_type closeable
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -166,7 +501,7 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesizer activatable python_type cl
         get get_DefaultVoice slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 reverse=43 static
             out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method synthesize_ssml_to_stream_async
         method SynthesizeSsmlToStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51 reverse=44
             in string name=Ssml
@@ -254,9 +589,48 @@ class System.Boolean external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Media.IMediaMarker external
     py winrt.windows.media._IMediaMarker

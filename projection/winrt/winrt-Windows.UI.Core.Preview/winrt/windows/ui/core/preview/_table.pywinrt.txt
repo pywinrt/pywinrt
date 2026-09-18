@@ -14,9 +14,15 @@ class Windows.UI.Core.Preview.CoreAppWindowPreview python_type
             out int32 return
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[SystemNavigationCloseRequestedPreviewEventArgs]
     guid 01bca043-4d09-59e4-b1b3-a2ce24629e41
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs;{83d00de1-cbe5-4f31-8414-361da046518f}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs name=args
 
 interface Windows.UI.Core.Preview.ICoreAppWindowPreview
     guid a4f6e665-365e-5fde-87a5-9543c3a15aa8
@@ -65,6 +71,10 @@ class Windows.UI.Core.Preview.SystemNavigationManagerPreview python_type
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.UI.WindowManagement.AppWindow external
     py winrt.windows.ui.windowmanagement.AppWindow

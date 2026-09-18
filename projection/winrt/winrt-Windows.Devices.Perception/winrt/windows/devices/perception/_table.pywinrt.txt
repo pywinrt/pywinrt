@@ -2,55 +2,569 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Perception
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionColorFrameSource> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionColorFrameSource]
+    guid 3b56acc2-e275-54fb-be08-9fdc8f1a1e10
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionDepthCorrelatedCameraIntrinsics]
+    guid f396602a-3d8d-5fd5-99e3-1d3630be5938
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics;{6548ca01-86de-5be1-6582-807fcf4c95cf}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionDepthCorrelatedCoordinateMapper]
+    guid 48deeda0-684d-51e6-b07c-d234d1006bfc
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper;{5b4d9d1d-b5f6-469c-b8c2-b97a45e6863b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionDepthFrameSource]
+    guid b48cb886-3476-58d9-b76d-fda6b3e81f54
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionFrameSourceAccessStatus]
+    guid 62744ea4-3447-5722-ab5e-02567b4fceeb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.Perception.PerceptionFrameSourceAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionFrameSourceAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionFrameSourcePropertyChangeResult]
+    guid 3a06099c-dba6-58a5-8464-e2326896841a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult;{1e33390a-3c90-4d22-b898-f42bba6418ff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PerceptionInfraredFrameSource]
+    guid a8d4cd8e-b210-54f7-ae2b-7770e19b3e36
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PerceptionColorFrameSource]]
+    guid 0a36a7af-da9e-553f-8dc5-e89d705bb40b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PerceptionDepthFrameSource]]
+    guid c06e62a4-965b-5a29-9732-8ac8669b585e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PerceptionInfraredFrameSource]]
+    guid 3aac58a8-4454-57e5-a90b-2449c5b7dfe8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionColorFrameSource]
     guid 9647fec8-2c56-5348-86c8-a9c3a97fb944
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionColorFrameSource
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionColorFrameSource> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionColorFrameSource> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionDepthCorrelatedCameraIntrinsics]
     guid 702b0f49-a742-5c3a-abd6-77f9999b8a09
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics;{6548ca01-86de-5be1-6582-807fcf4c95cf}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionDepthCorrelatedCoordinateMapper]
     guid f04b9d99-c0d5-5b48-9ae5-9802093cb45e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper;{5b4d9d1d-b5f6-469c-b8c2-b97a45e6863b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionDepthFrameSource]
     guid 4382b038-d4b1-540b-859a-7016626bb99d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthFrameSource> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthFrameSource> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionFrameSourceAccessStatus]
     guid 2c2f22a8-f383-5802-ba2c-0cbbcd989c9a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Perception.PerceptionFrameSourceAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionFrameSourceAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.Perception.PerceptionFrameSourceAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionFrameSourcePropertyChangeResult]
     guid 4a7bcb69-2b09-55d1-af68-b5aa5c2c6471
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult;{1e33390a-3c90-4d22-b898-f42bba6418ff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PerceptionInfraredFrameSource]
     guid 55122e42-cc65-5ccd-8f6c-84ced09db24e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PerceptionColorFrameSource]]
     guid 33845b5f-d59e-5271-bb68-f74e9d6a538d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PerceptionDepthFrameSource]]
     guid e20a534d-d406-5964-8465-e6dc75c5821d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PerceptionInfraredFrameSource]]
     guid b11eecaa-6f8c-5040-8d46-c3204c562582
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionColorFrameSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PerceptionColorFrameSource]
+    guid db18069e-7b5a-54c3-a627-d56f9517fdf5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PerceptionDepthFrameSource]
+    guid 8a07e1e8-5a02-585b-a26e-ad79beaa94cf
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PerceptionInfraredFrameSource]
+    guid 9309d0db-338d-5adf-8b3e-509bfdfccef3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionVideoProfile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PerceptionVideoProfile]
+    guid f6aea351-eb9b-564d-b10a-06673094acc8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Perception.PerceptionVideoProfile;{75763ea3-011a-470e-8225-6f05ade25648}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Perception.PerceptionVideoProfile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PerceptionColorFrameSource]
+    guid 24089f00-ba6d-50d4-ac46-f288755e4181
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Perception.PerceptionColorFrameSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Perception.PerceptionColorFrameSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PerceptionDepthFrameSource]
+    guid 20cff8c2-7844-54e5-ae4f-57e7768f9b69
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PerceptionInfraredFrameSource]
+    guid b22b294f-a4d2-5726-a7fc-5e331432d9b4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PerceptionVideoProfile]
+    guid 38ce8062-7079-5d7b-841f-9aa4580fd5f1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Perception.PerceptionVideoProfile;{75763ea3-011a-470e-8225-6f05ade25648}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Perception.PerceptionVideoProfile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Perception.PerceptionVideoProfile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Perception.PerceptionVideoProfile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
 
 interface Windows.Devices.Perception.IKnownCameraIntrinsicsPropertiesStatics
     guid 08c03978-437a-4d97-a663-fd3195600249
@@ -76,11 +590,32 @@ interface Windows.Devices.Perception.IKnownPerceptionVideoFrameSourcePropertiesS
 interface Windows.Devices.Perception.IKnownPerceptionVideoProfilePropertiesStatics
     guid 8f08e2e7-5a76-43e3-a13a-da3d91a9ef98
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
     guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
 interface Windows.Devices.Perception.IPerceptionColorFrame
     guid fe621549-2cbf-4f94-9861-f817ea317747
@@ -181,25 +716,117 @@ interface Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher
 interface Windows.Devices.Perception.IPerceptionVideoProfile
     guid 75763ea3-011a-470e-8225-6f05ade25648
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PerceptionColorFrameSource]
     guid cbf2f698-31a0-53c7-927b-8e1675f743bc
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionColorFrameSource>
     argument Windows.Devices.Perception.PerceptionColorFrameSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionColorFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionColorFrameSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Perception.PerceptionColorFrameSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Perception.PerceptionColorFrameSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource> shape=117 reverse=66
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSource name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PerceptionDepthFrameSource]
     guid 574d3642-9f78-5125-851f-8b67e0313e2f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionDepthFrameSource>
     argument Windows.Devices.Perception.PerceptionDepthFrameSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionDepthFrameSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Perception.PerceptionDepthFrameSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource> shape=117 reverse=66
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PerceptionInfraredFrameSource]
     guid f272ae7a-c5c4-5712-8552-01deb8b70e07
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionInfraredFrameSource>
     argument Windows.Devices.Perception.PerceptionInfraredFrameSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionInfraredFrameSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Perception.PerceptionInfraredFrameSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource> shape=117 reverse=66
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PerceptionVideoProfile]
     guid 8dcb30e8-4ec1-51b7-9997-10f325f03d47
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Perception.PerceptionVideoProfile;{75763ea3-011a-470e-8225-6f05ade25648}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionVideoProfile>
     argument Windows.Devices.Perception.PerceptionVideoProfile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.PerceptionVideoProfile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Perception.PerceptionVideoProfile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Perception.PerceptionVideoProfile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Perception.PerceptionVideoProfile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionVideoProfile> shape=117 reverse=66
+            in class type=Windows.Devices.Perception.PerceptionVideoProfile name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Perception.KnownCameraIntrinsicsProperties static python_type
     py KnownCameraIntrinsicsProperties
@@ -336,7 +963,7 @@ class Windows.Devices.Perception.PerceptionColorFrame python_type closeable
         get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrame shape=4 reverse=22 deprecated
             out class type=Windows.Media.VideoFrame return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs python_type
     py PerceptionColorFrameArrivedEventArgs
@@ -371,7 +998,7 @@ class Windows.Devices.Perception.PerceptionColorFrameReader python_type closeabl
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=26 reverse=53 deprecated
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
         method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=4 reverse=141 deprecated
             out class type=Windows.Devices.Perception.PerceptionColorFrame return
@@ -564,7 +1191,7 @@ class Windows.Devices.Perception.PerceptionControlSession python_type closeable
         remove remove_ControlLost slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=26 reverse=53 deprecated
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_set_property_async deprecated
         method TrySetPropertyAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=117 reverse=66 deprecated
             in string name=name
@@ -635,7 +1262,7 @@ class Windows.Devices.Perception.PerceptionDepthFrame python_type closeable
         get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrame shape=4 reverse=22 deprecated
             out class type=Windows.Media.VideoFrame return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs python_type
     py PerceptionDepthFrameArrivedEventArgs
@@ -670,7 +1297,7 @@ class Windows.Devices.Perception.PerceptionDepthFrameReader python_type closeabl
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=26 reverse=53 deprecated
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
         method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=4 reverse=141 deprecated
             out class type=Windows.Devices.Perception.PerceptionDepthFrame return
@@ -892,7 +1519,7 @@ class Windows.Devices.Perception.PerceptionInfraredFrame python_type closeable
         get get_VideoFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrame shape=4 reverse=22 deprecated
             out class type=Windows.Media.VideoFrame return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs python_type
     py PerceptionInfraredFrameArrivedEventArgs
@@ -927,7 +1554,7 @@ class Windows.Devices.Perception.PerceptionInfraredFrameReader python_type close
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=26 reverse=53 deprecated
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
         method TryReadLatestFrame slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=4 reverse=141 deprecated
             out class type=Windows.Devices.Perception.PerceptionInfraredFrame return
@@ -1133,118 +1760,232 @@ class Windows.Devices.Perception.PerceptionVideoProfile python_type
             out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameReader,Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameReader, PerceptionColorFrameArrivedEventArgs]
     guid a4a50ea5-778d-5056-a1cf-546a1be2c010
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameReader;{7650f56e-b9f5-461b-83ad-f222af2aaadc});rc(Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs;{8fad02d5-86f7-4d8d-b966-5a3761ba9f59}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameReader
     argument Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameReader name=sender
+            in class type=Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameSource, Object]
     guid 023444d9-7b47-5497-9569-4399faf96717
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameSource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSource name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs]
     guid b2c3a488-7ed9-5110-804a-9792ef7f26be
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSource;{dc6dba7c-0b58-468d-9ca1-6db04cc0477c});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameSource
     argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSource name=sender
+            in class type=Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, Object]
     guid b3f5bf64-7fc0-5d8c-978c-a38d5b18a51d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSourceWatcher name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, PerceptionColorFrameSourceAddedEventArgs]
     guid 7202e817-22b8-5e7b-86b5-c4a90ccc23aa
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});rc(Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs;{d16bf4e6-da24-442c-bbd5-55549b5b94f3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, PerceptionColorFrameSourceRemovedEventArgs]
     guid c7131ddd-ff22-5fb7-ada0-961e3b28917b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionColorFrameSourceWatcher;{96bd1392-e667-40c4-89f9-1462dea6a9cc});rc(Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs;{d277fa69-eb4c-42ef-ba4f-288f615c93c1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionColorFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionControlSession,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionControlSession, Object]
     guid abc21152-2495-5e8c-aed3-7dc55309ac08
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionControlSession;{99998653-5a3d-417f-9239-f1889e548b48});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionControlSession
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionControlSession name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameReader,Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameReader, PerceptionDepthFrameArrivedEventArgs]
     guid 4d529b7e-eea0-511b-8285-47e8c85d0295
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameReader;{b1a3c09f-299b-4612-a4f7-270f25a096ec});rc(Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs;{443d25b2-b282-4637-9173-ac978435c985}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameReader
     argument Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameReader name=sender
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameSource, Object]
     guid 135ba76a-ab44-5f69-b208-e732cce9403b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameSource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs]
     guid 188fdef2-d829-548b-a89d-38a34c5cb641
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSource;{79d433d6-47fb-4df1-bfc9-f01d40bd9942});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameSource
     argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSource name=sender
+            in class type=Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, Object]
     guid c5efa976-d948-50c7-8555-664190f9a968
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, PerceptionDepthFrameSourceAddedEventArgs]
     guid a3c1e25f-3574-5a27-a791-16e1bcc424f4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});rc(Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs;{93a48168-8bf8-45d2-a2f8-4ac0931cc7a6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, PerceptionDepthFrameSourceRemovedEventArgs]
     guid 5cf5faf7-0785-5589-a621-089d900412c8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher;{780e96d1-8d02-4d2b-ada4-5ba624a0eb10});rc(Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs;{a0c0cc4d-e96c-4d81-86dd-38b95e49c6df}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameReader,Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameReader, PerceptionInfraredFrameArrivedEventArgs]
     guid 687fef67-8871-56fe-8e7e-1d2929cc6f42
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameReader;{7960ce18-d39b-4fc8-a04a-929734c6756c});rc(Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs;{9f77fac7-b4bd-4857-9d50-be8ef075daef}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameReader
     argument Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameReader name=sender
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameSource, Object]
     guid 31edabbd-d123-5e88-89d8-c80ee8f0f2ca
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameSource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs]
     guid b6c1b828-a157-54ed-9c18-6919b9f91be9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSource;{55b08742-1808-494e-9e30-9d2a7be8f700});rc(Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs;{6c68e068-bcf1-4ecc-b891-7625d1244b6b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameSource
     argument Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSource name=sender
+            in class type=Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, Object]
     guid 1555a628-3dff-5fd0-b10a-ca6adb2440c6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, PerceptionInfraredFrameSourceAddedEventArgs]
     guid a8180cd1-c25b-5c7f-94dd-198423bb56d5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs;{6d334120-95ce-4660-907a-d98035aa2b7c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, PerceptionInfraredFrameSourceRemovedEventArgs]
     guid 2ca3a9b7-3348-5953-8d0d-ef8d78640b23
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher;{383cff99-d70c-444d-a8b0-720c2e66fe3b});rc(Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs;{ea1a8071-7a70-4a61-af94-07303853f695}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher
     argument Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher name=sender
+            in class type=Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -1255,9 +1996,24 @@ class System.String external
 enum Windows.Devices.Enumeration.DeviceWatcherStatus external
     py winrt.windows.devices.enumeration.DeviceWatcherStatus
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
@@ -1269,8 +2025,32 @@ struct Windows.Foundation.Point external
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 enum Windows.Foundation.Collections.CollectionChange external
     py winrt.windows.foundation.collections.CollectionChange
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Matrix4x4 external
     py winrt.windows.foundation.numerics.Matrix4x4

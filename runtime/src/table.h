@@ -152,7 +152,44 @@ namespace py::table
         inline constexpr uint32_t protected_ = 1 << 5;
         inline constexpr uint32_t deprecated = 1 << 6;
         inline constexpr uint32_t default_overload = 1 << 7;
+        inline constexpr uint32_t role_shift = 8;
+        inline constexpr uint32_t role_mask = 0x1F << role_shift;
     } // namespace member_flags
+
+    /**
+     * The part a member plays in a Python protocol, which is what the slots of
+     * a projected collection call.
+     *
+     * Which WinRT member stands for @c __len__ or @c __getitem__ is a
+     * convention rather than anything the metadata states, and what settles it
+     * is the parameterized interface that declares the member: the @c Size of
+     * an IVector<T> is a length, the @c Size of something else is a property
+     * named size. The generator knows that interface and the runtime does not,
+     * so the answer is written down here rather than guessed from the name.
+     */
+    enum class member_role : uint32_t
+    {
+        none = 0,
+        size = 1,
+        get_at = 2,
+        set_at = 3,
+        remove_at = 4,
+        insert_at = 5,
+        first = 6,
+        current = 7,
+        has_current = 8,
+        move_next = 9,
+        lookup = 10,
+        has_key = 11,
+        insert = 12,
+        remove = 13,
+        status = 14,
+        completed = 15,
+        get_results = 16,
+        to_string = 17,
+        value = 18,
+        close = 19,
+    };
 
     enum class param_category : uint32_t
     {
@@ -248,6 +285,7 @@ namespace py::table
 
         member_kind kind() const;
         uint32_t flags() const;
+        member_role role() const;
         std::string_view winrt_name() const;
         /// The interface to query an instance for, or @c no_ref when the member
         /// is reached without one, which is plain activation.

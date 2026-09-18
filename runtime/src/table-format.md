@@ -196,9 +196,9 @@ A group's name is a dash when the group is bound to no name of its own, which a
 constructor group and the `Invoke` of a delegate are.
 
 A member's line is its kind, the WinRT name of the method, then `slot=`,
-`inputs=`, `outputs=`, `declaring=`, `shape=` and `reverse=` - of which only the
-first three are always written - then its flags. A parameter's line is its
-category, its type code, then `type=` and `name=` where it has them, then
+`inputs=`, `outputs=`, `declaring=`, `shape=`, `reverse=` and `role=` - of which
+only the first three are always written - then its flags. A parameter's line is
+its category, its type code, then `type=` and `name=` where it has them, then
 `return`, `implicit` and `by_reference`.
 
 The categories, kinds, codes, roles and flags are named in the tables of the
@@ -276,7 +276,7 @@ tag appears at most once.
 | 6 | base type, a type ref |
 | 7 | default interface, a type ref |
 | 8, 9 | required interfaces, a list, transitively closed, in the order to try them |
-| 10, 11 | type arguments of a concrete instance, a list |
+| 10, 11 | type arguments, a list: what a parameterized type's own parameters are, or what a concrete instance of one fills them in with |
 | 12, 13 | member groups, a first index into `GRUP` and a count |
 | 14, 15 | struct fields, a first index into `FLDS` and a count |
 | 16, 17 | activation factory interfaces, a list |
@@ -287,6 +287,18 @@ The records of the types the namespace defines come first, sorted by WinRT name,
 so that a lookup by name is a binary search. The external references follow in
 the order they were first needed.
 
+A **concrete parameterized type** - `IVector<String>` - carries a full set of
+member groups of its own, which are the members of the parameterized type it is
+an instance of with every type argument filled in. It has to: what a member of
+`IVector<String>` passes is not what the same member of `IVector<Point>` passes,
+so the two have different type codes and different call shapes, and nothing but
+the instance knows which. Its base type is the parameterized type it is an
+instance of, whose Python type the runtime derives the instance's from, and its
+Python name is fully qualified, because the type belongs to the module that
+defines the parameterized type rather than to whichever module first names the
+instance. Every namespace that passes one carries a record for it; the runtime
+builds one Python type per instance, keyed by the signature.
+
 Type flags, and the words the text writes them as:
 
 | bit | name | meaning |
@@ -295,8 +307,8 @@ Type flags, and the words the text writes them as:
 | 3 | `external` | the type belongs to another namespace and is resolved by name through the type registry |
 | 4 | `static` | static class |
 | 5 | `composable` | composable class |
-| 6 | `parameterized` | parameterized type |
-| 7 | `concrete` | concrete instance |
+| 6 | `parameterized` | the type still takes type arguments, which is the definition itself, a type argument standing in for one, and an instance that names either |
+| 7 | `concrete` | every type argument is a real type, so the record has an IID and a signature of its own |
 | 8 | `activatable` | default activatable |
 | 9 | `python_type` | the type gets a Python type object of its own in this module |
 | 10 | `iterable` | implements `IIterable<T>` |
@@ -360,6 +372,41 @@ Member flags:
 | 5 | `protected` | |
 | 6 | `deprecated` | |
 | 7 | `default_overload` | |
+| 8-12 | `role=` | protocol role, see below |
+
+The protocol role says which Python operation, if any, this member is the one
+behind:
+
+| value | role | declared by |
+|---|---|---|
+| 0 | `none` | |
+| 1 | `size` | `IVector<T>`, `IVectorView<T>`, `IMap<K, V>`, `IMapView<K, V>` |
+| 2 | `get_at` | `IVector<T>`, `IVectorView<T>` |
+| 3 | `set_at` | `IVector<T>` |
+| 4 | `remove_at` | `IVector<T>` |
+| 5 | `insert_at` | `IVector<T>` |
+| 6 | `first` | `IIterable<T>` |
+| 7 | `current` | `IIterator<T>` |
+| 8 | `has_current` | `IIterator<T>` |
+| 9 | `move_next` | `IIterator<T>` |
+| 10 | `lookup` | `IMap<K, V>`, `IMapView<K, V>` |
+| 11 | `has_key` | `IMap<K, V>`, `IMapView<K, V>` |
+| 12 | `insert` | `IMap<K, V>` |
+| 13 | `remove` | `IMap<K, V>` |
+| 14 | `status` | `IAsyncInfo` |
+| 15 | `completed` | the four async interfaces |
+| 16 | `get_results` | the four async interfaces |
+| 17 | `to_string` | `IStringable` |
+| 18 | `value` | `IReference<T>` |
+| 19 | `close` | `IClosable` |
+
+The type flags say which protocols a type implements and the roles say which
+members those protocols call, so the two are written together. A name would
+not do instead: a runtime class is free to have a `Size` property or a `Remove`
+method of its own, and what makes a member the one behind `len()` is the
+interface that declares it rather than what it is called. The role is on the
+member and not on the group, because a group is one Python attribute and may
+hold overloads reached through more than one interface.
 
 The vtable slot is six plus the position of the method in the metadata of the
 interface that declares it, because the first six entries are `IUnknown`'s three
