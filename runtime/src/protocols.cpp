@@ -737,6 +737,74 @@ namespace py::interp
                 nullptr},
                {}};
 
+        // ----- buffers ----------------------------------------------------
+
+        /**
+         * Fills in @p view over @p size bytes at @p data, which @p self owns.
+         */
+        int fill_buffer_view(
+            PyObject* self,
+            Py_buffer* view,
+            int flags,
+            void* data,
+            uint32_t size) noexcept
+        {
+            return PyBuffer_FillInfo(
+                view, self, data, static_cast<Py_ssize_t>(size), 0, flags);
+        }
+
+        /**
+         * __buffer__ of an IBuffer.
+         *
+         * This is the one protocol a table cannot describe. Where the bytes
+         * start comes from IBufferByteAccess, and from IMemoryBufferByteAccess
+         * for the other kind of buffer below - plain COM interfaces that the
+         * metadata does not mention, so no member and no role can stand for
+         * them. C++/WinRT holds both IIDs and uses them in data(), so both
+         * halves of a buffer are read through it rather than through the
+         * table, and all a type record says is which of the two shapes the
+         * type has.
+         */
+        int ibuffer_view(PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                winrt::Windows::Storage::Streams::IBuffer buffer;
+                winrt::copy_from_abi(buffer, abi_of(self));
+
+                return fill_buffer_view(
+                    self, view, flags, buffer.data(), buffer.Length());
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * __buffer__ of an IMemoryBufferReference, whose length is its
+         * Capacity.
+         */
+        int memory_buffer_view(PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                winrt::Windows::Foundation::IMemoryBufferReference reference;
+                winrt::copy_from_abi(reference, abi_of(self));
+
+                return fill_buffer_view(
+                    self, view, flags, reference.data(), reference.Capacity());
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
         /**
          * Whether @p record says the type implements @p flag.
          */
@@ -912,6 +980,18 @@ namespace py::interp
         if (implements(record, table::type_flags::awaitable))
         {
             slots.push_back({Py_am_await, reinterpret_cast<void*>(await_async)});
+        }
+
+        if (implements(record, table::type_flags::buffer))
+        {
+            // Which of the two the type is decides both where the bytes
+            // come from and what says how many there are, so it picks the
+            // slot rather than being asked again on every view.
+            slots.push_back(
+                {Py_bf_getbuffer,
+                 implements(record, table::type_flags::buffer_length)
+                     ? reinterpret_cast<void*>(ibuffer_view)
+                     : reinterpret_cast<void*>(memory_buffer_view)});
         }
     }
 
